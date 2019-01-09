@@ -1,0 +1,171 @@
+﻿<html lang="zh">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Laser</title>
+	<link rel="stylesheet" type="text/css" href="./robot/css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./robot/css/htmleaf-demo.css">
+	<link rel="stylesheet" type="text/css" href="./robot/css/glowing.css"/>
+	<link rel="stylesheet" type="text/css" href="./robot/css/input.css">
+	<style type="text/css">
+		.box{
+			 width:100%;text-align:center;margin:20px;padding:20px;
+		}
+	</style>
+</head>
+<body>
+
+<!-- main page-->
+<div id="encart_grand_titre_liste_famille">
+	<div class="htmleaf-container">
+		<div align="center" style="margin-top:0">
+			<div style="box-shadow:inset 0 0 6px #ccc" class="box">
+
+				<a href="./solid-laser.html" ><img src="./robot/img/proj.png" class="glowing darkblue"/>固体激光器</a>
+				<a href="./gas-lasers.html" ><img src="./robot/img/atom.png" class="glowing red and quickly rotating"/>气体激光器</a>				
+				<a href="./liquid-lasers.html" ><img src="./robot/img/robot1.png" class="glowing cyan and zooming"/>液体激光器</a>
+				<a href="./semiconductor-lasers.html" ><img src="./robot/img/desktop2.png" class="glowing orange and rotating"/>激光二极管</a>
+				<a href="./vente-optic.html" ><img src="./robot/img/desktop3.png" class="glowing darkblue"/>激光的经验</a>
+				<a href="./experiences.html" ><img src="./robot/img/dist.png" class="glowing cyan and zooming"/>激光的实验</a>
+				<a href="./theory.html" ><img src="./robot/img/atom.png" class="glowing red and quickly rotating"/>激光的理论</a>
+				
+			</div>
+			<div class="glowing disco box" style="box-shadow:inset 0 0 6px #ccc;text-align:center" onclick="$('textarea').html('class=&quot;'+$(this).attr('class')+'&quot;')">
+			<div style="text-align:center">
+                <input type="text" id="robot" placeholder="搜索"  onkeypress="showHint(this.value)"/>  
+				<h4 style="color:#5E6C77"><span id="txtHint"></span> </h4>
+            </div> 			
+			<em><a href="https://qumoptly.github.io" > qumoptly</a><a href="#" > | copyright:2016-2018</a> 
+			</em>
+			</div>
+		</div>
+	</div>
+<script>
+
+var xmlHttp
+
+function showHint(str)
+
+{
+
+            if (event.keyCode==13)
+
+                   {
+
+                            Send(str);
+
+                   } 
+
+}
+
+function Send(str)
+
+{
+
+ if (str.length==0)
+
+    {
+
+    document.getElementById("txtHint").innerHTML="";
+
+    return;
+
+    }
+
+          xmlHttp=GetXmlHttpObject()
+
+                     if (xmlHttp==null)
+
+                            {
+
+                            alert ("您的浏览器不支持AJAX！");
+
+                            return;
+
+                            }
+
+                     var url="http://www.tuling123.com/openapi/api?key=3593d8efeb5f471cb26bf12b236caebc";
+
+                     url=url+"&info="+str;
+
+                     url=url+"&userid=12345" ;
+
+                     xmlHttp.onreadystatechange=stateChanged;
+
+                     xmlHttp.open("GET",url,true);
+
+                     xmlHttp.send(null);
+
+                      document.getElementById("robot").value="";
+
+}
+
+function stateChanged()
+
+{
+
+if (xmlHttp.readyState==4)
+
+{
+
+var msg=eval('(' + xmlHttp.responseText + ')'); 
+
+ 
+
+document.getElementById("txtHint").innerHTML=msg.text;
+
+}
+
+}
+
+function GetXmlHttpObject()
+
+{
+
+  var xmlHttp=null;
+
+  try
+
+    {
+
+    // Firefox, Opera 8.0+, Safari
+
+    xmlHttp=new XMLHttpRequest();
+
+    }
+
+  catch(e)
+
+    {
+
+    // Internet Explorer
+
+    try
+
+      {
+
+      xmlHttp=new ActiveXObject("Msxml2.XMLHTTP");
+
+      }
+
+    catch (e)
+
+      {
+
+      xmlHttp=new ActiveXObject("Microsoft.XMLHTTP");
+
+      }
+
+    }
+
+return xmlHttp;
+
+}
+
+</script>
+</div>
+</body>
+</html>

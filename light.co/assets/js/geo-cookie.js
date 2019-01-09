@@ -1,0 +1,1 @@
+jQuery(document).ready(function($){if(Cookies.get('light-country')){countryCode=Cookies.get('light-country');}else{}});

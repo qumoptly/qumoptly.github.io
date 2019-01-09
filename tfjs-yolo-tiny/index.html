@@ -1,0 +1,34 @@
+<html> 
+  <head> 
+  <meta name="viewport" content="width=600"> 
+  <link rel="stylesheet" type="text/css" href="./src.css"> 
+  <link rel="stylesheet" href="./ribbon.min.css"> 
+  <script async src="./js.js"></script> 
+  </head> 
+  
+  <body> 
+    <!--<a class="github-fork-ribbon" href="https://github.com/ModelDepot/tfjs-yolo-tiny-demo" data-ribbon="Fork me on GitHub" title="Fork me on GitHub"> Fork me on GitHub </a> -->
+	<div class="wrapper"> 
+	  <div class="logo-wrapper"> 
+	    <a href="https://modeldepot.io/?ref=tfjs-yolo-tiny-demo" target="_blank" rel="noopener noreferrer"> 
+	    <img class="logo" src="./ModelDepot.png"> </a> 
+	  </div> 
+	  <div id="loading-message"> Loading Skynet (This may take a minute, 40mb)... <div> 
+	  <img class="spin" src="./logo.png"> </div> </div> 
+	  <div id="error-message" style="display:none"> Sorry! An error occured while loading the model <br> If you're on an iPhone, please try using Safari. </div> 
+	  <div id="success-message" style="display:none"> Point me at something, but please be a bit patient while I try to figure out what it is! (Ex. person, keyboard, cell phone, car, pet, etc.) </div> 
+	  <div class="webcam-ui-container"> 
+	    <div id="webcam-wrapper" style="display:none"> 
+	      <video autoplay playsinline="" muted id="webcam" width="416" height="416"> </video> 
+	    </div> 
+	  </div> 
+	  <div style="text-align:center;margin:25px 0"> 
+	    <a href="https://modeldepot.io/mikeshi/tiny-yolo-in-javascript" target="_blank" rel="noopener noreferrer"> 
+	    <img src="https://img.shields.io/badge/ModelDepot-Pre--trained_Model-3d9aff.svg"> 
+	    </a> 
+	  </div> 
+	</div> 
+	<script src="./src.js"></script> 
+  </body> 
+  
+</html> 
