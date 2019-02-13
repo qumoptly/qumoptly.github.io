@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/article_noise_in_laser_technology1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Noise in Laser Technology &ndash; Part 1: Intensity and Phase Noise</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Lasers can exhibit various kinds of &ldquo;noise&rdquo;, with manifold influences on applications. Here we discuss where such noise can come from, how it is quantified and how its influences can be minimized.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="lasers, intensity noise, phase noise, laser noise, relaxation oscillations, relative intensity noise, noise specifications">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="article_noise_in_laser_technology1.html"; cat="A"; shownbanner=""; ref="encyclopedia_l.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub sel">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Noise in Laser Technology &ndash; Part 1: Intensity and Phase Noise</h1>
+<p>Author: <a href="paschotta.html">Rüdiger Paschotta</a>, <a href="index-2.html">RP Photonics Consulting GmbH</a></p>
+<p>(This article appeared in similar form in <a href="http://www.wiley-vch.de/berlin/journals/op/09-02/OP0902_S48-S50.pdf" rel="nofollow">Optik &amp; Photonik 2, 48 (2009)</a>. See also <a href="article_noise_in_laser_technology2.html">Part 2 &ndash; Fluctuations of Pulsed Lasers</a> and <a href="article_noise_in_laser_technology3.html">Part 3 &ndash; Beam Pointing Fluctuations</a>.)</p>
+<p class="abstract"><b>Abstract:</b> Lasers can exhibit various kinds of "noise", with manifold influences on applications. Here we discuss where such noise can come from, how it is quantified and how its influences can be minimized.</p>
+<p>&ldquo;Noise&rdquo; of lasers is a short term for random fluctuations of various output parameters.
+This is a frequently encountered phenomenon which has a profound impact on many applications in photonics, particularly in the area of precision measurements.
+Consider e.g. interferometric position measurements, which can be directly affected by fluctuations of the <a href="optical_phase.html" title="optical phase: the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a>, or spectroscopic measurements of transmission, where intensity fluctuations limit the possible sensitivity.
+Similarly, the data rate and the transmission distance for fiber-optic links are at least partly limited by noise issues.</p>
+<p>Many engineers and physicists feel more or less uneasy about <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>.
+One reason is that the causes are often hard to evaluate and eliminate.
+Further technical and mathematical difficulties are related to measuring and quantifying noise; <a href="noise_specifications.html" title="noise specifications: specifications for the noise properties of lasers, for example">specifications</a> found in many data sheets reveal less about the laser than about the competence of the person who made the specification.
+Furthermore, it is desirable but not always easy to estimate the influence of different kinds of noise in some application.
+For such reasons, trial &amp; error approaches without a decent understanding are often used e.g. for minimizing noise influences, but this often turns out to be ineffective or inefficient.</p>
+<p>This series of articles is intended to explain some basics and thus to help finding rational solutions.
+Part&nbsp;1 treats <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity</a> and <a href="phase_noise.html" title="phase noise: noise of the optical phase of a beam or of an electric signal">phase noise</a>; many aspects, of course, can be applied to other types of noise.
+Later articles will deal with fluctuations of <a href="pulsed_lasers.html" title="pulsed lasers: lasers emitting light in the form of pulses">pulsed lasers</a> and with <a href="beam_pointing_fluctuations.html" title="beam pointing fluctuations: fluctuations of the propagation direction of a laser beam">beam pointing fluctuations</a>.</p>
+<h2 class="togglediv">Intensity Noise</h2>
+<div>
+<p><a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">Intensity noise</a> is usually understood to quantify fluctuations of the laser output power (not actually an optical intensity), and in most cases normalized to the average power.
+The measurement is based on recording the temporally varying output power, using a photodiode, for example.
+The normalization is the simplest aspect; other aspects, to be discussed in the following, are more subtle.</p>
+<p>Frequently encountered <a href="noise_specifications.html" title="noise specifications: specifications for the noise properties of lasers, for example">specifications</a> like &ldquo;&plusmn;1&#37;&rdquo; appear simple, but are quite meaningless.
+They suggest that the power always stays within 1&#37; of its average value, while in reality there is usually a smooth probability distribution without sharp edges.
+A good way to avoid this problem is to specify r.m.s. (root mean squared) values, meaning the square root of the average of the squared power fluctuations:</p>
+<div class="eqn"><img src="eqn/p_rms.gif" width="166" height="40" alt="r.m.s. power fluctuations"></div>
+<p> 
+where <span class="eqn_il"><i>P</i><sub>av</sub></span> is the average power.
+This is usually applied to <em>relative</em> power fluctuations, thus specifying relative intensity noise (RIN).
+The r.m.s. RIN is of course dimensionless.</p>
+<p>Another problem is that the registered fluctuations can strongly depend on the measurement <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>.
+For example, a laser may exhibit fast fluctuations of the output power, which are seen by a fast photodetector, while being averaged out and thus not registered by a slower detector.
+Furthermore, a limited measurement time may not be sufficient to detect slow fluctuations (drifts); essentially, one does not know how far the average power in the chosen time interval deviates from the average over longer times.
+For these reasons, a simple number without specification of a measurement bandwidth (lower and upper noise frequency) is actually meaningless and should never occur in a data sheet.
+The measurement bandwidth may extend from some very small frequency, limited by the inverse measurement time, to some maximum frequency, determined by the speed of the detector.</p>
+<p>Note also that any noise specification is actually a statistical measure, which is only estimated by one data trace for a given time interval, or (better) with an average over several traces.
+Further, the laser noise may depend on ambient conditions.
+Therefore, one should know whether a specification applies for constant room temperature, after a long warm-up time, and in a vibration-free environment.</p>
+<p>If it is of interest to which extent different noise frequencies contribute to the overall noise, a <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a> (PSD) <span class="eqn_il"><i>S</i><sub><i>I</i></sub>(<i>f</i>)</span> is most useful.
+Conceptually, one can imagine that many noise measurements are done for different (small) noise frequency intervals.
+This is how many electronic spectrum analyzers record noise spectra: the detector is subsequently tuned to different noise frequencies.
+However, there are also techniques based on Fourier transforms, which allow to estimate whole noise spectra from single (or a few) data traces recorded in the time domain.
+One may e.g. use a sampling card to record a signal proportional to the laser power over a certain time and with a certain temporal resolution.
+Before doing a Fourier transform, a so-called &ldquo;window function&rdquo; must normally be applied to avoid certain artifacts.
+The lowest noise frequency in such a measurement is the inverse total duration, while the maximum frequency is at most half the sampling rate.
+The latter limit results from the Nyquist theorem.</p>
+<p>Once we have the power spectral density <span class="eqn_il"><i>S</i><sub><i>I</i></sub>(<i>f</i>)</span> of the relative intensity, we can calculate the r.m.s. <a href="relative_intensity_noise.html" title="relative intensity noise: noise of the optical intensity (or actually power), normalized to its average value">relative intensity noise</a> according to</p>
+<div class="eqn"><img src="eqn/rin_rms.gif" width="140" height="60" alt="r.m.s. value of relatively intensity noise"></div>
+<p>where <span class="eqn_il"><i>f</i><sub>1</sub></span> and <span class="eqn_il"><i>f</i><sub>2</sub></span> are the lower and upper noise frequency, respectively.
+(This is assuming a one-sided PSD; physicists often use two-sided PSDs, where the integration also has to include negative frequencies.) The units of <span class="eqn_il"><i>S</i><sub><i>I</i></sub>(<i>f</i>)</span> are 1/Hz, indicating that <span class="eqn_il"><i>S</i><sub><i>I</i></sub>(<i>f</i>)</span> is the noise contribution per frequency interval.
+It is also common to specify <span class="eqn_il">10&thinsp;&middot;&thinsp;lg(<i>S</i><sub><i>I</i></sub>(<i>f</i>))</span>, arriving at units of dBc/Hz, meaning dB relative to the carrier in a 1-Hz noise bandwidth.</p>
+<figure>
+<img src="img/simulated_intensity_noise.png" alt="simulated intensity noise spectrum">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Simulated intensity noise spectrum of a diode-pumped miniature Nd:YAG laser.
+Gray curve: with quantum-limited pump source.
+Red curve: with 30 dB excess noise of the pump source.
+</figcaption>
+</figure>
+<p>Fig.&nbsp;1 shows the simulated relative <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity noise</a> spectrum (i.e., <span class="eqn_il"><i>S</i><sub><i>I</i></sub>(<i>f</i>)</span> versus frequency) of a diode-pumped single-frequency Nd:YAG laser, using logarithmic scales for both axes.
+The RIN exhibits a characteristic peak around 140&nbsp;kHz, related to so-called <a href="relaxation_oscillations.html" title="relaxation oscillations: small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>, which result from the dynamic interaction of the intracavity power and the laser gain.
+Obviously, a detector with 20&nbsp;kHz bandwidth would not be able to detect such fast oscillations and would thus record much weaker noise than a 200-kHz detector.
+Laser diodes exhibit relaxation oscillations with much higher frequencies (multiple GHz) and stronger damping due to their short carrier lifetime and short resonator.
+Generally, different laser types can exhibit very different noise properties, as characteristic parameters may be totally different.</p>
+<p>Around the relaxation oscillation frequency <span class="eqn_il"><i>f</i><sub>ro</sub></span>, a laser is particularly sensitive to external noise influences, e.g. from the pump diode, and even to quantum noise.
+Well above <span class="eqn_il"><i>f</i><sub>ro</sub></span>, noise of any kind has little impact.
+Well below <span class="eqn_il"><i>f</i><sub>ro</sub></span>, pump noise may directly affect the output.
+For the red curve in Fig.&nbsp;1, some frequency-independent excess noise of the pump <a href="laser_diodes.html" title="laser diodes: semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">diode</a> has been assumed; in reality, there can be an increase toward lower frequencies, often determined by the quality of the <a href="laser_diode_drivers.html" title="laser diode drivers: electronic current supplies for one or several laser diodes">diode driver</a>.
+Even for a perfect shot-noise-limited pump source (gray curve), noise around <span class="eqn_il"><i>f</i><sub>ro</sub></span> is relatively strong.
+The impact of <a href="quantum_noise.html" title="quantum noise: noise arising from quantum fluctuations">quantum noise</a> depends on various parameters; in particular, it is stronger in cases with low intracavity power, high resonator losses and a short round-trip time of the resonator.
+Additional contributions to intensity noise of a laser can result from acoustic influences.
+For example, a cooling system may cause vibrations of the laser resonator, which translate into intensity and phase noise.
+In many cases, such noise contributions appear in the form of sharp peaks in the spectrum.</p>
+<p>An entirely different phenomenon is noise from mode <a href="beat_note.html" title="beat note: an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beating</a> in lasers where multiple resonator modes are oscillating.
+The occurring beat frequencies are differences of resonator mode frequencies, which may be rather high (multiple GHz) for laser diodes and very low (few kHz) for long fiber lasers.
+The pattern of beat frequencies can reveal whether or not the laser operates on axial modes only.</p>
+<p>Minimization of laser noise can be done on entirely different routes:</p>
+<ul>
+<li>A first approach is the minimization of external noise influences, e.g. by using singly-frequency pump diodes operated with a carefully stabilized current source, and making a mechanical stable laser setup.</li>
+<li>A second possibility is the optimization of laser parameters such that the impact of quantum noise and/or external noise influences is minimized.
+For example, one may minimize quantum noise influences by using a long low-loss laser resonator, or move the relaxation oscillation frequency into a region where noise is less strongly disturbing the application.</li>
+<li>Finally, one may reduce laser noise with a <a href="stabilization_of_lasers.html" title="stabilization of lasers: measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">feedback system</a>, automatically adjusting e.g. the pump power based on measured output power fluctuations.
+The characteristics of the feedback loop need to be optimized based on the knowledge of laser parameters.</li>
+</ul>
+<p>Obviously, the potential of these approaches depends very much on the circumstances, which should thus be analyzed carefully beforehand.
+Without a proper understanding of the sources and types of noise, such exercises are prone to fail or at least to be inefficient.</p>
+<p>The intensity noise of nearly all light sources is limited by <a href="shot_noise.html" title="shot noise: quantum-limited intensity noise">shot noise</a>.
+In an intuitive (and somewhat simplified) picture, this can be understood as the random occurrence of photons (packets of light energy).
+Even if the probability of detecting a photon within some short time interval is constant, the actually recorded photon absorption events exhibit some randomness if there are no correlations between photons.
+This leads to a PSD of the relative intensity noise of <span class="eqn_il">2&thinsp;<i>h<span class="greek">&nu;</span></i>&thinsp;/&thinsp;<i>P</i><sub>av</sub></span>, where <span class="eqn_il"><i>h<span class="greek">&nu;</span></i></span> is the <a href="photons.html" title="photons: quanta of light energy">photon energy</a>.
+The relative intensity noise of a laser is often well above the shot noise level, but the latter rises if the output is more and more attenuated (e.g. with some linear absorber).
+With sufficiently stronger power attenuation, the intensity noise will be at the shot noise limit.</p>
+<p><a href="squeezed_states_of_light.html" title="squeezed states of light: nonclassical states of light with noise below the standard quantum limit in one quadrature component">Squeezed states of light</a> can exhibit intensity noise below the shot noise limit, but require special methods to be generated, and tend to lose that special property e.g. when the light is attenuated.</p>
+</div>
+<h2 class="togglediv">Phase Noise and Linewidth</h2>
+<div>
+<p><a href="phase_noise.html" title="phase noise: noise of the optical phase of a beam or of an electric signal">Phase noise</a> is related to fluctuations of the <a href="optical_phase.html" title="optical phase: the phase of the electric field of an optical wave, usually considered in the time domain">optical phase</a> of the output.
+Simple as this sounds, the optical phase may not even be defined for a laser oscillating on multiple resonator modes.
+We thus assume to be dealing with a single-frequency laser, where essentially all power is in a single resonator mode.
+(For multimode lasers, one may consider phase noise for different modes separately.)</p>
+<p>Due to various influences, even a single-frequency laser will not exhibit a perfect sinusoidal oscillation of the electric field at its output.
+There are fluctuations of the power (see above) and the optical phase <span class="eqn_il"><span class="greek">&phi;</span></span>.
+The latter can be quantified with a phase noise <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">PSD</a> <span class="eqn_il"><i>S</i><sub><span class="greek_small">&phi;</span></sub>(<i>f</i>)</span>, having units of rad<sup>2</sup>/Hz.
+(As radians are dimensionless, one may also write Hz<sup>&minus;1</sup>.)</p>
+<p>Initially, we may consider only <a href="quantum_noise.html" title="quantum noise: noise arising from quantum fluctuations">quantum noise</a>, in a simplified picture described as the random phase of photons added by <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>.
+This leads to a &ldquo;random walk&rdquo; of the optical phase, which is related to a phase noise PSD <span class="eqn_il"><i>S</i><sub><span class="greek_small">&phi;</span></sub>(<i>f</i>)&thinsp;&sim;&thinsp;<i>f</i><sup>&minus;2</sup></span>.
+The divergence at <span class="eqn_il"><i>f</i></span> = 0 is related to the unbounded drift of the phase, which, unlike the output power, lacks a &ldquo;restoring force&rdquo;.
+It also causes a finite value of the <a href="linewidth.html" title="linewidth: width of the spectrum of a light beam or an absorption feature">linewidth</a>, which is the width of the main peak in the power spectral density of the optical field.
+A famous paper from 1958 by Schawlow and Townes presented a simple <a href="schawlow_townes_linewidth.html" title="Schawlow&ndash;Townes linewidth: linewidth of a single-frequency laser with quantum noise only">formula to calculate that linewidth</a>, and showed that the linewidth decreases for increasing intracavity power, decreasing resonator losses, and increasing resonator length.
+However, the quantum-limited linewidth is often difficult to reach, as other (technical) noise influences are dominating.</p>
+<p>In many cases, the linewidth, being a single value, is of primary interest for applications.
+However, the complete phase noise spectrum may be required in other cases, and may reveal important noise contributions even if these are not relevant for the linewidth.
+Essentially, the linewidth is determined by low-frequency noise.</p>
+<p>The measurement of phase noise or the linewidth is substantially more difficult than that of intensity noise, partly because the phase evolution must be compared with some reference.
+A conceptually simple but often impractical method is based on measuring a <a href="beat_note.html" title="beat note: an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a> of the laser with a second laser, exhibiting a similar <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequency</a> (keeping the beat frequency low enough) and much lower phase noise.
+Alternatively, two similar lasers may be used, and the relative phase noise provides an estimate for the noise of a single laser.</p>
+<figure>
+<img src="img/self_heterodyne.png" alt="delayed self-heterodyne measurements">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Setup for delayed self-heterodyne measurements.
+The mirrors next to the acousto-optic modulator (AOM) have a reflectivity of e.g. 50&#37;.
+The detector records the beat note between the frequency-shifted part and the delayed part of the laser light.
+This contains information on phase noise and linewidth.
+</figcaption>
+</figure>
+<p>An often convenient variant is the delayed <a href="self_heterodyne_linewidth_measurement.html" title="self-heterodyne linewidth measurement: a technique for laser linewidth measurements, based on a beat note between the beam and a delayed version of itself">self-heterodyne method</a>, using a setup as shown in Fig.&nbsp;2.
+Here, one shifts the optical frequency with an acousto-optic modulator and derives a reference from the laser itself by introducing a substantial time delay with a long optical fiber.
+For a very long delay (which is often inconvenient to provide, however), the noise of the delayed reference would be uncorrelated to the laser noise, allowing a simple analysis.
+Noise measurements are still possible with shorter delays, but require a more sophisticated mathematical analysis.
+This should also take into account the possibility that the phase noise PSD does not exhibit an <span class="eqn_il"><i>f</i><sup>&minus;2</sup></span> law.</p>
+<p>In principle, the phase noise spectrum can also be obtained from the optical spectrum, as recorded e.g. with a scanning high-finesse Fabry-P&eacute;rot interferometer.
+Here, the optical resonator provides a phase reference.
+This can work for a semiconductor laser, whereas it is hard to get the resonator linewidth below that of a typical solid-state laser.</p>
+</div>
+<h2 class="togglediv">Conclusions</h2>
+<div>
+<p>Lasers exhibit <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity</a> and <a href="phase_noise.html" title="phase noise: noise of the optical phase of a beam or of an electric signal">phase noise</a> resulting from various internal and external influences, the impact of which is strongly influenced by the internal dynamics.
+Noise can be minimized in various ways; the best way strongly depends on the circumstances.</p>
+<p>Intensity noise is in principle easy to measure, but proper specifications need a decent understanding also of certain mathematical aspects, in particular of the influence of measurement time and bandwidth, and of power spectral densities.</p>
+<p>Phase noise measurements are subject to additional difficulties, partly related to the need for some phase reference and the mathematical complication of a diverging phase noise PSD.
+The laser linewidth is directly related to phase noise, but of course contains much less information than the whole phase noise spectrum.
+Quantum noise alone in a laser leads to the <a href="schawlow_townes_linewidth.html" title="Schawlow&ndash;Townes linewidth: linewidth of a single-frequency laser with quantum noise only">Schawlow&ndash;Townes linewidth</a>, which however is often not reached due to additional noise influences.</p>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs"><a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>: articles on laser noise, intensity noise, phase noise and others</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. Paschotta, H. R. Telle, and U. Keller, <i>Noise of Solid State Lasers</i>, in Solid-State Lasers and Applications (ed. A. Sennaroglu), CRC Press, Boca Raton, FL (2007), Chapter 12, pp. 473&ndash;510</td></tr>
+<tr><td class="refno">[3]</td><td class="refs"><a href="article_noise_in_laser_technology2.html">Part 2 &ndash; Fluctuations of Pulsed Lasers</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs"><a href="article_noise_in_laser_technology3.html">Part 3 &ndash; Beam Pointing Fluctuations</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity noise</a>, <a href="phase_noise.html" title="phase noise: noise of the optical phase of a beam or of an electric signal">phase noise</a>, <a href="relaxation_oscillations.html" title="relaxation oscillations: small mutually coupled oscillations of the laser power and laser gain around their steady-state values">relaxation oscillations</a>, <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a>, <a href="noise_specifications.html" title="noise specifications: specifications for the noise properties of lasers, for example">noise specifications</a>, <a href="laser_specifications.html" title="laser specifications: descriptions of essential properties of a laser system, such as performance parameters, dimensions, and operating conditions">laser specifications</a></p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/article_noise_in_laser_technology1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:34 GMT -->
+</html>

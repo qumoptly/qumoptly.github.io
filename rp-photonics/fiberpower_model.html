@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_model.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:05:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP Fiber Power: the used physical model - mode solver, level systems, transitions, optical channels, dynamic simulations</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="The used physical models can involve a mode solver, numerical beam propagation, multi-level gain systems and ultrashort pulse propagation.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, fiber amplifiers, lasers, power, model, level systems, transitions, spatial resolution, speed">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_model.html"; cat="S"; shownbanner=""; ref="fiberpower.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_model_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Fiber Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_case_studies.html">Demos</a></td>
+</tr>
+</table>
+<div id="mode_solver"></div>
+<h2>Mode Solver</h2>
+<figure class="right" style="width:249px;">
+<img src="img/high_order_fiber_mode.png" alt="high-order fiber mode">
+</figure>
+<p><b>RP Fiber Power</b> contains a powerful mode solver, which can very quickly calculate all guided modes (<a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP modes</a>) for a fiber from a given radially symmetric refractive index profile.
+This works even for fibers with several hundred modes.
+The mode solver also calculates propagation constants and the fraction of power guided in the core.</p>
+<p>The refractive index profile can be specified with a formula or from tabulated values as result from measurements.
+Any wavelength dependence can also be included, which also allows one to calculate the <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> (material and waveguide dispersion) with predefined functions.</p>
+<p>The resulting intensity profiles can be very easily used in the definition of optical channels for the calculation of the power evolution in the fiber.
+(Of course, for that purpose you may also use profiles from other sources, e.g. based on the manufacturer's specifications.)</p>
+<p>See also our <a href="fiberpower_video3.html">demo video for using the mode solver</a>.</p>
+<h2>Beam Propagation</h2>
+<figure class="right" style="width:249px;">
+<img src="img/beam_prop_example.png" alt="example for beam propagation in a tapered fiber">
+</figure>
+<p><b>RP Fiber Power</b> can numerically simulate the propagation of arbitrary complex field distributions in fibers (or other waveguides) with arbitrary (but weakly guiding) refractive index profiles.
+A split-step Fourier algorithm is used.
+Multiple beams at different wavelengths can be propagated, and can interact with each other through laser-active ions and nonlinear effects (XPM, SRS).</p>
+<p>The user has full control over the numerical grid parameters, refractive index and dopant distributions, input fields, etc.
+As all other features, all this can also be controlled via script commands in order to generate arbitrary plots, feed data from one beam propagation device into another (possibly with interpolation), import and export data to files with any format, etc.
+This makes <b>RP Fiber Power</b> a powerful tool e.g. for research on tapered fibers, double-clad fibers and various other fiber components.</p>
+<p>See also our <a href="fiberpower_video4.html">demo video for numerical beam propagation</a>.</p>
+<h2>Level Systems and Transitions</h2>
+<figure class="right" style="width:249px;">
+<img src="img/thulium_levels.png" alt="thulium energy levels and transitions">
+</figure>
+<p><b>RP Fiber Power</b> can be used to model cases where two or even three different types of laser-active ions participate in an amplification or lasing process.
+Each ion may have a substantial number of metastable excited levels.</p>
+<p>The user can freely define various kinds of transitions between electronic levels:</p>
+<ul>
+<li>spontaneous transitions (<a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">radiative</a> or <a href="non_radiative_transitions.html" title="non-radiative transitions: transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative</a>)</li>
+<li>optically induced transitions (absorption or <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>)</li>
+<li><a href="quenching.html" title="quenching: the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a> processes (including pair-induced quenching and quenching processes in larger ion clusters)</li>
+<li>energy transfers (between ions of the same type, or of different types, e.g. between Er<sup>3+</sup> and Yb<sup>3+</sup> ions)</li>
+</ul>
+<p>These inputs determine the rate equation system, which is then very efficiently solved with an advanced algorithm.</p>
+<p>The figure to the right shows an example case in the context of a <a href="fiberpower_tdfl.html">thulium-doped upconversion fiber laser</a>.
+Here, one is dealing with three metastable levels in addition to the ground state.
+There are four absorbing transitions (including the quasi-three-level laser transition) and two transitions with stimulated emission (pump and signal), apart from various spontaneous transitions.</p>
+<h2>Optical Channels</h2>
+<p><b>RP Fiber Power</b> allows one to take into account a large number of so-called optical channels, which may represent single propagation modes or some (possibly large) collection of propagation modes.
+For modeling <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE), channels can have a finite optical bandwidth.
+For each channel, the transverse intensity distribution can be freely defined.
+For fiber amplifiers, the <a href="noise_figure.html" title="noise figure: a measure of the excess noise added in an amplifier">noise figure</a> of any signal channel can be calculated.</p>
+<p>The figure below illustrates the optical channels in an erbium-doped fiber amplifier: a pump channel, two signal channels, and 16 ASE channels.</p>
+<figure>
+<img src="img/optical_channels.png" alt="optical channels in RP Fiber Power">
+</figure>
+<p>See also our <a href="fiberpower_video5.html">demo video on fiber amplifiers and lasers</a>.</p>
+<h2>Dynamic Simulations</h2>
+<figure class="right" style="width:249px;">
+<img src="img/fp_pulse_distortion.png" alt="pulse distortion in fiber amplifier">
+</figure>
+<p>The software also allows you to simulate the temporal evolution of your system.
+A highly flexible approach has been implemented, allowing both the precise simulation of the dynamics of lasers, fully taking into account the propagation time in the fiber, and very fast simulations of single-pass or double-pass pulse amplification.</p>
+<p>As an example, the figure on the right side shows how a pulse shape gets distorted by <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> during amplification in a high-gain fiber amplifier, and how much of the stored energy is extracted by such a pulse.
+Another example corresponds to a Q-switched fiber laser model, which is described on a <a href="fiberpower_qs_laser.html">separate page</a>.</p>
+<p>You may automatically perform multiple dynamic simulations.
+For example, you can simulate the pumping of a pulse amplifier with relatively coarse time steps, and later then signal amplification with a much higher temporal resolution.
+Then put both simulations into a loop to simulate multiple pumping/amplification cycles.</p>
+<h2>Ultrashort Pulse Propagation</h2>
+<figure class="right" style="width:200px;">
+<img src="img/ultrashort_pulse.png" alt="ultrashort pulse">
+</figure>
+<p>An ultrashort pulse can be numerically represented with an array of complex amplitudes in the time or frequency domain.
+Fourier transforms are used to relate time and frequency to each other.
+Wavelength-dependent amplification and chromatic dispersion are modeled in the frequency domain, whereas nonlinear effects are treated in the time domain.
+A refined numerical split-step algorithm with automatic step size control ensures a high accuracy combined with high speed.</p>
+<p>Arbitrary chromatic dispersion can be included by specifying a wavelength-dependent function for the GVD (<a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>) or the <a href="effective_refractive_index.html" title="effective refractive index: a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive index</a>.
+If the integrated <a href="#mode_solver">mode solver</a> is used, this can also calculate the mode dispersion.</p>
+<p>Not only a simple Kerr nonlinearity can be modeled, but also a nonlinearity with a delayed nonlinear response, leading to stimulated <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman scattering</a>.
+The user can specify an arbitrary response function, not only parameters of a given functional form, so that Raman gain with arbitrary gain spectrum can be treated.</p>
+<p>Well over 100 functions of the <a href="software_script_language.html">script language</a> are available for defining model inputs and retrieving all sorts of pulse properties.
+The results can also be inspected using the convenient interactive <a href="fiberpower_interface.html#pulse_display">pulse display window</a>.</p>
+<p>Although various competing products can also simulate ultrashort pulse propagation, <b>RP Fiber Power</b> is probably unique in terms of its high flexibility, as results from the full control with a powerful script language.
+Therefore, you may use it for a wide range of simulations &ndash; even going far beyond what the developer has anticipated.</p>
+<h2>Speed and Reliability</h2>
+<p>The numerical solution of the equations for the steady state in such a model is a challenging task.
+It requires an iterative procedure.
+If this procedure is not very well worked out, its convergence properties can strongly depend on the situation.
+(See the <a href="spotlight_2008_11_08.html">Spotlight article of 2008-11-08</a> with a discussion of the validation of such simulations.)</p>
+<p><b>RP Fiber Power</b> has been very carefully designed, using an iterative procedure with automatically adapted parameters.
+As a result, the software achieves a surprisingly high speed and reliable convergence in a very wide range of cases.
+This includes cases with laser operation very close to threshold or far above threshold, amplification with backward pumping and strong ASE, etc., where other software may have extreme problems in finding the correct solution, or doing this within a reasonable time.</p>
+<figure>
+<img src="img/ydfl_it.png" alt="test of iterative procedure in RP Fiber Power">
+</figure>
+<p>The diagram above shows with a color scale how the number of iterations required in a <a href="fiberpower_ydfl.html">fiber laser model</a> varies when the pump power and the output coupler transmission are systematically varied, and the configuration is each time calculated from scratch.
+There is a slight increase of computation time near threshold, but the computation for one configuration (with 3 optical channels in that case) typically requires only a tiny fraction second on an ordinary PC, despite the good spatial resolution (with 100 points in <i>z</i> direction).</p>
+<p>Ultrashort pulse propagation is also simulated with a very robust and efficient algorithm, automatically taking finer numerical steps only where needed, based on a monitoring of numerical errors.</p>
+<p>See also the <a href="fiberpower_faq.html"><b>frequently asked questions</b></a>.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_model.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:05:42 GMT -->
+</html>

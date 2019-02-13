@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spectral_interferometry.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:50 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - spectral interferometry, spectral shearing, SPIDER, frequency domain, Fourier transform, pulse characterization</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Spectral interferometry denotes a class of interferometric methods, where interference in the frequency domain is exploited. It is often used for the characterization of ultrashort pulses.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="spectral interferometry, spectral shearing, SPIDER, frequency domain, Fourier transform, pulse characterization">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spectral_interferometry.html"; cat="E"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_spectral_interferometry.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Spectral Interferometry</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_spectral_interferometry1fbf.html?s=vbox" class="bg_bgheading">Suppliers for equipment for spectral interferometry</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_spectral_interferometry1fbf.html?s=vbox" class="redlink"><b>5 suppliers for equipment for spectral interferometry</b></a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_spectral_interferometry1fbf.html?s=vbox">List of suppliers for<br>spectral interferometry</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a class of interferometric methods, where interference in the frequency domain is exploited</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">spektrale Interferometrie</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<p><a href="encyclopedia_cite573b.html?article=spectral%20interferometry">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>The intensity profile of the <a href="optical_spectrum.html" title="optical spectrum: the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of a signal, such as an <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulse</a>, can easily be measured using some kind of <a href="spectrometers.html" title="spectrometers: devices for separating spectral components">spectrometer</a>.
+For the more difficult task of retrieving the <a href="spectral_phase.html" title="spectral phase: the phase of the electric field in the frequency domain"><em>spectral phase</em></a>, methods of Fourier transform spectral interferometry (also called <em>frequency domain interferometry</em>) provide various options.</p>
+<p>The basic principle of spectral interferometry is that two pulses are interferometrically combined, and the <a href="optical_spectrum.html" title="optical spectrum: the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of that combination is recorded.
+An essential detail is that one of the pulses is subject to a time delay <span class="eqn_il"><span class="greek">&tau;</span></span>.
+If the electric fields of the two pulses are described with phasors <span class="eqn_il"><i>E</i><sub>1</sub>(<span class="greek">&omega;</span>)</span> and <span class="eqn_il"><i>E</i><sub>2</sub>(<span class="greek">&omega;</span>)</span>, the additional time delay translates into a phase factor <span class="eqn_il">exp(&minus;<i>i&thinsp;<span class="greek">&omega;</span>&thinsp;<span class="greek">&tau;</span></i>)</span> for one of the pulses.
+Apart from irrelevant prefactors, the combined field is thus</p>
+<div class="eqn"><img src="eqn/si_spectrum.gif" width="220" height="24" alt="optical spectrum in spectral interferometry"></div>
+<p>from which one can see that the optical spectrum is modulated (see Figure&nbsp;1).
+The oscillating term has a phase</p>
+<div class="eqn"><img src="eqn/si_phase.gif" width="176" height="24" alt="phase in spectral interferometry"></div>
+<p>which shows that there is an oscillation determined by the time delay, the phase of which is also influenced by the difference of the spectral phases of the two pulses.</p>
+<h2 class="togglediv">Pulse Characterization Using a Reference Pulse</h2>
+<div>
+<p>It is now possible to characterize an ultrashort pulse, if a reference pulse with a well-characterized spectral phase is available, the spectrum of which covers the full range of the spectrum of the pulse to be characterized.
+The time delay is chosen such that the period of spectral modulation can be well resolved with the given <a href="spectrometers.html" title="spectrometers: devices for separating spectral components">spectrometer</a>, but is fast enough for an accurate phase determination.
+The phase of the recorded spectrum can be conveniently and precisely obtained with Fourier transform methods, applied to the spectral intensity curve.</p>
+<figure>
+<img src="img/spectral_interference.png" alt="spectral interference">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Spectrum of two femtosecond pulses, where one pulse is nonlinearly chirped and delayed by 600&nbsp;fs. The spectral modulation can be used to reconstruct the spectral phase of the chirped pulse.
+</figcaption>
+</figure>
+<p>A high sensitivity can be achieved, as such a <a href="optical_heterodyne_detection.html" title="optical heterodyne detection: a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">heterodyne method</a> works well even if the signal pulse energy is much lower than that of the reference pulse.
+Also, no nonlinear crystal is required, thus avoiding possible bandwidth-limiting effects.
+Finally, an accurate intensity calibration of the spectrometer is not required, since only the fast modulation of the spectrum is of interest, not the slow variation of intensity.
+However, the need for a suitable reference pulse is clearly a disadvantage.</p>
+</div>
+<h2 class="togglediv">Spectral Shearing Interferometry</h2>
+<div>
+<p>A convenient way of obtaining a reference pulse can be to send a copy of the signal pulse through a sinusoidally modulated <a href="phase_modulators.html" title="phase modulators: devices for manipulating the phase of a laser beam">phase modulator</a> at a time close to the zero crossing of the phase.
+(For example, an <a href="electro_optic_modulators.html" title="electro-optic modulators: optical modulators based on the electro-optic effect">electro-optic modulator</a> may be inserted in one arm of a Mach&ndash;Zehnder <a href="interferometers.html" title="interferometers: optical devices utilizing the phenomenon of interference">interferometer</a>.)
+The nearly linear temporal phase modulation then corresponds to some spectral shift of magnitude <span class="eqn_il"><span class="greek">&delta;</span><span class="greek">&omega;</span></span>.
+The spectrum of the combined pulses then has a modulation phase</p>
+<div class="eqn"><img src="eqn/shearing_phase.gif" width="306" height="42" alt="phase in spectral shearing interferometry"></div>
+<p>where the approximate relation holds if <span class="eqn_il"><span class="greek">&delta;</span><span class="greek">&omega;</span></span> is not too large.
+This shows that the spectral derivative of the phase of the signal pulse can be obtained, which is the frequency-dependent <a href="group_delay.html" title="group delay: a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a>.</p>
+<p>This method, called <em>spectral shearing interferometry</em> [1,&thinsp;10,&thinsp;11], works well for relatively long pulses.
+For very short pulses, where the group delay variation within a pulse duration is small, it is difficult to obtain a sufficiently large spectral shift in the modulator.
+A larger spectral shear can be achieved by using a nonlinear interaction, as discussed in the following section.</p>
+</div>
+<h2 class="togglediv">Spectral Phase Interferometry for Direct Electric-field Reconstruction</h2>
+<div>
+<p>Another method of spectral shearing interferometry, often applied for the complete <a href="pulse_characterization.html" title="pulse characterization: the measurement of various properties of an optical pulse">characterization of ultrashort pulses</a>, is called <em>Spectral Phase Interferometry for Direct Electric-field Reconstruction</em> (SPIDER) [4].
+Here, the signal pulse is split into two identical copies with a significant temporal distance, so that there is no temporal overlap.
+Another pulse, derived from the same input pulse, is strongly temporally broadened by sending it through a highly <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">dispersive</a> optical element, such as a long block of glass or a pair of <a href="diffraction_gratings.html" title="diffraction gratings: optical components containing a periodic structure which diffracts light">diffraction gratings</a>.</p>
+<figure>
+<img src="img/spider_setup.png" alt="SPIDER setup">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Setup for ultrashort pulse characterization with the SPIDER method.
+</figcaption>
+</figure>
+<p>The long chirped pulse and the two copies of the signal pulse are then combined in a <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>, where <a href="sum_and_difference_frequency_generation.html" title="sum and difference frequency generation: nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> occurs (see Figure&nbsp;2).
+The two signal pulses overlap with different temporal portions of the chirped pulse, which have different <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequencies</a>, so that there is also a spectral shear between the two upconverted pulses.
+Therefore, the optical spectrum of the sum frequency signal reveals the temporally resolved group delay in a way which is analogous to that discussed above.
+From the group delay, it is easy to retrieve the frequency-dependent <a href="spectral_phase.html" title="spectral phase: the phase of the electric field in the frequency domain">spectral phase</a>, so that complete pulse characterization is achieved.</p>
+<p>In comparison with <a href="frequency_resolved_optical_gating.html" title="frequency-resolved optical gating: a technique for the complete characterization of ultrashort optical pulses">frequency-resolved optical gating</a> (FROG), the SPIDER method has various advantages and disadvantages:</p>
+<ul>
+<li>SPIDER does not require a sophisticated iterative algorithm for retrieving the spectral phase.
+Its simple algorithm can be executed very rapidly on a PC, allowing for fast update rates which are limited only by the speed of the spectrometer, even for complicated pulse shapes.
+However, the FROG algorithm has the advantage of delivering additional consistency checks.</li>
+<li>Both methods can be applied also for very short pulses with durations below 10&nbsp;fs.
+FROG then relies on the accurate calibration of the spectrometer in a wide wavelength range, whereas SPIDER requires only precise wavelength calibration, which is simpler to obtain.
+However, it may anyway be desirable to know the spectrum precisely.</li>
+<li>For long pulses, FROG is more convenient, since SPIDER would require a spectrometer with very high resolution, and an optical element with a huge amount of chromatic dispersion.</li>
+<li>Both methods have variants which allow for single-shot measurements.</li>
+</ul>
+<p>A comprehensive comparison of SPIDER and FROG techniques is difficult, because there are many variants of both methods, which have specific advantages under certain circumstances.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">V. Wong and I. A. Walmsley, &ldquo;Analysis of ultrashort pulse-shape measurement using linear interferometers&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-19-4-287" rel="nofollow">Opt. Lett. 19 (4), 287 (1994)</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">E. Tokunaga <i>et al.</i>, &ldquo;Femtosecond continuum interferometer for transient phase and transmission spectroscopy&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-13-3-496" rel="nofollow">J. Opt. Soc. Am. B 13 (3), 496 (1996)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">C. X. Yu <i>et al.</i>, &ldquo;Direct measurement of self-phase shift due to fiber nonlinearity&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-23-9-679" rel="nofollow">Opt. Lett. 23 (9), 679 (1998)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">C. Iaconis and I. A. Walmsley, &ldquo;Spectral phase interferometry for direct electric-field reconstruction of ultrashort optical pulses&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-23-10-792" rel="nofollow">Opt. Lett. 23 (10), 792 (1998)</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">L. Gallmann <i>et al.</i>, &ldquo;Characterization of sub-6-fs optical pulses with spectral phase interferometry for direct electric-field reconstruction&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-24-18-1314" rel="nofollow">Opt. Lett. 24 (18), 1314 (1999)</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">L. Gallmann <i>et al.</i>, &ldquo;Techniques for the characterization of sub-10-fs optical pulses: a comparison&rdquo;, <a href="http://link.springer.com/article/10.1007%2Fs003400000307" rel="nofollow">Appl. Phys. B 70, S67 (2000)</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">L. Gallmann <i>et al.</i>, &ldquo;Spatially resolved amplitude and phase characterization of femtosecond optical pulses&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-26-2-96" rel="nofollow">Opt. Lett. 26 (2), 96 (2001)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">C. Dorrer and I. A. Walmsley, &ldquo;Accuracy criterion for ultrashort pulse characterization techniques: application to spectral phase interferometry for direct electric field reconstruction&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-19-5-1019" rel="nofollow">J. Opt. Soc. Am. B 19 (5), 1019 (2002)</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">W. Kornelis <i>et al.</i>, &ldquo;Single-shot kilohertz characterization of ultrashort pulses by spectral phase interferometry for direct electric-field reconstruction&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-28-4-281" rel="nofollow">Opt. Lett. 28 (4), 281 (2003)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">C. Dorrer and I. Kang, &ldquo;Highly sensitive direct characterization of femtosecond pulses by electro-optic spectral shearing interferometry&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-28-6-477" rel="nofollow">Opt. Lett. 28 (6), 477 (2003)</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">I. Kang <i>et al.</i>, &ldquo;Implementation of electro-optic spectral shearing interferometry for ultrashort pulse characterization&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-28-22-2264" rel="nofollow">Opt. Lett. 28 (22), 2264 (2003)</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">A. S. Radunsky <i>et al.</i>, &ldquo;Simplified spectral phase interferometry for direct electric-field reconstruction by using a thick nonlinear crystal&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-31-7-1008" rel="nofollow">Opt. Lett. 31 (7), 1008 (2006)</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">J. R. Birge <i>et al.</i>, &ldquo;Two-dimensional spectral shearing interferometry for few-cycle pulse characterization&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-31-13-2063" rel="nofollow">Opt. Lett. 31 (13), 2063 (2006)</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">S. P. Gorza <i>et al.</i>, &ldquo;Spectral shearing interferometry with spatially chirped replicas for measuring ultrashort pulses&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-15-23-15168" rel="nofollow">Opt. Express 15 (23), 15168 (2007)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="spectral_phase.html" title="spectral phase: the phase of the electric field in the frequency domain">spectral phase</a>, <a href="interferometers.html" title="interferometers: optical devices utilizing the phenomenon of interference">interferometers</a>, <a href="spectrometers.html" title="spectrometers: devices for separating spectral components">spectrometers</a>, <a href="optical_heterodyne_detection.html" title="optical heterodyne detection: a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers">optical heterodyne detection</a>, <a href="frequency_resolved_optical_gating.html" title="frequency-resolved optical gating: a technique for the complete characterization of ultrashort optical pulses">frequency-resolved optical gating</a><br>and other articles in the categories <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a>, <a href="categories.html#light_pulses" title="other articles on light pulses">light pulses</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spectral_interferometry.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="http://www.epic-assoc.com/" rel="nofollow"><img src="img/banners/EPIC.jpg" alt="EPIC"></a>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Fiber Optics</h2>
+<p>A quick introduction to fiber optics:</p>
+<ul>
+<li>basics of optical fibers</li>
+<li>fiber nonlinearities and their effects</li>
+<li>passive fibers for data transmission</li>
+<li>photonic crystal fibers</li>
+<li>large mode area fibers</li>
+<li>passive fiber-optic components</li>
+<li>active fiber devices: fiber amplifiers and lasers</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=853722"><img src="img/fg_fibers.png" alt="FG Fiber Optics"></a></p>
+<p>Note that we have also published a <a href="passive_fiber_opticse0f9.html?banner=FG_Fiber_Optics">free tutorial on fiber optics</a>!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spectral_interferometry.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:52 GMT -->
+</html>

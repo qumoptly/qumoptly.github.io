@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2014_11_24.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Some Tips Concerning the Script Language of RP Software</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2014-11-24">
+<meta name="description" content="A summary of this blog article: This article gives some useful tips for the use of the script language in software from RP Photonics. In particular, it explains the difference between commands and expressions, the use of control structures in expressions in the order of execution in scripts.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2014_11_24.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Some Tips Concerning the Script Language of RP Software</h1>
+<div class="posting_details">
+<p>Posted on 2014-11-24 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2014_11_24.html">https://www.rp-photonics.com/software_news_2014_11_24.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: This article gives some useful tips for the use of the script language in software from RP Photonics. In particular, it explains the difference between commands and expressions, the use of control structures in expressions in the order of execution in scripts.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Today I want to give the users of our software some potentially useful hints concerning important details of the script language.
+Partly, this has been motivated by difficulties of users about which I learned in the context of the technical support.
+I am discussing only features which are relevant for all our most important software products: <a href="fiberpower.html">RP Fiber Power</a>, <a href="propulse.html">RP ProPulse</a>, <a href="resonator.html">RP Resonator</a> and <a href="coating.html">RP Coating</a>.
+For constructing sophisticated simulation models, for example, it is highly useful to be familiar with these things.
+Don't worry, however, if you still get stuck somewhere; as you know, I'm doing my best to provide helpful <a href="software_support.html">technical support</a>.</p>
+<h2 class="togglediv">Commands and Expressions</h2>
+<div>
+<p>An important distinction is between <em>commands</em> and <em>expressions</em>.</p>
+<p>The name of a command is always found at the beginning of a line in the script.
+After that, there may be additional inputs for that command.
+For example, a &ldquo;show&rdquo; command could read:</p>
+<pre class="codedisplay">
+show "P_out:    ", P_out:d3:"W"
+</pre>
+<p>This will display two things in the &ldquo;Output area&rdquo;: a string and a variable value, properly formatted with three digits and the unit &ldquo;W&rdquo; (watts).
+Generally, the &ldquo;show&rdquo; command can handle any list of expressions which are separated with commas and can be followed by formatting instructions.
+There can be only one command in one line of the script, but one command can also span several lines, if all of these except for the first one are beginning with a blank (space) character.
+(This is shown in an example below.)</p>
+<p>An expression is something which can be evaluated to a numerical (real or complex) value or string value.
+It can contain constant values, variables and arrays, function calls and operators, and even control structures (see below).
+Expressions can also contain so-called blocks between &ldquo;begin&rdquo; and &ldquo;end&rdquo; or simply between parenthesis; these are essentially lists of smaller expressions which are evaluated one by one, and the result of the last one is returned as the result of the block.</p>
+<p>As an example for such a block, consider the following:</p>
+<pre class="codedisplay">
+max_value(A[]) := 
+  begin
+  var m;
+  m := A[1];
+  for j := i1(A[]) to i2(A[]) step di(A[]) do m := maxr(m, A[j]);
+  m;
+  end:d3
+</pre>
+<p>Here, the second expression is such a block, the value of which will be displayed with three valid digits.
+(Such a formatting expression can be appended to any expression, even it is a block.)
+Using the local variable m, the block evaluates the maximum occurring value in an array.
+The functions i1(), i2() and di() retrieve the range and step size of array index values.
+Actually, one could also have used a predefined function to simply write:</p>
+<pre class="codedisplay">
+max_value(A[]) := A[findmax(A[])]
+</pre>
+<p>Not only the huge number of predefined functions, but also the possibility to use blocks of expressions and control structures gives you an enormous amount of flexibility.
+You can do real programming in the scripts.
+Therefore, there is usually no need to do any preprocessing or postprocessing of data.</p>
+<p>Note that an expression can only call functions but not commands.
+For example, you could not use a &ldquo;show&rdquo; command within an expression.
+In some cases, you may want to display something in the Output area from within an expression.
+For that purpose, we have provided the function showoutput(), which can display a string value in the Output area.
+Here, you can use only a single string, but nothing prevents you from concatenating multiple strings in an expression with the &ldquo;+&rdquo; operator.
+For example, you could get the same result as with the previous command by calling the &ldquo;calc&rdquo; command with a modified expression:</p>
+<pre class="codedisplay">
+calc showoutput("Max. array value: " +
+  begin
+    var m;
+    m := A[i1(A[])];
+    for j := i1(A[]) to i2(A[]) step di(A[])) do m := maxr(m, A[j]);
+    str(m:d3);
+  end)
+</pre>
+<p>A detail: I had to use the function str() for converting the numerical value to a string value, using 3 valid digits.</p>
+</div>
+<h2 class="togglediv">Control Structures</h2>
+<div>
+<p>Expressions in our script language support a wide range of control structures &ndash; actually more than is available on the level of commands.</p>
+<p>Above, you have already seen an example for a &ldquo;for&rdquo; loop, where control variable runs through a given range of values.
+Note that the control variable does not need to have integer values only; you can also use floating point values with a certain step size.</p>
+<p>You can also use the traditional &ldquo;while&rdquo; loops.
+An example:</p>
+<pre class="codedisplay">
+show (var j; j := N; while abs(j - 4 * round(j / 4)) &gt; 0.01 do inc(j))
+</pre>
+<p>This takes the value of N and increases it until a value is reached which is an integer multiple of 4.</p>
+<p>Similarly, there are &ldquo;repeat-until&rdquo; loops:</p>
+<pre class="codedisplay">
+show (var j; j := N; repeat inc(j) until abs(j - 4 * round(j / 4)) &gt; 0.01)
+</pre>
+<p>In a more readable form:</p>
+<pre class="codedisplay">
+show
+  begin
+    var j;
+    j := N;
+    repeat
+      inc(j);
+    until abs(j - 4 * round(j / 4)) &gt; 0.01;
+  end
+</pre>
+<p>And of course there is the usual &ldquo;if-then-else&rdquo; structure:</p>
+<pre class="codedisplay">
+b := if a &gt; 0 then lg(a) else -999
+</pre>
+<p>If the &ldquo;else&rdquo; part is omitted, it is taken to be 0.</p>
+<p>Finally, all these features can be nested as you like: you can have control structures within other control structures, arbitrarily nested function calls, etc.
+Essentially, there are no limits to your imagination!</p>
+<p>In the context of numerical modeling, one often badly needs such features.
+As an example, imagine that you want to simulate the evolution of ultrashort pulses in a regenerative amplifier.
+(There is a <a href="fiberpower_regen.html">regenerative amplifier demonstration</a> for RP Fiber Power.)
+For one type of test, you may have to inject a pulse into the amplifier, do a certain number of roundtrips, get it injected and then send it through some pulse compressor.
+In a diagram, you want to show a certain result of such tests as a function of the varied parameter such as the pump power or the number of roundtrips per amplification cycle.</p>
+<p>Imagine a software which would only allow you to enter such parameters into some form.
+If you are lucky, this will be sufficient for getting one data point calculated.
+It would be unlikely, though, that you would be enabled to make the mentioned kind of diagram.
+With our software products (for example, <a href="fiberpower.html">RP Fiber Power</a> or <a href="propulse.html">RP ProPulse</a>), you are absolutely free to produce any kind of such diagrams.
+Similarly, you could write the data into files of any text format or binary format, using specialized predefined functions for file output.</p>
+</div>
+<h2 class="togglediv">The Order of Execution</h2>
+<div>
+<p>A script is always straight line by line, i.e., from top to bottom.
+However, not every read command is executed immediately.
+Those commands which define a diagram or some elements of it (e.g., a graph or curve) only store what has to be done later.
+Only once the full script has been read successfully to the end, the diagrams are actually made.</p>
+<p>You may find that rule somewhat confusing, but it is actually quite useful.
+Making a diagram can sometimes take significant time.
+Imagine that the last line of some code for a diagram contains some syntax error which is discovered only after making most of the diagram &ndash; that would have wasted significant time.</p>
+<p>In some cases, you need to take care that this modified order of execution does not lead to bugs in a script.
+For example, consider the following code:</p>
+<pre class="codedisplay">
+diagram 1:
+&nbsp;
+x: 0, 10
+y: -1, +1
+&nbsp;
+a := 0.5
+f: sin(a * x)
+a := 3
+f: cos(a * x)
+</pre>
+<p>When the diagram is finally made, both graphs will be made with the value 3 of the variable a.
+After all, this is the finally assigned value.</p>
+<p>Such things can be prevented by delaying the execution of the assignment.
+Simply write a &ldquo;!&rdquo; before the expression, and it will be executed only later on when the diagram is made:</p>
+<pre class="codedisplay">
+! a := 0.5
+f: sin(a * x)
+! a := 3
+f: cos(a * x)
+</pre>
+<p>To be sure, it is often a good idea to delay all calculations which are immediately related to the generation of a diagram.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2014_11_24.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:11 GMT -->
+</html>

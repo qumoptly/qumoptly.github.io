@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/abcd_matrix.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:56 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - ABCD matrix, ray transfer matrix</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="An ABCD matrix is a 2-by-2 matrix describing the effect of an optical element on a laser beam.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="ABCD matrix, ray transfer matrix">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="abcd_matrix.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_abcd_matrix.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>ABCD Matrix</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_abcd_matrix1fbf.html?s=vbox" class="bg_bgheading">Suppliers for software based on the ABCD matrix algorithm</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_abcd_matrix1fbf.html?s=vbox" class="redlink"><b>3 suppliers for software based on the ABCD matrix algorithm</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="resonator.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="ABCD matrix" rel="nofollow" class="bg externallink"><img src="bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_abcd_matrix1fbf.html?s=vbox">List of suppliers for<br>ABCD matrix</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index-2.html">RP Photonics</a> for advice on how to calculate ABCD matrices, which software to use, etc. RP Photonics has the <a href="resonator.html"><b>RP Resonator</b> software</a> for such purposes.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a 2-by-2 matrix describing the effect of an optical element on a laser beam</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">ABCD-Matrix</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite7f9a.html?article=ABCD%20matrix">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>An ABCD matrix or <em>ray transfer matrix</em> [1] is a 2-by-2 matrix associated with an optical element which can be used for describing the element's effect on a <a href="laser_beams.html" title="laser beams: light beams propagating dominantly in one direction">laser beam</a>.
+It can be used both in <em>ray optics</em>, where geometrical rays are propagated, and for propagating <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>.
+The <a href="paraxial_approximation.html" title="paraxial approximation: a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a> is always required for ABCD matrix calculations, i.e., the involved beam angles or <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">divergence angles</a> must stay small for the calculations to be accurate.</p>
+<h2 class="togglediv">Ray Optics</h2>
+<div>
+<p>Originally, the concept was developed for calculating the propagation of geometric rays with some transverse offset <span class="eqn_il"><i>r</i></span> and offset angle <span class="eqn_il"><span class="greek">&theta;</span></span> from a reference axis (Figure&nbsp;1).
+As long as the angles involved are small enough (&rarr;&nbsp;<a href="paraxial_approximation.html" title="paraxial approximation: a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis"><em>paraxial approximation</em></a>), there is a linear relation between the <span class="eqn_il"><i>r</i></span> and <span class="eqn_il"><span class="greek">&theta;</span></span> coordinates before and after an optical element.
+The following equation can then be used for calculating how these parameters are modified by an optical element:</p>
+<div class="eqn"><img src="eqn/abcd_def.gif" width="130" height="48" alt="ABCD matrix"></div>
+<figure class="right" style="width:228px;">
+<img src="img/abcd.png" alt="ABCD matrix for optical rays">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Definition of <span class="eqn_il"><i>r</i></span> and <span class="eqn_il"><span class="greek">&theta;</span></span> before an after an optical system.
+</figcaption>
+</figure>
+<p>where the primed quantities (left-hand side) refer to the beam after passing the optical component.
+The ABCD matrix is a characteristic of each optical element.</p>
+<p>For example, a thin <a href="lenses.html" title="lenses: transparent optical devices affecting the wavefront curvature of light">lens</a> with <a href="focal_length.html" title="focal length: a measure of how strongly an optical system focuses or defocuses light">focal length</a> <span class="eqn_il"><i>f</i></span> has the following ABCD matrix:</p>
+<div class="eqn"><img src="eqn/abcd_lens.gif" width="77" height="48" alt="ABCD matrix of a lens"></div>
+<p>This shows that the offset <span class="eqn_il"><i>r</i></span> remains unchanged, whereas the offset angle <span class="eqn_il"><span class="greek">&theta;</span></span> experiences a change in proportion to <span class="eqn_il"><i>r</i></span>.</p>
+<p>Propagation through free space over a distance <span class="eqn_il"><i>d</i></span> is associated with the matrix</p>
+<div class="eqn"><img src="eqn/abcd_d.gif" width="54" height="48" alt="ABCD matrix for free-space propagation"></div>
+<p>which shows that the angle remains unchanged, whereas the beam offset is increasing or decreasing according to the angle.</p>
+<p>Further examples for ABCD matrices are given below.</p>
+<p>For situations where beams propagate through dielectric media, it is convenient to use a modified kind of beam vectors, where the lower component (the angle) is multiplied by the <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a>.
+This can somewhat simplify the ABCD matrices for certain situations.</p>
+</div>
+<h2 class="togglediv">Propagation of Gaussian Beams</h2>
+<div>
+<p>ABCD matrices can also be used for calculating the effect of optical elements on the parameters of a <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>.
+A convenient quantity for that purpose is the complex <span class="eqn_il"><i>q</i></span> parameter, which contains information on both the <a href="beam_radius.html" title="beam radius: a measure of the transverse extension of a light beam">beam radius</a> <span class="eqn_il"><i>w</i></span> and the radius of curvature <span class="eqn_il"><i>R</i></span> of the wavefronts:</p>
+<div class="eqn"><img src="eqn/q_parameter.gif" width="112" height="44" alt="q parameter of a Gaussian beam"></div>
+<p>The following equation shows how the <span class="eqn_il"><i>q</i></span> parameter is modified by an optical element:</p>
+<div class="eqn"><img src="eqn/abcd_q.gif" width="85" height="44" alt="ABCD matrix"></div>
+</div>
+<h2 class="togglediv">ABCD Matrices of Important Optical Elements</h2>
+<div>
+<p>The following list gives the ABCD matrices of frequently used optical elements.</p>
+<p>Air space with length <span class="eqn_il"><i>d</i></span>:</p>
+<div class="eqn"><img src="eqn/abcd_d.gif" width="54" height="48" alt="ABCD matrix for free-space propagation"></div>
+<p>(For propagation in a transparent medium, the length <span class="eqn_il"><i>d</i></span> has to be divided by the <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> <span class="eqn_il"><i>n</i></span>, if the above mentioned modified definition is used where the lower component (the angle) is multiplied by the <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a>.)</p>
+<p><a href="lenses.html" title="lenses: transparent optical devices affecting the wavefront curvature of light">Lens</a> with focal length <span class="eqn_il"><i>f</i></span> (where positive <span class="eqn_il"><i>f</i></span> applies for a focusing lens):</p>
+<div class="eqn"><img src="eqn/abcd_lens.gif" width="77" height="48" alt="ABCD matrix of a lens"></div>
+<p>Curved mirror with curvature radius <span class="eqn_il"><i>R</i></span> (>0 for concave mirror), incidence angle <span class="eqn_il"><span class="greek">&theta;</span></span> in the horizontal plane:</p>
+<div class="eqn"><img src="eqn/abcd_mirror.gif" width="92" height="50" alt="ABCD matrix of a curved mirror"></div>
+<p>with <span class="eqn_il"><i>R</i><sub>e</sub>&thinsp;=&thinsp;<i>R</i>&thinsp;cos&thinsp;<span class="greek">&theta;</span></span> in the tangential plane (horizontal direction) and <span class="eqn_il"><i>R</i><sub>e</sub>&thinsp;=&thinsp;<i>R</i>&thinsp;/&thinsp;cos&thinsp;<span class="greek">&theta;</span></span> in the sagittal plane (vertical direction).</p>
+<p>Duct:</p>
+<div class="eqn"><img src="eqn/abcd_duct.gif" width="218" height="53" alt="ABCD matrix of a duct"></div>
+<p>where the radially varying <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> is:</p>
+<div class="eqn"><img src="eqn/n_duct.gif" width="217" height="41" alt="radially varying refractive index in a duct"></div>
+<p>Various textbooks (see e.g. Ref. [4]) specify the ABCD matrices for other types of optical components.</p>
+</div>
+<h2 class="togglediv">Combining Multiple Optical Elements</h2>
+<div>
+<p>If a beam propagates through several optical elements (including any air spaces in between), this means that the (<span class="eqn_il"><i>r&nbsp;<span class="greek">&theta;</span></i></span>) vector is subsequently multiplied by various matrices.
+Instead, a single matrix may be used, which is the matrix product of all the single matrices.
+Note that the first optical element must be on the right-hand side of that product.</p>
+</div>
+<h2 class="togglediv">Typical Applications</h2>
+<div>
+<p>Some typical applications of the ABCD matrix algorithm are:</p>
+<ul>
+<li>It is often of interest how a laser beam propagates through some optical setup.
+Both the geometric path of a ray and the evolution of the <a href="beam_radius.html" title="beam radius: a measure of the transverse extension of a light beam">beam radius</a> can be calculated.</li>
+<li>The changes of beam parameters within one complete round trip in a <a href="optical_resonators.html" title="optical resonators: arrangements of optical components which allow a beam of light to circulate">resonator</a> can be described with an ABCD matrix.
+The transverse <a href="resonator_modes.html" title="resonator modes: modes of an optical or microwave resonator">resonator modes</a> can then be obtained from the matrix components.</li>
+<li>An extended algorithm, involving an ABCDEF matrix (a 3-by-3 matrix with some constant components), can be used for calculating the <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a> of a <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonator</a> [3].</li>
+</ul>
+<p>The ABCD matrix method should not be confused with a different matrix method for calculating the reflection and transmission properties of <a href="dielectric_coatings.html" title="dielectric coatings: thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric multilayer coatings</a>.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_abcd_matrix1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 3 suppliers for software based on the ABCD matrix algorithm. Among them:</p>
+<aside class="bg_vendoritem"><a href="index.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="ABCD matrix" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a><a href="resonator.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="ABCD matrix" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="bg/products/rp_photonics/abcd_matrix.png" alt="ABCD matrix" class="product"></a><h3><a href="bg/profiles/rp_photonics.html" title="See the profile of RP Photonics">RP Photonics</a></h3><p>Our <a href="resonator.html" data-supplier="RP Photonics" data-keyword="ABCD matrix" rel="nofollow" class="externallink bg"><b>RP Resonator</b> software</a> is a highly flexible tool for sophisticated resonator design analysis and optimization &ndash; including the sensitivity to misalignment (using ABCDEF matrices) and intracavity beam aberrations.</p></aside>
+</div>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">H. Kogelnik and T. Li, &ldquo;Laser beams and resonators&rdquo;, <a href="https://www.osapublishing.org/ao/abstract.cfm?uri=ao-5-10-1550" rel="nofollow">Appl. Opt. 5 (10), 1550 (1966)</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">P. A. B&eacute;langer, &ldquo;Beam propagation and the ABCD ray matrices&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-16-4-196" rel="nofollow">Opt. Lett. 16 (4), 196 (1991)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">O. E. Mart&iacute;nez, &ldquo;Matrix formalism for dispersive laser cavities&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=18543" rel="nofollow">IEEE J. Quantum Electron. 25 (3), 296 (1989)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">A. E. Siegman, <i>Lasers</i>, University Science Books, Mill Valley, CA (1986)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="paraxial_approximation.html" title="paraxial approximation: a frequently used approximation, essentially assuming small angular deviations of the propagation directions from some beam axis">paraxial approximation</a>, <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beams</a>, <a href="resonator_modes.html" title="resonator modes: modes of an optical or microwave resonator">resonator modes</a>, <a href="resonator_design.html" title="resonator design: the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>, <a href="beam_pointing_fluctuations.html" title="beam pointing fluctuations: fluctuations of the propagation direction of a laser beam">beam pointing fluctuations</a><br>and other articles in the categories <a href="categories.html#general_optics" title="other articles on general optics">general optics</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="abcd_matrix.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="coating_demo_gti7ca4.html?banner=RP_Coating_6"><img src="img/coating_demo_gti7b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>A femtosecond pulse hits a Gires--Tournois interferometer (GTI).</p>
+<p>This diagram has been made with the <a href="coating7ca4.html?banner=RP_Coating_6"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="laser_modelinge50a.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="laser_modelinge50a.html?banner=numerical_modeling"><img src="img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="consultinge50a.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="softwaree50a.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/abcd_matrix.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:55:00 GMT -->
+</html>

@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_polarizer.html?banner=RP_Coating by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:07:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The thin-film software RP Coating - demo file: thin-film plate polarizer</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="A thin-film plate polarizer is designed with the software RP Coating, using a simple numerical optimization with a figure-of-merit function.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Coating, modeling, software, optical multilayer structures, demo files, thin-film plate polarizer">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="coating_demo_polarizer5675.html?banner=RP_Coating"; cat="S"; shownbanner=""; ref="bg_faq.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="coating_demo_polarizer_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html" class="sel">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP Coating &ndash; Advanced Software for<br>Designing Optical Multilayer Structures</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="coating.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Demo File: Thin-film Plate Polarizer</h2>
+<div>
+<p>With this demo file, we can design thin-film plate polarizers, having a dielectric coating on one side only.
+The angle of incidence is chosen to be <a href="brewsters_angle.html" title="Brewster's angle: an angle of incidence at which there is no reflection of p-polarized light at an uncoated optical surface">Brewster's angle</a>, such that the reflection for p polarization at the uncoated back side vanishes.
+We thus need a coating which has a high reflectivity for s polarization at the design wavelength of 1064&nbsp;nm, and a low reflectivity for p polarization.</p>
+<figure>
+<img src="img/polarizing_plate.png" alt="polarizing plate">
+</figure>
+<p>In the form, one can select the materials, enter a few design parameters and select some graphical diagrams:</p>
+<figure>
+<img src="img/coating_form_polarizer_plate.png" alt="form for designing thin-film plate polarizers">
+</figure>
+<p>The form and the calculations are not hard-coded, but implemented in the form of a <a href="software_script_language.html">script</a>.
+In the following, we reveal some details of the implementation.</p>
+<p>The basic idea for the coating structure is to use something similar to that of a Bragg mirror, where the design wavelength is within the reflection band for s polarization but just outside that band for p polarization.
+A real Bragg mirror, however, is not very suitable due to the substantial reflection peaks outside the main reflection band.
+It is much better to use a long-wave pass filter, which is a slightly modified version of a Bragg mirror: the two outer high-index layers have a thickness of only &lambda;&thinsp;/&thinsp;8 instead of &lambda;&thinsp;/&thinsp;4:</p>
+<pre class="codedisplay">
+l := 1064  { operation wavelength }
+theta := arctan(n_BK7(l * l_units))
+N_Bragg := 10  { no layer pairs }
+l_B := 1020  { Bragg wavelength for normal incidence }
+&nbsp;
+beam from superstrate
+substrate: BK7
+* TiO2, l / 8 at l_B
+for j := 1 to N_Bragg - 1 do
+begin
+* SiO2, l / 4 at l_B
+* TiO2, l / 4 at l_B
+end
+* SiO2, l / 4 at l_B
+* TiO2, l / 8 at l_B
+superstrate: air
+</pre>
+<p>Then we define a figure-of-merit function describing the design goal:</p>
+<pre class="codedisplay">
+FOM() := sum(l := 1060 to 1070 step 2, R_p(l,theta)^2 + T_s(l,theta)^2)
+</pre>
+<p>As always, that function is made such that it would return 0 for ideal performance, but gives positive &ldquo;penalties&rdquo; for any deviations.</p>
+<p>We can then use a simple local optimization to further improve the performance:</p>
+<pre class="codedisplay">
+optimize coating for minimum of FOM()
+</pre>
+<p>The first diagram made shows the reflectivity profile:</p>
+<pre class="codedisplay">
+diagram 1:
+&nbsp;
+"Reflectivity Profile"
+&nbsp;
+x: 700, 1200
+"wavelength (nm)", @x
+y: 0, 100
+"reflectivity (%)", @y
+frame
+hx
+hy
+legpos 420, 150
+&nbsp;
+f: 100 * R_p(x, theta), "p polarization",
+  color = red, width = 3, step = 1
+&nbsp;
+f: 100 * R_s(x, theta), "s polarization", style = dashed,
+  color = red, width = 3, step = 1
+&nbsp;
+! begin  { indicate the design wavelength }
+    setcolor(gray);
+    line(l, l + i * CS_y2)
+  end
+</pre>
+<figure>
+<img src="img/coating_demo_polarizer1.png" alt="reflectivity profile of a thin-film plate polarizer">
+</figure>
+<p>We then test the sensitivity to angle changes:</p>
+<pre class="codedisplay">
+diagram 2:
+&nbsp;
+"Variation of the Angle of Incidence"
+&nbsp;
+x: 50, 60
+"angle of incidence (°)", @x
+y: 0, 100
+"reflectivity (%)", @y
+frame
+hx
+hy
+&nbsp;
+f: 100 * R_s(l, x * deg), "s polarization",
+  color = red, width = 3
+f: 100 * R_p(l, x * deg), "p polarization",
+  color = red, width = 3, style = dashed
+&nbsp;
+! begin
+    setcolor(gray);
+    line(theta / deg,theta / deg + i * CS_y2);
+  end
+</pre>
+<figure>
+<img src="img/coating_demo_polarizer2.png" alt="angular sensitivity of a thin-film plate polarizer">
+</figure>
+<p>We see that the reflectivity for p polarization would rise for substantially smaller angles, where the reflectivity on the back side of the substrate would also rise.</p>
+<p>Finally, we show the design of the obtained structure:</p>
+<pre class="codedisplay">
+diagram 3:
+&nbsp;
+x: -500, get_d(0) + 500
+"position (nm)", @x
+y: 0, 3
+"refractive index (nm)", @y
+frame
+&nbsp;
+! begin
+    for j := 1 to nolayers() do
+    begin
+      var g;
+      g := if get_material$(j) = "TiO2" then 0.8 else 0.9;
+      setcolor(rgb(g, g, g));
+      box(get_z(j), get_z(j + 1) + i * CS_y2);
+    end;
+    draw_cs(); { draw the coordinate system again }
+  end
+&nbsp;
+[get_d(j):f0:"nm"],
+ (get_z(j) + 0.5 * get_d(j))c, (0.1 * CS_y2)b, direction = 90,
+ for j := 1 to nolayers()
+"substrate", (-200)c, (0.1 * CS_y2)b, direction = 90
+"superstrate", (get_d(0) + 200)c, (0.1 * CS_y2)b, direction = 90
+&nbsp;
+f: n(x,l), step = 1, color = blue
+</pre>
+<figure>
+<img src="img/coating_demo_polarizer3.png" alt="design of a thin-film plate polarizer">
+</figure>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_polarizer.html?banner=RP_Coating by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:07:18 GMT -->
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_12_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Using Monitors With High Screen Resolution</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-12-03">
+<meta name="description" content="A summary of this blog article: Software applications occasionally have problems with correctly displaying the user interface when using monitors with particularly high resolution. This article explains the problem and how to solve it. Also, it informs you how RP Photonics has handled this technical issue.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2018_12_03.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Using Monitors With High Screen Resolution</h1>
+<div class="posting_details">
+<p>Posted on 2018-12-03 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2018_12_03.html">https://www.rp-photonics.com/software_news_2018_12_03.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Software applications occasionally have problems with correctly displaying the user interface when using monitors with particularly high resolution. This article explains the problem and how to solve it. Also, it informs you how RP Photonics has handled this technical issue.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Computer monitors with relatively high screen resolution gradually become more popular, but unfortunately the display on such monitors is often subject to technical problems which lead either to the too small display of elements or a blurred (not sharp) display.
+Here, I explain the essence of these problems, how they should be solved and how we handle them in our own software.
+The matter is somewhat technical, but I think it is useful to know at least roughly how these things work &ndash; whether you are using <a href="software.html">our software</a> or any other one.</p>
+<h2 class="togglediv">The Old Way</h2>
+<div>
+<p>I do not go back to the early times of analog displays; those are no more relevant now.
+A digital monitor has a certain number of pixels in horizontal and vertical direction, each one having a fixed size which is determined by the design.
+(Precisely speaking, with &ldquo;size&rdquo; we usually mean the distance from the center of a pixel to the center of the next one, i.e., we include any space in between the actually illuminated parts. One pixel is the smallest element of which we can control the displayed color.)
+Usually, one will operate a computer monitor at its &ldquo;native&rdquo; resolution, which means that the computer exactly maps certain RGB (red-green-blue) data to each pixel of the monitor.
+One way in principle set a lower monitor resolution in the operating system (e.g. Windows) in order to obtain elements displayed in larger size, but this is not recommended due to the reduced display quality.</p>
+<p>A common type of monitor with full HD (FHD) resolution (1920 &times; 1080 pixels, 16:9 format) could have a screen diagonal of 24 inches, which implies a pixel density of 92 dpi (dots per inch = pixels per inch) and a dot pitch (pixel spacing) of 0.277&nbsp;mm.
+If you take a larger screen with 27 inch diagonal, for example, and the same FHD resolution, the pixels get somewhat larger (0.311&nbsp;mm), and we have only 82&nbsp;dpi.
+So the same items on the screen will get somewhat larger, but you may also use such a screen from a slightly larger distance, and effectively it will not make a big difference for you.</p>
+<aside class="callout blue">The old way of programming: set any scream die mentions in terms of pixels, assuming similar pixel sizes everywhere.</aside>
+<p>For a long time, the DPI values of different digital monitors were quite similar.
+Therefore, software developers could determine the size of a certain element (e.g., the width of a dialog window) as some number of pixels, which would then lead to an effective size on the screen which is appropriate on different devices.
+This normally works even on notebooks, typically having much smaller screens than we use on the desktop while having a similar number of pixels; notebooks are viewed from a smaller distance.</p>
+<aside class="callout red">High-DPI screens cannot be used without increasing the used number of pixels!</aside>
+<p>However, we get into trouble when someone uses a screen with substantially higher DPI resolution (e.g. a &ldquo;retina display&rdquo;).
+Personally, I have a notebook where the display has 3200 &times; 1800 pixels and a screen diagonal of only about 15 inches, which leads to 245 dpi.
+When using a &ldquo;normal&rdquo; size of a dialog window in pixels, this will be far too small, and the program will hardly be usable &ndash; only with magnifying glasses!</p>
+</div>
+<h2 class="togglediv">How is Windows Handling the Issue?</h2>
+<div>
+<p>Nowadays, operating systems take care of the issues with high-dpi displays.
+They can do this because the communications with digital displays are bidirectional: the computer can learn from the monitor not only how many pixels it supports, but also what is the display size in inches.
+The following discussion applies to Windows, with which I am most familiar, but other modern operating systems such as the Mac OS behave similarly.</p>
+<p>First of all, Windows allows one to set a certain magnification (e.g. 150&#37; or 200&#37;) in the display settings, and it will start with a default setting which may be well above 100&#37; when a high-dpi screen is recognized.</p>
+<p>Windows itself then uses accordingly larger number of pixels for any elements it displays itself &ndash; for example, Windows Explorer.
+As a result, such things get the appropriate size and at the same time look very sharp due to the high resolution.</p>
+<p>When a Windows application (made by a third party &ndash; for example us) is running, it depends on the application what happens.
+Windows first tries to determine whether the application is &ldquo;DPI-aware&rdquo;; an application can communicate that to the operating system with a so-called manifest, and if that is missing, Windows will assume that the application is not DPI-aware.
+In such cases, Windows will try to save the day by fooling the application: it simulates a screen with smaller resolution and then automatically scales up the display of all visible elements of the application.
+That way, all elements will be displayed with an appropriate size &ndash; but unfortunately not with good quality, since the mentioned scaling process is not perfect.
+After all, the application can not precisely control the pixels then.
+You will often recognize that the display e.g. of characters or line graphics appears somewhat blurred.</p>
+<p>You can actually suppress that scaling process: on Windows 10, right-click on the executable file (e.g. an .exe file), go to &ldquo;Compatibility&rdquo;, &ldquo;Change high DPI settings&rdquo;.
+However, this helps only if you really want the display to be correspondingly small.
+What you probably really want is that the application uses more pixels &ndash; but that you (or Windows) cannot achieve, since it would require changes in the code of the application.
+Only if the application is already DPI-aware but has failed to communicate that to Windows (or you have previously made wrong settings), you can really fix the problem.</p>
+<p>So ideally a Windows application would do the following:</p>
+<ul>
+<li>Ask Windows about the screen resolution and accordingly scale up the number of pixels used for its visible elements.</li>
+<li>Declare &ldquo;DPI-awareness&rdquo; in the manifest in order to prevent that Windows unnecessarily scales up the display.</li>
+</ul>
+<p>Modern software should behaved like that, and then it works fine on screens with any resolution.
+In reality, implementation is often not perfect, e.g. because an application uses certain images of limited resolution which is then has to scale up, again leading to a somewhat blurred display &ndash; not too bad if it concerns only some minor details of the user interface.</p>
+<p>Fortunately, modern development platforms make it relatively easy for programmers to make code DPI-aware.
+In Delphi, for example, which I use for our software, one can continue using &ldquo;virtual&rdquo; resolution at design time but get it scaled up automatically at runtime.
+For example, one would make a dialog window 500&nbsp;px wide (simply setting that size in the graphical form designer), but if the application is then executed on a computer with a high-DPI screen, that will automatically be increased e.g. to 750 or 1000&nbsp;px before the actual code made by the programmer is executed.
+Only, one should no longer use fixed pixel sizes in the code itself, e.g. for sizing or positioning graphical elements.
+Well, it is not hard to do the proper scaling; it is only that one may overlook certain parts of old code when revising it for DPI-awareness.
+Therefore, it happens that certain isolated details in a user interface appear to small on high-resolution screens until the developer notices and corrects that.</p>
+</div>
+<h2 class="togglediv">Further Issues When Using Multiple Monitors</h2>
+<div>
+<p>There are further technical issues in situations where you use multiple monitors, if those have substantially different screen resolutions.
+Advanced software exhibits a higher level of DPI-awareness, called &ldquo;per monitor&rdquo;.
+This is more challenging to implement.
+Ideally, a program should not only take into account different DPI values for different windows, if they appear on different monitors; it should also properly rescale an already made window when it is moved to another monitor!
+However, I don't want to go into further details here, as those would be relevant only for a minority of users.</p>
+</div>
+<h2 class="togglediv">How Does RP Photonics Software Treat the Issue?</h2>
+<div>
+<p>Until recently, our software was not DPI-aware, and that resulted in a somewhat blurred display on high-resolution screens.
+Although that is usually not a severe problem, it is definitely not nice.
+Recently, the code was made DPI-aware, leading to a nicely sharp display on such screens.
+(If you are a user, just tell us to get a free software update.)</p>
+<p>Only one caveat remains for now in cases with multiple monitors having different resolution.
+I can make the application DPI-aware only on the system level, but not per monitor, because the used editor component (apparently having a bug) does not properly work with that.
+As a result, Windows (instead of the application itself) re-scales a form when it is moved to another monitor with substantially different resolution, and the display may not be perfectly sharp then.
+I assume that this issue will be fixed in the not too far future.</p>
+<p>One special detail deserve some attention.
+In some cases, users of our software enter certain sizes in units of pixels in <a href="software_script_language.html">script code</a>.
+For example, one may create a graphical diagram with the following code:</p>
+<pre class="codedisplay">
+diagram 1, size_px = (1000, 600):
+&nbsp;
+x: 0, 10
+y: -3, +3
+&nbsp;
+f: sin(x),
+  color = red,
+  width = 3
+</pre>
+<p>Here, the size of the diagram window is given in units of pixels.
+This now really means screen pixels, not the larger &ldquo;virtual&rdquo; pixels as it was when Windows did the scaling.
+That is convenient if you really want a certain number of pixels &ndash; for example, if you want to export the generated graphics as a file using a printed publication or on a webpage.</p>
+<p>A caveat, however, is that scripts which you originally used on a display with common resolution will now display diagrams correspondingly smaller.
+If you do not want that, you can now have the scaling in terms of virtual pixels simply by inserting one character &ldquo;v&rdquo; into the definition of the diagram:</p>
+<pre class="codedisplay">
+diagram 1, size_vpx = (1000, 600):
+</pre>
+<p>The software will then accordingly increase the use number of pixels over what you actually entered.</p>
+<p>By the way, once the diagram size has been displayed, there should be no further problems, because we have always done the sizing and positioning of elements relative to the diagram size.
+So it will not be necessary e.g. to adapt such parameters only because they are now using a high-resolution monitor.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_12_03.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+</html>

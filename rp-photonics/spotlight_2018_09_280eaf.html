@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2018_09_28.html?banner=articles by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Resonator Modes in Microchip Lasers</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-09-28">
+<meta name="description" content="A summary of this blog article: It is explained how the resonator modes of a microchip laser are formed by thermal lensing effects. Some example cases are analyzed, showing that the concept works well for a 1-W laser, while beam quality will be lost for substantially higher power levels.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2018_09_280eaf.html?banner=articles"; cat="P"; shownbanner=""; ref="bg/profiles/gooch_housego.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Resonator Modes in Microchip Lasers</h1>
+<div class="posting_details">
+<p>Posted on 2018-09-28 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2018_09_28.html">https://www.rp-photonics.com/spotlight_2018_09_28.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It is explained how the resonator modes of a microchip laser are formed by thermal lensing effects. Some example cases are analyzed, showing that the concept works well for a 1-W laser, while beam quality will be lost for substantially higher power levels.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p><a href="microchip_lasers.html" title="microchip lasers: solid-state lasers with a quasi-monolithic setup">Microchip lasers</a> are <a href="solid_state_lasers.html" title="solid-state lasers: lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>, where the laser essentially consists only of a <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a> having reflective <a href="dielectric_coatings.html" title="dielectric coatings: thin-film coatings made of transparent dielectric materials, e.g. for laser mirrors or anti-reflection coatings">dielectric coatings</a> on both end faces (see Figure&nbsp;1).
+In some cases, there is a second crystal attached to the laser crystal, e.g. a <a href="saturable_absorbers.html" title="saturable absorbers: light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorber</a> crystal for passive <a href="q_switching.html" title="Q switching: a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>.
+<a href="optical_pumping.html" title="optical pumping: electronically exciting a medium with light, or specifically populating certain electronic levels">Optical pumping</a> is usually done with a <a href="laser_diodes.html" title="laser diodes: semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.</p>
+<p>Such lasers obviously have a very simple and compact setup, which is attractive for many applications where simplicity, robustness and low cost of interest.
+However, despite their apparent simplicity, their operation principles are not as simple as those of many other <a href="diode_pumped_lasers.html" title="diode-pumped lasers: solid-state lasers which are pumped with laser diodes">diode-pumped lasers</a>.</p>
+<figure class="right" style="width:203px;">
+<img src="img/microchip.png" alt="microchip laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Microchip laser, consisting of a laser crystal with dielectric mirror coatings on both end faces.
+</figcaption>
+</figure>
+<p>In particular, it is interesting to consider the properties of the <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of such a <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+Usually, the two reflecting end faces are flat, and you may wonder how a stable resonator should be formed that way.
+Indeed, you usually get a stable resonator only due to side effects of the <a href="optical_pumping.html" title="optical pumping: electronically exciting a medium with light, or specifically populating certain electronic levels">optical pumping</a> of the laser crystal.
+In particular, the heating which results from the <a href="quantum_defect.html" title="quantum defect: energy difference between pump and laser photons">quantum defect</a> and additional deficiency of the power conversion generates a <a href="thermal_lensing.html" title="thermal lensing: a lensing effect induced by temperature gradients">thermal lens</a>, i.e., a focusing effect for the light going through the laser crystal.
+In addition, you may have some amount of <a href="gain_guiding.html" title="gain guiding: guiding of light based on spatially inhomogeneous optical gain">gain guiding</a>, which can also influence the mode properties.</p>
+<h2 class="togglediv">An Example Case</h2>
+<div>
+<aside class="callout green">Can we have a stable resonator for arbitrarily strong lensing??</aside>
+<p>As an example, let us consider a microchip laser made from at 10&nbsp;mm long <a href="yag_lasers.html" title="YAG lasers: lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG</a> crystal.
+Let us start with a very simplified model for its laser resonator, where we assume that the lensing effect is uniformly distributed over the whole crystal length, and gain guiding is ignored.
+Interestingly, in that situation one finds that for a given total dioptric power of the thermal lens, the <a href="mode_radius.html" title="mode radius: a measure of the transverse extent of a laser mode or laser beam">mode radius</a> is always constant along the path through the crystal.
+Further, the resonator is found to be stable even for arbitrarily strong thermal lensing!
+That is surprising, since we know, for example, that the focusing action of the curved end mirror must be below a certain limit before driving the resonator into the unstable regime.
+However, in that situation we effectively have a <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguide</a>, and that has at least one guided mode for an arbitrarily strong contrast of its refractive index profile.</p>
+<p>In reality, however, the pump power decays on the way through the crystal.
+So we may make a more realistic resonator model, assuming an exponential decay of pump power and heating power along the crystal.
+The absorption coefficient may be chosen such that most of the pump light is absorbed in a single pass.
+The results are shown in Figure&nbsp;2:</p>
+<figure>
+<img src="img/microchip_resonator.png" alt="mode radius in microchip laser">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Mode radius a different positions in a microchip laser as a function of the dioptric power of the thermal lens. The calculation has been done with the software <a href="resonator.html"><b>RP Resonator</b></a>.
+</figcaption>
+</figure>
+<p>If the thermal lens becomes rather strong, the mode size begins to vary substantially along the crystal.
+For even stronger lensing (from &approx;320&nbsp;/m on), the resonator becomes unstable.
+Interestingly, there are further stability regions for even stronger lensing, but these are not of practical relevance.</p>
+<p>How strong the thermal lens will actually be, depends of course on the applied pump power and the pump beam radius.
+For example, let us assume that we want to make a laser with 1&nbsp;W output power and 5&nbsp;W intracavity power, so that the double-pass <a href="saturation_power.html" title="saturation power: a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation power</a> should be of the order of 1&nbsp;W.
+(This is required in order to operate the laser &approx;5 times above the <a href="laser_threshold.html" title="laser threshold: an operation condition of a laser where laser emission just starts to occur">laser threshold</a>.)
+From that one can calculate a beam radius of &approx;150&nbsp;&mu;m.
+The dissipated pump power will be roughly 0.35&nbsp;W, and one can calculate that the thermal lens will then have a dioptric power of &approx;4.5&nbsp;/m.
+From Figure&nbsp;2 one can see that the mode radius is then &approx;110&nbsp;&mu;m, a bit smaller than the pump beam radius.
+So such a laser will probably be single-mode with perfect <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a> and reasonable efficiency.</p>
+</div>
+<h2 class="togglediv">Higher Output Powers?</h2>
+<div>
+<p>How about a 10-W laser of that kind?
+Assuming the same degree of output coupling, we should use a 10 times larger pump beam area, i.e., the same pump intensity.
+The dioptric power of the thermal lens will then be the same as for the 1-W laser, despite the higher dissipated power.
+Therefore, we will also have the same fundamental mode radius.
+Now, however, the pump beam radius will now be much larger than that, so that multimode emission with poor <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a> is to be expected.</p>
+<p>You may try to solve that problem by using a longer laser crystal, but unfortunately that does not help much.
+For example, if we take a five times longer crystal (50&nbsp;mm &ndash; maybe no longer practical), also having five times lower doping concentration, the mode radius for thermal lensing with 4.5&nbsp;/m increases only from 110&nbsp;&mu;m to 163&nbsp;&mu;m, while the pump radius should be increased from 150&nbsp;&mu;m to 475&nbsp;&mu;m.
+You can also not substantially change the mode radius by changing the absorption coefficient.
+Thus, it appears to be impossible to get perfect beam quality.</p>
+<p>So you clearly see that the great simplicity of that kind of laser causes a substantial problem: it has very few parameters which we can adjust, and for high-power operation we run into a regime where a high beam quality is no longer feasible!
+This is a classical example for a laser architecture which is <em>not</em> <a href="power_scaling_of_lasers.html" title="power scaling of lasers: a procedure for substantially increasing the output power of lasers">power-scalable</a>.</p>
+</div>
+<h2 class="togglediv">Conclusions</h2>
+<div>
+<p>You can draw a lot of useful conclusions from these considerations:</p>
+<ul>
+<li>The resonator modes of microchip lasers are essentially determined by thermal lensing effects &ndash; much in contrast to those of most other diode-pump lasers.</li>
+<li>The basic laser parameters should be calculated based on some essential knowledge of <a href="laser_physics.html" title="laser physics: the field of physics dealing with phenomena in lasers">laser physics</a>.
+For example, one can and should calculate an appropriate pump and laser beam radius for the targeted operation parameters.
+Also, it is much faster and cheaper to do those calculations than just trying to build such a laser in the lab.
+Finding such things with a trial-and-error approach is inefficient and unprofessional.</li>
+<li>Such considerations also let you understand certain basic limitations of laser architectures.
+In our particular case, we have seen that microchip lasers cannot easily be scaled up to higher powers without losing a good beam quality.
+That has to do with the fact that the simplicity of the architecture gives us too few parameters for controlling the mode properties.</li>
+</ul>
+</div>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2018_09_28.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>You have found the Best Place for Your Banner &ndash; <em>Here!</em></h2>
+<p>Make your</p>
+<ul>
+<li><b>photonics product</b>,</li>
+<li><b>company or organization</b>,</li>
+<li><b>publication or event</b></li>
+</ul>
+<p>well known with an <a href="marketing_bannersd853.html?banner=your_banner">extra-wide<br>skyscraper banner</a> which will be displayed here (with a given probability per page view).</p>
+<div id="my_rot_box" class="rot_box" style="height:270px;">
+<div>
+<h2>Aspect 1: Huge Traffic</h2>
+<p>This website is <a href="website_statisticsd853.html?banner=your_banner">immensely popular</a> &ndash; see the <a href="website_statisticsd853.html?banner=your_banner">detailed statistical data</a>.</p>
+<p>For example, your banner gets &asymp;13,000 views per month if you choose 10% probability per page view.</p>
+</div>
+<div>
+<h2>Aspect 2: Audience</h2>
+<p>The users of this resource are mostly</p>
+<ul>
+<li><b>industry people</b></li>
+<li><b>researchers</b></li>
+</ul>
+<p>working on laser technology and related areas of photonics &ndash; exactly those you want to reach.</p>
+</div>
+<div>
+<h2>Aspect 3: Precise Targeting</h2>
+<p>You can even make the <b>display probability dependent on certain topics</b> &ndash; e.g., increase it for pages on lasers!</p>
+<p>With our <a href="website_statisticsd853.html?banner=your_banner">convenient selection tool</a>, this is easy to do.</p>
+<p>Which other photonics website can offer that?</p>
+</div>
+<div>
+<h2>Aspect 4: High-quality Environment</h2>
+<p>Get your banner placed on <b>pages with high-quality content</b>, rather than on pages which are crowed with ads! Our pages give visibility <em>just for you!</em></p>
+</div>
+<div>
+<h2>Aspect 5: Transparency</h2>
+<p>On this website, you know exactly on what kind of pages your banner is placed: mostly <a href="encyclopediad853.html?banner=your_banner">encyclopedia articles</a> and <a href="buyersguided853.html?banner=your_banner">buyer's guide pages</a> &ndash; not some undefined bunch of materials.</p>
+<p>We also publish <a href="website_statisticsd853.html?banner=your_banner">clear statistical data</a>.</p>
+</div>
+<div>
+<h2>Aspect 6: Convenience</h2>
+<p>Our <a href="website_statisticsd853.html?banner=your_banner">convenient tool</a> makes it easy for you to define the placement of your banner and to find out the cost.</p>
+<p>Also, we deliver a <b>diligent and flexible service</b>, helping you to save time. We even offer to assemble your animated banner!</p>
+</div>
+<div>
+<h2>Aspect 7: Competitive Pricing</h2>
+<p>Compare our prices with those at other places: we deliver better value for money!</p>
+</div>
+</div>
+<table class="rot_box_buttons">
+<tr><td>
+<button title="move backward" onclick='clearInterval(timer); $("#tbutton").text("--"); if (pp > 0) pp--; MoveContent(200, 0);'>&lt;</button>
+<button id="tbutton" title="stop automatic movement" onclick="tbuttonclick()">| |</button>
+<button title="move forward" onclick='clearInterval(timer); $("#tbutton").text("--"); if (pp < ns - 1) pp++; MoveContent(200, 0);'>&gt;</button></td></tr>
+</table>
+<script type="text/Javascript">
+  period = 15000
+  hh = parseInt($("#my_rot_box").css("height")) + 30;
+  $("#my_rot_box").children().css("height", hh);
+  var ns = $("#my_rot_box").children().length;
+  var pp = 0;
+  function MoveContent(t_move, t_fade) {
+    var y = (hh + 4) * pp;
+    if (t_fade != 0)
+      $("#my_rot_box").fadeTo(t_fade, 0.5).animate({scrollTop:y}, t_move, "swing").fadeTo(t_fade, 1);
+    else
+      $("#my_rot_box").animate({scrollTop:y}, t_move, "swing");
+    }
+  function advance() {
+    pp++;  if (pp == ns) pp = 0;
+    if (pp == 0) t = 1800; else t = 600;
+    MoveContent(t, 1800);
+    }
+  function tbuttonclick() {
+    if ($("#tbutton").text() == "| |") {
+      clearInterval(timer);
+      $("#tbutton").text("---");
+      $("#tbutton").attr("title", "restart automatic movement");
+      }
+    else {
+      $("#tbutton").text("| |");
+      timer = setInterval(advance, period);
+      $("#tbutton").attr("title", "stop automatic movement");
+      }
+    }
+  timer = setInterval(advance, period);
+</script>
+<div style="border:1px solid #888; box-shadow:2px 5px 5px #AAA; padding:8px;">
+<p>Visit our <a href="marketing_bannersd853.html?banner=your_banner">page on advertising banners</a> to get more details!</p>
+</div>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="spotlight_2018_09_280eaf.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="spotlight_2018_08_220eaf.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="spotlight_2018_06_080eaf.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="spotlight_2018_05_110eaf.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="spotlight_2018_04_060eaf.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="spotlight_2018_01_080eaf.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="spotlight_2017_12_040eaf.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="software_news_2018_08_020eaf.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="software_news_2018_05_220eaf.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="newsletters0eaf.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2018_09_28.html?banner=articles by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:38 GMT -->
+</html>

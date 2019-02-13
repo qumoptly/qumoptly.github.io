@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/rp_fiber_calculator_gm.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The fiber optics software RP Fiber Calculator: the mode solver, calculating guided modes of optical fibers</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Documentation for the software RP Fiber Calculator of RP Photonics Consulting GmbH, which can calculate fiber mode properties and light propagation in fibers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Calculator, software, fiber optics, documentation, mode solver, guided modes, mode properties">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="rp_fiber_calculator_gm.html"; cat="S"; shownbanner=""; ref="rp_fiber_calculator_docu18e9.html?banner=RP_Fiber_Calculator"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="rp_fiber_calculator_gm_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html" class="sel">RP Fiber Calculator</a>
+<a href="rp_fiber_calculator_download.html" class="sub">Download</a>
+<a href="rp_fiber_calculator_docu.html" class="sub">Documentation</a>
+<a href="rp_fiber_calculator_feedback.html" class="sub">Feedback</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Calculator &ndash; Documentation</h1>
+<p>Here we explain in detail how the <b>RP Fiber Calculator</b> software is used. <br>
+Each of the menu items explains one of the tabs.</p>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_docu.html">Index profiles</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="rp_fiber_calculator_gm.html">Guided modes</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_la.html">Launching a beam</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_pr.html">Propagation</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_co.html">Fiber to fiber</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_fe.html">Fiber ends</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Guided Modes</h2>
+<div>
+<p>Here you get the properties of all guided modes of a fiber.
+(Note that <a href="cladding_modes.html" title="cladding modes: modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a> are not considered &ndash; a fiber can have a huge number of these, and their detailed properties are usually not of interest.)
+The data are calculated based on the refractive index profile (as defined in the left tab) and the wavelength which you enter.
+If you have modified the wavelength setting, press the &ldquo;Calculate&rdquo; button to get the modes recalculated.</p>
+<figure>
+<img src="img/rp_fiber_calculator_gm.png" alt="RP Fiber Calculator, mode properties">
+</figure>
+<h3 class="togglediv">Mode Parameters</h3>
+<div>
+<p>The mode parameters are displayed in a table with the following columns:</p>
+<aside class="textbox tb_right redmargin" style="width:300px;">
+<p>Again, the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software offers more features:</p>
+<ul>
+<li>index profiles with material <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">dispersion</a> (automatically recalculated for each wavelength)</li>
+<li>various predefined diagrams for mode properties (e.g. with variation of the wavelength)</li>
+<li>create any further diagrams using the script language</li>
+<li>output results in any form, e.g. as text files or binary files with arbitrary format</li>
+</ul>
+<p>You can even do full-blown programming, e.g. for creating diagrams or output files where you do a systematic variation of certain parameters.
+Automatic optimizations are also possible.</p>
+</aside>
+<ul>
+<li class="ta_left">number of the mode</li>
+<li class="ta_left">l and m: indices of the <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP</a><sub>l,m</sub> modes</li>
+<li class="ta_left">beta: <a href="propagation_constant.html" title="propagation constant: a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">phase constant</a>: the phase change per micrometer of propagation along the fiber</li>
+<li class="ta_left">n<sub>eff</sub>: <a href="effective_refractive_index.html" title="effective refractive index: a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive index</a></li>
+<li class="ta_left">A<sub>eff</sub>: the <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a></li>
+<li class="ta_left">P in core: the fraction of the power propagating within the fiber core</li>
+<li class="ta_left"><a href="cut_off_wavelength.html" title="cut-off wavelength: a wavelength above which a guided mode of a waveguide ceases to exist">cut-off wavelength</a>: the wavelength up to which the mode exists</li>
+</ul>
+<p>You can sort the table according to various parameters by clicking on the corresponding table header.</p>
+<p>If you have checked &ldquo;include chromatic dispersion&rdquo;, the table also contains</p>
+<ul>
+<li class="ta_left">n<sub>g</sub>: the group index</li>
+<li class="ta_left">GVD: the group velocity dispersion</li>
+</ul>
+<p>(Dispersion can be calculated only if the index profile is determined via a mathematical expression or a doping profile. Only the PRO version offers that.)</p>
+<p>Below the table, you see the number of modes displayed.
+The smaller number given first does not distinguish modes with different orientations.
+For example, an LP<sub>11</sub> mode can have two lobes oriented left and right or top and bottom, and is considered as a single mode only.
+The larger number considers each orientation separately, as it would also be required for a mode decomposition of an arbitrary field.</p>
+<p>Note that the mode solver may miss a mode if it is very close to its <a href="cut_off_wavelength.html" title="cut-off wavelength: a wavelength above which a guided mode of a waveguide ceases to exist">cut-off wavelength</a>, where the mode field extends far beyond the fiber core.
+Such a mode would anyway usually be extremely sensitive e.g. to bending the fiber and is thus hard to observe.</p>
+<aside class="callout blue">Our encyclopedia article on <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP modes</a> shows you the equations which this software solves. This is, by the way, a rather difficult matter, requiring sophisticated numerical algorithms.</aside>
+</div>
+<h3 class="togglediv">Mode Profiles</h3>
+<div>
+<p>Further, you can display a mode profile on the right side by clicking on the &ldquo;Show mode profile&rdquo; button.
+(The results are always based on the mode selected in the table.)
+Alternatively, you can double-click on a mode entry in the table, or click on an entry while keeping the Shift key pressed.</p>
+<p>You can choose between a 2D profile and a plot of the radial dependence.
+Both can be based either on intensities or amplitudes.
+With the latter, you can better see weak parts of a profile.</p>
+<p>By clicking on the profile image with the right mouse button (PRO version only), you can call a context menu which allows you to copy the profile (or alternatively the profiles of all modes) to the Windows clipboard.</p>
+</div>
+<h3 class="togglediv">Exporting Mode Properties</h3>
+<div>
+<p>With the &ldquo;Export&rdquo; button below the table of mode properties (PRO version only), you can get a form which allows you to export numerical data of the modes.</p>
+<figure>
+<img src="img/rp_fiber_calculator_gm_export.png" alt="RP Fiber Calculator, export of mode properties">
+</figure>
+<p>The upper part of the form allows you to generate an expression which defines each line of the generated output.
+You may also edit that expression manually, e.g. in order to obtain outputs in other units or mathematically process them in other ways.</p>
+<p>When you press the button &ldquo;Generate the text output&rdquo;, you will obtain the output in the lower part of the form.
+You can then copy it to the Windows clipboard or save it to a text file.</p>
+</div>
+<h3 class="togglediv">Plot Mode Data</h3>
+<div>
+<p>With the &ldquo;Plot&rdquo; button below the table of mode properties (PRO version only), you can get a form which allows you to plot various mode properties as functions of the optical wavelength.</p>
+<figure>
+<img src="img/rp_fiber_calculator_gm_plot.png" alt="RP Fiber Calculator, plotting of mode properties">
+</figure>
+<p>Simply fill out the details and press the button &ldquo;Make the plot&rdquo; in order to obtain something like the following:</p>
+<figure>
+<img src="img/rp_fiber_calculator_gm_plot2.png" alt="RP Fiber Calculator, plotting of mode properties">
+</figure>
+<p>On that form, you can save the obtained graphics to a file and copy it to the clipboard.
+Also, you can do measurements in the plot using the markers, which you can place by clicking into the diagram with the left and right mouse button.</p>
+</div>
+<h3 class="togglediv">Further Remarks</h3>
+<div>
+<aside class="callout blue">If you want to learn more about fiber optics, enjoy our <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a>!</aside>
+<p>The number of guided modes rises, if you increase the core radius or the index contrast, or if you choose a shorter wavelength.</p>
+<p>If the fiber has too many modes, only part of them (those with low enough orders) can be displayed.
+In the free version, only modes with <span class="eqn_il"><i>l</i></span> and <span class="eqn_il"><i>m</i></span> values up to 20 are displayed; the PRO version goes substantially further, so that thousands of modes are possible.</p>
+<p>Influences of propagation losses on the modes are not considered.
+In principle, they could lead to a wavefront curvature of the modes, but such effects are in practice normally not relevant.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/rp_fiber_calculator_gm.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:49 GMT -->
+</html>

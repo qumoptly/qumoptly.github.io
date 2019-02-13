@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_qs_yag_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Fiber Power: Pulserzeugung in einem aktiv g&uuml;tegeschalteten Nd:YAG-Laser, numerisch simuliert</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Die Pulserzeugung in einem aktiv gütegeschalteten Nd:YAG-Laser wird mit der Software RP Fiber Power simuliert.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, Simulation, Design, Software, Puls, aktiv gütegeschaltet, Nd:YAG-Laser">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_qs_yag_d.html"; cat="S"; shownbanner=""; ref="fiberpower_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_qs_yag.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power: Simulations- und Design-Software <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Beispiel: Pulserzeugung in einem gütegeschalteten Nd:YAG-Laser</h2>
+<h3>Beschreibung des Modells</h3>
+<p>Obwohl die Software <b>RP Fiber Power</b> für Faserlaser entwickelt wurde, ist sie auch für viele Bulk-Laser gut einsetzbar.
+Voraussetzung ist lediglich, dass der Laser <a href="end_pumping.html" title="end pumping: a technique of optically pumping a laser medium in a direction along the laser beam">endgepumpt</a> wird und dass die Strahlradien innerhalb des Kristalls etwa konstant bleiben.
+In der hier simulierten Situation ist die <a href="rayleigh_length.html" title="Rayleigh length: the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh-Länge</a> des Laserstrahls im Kristall 215&thinsp;mm, mehr als zehnmal die Kristalllänge, so dass die Annahme sehr gut erfüllt ist.</p>
+<p>Da der Pumpstrahl als leicht fehljustiert angenommen wird, ist die Radialsymmetrie gebrochen.
+Deswegen verwenden wir ein rechteckiges Raster anstelle der sonst üblichen Ringstrukturen.
+Die Auflösung wurde so gewählt, dass die Gauß-Strahlen mit vernünftiger Genauigkeit repräsentiert werden.</p>
+<p>Eine dynamische Simulation wird in zwei Schritten durchgeführt:</p>
+<ul>
+<li>Zuerst wird die Pumpphase simuliert, in der der Q-switch das Lasing unterdrückt.
+Dies kann mit einer relativ großen zeitlichen Schrittweite geschehen, so dass dieser Teil nur einen Sekundenbruchteil an Rechenzeit benötigt.</li>
+<li>Nun wird die Pulsbildung mit offenem Q-switch simuliert.
+Hier benötigen wir sehr kleine zeitliche Schritte (die von der Software automatisch gewählt werden).
+Die Rechenzeit hierfür ist auf einem gewöhnlichen PC einige Sekunden.</li>
+</ul>
+<p>Man beachte, dass eine endliche Schaltgeschwindigkeit des Q-switch simuliert wurde.
+Für unendlich schnelles Schalten würde das zeitliche Profil Modulationen auf der Zeitskala der Umlaufzeit zeigen.</p>
+<p>Es sei angemerkt, dass in diesem Modell angenommen wird, dass der Strahlradius während des Pulsaufbaus konstant bleibt &ndash; trotz des Einflusses von <a href="gain_guiding.html" title="gain guiding: guiding of light based on spatially inhomogeneous optical gain">gain guiding</a>.
+Diese Annahme ist oft, aber nicht immer erfüllt.
+Wir haben ein noch <a href="fiberpower_qs_yag_bp_d.html"><b>ausgefeilteres Beispiel mit Wellenpropagation</b></a>, wo diese Annahme nicht benötigt wird, und Effekte von gain guiding unter bestimmten Umständen beobachtet werden können.</p>
+<h3>Ergebnisse</h3>
+<p>Abbildung&thinsp;1 zeigt wie die gespeicherte Energie und die Verstärkung in der Pumpphase aufgebaut werden.
+Die Steigung nimmt ab, da immer mehr Energie durch Fluoreszenz (spontane Emission) verloren geht.</p>
+<figure>
+<img src="img/fiberpower_qs_yag1.png" alt="Pumpphase im gütegeschalteten Laser">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Zeitliche Entwicklung von gespeicherter Energie und Verstärkung in der Pumpphase.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;2  zeigt das transversale Profil der Neodym-Anregung nach Extraktion eines Großteils der Energie durch den gebildeten Puls.
+Da der Laserstrahl ein wenig kleiner ist als der Pumpstrahl und da letzterer etwas fehljustiert ist, bleibt vor allem am rechten Rand noch etwas Anregungsenergie übrig.</p>
+<figure>
+<img src="img/fiberpower_qs_yag3.png" alt="transversales Anregungsprofil nach der Pulsbildung">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Transversales Profil der Nd-Anregung nach Bildung des Pulses.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;3 zeigt die Entwicklung der Ausgangsleistung und der Verstärkung während der Pulsbildung.
+Die Pulsenergie und Spitzenleistung (neben anderen Daten) wird im Diagramm angezeigt.</p>
+<figure>
+<img src="img/fiberpower_qs_yag4.png" alt="zeitliche Entwicklung von Verstärkung und Leistung in einem gütegeschalteten Laser">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Zeitliche Entwicklung von Pulsenergie und Spitzenleistung.
+</figcaption>
+</figure>
+<p>Die letzte Abbildung zeigt die Entwicklung von Pulsenergie und Spitzenleistung mit einer logarithmischen Skala.
+Man sieht, wie die Leistung über mehrere Größenordnungen exponentiell ansteigt, beginnend auf einem sehr kleinen Niveau von der spontanen Emission.</p>
+<figure>
+<img src="img/fiberpower_qs_yag5.png" alt="zeitliche Entwicklung von Verstärkung und Leistung in einem gütegeschalteten Laser">
+<figcaption><span class="start">Abbildung&nbsp;4:</span> 
+Dasselbe wie in der vorherigen Abbildung, jedoch mit logarithmischer Skala.
+</figcaption>
+</figure>
+<p>Es wäre leicht möglich, dass Modell noch zu erweitern.
+Beispielsweise könnte die Entwicklung mehrerer transversaler Moden untersucht werden.</p>
+<p>(<a href="fiberpower_case_studies_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_qs_yag_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:47 GMT -->
+</html>

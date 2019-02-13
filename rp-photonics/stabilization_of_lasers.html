@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/stabilization_of_lasers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:03:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - stabilization of lasers, frequency stabilization, reference cavity, carrier-envelope offset, CEO stabilization</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Stabilization of lasers are measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="stabilization of lasers, frequency stabilization, reference cavity, carrier-envelope offset, CEO stabilization">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="stabilization_of_lasers.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_stabilization_of_lasers.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Stabilization of Lasers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_stabilization_of_lasers1fbf.html?s=vbox" class="bg_bgheading">Suppliers for equipment for laser stabilization</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_stabilization_of_lasers1fbf.html?s=vbox" class="redlink"><b>17 suppliers for equipment for laser stabilization</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://stablelasers.com/products.html" data-supplier="Stable Laser Systems" data-location="product-enc" data-keyword="stabilization of lasers" rel="nofollow" class="bg externallink"><img src="bg/logos/stable_laser_systems.png" alt="Stable Laser Systems" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://www.menlosystems.com/products/ultrastable-cw-lasers-add-ons-for-metrology/ors1500/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="stabilization of lasers" rel="nofollow" class="bg externallink"><img src="bg/logos/menlo_systems.png" alt="Menlo Systems" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_stabilization_of_lasers1fbf.html?s=vbox">List of suppliers for<br>stabilization of lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index-2.html">RP Photonics</a> for advice on how to best stabilize your laser, i.e., on which technique to use, how exactly to implement it, etc.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Stabilisierung von Lasern</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite327f.html?article=stabilization%20of%20lasers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>As <a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">lasers</a> exhibit various kinds of <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, which can be detrimental in applications, it is sometimes necessary to use techniques for suppressing noise and stabilizing certain laser parameters.
+There are <em>active</em> and <em>passive</em> stabilization schemes, as discussed in the following.</p>
+<p>See also the article on <a href="synchronization_of_lasers.html" title="synchronization of lasers: the synchronization of light pulses generated with lasers">synchronization of lasers</a>, which treats both timing and phase synchronization.</p>
+<h2 class="togglediv">Active Laser Stabilization</h2>
+<div>
+<p>Active stabilization schemes usually involve some kind of electronic feedback (or sometimes feedforward) system, where fluctuations of some parameters are converted to an electronic signal, which is then used to act on the laser in some way.</p>
+<figure class="right" style="width:341px;">
+<img src="img/power_stabilization.png" alt="power stabilization for a laser">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Diode-pumped solid-state laser with a feedback system stabilizing the output power.
+</figcaption>
+</figure>
+<p>Examples are:</p>
+<ul>
+<li>The output power of a laser may be stabilized with a scheme as shown in Figure&nbsp;1.
+The laser power is monitored with a <a href="photodiodes.html" title="photodiodes: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> and corrected e.g. via control of the pump power or the losses in or outside the laser resonator.
+In this way, both <a href="spiking.html" title="spiking: the tendency of some lasers to emit spikes of output power, particularly after being switched on">spiking</a> after turn-on and the <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity noise</a> under steady-state conditions can be reduced.
+Note that it is also possible to reduce intensity noise by acting on the output beam instead of the laser itself; see the article on <a href="noise_eaters.html" title="noise eaters: devices for reducing the intensity noise of an optical beam by automatically adjusting the degree of power attenuation">noise eaters</a>.</li>
+<li>The <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequency</a> of a <a href="single_frequency_lasers.html" title="single-frequency lasers: lasers emitting radiation in a single resonator mode">single-frequency laser</a>, or the frequency of one line of the <a href="frequency_combs.html" title="frequency combs: optical spectra consisting of equidistant lines">frequency comb</a> from a <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a>, can be stabilized via resonator length control.
+The feedback signal can be obtained e.g. by recording a <a href="beat_note.html" title="beat note: an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a> with a second laser, by measuring the transmission or reflection of a very stable <a href="reference_cavities.html" title="reference cavities: optical cavities serving as a kind of frequency reference">reference cavity</a> or an <a href="interferometers.html" title="interferometers: optical devices utilizing the phenomenon of interference">interferometer</a>, or by measuring the transmission of a <a href="multipass_gas_cells.html" title="multipass gas cells: a cell which allows to realize multiple passes of a laser beam through a gas">gas cell</a> (e.g. an iodine cell), possibly using Doppler-free <a href="spectroscopy.html" title="spectroscopy: methods where the interaction of light with matter is utilized">spectroscopy</a>.
+A frequently used technique for generating an error signal with a reference cavity is the Pound&ndash;Drever&ndash;Hall method [2,&thinsp;3], using a weak <a href="optical_phase.html" title="optical phase: the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> modulation of the light which is sent to the reference cavity.
+A scheme not requiring such modulation is the Hänsch&ndash;Couillaud method [1].</li>
+<li>The stabilization of the <a href="carrier_envelope_offset.html" title="carrier&ndash;envelope offset: the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a> phase or frequency of a <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> (<em>CEO stabilization</em>) can be based on, e.g., a phase measurement with an <span class="eqn_il"><i>f&minus;</i>2<i>f</i></span> <a href="interferometers.html" title="interferometers: optical devices utilizing the phenomenon of interference">interferometer</a> and feedback via some wedge or tilted mirror in the <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonator</a>.
+This kind of stabilization is important for <a href="frequency_metrology.html" title="frequency metrology: the field of technology dealing with precise frequency measurements">frequency metrology</a>.</li>
+<li>The timing of the <a href="pulses.html" title="pulses: flashes of light">pulses</a> (&rarr;&nbsp;<a href="timing_jitter.html" title="timing jitter: fluctuations of the temporal positions of pulses"><em>timing jitter</em></a>) from a <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked laser</a> can be monitored by comparing the phases of a photodiode signal and of an electronic reference oscillator, and stabilized e.g. via cavity length control.</li>
+<li>Stabilization of the <a href="beam_pointing_fluctuations.html" title="beam pointing fluctuations: fluctuations of the propagation direction of a laser beam">pointing direction</a> of the output beam is possible via a beam position measurement (e.g. with a four-quadrant <a href="photodiodes.html" title="photodiodes: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>) and correction via piezo-controlled resonator mirrors.</li>
+</ul>
+<p>The stability which is achieved with such active systems is determined by factors such as <a href="photodetectors.html" title="photodetectors: devices used for the detection of light">photodetection</a> noise, the <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> of control elements, the design of the feedback electronics, and the stability of the reference standards (e.g. optical <a href="reference_cavities.html" title="reference cavities: optical cavities serving as a kind of frequency reference">reference cavities</a>).</p>
+</div>
+<h2 class="togglediv">Passive Laser Stabilization</h2>
+<div>
+<p>Passive schemes do not involve electronics and are based on purely optical effects.
+Examples are:</p>
+<ul>
+<li>The frequency of a laser can be stabilized via optical feedback from a stable <a href="reference_cavities.html" title="reference cavities: optical cavities serving as a kind of frequency reference">reference cavity</a>.
+(This may also be considered as using an extended laser resonator, being a kind of composite cavity.)</li>
+<li><a href="synchronization_of_lasers.html" title="synchronization of lasers: the synchronization of light pulses generated with lasers">Synchronization</a> of two <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a> is possible via <a href="cross_phase_modulation.html" title="cross-phase modulation: a nonlinear effect where the optical intensity of one beam influences the phase change of another beam">cross-phase modulation</a> in a <a href="kerr_effect.html" title="Kerr effect: a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr medium</a>, in which the intracavity pulses of both lasers meet.</li>
+</ul>
+<p>The optical frequency of a laser may also be stabilized by <a href="injection_locking.html" title="injection locking: a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator">injection locking</a>, i.e., injecting a beam with a highly stable optical frequency from another laser.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_stabilization_of_lasers1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 17 suppliers for equipment for laser stabilization. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.stablelasers.com/" data-supplier="Stable Laser Systems" data-location="product-enc" data-keyword="stabilization of lasers" rel="nofollow" class="bg externallink" title="Visit the website of Stable Laser Systems"><img src="bg/logos/stable_laser_systems.png" alt="Stable Laser Systems" class="supplierlogo"></a><h3><a href="bg/profiles/stable_laser_systems.html" title="See the profile of Stable Laser Systems">Stable Laser Systems</a></h3><p>Stable Laser Systems is the premier supplier of <a href="http://stablelasers.com/products.html" data-supplier="Stable Laser Systems" data-keyword="stabilization of lasers" rel="nofollow" class="externallink bg">custom-designed components and systems</a> for frequency stabilized lasers at any wavelength. We design robust breadboard, fully integrated, and lightweight, transportable rackmount systems with low frequency drift at sub-Hz to Hz linewidths for research laboratories, industrial settings, and field applications. From fiber-coupled cavities and transportable vacuum systems to Hz-level Ti:sapphire systems and auto-locking 1550&nbsp;nm systems, we have the expertise to engineer your ideal system in a fraction of the time. Call us today to discuss your unique frequency stability needs.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.menlosystems.com/" data-supplier="Menlo Systems" data-location="product-enc" data-keyword="stabilization of lasers" rel="nofollow" class="bg externallink" title="Visit the website of Menlo Systems"><img src="bg/logos/menlo_systems.png" alt="Menlo Systems" class="supplierlogo"></a><h3><a href="bg/profiles/menlo_systems.html" title="See the profile of Menlo Systems">Menlo Systems</a></h3><p>Menlo Systems’ <a href="http://www.menlosystems.com/products/ultrastable-cw-lasers-add-ons-for-metrology/ors1500/" data-supplier="Menlo Systems" data-keyword="stabilization of lasers" rel="nofollow" class="externallink bg">ultra-stable optical reference system ORS1500</a> provides sub-Hz linewidths, Allan deviations &lt; 2&middot;10<sup>&minus;15</sup> and small linear drift rates. It is the ideal choice for scientific and industrial applications with highest demands on laser stability and linewidth. Our rack-mountable, fully transportable, ORS1500 includes: cw laser, full vacuum system, high-finesse resonator (ULE), temperature stabilization, locking electronics and vibration and acoustic isolation. Please contact us for custom tailored systems to meet your specific requirements.</p></aside>
+</div>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">T. W. Hänsch and B. Couillaud, &ldquo;Laser frequency stabilization by polarization spectroscopy of a reflecting reference cavity&rdquo;, <a href="http://www.sciencedirect.com/science/article/pii/0030401880900693" rel="nofollow">Opt. Commun. 35 (3), 441 (1980) (Hänsch&ndash;Couillaud technique)</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">R. W. P. Drever, J. L. Hall <i>et al.</i>, &ldquo;Laser phase and frequency stabilization using an optical resonator&rdquo;, <a href="http://link.springer.com/article/10.1007%2FBF00702605" rel="nofollow">Appl. Phys. B 31, 97 (1983)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">G. C. Bjorklund <i>et al.</i>, &ldquo;Frequency-modulation (FM) spectroscopy&rdquo;, <a href="http://link.springer.com/article/10.1007%2FBF00688820" rel="nofollow">Appl. Phys. B 32 (3), 145 (1983)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">C. Salomon <i>et al.</i>, &ldquo;Laser stabilization at the millihertz level&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-5-8-1576" rel="nofollow">J. Opt. Soc. Am. B 5 (8), 1576 (1988)</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">J. Dirscherl <i>et al.</i>, &ldquo;A dye laser spectrometer for high resolution spectroscopy&rdquo;, <a href="http://www.sciencedirect.com/science/article/pii/0030401892901147" rel="nofollow">Opt. Commun. 91, 131 (1992)</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">T. Day <i>et al.</i>, &ldquo;Sub-hertz relative frequency stabilization of two diode laser-pumped Nd:YAG lasers locked to a Fabry&ndash;P&eacute;rot interferometer&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=135234" rel="nofollow">IEEE J. Quantum Electron. 28 (4), 1106 (1992)</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">N. Uehara and K. I. Ueda, &ldquo;193-mHz beat linewidth of frequency-stabilized laser-diode-pumped Nd:YAG ring lasers&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-18-7-505" rel="nofollow">Opt. Lett. 18 (7), 505 (1993)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">C. C. Harb <i>et al.</i>, &ldquo;Suppression of the intensity noise in a diode-pumped neodymium:YAG nonplanar ring laser&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=362718" rel="nofollow">IEEE J. Quantum Electron. 30 (12), 2907 (1994)</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">S. Seel <i>et al.</i>, &ldquo;Cryogenic optical resonators: a new tool for laser frequency stabilization at the 1&nbsp;Hz level&rdquo;, <a href="http://prola.aps.org/abstract/PRL/v78/i25/p4741_1" rel="nofollow">Phys. Rev. Lett. 78 (25), 4741 (1997)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">Y. Shevy and H. Deng, &ldquo;Frequency-stable and ultranarrow-linewidth semiconductor laser locked directly to an atom-cesium transition&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-23-6-472" rel="nofollow">Opt. Lett. 23 (6), 472 (1998)</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">B. C. Young <i>et al.</i>, &ldquo;Visible lasers with subhertz linewidths&rdquo;, <a href="http://prola.aps.org/abstract/PRL/v82/i19/p3799_1" rel="nofollow">Phys. Rev. Lett. 82 (19), 3799 (1999)</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">S. Kasapi <i>et al.</i>, &ldquo;Sub-shot-noise frequency-modulation spectroscopy by use of amplitude-squeezed light from semiconductor lasers&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-17-2-275" rel="nofollow">J. Opt. Soc. Am. B 17 (2), 275 (2000)</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">E. D. Black, &ldquo;An introduction to Pound&ndash;Drever&ndash;Hall laser frequency stabilization&rdquo;, <a href="http://scitation.aip.org/content/aapt/journal/ajp/69/1/10.1119/1.1286663" rel="nofollow">Am. J. Phys. 69 (1), 79 (2001)</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">F. W. Helbing <i>et al.</i>, &ldquo;Carrier&ndash;envelope offset phase-locking with attosecond timing jitter&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1250460" rel="nofollow">IEEE J. Sel. Top. Quantum Electron. 9 (4), 1030 (2003)</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">St. A. Webster <i>et al.</i>, &ldquo;Subhertz-linewidth Nd:YAG laser&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-29-13-1497" rel="nofollow">Opt. Lett. 29 (13), 1497 (2004)</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[16]</td><td class="refs">J. Rollins <i>et al.</i>, &ldquo;Solid-state laser intensity stabilization at the 10<sup>&minus;8</sup> level&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-29-16-1876" rel="nofollow">Opt. Lett. 29 (16), 1876 (2004)</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">H. Stoehr <i>et al.</i>, &ldquo;Diode laser with 1&nbsp;Hz linewidth&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-31-6-736" rel="nofollow">Opt. Lett. 31 (6), 736 (2006)</a></td></tr>
+<tr><td class="refno">[18]</td><td class="refs">F. Seifert <i>et al.</i>, &ldquo;Laser power stabilization for second-generation gravitational wave detectors&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-31-13-2000" rel="nofollow">Opt. Lett. 31 (13), 2000 (2006)</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">F. K&eacute;f&eacute;lian <i>et al.</i>, &ldquo;Ultralow-frequency-noise stabilization of a laser by locking to an optical fiber-delay line&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-34-7-914" rel="nofollow">Opt. Lett. 34 (7), 914 (2009)</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">P. Kwee <i>et al.</i>, &ldquo;Shot-noise-limited laser power stabilization with a high-power photodiode array&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-34-19-2912" rel="nofollow">Opt. Lett. 34 (19), 2912 (2009)</a></td></tr>
+<tr><td class="refno">[21]</td><td class="refs">N. Satyan <i>et al.</i>, &ldquo;Phase noise reduction of a semiconductor laser in a composite optical phase-locked loop&rdquo;, <a href="http://opticalengineering.spiedigitallibrary.org/article.aspx?articleid=1089557" rel="nofollow">Opt. Eng. 49 (12), 124301 (2010)</a></td></tr>
+<tr><td class="refno">[22]</td><td class="refs">P. Kwee, B. Willke and K. Danzmann, &ldquo;New concepts and results in laser power stabilization&rdquo;, <a href="http://link.springer.com/article/10.1007%2Fs00340-011-4399-1" rel="nofollow">Appl. Phys. B 102 (3), 515 (2011)</a></td></tr>
+<tr><td class="refno">[23]</td><td class="refs">R. Paschotta, &ldquo;Noise in Laser Technology&rdquo;. <a href="article_noise_in_laser_technology1.html">Part 1 &ndash; Intensity and Phase Noise</a>; <a href="article_noise_in_laser_technology1.html">Part 2: Fluctuations in Pulsed Lasers</a>; <a href="article_noise_in_laser_technology3.html">Part 3: Beam Pointing Fluctuations</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity noise</a>, <a href="spiking.html" title="spiking: the tendency of some lasers to emit spikes of output power, particularly after being switched on">spiking</a>, <a href="phase_noise.html" title="phase noise: noise of the optical phase of a beam or of an electric signal">phase noise</a>, <a href="linewidth.html" title="linewidth: width of the spectrum of a light beam or an absorption feature">linewidth</a>, <a href="noise_eaters.html" title="noise eaters: devices for reducing the intensity noise of an optical beam by automatically adjusting the degree of power attenuation">noise eaters</a>, <a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="injection_locking.html" title="injection locking: a technique for enforcing operation of a laser on a certain optical frequency by injecting light with that frequency into the laser resonator">injection locking</a>, <a href="carrier_envelope_offset.html" title="carrier&ndash;envelope offset: the offset between the optical phase and the maximum of the wave envelope of an optical pulse">carrier&ndash;envelope offset</a>, <a href="frequency_combs.html" title="frequency combs: optical spectra consisting of equidistant lines">frequency combs</a>, <a href="frequency_metrology.html" title="frequency metrology: the field of technology dealing with precise frequency measurements">frequency metrology</a>, <a href="synchronization_of_lasers.html" title="synchronization of lasers: the synchronization of light pulses generated with lasers">synchronization of lasers</a><br>and other articles in the categories <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="stabilization_of_lasers.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="propulse_demo_solitond158.html?banner=RP_ProPulse_2"><img src="img/propulse_demo_soliton4b.png" alt="higher-order solitons" style="margin-bottom:8px"></a>
+<p>Evolution of the spectrum of a third-order soliton pulse.</p>
+<p>This diagram has been made with the <a href="propulsed158.html?banner=RP_ProPulse_2"><b>RP ProPulse</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Free Tutorial: Modeling of Fiber Amplifiers and Lasers</h2>
+<p>We have published a new <a href="tutorial_modeling2a20.html?banner=modeling_tutorial">tutorial</a> which discusses the modeling of fiber amplifiers and lasers.
+It addresses many questions:</p>
+<ul>
+<li>What is a <a href="tutorial_modeling12a20.html?banner=modeling_tutorial">model</a>?</li>
+<li>Should one use <a href="tutorial_modeling32a20.html?banner=modeling_tutorial">power propagation or field propagation</a>?</li>
+<li>How to simulate the behavior of <a href="tutorial_modeling42a20.html?banner=modeling_tutorial">laser-active ions</a>?</li>
+<li>How to calculate <a href="tutorial_modeling52a20.html?banner=modeling_tutorial">steady-state solutions</a>?</li>
+<li>How to simulate <a href="tutorial_modeling62a20.html?banner=modeling_tutorial">dynamical behavior</a> and <a href="tutorial_modeling72a20.html?banner=modeling_tutorial">ultrashort pulse propagation</a>?</li>
+<li>What aspects are important for the <a href="tutorial_modeling82a20.html?banner=modeling_tutorial">decision</a> whether to develop own modeling software or use commercial software?</li>
+</ul>
+<p><a href="tutorial_modeling2a20.html?banner=modeling_tutorial">Read the tutorial!</a></p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/stabilization_of_lasers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:03:44 GMT -->
+</html>

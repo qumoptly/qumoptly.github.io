@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/lp_modes.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:59:52 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - LP modes, fiber, wave equation, radial function, intensity profile, optimization of refractive index profiles</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="LP modes are linearly polarized propagation modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="LP modes, fiber, wave equation, radial function, intensity profile, optimization of refractive index profiles">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="lp_modes.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>LP Modes</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="buyersguide.html" class="bg_bgheading">Buyer's Guide</a></p>
+<p>Use the <a href="buyersguide.html"><b>RP Photonics Buyer's Guide</b></a> to find suppliers for photonics products! You will hardly find a more convenient resource.</p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index-2.html">RP Photonics</a> for any advice on fiber modes. For example, RP Photonics has the <a href="fiberpower.html"><b>RP Fiber Power</b> software</a> for <a href="fiberpower.html">calculating fiber modes and optical powers in fibers</a>. For simpler purposes, there is also the free fiber optics software <a href="rp_fiber_calculator.html"><b>RP Fiber Calculator</b></a>.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">LP-Moden</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<p><a href="encyclopedia_cite3347.html?article=LP%20modes">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>The transverse <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> profiles of many optical <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> are radially symmetric, i.e., the refractive index depends only on the radial coordinate <span class="eqn_il"><i>r</i></span> and not on the azimuthal coordinate <span class="eqn_il"><span class="greek">&phi;</span></span>.
+Also, the index profiles of nearly all fibers (except for <a href="photonic_crystal_fibers.html" title="photonic crystal fibers: specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a>) exhibit only a small index contrast, so that the fiber can be assumed to be only weakly guiding.
+In this situation, the calculation of the fiber <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> is greatly simplified.
+One obtains the linearly polarized LP modes.</p>
+<p>In cases with stronger guidance, one would need to distinguish TE and TM modes, where only either the electric or the magnetic field is exactly perpendicular to the fiber axis.
+There are also <em>hybrid modes</em> of HE and EH type, having a non-zero longitudinal components of both electric and magnetic field.
+That case of <em>not</em> weakly guiding fibers applies, for example, to <a href="nanofibers.html" title="nanofibers: optical fibers with transverse dimensions below one micrometer">nanofibers</a> where a glass/air interface provides the <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguide</a> function.</p>
+<h2 class="togglediv">Calculation of LP Modes</h2>
+<div>
+<p>The wave equation for the complex electric field profile <span class="eqn_il"><i>E</i>(<i>r</i>,<span class="greek">&phi;</span>)</span> in cylindrical coordinates is</p>
+<div class="eqn"><img src="eqn/fiber_wave_equation.gif" width="209" height="48" alt="wave equation for fiber modes"></div>
+<p>where <span class="eqn_il"><span class="greek">&beta;</span></span> is the imaginary part of the <a href="propagation_constant.html" title="propagation constant: a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constant</a> (still to be determined).</p>
+<p>Due to the radial symmetry, we can use the ansatz</p>
+<div class="eqn"><img src="eqn/fiber_modes_ansatz.gif" width="158" height="24" alt="ansatz for fiber modes"></div>
+<p>where <span class="eqn_il"><i>l</i></span> needs to be an integer (because otherwise the <span class="eqn_il"><span class="greek">&phi;</span></span>-dependent factor would not be continuous).
+We can use the same ansatz with a factor <span class="eqn_il">sin&thinsp;<i>l&thinsp;<span class="greek">&phi;</span></i></span> instead of <span class="eqn_il">cos&thinsp;<i>l&thinsp;<span class="greek">&phi;</span></i></span>, or in fact some linear combination of those, but the resulting radial equation is in any case</p>
+<div class="eqn"><img src="eqn/fiber_modes_radial.gif" width="332" height="50" alt="radial equation for fiber modes"></div>
+<p>where <span class="eqn_il"><i>n</i>(<i>r</i>)</span> is the refractive index and <span class="eqn_il"><i>k</i>&thinsp;=&thinsp;2&thinsp;<span class="greek">&pi;</span>&thinsp;/&thinsp;<span class="greek">&lambda;</span></span> the vacuum <a href="wavenumber.html" title="wavenumber: the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a>.</p>
+<p>For a given wavelength, only for certain discrete values of <span class="eqn_il"><span class="greek">&beta;</span></span>, the radial equation has solutions which tend to zero for <span class="eqn_il"><i>r</i></span> going to infinity.
+Only such solutions can represent guided modes of the fiber.
+These <span class="eqn_il"><span class="greek">&beta;</span></span> values corresponding to guided modes are called <span class="eqn_il"><span class="greek">&beta;</span><sub>lm</sub></span>, where <span class="eqn_il"><i>l</i></span> is the selected azimuthal index (see above) and the index <span class="eqn_il"><i>m</i></span> starts from 1 (for the highest possible <span class="eqn_il"><span class="greek">&beta;</span></span> value) and ranges to some maximum value, which tends to decrease for increasing <span class="eqn_il"><i>l</i></span>.
+Once <span class="eqn_il"><i>l</i></span> gets too high, there are no solutions at all.
+One can then find all guided modes by starting with <span class="eqn_il"><i>l</i>&thinsp;=&thinsp;0</span>, finding all <span class="eqn_il"><span class="greek">&beta;</span></span> values for that, and then do this for increasing <span class="eqn_il"><i>l</i></span> values until there are no solutions any more.</p>
+<p>For <a href="step_index_fibers.html" title="step-index fibers: optical fibers with a step-index refractive index profile">step-index fibers</a> (where the refractive index is constant within the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber core</a>), analytical solutions for the core and cladding part of the radial equation can be found.
+The core part involves a Bessel function <span class="eqn_il"><i>J</i><sub><i>l</i></sub>(<i>u&thinsp;r</i>)</span>, and the cladding part a modified Bessel function <span class="eqn_il"><i>K</i><sub><i>l</i></sub>(<i>w&thinsp;r</i>)</span>, where </p>
+<div class="eqn"><img src="eqn/fiber_u.gif" width="148" height="30" alt="u parameter of fiber mode"></div>
+<p>and</p>
+<div class="eqn"><img src="eqn/fiber_w.gif" width="138" height="30" alt="w parameter of fiber mode"></div>
+<p>The prefactors for the core and cladding part must be balanced such that the function is continuous at the core/cladding interface.</p>
+<p>One recognizes easily that</p>
+<div class="eqn"><img src="eqn/fiber_uw.gif" width="293" height="33" alt="relation between u and w"></div>
+<p>where NA is the <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>.</p>
+</div>
+<h2 class="togglediv">Properties of the LP Modes</h2>
+<div>
+<h3 class="togglediv">Step-index Fibers</h3>
+<div>
+<p>All guided modes have <span class="eqn_il"><span class="greek">&beta;</span></span> values which lie between the plane-wave <a href="wavenumber.html" title="wavenumber: the phase delay per unit length, or that quantity divided by 2&pi;">wavenumbers</a> of the core and the cladding.
+Modes with <span class="eqn_il"><span class="greek">&beta;</span></span> values close to the lower limit (the cladding wavenumber) have a small <span class="eqn_il"><i>w</i></span> parameter, leading to a slow decay of the radial function in the cladding.</p>
+<p>One may calculate the <a href="effective_refractive_index.html" title="effective refractive index: a number quantifying the phase delay per unit length in a waveguide, relative to the phase delay in vacuum">effective refractive index</a> of a fiber as its <span class="eqn_il"><span class="greek">&beta;</span></span> value divided by the vacuum wavenumber.
+For guided modes, that effective index lies between the refractive indices of core and cladding.</p>
+<p>The lowest-order mode (LP<sub>01</sub>) has an intensity profile which is similar to that of a <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a>, particularly in cases with not too high <i>V</i> number.
+Particularly for the higher <span class="eqn_il"><i>m</i></span> values, the resulting radial functions can oscillate in the fiber core, whereas it decays more or less rapidly in the cladding.
+Figure&nbsp;1 shows the radial functions for an example case.
+Here, we have two modes with <span class="eqn_il"><i>l</i>&thinsp;=&thinsp;0</span> (LP<sub>01</sub>, LP<sub>02</sub>) and one mode each for <span class="eqn_il"><i>l</i>&thinsp;=&thinsp;1</span> and <span class="eqn_il"><i>l</i>&thinsp;=&thinsp;2</span>.
+Note that for each non-zero <span class="eqn_il"><i>l</i></span> value we have two linearly independent solutions, having a <span class="eqn_il">cos&thinsp;<i>l&thinsp;<span class="greek">&phi;</span></i></span> and <span class="eqn_il">sin&thinsp;<i>l&thinsp;<span class="greek">&phi;</span></i></span> dependence, respectively.
+Taking this into account, we have a total of 2 + 2 + 2 = 6 modes in our example case.</p>
+<figure>
+<img src="img/step_index_fiber_modes.png" alt="radial functions of modes of a step-index fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Radial functions of the fiber modes for a step-index fiber.
+</figcaption>
+</figure>
+<p>The higher the <a href="v_number.html" title="V number: a normalized frequency parameter, which determines the number of modes of a step-index fiber"><i>V</i> number</a> of the fiber, the more guided modes exist.
+For <span class="eqn_il"><i>V</i></span> below 2.405, there is only a single guided mode (apart from different polarization directions), so that we have a <a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>.
+For large <span class="eqn_il"><i>V</i></span>, the number of modes is proportional to <span class="eqn_il"><i>V</i><sup>2</sup></span>.
+Figure&nbsp;2 shows the complex amplitude profiles of all modes of a step-index fiber with a higher <a href="v_number.html" title="V number: a normalized frequency parameter, which determines the number of modes of a step-index fiber"><i>V</i> number</a> of 11.4.</p>
+<figure>
+<img src="img/fiber_modes.png" alt="modes of a fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Electric field amplitude profiles for all the guided modes of a <a href="step_index_fibers.html" title="step-index fibers: optical fibers with a step-index refractive index profile">step-index fiber</a>.
+The two colors indicate different signs of the electric field values.
+This diagram (as all others) has been produced with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>In this example, the LP<sub>52</sub> mode is relatively close to its <a href="cut_off_wavelength.html" title="cut-off wavelength: a wavelength above which a guided mode of a waveguide ceases to exist">cut-off</a>: it would cease to exist for only a slightly longer wavelength.
+In such a case, the <span class="eqn_il"><i>w</i></span> parameter becomes quite small, so that the field penetrates more into the cladding.
+Such modes can be more sensitive to <a href="bend_losses.html" title="bend losses: propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a>, for example.
+However, only for modes with <span class="eqn_il"><i>l</i>&thinsp;=&thinsp;0</span>, the power propagating in the core vanishes at the cut-off.</p>
+</div>
+<h3 class="togglediv">Fibers with Other Refractive Index Profiles</h3>
+<div>
+<p>For arbitrary radial index profiles, the guided modes can still be calculated as LP modes, even though their shapes may deviate substantially from those for a step-index fiber.
+One usually requires a numerical method for finding the radial solutions for guided modes, at least for the core part; a modified Bessel function can still be used for the cladding part, where the refractive index is constant.
+For the core part, one may always start at <i>r</i> = 0, propagate the field up to the core/cladding interface (using the Runge&ndash;Kutta algorithm, for example), and connect it with the modified Bessel function for the cladding part.
+The mismatch of the derivatives at the interface can be minimized by numerically refining the &beta; value.
+One needs to implement a numerical strategy for finding all &beta; values where that mismatch vanishes.</p>
+<p>The numerical calculations are not entirely trivial due to various technical details.
+At least if a high computation speed is required, one has to carefully determine the required numerical step sizes depending on the parameters for each mode.
+The same applies to the parameters for numerical root finding.</p>
+<p>Of course, the whole method cannot be applied any more for not radially symmetric index profiles; one then has to refer to two-dimensional numerical methods, which are much more complicated to handle and require substantially more computation time.</p>
+<p>Figure&nbsp;2 shows the calculated mode functions for an example case.</p>
+<figure>
+<img src="img/fiberpower_modes1.png" alt="radial fiber mode functions">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Radial functions of the fiber modes calculated for a case with a smooth refractive index profile, determined from the concentration of GeO<sub>2</sub> in the core of a <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fiber</a>.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Propagation Velocity and Chromatic Dispersion</h3>
+<div>
+<p>The <a href="phase_velocity.html" title="phase velocity: the velocity with which phase fronts propagate in a medium">phase velocity</a> of a mode is simply the vacuum <a href="velocity_of_light.html" title="velocity of light: the velocity with which light propagates in a medium">velocity of light</a> divided by the effective refractive index (see above).
+The <a href="group_velocity.html" title="group velocity: the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> is the inverse of the derivative of the <span class="eqn_il"><span class="greek">&beta;</span></span> value with respect to the angular frequency.
+For numerical calculations of the group velocity, one thus needs to calculate a mode for at least two different (closely spaced) wavelengths.
+In order to take into account the material <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">dispersion</a>, one needs to use wavelength-dependent refractive indices.</p>
+<p>The <a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> is the second derivative of the <span class="eqn_il"><span class="greek">&beta;</span></span> value with respect to the angular frequency.
+Numerically, one requires the <span class="eqn_il"><span class="greek">&beta;</span></span> values for at least three different wavelengths.
+Note that for small wavelength spacings one requires a very high accuracy of the calculated <span class="eqn_il"><span class="greek">&beta;</span></span> values.</p>
+</div>
+</div>
+<h2 class="togglediv">Optimization of Refractive Index Profiles</h2>
+<div>
+<p>By optimizing the refractive index profile of a fiber, one can improve a number of important parameters of the LP modes.
+For example, one may achieve the wanted mode sizes and number of modes, but also strongly modify the group velocity and chromatic dispersion.
+For minimizing <a href="mode_coupling.html" title="mode coupling: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a> effects, one may take care that the <span class="eqn_il"><span class="greek">&beta;</span></span> values of relevant modes do not get too close.
+<a href="fiberpower.html">Flexible software for calculating fiber modes</a> can be an essential tool for such optimizations.</p>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. W. Snyder and J. D. Love, <i>Optical Waveguide Theory</i>, Chapman and Hall, London (1983)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">J. A. Buck, <i>Fundamentals of Optical Fibers</i>, Wiley, Hoboken, New Jersey (2004)</td></tr>
+<tr><td class="refno">[3]</td><td class="refs">F. Mitschke, <i>Fiber Optics: Physics and Technology</i>, Springer, Berlin (2010)</td></tr>
+<tr><td class="refno">[4]</td><td class="refs">R. Paschotta, <a href="http://spie.org/x648.html?product_id=853722" rel="nofollow"><i>Field Guide to Optical Fiber Technology</i></a>, SPIE Press, Bellingham, WA (2010)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguides</a>, <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="cut_off_wavelength.html" title="cut-off wavelength: a wavelength above which a guided mode of a waveguide ceases to exist">cut-off wavelength</a><br>and other articles in the category <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="lp_modes.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Numerical Pulse Propagation</h2>
+<p><a href="propulse0276.html?banner=RP_ProPulse">RP ProPulse</a> can simulate pulse propagation in many devices:</p>
+<ul>
+<li>in the resonators of <a href="propulse_demo_aml0276.html?banner=RP_ProPulse">actively</a> or <a href="propulse_demo_pml0276.html?banner=RP_ProPulse">passively mode-locked lasers</a></li>
+<li>in synchronously pumped OPOs</li>
+<li>in optical fibers, e.g. for <a href="propulse_demo_compression0276.html?banner=RP_ProPulse">pulse compression</a> or <a href="propulse_demo_solitonshift0276.html?banner=RP_ProPulse">soliton studies</a></li>
+</ul>
+<p style="text-align:center;"><a href="propulse0276.html?banner=RP_ProPulse"><img src="img/rp_propulse_smaller.png" alt="RP ProPulse"></a></p>
+<p>Further features:</p>
+<ul>
+<li><a href="propulse_interface0276.html?banner=RP_ProPulse">interactive pulse display</a></li>
+<li>great flexibility due to <a href="software_script_language0276.html?banner=RP_ProPulse">scripting</a></li>
+<li>comprehensive documentation</li>
+<li>competent <a href="software_support0276.html?banner=RP_ProPulse">technical support</a></li>
+</ul>
+<a href="propulse0276.html?banner=RP_ProPulse"><img src="img/propulse_window.png" alt="pulse display window"></a>
+<p>Use <a href="propulse0276.html?banner=RP_ProPulse"><b>RP ProPulse</b></a> to acquire a full understanding of your devices!</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2 style="font-size:20px;">Stand up for Science!</h2>
+<p style="font-size:14px;">It is acceptable that some don't know much about photons, biological evolution or global warming.</p>
+<p style="font-size:16px; font-weight:bold; color:#B20B28;">But we don't want bigot ignorants to make political decisions and educate our children!</p>
+<p style="font-size:14px;">For example, <b>global warming</b> is not a matter of political opinion, but a fact. Ruthless profiteers are leading astray uneducated people, seducing them to take utterly irresponsible positions. <span style="font-weight:bold; color:#B20B28;">But we cannot risk catastrophic climate changes!</span> Science tells us it is high time to act. Read, for example, the <a href="https://www.ipcc.ch/report/ar5/syr/">IPCC Synthesis Report 2014</a>.</p>
+<p style="font-size:14px; font-weight:bold;">Stand up for science (perhaps by joining a <a href="https://www.marchforscience.com/">March for Science</a>) &ndash; it's our future!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/lp_modes.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:59:55 GMT -->
+</html>

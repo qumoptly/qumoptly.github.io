@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2008_10_20.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Rate Equations - An Example for Stiff Sets of Differential Equations</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2008-10-20">
+<meta name="description" content="A summary of this blog article: Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2008_10_20.html"; cat="P"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Rate Equations &ndash; An Example for Stiff Sets of Differential Equations</h1>
+<div class="posting_details">
+<p>Posted on 2008-10-20 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2008_10_20.html">https://www.rp-photonics.com/spotlight_2008_10_20.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Rate equations for level populations in rare earth ions are often of a kind which is called a stiff set of differential equations. The article discusses this in some detail and draws a number of conclusions, which are relevant e.g. for the modeling of fiber amplifiers and fiber lasers.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="rate_equation_modeling.html" title="rate equation modeling: a method of modeling the dynamics of laser gain media">rate equation modeling</a></p>
+<figure class="right" style="width:222px;">
+<img src="img/erbium_transitions.png" alt="erbium energy levels and transitions">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Level system of Er<sup>3+</sup> ions.
+</figcaption>
+</figure>
+<p>The temporal evolution of the populations of electronic levels in some laser <a href="gain_media.html" title="gain media: media for laser amplification">gain medium</a> (containing e.g. <a href="rare_earth_doped_gain_media.html" title="rare-earth-doped gain media: laser gain media which are doped with rare earth ions">rare earth ions</a>) can be calculated with <a href="rate_equation_modeling.html" title="rate equation modeling: a method of modeling the dynamics of laser gain media">rate equations</a>.
+These are systems of ordinary differential equations, with coupling terms resulting from processes like <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>, <a href="non_radiative_transitions.html" title="non-radiative transitions: transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative transitions</a>, <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a> and <a href="energy_transfer.html" title="energy transfer: the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a>.
+In principle, it is simple to numerically calculate the temporal evolution even for relatively complicated rate equation systems.
+This can also be used for approximately calculating the steady-state population values for given optical intensities e.g. of a pump wave and a signal wave.</p>
+<p>However, there is a frequently encountered problem: in many situations of interest, the rate equations represent a so-called &ldquo;stiff&rdquo; set of differential equations.
+This happens when the transitions between different levels are caused by physical processes which operate on very different time scales.
+For example, consider the level system of erbium (as used in <a href="erbium_doped_fiber_amplifiers.html" title="erbium-doped fiber amplifiers: fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>), which is shown in Figure&nbsp;1.
+As explained in the encyclopedia article on <a href="rate_equation_modeling.html" title="rate equation modeling: a method of modeling the dynamics of laser gain media">rate equation modeling</a>, the rate equations for a situation with some given pump and signal intensities read as follows:</p>
+<div class="eqn"><img src="eqn/erbium_rates.gif" width="405" height="149" alt="transition rates in erbium ions"></div>
+<p>The simulated temporal evolution for some set of parameters is shown in Figure&nbsp;2.</p>
+<figure>
+<img src="img/stiff_rate_equations.png" alt="temporal evolution of erbium populations">
+</figure>
+<p>It is an essential detail that the coefficient <span class="eqn_il"><i>A</i><sub>32</sub></span>, describing <a href="non_radiative_transitions.html" title="non-radiative transitions: transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative</a> <a href="multi_phonon_transitions.html" title="multi-phonon transitions: transitions between electronic levels of atoms or ions in solid media, involving the emission of multiple phonons">multi-phonon transitions</a> from the pump level to the upper laser level, is usually much larger than the other coefficients, including the terms with the pumping rates.
+For that reason, ions pumped into level 3 will very quickly be transferred into level 2, so that the population of level 3 itself remains very small.</p>
+<p>The curves shown look very smooth, so that one may expect it to be very easy and efficient to integrate the rate equations numerically with a step size of say 50&thinsp;&mu;s.
+If you try that, however, you will find that numerical results are absolutely wrong, wildly oscillating with quickly increasing amplitude.
+Good results are obtained only once you reduce the temporal step size to the order of <span class="eqn_il">1/<i>A</i><sub>32</sub></span>, which is 1&thinsp;&mu;s in this example.
+With the Euler method, where one step simply means to add the temporal derivatives times the temporal step size to the current populations, the instability starts for step sizes just above 2&thinsp;&mu;s.
+With the more refined Runge&ndash;Kutta algorithm, you can go only slightly further to a step size of about 3.7&thinsp;&mu;s.
+Of course, that behavior would be even far worse if <span class="eqn_il"><i>A</i><sub>32</sub></span> were substantially larger.</p>
+<p>The observed behavior can be understood by first considering a simple exponential decay (with a single time constant).
+It is easy to see that the Euler method will deliver oscillating results when the temporal step size is larger than the time constant of the system, and it will even be unstable when the step size is at least twice the time constant.
+Figure&nbsp;2 illustrates this: the lowest curve is for a step size of half the time constant (resulting in moderate errors), and the higher curves are for integer multiples of half the time constant.</p>
+<figure>
+<img src="img/euler_propagation.png" alt="Euler propagation">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Behavior of the Euler method, applied to a simple exponential decay with different numerical step sizes.
+The correct solution is always shown as a thin blue curve.
+When the numerical step size is larger than twice the time constant (which is the case for the highest curve), the propagation becomes totally unstable, with exponentially increasing errors.
+</figcaption>
+</figure>
+<p>Now this problem doesn't go away if the system is more complex and has some slower processes in addition.
+Even when the exact value of the fast time constant of the system has nearly no effect on the longer-term evolution of the system, the corresponding process makes the numerical solution unstable when the step size is too large.</p>
+<p>Examining the concrete rate equation system (see above) can also be instructive.
+When we start with all erbium ions being in the ground state (level 1), a first Euler step will pump some population from level 1 to 3.
+The calculated population of level 3 is then too high, as the decay from level 3 to 2 is not yet considered.
+In the next step, there will be a strong transfer from level 3 to 2, and if the step size is larger than twice the corresponding time constant, the population of level 3 will &ldquo;overshoot&rdquo; and get substantially negative (which is physically unreasonable, of course).
+In the third step, we obtain a transfer in the opposite direction, making the deviation from the correct solution even larger.</p>
+<p>We can learn several things:</p>
+<ul>
+<li>Examining the problem in the context of a well understood physical system, we can obtain a very good understanding of the numerical problem.
+We clearly see then that a more advanced propagation algorithm, such as the Runge&ndash;Kutta or the Bulirsch&ndash;Stoer method, does not solve the problem.</li>
+<li>In many situations, we can remove the problem by adiabatically eliminating some variables.
+In our example, we could approximate the fast transition from level 3 to 2 as being infinitely fast, thus assuming that the pumping from level 1 directly leads into level 2.</li>
+<li>If we cannot use that approximation, we see that it is no good idea to calculate the steady-state populations simply by simulating the temporal evolution.
+If we need an efficient calculation of the steady state, this is better done as multidimensional root finding (setting the temporal derivatives to zero).
+The multidimensional Newton&ndash;Raphson method is probably most suitable.
+Note that the derivatives with respect to population values, as needed there, can be quite easily computed for the typical kinds of rate equations.</li>
+</ul>
+<p>I actually got inspired to write about this by my work on the substantially extended version 2 of the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>, which calculates the optical powers in <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+While the previous version could be used only for simple laser-active ions with only a single metastable level, the new version allows the user to define complicated level systems process by process, including <a href="energy_transfer.html" title="energy transfer: the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a> even between different types of ions (such as Er<sup>3+</sup> and Yb<sup>3+</sup>).
+This software (which is basically finished and currently undergoes intensive testing) must efficiently calculate the steady-state populations for arbitrary cases, including those where the rate equations are extremely stiff, and also possibly nonlinear.
+Therefore, I had to implement the multidimensional Newton&ndash;Raphson method, as mentioned above.</p>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2008_10_20.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="https://www.eagleyard.com/markets/research/spectroscopy/" data-supplier="eagleyard Photonics" data-location="banner" rel="nofollow" class="bg externallink"><img src="bg/banners/eagleyard_photonics.png" alt="eagleyard Photonics"></a></a>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics Newsletters &ndash; <br>get high quality information, not the usual advertisements!</h2>
+<ul>
+<li>The <a href="spotlightd8de.html?banner=newsletters">Photonics Spotlight</a> presents high-quality information on technical and scientific aspects of photonics.</li>
+<li>The <a href="software_newsd8de.html?banner=newsletters">RP Photonics Software News</a> present news and useful hints on software &ndash; for example, about how to use our software products, new features, updates and upgrades, and on algorithms.</li>
+</ul>
+<p style="text-align:center; margin:8px 8px;"><img src="img/mail.png" alt="e-mail"></p>
+<h3>We won't flood you with e-mails!</h3>
+<p>Our newsletters appear only about once per month, and they carry valuable information.
+You will not regret to <a href="newslettersd8de.html?banner=newsletters">register</a>!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2008_10_20.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:20 GMT -->
+</html>

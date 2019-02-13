@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_10_23.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Self Starting of Passively Mode-locked Lasers: Difficult to Model</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2017-10-23">
+<meta name="description" content="A summary of this blog article: Although it may seem to be simple to numerically simulate the self-starting behavior of a passively mode-locked laser, there can be various substantial difficulties, making such approaches impractical.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2017_10_23.html"; cat="S"; shownbanner=""; ref="encyclopedia_m.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Self Starting of Passively Mode-locked Lasers: Difficult to Model</h1>
+<div class="posting_details">
+<p>Posted on 2017-10-23 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2017_10_23.html">https://www.rp-photonics.com/software_news_2017_10_23.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Although it may seem to be simple to numerically simulate the self-starting behavior of a passively mode-locked laser, there can be various substantial difficulties, making such approaches impractical.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Sometimes, I am asked whether our software would be suitable for modeling the self starting of <a href="passive_mode_locking.html" title="passive mode locking: a technique of mode locking, based on a saturable absorber inside the laser resonator">passively mode-locked lasers</a>.
+It might be useful to discuss that case, since it illustrates some of the typical limitations of numerical modeling.</p>
+<p>In principle, it would seem relatively simple to model such a thing e.g. with our software <a href="fiberpower.html"><b>RP Fiber Power</b></a> or <a href="propulse.html"><b>RP ProPulse</b></a>.
+The basis is of course a model where one can simulate all the interactions which light experiences in the laser resonator.
+The initial field configuration would simply be some random noise, which in practice comes from <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> of the laser medium and could easily be included in our software.
+Then just simulate some sufficiently large number of round trips, and you will see what you get.</p>
+<p>Unfortunately, there are some potentially nasty problems, to be discussed in the following:</p>
+<h2 class="togglediv">Size of the Numerical Traces</h2>
+<div>
+<p>In many cases, the round-trip time of light in a mode-locked laser is many orders of magnitude larger than the steady-state <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">pulse duration</a>: a typical <a href="pulse_repetition_rate.html" title="pulse repetition rate: the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> is 100&nbsp;MHz, corresponding to 10&nbsp;ns round-trip time, while pulse durations are often far below 1&nbsp;ps.
+When investigating the starting behavior, one would naturally use a numerical trace which is (in the time domain) just long enough to resemble a complete round trip.
+At the same time, its temporal resolution should be sufficient for the steady-state pulse.
+Unfortunately, that would lead to huge numerical traces and correspondingly long computation times, and possibly also to problems of limited computer memory.
+Well, one may consider to use substantially shorter numerical traces, but it is not easy to see whether that would still be realistic.</p>
+<p>At least, that problem would be absent in high repetition rate lasers or those where the pulse duration is relatively long.</p>
+</div>
+<h2 class="togglediv">Parasitic Reflections</h2>
+<div>
+<p>The self starting behavior of mode-locked lasers is often influenced by parasitic reflections occurring within the laser resonator or outside the resonator.
+Perhaps surprisingly, lasers are often extremely sensitive to such parasitic effects; even power reflectivities of the order of 10<sup>&minus;8</sup> may be sufficient to cause trouble.
+There are in principle ways to put them into numerical models, but it would often be extremely difficult to quantify such reflections in real lasers.
+For example, reflections may result from random scattering on surfaces or in transparent media (particularly in <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>), and in most cases it is even difficult to obtain statistical information on those effects.
+So even if you have a suitable model, you will hardly find reliable input data for it.</p>
+</div>
+<h2 class="togglediv">Inhomogeneous Gain Saturation</h2>
+<div>
+<p>The details of self starting may also be substantially influenced by the characteristics of <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> for the used laser gain medium, even if such details do not have a strong influence on the parameters of the resulting steady-state pulse.
+But that is another detail which can be very difficult to quantify.</p>
+</div>
+<h2 class="togglediv">Conclusion</h2>
+<div>
+<p>In conclusion, be warned that although in principle the described task would look simple, it may be quite difficult at various ends.
+So we have a case where numerical modeling is in practice often very difficult and not really practical.
+At least, I would recommend to think carefully what exactly one wants to learn from such a model, and whether it would be worthwhile to go through substantial difficulties for that.</p>
+<p>Note that those problems are not relevant for many cases where pulse propagation modeling in a mode-locked laser is used with substantial benefits (e.g. for optimizing laser designs).
+Normally, we would start the simulation with a start pulse the parameters of which are not too far from the expected steady-state parameters.
+For example, if the laser produces 6-ps <a href="sech2_shaped_pulses.html" title="sech<sup>2</sup>-shaped pulses: pulses with a temporal intensity profile which has the shape of a sech<sup>2</sup> function">sech<sup>2</sup>-shaped pulses</a>, it usually does not hurt to start the model simply with 10-ps <a href="gaussian_pulses.html" title="Gaussian pulses: pulses with a temporal intensity profile which has a Gaussian shape">Gaussian pulses</a>.
+The required temporal length of the numerical trace is is often just a small multiple of the pulse duration, and the number of complex amplitudes used is quite moderate (e.g. 2<sup>8</sup> or 2<sup>10</sup>).
+Usually, it is not that computationally demanding to find the steady state even if the start pulse was not particularly close to it.
+Beyond the steady state, one can of course also investigate additional details like the response to small disturbances &ndash; usually all one needs for the usual research and development jobs.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_10_23.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:35 GMT -->
+</html>

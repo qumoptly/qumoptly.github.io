@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2016_08_11.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:02 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Mode Coupling in Optical Fibers: Selective Excitation of a Higher-order Mode with a Fiber Bragg Grating</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2016-08-11">
+<meta name="description" content="A summary of this blog article: This article discusses how one can effectively couple light from the fundamental mode of a multimode fiber into a certain higher-order mode. This is surprisingly simple: one only requires a fiber Bragg grating with a properly chosen grating period. The physics behind that mode coupling effect are discussed, and the situation is illustrated with some numerical simulations.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2016_08_11.html"; cat="P"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Mode Coupling in Optical Fibers: Selective Excitation of a Higher-order Mode with a Fiber Bragg Grating</h1>
+<div class="posting_details">
+<p>Posted on 2016-08-11 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2016_08_11.html">https://www.rp-photonics.com/spotlight_2016_08_11.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: This article discusses how one can effectively couple light from the fundamental mode of a multimode fiber into a certain higher-order mode. This is surprisingly simple: one only requires a fiber Bragg grating with a properly chosen grating period. The physics behind that mode coupling effect are discussed, and the situation is illustrated with some numerical simulations.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Imagine that you have <a href="multimode_fibers.html" title="multimode fibers: fibers supporting more than one guided mode per polarization direction">multimode fiber</a> where light propagates in the fundamental guided <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a>, and you wanted to efficiently transfer that light into some higher-order mode, having a more complicated transverse intensity profile.
+At a first glance, one may think that this is a really difficult task, requiring a rather complicated kind of optical element which can transform the simple transverse profile of the fundamental mode into some complicated transverse profile.</p>
+<p>Interestingly, it turns out that the task can be accomplished quite simply with a <a href="fiber_bragg_gratings.html" title="fiber Bragg gratings: reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a>.
+Essentially, you only need to make sure that the grating period <span class="eqn_il"><i>d</i></span> is correctly chosen &ndash; such that the magnitude of the grating vector (<span class="eqn_il">2<span class="greek">&pi;</span>&thinsp;/&thinsp;<i>d</i></span>) equals the difference of the <a href="propagation_constant.html" title="propagation constant: a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">phase constants</a> of the two involved modes.
+That will create some <a href="mode_coupling.html" title="mode coupling: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">coupling</a> between the two modes, such that after a certain propagation distance essentially all light (in the ideal case) will be coupled into the wanted mode.
+The optical power will sinusoidally oscillate between the two modes; so it will come back to the original mode if you make the Bragg grating too long.</p>
+<p>Well, the success also depends on the coupling constant.
+Essentially, that coupling constant depends on a transverse overlap integral involving the two mode amplitude functions and the phase disturbance introduced by the Bragg grating.
+In principle, the coupling could be zero e.g. if the involved <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP modes</a> had different values of the <span class="eqn_il"><i>l</i></span> index and the phase disturbance were radially symmetric.
+However, you can easily couple from the fundamental (LP<sub>01</sub>) mode to any higher-order mode with <span class="eqn_il"><i>l</i>&thinsp;=&thinsp;0</span>, and even to modes with <span class="eqn_il"><i>l&thinsp;&ne;</i>&thinsp;0</span> if the fiber Bragg grating is somehow asymmetric (e.g. due to writing it with UV light from one side).</p>
+<p>It is remarkable that you don't have to care much about the transverse intensity profiles, except that these influence the magnitude of the coupling constant.
+Essentially, the fiber produces the wanted intensity profile itself.
+Here are a few more thoughts on how that can work:</p>
+<p>Initially, the fiber Bragg grating couples light into many other modes (including even cladding modes).
+However, for most modes, the above-mentioned Bragg condition is not met; therefore, the contributions to the light in a certain mode, which are generated at different positions along the fiber, are not in phase.
+As a result, you will never obtain any significant optical power in those modes &ndash; only in the one for which the Bragg condition is met quite precisely.</p>
+<p>Actually, the situation is similar to resonantly exciting vibrations mode of a mechanical oscillator with a sound wave.
+That sound wave also does not tell the resonator exactly how to vibrate; the spatial pattern of the vibration is determined by the resonator property, not by the incident sound wave.</p>
+<p>For an illustration, I have quickly set up a numerical simulation with our software <a href="fiberpower.html">RP Fiber Power</a>:</p>
+<ul>
+<li>First, I defined the refractive index profile of the fiber, using a supergaussian function for the increase of the refractive index in the region of the fiber core.</li>
+<li>Then I used that as the input for the mode solver, which told me that the highest <span class="eqn_il"><i>m</i></span> value of the guided modes is 5.</li>
+<li>I then decided to coupled to the LP<sub>04</sub> mode (just as an example) and calculated the difference <span class="eqn_il"><span class="greek">&delta;</span><span class="greek">&beta;</span></span> of the <a href="propagation_constant.html" title="propagation constant: a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">phase constants</a> (<span class="eqn_il"><span class="greek">&beta;</span></span> values) of the two modes.
+That was then used for defining the refractive index profile of the fiber Bragg grating, where the refractive index increase in the core region was modulated with a factor <span class="eqn_il">1&thinsp;+&thinsp;0.1&thinsp;&middot;&thinsp;sin&thinsp;<span class="greek">&delta;</span><span class="greek">&beta;</span>&thinsp;<i>z</i></span>.
+(The obtained grating period is 808&nbsp;&mu;m; we have a <em>long period</em> fiber Bragg grating, having a period much longer than that of a reflecting grating.)</li>
+<li>Finally, I did a numerical beam propagation simulation in that structure, starting with the LP<sub>01</sub> mode as the input field.
+Here is the resulting intensity distribution in the device, seen from the side (i.e., in the y&ndash;z plane):</li>
+</ul>
+<figure>
+<img src="img/fiberpower_hom_coupler4.png" alt="coupling to a higher-order mode in a fiber Bragg grating">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Intensity distribution inside the fiber Bragg grating. The fast intensity modulation in <span class="eqn_il"><i>z</i></span> direction is not fully resolved in the figure. The red and blue curve shows the evolution of optical power in the LP<sub>04</sub> mode and LP<sub>01</sub> mode, respectively.
+</figcaption>
+</figure>
+<p>The coupling is not perfect in this case; only &asymp;90&#37; of the power gets into the LP<sub>04</sub> mode.
+(The above mentioned complete coupling is based on some simplifying assumptions, we which do not need to make for a numerical study.)
+When trying to obtain the coupling within a shorter length by using a stronger index modulation, this effect becomes substantially more pronounced.
+Note that the considered fiber has a rather small <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of 0.076, and in such a case one should apply only a small additional refractive index modulation.</p>
+<p>Here I also show the resulting intensity profile at the fiber end:</p>
+<figure>
+<img src="img/fiberpower_hom_coupler4p.png" alt="coupling to a higher-order mode in a fiber Bragg grating">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Intensity profile at the fiber end &ndash; essentially that of the wanted LP<sub>04</sub> mode.
+</figcaption>
+</figure>
+<p>I also did a test with coupling to the LP<sub>02</sub> mode, using a longer grating period of 3.47&nbsp;mm.
+Here, the coupling is stronger, such that nearly complete mode conversion is achieved already after a propagation distance of 148&nbsp;mm:</p>
+<figure>
+<img src="img/fiberpower_hom_coupler2.png" alt="coupling to a higher-order mode in a fiber Bragg grating">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Same as Figure&nbsp;1, but with the grating period chosen for coupling to the LP<sub>02</sub> mode.
+</figcaption>
+</figure>
+<p>Of course, it would be quite simple to modify details of the model in order to study some more influences.
+For example, one could try out asymmetric grating profiles, cases with a stronger index modulation, or check situations in more strongly multimode fibers where nearly degenerate higher-order modes (i.e., with quite similar propagation constants) can occur.
+Another idea is to introduce some bending of the fiber, which can also modify the propagation constants of the modes.
+By playing with such a model, one can easily test whether certain original expectations were correct and thus develop a detailed understanding.
+Besides, such activities give a good chance to create new ideas.</p>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2016_08_11.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="fiberpowere387.html?banner=RP_Fiber_Power_6"><img src="img/fiberpower_ro3b.png" alt="relaxation oscillations" style="margin-bottom:8px"></a>
+<p>Evolution of output power and gain when an Yb-doped fiber laser is switched on. One can see the relaxation oscillations, with convergence towards the steady state. Each red or gray segment corresponds to 0.2&nbsp;&mu;s.</p>
+<p>This diagram has been made with the <a href="fiberpowere387.html?banner=RP_Fiber_Power_6"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics in Times of Trouble for International Trade</h2>
+<p style="font-size:14px;">This <a href="spotlight_2017_02_17c8d6.html?banner=International_trade">article in the Photonics Spotlight</a> addresses the current serious concerns about the future of international trade and more generally international cooperation. Some key points:</p>
+<ul>
+<li>The <b>German trade surplus</b> deserves attention, but claiming unfair practices without differentiating between different sectors of the economy is just stupid talk.</li>
+<li>Already announced changes of US policy constitute a serious threat of beginning <b>trade wars</b>, which could have disastrous consequences.</li>
+<li>There are also <b>ruthless attacks on essential values</b>, contributing to a breakdown of cooperation.</li>
+<li>If we do not stop these developments in time, we may get into the <b>big crunch</b>.</li>
+<li>We must <b>fiercely defend fundamental values</b> as well as <b>international cooperation</b>, because this is the only chance to solve a wide range of serious problems.</li>
+</ul>
+<p style="font-size:14px;">You are welcome to <a href="spotlight_2017_02_17c8d6.html?banner=International_trade">read the article</a>. Note that you can get the <a href="spotlightc8d6.html?banner=International_trade">Photonics Spotlight</a> as an e-mail newsletter.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2016_08_11.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:04 GMT -->
+</html>

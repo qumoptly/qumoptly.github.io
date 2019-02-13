@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/distance_measurements_with_lasers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:56:45 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - distance measurements with lasers, range finding, laser radar, LIDAR, time of flight, triangulation, phase shift, laser distance meters</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-06-13">
+<meta name="description" content="There are various ways of measuring distances using laser light. They can be based on the time of flight, on interferometric effects or on geometric measurements, for example.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="distance measurements with lasers, range finding, laser radar, LIDAR, time of flight, triangulation, phase shift, laser distance meters">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="distance_measurements_with_lasers.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_distance_measurements_with_lasers.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Distance Measurements with Lasers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_distance_measurements_with_lasers1fbf.html?s=vbox" class="bg_bgheading">Suppliers for equipment for distance measurements with lasers</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_distance_measurements_with_lasers1fbf.html?s=vbox" class="redlink"><b>11 suppliers for equipment for distance measurements with lasers</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/applications/astronomy-geology/distance-metrology/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="distance measurements with lasers" rel="nofollow" class="bg externallink"><img src="bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_distance_measurements_with_lasers1fbf.html?s=vbox">List of suppliers for<br>distance measurements with lasers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index-2.html">RP Photonics</a> for advice concerning devices for distance measurements, such as interferometers.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: measurements of distances using laser light</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Distanzmessung mit Lasern, Laser-Entfernungsmessung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_cite54ee.html?article=distance%20measurements%20with%20lasers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p><a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">Lasers</a> can be used in various ways to measure distances or displacements without physical contact.
+In fact they allow for the most sensitive and precise length measurements, for extremely fast recordings (sometimes with a <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> of many megahertz), and for the largest measurement ranges, even though these qualities are usually not combined by a single technique.
+Depending on the specific demands, very different technical approaches can be appropriate.
+They find a wide range of applications, for example in architecture, inspection of fabrication halls, criminal scene investigation (CSI), and in the military.</p>
+<h2 class="togglediv">Techniques for Distance Measurements</h2>
+<div>
+<p>Some of the most important techniques used for laser distance meters are as follows:</p>
+<ul>
+<li><a href="triangulation.html" title="triangulation: a method for distance measurements"><em>Triangulation</em></a> is a geometric method, useful for distances in the range of &asymp;&thinsp;1&nbsp;mm to many kilometers.</li>
+<li><a href="time_of_flight_measurements.html" title="time-of-flight measurements: distance measurements based on measuring the time of flight of a light pulse"><em>Time-of-flight measurements</em></a> (or <em>pulse measurements</em>) are based on measuring the time of flight of a laser pulse from the measurement device to some target and back again.
+Such laser radar methods (see below) are typically used for large distances such as hundreds of meters or many kilometers.
+Using advanced techniques, it is possible to measure the distance between Earth and the Moon with an accuracy of a few centimeters.
+Typical accuracies of simple devices for short distances are a few millimeters or centimeters.</li>
+<li>The <a href="phase_shift_method_for_distance_measurements.html" title="phase shift method for distance measurements: a method for optical distance measurements"><em>phase shift method</em></a> uses an intensity-modulated laser beam.
+One measures the phase shift of an intensity modulation which is related to the time of flight.
+Compared with interferometric techniques, its accuracy is lower, but it allows unambiguous measurements over larger distances and is more suitable for targets with diffuse reflection. <br />
+Note that the phase shift technique is sometimes also called a <em>time-of-flight technique</em>, as the phase shift is proportional to the time of flight, but the term is more suitable for methods as described above where the time of flight of a light pulse is measured.</li>
+<li>For small distances, one sometimes uses <em>ultrasonic time-of-flight methods</em>, and the device may contain a <a href="laser_pointers.html" title="laser pointers: devices used for pointing at items with laser beams">laser pointer</a> just for getting the right direction, but not for the distance measurement itself.</li>
+<li><em>Frequency modulation methods</em> involve frequency-modulated laser beams, for example with a repetitive linear frequency ramp.
+The distance to be measured can be translated into a frequency offset, which may be measured via a <a href="beat_note.html" title="beat note: an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a> of the sent-out and received beam.</li>
+<li><a href="interferometers.html" title="interferometers: optical devices utilizing the phenomenon of interference"><em>Interferometers</em></a> allow for distance measurements with an accuracy which is far better than the wavelength of the light used.</li>
+</ul>
+</div>
+<h2 class="togglediv">Laser Radar</h2>
+<div>
+<p>A laser radar (more precisely: LIDAR = light detection and ranging) is a device which uses one of the distance measurement techniques as described above &ndash; usually the time-of-flight method or the phase-shift method &ndash;, and scans the direction of the distance measurement in one or typically two dimensions.
+That allows the acquisition of an image, or more precisely a depth profile of some object, as required e.g. in robotics or for self-driving cars.
+For acquiring such depth profiles at a higher rate, there are sensor chips similar to CCDs (charge-coupled devices) with internal electronics to detect phase shifts, so that the distance for each pixel can be measured simultaneously.
+Similarly, there are sensor chips containing an array of <a href="avalanche_photodiodes.html" title="avalanche photodiodes: photodiodes with internal signal amplification through an avalanche process">avalanche photodiodes</a> for the application of the time-of-flight method with single-photon detection.
+Such compact devices can greatly facilitate the development of laser radars with rapid three-dimensional imaging.</p>
+<p>Compared with ultrasonic or radio and microwave frequency devices (radar), the main advantage of laser distance measurement techniques is that <a href="laser_light.html" title="laser light: light generated with a laser device">laser light</a> has a much smaller wavelength, allowing one to send out a much more concentrated probe beam and thus to achieve a higher transverse spatial resolution.
+Another advantage that an optical bandpass <a href="optical_filters.html" title="optical filters: devices with a wavelength-dependent transmission or reflectivity">filter</a> makes it possible to very effectively remove noise influences at other optical frequencies.</p>
+</div>
+<h2 class="togglediv">Laser Safety Aspects</h2>
+<div>
+<p>Range finding with lasers can raise serious <a href="laser_safety.html" title="laser safety: safety of the use of laser devices">laser safety</a> issues, particularly when intense <a href="pulses.html" title="pulses: flashes of light">pulses</a> from <a href="q_switched_lasers.html" title="Q-switched lasers: lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a> are used; that is often required for large detection distances in order not only to obtain a detectable amount of returned light, but also to avoid a dominating influence of ambient light.
+Then, however, inconvenient additional measures may have to be taken to ensure safety, particularly for human eyes.</p>
+<p>Frequently, one tries to design devices to operate a laser safety class I, so that special additional laser safety measures are not required.
+That, however, can severely limit the optical power which can be sent to the target, and therefore the detection capabilities.</p>
+<p>Such trade-offs can be mitigated by applying <a href="eye_safe_lasers.html" title="eye-safe lasers: lasers emitting in a wavelength region with relatively low hazards for the human eye">eye-safe lasers</a>, e.g. in the 1.5-&mu;m spectral region, where far more optical power can be safely used than e.g. in the 1-&mu;m region.
+However, both the choice of lasers and <a href="photodetectors.html" title="photodetectors: devices used for the detection of light">photodetectors</a> (and their performance) are then substantially limited, and the system cost may be significantly higher.</p>
+<p>There are also other ways to improve the trade-off between hazards and detection capabilities, e.g. using improved methods to suppress influences of disturbing ambient light.
+For example, a photodetector may be used in conjunction with a bandpass filter having a small transmission <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> around the laser wavelength, so that most ambient light is strongly suppressed.
+Further, one can optimize the temporal structure of the used light as well as the sensitivity of the detection apparatus.</p>
+</div>
+<h2 class="togglediv">Various Issues</h2>
+<div>
+<p>As essentially all other measurement techniques using lasers, laser distance measurements can be affected by <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a> &ndash; although detection noise is usually the dominant issue.
+Other noise-related issues can arise from stray light and <a href="speckle.html" title="speckle: light patterns resulting from the reflection of coherent light at rough surfaces">speckle</a> effects.</p>
+<p>The targets can have very different reflection and scattering properties.
+Problems can arise for very low reflection or for specular reflections.
+In the latter case, a lot of the incident light may be reflected in directions which are not useful for the detection.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_distance_measurements_with_lasers1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 11 suppliers for equipment for distance measurements with lasers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="distance measurements with lasers" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><h3><a href="bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p><a href="https://www.toptica.com/applications/astronomy-geology/distance-metrology/" data-supplier="TOPTICA Photonics" data-keyword="distance measurements with lasers" rel="nofollow" class="externallink bg">Laser rangefinders </a> can be used to monitor or measure distances or object lengths. They can also provide positional locations over long distances, e.g. several kilometers, without physically touching the observed object. The laser range finders are regularly used in geodesy, sports, hunting or military. Usually, the distances are measured with accuracies of up to a millimeter, whereas the measured object can even be in motion. In addition, measurements on natural surfaces with low reflectivity are also possible.</p></aside>
+</div>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">H. Kikuta <i>et al.</i>, &ldquo;Distance measurement by the wavelength shift of laser diode light&rdquo;, <a href="https://www.osapublishing.org/ao/abstract.cfm?uri=ao-25-17-2976" rel="nofollow">Appl. Opt. 25 (17), 2976 (1986)</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">G. Beheim and K. Fritsch, &ldquo;Range finding using frequency-modulated laser diode&rdquo;, <a href="https://www.osapublishing.org/ao/abstract.cfm?uri=ao-25-9-1439" rel="nofollow">Appl. Opt. 25 (9), 1439 (1986)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">T. Bosch <i>et al.</i>, &ldquo;The physical principles of wavelength-shift interferometric laser rangefinders&rdquo;, J. Opt. 23, 117 (1992)</td></tr>
+<tr><td class="refno">[4]</td><td class="refs">C.-M. Wu <i>et al.</i>, &ldquo;Heterodyne interferometer with subatomic periodic nonlinearity&rdquo;, <a href="https://www.osapublishing.org/ao/abstract.cfm?uri=ao-38-19-4089" rel="nofollow">Appl. Opt. 38 (19), 4089 (1999)</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">M.-C. Amann <i>et al.</i>, &ldquo;Laser ranging: a critical review of usual techniques for distance measurement&rdquo;, <a href="http://opticalengineering.spiedigitallibrary.org/article.aspx?articleid=1097917" rel="nofollow">Opt. Eng. 40 (1), 10 (2001)</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">S. Poujouly and B. Journet, &ldquo;Laser range-finding by phase-shift measurement: moving toward smart systems&rdquo;, <a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=926914" rel="nofollow">K. G. Harding, J. W. V. Miller, and B. G. Batchlor, eds., <i>Machine Vision and Three-Dimensional Imaging Systems for Inspection and Metrology</i>, Proc. SPIE 4189, 152, SPIE (2001)</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">T. R. Schibli <i>et al.</i>, &ldquo;Displacement metrology with sub-pm resolution in air based on a fs-comb wavelength synthesizer&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-14-13-5984" rel="nofollow">Opt. Express 14 (13), 5984 (2006)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">K. Joo <i>et al.</i>, &ldquo;Distance measurements by combined method based on a femtosecond pulse laser&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-16-24-19799" rel="nofollow">Opt. Express 16 (24), 19799 (2008)</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">I. Coddington <i>et al.</i>, &ldquo;Rapid and precise absolute distance measurements at long range&rdquo;, <a href="http://www.nature.com/nphoton/journal/v3/n6/full/nphoton.2009.94.html" rel="nofollow">Nature Photon. 3, 351 (2009)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">G. Berkovic and E. Shafir, &ldquo;Optical methods for distance and displacement measurements&rdquo;, <a href="https://www.osapublishing.org/aop/abstract.cfm?URI=aop-4-4-441" rel="nofollow">Adv. in Opt. and Photon. 4 (4), 441 (2012)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="triangulation.html" title="triangulation: a method for distance measurements">triangulation</a>, <a href="time_of_flight_measurements.html" title="time-of-flight measurements: distance measurements based on measuring the time of flight of a light pulse">time-of-flight measurements</a>, <a href="interferometers.html" title="interferometers: optical devices utilizing the phenomenon of interference">interferometers</a>, <a href="phase_shift_method_for_distance_measurements.html" title="phase shift method for distance measurements: a method for optical distance measurements">phase shift method for distance measurements</a>, <a href="laser_safety.html" title="laser safety: safety of the use of laser devices">laser safety</a>, <a href="laser_applications.html" title="laser applications: applications involving laser devices">laser applications</a><br>and other articles in the category <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="distance_measurements_with_lasers.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="coating_demo_etalond66d.html?banner=RP_Coating_4"><img src="img/coating_demo_etalon6b.png" alt="etalon" style="margin-bottom:8px"></a>
+<p>Color-coded field penetration in an etalon structure as a function of wavelength.</p>
+<p>This diagram has been made with the <a href="coatingd66d.html?banner=RP_Coating_4"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/distance_measurements_with_lasers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:56:46 GMT -->
+</html>

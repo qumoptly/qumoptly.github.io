@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2009_09_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Fresnel Reflections from Double Interfaces</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2009-09-01">
+<meta name="description" content="A summary of this blog article: The article considers how Fresnel reflections at two nearby interfaces interfere with each other. This applies, for example, to fiber connections or to reflections in thin-film multilayer devices.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2009_09_01.html"; cat="P"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Fresnel Reflections from Double Interfaces</h1>
+<div class="posting_details">
+<p>Posted on 2009-09-01 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2009_09_01.html">https://www.rp-photonics.com/spotlight_2009_09_01.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The article considers how Fresnel reflections at two nearby interfaces interfere with each other. This applies, for example, to fiber connections or to reflections in thin-film multilayer devices.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<h2 class="togglediv">Losses at Fiber Connections</h2>
+<div>
+<p>Imagine that we put two <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> ends close together, with a very tiny air gap in between, and with negligible offset of the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber cores</a>.
+How about coupling losses resulting from the Fresnel reflections at the two fiber ends?</p>
+<p>Some people would just calculate the reflection of a single air&ndash;glass interface, which is about 3.5&#37;, and assume that you get about twice that for the transition from glass to air and back into glass.
+This is wrong, however.
+It is not only that light reflected at the second interface can be reflected again at the first interface.
+Such multi-pass effects are not that important for low reflectivities.
+The crucial point is that there are <a href="interference.html" title="interference: a range of phenomena associated with the superposition of waves">interference</a> effects.</p>
+<p>If the air gap between the fibers is much smaller than the wavelength, there is only a negligible optical phase shift associated with the path in air.
+In that situation, the reflections at the two interfaces largely cancel each other, because they are out of phase: one transition is from glass to air, the other one from air to glass.
+So the total reflected amplitude is close to zero, and the transmission losses are very small.</p>
+<p>The interference of the reflected components becomes constructive when the air gap grows to a quarter wavelength, producing an additional sign change of the amplitude for the double pass in air.
+In that case, you get approximately 2 times the reflected amplitude (comparing with a single interface), or 4 times the reflected power.</p>
+<p>Destructive or constructive interference can also occur at larger air gaps, but there are then additional aspects to consider:</p>
+<ul>
+<li>The larger the distance, the more will the round-trip phase shift depend on the optical wavelength.</li>
+<li>Also, there is some degree of beam expansion between the two interfaces.
+This makes a full calculation much more complicated, since we don't have a simple single-<a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a> problem any more.
+Essentially, there can no more be fully constructive or destructive interference.</li>
+</ul>
+</div>
+<h2 class="togglediv">Destructive Interference in Multilayer Devices</h2>
+<div>
+<p>There are similar interference effects in certain thin film multilayer structures.
+For example, a <a href="surface_emitting_semiconductor_lasers.html" title="surface-emitting semiconductor lasers: semiconductor lasers where the generated light propagates in the direction perpendicular to the wafer surface">surface-emitting semiconductor laser</a> structure may contain <a href="quantum_wells.html" title="quantum wells: thin layers confining carriers in one dimension">quantum well</a> gain regions, which have a somewhat different <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> than the surrounding material.
+Nevertheless, there are hardly any reflections at these quantum wells.
+The reason is that the reflections from both sides nearly cancel each other, because the quantum well thickness is usually far below an optical wavelength.</p>
+</div>
+<h2 class="togglediv">Incoherent Calculations for Large Gaps</h2>
+<div>
+<p>For large distances between two reflecting surfaces, one sometimes uses an incoherent calculation of the reflection and transmission.
+Here, one assumes that optical powers rather than amplitudes must be added.
+This is justified, for example, when the device is probed with broadband light, so that different spectral components have different phase relations.
+As long as one is not interested in the detailed effects on the different wavelength components, but only in the overall reflected or transmitted power, one can assume random phases, so that powers are to be added.
+That situation arises, for example, when sun light is getting through an ordinary window.</p>
+</div>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2009_09_01.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="fiberpower_sc28d9.html?banner=RP_Fiber_Power_2"><img src="img/fiberpower_sc5b.png" alt="supercontinuum generation" style="margin-bottom:8px"></a>
+<p>Evolution of the spectrum of an ultrashort pulse in a fiber.
+The spectrum becomes very wide at the right end; this is called supercontinuum generation.</p>
+<p>This diagram has been made with the <a href="fiberpower28d9.html?banner=RP_Fiber_Power_2"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics Newsletters &ndash; <br>get high quality information, not the usual advertisements!</h2>
+<ul>
+<li>The <a href="spotlightd8de.html?banner=newsletters">Photonics Spotlight</a> presents high-quality information on technical and scientific aspects of photonics.</li>
+<li>The <a href="software_newsd8de.html?banner=newsletters">RP Photonics Software News</a> present news and useful hints on software &ndash; for example, about how to use our software products, new features, updates and upgrades, and on algorithms.</li>
+</ul>
+<p style="text-align:center; margin:8px 8px;"><img src="img/mail.png" alt="e-mail"></p>
+<h3>We won't flood you with e-mails!</h3>
+<p>Our newsletters appear only about once per month, and they carry valuable information.
+You will not regret to <a href="newslettersd8de.html?banner=newsletters">register</a>!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2009_09_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:16 GMT -->
+</html>

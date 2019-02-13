@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 5: forward and backward pumping, bidirectional pumping, ASE, power efficiency, amplifier noise</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on fiber amplifiers. The fifth part discusses the merits of forward and backward pumping, or bidirectional pumping. Depending on whether the power efficiency, ASE effects or noise issues are of highest interest, different configurations can provide the best performance.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber amplifiers, forward pumping, backward pumping, bidirectional pumping, ASE, power efficiency, amplifier noise">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_fiber_amplifiers5.html"; cat="C"; shownbanner=""; ref="tutorial_fiber_amplifiers4.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 5 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>5</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<a href="tutorial_fiber_amplifiers3.html">Self-consistent solutions for the steady state</a>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<span style="text-decoration:underline;">Forward and backward pumping</span>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 5: Forward and Backward Pumping</h2>
+<div>
+<p>If we amplify some signal in a fiber amplifier, we have different options for pumping:</p>
+<ul>
+<li><em>Forward pumping</em> means that the pump wave travels in the same direction as the signal wave.</li>
+<li><em>Backward pumping</em> means that the pump wave travels in the opposite direction.</li>
+<li>One can also pump in both directions simultaneously; this is called <em>bidirectional pumping</em>.</li>
+</ul>
+<p>Figure&nbsp;1 shows a bidirectionally pumped fiber amplifier.
+Radiation from the left laser diode for forward pumping is combined with the input signal, using a dichroic fiber coupler.
+After the active (erbium-doped) fiber, there is a second dichroic coupler for injecting light from the second pump diode in backward direction.
+The same coupler also prevents any residual pump light from getting to the signal output.</p>
+<figure>
+<img src="img/fiber_amplifier.png" alt="erbium-doped fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Schematic setup of a simple erbium-doped fiber amplifier.
+Two laser diodes (LDs) provide the pump power for the erbium-doped fiber, allowing it to amplify light with wavelength around 1550&nbsp;nm.
+Two pig-tailed <a href="faraday_isolators.html" title="Faraday isolators: optical isolators based on the Faraday effect">Faraday isolators</a> strongly reduce the sensitivity of the device to back-reflections.
+</figcaption>
+</figure>
+<p>In the following, we look at various technical details which partly result in advantages for some pumping direction.</p>
+<h3 class="togglediv">Power Conversion Efficiency</h3>
+<div>
+<p>In simple cases, with negligible parasitic losses of the active fiber and with negligible ASE (see <a href="tutorial_fiber_amplifiers4.html">part 4</a>), the power conversion efficiency of the amplifier does <em>not</em> depend on the pump direction:</p>
+<ul>
+<li>The overall gain depends only on the <em>average</em> excitation density along the fiber.</li>
+<li>The total pump absorption efficiency also depends only on that average.</li>
+<li>The same holds for the amount of power lost via <a href="fluorescence.html" title="fluorescence: luminescence arising from irradiation with light">fluorescence</a> (<a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>).</li>
+</ul>
+<p>All this holds also for quasi-three-level laser transitions, and of course also for bidirectional pumping.</p>
+<p>If the fiber has substantial parasitic losses, backward pumping is more efficient.
+This is because the signal is strong near the pump input end, holding the excitation density down in that region, so that the pump light is efficiently absorbed by the ions before parasitic losses can get it.
+In certain situations, bidirectional pumping may be even more efficient.
+However, most amplifiers are only a couple of meters long, and parasitic losses within that length are not very important.</p>
+<p>A more important difference for the power conversion efficiency can arise from ASE and is discussed next:</p>
+</div>
+<h3 class="togglediv">Amplified Spontaneous Emission</h3>
+<div>
+<p>We have already seen in <a href="tutorial_fiber_amplifiers4.html">part 4</a> that without a signal input, ASE can be much stronger in backward direction.
+Not surprisingly, that asymmetry does not vanish if we also have a signal input, and the amount of ASE &ndash; which constitutes a power loss &ndash; can substantially depend on the relative direction of signal and pump light.</p>
+<p>As an example, let us consider the same ytterbium-doped fiber amplifier as in <a href="tutorial_fiber_amplifiers3.html">part 3</a> and <a href="tutorial_fiber_amplifiers4.html">4</a>.
+We have already seen how the powers evolve for forward pumping at 940&nbsp;nm and 1&nbsp;mW of signal input power at 1030&nbsp;nm on the left side:</p>
+<figure>
+<img src="img/fiber_amplifier3.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Optical powers along the length of an ytterbium-doped fiber amplifier with forward pumping.
+</figcaption>
+</figure>
+<p>Now we change to backward pumping:</p>
+<figure>
+<img src="img/fiber_amplifier3b.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Optical powers along the length of an ytterbium-doped fiber amplifier, now with backward pumping.
+</figcaption>
+</figure>
+<p>We see that ASE is now negligibly weak, and we obtain 346&nbsp;mW of signal output power instead of only 290&nbsp;mW.
+The ASE spectrum (not displayed here) only shows some weak ASE around 1030&nbsp;nm and much less around 975&nbsp;nm.
+Positive net gain at 975&nbsp;nm occurs only in a short region of the fiber around 2&nbsp;m from the left side.</p>
+<p>These findings are quite typical.
+Generally, quasi-three-level fiber amplifiers have lower ASE losses for backward pumping, and therefore a higher power conversion efficiency in that configuration, if ASE losses would otherwise be significant.
+For higher input signal powers, causing stronger gain saturation, the difference between the two directions is smaller.</p>
+</div>
+<h3 class="togglediv">Noise Contamination of the Signal</h3>
+<div>
+<p>Another aspect is that ASE which propagates together with the signal constitutes a broadband noise for that signal.
+For backward pumping, the ASE propagating in the same direction as the signal is generally stronger for quasi-three-level systems &ndash; even if the total power loss by ASE is lower!
+So for low-noise operation, forward pumping is better, despite the possibly lower efficiency.</p>
+</div>
+<h3 class="togglediv">Nonlinear Effects</h3>
+<div>
+<p>If we amplify short pulses, nonlinear effects are often detrimental.
+This will be discussed in <a href="tutorial_fiber_amplifiers7.html">part 7</a>, but here it should be mentioned already that backward pumping is often much better.
+The reason is that for backward pumping, the pulse energy and peak power initially rises more slowly, so that the spatially integrated peak power gets lower for a given output peak power.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers6.html">Part 6: High-power Fiber Amplifiers with Double-clad Fibers</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+</html>

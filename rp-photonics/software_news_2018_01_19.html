@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_01_19.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Making Color Plots</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-01-19">
+<meta name="description" content="A summary of this blog article: This article explains how to make nice color plots in various software programs of RP Photonics. It is quite simple to use the cp: command in conjunction with predefined color scale functions.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2018_01_19.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Making Color Plots</h1>
+<div class="posting_details">
+<p>Posted on 2018-01-19 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2018_01_19.html">https://www.rp-photonics.com/software_news_2018_01_19.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: This article explains how to make nice color plots in various software programs of RP Photonics. It is quite simple to use the cp: command in conjunction with predefined color scale functions.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>The most common type of data plot is the <b><span class="eqn_il"><i>x&minus;y</i></span> plot</b>, where the vertical position (<span class="eqn_il"><i>y</i></span>) of a point indicates some quantitative value depending on the horizontal (<span class="eqn_il"><i>x</i></span>) position.
+A serious limitation of that is that you can visualize only the dependence on a single variable.</p>
+<p>An extension of that is a <b>3D diagram</b> where you have three mutually perpendicular coordinate axes.
+Unfortunately, most computer screens are still two-dimensional, and you can then only show a projection of the 3D diagram to the 2D screen.
+As a result, it becomes hard to read quantitative values from such a diagram; it gives little more than some qualitative impression.
+It can help only to a limited extent to use something like a mesh, reducing the ambiguity of the projection.</p>
+<p>A nice looking solution is to make <b>color plots</b>, where the function value corresponding to each <span class="eqn_il"><i>x</i>/<i>y</i></span> data point is encoded as a color.
+That avoids the problems of a 3D-to-2D projection and is also technically quite simple to realize.
+The limitation of that approach is just that our color vision is not that precise; while the projection problem is avoided, precise quantitative values are not obtained.</p>
+<p>In this article, I want to show you how to realize such color plots in our software, namely with the products <a href="fiberpower.html"><b>RP Fiber Power</b></a>, <a href="resonator.html"><b>RP Resonator</b></a>, <a href="coating.html"><b>RP Coating</b></a> and <a href="propulse.html"><b>RP ProPulse</b></a>.</p>
+<h2 class="togglediv">A Simple Command</h2>
+<div>
+<p>Our software offers the simple command &ldquo;cp:&rdquo;.
+In many cases, it is sufficient to give it a mathematical expression which calculates the color value as a function of <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span>.
+An example:</p>
+<pre class="codedisplay">
+cp: color_I((sin(x) * cos(y))^2)
+</pre>
+<p>The predefined function color&lowbar;I() converts values between 0 and 1 into color values, using a color scale which ranges from white (0) over blue (0.2), green (0.4), yellow (0.6), orange (0.8) to dark red (1).</p>
+<p>As another example, the following figure, taken from a <a href="coating_demo_bragg_mirror.html">case study on a Bragg mirror</a> made with <a href="coating.html"><b>RP Coating</b></a>, has used the same color scale:</p>
+<figure>
+<img src="img/coating_demo_bragg_mirror6.png" alt="beam propagation">
+</figure>
+<p>The command used for making this color plot:</p>
+<pre class="codedisplay">
+cp: color_I((R(x); E2(y)/4))  { color plot }
+</pre>
+<p>It again uses the predefined function color&lowbar;I(), here in combination with the functions R(x) for the reflectivity of a mirror structure at a certain wavelength and the function E2() for the field intensity in the structure.
+What happens when the expression is evaluated for a certain value of <span class="eqn_il"><i>x</i></span> and <span class="eqn_il"><i>y</i></span> is the following:</p>
+<ul>
+<li>The reflectivity at the wavelength <span class="eqn_il"><i>x</i></span> (here in nanometers) is calculated.
+That also sets the field intensities throughout the structure.
+(The reflectivity value itself will be discarded.)</li>
+<li>Thereafter, the field intensity for the given depth <span class="eqn_il"><i>y</i></span> in the structure is returned.</li>
+<li>From that, the color value is calculated according by the color scale function.</li>
+</ul>
+<p>That may seem to be a bit tricky in the beginning, but you quickly get used to that technique and can then make a wide range of nice color plots.
+You can also find a lot of them on this website.</p>
+</div>
+<h2 class="togglediv">Defining Other Color Scales</h2>
+<div>
+<p>Our software offers only two different predefined color scales through the functions color&lowbar;I() and color&lowbar;A().
+You have seen the former, and the latter accepts a complex argument with a modulus up to 1; the complex phase determines the type of color, and the modulus determines the color saturation.
+That function can be useful for plotting complex amplitudes, as obtained e.g. from numerical beam propagation.</p>
+<p>Of course, there are many other color scales which you might want to use.
+Here, you have full flexibility, because you can define your own arbitrary color scale functions.
+As an example, I show you how to implement the <b>viridis color scale</b> as explained <a href="https://cran.r-project.org/web/packages/viridis/vignettes/intro-to-viridis.html" rel="nofollow">here</a>.
+That color scale is not defined through a simple formula, but rather through tabulated values, which you find in the file colormaps.py from <a href="https://github.com/BIDS/colormap/blob/master/colormaps.py" rel="nofollow">https://github.com/BIDS/colormap/blob/master/colormaps.py</a>.</p>
+<p>Here is how you could define the new color function color&lowbar;viridis(I) in our software:</p>
+<pre class="codedisplay">
+; Define arrays for the RGB (red-green-blue) color values:
+defarray R_viridis[0, 255]
+defarray G_viridis[0, 255]
+defarray B_viridis[0, 255]
+&nbsp;
+; Read a table of data into those arrays:
+j := -1
+readlist R_viridis[j := j + 1], G_viridis[j], B_viridis[j]:
+0.267004, 0.004874, 0.329415
+0.268510, 0.009605, 0.335427
+0.269944, 0.014625, 0.341379
+; (253 more values not shown here)
+&nbsp;
+; Define the color function, using the arrays:
+color_viridis(I) :=
+  begin
+    global R_viridis[], G_viridis[], B_viridis[];
+    var x;
+    I := maxr(I, 0);
+    I := minr(I, 1);
+    x := I * 255;
+    rgb(R_viridis~[x], G_viridis~[x], B_viridis~[x]);
+  end
+</pre>
+<p>Once that is done, you can simply replace the function color&lowbar;I() with color&lowbar;viridis() in your scripts, and the new color scale is used!</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_01_19.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+</html>

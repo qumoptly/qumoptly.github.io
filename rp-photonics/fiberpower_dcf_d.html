@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_dcf_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Fiber Power: Pumpabsorption in einer Doppelkernfaser</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Stark modenabhängige Pumpabsorption in einer Doppelkernfaser wird numerisch analysiert.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, Simulation, Design, Software, Faserverstärker, Pumpabsorption, Doppelkernfaser">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_dcf_d.html"; cat="S"; shownbanner=""; ref="fiberpower_dcf8ddb.html?banner=RP_Fiber_Power_7"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_dcf.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power: Simulations- und Design-Software <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Beispiel: Pumpabsorption in einer Doppelkernfaser</h2>
+<p>Hier zeigen wir, wie <b>RP Fiber Power</b> für die Analyse und die Optimierung der Designs von <a href="double_clad_fibers.html" title="double-clad fibers: optical fibers with different waveguide structures for pump and signal light">Doppelkernfasern</a> eingesetzt werden kann.
+Da diese einige komplizierte Details mit sich bringt, ist die hohe Flexibilität von <b>RP Fiber Power</b> für diese Aufgabe essenziell.</p>
+<h3>Beschreibung des Modells</h3>
+<p>Wir betrachten eine Doppelkernfaser, wie sie für <a href="high_power_fiber_lasers_and_amplifiers.html" title="high-power fiber lasers and amplifiers: fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">Hochleistungs-Faserverstärker und -laser</a> eingesetzt werden kann.
+Es ist bekannt, dass die Absorption von Pumplicht stark reduziert werden kann dadurch, dass etliche der Moden des Pump-Kerns einen geringen Überlapp mit dem dotierten Faserkern haben.
+Dies untersuchen wir hier näher.</p>
+<p>Beachten Sie, dass ein auf Moden basierter Ansatz für diese Analyse wenig geeignet wäre.
+Zunächst einmal kann ein Pump-Kern wegen seiner Größe und seiner hohen numerischen Apertur sehr viel Moden haben.
+Hinzu kommt, dass seine Symmetrie oft reduziert wird, um die Pumpabsorption zu verbessern.
+Ein mode solver, der in dieser Situation gut arbeitet, wäre sehr schwierig zu entwickeln, und er bräuchte sehr viel Rechenzeit.</p>
+<p>Die numerische Propagation is deswegen ein praktikablerer Ansatz.
+Auch dies ist jedoch nicht trivial:</p>
+<p>Für eine realistische Simulation benötigen wir zunächst einen Pumpstrahl, der ziemlich inkohärent ist, aber doch noch ausreichend kohärent für eine hohe Effizienz der Einkopplung.
+In unserem Beispiel konstruieren wir diesen wie folgt:</p>
+<ul>
+<li>Wir starten mit einer Feldverteilung, die eine realistische Intensitätsverteilung hat (beschränkt auf den Pumpkern), aber völlig zufällige optischen Phasen.
+Dieser Strahl hätte eine starke Divergenz, so dass die Einkopplung sehr ineffizient wäre.</li>
+<li>Wir wenden dann auf das Feld eine Fourier-Transformation an, filtern die hohen Frequenzkomponenten (entsprechend großen Strahlwinkeln) heraus und transformieren wieder zurück.</li>
+<li>In der räumlichen Domäne filtern wir erneut.</li>
+</ul>
+<p>Die Operationen benötigen einigen Skriptcode:</p>
+<pre class="codedisplay">
+defarray A0%[0, (N - 1) * dr, dr; 0, (N - 1) * dr, dr] (periodic)
+defarray A0_f%[0, (N - 1) * dr, dr; 0, (N - 1) * dr, dr] (periodic)
+w0 := 15 um { beam size parameter }
+sg(x2) := exp(-x2^4)  { normalized super-Gaussian function }
+calc
+  begin
+    { Calculate the initial beam profile: low spatial coherence,
+      but high enough for efficient launching}
+    var f_max, f_m;
+    { First step: totally random amplitudes within the cladding }
+    for x := -r_max to +r_max step dr do
+      for y := -r_max to +r_max step dr do
+         A0%[x, y] := if x^2 + y^2 &lt; r_cl^2 and y &lt; y_cut then
+           rnd(-1) + i * rnd(-1);
+    { Filter out higher spatial frequency components }
+    FFT_n(A0%[], A0_f%[], +1);
+    df := 1 / (2 * r_max);
+    f_max := 0.5 * N * df;
+    f_m := NA_cl / lambda; { maximum allowed spatial frequency }
+    for fx := -f_max to +f_max step df do
+      for fy := -f_max to +f_max step df do
+        A0_f%[fx, fy] := sg((fx^2 + fy^2) / f_m^2) * A0_f%[fx, fy];
+    FFT_n(A0_f%[], A0%[], -1);
+    for x := -r_max to +r_max step dr do
+      for y := -r_max to +r_max step dr do
+        A0%[x, y] := sg((x^2 + y^2) / r_cl^2) * (y &lt; y_cut) * A0%[x, y];
+  end
+A0%(x, y) := A0%[x, y]
+</pre>
+<p>Das numerische Gitter wird etwas größer gewählt als der Pumpkern.
+Wir führen eine künstliche Absorption außerhalb des Pumpkerns ein, um die Verluste dieser Region zu simulieren, die normalerweise an der äußeren Grenzfläche auftreten würden.</p>
+<p>Die numerische Auflösung muss relativ hoch sein, weil der Pumpkern ein hohe numerische Apertur (0,4) hat.
+Wir verwenden eine transversale Auflösung von 0,47&nbsp;&mu;m und eine longitudinale Auflösng von 3,3&nbsp;&mu;m.</p>
+<h3>Ergebnisse</h3>
+<p>Anfangs nehmen wir einen runden Pumpkern mit zentriertem innerem Faserkern an.
+Die Absorption im inneren Kern setzen wir auf 100&nbsp;dB/m &ndash; etwas mehr als realistisch, aber dies reduziert die Rechenzeit, da wir eine kürzere Faserlänge (500&nbsp;mm) annehmen können.</p>
+<p>Abbildung&nbsp;1 zeigt die Amplitudenverteilung in der Faser.
+man sieht, dass die Intensitätsverteilung ein &ldquo;Loch&rdquo; in der Region des inneren Kerns entwickelt.
+Dies ist der bekannte Effekt, dass man nach einiger Länge der Faser hauptsächlich solche Moden übrig hat, die kaum Pumpabsorption erfahren.
+Es würde dann wenig nützen, die Faser noch länger zu machen.</p>
+<figure>
+<img src="img/fiberpower_dcf1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Amplitudenverteilung entlang der Faser für einen runden Pumpkern.
+</figcaption>
+</figure>
+<p>Die rote durchgezogene Kurve in Abbildung&nbsp;1 zeigt, wie die Pumpleistung abfällt.
+Sie kann verglichen werden mit der gestrichelten Kurve für eine &ldquo;naive&rdquo; Berechnung, wo ein konstanter Absorptionskoeffizient entsprechend dem Verhältnis der Kernflächen angenommen wird.
+Wegen des genannten Effekts tritt zwischen diesen Kurven eine zunehmende Diskrepanz auf.</p>
+<p>Abbildung&nbsp;2 zeigt die Intensitätsverteilung am Ende der Faser.
+Die Grenzen den beiden Kerne sind als graue Kreislinien gekennzeichnet.</p>
+<figure>
+<img src="img/fiberpower_dcf2.png" alt="intensity profile at the fiber end">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Intensitätsverteilung am Ende der Faser.
+</figcaption>
+</figure>
+<p>Die Pumpabsorption kann verbessert werden mit einem D-förmigen Pumpkern: Man schneidet einfach am oberen Ende quasi ein Stück vom Pumpkern ab.
+Dies reduziert die Symmetrie der Faser so, dass wir nicht mehr helikale Moden mit geringem Kernüberlapp haben.
+Abbildungen&nbsp;3 und 4 zeigen die Resultate.
+Die Pumpintensitätsverteilung bleibt in der transversalen Richtung gleichmäßiger, und die Pumpabsorption ist nun sogar ein wenig besser als nach der naiven Abschätzung.</p>
+<figure>
+<img src="img/fiberpower_dcf3.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Amplitudenverteilung entlang der Faser für einen Pumpkern mit D-Form.
+</figcaption>
+<img src="img/fiberpower_dcf4.png" alt="intensity profile at the fiber end">
+<figcaption><span class="start">Abbildung&nbsp;4:</span> 
+Intensitätsverteilung am Ende der Faser.
+</figcaption>
+</figure>
+<p>Man könnte nun natürlich auch modifizierte Fälle untersuchen, etwa mit einem oktogonalen Pumpkern, einem nicht mehr zentrierten inneren Kern, einer gebogenen Faser, usw.
+Auf diese Weise kann man Doppelkernfasern verschiedener Designs vergleichen und optimieren.</p>
+<p>(<a href="fiberpower_case_studies_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_dcf_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:17 GMT -->
+</html>

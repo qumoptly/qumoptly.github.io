@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/signal_to_noise_ratio.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:03:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - signal-to-noise ratio, S/N ratio, shot noise, detection bandwidth, heterodyne detection, lock-in detection, balanced detection, upconversion, preamplifier</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="A signal-to-noise ratio is the ratio of signal power to noise power in a detector. It is often used to quantify the quality of a measurement.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="signal-to-noise ratio, S/N ratio, shot noise, detection bandwidth, heterodyne detection, lock-in detection, balanced detection, upconversion, preamplifier">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="signal_to_noise_ratio.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Signal-to-noise Ratio</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="buyersguide.html" class="bg_bgheading">Buyer's Guide</a></p>
+<p>Use the <a href="buyersguide.html"><b>RP Photonics Buyer's Guide</b></a> to find suppliers for photonics products! You will hardly find a more convenient resource.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: SNR</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the ratio of signal power to noise power in a detector</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Signal-zu-Rausch-Verhältnis</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<p><a href="encyclopedia_citeb19b.html?article=signal-to-noise%20ratio">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>The quality of optical and other measurements is often characterized with a <em>signal-to-noise ratio</em> (SNR, S/N ratio).
+This is generally understood to be the ratio of the detected <em>powers</em> (not <em>amplitudes</em>), and is often expressed in <a href="decibel.html" title="decibel: a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a>.
+Usually, the definition refers to electrical powers in the output of some detector.
+In the context of image processing, the signal-to-noise ratio is often defined in a different way: as the ratio of the mean pixel value and its standard deviation (for constant illumination).</p>
+<p>In optical measurements, a common situation is that some light beam impinges a <a href="photodetectors.html" title="photodetectors: devices used for the detection of light">photodetector</a> such as a <a href="photodiodes.html" title="photodiodes: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a>, which produces a photocurrent in proportion to the <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>, with some electronic noise added.
+Depending on the situation, the signal-to-noise ratio may be limited either by optical noise influences (including <a href="shot_noise.html" title="shot noise: quantum-limited intensity noise">shot noise</a>) or by noise generated by the detector electronics.
+Some examples are given below.</p>
+<p>The signal-to-noise ratio often limits the accuracy with which some measurement can be done.
+For digital signals, it can limit the reliability of detecting correctly, which can be quantified with a <a href="bit_error_rate.html" title="bit error rate: average fraction of wrongly transmitted bits in a communication link">bit error rate</a>.
+The latter situation is common in <a href="optical_fiber_communications.html" title="optical fiber communications: the technology of transmitting information through optical fibers">optical fiber communications</a>, where some required bit error rate can only be achieved with a sufficiently high signal-to-noise ratio at the detector.</p>
+<h2 class="togglediv">The Power of Noise</h2>
+<div>
+<p>The power of noise is spread over some range of noise frequencies, and can be described with a <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a>.
+Assuming white noise for simplicity, where the power spectral density is independent of noise frequency, the noise power is proportional to the detection <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>.
+If some signal is available for a longer time, the noise influence on a measurement can be reduced by averaging over a longer time interval.
+This can also be described as a reduction of the detection bandwidth (because changes of the signal within that interval could no longer be detected), which implies that the total noise power is reduced and thus the signal-to-noise ratio is increased (see Figure&nbsp;1).
+Note also that the minimum possible detection bandwidth roughly equals the inverse measurement time.</p>
+<figure>
+<img src="img/snr.png" alt="signal-to-noise ratio">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+An optical signal at 1043.4&nbsp;nm, which is contaminated with some level of white noise (resulting from <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> in an <a href="amplifiers.html" title="amplifiers: devices for amplifying the power of light beams">amplifier</a>), has been recorded with two different values of the resolution bandwidth (RBW). This bandwidth affects the noise level, but not the signal level. Consequently, a better signal-to-noise ratio (&asymp;&thinsp;32&nbsp;dB) is achieved with the smaller resolution bandwidth.
+</figcaption>
+<img src="img/snr2.png" alt="signal-to-noise ratio">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Same as in Figure&nbsp;1, but with averaging over 10 traces, so that the average noise power (the <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a>) is better approximated. Note that this kind of averaging does <em>not</em> improve the signal-to-noise ratio; it only reduces the uncertainty in the noise level, but not the noise level as such.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">Example 1: Optical Measurement Limited by Thermal Noise</h2>
+<div>
+<p>When an optical signal with a relatively low <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> such as 1&nbsp;&mu;W impinges a photodiode, and this photodiode is operated with some reverse bias and a resistor for converting the photocurrent into a voltage signal, the noise of that signal is normally dominated by thermal noise from the resistor or by excess noise from further electronic components.</p>
+<p>If the signal is some weak sinusoidal modulation of the optical power, the detected electrical signal power is proportional to the <em>square</em> of the signal amplitude, i.e., to the square of the amplitude of the optical power modulation.
+Doubling the overall optical power would double that amplitude and quadruple the detected signal power, whereas the noise power remains constant.
+This means that the signal-to-noise ratio would then be increased by a factor of 4, corresponding to 6&nbsp;dB.</p>
+</div>
+<h2 class="togglediv">Example 2: Shot-noise-limited Optical Measurement</h2>
+<div>
+<p>When an optical signal with a sufficiently high optical power (for example, 10&nbsp;mW) impinges a photodiode equipped with high-quality electronics, electronic noise influences are often negligible, even if the optical signal in contaminated only by <a href="shot_noise.html" title="shot noise: quantum-limited intensity noise">shot noise</a>.</p>
+<p>If we again assume the signal to be a weak sinusoidal modulation of the optical power, doubling the overall optical power would still increase the detected signal power by a factor of 4, but it would also double the noise power resulting from shot noise.
+In effect, the signal-to-noise ratio would be doubled, corresponding to an increase by 3&nbsp;dB.</p>
+</div>
+<h2 class="togglediv">Measures for Improving the Signal-to-Noise Ratio of Optical Measurements</h2>
+<div>
+<p>In optical measurements, the signal-to-noise ratio may be increased with various types of measures:</p>
+<ul>
+<li>A first possibility is to <b>remove any avoidable noise sources</b>.
+For example, optical power measurements on light beams can be affected by influences of ambient light, which should thus be eliminated for example by switching room lights off, covering windows with dark curtains, or by using black tubes and/or <a href="optical_filters.html" title="optical filters: devices with a wavelength-dependent transmission or reflectivity">optical bandpass filters</a> in front of photodetectors.</li>
+<li>An important aspect is the correct <b>selection of a suitable type and model of</b> <a href="photodetectors.html" title="photodetectors: devices used for the detection of light"><b>photodetector</b></a>.
+Depending on the situation, different properties can be relevant.
+For example, the dark current of a <a href="photodiodes.html" title="photodiodes: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiode</a> can be important for very low-level measurements, but normally not for shot-noise-limited measurements at higher powers.</li>
+<li>Generally, it is helpful to <b>increase the optical input power</b>.
+However, the optical power usually has to stay below the level where saturation effects in the detector (the photodiode or the electronics) or in a measured object occur.
+As shown in the examples above, increases in optical power are particularly effective in the regime where the noise is dominated by detector noise.</li>
+<li>One way to increase the optical input power is to use an <b>optical</b> <a href="amplifiers.html" title="amplifiers: devices for amplifying the power of light beams"><b>preamplifier</b></a>, for example a <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifier</a>.
+Unfortunately, amplifiers have the side effect of adding some level of excess noise, which can be described with the <a href="noise_figure.html" title="noise figure: a measure of the excess noise added in an amplifier">noise figure</a>.
+If if an originally shot-noise-limited signal is contaminated by some level of excess noise from a preamplifier, the resulting signal-to-noise ratio of the detection may be increased by the use of the amp lifer if the noise would otherwise have been dominated by detector noise.</li>
+<li><a href="optical_heterodyne_detection.html" title="optical heterodyne detection: a sensitive method of photodetection, reaching the standard quantum limit even for weak signal powers"><b>Optical heterodyne detection</b></a> is a method for achieving shot-noise-limited measurements even for very low signal powers.
+It involves the superposition of the weak signal with a stronger <em>local oscillator</em> beam.</li>
+<li>As mentioned above, noise influences on continuously available signals may be reduced by <b>averaging</b> over a longer measurement time, which implies a lower detection bandwidth.
+For repetitive pulsed signals, one may average over multiple pulses.</li>
+<li>Simple averaging has the disadvantage that the measurement is sensitive to noise at low frequencies, which is often strong (&rarr;&nbsp;<span class="eqn_il">1&thinsp;/&thinsp;<i>f</i></span> noise, pink noise).
+A possible solution is <b>lock-in detection</b>: the signal is modulated, for example by chopping (quickly switching) the beam, and thus transferred to a higher frequency where the power spectral density of noise influences (for example, electronic noise) is lower.
+A <a href="optical_phase.html" title="optical phase: the phase of the electric field of an optical wave, usually considered in the time domain">phase</a>-sensitive amplifier, also using the modulation signal, can then extract the signal.
+In the same way as for simple averaging, the achievable reduction in measurement bandwidth is limited by the measurement time.</li>
+<li>When an optical signal (for example, in some spectroscopic absorption measurement) is imprinted on a <a href="laser_beams.html" title="laser beams: light beams propagating dominantly in one direction">laser beam</a> which itself has some noise, <b>balanced detection</b> can be a solution.
+Here, the original beam is split into two beams of equal power with a 50:50 <a href="beam_splitters.html" title="beam splitters: devices for splitting a laser beam into two or more beams">beam splitter</a>, and only one of these beams obtains the signal (for example, by passing through a <a href="multipass_gas_cells.html" title="multipass gas cells: a cell which allows to realize multiple passes of a laser beam through a gas">multipass gas cell</a>).
+The powers of both beams are then detected, and the detector setup reacts only to the <em>difference</em> of the photocurrents.
+This approach largely eliminates the influence of noise of the original beam.</li>
+<li>Sensitive measurements are difficult in some long-wavelength spectral regions, where high-performance <a href="photodetectors.html" title="photodetectors: devices used for the detection of light">photodetectors</a> are not available.
+A possible solution is <a href="upconversion.html" title="upconversion: a process where light can be emitted with photon energies higher than those of the light generating the excitation"><b>upconversion</b></a> of the signal to a shorter-wavelength region, allowing one to use high-performance <a href="photodiodes.html" title="photodiodes: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a>, for example.
+The upconversion process may be based on <a href="sum_and_difference_frequency_generation.html" title="sum and difference frequency generation: nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> in a <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal</a>.</li>
+</ul>
+</div>
+<p class="seealso">See also: <a href="shot_noise.html" title="shot noise: quantum-limited intensity noise">shot noise</a>, <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, <a href="noise_specifications.html" title="noise specifications: specifications for the noise properties of lasers, for example">noise specifications</a>, <a href="photodiodes.html" title="photodiodes: semiconductor devices with a p&ndash;n or p&ndash;i&ndash;n structure for the detection of light">photodiodes</a>, <a href="spotlight_2009_07_21.html">Spotlight article 2009-07-21</a>, <a href="spotlight_2009_11_13.html">Spotlight article 2009-11-13</a>, <a href="spotlight_2009_12_13.html">Spotlight article 2009-12-13</a><br>and other articles in the categories <a href="categories.html#fluctuations_and_noise" title="other articles on fluctuations and noise">fluctuations and noise</a>, <a href="categories.html#optical_metrology" title="other articles on optical metrology">optical metrology</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="signal_to_noise_ratio.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="coating_demo_rugatec7ee.html?banner=RP_Coating_7"><img src="img/coating_demo_rugate7b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>Field penetration into a rugate filter.</p>
+<p>This diagram has been made with the <a href="coatingc7ee.html?banner=RP_Coating_7"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Amplifiers</h2>
+<p>See our <a href="tutorial_fiber_amplifiers14a3.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="tutorial_fiber_amplifiers14a3.html?banner=fiber_amplifier_tutorial"><img src="img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/signal_to_noise_ratio.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:03:15 GMT -->
+</html>

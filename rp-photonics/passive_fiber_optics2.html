@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Passive Fiber Optics&rdquo;: optical fibers, modes, fiber core, cladding, guided light, LP modes, mode decomposition, mode coupling</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-12-03">
+<meta name="description" content="Tutorial on passive fiber optics. Part 2 explains the basics of fiber modes.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber optics, optical fibers, modes, fiber core, cladding, guided light, intensity profile, LP modes, mode decomposition, mode coupling">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="passive_fiber_optics2.html"; cat="C"; shownbanner=""; ref="encyclopedia_m.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main"><main>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 2 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>2</span>
+<p>1:&nbsp;<a href="passive_fiber_optics1.html">Guiding light in a glass fiber</a>, 2:&nbsp;<span style="text-decoration:underline;">Fiber modes</span>, 3:&nbsp;<a href="passive_fiber_optics3.html">Single-mode fibers</a>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<a href="passive_fiber_optics5.html">Fiber ends</a>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<a href="passive_fiber_optics7.html">Propagation losses</a>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<a href="passive_fiber_optics9.html">Polarization issues</a>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<a href="passive_fiber_optics11.html">Nonlinearities of fibers</a>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 2: Fiber Modes</h2>
+<div>
+<p>In general, the intensity profile of light propagating in a fiber changes during propagation.
+It often even evolves in a rather complicated way.
+As an example, see what happens if we inject a Gaussian beam, which is tilted by 20&deg; against the beam axis, into a fiber with 20&nbsp;&mu;m core radius and an NA of 0.3:</p>
+<figure>
+<img src="img/bp_in_mm_fiber1.png" alt="light in a multimode fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Evolution of the intensity in a multimode fiber, simulated with the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software. A Gaussian beam with an angle of 20&deg; against the beam axis is injected into the fiber.
+</figcaption>
+</figure>
+<p>(Note that here we show only intensity profiles, as the larger spatial region shown makes it difficult to show wavefronts.)</p>
+<p>One clearly sees the <a href="interference.html" title="interference: a range of phenomena associated with the superposition of waves">interference</a> effects occurring when the beam reaches the core/cladding interface and is reflected there.
+At the end, the transverse beam profile looks as shown in Figure&nbsp;2:</p>
+<figure>
+<img src="img/bp_in_mm_fiber2.png" alt="beam profile in multimode fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Beam profile in the fiber after propagation over 100&nbsp;&mu;m.
+</figcaption>
+</figure>
+<p>We have seen the intensity profiles generally evolve in complicated ways.
+However, there are certain amplitude distributions where the intensity profile remains unchanged during propagation (assuming a lossless fiber).
+Such field distributions are called <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space"><em>modes</em></a> of the fiber.
+The simplest of these, the <em>fundamental mode</em>, also called <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP<sub>01</sub> mode</a>, looks as follows for the fiber in the current example:</p>
+<figure>
+<img src="img/bp_in_mm_fiber3.png" alt="fundamental mode of a fiber">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Intensity profile of the fundamental mode in a multimode fiber.
+The gray circle indicates the core/cladding boundary.
+</figcaption>
+</figure>
+<p>Here is a higher-order mode, the LP<sub>37</sub> mode:</p>
+<figure>
+<img src="img/bp_in_mm_fiber3b.png" alt="LP35 mode of a fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Intensity profile of the LP<sub>37</sub> mode in a multimode fiber.
+</figcaption>
+</figure>
+<p>As for the fundamental mode, the natural divergence is exactly canceled by the inhomogeneous index profile.</p>
+<p>Note that particularly the higher-order modes can have profiles which significantly extend into the cladding.</p>
+<p>The following figure shows the amplitude profiles of all guided modes of the fiber, sorted by their mode indices:</p>
+<figure>
+<img src="img/bp_in_mm_fiber4.png" alt="LP modes of a fiber">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Amplitude profiles of all guided modes of a multimode fiber.
+The modes have been calculated within well below a second by the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software.
+</figcaption>
+</figure>
+<p>In our example case with 20&nbsp;&mu;m core radius and NA = 0.3, the fiber has 84 different guided modes at 1.5&nbsp;&mu;m wavelength (see Figure&nbsp;5) &ndash; when counting different orientations of the modes, there are even 160.
+(For example, the LP<sub>11</sub> mode also exists in a version which is rotated by 90&deg;; these two modes are mutually orthogonal.)
+All guided modes are essentially restricted to the core region, even though they can somewhat extend into the cladding (but with decreasing intensity for increasing distance from the core).</p>
+<p>Figure&nbsp;6 shows the far field profiles of the fiber modes, as they could be observed in some large distance from the fiber end.
+They look similar to the near field profiles, but are <em>not</em> simply rescaled versions of them.
+(You cannot expect that the mode calculated for a certain fiber structure are at the same time modes of free space!)
+Also note, for example, that although all LP<sub>0m</sub> modes approximately fill the whole fiber core and thus have similar sizes, the divergence (seen in the far field) gets substantially larger with increasing <span class="eqn_il"><i>m</i></span>.</p>
+<figure>
+<img src="img/bp_in_mm_fiber5.png" alt="LP modes of a fiber in the far field">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Far field profiles of the same fiber as in Figure&nbsp;5.
+</figcaption>
+</figure>
+<aside class="callout blue">We can distinguish <em>core modes</em> and <em>cladding modes</em>.</aside>
+<p>There are also many non-guided modes, called <em>cladding modes</em>, which can extend throughout the cladding (and the core).
+As the cladding is typically much larger than the core, and also typically has a higher numerical aperture (due to a large index contrast to a coating around it), the cladding normally has many more modes than the core.</p>
+<p>If the refractive index profile has a cylindrical symmetry, we obtain so-called <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">LP modes</a>.
+These are relatively easily numerically calculated, even for arbitrary radial dependence of the refractive index, and not only for <a href="step_index_fibers.html" title="step-index fibers: optical fibers with a step-index refractive index profile">step-index fibers</a>.
+The <a href="fiberpower.html"><b>RP Fiber Power</b> software</a>, for example, can calculate all the modes of our step-index fiber within a fraction of a second, and would be equally fast for a super-Gaussian radial profile, for example.
+For not radially symmetric index profiles, much more sophisticated numerical methods are required to calculate all the modes, and that takes much more computation time.</p>
+<h3 class="togglediv">Basic Facts on Modes</h3>
+<div>
+<p>We now look at various interesting properties of the modes:</p>
+<ul>
+<li>As mentioned before, the intensity profile of a mode stays constant during propagation in the fiber (see Figure&nbsp;6), at least if it is lossless.
+The complex amplitude profile does change, but only in a simple way: the complex phase progresses in proportion to the propagation length: <span class="eqn_il"><span class="greek">&phi;</span>&thinsp;=&thinsp;<span class="greek">&beta;</span>&thinsp;<i>z</i></span> with the <a href="propagation_constant.html" title="propagation constant: a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">phase constant</a> <span class="eqn_il"><span class="greek">&beta;</span></span>.
+Note that this phase change applies equally to all transverse positions of the profile.
+Every mode has its own <span class="eqn_il"><span class="greek">&beta;</span></span> value, although mode degeneracies (same <span class="eqn_il"><span class="greek">&beta;</span></span> values for different modes) can occur.</li>
+</ul>
+<figure>
+<img src="img/bp_in_mm_fiber37.png" alt="beam profile in multimode fiber">
+<figcaption><span class="start">Figure&nbsp;7:</span> 
+Evolution of beam profile for the LP<sub>37</sub> mode. The intensity profile stays constant.
+</figcaption>
+</figure>
+<ul>
+<li>For a lossless fiber, the phase fronts of modes are always plane.
+The Poynting vector, showing the direction of energy flow, is always parallel to the fiber axis throughout the mode profile.</li>
+<li>If there are propagation losses, e.g. due to a dopant in the fiber core, the modes are somewhat changed.
+The wavefronts may now get curved, indicating an energy flow in the radial direction.
+(For example, if we have absorption only in the core, energy must flow from the cladding to the core. In most cases, though, there are only marginal deformations of wavefronts.)
+The optical power then decreases exponentially along the propagation direction; the <a href="propagation_constant.html" title="propagation constant: a mode- and frequency-dependent quantity describing the propagation of light in a medium or waveguide">propagation constant</a> obtains a real part, which is minus the amplitude absorption coefficient.</li>
+<li>Generally, the number of guided modes increases as the wavelength gets shorter.
+For long wavelengths, one may have a single guided mode only (&rarr;&nbsp;<a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction"><em>single-mode fibers</em></a>), or in fact even no guided mode at all.
+(A step-index profile always has at least the fundamental mode, but for some <a href="photonic_crystal_fibers.html" title="photonic crystal fibers: specialty optical fibers with a built-in microstructure, in most cases consisting of small air holes in glass">photonic crystal fibers</a> this is not the case.)</li>
+<li>The modes form a <em>basis</em> (in the mathematical sense), i.e., a complete orthogonal system, for any guided light.
+In other words, any complex amplitude distribution which is guided by the fiber can be expressed as a linear superposition of the modes.
+This mode decomposition can be done for monochromatic light as well as for polychromatic light; in the latter case, one just does the decomposition for each frequency component separately.</li>
+</ul>
+<p>Note that a superposition of different modes is generally <em>not</em> a mode itself.
+Generally, different modes have different <span class="eqn_il"><span class="greek">&beta;</span></span> values.
+Therefore, their phase evolution is different, and the overall intensity profile changes during propagation due to the changing <a href="interference.html" title="interference: a range of phenomena associated with the superposition of waves">interference</a> conditions.
+If we have only two modes excited, we get a simple mode beating, where the shape of the intensity profile varies periodically; the period is inversely proportional to the difference in <span class="eqn_il"><span class="greek">&beta;</span></span> values.
+If many modes with different <span class="eqn_il"><span class="greek">&beta;</span></span> values are excited, the evolution gets very complicated.</p>
+</div>
+<h3 class="togglediv">Important Properties of Modes</h3>
+<div>
+<aside class="textbox tb_right redmargin" style="width:215px;">
+<h2>Software for Calculating Fiber Modes</h2>
+<p>Our <em>free software</em> <a href="rp_fiber_calculator.html"><b>RP Fiber Calculator</b></a> offers a lot; more features are available in its PRO version.
+The nice user interface makes it very easy to get started.</p>
+<p>For more comprehensive mode calculations, our <a href="fiberpower.html"><b>RP Fiber Power</b> software</a> is the ideal tool.
+With that, you can do even the most sophisticated calculations and simulations.
+It also offers numerical beam propagation.</p>
+</aside>
+<p>For a given wavelength, each fiber <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a> has several important characteristics:</p>
+<ul>
+<li>It has a certain complex amplitude profile, from which one obtains the intensity profile.</li>
+<li>From the intensity profile, one may calculate the <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>.
+This determines how strong <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinear effects</a> can be.</li>
+<li>The phase constant <span class="eqn_il"><span class="greek">&beta;</span></span> tells how fast its overall complex phase changes during propagation.
+For strongly guided modes, it is well above the phase constant of the cladding.
+In that case, the intensity profile does not substantially extend into the cladding.</li>
+<li>From the first and second derivative of the <span class="eqn_il"><span class="greek">&beta;</span></span> with respect to the <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequency</a>, one can calculate the <a href="group_velocity.html" title="group velocity: the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> and the <a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> (GVD).</li>
+<li>For lossy fibers, each mode can have a certain attenuation constant.
+These values can differ a lot between the modes &ndash; sometimes by orders of magnitude.
+For example, <a href="bend_losses.html" title="bend losses: propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> are often much higher for higher-order modes.
+They may be calculated with numerical beam propagation or estimated with some analytical techniques.
+By the way, bending can also shift and distort the mode profile.</li>
+<li>The <a href="cut_off_wavelength.html" title="cut-off wavelength: a wavelength above which a guided mode of a waveguide ceases to exist">cut-off wavelength</a> is the wavelength above which the mode ceases to exist.
+(Under some circumstances, a mode can have a higher and lower cut-off.)</li>
+</ul>
+</div>
+<h3 class="togglediv">Lower Phase Delays for Higher-order Modes!</h3>
+<div>
+<aside class="callout blue">Surprising, but comprehensible: higher-order modes tend to experience <em>lower</em> phase delays than low-order modes!</aside>
+<p>Higher-order modes have larger transverse <a href="wave_vector.html" title="wave vector: a vector indicating the direction of wave propagation and the phase delay per unit length">wave vector</a> components than lower-order modes.
+As a plane-wave component with such a wave vector is tilted against the fiber axis, one may expect that it has an increased path length, so that a higher-order mode will experience a larger phase delay than e.g. the fundamental mode.
+However, the opposite is true!
+A larger transverse wave vector component implies a smaller longitudinal component, and that implies a <em>reduced</em> phase delay.
+So in fact the phase constants (<span class="eqn_il"><span class="greek">&beta;</span></span> values) of the highest-order modes are the lowest, and are often close to the refractive index of the cladding times the vacuum <a href="wavenumber.html" title="wavenumber: the phase delay per unit length, or that quantity divided by 2&pi;">wavenumber</a>.</p>
+<p>By the way, such modes also exhibit a slow decay of intensity in the cladding, i.e., their intensity distributions extend quite far into the cladding.
+Another property of these modes is the reduced <a href="group_velocity.html" title="group velocity: the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> (see <a href="passive_fiber_optics10.html">part 10 on chromatic dispersion</a>).
+That would actually fit to an increased path length, but the probably surprising findings explained above should be a warning: be careful with quick &ldquo;explanations&rdquo; of that vague type.</p>
+</div>
+<h3 class="togglediv">Calculating the Propagation of Light Based on Modes</h3>
+<div>
+<p>Using the calculated set of mode, one can calculate the resulting field profile for an arbitrary input profile after any distance of propagation in the fiber:</p>
+<ul>
+<li>First, calculate the excitation amplitudes of all guided modes via complex overlap integrals of the input amplitude profile with the complex conjugates of all mode amplitude profile.</li>
+<li>Then change the complex amplitudes of all modes according to their <span class="eqn_il"><span class="greek">&beta;</span></span> values.</li>
+<li>Construct the final beam profile by adding up all contributions from the modes.</li>
+</ul>
+<aside class="callout blue">Mode calculations are often much more computationally efficient than numerical beam propagation &ndash; at least if only a few modes are involved.</aside>
+<p>Note that this procedure is not computationally difficult, unless the fiber has a huge number of modes and/or complicated modes in case of an index profile which is not radially symmetric.
+The amount of computations does <em>not</em> depend on the propagation distance.
+(For numerical beam propagation, longer distances would generally require more time.)</p>
+<p>There are cases where <a href="mode_coupling.html" title="mode coupling: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a> calculations are helpful.
+For example, one may calculate the modes of an &ldquo;undisturbed&rdquo; fiber and then calculate mode coupling caused by some additional effect.
+For example, a periodic index modulation in a <a href="fiber_bragg_gratings.html" title="fiber Bragg gratings: reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">fiber Bragg grating</a> can couple counterpropagating or copropagating modes.</p>
+</div>
+<h3 class="togglediv">Limitations of the Mode Approach</h3>
+<div>
+<p>The concept of modes is often very convenient for doing calculations, as shown above.
+However, it also has its limitations:</p>
+<aside class="callout blue">There are many cases where numerical beam propagation is the appropriate tool, as the mode approach has various limitations.</aside>
+<ul>
+<li>In some cases &ndash; for example, for arbitrary index profiles &ndash; the modes are very difficult to compute.</li>
+<li>In cases with a huge number of modes, it may also not be convenient to do calculations based on them.
+Note: if cladding modes need to be taken into account, one would end up with a huge number of modes in the calculation, even if the core has only few guided modes.</li>
+<li>Additional disturbances such as bending already make the calculation of modes much more difficult.</li>
+<li>The concept is also at least more difficult to apply if the mode properties change along the length of a fiber &ndash; for example, for <a href="tapered_fibers.html" title="tapered fibers: optical fibers which are over some length stretched out to a very small diameter">tapered fibers</a>.</li>
+</ul>
+<p>For such reasons, direct numerical beam propagation is often required instead of the mode concept.</p>
+<p>Go to <a href="passive_fiber_optics3.html">Part 3: Single-mode Fibers</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:37 GMT -->
+</html>

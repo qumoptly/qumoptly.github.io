@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_debugger.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Debugging scripts in software from RP Photonics</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Most software products of RP Photonics support a powerful script language and contain a convenient script debugger.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="simulation, design, software, debugger, breakpoints">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_debugger.html"; cat="S"; shownbanner=""; ref="software.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="software_debugger_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html" class="sel">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Debugging Scripts in Software from RP Photonics</h1>
+<aside class="textbox tb_right redmargin" style="width:240px;">
+<p><b>Not Everyone Needs to Deal with Script Code!</b></p>
+<p>Note that you don't have two deal with the debugger or the script language when working with our software, as it also can be controlled via easy-to-use forms.
+However, script programming allows you to implement most sophisticated simulations.</p>
+<p>One can also use such code in <a href="software_custom_forms.html"><b>custom forms</b></a>; one person may develop such a custom form with script code, while other persons can use that form without dealing with script code at all.</p>
+</aside>
+<p>Most of our software products support a powerful <a href="software_script_language.html">script language</a>, and the latest versions also contain a very convenient debugger:</p>
+<ul>
+<li class="ta_left"><a href="fiberpower.html"><b>RP Fiber Power</b></a> since V7</li>
+<li class="ta_left"><a href="resonator.html"><b>RP Resonator</b></a> since V4</li>
+<li class="ta_left"><a href="coating.html"><b>RP Coating</b></a> since V4</li>
+<li class="ta_left"><a href="propulse.html"><b>RP ProPulse</b></a> since V4</li>
+</ul>
+<p>The debugger can be very helpful when searching for errors in sophisticated simulation scripts.
+It can actually be used in two different ways:</p>
+<ul>
+<li class="ta_left">You can execute scripts command by command.</li>
+<li class="ta_left">You can also debug even within the evaluation of expressions.
+This is important since our software allows for expressions which may e.g. contain nested control structures.</li>
+</ul>
+<p>In any case, you can <b>inspect the system state</b> after the execution of each command or sub-expression.
+In that way, you can conveniently find out in which step something went wrong.
+Or you just find out more quantitative details of your system than are normally displayed by the script.</p>
+<p>In the following, the two debugging methods are explained in detail, demonstrating how well worked out that system is.</p>
+<h2 class="togglediv">Executing Scripts Command by Command</h2>
+<div>
+<p>The software can be in one of the following execution modes:</p>
+<ul>
+<li><b>Editing mode:</b> you can edit scripts or the contents of forms. The software does not yet execute anything.</li>
+<li><b>Running mode:</b> this is when a script is currently executed; you will normally just wait until the execution is finished and the results are displayed.</li>
+<li><b>Debug mode:</b> in this mode, the software has interrupted the execution and waits for your decision on how to go on from there. It displays the current position in the executed script, and you can inspect the state of the system before deciding your next action &ndash; for example, to execute the next command, resume in running mode, or abort the execution.</li>
+</ul>
+<p>Normally, when you execute a script or the contents of a form, the software will go from editing mode to running mode, and after execution it will return to editing mode. However, there are the following <b>ways to get into debug mode</b>:</p>
+<ul>
+<li>You may directly start debug mode by holding the Ctrl key when starting execution (e.g. Ctrl-F8 instead of F8).</li>
+<li>In running mode, you can <b>press Ctrl-B</b> (for &ldquo;break&rdquo;) or click on the &ldquo;Break&rdquo; button displayed on the main form below the button &ldquo;End execution&rdquo; (see below).
+There is also a break button with a violet cross which appears in the toolbar in running mode.</li>
+<li>The software also goes into debug mode when it hits a <b>breakpoint</b> (see below) in the executed script.</li>
+</ul>
+<p>The screen shot below shows you how the main window looks in debug mode:</p>
+<figure>
+<img src="img/debug_panel.png" alt="RP Fiber Power in debug mode">
+</figure>
+<p>Below the toolbar, you find the &ldquo;Execution and debugging&rdquo; panel which displays some information:</p>
+<ul>
+<li class="ta_left">the status (execution mode) &ldquo;debug&rdquo;</li>
+<li class="ta_left">the currently executed file</li>
+<li class="ta_left">the current line number (and additional useful information on open loop structures, if applicable)</li>
+<li class="ta_left">the total execution time since the execution was started</li>
+</ul>
+<p>There are also various buttons for determining the next action:</p>
+<ul>
+<li><b>Abort:</b> the execution is definitely ended, and the software goes back into editing mode. - <b>Break:</b> this button can be used in running mode to interrupt the execution and get into debug mode. For example, you may do this if the execution seems to have got into an endless loop of commands, and you want to find out where that happened.</li>
+<li><b>Single command:</b> execute only the next command, returning to debug mode thereafter.</li>
+<li><b>Resume:</b> resume execution (in running mode) up to the end of the script or the next breakpoint (see below).</li>
+<li><b>Inspectors</b> (magnifying glass): this calls the inspectors tool (see below), where you can e.g. check the current values of variables.</li>
+</ul>
+<p>Below those buttons, in debug mode you find a display of the code, where the next line to be executed is shown in blue.</p>
+<p><b>Breakpoints</b> (where the software goes into debug mode, see above) can be set in two different ways:</p>
+<ul>
+<li class="ta_left">One can simply click on the left side of a code line in the editor.</li>
+<li class="ta_left">Also, a breakpoint can be contained in a script as a line beginning with “@”.</li>
+</ul>
+<p>Both types of breakpoints can be made conditional, so that the execution will be stopped only when a certain condition is fulfilled.</p>
+<p>Here is a screen shot of the inspectors tool:</p>
+<figure>
+<img src="img/inspectors_variables.png" alt="inspectors tool">
+</figure>
+<p>You see the tab for inspecting global variables; there are other tabs for inspecting arrays and user-defined functions.
+There can be additional physics-specific tabs, e.g. the defined fiber models and details of numerical beam propagation in RP Fiber Power.</p>
+<p>In the bottom panel, you can enter any expression and get its value displayed below.</p>
+</div>
+<h2 class="togglediv">Debugging Expressions</h2>
+<div>
+<p>The software has a powerful expression engine.
+With that you can do rather sophisticated things on the level of mathematical expressions.
+Therefore, it is often desirable to do debugging even within expressions.</p>
+<p>You can <b>set breakpoints within an expression</b> &ndash; not with the “@” character, but by inserting a function call like debug('message').
+When that function call is executed, the software will go into expression debug mode and display the passed message, helping you to understand what code you are currently looking at.
+You can later on leave debug mode by calling debug('') (or manually).
+The debug mode will also end once the end of the block containing the call of debug() has been reached.
+So you can inspect exactly those parts of the codes which are of interest.</p>
+<p>The concept of using the debug() function instead of a simple breakpoint symbol (e.g. “@”) gives you additional flexibility.
+In particular, you may call the function only if a certain condition is fulfilled, so that effectively you have a conditional breakpoint.
+You may also use a calculated message string, better informing you about the current state (e.g. 'iteration 17').</p>
+<p>When the evaluation reaches such a breakpoint, the software will display the inspectors tool, but now displaying the tab &ldquo;Debug expression&rdquo;:</p>
+<figure>
+<img src="img/expression_debugger.png" alt="expression debugger window">
+</figure>
+<p>In the form, you can see the following:</p>
+<ul>
+<li class="ta_left">the message passed with the debug() function</li>
+<li class="ta_left">the code, where the next line to be evaluated is marked with blue background</li>
+<li class="ta_left">a field displaying the result of the last evaluated expression</li>
+<li class="ta_left">the local variables (here: a loop counter variable)</li>
+<li class="ta_left">the field for evaluating an expression</li>
+<li class="ta_left">the button &ldquo;Next expression&rdquo;: evaluate the next expression, stay in debug mode</li>
+<li class="ta_left">the button &ldquo;End debug mode&rdquo;: resume execution until the next debug point or the end of the block is reached</li>
+<li class="ta_left">the button &ldquo;Abort&rdquo;: abort the evaluation of the expression and subsequently the execution of the whole script</li>
+<li class="ta_left">the other tabs for inspecting global variables, arrays, etc.</li>
+</ul>
+<p>There are various further useful features and tricks, explained in detail in the software documentation.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_debugger.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:49 GMT -->
+</html>

@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:53:36 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Fiber Power: Simulationen und Design, Fasermoden, Faserverst&auml;rker und Faserlaser</title>
+<link rel="stylesheet" type="text/css" href="engine2/style.css">
+<script type="text/javascript" src="engine2/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-11-06">
+<meta name="description" content="Die Software RP Fiber Power erlaubt eine Vielzahl von Simulationen und Optimierungen in der passiven und aktiven Faseroptik.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_d.html"; cat="S"; shownbanner=""; ref="index_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power &ndash; Simulations- und Designsoftware für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_case_studies_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Das ideale Werkzeug für die Analyse passiver und aktiver Faseroptik</h2>
+<p><b>RP Fiber Power</b> ist eine leistungsfähige und hochwertige numerische Software für das Design und die Optimierung von faseroptischen Geräten &ndash; insbesondere von <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">Faserverstär&shy;kern</a> und <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">Faserlasern</a> wie auch anderen <a href="waveguide_lasers.html" title="waveguide lasers: lasers with a waveguide structure in the gain medium">Wellenleiterlasern</a>, aber auch von Faserkomponenten wie <a href="fiberpower_coupler_d.html">Faserkopplern</a>, Mehrkernfasern und verjüngten Fasern.</p>
+<p>Die Software bietet sowohl eine sehr effiziente Leistungspropagation wie auch volle Strahlpropagation (numerical beam propagation).
+Die Ausbreitung ultrakurzer Pulse kann ebenfalls untersucht werden, z.&thinsp;B. für <a href="fiberpower_parpulse_d.html">Faser&shy;verstärker und nichtlineare Pulskompressoren</a> oder auch in <a href="fiberpower_cpa_d.html">Chirped-Pulse-Verstärker&shy;systemen</a>.</p>
+<p><b>RP Fiber Power</b> ist</p>
+<ul>
+<li class="ta_left">ein enorm vielseitiges Werkzeug für Spezialisten,</li>
+<li class="ta_left">aber gleichzeitig (v.&thinsp;a. seit Version 6 mit <a href="software_custom_forms_d.html">maßgeschneiderten Formularen</a>) auch sehr geeignet für Benutzer, die nicht (oder noch nicht) Experten in diesem Gebiet sind.</li>
+</ul>
+<p>Es ist für jeden, der sich ernsthaft mit Faseroptik beschäftigt, eine unentbehrliche Hilfe für maximale Produktivität &ndash; sei es in der industriellen Entwicklung, in der wissenschaftlichen Forschung oder in der Lehre.
+Die <a href="fiberpower_interface_d.html">Bedieneroberfläche</a> vereint eine enorme Flexibilität mit einem einfachen Einstieg.
+Deswegen ist diese Software für schnelle Berechnungen in der Industrie ebenso gut geeignet wie für komplexe Untersuchungen in der wissenschaftlichen Forschung.</p>
+<h2 class="togglediv">Die Produkt-Beschreibung</h2>
+<div>
+<p>Die folgende Broschüre gibt Ihnen einen Überblick über die Software:</p>
+<div id="wowslider-container2">
+<div class="ws_images"><ul>
+<li><img src="data2/images/slide1.jpg" alt="Slide1" title="Slide1" id="wows2_0"/></li>
+<li><img src="data2/images/slide2.jpg" alt="Slide2" title="Slide2" id="wows2_1"/></li>
+<li><img src="data2/images/slide3.jpg" alt="Slide3" title="Slide3" id="wows2_2"/></li>
+<li><img src="data2/images/slide4.jpg" alt="Slide4" title="Slide4" id="wows2_3"/></li>
+<li><img src="data2/images/slide5.jpg" alt="Slide5" title="Slide5" id="wows2_4"/></li>
+<li><img src="data2/images/slide6.jpg" alt="Slide6" title="Slide6" id="wows2_5"/></li>
+<li><img src="data2/images/slide7.jpg" alt="Slide7" title="Slide7" id="wows2_6"/></li>
+<li><img src="data2/images/slide8.jpg" alt="Slide8" title="Slide8" id="wows2_7"/></li>
+<li><img src="data2/images/slide9.jpg" alt="Slide9" title="Slide9" id="wows2_8"/></li>
+<li><img src="data2/images/slide10.jpg" alt="Slide10" title="Slide10" id="wows2_9"/></li>
+<li><img src="data2/images/slide11.jpg" alt="Slide11" title="Slide11" id="wows2_10"/></li>
+<li><img src="data2/images/slide12.jpg" alt="Slide12" title="Slide12" id="wows2_11"/></li>
+<li><img src="data2/images/slide13.jpg" alt="Slide13" title="Slide13" id="wows2_12"/></li>
+<li><img src="data2/images/slide14.jpg" alt="Slide14" title="Slide14" id="wows2_13"/></li>
+<li><img src="data2/images/slide15.jpg" alt="Slide15" title="Slide15" id="wows2_14"/></li>
+<li><img src="data2/images/slide16.jpg" alt="Slide16" title="Slide16" id="wows2_15"/></li>
+<li><img src="data2/images/slide17.jpg" alt="Slide17" title="Slide17" id="wows2_16"/></li>
+<li><img src="data2/images/slide18.jpg" alt="Slide18" title="Slide18" id="wows2_17"/></li>
+<li><img src="data2/images/slide19.jpg" alt="Slide19" title="Slide19" id="wows2_18"/></li>
+<li><img src="data2/images/slide20.jpg" alt="Slide20" title="Slide20" id="wows2_19"/></li>
+<li><img src="data2/images/slide21.jpg" alt="Slide21" title="Slide21" id="wows2_20"/></li>
+<li><img src="data2/images/slide22.jpg" alt="Slide22" title="Slide22" id="wows2_21"/></li>
+<li><img src="data2/images/slide23.jpg" alt="Slide23" title="Slide23" id="wows2_22"/></li>
+<li><img src="data2/images/slide24.jpg" alt="Slide24" title="Slide24" id="wows2_23"/></li>
+<li><img src="data2/images/slide25.jpg" alt="Slide25" title="Slide25" id="wows2_24"/></li>
+<li><img src="data2/images/slide26.jpg" alt="Slide26" title="Slide26" id="wows2_25"/></li>
+<li><img src="data2/images/slide27.jpg" alt="Slide27" title="Slide27" id="wows2_26"/></li>
+<li><img src="data2/images/slide28.jpg" alt="Slide28" title="Slide28" id="wows2_27"/></li>
+<li><img src="data2/images/slide29.jpg" alt="Slide29" title="Slide29" id="wows2_28"/></li>
+<li><img src="data2/images/slide30.jpg" alt="Slide30" title="Slide30" id="wows2_29"/></li>
+<li><img src="data2/images/slide31.jpg" alt="Slide31" title="Slide31" id="wows2_30"/></li>
+<li><img src="data2/images/slide32.jpg" alt="Slide32" title="Slide32" id="wows2_31"/></li>
+<li><img src="data2/images/slide33.jpg" alt="Slide33" title="Slide33" id="wows2_32"/></li>
+<li><img src="data2/images/slide34.jpg" alt="Slide34" title="Slide34" id="wows2_33"/></li>
+<li><img src="data2/images/slide35.jpg" alt="Slide35" title="Slide35" id="wows2_34"/></li>
+<li><img src="data2/images/slide36.jpg" alt="Slide36" title="Slide36" id="wows2_35"/></li>
+<li><img src="data2/images/slide37.jpg" alt="Slide37" title="Slide37" id="wows2_36"/></li>
+<li><img src="data2/images/slide38.jpg" alt="Slide38" title="Slide38" id="wows2_37"/></li>
+<li><img src="data2/images/slide39.jpg" alt="Slide39" title="Slide39" id="wows2_38"/></li>
+<li><img src="data2/images/slide40.jpg" alt="Slide40" title="Slide40" id="wows2_39"/></li>
+<li><img src="data2/images/slide41.jpg" alt="Slide41" title="Slide41" id="wows2_40"/></li>
+<li><img src="data2/images/slide42.jpg" alt="Slide42" title="Slide42" id="wows2_41"/></li>
+<li><img src="data2/images/slide43.jpg" alt="Slide43" title="Slide43" id="wows2_42"/></li>
+<li><img src="data2/images/slide44.jpg" alt="Slide44" title="Slide44" id="wows2_43"/></li>
+<li><img src="data2/images/slide45.jpg" alt="Slide45" title="Slide45" id="wows2_44"/></li>
+<li><img src="data2/images/slide46.jpg" alt="Slide46" title="Slide46" id="wows2_45"/></li>
+<li><img src="data2/images/slide47.jpg" alt="Slide47" title="Slide47" id="wows2_46"/></li>
+<li><img src="data2/images/slide48.jpg" alt="Slide48" title="Slide48" id="wows2_47"/></li>
+</ul></div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine2/wowslider.js"></script>
+<script type="text/javascript" src="engine2/script.js"></script>
+<p>Sie können die Seiten blättern, indem Sie auf der linken oder rechten Seite klicken.</p>
+<p>Sie können den Inhalt ebenfalls <a href="RP_Fiber_Power0754.pdf"><b>im PDF-Format herunterladen</b></a>.</p>
+</div>
+<h2 class="togglediv">Demo-Videos</h2>
+<div>
+<p>Unsere <a href="fiberpower_videos_d.html"><b>Demo-Videos</b></a> (aktualisiert in 08/2018) geben Ihnen einen direkten Eindruck vor allem davon, wie man unsere Software bedient.
+Sie können sich davon überzeugen, dass wir eine hochwertige Benutzeroberfläche entwickelt haben, die Ihnen den Start erleichtert und selbst höchst ausgefeilte Simulationen erlaubt.</p>
+<p>Hier ist unser Einführungs-Video:</p>
+<figure>
+<a href="fiberpower_video1_d.html"><img src="video/video1/video1.png" alt="quick tour through RP Fiber Power V7"></a>
+</figure>
+</div>
+<h2 class="togglediv">Anwendungen</h2>
+<div>
+<p><b>RP Fiber Power</b> lässt sich auf einen weiten Bereich von Komponenten und Geräten anwenden:</p>
+<table class="devicestable">
+<tr>
+<th>Komponenten und Geräte</th>
+<th style="width:250px;">Beispiele für Anwendungen</th>
+</tr>
+<tr>
+<td>
+<h3>einmodige und mehrmodige Fasern</h3>
+<p><img src="img/fiber.png" alt="fibers"></p>
+</td>
+<td>Berechnung von <a href="fiberpower_modes_d.html">Eigenschaften von Moden</a> wie z.&thinsp;B. Amplitudenprofile, effektive Modenflächen, effektive Brechungsindizes, chromatische Dispersion; Berechnung von Einkoppeleffizienzen; Simulation der Einflüsse von <a href="fiberpower_bend_loss_d.html">Biegungen</a>, <a href="fiberpower_self_focusing_d.html">nichtlinearer Selbstfokussierung</a> oder &ldquo;gain guiding&rdquo; auf die Strahlpropagation, Propagation von <a href="fiberpower_ho_solitons_d.html">Solitonen höherer Ordnung</a></td>
+</tr>
+<tr>
+<td>
+<h3>Faserkoppler, Doppelkernfasern, Mehrkernfasern,<br> integrierte Optik</h3>
+<p><img src="img/fiber_devices.png" alt="fiber devices"></p>
+</td>
+<td>Simulation der <a href="fiberpower_dcf_d.html">Pumpabsorption in Doppelkernfasern</a>, Analyse des <a href="fiberpower_bend_loss_d.html">Einflusses von Biegungen</a>, Lichtausbreitung in <a href="fiberpower_tapered_fiber_d.html">gestreckten Fasern</a>, <a href="fiberpower_coupler_d.html">Funktionsweise von Faserkopplern</a>, der Sättigung in Verstärkern, etc.</td>
+</tr>
+<tr>
+<td><h3>Faserverstärker</h3>
+<p><img src="img/fiber_amplifier.png" alt="fiber amplifier"></p>
+</td>
+<td>Ermittlung der <a href="fiberpower_edfa_d.html">Verstärkung und Sättigungscharakteristik</a> (im cw-Fall oder bei der <a href="fiberpower_pamp_d.html">Pulsverstärkung</a>), Analyse des Energietransfers in Erbium-Ytterbium-dotierten Verstärkerfasern, Einfluss von Quenching-Effekten, <a href="fiberpower_ase_d.html">verstärkte Spontanemission</a> (ASE) etc. in einzelnen Verstärkerstufen oder mehrstufigen Verstärkersystemen</td>
+</tr>
+<tr>
+<td><h3>Faseroptische Datenübertragung</h3>
+<p><img src="img/fiber_optic_link.png" alt="fiber-optic link"></p>
+</td>
+<td>Analyse <a href="fiberpower_data_trans_d.html">dispersiver und nichtlinearer Signalverzerrungen</a>, Einfluss von Verstärkerrauschen, Optimierung des Nichtlinearitäts-Managements und der Platzierung von Verstärkerstufen</td>
+</tr>
+<tr>
+<td>
+<h3>Faserlaser</h3>
+<p><img src="img/fiber_laser.png" alt="fiber laser"></p>
+</td>
+<td>Analyse und Optimierung der <a href="fiberpower_ydfl_d.html">Leistungskonversionseffizienz</a>, des Wellenlängen-Abstimmbereichs, der <a href="fiberpower_qs_laser_d.html">Q-switching-Dynamik</a></td>
+</tr>
+<tr>
+<td>
+<h3>Ultrakurzpuls-Faserlaser und -verstärker</h3>
+<p><img src="img/figure_of_eight_laser.png" alt="mode-locked fiber laser"></p>
+</td>
+<td>Untersuchungen der <a href="fiberpower_ml_fl_d.html">Pulsformung</a>, von Stabilitätsgrenzen, Einfluss von Nichtlinearitäten und chromatischer Dispersion, <a href="fiberpower_cpa_d.html">Chirped-Pulse-Verstärkung</a>, Verstärkung <a href="fiberpower_parpulse_d.html">parabolischer Pulse</a>, optimierte Pulskompression, Empfindlichkeit auf Rückreflexe, <a href="fiberpower_sc_d.html">Superkontinuum-Erzeugung</a></td>
+</tr>
+<tr>
+<td><h3>Gepulste und Ultrakurzpuls-Bulk-Laser und -verstärker</h3>
+<p><img src="img/regenerative_amplifier.png" alt="regenerative amplifier"></p>
+</td>
+<td>Untersuchungen des <a href="fiberpower_qs_yag_d.html">Güteschaltens</a>, der Moden&shy;kopplung, Ermittlung der benötigten Parameter sättigbarer Absorber, Empfindlichkeit auf Rückreflexe, Stabilitätsgrenzen der <a href="fiberpower_regen_d.html">regenerativen Verstärkung</a></td>
+</tr>
+</table>
+<p>Für weitere Informationen:</p>
+<ul>
+<li>Sehen Sie die Liste der <a href="fiberpower_features_d.html"><b>Features</b></a> und die Beschreibung des verwendeten <a href="fiberpower_model_d.html"><b>physikalischen Modells</b></a> an.</li>
+<li>Betrachten Sie unsere breite Palette von <a href="fiberpower_case_studies_d.html"><b>Fallstudien</b></a> und die <a href="fiberpower_videos_d.html"><b>Video-Demos</b></a>!</li>
+<li>Laden Sie die <a href="RP_Fiber_Power0754.pdf"><b>PDF-Broschüre von RP Fiber Power</b></a> (45 Seiten, englisch) herunter.</li>
+<li>Werfen Sie einen Blick auf die <a href="fiberpower_faq_d.html"><b>häufig gestellten Fragen</b></a>.</li>
+<li>Beachten Sie unser kostenloses Tutorial &quot;<a href="passive_fiber_optics.html"><b>Passive Fiber Optics</b></a>&quot;, für das die Software intensiv benutzt wurde, sowie das Tutorial &quot;<a href="tutorial_modeling.html"><b>Modeling of Fiber Amplifiers and Lasers</b></a>&quot;, das Konzepte und Methoden erklärt.</li>
+</ul>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<div class="software_questions">
+<p>Wenn Sie noch <b>Fragen</b> haben oder ein <b>Angebot</b> benötigen:</p>
+<div class="button action"><a href="software_contact_d.html"><b>Kontaktieren Sie uns!</b></a></div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:53:44 GMT -->
+</html>

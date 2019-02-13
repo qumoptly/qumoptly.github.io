@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_08_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Data Grids for Numerical Beam Propagation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-08-02">
+<meta name="description" content="A summary of this blog article: Numerical beam propagation is a very versatile technique in optics and photonics. However, the choice of grid parameters is not a trivial matter; this issue is discussed in some detail here.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2018_08_02.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Data Grids for Numerical Beam Propagation</h1>
+<div class="posting_details">
+<p>Posted on 2018-08-02 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2018_08_02.html">https://www.rp-photonics.com/software_news_2018_08_02.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Numerical beam propagation is a very versatile technique in optics and photonics. However, the choice of grid parameters is not a trivial matter; this issue is discussed in some detail here.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>For simulations in the area of optics and photonics (e.g. with our software <a href="fiberpower.html"><b>RP Fiber Power</b></a>), one often applies numerical beam propagation techniques.
+Compared with a <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">mode</a>-based approach, that has the advantage that beam propagation can be done even in the most complicated situations, where it would be hard to calculate the propagation modes &ndash; for example due to their huge number (making that approach inefficient) or because the properties of the medium change in the longitudinal direction.</p>
+<p>For numerical beam propagation, we need to represent the optical field(s) with complex amplitudes on some discrete numerical grid.
+The question arises what an appropriate choice of grid size is, including the grid spacing in the longitudinal and transverse directions.</p>
+<h2 class="togglediv">Required Extension of the Grid</h2>
+<div>
+<p>Obviously, the grid should span the whole volume in which we expect significant optical fields.
+For an optical fiber, for example, we should at least cover a volume somewhat extending beyond the fiber core and of course over the full length of fiber.
+If we want to study not only guided modes, but also <a href="cladding_modes.html" title="cladding modes: modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a>, we need to cover not only the area of the core, but that of the full cladding &ndash; which may be much larger.
+For a given grid spacing (see below), that can lead to a very large number of points and eventually to excessive memory and CPU time requirements; we may hit some intrinsic limitations of the method, at least if we need to treat a relatively long piece of fiber.</p>
+<p>Note also that typically any fields reaching an edge of the numerical grid will be reflected there &ndash; whether that is physically realistic or not.
+Even weak reflections can lead to pronounced artificial interference effects and should therefore be avoided.
+One method for that is to include an artificial absorber near the edges.
+One might think that one needs only very few grid points for that if the absorption is made very strong.
+However, a too rapid increase of that absorption can also cause parasitic reflections.
+Therefore, one may require a substantial number of grid points for that absorbing region.</p>
+<p>There are cases where some light can get into the fiber cladding (e.g. due to strong bending of the fiber), but ultimately we are interested only in the light remaining in the fiber core.
+We may then use a numerical grid which does not cover much more than the fiber core and contains some artificial absorption which kills all non-guided modes.
+Of course, that absorption should grow only somewhat outside the core, such that it does not attenuate the guided modes, which can also somewhat extend into the cladding.</p>
+</div>
+<h2 class="togglediv">Transverse Grid Resolution</h2>
+<div>
+<p>The transverse grid resolution should of course be fine enough to allow for a proper sampling of the intensity profiles.
+Not only the optical intensity, but also the optical phase should not change too much from one grid point to the next one.
+Therefore, for example a strongly diverging beam requires a finer transverse grid resolution.</p>
+<p>On the other hand, for a reasonable numerical accuracy it is often not necessary that you have a large number of grid points within one beam diameter.
+I have sometimes been surprised to see that one can get fairly good results even with a grid which looks rather coarse &ndash; one can still use interpolated amplitudes for diagrams, for example.</p>
+<p>Considering a plane wave with a certain wavelength and angle <span class="eqn_il"><span class="greek">&theta;</span></span> against the fiber axis, we have a transverse wave vector component <span class="eqn_il">sin&thinsp;<span class="greek">&theta;</span>&thinsp;2&thinsp;<span class="greek">&pi;</span>&thinsp;/&thinsp;<span class="greek">&lambda;</span></span>.
+For a transverse grid resolution <span class="eqn_il"><span class="greek">&delta;</span><i>x</i></span>, that implies a phase change of <span class="eqn_il">sin&thinsp;<span class="greek">&theta;</span>&thinsp;2&thinsp;<span class="greek">&pi;</span>&thinsp;<span class="greek">&delta;</span><i>x</i>&thinsp;/&thinsp;<span class="greek">&lambda;</span></span> between two grid points.
+For a reasonable accuracy, that should be kept well below 1&nbsp;rad.</p>
+<p>If we have an optical fiber with a certain <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, we can calculate the maximum beam angle (e.g. in air) and from that the required grid resolution.
+We find that high-NA fibers require finer grids and thus more memory and computation time than low-NA fibers.</p>
+<p>In a script-based software like <a href="fiberpower.html"><b>RP Fiber Power</b></a>, one can of course easily have an automatic calculation of the grid parameters based on properties of the fiber and possibly some input beam.</p>
+</div>
+<h2 class="togglediv">Longitudinal Grid Resolution</h2>
+<div>
+<p>Concerning the longitudinal grid resolution, we can again apply the rule that there should be no strong changes of field amplitudes within one grid point spacing &ndash; but that simple rule is not always sufficient.
+For example, light in a particular fiber mode will not expand at all during propagation, but that does of course not mean that you can use an arbitrarily large grid spacing.
+One can refine the mentioned rule by applying it separately to each physical effect acting on the propagating light &ndash; for example the effects of the inhomogeneous <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> distribution and the <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">beam divergence</a>.
+For the latter, you may simply calculate the <a href="rayleigh_length.html" title="Rayleigh length: the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a> from the fundamental mode radius; that tells you on which length scale the beam divergence will have substantial effects.</p>
+<p>In free-space propagation &ndash; or for propagation in an optically homogeneous medium &ndash; one may actually use very large longitudinal steps, assuming that the software is based on a Fourier method.
+This is because essentially the software decomposes the field into plane waves, and for each of those it knows exactly how they propagate over large distances.</p>
+<p>Unfortunately, applications with free-space propagation can have their own numerical challenges.
+For example, you may need a very large grid for each plane if the beam can reach a large transverse extension at some points, and at the same time you need a very small transverse grid spacing e.g. if the beam is somewhere focused to a small spot &ndash; or even if it is just strongly divergent or convergent at some point.
+In such a situation, you end up using very large grids.</p>
+<figure>
+<img src="img/fiberpower_tapered_fiber4.png" alt="">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Example for a simulation of numerical beam propagation in an optical fiber where the bending becomes stronger and stronger along the length.
+</figcaption>
+</figure>
+</div>
+<h2 class="togglediv">How to Know Whether the Grid Resolution is Sufficient?</h2>
+<div>
+<p>As explained above, there are various useful rules for determining upper limits for the grid spacing in longitudinal and transverse directions.
+However, they do not always lead to completely reliable results.
+For example, I have found that a substantially finer transverse resolution may be required for <a href="step_index_fibers.html" title="step-index fibers: optical fibers with a step-index refractive index profile">step-index fibers</a>; the rapid refractive index step within one grid point is bad for the numerical accuracy.
+In some cases, it is actually convenient to slightly smoothen the refractive index profile, which is also realistic, since real fibers also usually exhibit a somewhat smoothened transition due to diffusion in the fabrication process.
+Therefore, our software offers a function with which some smoothening of the index profile can be done very easily.</p>
+<p>In case of doubt, it is always a good idea to check whether the obtained results change substantially e.g. with a two times finer grid resolution, or with a larger extension of the grid.</p>
+</div>
+<h2 class="togglediv">Conclusions</h2>
+<div>
+<p>You see that the choice of the numerical grid parameters is not a trivial matter.
+Depending on the modeled situation &ndash; and often also depending on what exactly you are interested in &ndash; you may have to apply different rules.
+It would be hard for a software to do all that automatically.
+Therefore, one requires some level of technical understanding to apply such beam propagation techniques &ndash; even if you don't have to implement the algorithm yourself.
+Obviously, that understanding is much easier to build up if you have a software like ours which comes with high-quality documentation and <a href="software_support.html">technical support</a>.
+Further, in practice you can profit a lot from a flexible software, where you can e.g. have the grid parameters automatically calculated from your inputs.
+Then you can concentrate on the purpose of your simulation and get useful results quickly.</p>
+<p>Advice from an experienced support person can also be vital in cases where you run into using huge numerical grids.
+Even in cases which look hopeless at a first glance, one can often find quite practical solutions, using certain non-obvious tricks.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_08_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+</html>

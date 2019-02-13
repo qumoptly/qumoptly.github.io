@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/modeling_examples_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:50:57 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Beispiele f&uuml;r Modelle in der Lasertechnologie</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Hier werden einige konkrete Beispiele für Modelle in der Lasertechnologie genannt.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Photonik, Software, Computer, Modellierung, Laserentwicklung">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="modeling_examples_d.html"; cat="S"; shownbanner=""; ref="software_modeling_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="modeling_examples.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html" class="sel">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modellierung in der Photonik</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="software_modeling_d.html">Was ist ein Modell?</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="modeling_examples_d.html">Beispiele</a></td>
+<td class="sub_nav"><a class="sub_n" href="transparent_laser_d.html">Der transparente Laser</a></td>
+<td class="sub_nav"><a class="sub_n" href="modeling_get_started_d.html">Der Einstieg</a></td>
+</tr>
+</table>
+<h2>Beispiele für Modelle in der Lasertechnologie</h2>
+<p>Im Folgenden finden Sie einige Beispiele für die Anwendung von Computermodellen in der Lasertechnologie.
+Siehe hierzu auch unser <a href="tutorial_modeling.html"><b>Tutorial über Modellierung</b></a>.</p>
+<h3>Lichtverstärkung in Laserkristallen</h3>
+<p>Es ist wohl bekannt, dass Licht durch <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulierte Emission</a> z.&thinsp;B. in <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">Laserkristallen</a> verstärkt werden kann.
+Dazu kommen aber Effekte wie <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers">Verstärkungssättigung</a>, <a href="gain_guiding.html" title="gain guiding: guiding of light based on spatially inhomogeneous optical gain">gain guiding</a> und Beugung.
+Wie wirken diese Effekte nun im Detail zusammen?
+Ein klares Verständnis solcher Prozesse ist für die effiziente Entwicklung von Lasern unabdingbar.</p>
+<p>Ein Modell für die Verstärkung eines Laserstrahls in einem <a href="bulk_lasers.html" title="bulk lasers: lasers based on bulk crystals as gain media">Bulk-Laser</a> kann die folgenden Dinge enthalten:</p>
+<figure class="right" style="width:350px;">
+<img src="img/beam_in_resonator.png" alt="laser beam in resonator">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Ein Laserstrahl in einem Laserresonator. Numerische Simulationen können zeigen, wie genau der Verstärkungsprozess funktioniert, wie stark Effekte wie gain guiding sind, ob höhere Resonator Moden angeregt werden und die Strahlqualität verschlechtern, wie genau der Laser auf Dejustage reagiert, etc.
+</figcaption>
+</figure>
+<ul>
+<li>Der <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">Laserkristall</a> enthält laseraktive Ionen mit einer gewissen <a href="doping_concentration.html" title="doping concentration: the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">Dotierungskonzentration</a>.</li>
+<li>Die interne Funktion der laseraktiven Ionen wird beschrieben durch ein Energieniveauschema und <a href="rate_equation_modeling.html" title="rate equation modeling: a method of modeling the dynamics of laser gain media">Ratengleichungen</a>, die Parameter wie wellenlängenabhängige <a href="transition_cross_sections.html" title="transition cross sections: material parameters for quantifying the likelihood or rate of optical transition events">Wirkungsquerschnitte</a> enthalten.</li>
+<li>Der Laserstrahl wird durch komplexe Feldamplituden auf einem numerischen Gitter beschrieben, welches den Laserkristall und evtl. auch andere Komponenten (in manchen Fällen den gesamten Laserresonator) umfasst.</li>
+</ul>
+<p>Eine geeignete Software wie z.&thinsp;B. <a href="fiberpower_d.html"><b> RP Fiber Power</b></a> kann den Durchgang des Laserkristalls durch den Laserkristall (oder auch viele Umläufe im Laserresonator) simulieren, wobei Effekte wie die stimulierte Emission, Beugung, gain guiding, sättigbare Absorption etc. berücksichtigt werden.
+(Der Benutzer der Software muss sich natürlich nicht mit den Details der Berechnung dieser Effekte befassen.)
+Als Beispiel können Sie eine <a href="fiberpower_qs_yag_bp.html">Fallstudie über einen aktiv gütegeschalteten Laser</a> betrachten.</p>
+<p>Einfachere Modelle nehmen ein festes transversales Intensitätsprofil des Laserstrahls an und propagieren effektiv nur die optische Leistung anstatt des gesamten Strahlprofils.
+Sie können sehr viel schneller berechnet werden, sind aber nur anwendbar, wenn das Strahlprofil bekanntermaßen kaum durch zusätzliche Effekte wie gain guiding beeinflusst wird.</p>
+<h3>Lichtverstärkung in aktiven Fasern</h3>
+<p>Licht kann auch in <a href="rare_earth_doped_fibers.html" title="rare-earth-doped fibers: optical glass fibers which are doped with rare earth ions">dotierten Fasern</a> verstärkt werden.
+Die grundlegenden physikalischen Vorgänge sind die gleichen wie in Laserkristallen.
+Trotzdem sind einige Aspekte hier oft ganz anders:</p>
+<ul>
+<li>In vielen Fällen kann das transversale Strahlprofil als allein durch den Wellenleiter festgelegt betrachtet werden.
+Dies vereinfacht die numerische Propagation stark, weil eine Leistungspropagation genügt (siehe unser <a href="tutorial_modeling3.html">Tutorial über Modellierung</a>).</li>
+<li>In den meisten Fällen kommen Ionen mit <a href="four_level_and_three_level_gain_media.html" title="four-level and three-level gain media: laser gain media without/with reabsorption from the lower laser level">Quasi-Dreiniveau-Systemen</a> zum Einsatz, wo die Effekte von Rayabsorption berücksichtigt werden müssen.</li>
+<li>Die optischen Intensitäten sind oft sehr hoch, was starke Verstärkungssättigung wie auch <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nichtlineare Effekte</a> verursacht.</li>
+</ul>
+<figure>
+<img src="img/fiber_amplifier.png" alt="erbium-doped fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Schematische Aufbau eines <a href="erbium_doped_fiber_amplifiers.html" title="erbium-doped fiber amplifiers: fiber amplifiers based on erbium-doped optical fibers">erbium-dotierten Faserverstärkers</a>. Die Prozesse in der aktiven Faser können mit einem Verstärkermodell gut analysiert und optimiert werden. 
+</figcaption>
+</figure>
+<p>Eine geeignete Software wie z.&thinsp;B. <a href="fiberpower_d.html"><b> RP Fiber Power</b></a> kann eine effiziente Leistungspropagation anwenden, oder benötigt auch eine volle numerische Strahlpropagation.
+Sie kann nicht nur Quasi-Dreiniveau-Systeme korrekt berechnen, sondern sogar mit beliebigen benutzerdefinierten Energieniveauschemas arbeiten.</p>
+<h3>Erzeugung ultrakurzer Lichtpulse in einem modengekoppelten Laser</h3>
+<figure class="right" style="width:360px;">
+<img src="img/ml_laser_cavity.png" alt="cavity of mode-locked laser">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Resonatoraufbau eines typischen Film des Sekundenlasers.
+</figcaption>
+</figure>
+<p>In einem <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">modengekoppelten Laser</a> zirkuliert ein einziger ultrakurzer Puls (oder manchmal eine Folge von Pulsen) im Leserresonator.
+Bei jedem Resonatorumlauf wirkt eine Reihe von Effekten wie z.&thinsp;B. wellenlängenabhängige Verstärkung und Leistungsverluste, <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatische Dispersion</a> und <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">Nichtlinearitäten</a> auf den Puls, und zusätzlich auch zeitabhängige Verluste in einem <a href="optical_modulators.html" title="optical modulators: devices allowing one to manipulate properties of light beams, such as the optical power or phase">optischen Modulator</a> oder einem <a href="saturable_absorbers.html" title="saturable absorbers: light absorbers with a degree of absorption which is reduced at high optical intensities">sättigbaren Absorber</a>.
+Im Idealfall wird nach vielen Umläufen ein stationärer Zustand erreicht, sodass durch die Kombination der genannten Effekte der Puls insgesamt nach jedem kompletten Resonatorumlauf unverändert reproduziert wird.
+In anderen Fällen gibt es einen solchen stationären Zustand nicht; Instabilitäten können auf verschiedene Weisen entstehen, die im Experiment häufig kaum unterscheidbar sind.</p>
+<p>Ein Modell für einen modengekoppelten Laser kann die folgenden Dinge enthalten:</p>
+<ul>
+<li>Der zirkulierende Puls wird durch ein Feld komplexer Amplituden in der Zeitdomäne oder in der Frequenzdomäne repräsentiert.
+(Eine schnelle Fourier-Transformation (FFT) kann die Profile zwischen beiden Domänen umrechnen.)</li>
+<li>Jedes optische Element (beispielsweise der Laserkristall, ein dispersiver Spiegel, ein Modulator oder ein sättigbarer Absorber) wird durch gewisse Größen charakterisiert, die seinen Effekt auf den zirkulierenden Puls beschreiben.</li>
+</ul>
+<figure class="right" style="width:329px;">
+<img src="img/figure_of_eight_laser.png" alt="figure-of-eight laser">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Aufbau eines modengekoppelten Faserlasers.
+</figcaption>
+</figure>
+<p>Eine geeignete Software wie z.&thinsp;B. <a href="propulse_d.html"><b> RP ProPulse</b></a> oder <a href="fiberpower_d.html"><b> RP Fiber Power</b></a> kann die Entwicklung des Pulses in vielen Umläufen simulieren.
+Man kann damit beispielsweise die Pulsparameter als Funktion der Anzahl von Umläufen in einem Diagramm auftragen, die Pulsform in der Zeitdomäne oder Frequenzdomäne an jedem Ort und zu jeder beliebigen Zeit inspizieren oder die Pulsparameter im stationären Zustand als Funktion anderer Parameter auftragen lassen.</p>
+<p>Mit einem solchen Werkzeug kann man beispielsweise</p>
+<ul>
+<li>die Pulsparameter im stationären Zustand und ihre Abhängigkeit von verschiedenen Einflüssen berechnen,</li>
+<li>die Wichtigkeit diverser störender Effekte untersuchen und</li>
+<li>mögliche Ursachen von Instabilitäten testen.</li>
+</ul>
+<p>Auf der Basis der resultierenden Erkenntnisse kann dann ein optimiertes Laserdesign für die beste Performance und/oder die geringste Sensitivität gegenüber diversen Einflüssen entwickelt werden.</p>
+<p>Besonders bei Faserlesern ist das Zusammenwirken der Effekte meist dermaßen komplex, dass man ohne numerische Simulationen (d.&thinsp;h. allein auf der Basis eines guten grundlegenden Verständnisses der Technologie) nicht beurteilen könnte, welche Pulsparameter sich ergeben, wo die Stabilitätsgrenzen liegen, etc.
+Die Arbeit ohne ein Computermodell würde also bedeuten, im Dunkeln herumzustochern.</p>
+<h3>Verstärkersysteme für ultrakurze Pulse</h3>
+<p>Für viele Anwendungen benötigt man Ultra kurze Lichtpulse mit hohen Pulsenergien und extrem hohen Spitzenleistungen.
+Typischerweise erzeugt man zunächst Pulse geringer Energie in einem modengekoppelten Laser, benutzt dann einen <a href="pulse_pickers.html" title="pulse pickers: electrically controlled optical switches used for extracting single pulses from a pulse train">Pulse Picker</a> für eine starke Reduktion der Pulsrepetitionsrate und schickt den resultierenden Pulszug durch eine Kette <a href="ultrafast_amplifiers.html" title="ultrafast amplifiers: amplifiers for ultrashort optical pulses">optischer Verstärker</a>.
+Verschiedene Arten von Verstärkern können eingesetzt werden, beispielsweise <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">Faserverstärker</a> (mit hoher Verstärkung, hoher Verstärkungsbandbreite und guter Effizienz, aber starken nichtlinearen Effekten) und Bulk-Verstärker basierend auf Laserkristallen.</p>
+<p>Besonders bei Verstärkersystemen mit mehreren Stufen sind numerische Simulationen unentbehrlich, um ein gutes Verständnis davon zu entwickeln, was im Verstärkersystem vor sich geht und wie die Systemperformance optimiert werden kann.
+Eine Menge technischer Details können hierbei relevant sein:</p>
+<ul>
+<li>In jeder Verstärkerstufe können wesentliche Effekte von <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers">Verstärkungssättigung</a>, <a href="gain_narrowing.html" title="gain narrowing: the phenomenon that the bandwidth of light can be reduced during amplification in a medium with a limited gain bandwidth">gain narrowing</a> sowie nichtlineare Verzerrungen auftreten.</li>
+<li>Systeme mit hoher Verstärkung erzeugen auch <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">verstärkte spontane Emission</a> (ASE) auf einem hohen Leistungsniveau.
+Häufig muss man solche ASE-Effekte so weit wie möglich daran hindern, von einer Verstärkerstufe in die nächste oder in die vorhergehende zu gelangen &ndash; etwa mithilfe von Bandpassfiltern, <a href="faraday_isolators.html" title="Faraday isolators: optical isolators based on the Faraday effect">Faraday-Isolatoren</a> oder optischen Schaltern.
+Deren Effekte müssen natürlich im Modell angemessen behandelt werden.</li>
+<li>In vielen Fällen wird die Methode der <a href="chirped_pulse_amplification.html" title="chirped-pulse amplification: a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a> (CPA) genutzt, wobei hochdispersive optische Elemente wie Beugungsgitter zum Einsatz kommen.</li>
+</ul>
+<p>Eine geeignete Software wie z.&thinsp;B. <a href="fiberpower_d.html"><b> RP Fiber Power</b></a> kann nicht nur die Eigenschaften der erzeugten Pulse in komplexen Situationen berechnen (mit mehreren Verstärkerstufen, ASE-Effekten etc.), sondern bietet auch eine hohe Flexibilität, um z.&thinsp;B. beliebige Parameter zu variieren, dynamische Effekte zu untersuchen, etc.</p>
+<figure>
+<img src="img/fiberpower_srs3.png" alt="spectrogram of amplified pulse with SRS influence">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Speckprogramm eines &ldquo;gechirpten&rdquo; verstärkten Pulses, bei dem ein wesentlicher Teil der optischen Energie durch stimulierte <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman-Streuung</a> zu niedrigeren Energien verschoben wurde.
+Das Diagramm wurde einer <a href="fiberpower_srs_d.html">Fallstudie</a> mit der Software RP Fiber Power entommen.
+</figcaption>
+</figure>
+<h3>Weitere Beispiele</h3>
+<p>Als weitere Beispiele können Sie eine Vielzahl von Fallstudien verwenden, die mit einigen unserer Softwareprodukte erstellt worden:</p>
+<ul>
+<li><a href="fiberpower_case_studies_d.html"><b>RP Fiber Power</b></a> (anwendbar auf passive Fasern, Faser Laser und Faserverstärker, oft auch auf Bulk-Laser)</li>
+<li><a href="resonator_demos_d.html"><b>RP Resonator</b></a> (Design von Laserresonatoren)</li>
+<li><a href="propulse_demos_d.html"><b>RP ProPulse</b></a> (Pulspropagation, beispielsweise in modengekoppelten Lasern und synchrongepumpten optischen parametrischen Oszillatoren)</li>
+<li><a href="coating_demos.html"><b>RP Coating</b></a> (Design von Dünnschichtoptiken)</li>
+</ul>
+<p>Jedes dieser Beispiele zeigt, dass die Computermodellierung nicht nur die erwartete Performance ergibt, sondern auch die internen Details aufdeckt, deren Verständnis für die Optimierung solcher Geräte oder Komponenten essenziell ist.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/modeling_examples_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:50:57 GMT -->
+</html>

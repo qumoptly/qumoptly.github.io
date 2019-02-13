@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/laser_design.html?banner=laser_design by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - laser design, optimized, performance, development, design review</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2017-03-29">
+<meta name="description" content="Lasers need to be carefully designed such that various design goals are achieved, e.g. in terms of output power, beam quality or pulse properties.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="laser design, optimized, performance, development, design review">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="laser_design214a.html?banner=laser_design"; cat="E"; shownbanner=""; ref="buyersguide_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Laser Design</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_laser_design1fbf.html?s=vbox" class="bg_bgheading">Suppliers for laser design services</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_laser_design1fbf.html?s=vbox" class="redlink"><b>13 suppliers for laser design services</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.raab-photonik.de/en/competences/optical-design/" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="laser design" rel="nofollow" class="bg externallink"><img src="bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="services_manu.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="laser design" rel="nofollow" class="bg externallink"><img src="bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_laser_design1fbf.html?s=vbox">List of suppliers for<br>laser design</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h1>Help on Laser Designs</h1>
+<p>Well working laser designs need to be based on a thorough theoretical understanding of laser physics and on various calculations.
+For example, resonator designs for bulk lasers should be checked and possibly optimized in terms of alignment sensitivity.
+RP Photonics offers competent help in this area as well as powerful simulation software.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the design of a laser device, or the process of working out such a design</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laserdesign</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite37ee.html?article=laser%20design">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>The term <em>design</em> can have two different meanings.
+In some cases, it is meant to be a detailed description of a device, including e.g. used parts, how they are put together, and important operation parameters.
+In other cases, the term denotes the process leading to such a description.
+This article discusses some important aspects for the design of laser devices, such as <a href="diode_pumped_lasers.html" title="diode-pumped lasers: solid-state lasers which are pumped with laser diodes">diode-pumped</a> <a href="solid_state_lasers.html" title="solid-state lasers: lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state lasers</a>, or similar devices such as <a href="optical_parametric_oscillators.html" title="optical parametric oscillators: coherent light sources based on parametric amplification within an optical resonator">optical parametric oscillators</a>.
+A separate article on <a href="laser_development.html" title="laser development: the process of developing a laser device">laser development</a> gives additional information.</p>
+<h2 class="togglediv">Defining the Design Goals</h2>
+<div>
+<p>Before a design is made, the <em>design goals</em> must be carefully evaluated.
+These should include not only the central performance parameters such as output power and wavelength; many more details can be relevant:</p>
+<ul>
+<li>optimum performance, e.g. in terms of output power, <a href="wall_plug_efficiency.html" title="wall-plug efficiency: total electrical-to-optical power efficiency of a laser system">power efficiency</a>, <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>, <a href="brightness.html" title="brightness: a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: synonymous with radiance or luminance">brightness</a>, <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity</a> and/or <a href="phase_noise.html" title="phase noise: noise of the optical phase of a beam or of an electric signal">phase noise</a>, long-term stability (e.g. of the output power or the <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequency</a>), <a href="timing_jitter.html" title="timing jitter: fluctuations of the temporal positions of pulses">timing jitter</a>, etc.</li>
+<li>compact and convenient setup, ease of operation (e.g. simple turn-on procedure, simple <a href="wavelength_tuning.html" title="wavelength tuning: the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a>, no need for realignment)</li>
+<li>maximum flexibility (e.g. for changing operation parameters)</li>
+<li>reliability, low maintenance requirements, simple and cost-effective error analysis, maintenance and repair</li>
+<li>minimum sensitivity to vibrations, temperature changes, electromagnetic interference, aging of components</li>
+<li>low production cost, i.e., a small number of parts, simple <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment</a> and testing, avoiding the use of parts which are expensive, sensitive, or difficult to obtain</li>
+</ul>
+<aside class="textbox tb_right greenmargin" style="width:250px;">
+<h2>In Short</h2>
+<p>Details of the design of a laser product can have a strong impact on its performance, reliability, flexibility, and manufacturing cost.
+For an efficient development process, it is essential</p>
+<ul>
+<li class="ta_left">to be aware of all the design goals,</li>
+<li class="ta_left">to know the design properties required for reaching them,</li>
+<li class="ta_left">and to use a proper laser design (which is worked out at the beginning)</li>
+</ul>
+</aside>
+<p>It is certainly advisable to work out carefully the list of these requirements for the particular case before investing any significant resources in <a href="laser_development.html" title="laser development: the process of developing a laser device">laser development</a>, because it can easily be much more expensive and time-consuming to introduce additional properties into an already existing device.</p>
+</div>
+<h2 class="togglediv">Important Aspects of Laser Designs</h2>
+<div>
+<p>The properties of the designed laser device are largely determined by the design details, not only by the parts used.
+Some aspects are particularly important:</p>
+<ul>
+<li>general design parameters, such as <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">resonator</a> length (influencing compactness, <a href="wavelength_tuning.html" title="wavelength tuning: the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">tuning</a> issues, frequency stability, etc.), pump intensity</li>
+<li>selection of <a href="gain_media.html" title="gain media: media for laser amplification">gain medium</a> (e.g. a <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a>) and pump source, suitable choice of geometry (e.g. rod or <a href="thin_disk_lasers.html" title="thin-disk lasers: solid-state bulk lasers having a very thin disk of laser-active material as the gain medium">thin disk</a>, <a href="side_pumping.html" title="side pumping: a technique of pumping a solid-state laser in directions which are approximately transverse to its beam direction">side pumping</a> or <a href="end_pumping.html" title="end pumping: a technique of optically pumping a laser medium in a direction along the laser beam">end pumping</a>), <a href="doping_concentration.html" title="doping concentration: the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a>, crystal length, etc.</li>
+<li>pump setup (e.g. for <a href="diode_pumped_lasers.html" title="diode-pumped lasers: solid-state lasers which are pumped with laser diodes">diode-pumped lasers</a>), influencing output power and <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>, long-term stability, and the ease of exchanging pump diodes</li>
+<li>optimum type of <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonator</a> (e.g. as linear or <a href="ring_lasers.html" title="ring lasers: lasers with a ring resonator">ring laser</a>, with monolithic or with discrete elements) and optimized <a href="resonator_design.html" title="resonator design: the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>, influencing aspects such as the number of parts, the output power and beam quality, <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment tolerances</a>, sensitivity to <a href="thermal_lensing.html" title="thermal lensing: a lensing effect induced by temperature gradients">thermal lensing</a>, mechanical stability and drifts</li>
+<li>selection and placement of <a href="laser_mirrors.html" title="laser mirrors: high-quality mirrors used in laser resonators and other optical setups">laser mirrors</a> and intracavity components for <a href="wavelength_tuning.html" title="wavelength tuning: the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a>, generation of short <a href="pulses.html" title="pulses: flashes of light">pulses</a> via <a href="mode_locking.html" title="mode locking: a group of techniques for generating ultrashort pulses in lasers">mode locking</a>, <a href="dispersion_compensation.html" title="dispersion compensation: the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a>, frequency stabilization, etc.</li>
+<li>mechanical housing, influencing mechanical stability, efficiency of cooling, temperature drifts, ease of maintenance, and <a href="laser_safety.html" title="laser safety: safety of the use of laser devices">safety issues</a></li>
+<li>electronic equipment, e.g. for <a href="stabilization_of_lasers.html" title="stabilization of lasers: measures applied to lasers in order to improve their stability in terms of output power, optical frequency, or other quantities">stabilizing the output power</a>, controlling the laser wavelength, monitoring the status of pump diodes or temperatures, ensuring <a href="laser_safety.html" title="laser safety: safety of the use of laser devices">safe operation</a></li>
+<li>proper documentation, including a part list (possibly with suppliers), mechanical designs, alignment and testing procedures, design ideas, possibly optional extensions and limitations for modifying operation parameters</li>
+</ul>
+<p>This list, which is certainly not yet complete, shows that proper laser designs are not a trivial matter, but are essential for achieving full customer satisfaction, cost efficiency, and flexibility for future developments.</p>
+</div>
+<h2 class="togglediv">What is Needed for Designing Lasers</h2>
+<div>
+<p>Designing a laser is a challenging task.
+The following are definitely required:</p>
+<ul>
+<li>a detailed understanding of the requirements, which may include some understanding of the application</li>
+<li>a detailed understanding of all the relevant physical effects, such as laser amplification, <a href="thermal_lensing.html" title="thermal lensing: a lensing effect induced by temperature gradients">thermal lensing</a>, <a href="resonator_modes.html" title="resonator modes: modes of an optical or microwave resonator">resonator modes</a>, <a href="laser_noise.html" title="laser noise: fluctuations of various parameters of laser light, such as the optical power and phase">laser noise</a>, etc., and their interaction</li>
+<li>the essential data, e.g. of <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">laser crystals</a></li>
+<li>the ability to reduce the complexity to a practical level without losing important details</li>
+<li>flexible <a href="software.html">software</a> for calculations and simulations</li>
+<li>practical experience with lasers, enabling one to recognize typical problems, correctly interpret experimental observations, etc.</li>
+</ul>
+<p>It is clear that software alone is by no means sufficient to work out good laser designs.</p>
+</div>
+<h2 class="togglediv">Role of a Design in a Development Project</h2>
+<div>
+<p>It is common practice, but nevertheless generally not advisable, to consider a laser design as a result of a <a href="laser_development.html" title="laser development: the process of developing a laser device">development</a> process which is largely based on trial and error.
+The design then plays a minor role, just summarizing the results of a lengthy process.
+In such cases, the design is often not even properly documented, which creates a risk of losing a lot of potentially valuable information while saving only a minor amount of time at the moment.</p>
+<p>In any non-trivial design project &ndash; and laser design projects are hardly ever trivial &ndash; it is very advisable to attribute a vital role to the laser design:</p>
+<ul>
+<li>The laser design <em>is made in the office</em>, not in the laboratory, and properly deals with all known issues which can be or become relevant.
+Although this process can be much faster and cheaper than a trial-and-error approach in the lab, it takes some considerable discipline and of course requires a comprehensive expertise.</li>
+<li>A proper design is not just a set of ideas, but a very specific description, including e.g. the list of required parts, a more or less detailed prescription on how to put them together wherever this is not trivial, and is ideally supplemented by a description of the underlying reasoning, a discussion of limitations, etc.</li>
+<li>The prototype is then fabricated according to the design, and not vice versa.
+This greatly speeds up the fabrication, thus making efficient use of costly laboratory resources.</li>
+<li>For any future development of similar kind, the carefully worked out design will be a very valuable input.
+If it does not exist, and particularly if in addition a vital person has left the company, future developments will be much less efficient.</li>
+</ul>
+<p>Attempts to abbreviate this process carry the risk of obtaining reduced performance values and of large time delays due to unexpected technical problems.
+The later such problems are recognized, understood and solved, the larger can be the resulting damage.</p>
+</div>
+<h2 class="togglediv">Deriving Designs from Older Designs</h2>
+<div>
+<p>In industrial development, it is common to derive some product design from an older design, rather than starting from scratch.
+Although this appears very economical, there are significant risks, particularly in cases where the first design has not be properly worked out and documented in a process as described above.
+A central challenge is that modifying some detail of a laser design may easily have unexpected side effects, introducing new problems which then require additional measures, which again can have side effects.</p>
+<p>For such reasons, starting with some initial design, which works e.g. with some lower than desired output power, can be helpful, but it still requires a detailed understanding of that design and its limitations.
+A proper design document for the initial design can make it easy to produce a whole family of designs, which differ in e.g. output power or pulse repetition rate.</p>
+</div>
+<h2 class="togglediv">Design Reviews</h2>
+<div>
+<p>Under certain circumstances, it may be appropriate to make a review of an existing laser design.
+This can be the case, for example, when significant problems have occurred, or when the demands have increased and might be met with a revised design, rather than with a completely new one.
+If a properly documented design does not yet exist, it is high time to do this job; this process may already deliver important hints concerning what to improve.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_laser_design1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 13 suppliers for laser design services. Among them:</p>
+<aside class="bg_vendoritem"><a href="index.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="laser design" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a><h3><a href="bg/profiles/rp_photonics.html" title="See the profile of RP Photonics">RP Photonics</a></h3><p>We offer <a href="services_manu.html" data-supplier="RP Photonics" data-keyword="laser design" rel="nofollow" class="externallink bg">prototype and product design services</a>, based on detailed experience and <a href="software.html" data-supplier="RP Photonics" data-keyword="laser design" rel="nofollow" class="externallink bg">specialized software</a> for designing all kinds of solid-state lasers.</p></aside>
+<aside class="bg_vendoritem"><a href="http://www.optikexpertisen.com/en" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="laser design" rel="nofollow" class="bg externallink" title="Visit the website of Optikexpertisen"><img src="bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a><h3><a href="bg/profiles/optikexpertisen.html" title="See the profile of Optikexpertisen">Optikexpertisen</a></h3><p>We offer to <a href="http://www.raab-photonik.de/en/competences/optical-design/" data-supplier="Optikexpertisen" data-keyword="laser design" rel="nofollow" class="externallink bg">design, simulate</a>, and <a href="http://www.raab-photonik.de/en/competences/measurements/" data-supplier="Optikexpertisen" data-keyword="laser design" rel="nofollow" class="externallink bg">experimentally test</a> laser systems to your requirements, preferably around diode lasers. They can be based on our previous &ndash; partially patented &ndash; designs or on your specific needs. <a href="http://www.raab-photonik.com/en/interactive/contact-form/" data-supplier="Optikexpertisen" data-keyword="laser design" rel="nofollow" class="externallink bg">Ask us</a> for a free-of-charge first feasibility estimate.</p></aside>
+</div>
+</div>
+<p class="seealso">See also: <a href="resonator_design.html" title="resonator design: the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a>, <a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">lasers</a>, <a href="laser_development.html" title="laser development: the process of developing a laser device">laser development</a>, <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser modeling</a>, <a href="brightness.html" title="brightness: a term mostly used in a qualitative way, related to the output power and beam quality of a laser; quantitatively: synonymous with radiance or luminance">brightness</a>, <a href="power_scaling_of_lasers.html" title="power scaling of lasers: a procedure for substantially increasing the output power of lasers">power scaling of lasers</a>, <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a>, <a href="spotlight_2006_07_05.html">Spotlight article 2006-07-05</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<p style="font-size:12px; line-height:18px; margin-bottom:12px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index-2.html" class="redlink">RP Photonics Consulting GmbH</a>.
+<a href="contact.html" class="redlink">Contact</a> this distinguished expert in laser technology, nonlinear optics and fiber optics, and find out how his <a href="services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, or staff training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="laser_design.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Laser Design Services</h2>
+<p>The quality of a laser product is largely determined by its <a href="laser_design214a.html?banner=laser_design">design</a> and not just by the used parts.</p>
+<p>Developing a good design requires a high technical competence and experience.
+<a href="paschotta214a.html?banner=laser_design">Dr. Paschotta</a> from RP Photonics offers can greatly help by</p>
+<ul>
+<li>analyzing and amending our design goals, and working out complete design specifications</li>
+<li>identifying the best suited technology (e.g. bulk or fiber laser)</li>
+<li>working out a solid design, often based on <a href="laser_modeling214a.html?banner=laser_design">numerical modeling</a></li>
+<li>identifying possible problems early on, which allows for efficient solutions</li>
+<li>giving you further advice as needed when you test your prototypes</li>
+</ul>
+<p>Note: with a <b>trial-and-error approach</b> you may waste a lot of time and resources.
+(Also consider time to market!)
+Therefore, competent help is the key for cost-efficient and lower-risk developments.</p>
+<p>You may also involve us only if you got into trouble, but coming earlier is usually better.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>A Quiz Question</h2>
+<p style="margin-top:15px">taken from the <a href="quiz5b3a.html?banner=quiz">Photonics Quiz</a>:</p><form action="https://www.rp-photonics.com/quiz.html" method="get" style="margin-bottom:12px;">
+<p><input name="n" value="5" type="hidden"></p>
+<p style="text-align:left;">Does a saturable absorber as used for passive Q switching of a laser necessarily lead to a substantially reduced power efficiency?</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_a" value="y"> (a) No, it doesn't. If its saturation energy is very low, not much energy is required to saturate the absorber.</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_b" value="y"> (b) No, it doesn't, if one photon can saturate several absorber ions.</p>
+<p style="margin-left:50px; text-indent:-50px; text-align:left;"><input type="checkbox" name="answer_c" value="y"> (c) Yes, the principle of using saturable absorption unavoidably degrades the efficiency, since the absorption must be similarly strong as the initial laser gain.</p>
+<p style="margin-top:15px;"><input type="submit" value="Get your answer checked" style="padding:3px 10px; font-size:14px;"></p>
+</form>
+<p>After selecting your answer(s) and pressing this button, find the explanations on the left side.</p>
+
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/laser_design.html?banner=laser_design by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:19 GMT -->
+</html>

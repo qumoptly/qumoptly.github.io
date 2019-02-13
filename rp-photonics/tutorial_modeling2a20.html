@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_modeling.html?banner=modeling_tutorial by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:07:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo; - power propagation, field propagation, laser-active ions, ultrashort pulses</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="This is a comprehensive tutorial on the modeling of fiber amplifiers and lasers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, modeling, physics, fiber amplifiers, lasers">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_modeling2a20.html?banner=modeling_tutorial"; cat="C"; shownbanner=""; ref="laser_diodes.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>Author: <a href="paschotta.html">Dr. Paschotta</a></p>
+<p>This tutorial gives an introduction into the modeling of <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+The purpose of modeling should be to develop a deep and quantitative understanding of how such devices work.
+On that basis, both scientific research and industrial development can become far more efficient; instead of &ldquo;fishing in the dark&rdquo;, one can more systematically move forward and produce results.</p>
+<p>Mainly, this tutorial explains concepts and principles rather than detailed mathematics.
+After all, this is what is mostly needed for entering the field of fiber modeling: before you understand concepts and principles, you have little use for complicated equations.
+Anyway, you can avoid spending a lot of time on sophisticated details like solving certain differential equations, if you use some advanced simulation software such as our product <a href="fiberpower.html"><b>RP Fiber Power</b></a>.</p>
+<p>Here, we focus on <em>active</em> devices, containing some laser-active fibers.
+Mainly, we consider how light is absorbed or amplified in the fiber, and in what overall performance of devices these processes result.
+We are also looking into ultrashort pulse amplifiers and mode-locked lasers, where additional effects such as fiber <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> and <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> come into play.</p>
+<p>Click on the headings to get to the following parts of the tutorial:</p>
+<div class="tutorialpart">
+<table><tr><td class="part_number">1</td><td>
+<h3><a href="tutorial_modeling1.html"><b>Part 1: Introduction</b></a></h3>
+<p>What does physical modeling mean?
+How is a model related to reality?
+How can a model be applied to benefit the development of fiber amplifiers and lasers?
+Is an experimental trial-and-error approach a reasonable alternative?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">2</td><td>
+<h3><a href="tutorial_modeling2.html"><b>Part 2: Optical Channels</b></a></h3>
+<p>Here, we sort different parts of the involved light, essentially according to their wavelength and propagation directions.
+Broadband signals and light resulting from ASE can be represented with an array of channels.
+This part is easy, but some aspects need to be thought through.</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">3</td><td>
+<h3><a href="tutorial_modeling3.html"><b>Part 3: Power Propagation or Field Propagation</b></a></h3>
+<p>Some computer models propagate whole transverse field distributions through a fiber (<em>numerical beam propagation</em>), whereas others propagate only optical powers.
+The latter approach is frequently sufficient and allows for much faster calculations.</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">4</td><td>
+<h3><a href="tutorial_modeling4.html"><b>Part 4: The Laser-active Ions</b></a></h3>
+<p>The details of laser-active ions are extremely complicated.
+However, very simplified models are often fully sufficient for properly describing their behavior in a simulation model.
+We discuss what kind of spectroscopic data are needed for such a model.</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">5</td><td>
+<h3><a href="tutorial_modeling5.html"><b>Part 5: Continuous-wave Operation of Amplifiers and Lasers</b></a></h3>
+<p>Here, we discuss how to find self consistent solutions for the optical powers and excitation density in a fiber amplifier or laser model.
+For versatile modeling software, which is applicable to a wide range of cases, a rather sophisticated algorithm is required.</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">6</td><td>
+<h3><a href="tutorial_modeling6.html"><b>Part 6: Amplifying and Generating Short Pulses</b></a></h3>
+<p>Dynamic simulations (with arbitrary time dependencies of optical powers and excitation densities) are not necessarily more difficult to do than steady-state calculations.
+One can simulate the behavior of pulsed amplifiers and Q-switched lasers, for example.</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">7</td><td>
+<h3><a href="tutorial_modeling7.html"><b>Part 7: Ultrashort Pulses</b></a></h3>
+<p>Ultrashort pulse propagation involves additional physical effects.
+Different algorithms and data structures are needed in that case.
+One can then simulate the amplification of ultrashort pulses in a fiber amplifier all the generation of such pulses in a mode locked laser, for example.</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">8</td><td>
+<h3><a href="tutorial_modeling8.html"><b>Part 8: Using Home-made Software or a Commercial Product?</b></a></h3>
+<p>One needs to decide between developing some simulation software oneself and using a commercial product.
+Both approaches have their advantages, limitations and risks.
+A number of important aspects should be considered for that decision.</p>
+</td></tr>
+</table>
+</div>
+<p>By the way, on this website we have a lot of other materials on modeling &ndash; for example, <a href="encyclopedia.html">encyclopedia</a> articles on <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser modeling</a>, <a href="rate_equation_modeling.html" title="rate equation modeling: a method of modeling the dynamics of laser gain media">rate equation modeling</a>, <a href="laser_dynamics.html" title="laser dynamics: the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a> and <a href="pulse_propagation_modeling.html" title="pulse propagation modeling: working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">pulse propagation modeling</a>.
+Besides, various articles of the <a href="spotlight.html">Photonics Spotlight</a> deal with aspects of modeling, for example those of <a href="spotlight_2013_09_24.html">2013-09-24</a>, <a href="spotlight_2012_02_03.html">2012-02-03</a>, <a href="spotlight_2011_05_28.html">2011-05-28</a> and <a href="spotlight_2006_11_16.html">2006-11-16</a>.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_modeling.html?banner=modeling_tutorial by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:07:19 GMT -->
+</html>

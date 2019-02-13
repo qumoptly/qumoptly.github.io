@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_05_22.html?banner=articles by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Numerical Representation of Ultrashort Pulses</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-05-22">
+<meta name="description" content="A summary of this blog article: When simulating the propagation of ultrashort light pulses, you need to numerically represent those pulses. Here, you can learn how to properly do that and take care of various important limitations. That is highly relevant if you either use a pulse propagation software or develop one yourself.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2018_05_220eaf.html?banner=articles"; cat="S"; shownbanner=""; ref="bg/profiles/gooch_housego.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Numerical Representation of Ultrashort Pulses</h1>
+<div class="posting_details">
+<p>Posted on 2018-05-22 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2018_05_22.html">https://www.rp-photonics.com/software_news_2018_05_22.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: When simulating the propagation of ultrashort light pulses, you need to numerically represent those pulses. Here, you can learn how to properly do that and take care of various important limitations. That is highly relevant if you either use a pulse propagation software or develop one yourself.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>In <a href="pulse_propagation_modeling.html" title="pulse propagation modeling: working with physical models describing the propagation of ultrashort pulses e.g. in lasers or optical fibers">numerical simulations of pulse propagation</a>, one needs to somehow numerically represent the pulses.
+In case of relatively long pulses &ndash; say with nanosecond pulse durations are longer &ndash; it is often sufficient to consider only the optical power versus time, assuming that you are interested only in the power.
+The optical phase may be affected by the optical power, e.g. via <a href="self_phase_modulation.html" title="self-phase modulation: nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, but there is usually no substantial back-action of the phase on the power.</p>
+<p>For <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a> (i.e., with pulse durations of picoseconds or even femtoseconds), the situation is profoundly different, because the optical phase vs. time has a substantial effect on the evolution of the optical power.
+For example, fast changes of optical phase, which are related to the finite optical bandwidth of the pulse, affect the involved <a href="group_velocity.html" title="group velocity: the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocities</a> and possibly e.g. the magnitude of <a href="gain.html" title="gain: a measure of the strength of optical amplification">gain</a> in an active <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>.
+(An example for that is the complicated evolution of higher-order <a href="solitons.html" title="solitons: pulses with a certain balance of nonlinear and dispersive effects">soliton</a> pulses.)
+Therefore, it is natural to describe an ultrashort pulse with a time-dependent <em>complex</em> amplitude, where the optical power is proportional to the modulus squared of that amplitude, and the optical phase is also contained in that quantity.</p>
+<h2 class="togglediv">Slowly Varying Amplitudes</h2>
+<div>
+<p>One may think that qualitatively one has exactly the same situation as when describing an acoustical signal &ndash; only that we have much higher frequencies in optics.
+There is another very important difference, however: in most cases, optical signals have a bandwidth which is much smaller than the average frequency.
+Therefore, in analytical or numerical calculations it is often not sensible to directly use complex amplitudes which represent the rapidly oscillating electric field.
+Instead, one uses slowly varying amplitudes in combination with a factor for the fast oscillation:</p>
+<div class="eqn"><img src="eqn/slow_amplitude.gif" width="173" height="26" alt="slowly varying amplitude"></div>
+<p>where <span class="eqn_il"><span class="greek">&nu;</span><sub>0</sub></span> is the optical center frequency.</p>
+<p>For an un<a href="chirp.html" title="chirp: time dependence of the instantaneous frequency of an optical pulse">chirped</a> picosecond pulse, for example, the amplitude <span class="eqn_il"><i>A</i>(<i>t</i>)</span> may be purely real and describe the rise and fall of the optical power over a time scale of multiple picoseconds, while the exponential factor describes the fast optical oscillation with an oscillation period (<span class="eqn_il">1&thinsp;/&thinsp;<span class="greek">&nu;</span><sub>0</sub></span>) of only few femtoseconds.</p>
+<p>Numerically, one usually uses a discrete grid which spans a certain time range and has a certain constant temporal spacing of grid points.
+We call this a time trace for pulses.
+Typically, its number of points (called <span class="eqn_il"><i>N</i></span>) is an integer power of 2 (e.g. 2<sup>8</sup> or 2<sup>10</sup>) because that greatly facilitates the application of a fast Fourier transform algorithm (see below).</p>
+<aside class="callout red">Without using slowly varying amplitudes, we would need much more memory and computation time!</aside>
+<p>Obviously, the above explained trick with the slowly varying amplitudes helps a lot: the grid spacing can often be much longer than the optical oscillation period.
+For example, a grid spacing of 1&nbsp;ps can be fully sufficient for 10-ps pulses, if the optical power and phase do not change too much within 1&nbsp;ps.
+(For sampling the electric field itself, you would need a grid resolution below 1&nbsp;fs!)
+Keep in mind, however, that a strongly chirped pulse, having a fast evolution of optical phase, may require a substantially finer numerical grid.</p>
+</div>
+<h2 class="togglediv">Pulses in Fourier Space</h2>
+<div>
+<p>For many calculations and simulations, it is highly convenient to employ Fourier transforms.
+For example, <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> is most easily described in the frequency domain; therefore, one normally applies a first Fourier transform to obtain the spectrum of the pulse in the form of a frequency trace (again with discrete complex amplitudes), then multiply each amplitude with the corresponding phase factor, and finally use an inverse Fourier transform to get back to the time domain (if needed).
+Similarly, it is convenient to apply wavelength-dependent absorption losses or amplification in the frequency domain, while nonlinear effects are typically treated more conveniently in the time domain.</p>
+<p>There are some important relations between the numerical grids in the time and frequency domain:</p>
+<ul>
+<li>The total width <span class="eqn_il"><span class="greek">&Delta;</span><span class="greek">&nu;</span></span> of the frequency trace is the inverse of the temporal step size.
+For example, a 1-ps temporal resolution leads to a 1-THz frequency span.
+That could be sufficient to describe a pulse with a bandwidth of the order of 0.1&nbsp;THz.</li>
+<li>The resolution <span class="eqn_il"><span class="greek">&delta;</span><span class="greek">&nu;</span></span> in the frequency domain (i.e., the frequency spacing of frequency domain amplitudes) is the frequency span divided by the number of points <span class="eqn_il"><i>N</i></span> &ndash; or the inverse width of the time trace:</li>
+</ul>
+<div class="eqn"><img src="eqn/freq_resolution.gif" width="149" height="44" alt="frequency resolution"></div>
+<ul>
+<li>From this you can also see that the number of points in the traces is the product of the trace widths in the time and frequency domain: <span class="eqn_il"><i>N</i>&thinsp;=&thinsp;<span class="greek">&Delta;</span><i>t&thinsp;&times;&thinsp;<span class="greek">&Delta;</span><span class="greek">&nu;</span></i></span>.
+Therefore, pulses with a large <a href="time_bandwidth_product.html" title="time&ndash;bandwidth product: product of temporal and spectral width of a pulse">time&ndash;bandwidth product</a> require large number of points.</li>
+</ul>
+<p>As an example, I show you a screenshot from the interactive pulse display window of our software <a href="fiberpower.html">RP Fiber Power</a>:</p>
+<figure>
+<img src="img/pulse_window.png" alt="interactive pulse display window">
+</figure>
+<p>The upper diagram shows you the pulse in the time domain, and the lower one in the frequency domain.
+The software can automatically display the range where there is significant energy, but you can also manually control the displayed time and frequency span.
+The screen shot shows the display of the time-the main power and the optical spectrum, but you could also display other things such is the time -dependent optical phase, the spectral phase, the instantaneous frequency and various other things.
+At the bottom you see a slider with which you can select the pulse from a set of stored pulses, or by its location in a fiber.
+Obviously, such a handy tool is highly desirable to have when inspecting the sometimes rather complicated evolution of pulses e.g. in fiber amplifiers and <a href="mode_locked_fiber_lasers.html" title="mode-locked fiber lasers: ultrafast fiber lasers which are actively or passively mode-locked for generating ultrashort pulses">mode-locked fiber lasers</a>.</p>
+</div>
+<h2 class="togglediv">Choosing Numerical Grid Parameters: Some Rules of Thumb</h2>
+<div>
+<p>For numerical simulations, one needs to decide on the parameters of the numerical grid &ndash; for example, on the width <span class="eqn_il"><span class="greek">&Delta;</span><i>t</i></span> of the time trace and the number of points <span class="eqn_il"><i>N</i></span>.
+As shown above, those parameters determine the frequency domain grid as well.</p>
+<p>The following rules are normally providing you with a good starting point:</p>
+<aside class="callout blue">You can easily find reasonable numerical parameters with a few simple rules.</aside>
+<ul>
+<li>The temporal trace should certainly be long enough to make sure that no significant optical energy reaches the ends of the trace &ndash; not only for the initial pulse, which we may e.g. send through an optical fiber &ndash; but during the whole propagation.
+For example, if you have an initial 1-ps pulse and expect that its duration will not exceed 2&nbsp;ps during the whole propagation, you may try with a 20&nbsp;ps long time trace.</li>
+<li>If the pulses are reasonably close to <a href="transform_limit.html" title="transform limit: a limit for the time&ndash;bandwidth&ndash;product of an optical pulse">transform-limited</a>, it is often sufficient to use only 2<sup>8</sup> points.
+In our example case, that implies a temporal resolution of 20&nbsp;ps / 256 = 78&nbsp;fs and a frequency span of 1 / 78&nbsp;fs = 12.8&nbsp;THz.
+The frequency resolution is 12.8&nbsp;THz / 256 or 1 / 20&nbsp;ps = 50&nbsp;GHz.
+The bandwidth of a transform-limited <a href="gaussian_pulses.html" title="Gaussian pulses: pulses with a temporal intensity profile which has a Gaussian shape">Gaussian</a> 2-ps pulse is 220&nbsp;GHz; you see that we can reasonably resolve and cover that pulse spectrum.
+(It is usually sufficient to have a couple of points within the full width at half maximum in the time or frequency domain.)</li>
+<li>For strongly chirped pulses of the same duration, you can use the same time range in combination with an increased number of points, i.e., a finer temporal resolution.
+A criterion in the time domain could be that the phase should not change more than a few hundred milliradians per time step.
+In the frequency domain, you should make sure that there is no significant energy at the edges.</li>
+<li>If you want to include stimulated <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman scattering</a>, you need to have a sufficiently wide frequency span such that the Stokes waves are still well within the span.
+Given that the peak Raman gain is at a frequency shift around 13&nbsp;GHz in silica, you need an overall frequency span of the order of 40&nbsp;GHz if the input signal is in the middle of the frequency span, is usual.
+However, you can put the input signal more to the &ldquo;left&rdquo; side of the frequency span so that you can use a somewhat smaller span.</li>
+</ul>
+<aside class="callout green">How can I know whether my numerical accuracy is high enough?</aside>
+<p>You cannot always be sure initially that certain numerical settings will be sufficient to obtain good accuracy of the outputs.
+However, you can just try and check whether the above-mentioned criteria are violated during the simulation.
+With our software, you could even automate that checking, so that you get a warning if something gets questionable.
+It is even possible to automatically let the software e.g. double the number of points when it finds that the frequency span is getting too narrow.
+In case of doubt, one can also run an additional simulation with higher numerical resolution and check whether the results change significantly.</p>
+<aside class="callout red">The numerical simulation of supercontinuum generation can be demanding!</aside>
+<p>You will end up with enormously large time and frequency traces when you simulate <a href="supercontinuum_generation.html" title="supercontinuum generation: a nonlinear process for strong spectral broadening of light">supercontinuum generation</a> in fibers &ndash; particularly when working with relatively long pulses.
+In some cases, you need e.g. 2<sup>20</sup> (about one million) points &ndash; for example, to combine a 100-THz frequency span with a temporal span of 10&nbsp;ns.
+If each complex amplitude is represented by 2 times 8 bytes (double precision), you need 16 megabytes for each time or frequency trace.
+Assume that you simulate the propagation through an optical fiber and want to store time- and frequency-domain information for 100 points along the fiber, that will overall consume 100 times 32 MB or about 3&nbsp;GB.
+So you see that you will want a computer with quite a few gigabytes and a 64-bit software.
+By the way, if you have a license for our product <a href="fiberpower.html">RP Fiber Power</a>, you got a 32-bit version by default, but if you ask us, you get a 64-bit version without paying again.</p>
+<p>Besides the memory limitations, you may worry about the increased consumption of computation time.
+Typically, that time increases a bit more than in proportion to the trace size.
+Fortunately, however, most practical cases can be simulated with quite limited computation time; you spend most time for setting up the simulation and thinking about its results, not waiting for computed results.</p>
+</div>
+<h2 class="togglediv">Wrapping Effects</h2>
+<div>
+<p>Interesting numerical effects occur when the pulse acquires substantial energy at the edges of the time or frequency trace is.
+That energy does not simply disappear, but comes back on the other side.
+Four understanding that, imagine that the time trace, for example, presents a sample of a periodically evolving signal: we have only a discrete grid of frequency-domain amplitudes, and Fourier-transforming that leads to a periodic time signal.
+So what &ldquo;walks out&rdquo; of your time trace at one end, can be considered as just getting into the next sample.</p>
+<p>That kind of artifacts is normally quite undesirable, but there are reasonable ways of dealing with it:</p>
+<ul>
+<li>Simply use large enough time and frequency traces, so that you never obtain substantial energy at the edges.
+That, however, may require relatively large traces in some cases and also correspondingly increases the computation times.</li>
+<li>If you want to be a bit greedy with trace sizes, you can also include an artificial attenuation at the edges.
+You would then no more realistically describe what happens at the edges, but at least avoid those artifacts.</li>
+</ul>
+<p>In simulations of <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, you should be particularly careful to avoid any wrapping effects, because they may also affect the stability of the pulses.
+That is usually not a problem, however, because the circulating pulse is in most cases not that strongly chirped and thus requires a limited number of points: 2<sup>8</sup> are often sufficient, and you really need more than 2<sup>10</sup>.</p>
+</div>
+<h2 class="togglediv">Further Reading</h2>
+<div>
+<p>You may also want to read my earlier article &quot;<a href="software_news_2016_07_22.html">Ultrashort Pulse Simulations with the RP Fiber Power Software</a>&quot;.
+There are also various encyclopedia articles which you easily reach through the links in this article.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_05_22.html?banner=articles by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:39 GMT -->
+</html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/software_modeling_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Was ist ein Modell? Wie werden Modelle in der Lasertechnologie eingesetzt?</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Modellierung bedeutet die Entwicklung gedanklicher Modelle und formaler Strukturen für die Analyse realer Objekte. Sie kann in der Lasertechnologie wie auch in vielen anderen Gebieten angewandt werden.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Photonik, Software, Computer, Modellierung, Laserentwicklung">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_modeling_d.html"; cat="S"; shownbanner=""; ref="software_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="software_modeling.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html" class="sel">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modellierung in der Photonik</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="software_modeling_d.html">Was ist ein Modell?</a></td>
+<td class="sub_nav"><a class="sub_n" href="modeling_examples_d.html">Beispiele</a></td>
+<td class="sub_nav"><a class="sub_n" href="transparent_laser_d.html">Der transparente Laser</a></td>
+<td class="sub_nav"><a class="sub_n" href="modeling_get_started_d.html">Der Einstieg</a></td>
+</tr>
+</table>
+<h2>Was ist ein Modell?</h2>
+<aside class="callout blue">Modellierung beginnt immer mit Gedanken.</aside>
+<p>Ein Modell ist <span class="redbold">ein gedankliches Konstrukt</span>, welches bestimmte Aspekte der Realität abbilden soll.
+Typischerweise wird es benutzt, um ein besseres Verständnis der Realität zu erarbeiten, welches dann bei Entscheidungen hilft &ndash; beispielsweise im Rahmen der Entwicklung eines Geräts oder bei der Behebung von Problemen.</p>
+<aside class="callout blue">Vereinfachungen sind wichtig, um Dinge zu verstehen!</aside>
+<p>Ein <span class="redbold">Modell ist immer einfacher als die Realität</span>, damit wir mit dem verbleibenden Ausmaß an Komplexität besser umgehen können.
+Natürlich darf es <em>nicht zu stark vereinfacht</em> sein, d.&thinsp;h. es muss bestimmte Aspekte der Realität, die für die Untersuchung wesentlich sind, korrekt abbilden.
+Ideal ist es oft, wenn ein Modell alles Nötige enthält, aber auch nicht mehr.</p>
+<aside class="callout blue">Computermodelle zeigen nicht nur die erwarteten Outputs, sondern auch alle internen Vorgänge!</aside>
+<p>In technischen Gebieten beginnt die Modellierung mit <span class="redbold">Gedanken und Ideen</span>, aus denen dann <span class="redbold">formale Strukturen</span> entstehen, die bestimmte Größen, mathematische Gleichungen etc. enthalten.
+Ein Computer zusammen mit geeigneter <a href="software_d.html"><b>Software</b></a> kann für die benötigten Berechnungen verwendet werden.
+<span class="redbold">Computermodelle</span> simulieren das Verhalten realer Objekte (z.&thinsp;B. von Gebäuden, Fahrzeugen, elektronischen Schaltungen oder Lasern) und zeigen nicht nur die erwarteten Outputs, sondern vor allem auch die internen Vorgänge.</p>
+<h3>Beispiele für Modelle</h3>
+<p>Modelle werden in vielen technischen Gebieten umfassend eingesetzt; einige Beispiele hierfür:</p>
+<table class="stdtable">
+<tr>
+<th class="tdl" style="width:150px;">Anwendungsgebiet</th>
+<th class="tdl" style="width:150px;">Art des Modells</th>
+<th class="tdl">untersuchte Aspekte</th>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Architektur</td>
+<td class="tdl">verkleinerte Artefakte oder Computermodelle von Gebäuden</td>
+<td>
+<ul>
+<li>Platzangebot für Einwohner und Installationen</li>
+<li>Lichtverteilung (Sonnenlicht, Beleuchtung)</li>
+<li>Energieströme</li>
+<li>strukturelle Stabilität</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Fahrzeugtechnik</td>
+<td class="tdl">Modell einer Fahrzeugkarosserie mit Antrieb</td>
+<td>
+<ul>
+<li>Platz für Passagiere</li>
+<li>strukturelle Stabilität, Crash-Sicherheit</li>
+<li>dynamisches Fahrverhalten</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Elektronik</td>
+<td class="tdl">Modell einer elektronischen Schaltung</td>
+<td>
+<ul>
+<li>Überprüfung der Funktionalität</li>
+<li>Einflüsse des nicht-idealen Verhaltens und der Toleranzen von Bauelementen</li>
+<li>Betrieb mit Über- oder Unterspannung</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Lasertechnologie</td>
+<td class="tdl">Modell eines gütegeschalteten Lasers mit Laserkristall, Modulator und Resonator</td>
+<td>
+<ul>
+<li>Dynamik der Pulserzeugung</li>
+<li>Effizienz</li>
+<li>Strahlqualität</li>
+<li>Effekte von gain guiding, begrenzter Schaltgeschwindigkeit des Modulators, etc.</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>Die <a href="modeling_examples_d.html">nächste Seite</a> beschreibt konkretere Modelle in der Lasertechnologie.</p>
+<h3>Generelle Anwendungen von Modellen</h3>
+<p>Die Modellierung ist kein Selbstzweck, sondern wird durchgeführt, um bestimmte Nutzeffekte zu erzielen:</p>
+<table class="stdtable">
+<tr>
+<th class="tdl" style="width:210px;">Zweck</th>
+<th class="tdl">Beispiele in der Lasertechnologie</th>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Entwickeln eines klaren Verständnisses</span> davon, wie bestimmte Dinge funktionieren</td>
+<td>
+<ul>
+<li>Leistungs-Konversion in Laserkristallen oder dotierten Fasern</li>
+<li>Strahlformung in Laserresonatoren</li>
+<li>Dynamik der Pulsformung oder Verstärkung</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Planung der Konstruktion</span> von Prototypen und Produkten</td>
+<td>
+<ul>
+<li>Laserresonatoren</li>
+<li>Laserköpfe</li>
+<li>Ultrakurzpuls-Verstärkersysteme</li>
+<li>Datenübertragungssysteme</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Analyse von Problemen</span> existierender oder geplanter Geräte</td>
+<td>
+<ul>
+<li>schlechte Strahlqualität</li>
+<li>Ineffizienz der Leistungsumwandlung</li>
+<li>Instabilitäten</li>
+<li>optische Zerstörung</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Entwicklung neuer Ideen</span></td>
+<td>
+<ul>
+<li>neue Konzepte für Resonatordesigns</li>
+<li>neue Pumpkonzepte</li>
+<li>neue Lasermaterialien</li>
+<li>neue Methoden der Pulsverstärkung</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>Warum sollten Sie solche Untersuchungen an Computermodellen anstatt an realen Objekten durchführen?</p>
+<aside class="callout green">Würden Sie zehn verschiedene Versionen Ihres Lasers aufbauen, um zu sehen, welche am besten funktioniert?</aside>
+<ul>
+<li>Das Herstellen eines Computermodells ist oft sehr viel <span class="redbold">einfacher, schneller und kostengünstiger</span> als die Herstellung des realen Objekts.
+Insbesondere ist es bei Computermodellen sehr viel günstiger, modifizierte Versionen herzustellen.
+Dadurch können Sie einfach verschiedene Versionen austesten, ohne eine Menge teurer Komponenten zu bestellen, auf deren Lieferung zu warten und eine Unmenge Zeit im Labor zu verbringen.</li>
+</ul>
+<aside class="callout green">Wenn ein realer Leser nicht richtig funktioniert, sagt er Ihnen, warum?</aside>
+<ul>
+<li>Im Gegensatz zu einem realen Objekt ist ein Computermodell <span class="redbold">vollständig transparent</span>: Sie können einfach jedes interne Detail des Betriebs inspizieren, welches am realen Objekt häufig schwer oder gar nicht beobachtbar wäre.
+(Dieser Aspekt wird in unserem Vortrag &quot;<a href="transparent_laser_d.html"><b>Der transparente Laser</b></a>&quot; detailliert diskutiert.)</li>
+<li>Tests an Computermodellen sind <span class="redbold">nicht destruktiv</span> &ndash; sogar Crash-Tests für Fahrzeuge oder die Simulation von Laserverstärkern im Betrieb mit extrem hohen optischen Intensitäten.</li>
+</ul>
+<aside class="callout green">Wenn eine Modifikation nicht die erwarteten Effekte bringt: Könnte es an der Justage oder an einer verschmutzten Komponente liegen?</aside>
+<ul>
+<li>Experimente an Computermodellen ergeben häufig <span class="redbold">eindeutigere Resultate als experimentelle Tests</span>, weil sie nicht von schwer kontrollierbaren Einflüssen tangiert werden. <br>
+Beispielsweise können zwei Versionen eines Lasermodells <em>exakt gleich</em> sein mit Ausnahme des einen Details, das Sie geändert haben; Sie werden klar den Effekt dieser Änderung sehen, ohne jegliche zusätzliche Einflüsse, und jederzeit einfach zwischen verschiedenen Versionen wechseln.</li>
+</ul>
+<aside class="callout green">Wie können Sie wissen, ob Ihr Laser so gut arbeitet, wie er sollte?</aside>
+<ul>
+<li>Vergleiche der Resultate realer Experimente mit denen von Computersimulationen zeigen Ihnen, ob <span class="redbold">unerwartete Phänomene</span> in Ihrem Gerät auftreten.
+Beispielsweise können Sie herausfinden, ob die Performance so gut ist, wie sie für Ihr Design sein sollte.</li>
+</ul>
+<p>Der Bau und das Testen realer Geräte bleibt notwendig &ndash; aber es basiert dann auf einem Prototyp- oder Produktdesign, welches aus einem klaren Verständnis entstand.
+Sie bauen nichts mehr, was ohnehin nicht funktionieren kann!</p>
+<h3>Ihr Nutzen</h3>
+<p>Typische Nutzeffekte der Arbeit mit Computermodellen sind:</p>
+<aside class="callout blue">Es geht nicht darum, zusätzliche nette Dinge zu tun, sondern Ihr Verständnis der Dinge zu vertiefen und dadurch effizienter zu arbeiten!</aside>
+<ul>
+<li>Sie können <span class="redbold">Lasergeräte effizienter entwickeln</span>, d.&thinsp;h. <span class="redbold">Resultate schneller erhalten</span> und <span class="redbold">Kosten sparen</span>.</li>
+<li>Sie können <span class="redbold">Ihre technische Kompetenz vertiefen</span>, weit über das übliche Lehrbuchwissen hinaus.</li>
+<li>Durch den Umgang mit Modellen entwickeln Sie <span class="redbold">neue Ideen</span> z.&thinsp;B. für Optimierungen oder neue technische Ansätze.</li>
+</ul>
+<p>Solche Nutzeffekte sind natürlich von entscheidender Bedeutung für die Produktivität beispielsweise eines <span class="redbold">Ingenieurs in der Laserentwicklung</span> oder eines <span class="redbold">Wissenschaftlers in der Laserforschung</span>.
+Beide müssen genau verstehen, wie die Dinge funktionieren und wie man sie effektiv optimiert.</p>
+<p>Weitere Details finden Sie in unserem <a href="tutorial_modeling.html"><b>Tutorial über Modellierung</b></a>.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_modeling_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:08 GMT -->
+</html>

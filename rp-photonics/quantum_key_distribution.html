@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/quantum_key_distribution.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:02:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - quantum key distribution, cryptography, Bennet, Brassard protocol</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-05">
+<meta name="description" content="Quantum key distribution denotes methods for the secure distribution of encryption keys. It is an important aspect of quantum cryptography.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="quantum key distribution, cryptography, Bennet, Brassard protocol">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="quantum_key_distribution.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_quantum_key_distribution.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Quantum Key Distribution</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_quantum_key_distribution1fbf.html?s=vbox" class="bg_bgheading">Suppliers for equipment for quantum key distribution</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_quantum_key_distribution1fbf.html?s=vbox" class="redlink"><b>3 suppliers for equipment for quantum key distribution</b></a>.</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_quantum_key_distribution1fbf.html?s=vbox">List of suppliers for<br>quantum key distribution</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: methods for the secure distribution of encryption keys</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Quanten-Schlüsselverteilung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a></p>
+<p><a href="encyclopedia_cite2f2e.html?article=quantum%20key%20distribution">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>Quantum key distribution is a technique used in the context of <a href="quantum_cryptography.html" title="quantum cryptography: methods to encrypt information securely, relying on quantum-mechanical phenomena">quantum cryptography</a> in order to generate a perfectly random key which is shared by a sender and a recipient while making sure that nobody else has a chance to learn about the key, e.g. by intercepting the communication channel used during the process.
+Basic principles of quantum mechanics are exploited to ensure that.
+Only if quantum mechanics were to turn out to be a flawed theory (for which there is no reasonable evidence after decades of intense research), it might be possible to break the security of such a communication system.</p>
+<p>The best known and popular scheme of quantum key distribution is based on the <em>Bennet&ndash;Brassard protocol</em> (in short: BB84), which was invented in 1984 [1].
+It relies on the <em>no-cloning theorem</em> [3,&thinsp;4] for non-orthogonal quantum states.
+For example, it can be implemented using polarization states of single <a href="photons.html" title="photons: quanta of light energy">photons</a>.
+Briefly, the Bennet&ndash;Brassard protocol works as follows:</p>
+<ul>
+<li>The sender (usually called Alice) sends out a sequence of single photons.
+For each photon, it randomly chooses one of two possible base states, with one of them having the possible polarization directions up/down and left/right, and the other one polarization directions which are tilted by 45&deg;.
+In each case, the actual polarization direction is also randomly chosen.</li>
+<li>The receiver (called Bob) detects the polarizations of the incoming photons, also randomly choosing the base states.
+This means that on average half of the photons will be measured with the &ldquo;wrong&rdquo; base states, i.e. with states not corresponding to those of the sender.</li>
+<li>Later, Alice and Bob use a public (possibly interceptable) communication channel to talk about the states used for each photon (but not on the chosen polarization directions).
+In this way, they can find out which of the photons were by chance treated with the same base states on both sides.</li>
+<li>They then discard all photons with a &ldquo;wrong&rdquo; basis, and the others represent a sequence of bits which should be identical for Alice and Bob and should be known only to them, provided that the transmission has not been manipulated by anybody.
+Whether or not this happened they can test by comparing some number of the obtained bits via the public information channel.
+If these bits agree, they know that the other ones are also correct and can finally be used for the actual data transmission.</li>
+</ul>
+<p>A possible eavesdropper (called Eve) would have to detect the photons' polarization directions without knowing the corresponding base states.
+In those cases where Eve's guess concerning the base states is wrong, Eve obtains random results.
+If Eve sends out photons with these polarization directions, Bob's results will also be random in cases where Bob's guess was right.
+This will therefore be detected during the last stage (the bit verification).
+Quantum mechanics would not allow Eve to do a polarization measurement without projecting the photon state onto the chosen base states, i.e., without altering the photon states.</p>
+<p>Note that Alice and Bob actually need to carry out secure authentication in order to prevent an interceptor from manipulating their public communications.
+This also requires some secret key, which at a first glance would seem to lead to a catch-22 situation: you need a secret key in order to generate another secret key.
+However, authentication requires only a short key, whereas the quantum key distribution scheme can generate a much longer one and is therefore still useful.</p>
+<p>Some remaining problems are:</p>
+<ul>
+<li>Ideally, a perfect single photon source should be used for the sender, but this is difficult to realize.
+Using strongly attenuated laser pulses which have only the order of one photon per pulse generates some risk that pulses which by chance have more than one photon can be used by Eve to gain some information.
+However, there are some schemes of <em>privacy amplification</em> to destroy this possible knowledge of Eve at the cost of reducing the number of obtained bits for the key.</li>
+<li>Losses in the transmission channel (e.g. an optical <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fiber</a>) reduce the degree of the required quantum correlations and also create chances for an eavesdropper.
+However, there are also refinements of the technique (<em>quantum error correction</em>) to deal with this issue, provided that the losses are low enough (at most a few percent of the photons).</li>
+<li>The bit rate with which a key is generated is normally fairly low, particularly for large transmission distances.
+This accordingly limits the bit rate of secure communications.</li>
+</ul>
+<p>A modified cryptography scheme was suggested in 1991 by Ekert [2].
+Here, entangled states are used instead of the randomly chosen measurement basis.
+In many respects, this protocol is similar to the BB84 protocol.</p>
+<p>Some quantum key distribution systems have been demonstrated which promise unconditional security for transmission distances up to a few tens of kilometers, although at least one system has been proven not to be perfectly secure; successful eavesdropping has been demonstrated [10].
+It should be possible, however, to eliminate such security loopholes with more careful implementations.
+Further system refinements should also allow for transmission distances over 100&nbsp;km.
+Research is also directed at developing more practical single-photon and correlated photon pair sources, based on, e.g., spontaneous parametric downconversion in <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> crystals or spontaneous <a href="four_wave_mixing.html" title="four-wave mixing: an interaction of light waves based on a &chi;<sup>(3)</sup> nonlinearity">four-wave mixing</a> in optical <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.</p>
+<p>There are already some commercial quantum key distribution systems which can be used by banks, for example.</p>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">C. H. Bennet and G. Brassard, &ldquo;Quantum Cryptography: Public key distribution and coin tossing&rdquo;, in Proceedings of the IEEE International Conference on Computers, Systems, and Signal Processing, Bangalore, p. 175 (1984) (<em>Bennet&ndash;Brassard protocol</em>)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. Ekert, &ldquo;Quantum cryptography based on Bell&acute;s theorem&rdquo;, <a href="http://prola.aps.org/abstract/PRL/v67/i6/p661_1" rel="nofollow">Phys. Rev. Lett. 67 (6), 661 (1991)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">W. K. Wooters and W. H. Zurek, &ldquo;A single quantum cannot be cloned&rdquo;, <a href="http://www.nature.com/nature/journal/v299/n5886/abs/299802a0.html" rel="nofollow">Nature 299, 802 (1982) (<em>no-cloning theorem</em>)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">N. J. Cerf and J. Fiurasek, &ldquo;Optical quantum cloning &ndash; a review&rdquo;, <a href="http://arxiv.org/abs/quant-ph/0512172" rel="nofollow">Prog. Opt. 49, 455 (2006)</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">A. Tanaka <i>et al.</i>, &ldquo;Ultra fast quantum key distribution over a 97&nbsp;km installed telecom fiber with wavelength division multiplexing clock synchronization&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-16-15-11354" rel="nofollow">Opt. Express 16 (15), 11354 (2008)</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">C. Erven <i>et al.</i>, &ldquo;Entangled quantum key distribution over two free-space optical links&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-16-21-16840" rel="nofollow">Opt. Express 16 (21), 16840 (2008)</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">A. R. Dixon <i>et al.</i>, &ldquo;Gigahertz decoy quantum key distribution with 1&nbsp;Mbit/s secure key rate&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-16-23-18790" rel="nofollow">Opt. Express 16 (23), 18790 (2008)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">C. Bonato <i>et al.</i>, &ldquo;Feasibility of satellite quantum key distribution&rdquo;, <a href="http://arxiv.org/abs/0903.2160" rel="nofollow">New J. Phys. 11, 045017 (2009)</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">D. Stucki <i>et al.</i>, &ldquo;High rate, long-distance quantum key distribution over 250&nbsp;km of ultra low loss fibres&rdquo;, <a href="http://arxiv.org/abs/0903.3907" rel="nofollow">New J. Phys. 11, 075003 (2009)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">I. Gerhardt <i>et al.</i>, &ldquo;Full-field implementation of a perfect eavesdropper on a quantum cryptography system&rdquo;, <a href="http://www.nature.com/ncomms/journal/v2/n6/full/ncomms1348.html" rel="nofollow">Nature Commun. 2, 349 (2011), DOI: 10.1038/ncomms1348</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">H-K. Lo, M. Curty and K. Tamaki, &ldquo;Secure quantum key distribution&rdquo; (review paper), <a href="http://www.nature.com/nphoton/journal/v8/n8/full/nphoton.2014.149.html" rel="nofollow">Nature Photon. 8, 595 (2014)</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">Q. Zhang <i>et al.</i>, &ldquo;Large scale quantum key distribution: challenges and solutions&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-26-18-24260" rel="nofollow">Opt. Express 26 (18), 24260 (2018)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="quantum_cryptography.html" title="quantum cryptography: methods to encrypt information securely, relying on quantum-mechanical phenomena">quantum cryptography</a>, <a href="optical_data_transmission.html" title="optical data transmission: the transmission of information using light beams, e.g. in fibers">optical data transmission</a><br>and other articles in the categories <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#quantum_optics" title="other articles on quantum optics">quantum optics</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="quantum_key_distribution.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="fiberpower_tapered_fiberb907.html?banner=RP_Fiber_Power_5"><img src="img/fiberpower_tapered_fiber1b.png" alt="light in a tapered fiber" style="margin-bottom:8px"></a>
+<p>Intensity evolution of the LP<sub>11</sub> mode in a tapered fiber. In the tapered region, most of the light is lost into the fiber cladding</p>
+<p>This diagram has been made with the <a href="fiberpowerb907.html?banner=RP_Fiber_Power_5"><b>RP Fiber Power</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Shortages of rare earth materials &ndash; a problem for photonics?</h2>
+<p>Photonics heavily depends on the supply of rare earth materials in various areas &ndash; think of <a href="laser_crystalsd61f.html?banner=rare_earth_shortage">laser crystals</a>, <a href="rare_earth_doped_fibersd61f.html?banner=rare_earth_shortage">active fibers</a> and <a href="light_emitting_diodesd61f.html?banner=rare_earth_shortage">LEDs</a>, for example.
+It is hard to see how such things could be done without rare earth materials.
+And those have recently been subject to enormous price increases and were even involved in a trade war.</p>
+<p>Is that now a reason for serious concerns in the area of photonics?
+Do we need to undertake serious recycling efforts?
+Our <a href="spotlight_2014_06_27d61f.html?banner=rare_earth_shortage">Photonics Spotlight article</a> analyzes the situation.</p>
+<p>Receiving the <a href="spotlightd61f.html?banner=rare_earth_shortage">Photonics Spotlight</a> via our <a href="newslettersd61f.html?banner=rare_earth_shortage">newsletter</a> might be a good idea &hellip;</p>
+
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/quantum_key_distribution.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:02:21 GMT -->
+</html>

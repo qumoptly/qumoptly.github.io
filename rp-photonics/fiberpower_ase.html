@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_ase.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP Fiber Power: ASE source simulation with automatic spectral optimization</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="An ASE source is modeled with automatic optimization of the output spectrum.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, simulation, design, software, fiber amplifiers, lasers, power, model, amplified spontaneous emission">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_ase.html"; cat="S"; shownbanner=""; ref="fiberpower.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_ase_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Fiber Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+</tr>
+</table>
+<h2>Example Case: ASE Source with Automatic Spectral Optimization</h2>
+<h3>Description of the Model</h3>
+<p>We simulate a source of amplified spontaneous emission with the following properties:</p>
+<ul>
+<li class="ta_left">The ytterbium-doped single-mode fiber is pumped at 975&thinsp;nm.</li>
+<li class="ta_left">Initially, the fiber is assumed to be not reflecting on both ends.
+This leads to about equal ASE powers in forward and backward direction, with the spectral shape being determined by the emission and absorption cross sections (among other factors).</li>
+<li class="ta_left">We then automatically optimize the reflectivities on the left side of the fiber to obtain an ASE spectrum in forward direction which is as flat as possible in a given spectral range of 1010&thinsp;nm to 1050&thinsp;nm.
+This takes a few lines of <a href="software_script_language.html">script code</a>.</li>
+</ul>
+<h3>Results</h3>
+<p>Figure&nbsp;1 shows the ASE spectrum during and after automatic optimization (with several iterations) of the reflectivities at the left fiber end, and the required reflectivity curve.</p>
+<figure>
+<img src="img/opt_ase.png" alt="optimized ASE spectrum">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Olive: power spectral density of the ASE during and after automatic optimization of the reflectivities at the left end. The thickest curve shows the final spectrum. Black: required reflectivity curve.
+</figcaption>
+</figure>
+<p>The result is a very flat ASE spectrum.
+It is achieved with a reflectivity which is highest at the outer parts of the chosen spectral range.
+In the middle part, where the gain is highest, the reflectivity must be low.
+Of course, it may be challenging to precisely realize such a reflectivity spectrum.</p>
+<p>Figure&nbsp;2 shows the internal spatial distribution of spectrally resolved ASE.
+It is apparent that the power spectral density of the ASE is flat on the right side within the given spectral region, whereas the spectral distribution at other locations is different.</p>
+<figure>
+<img src="img/opt_ase_z.png" alt="internal ASE distribution">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Internal spatial and spectral distribution of ASE, shown with a logarithmic color scale.
+</figcaption>
+</figure>
+<p>The presented optimization technique has been successfully used in an experiment, see R. Paschotta et al., &ldquo;Efficient superfluorescent light sources with broad bandwidth&rdquo;, IEEE J. Sel. Topics on Quantum Electron. 3 (4), 1097 (1997).</p>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_ase.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:12 GMT -->
+</html>

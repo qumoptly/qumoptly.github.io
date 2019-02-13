@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_srs_mm_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Fiber Power: stimulierte Raman-Streuung in einer Multimode-Faser</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Stimulierte Raman-Streuung in einem Faserverstärker wurde numerisch simuliert. Sie führt zu starken Verzerrungen des Pulsprofils.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, Simulation, Design, Software, Faserverstärker, stimulierte Raman-Streuung, SRS, Multimode-Faser">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_srs_mm_d.html"; cat="S"; shownbanner=""; ref="fiberpower_srs_mm.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_srs_mm.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power: Simulations- und Design-Software <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Beispiel: Stimulierte Raman-Streuung in einer Multimode-Faser</h2>
+<h3>Beschreibung des Modells</h3>
+<p>Wir nehmen hier an, dass Pumplicht bei 1550&nbsp;nm und Signallicht bei 1660&nbsp;nm in eine <a href="multimode_fibers.html" title="multimode fibers: fibers supporting more than one guided mode per polarization direction">Multimode-Faser</a> geschickt werden.
+Sie haben relativ hohe optische Leistungen von 8&nbsp;kW bzw. 200&nbsp;W, was im Falle von Nanosekundenpulsen durchaus realistisch ist.
+Bei solchen Leistungen erhält man eine starke Raman-Wechselwirkung bereits innerhalb einer Faserlänge von nur 200&nbsp;mm.</p>
+<p>Die Multimode-Faser hat ein parabolisches Brechungsindexprofil.
+Wir nehmen an, dass der <a href="nonlinear_index.html" title="nonlinear index: a parameter for quantifying the Kerr nonlinearity of a medium">nichtlineare Index</a> und der <a href="raman_gain.html" title="Raman gain: optical gain arising from stimulated Raman scattering">Raman-Gain</a>-Koeffizient ähnliche transversale Profile aufweisen, da diese Werte normalerweise durch Dotierungen im Faserkern, die den Brechungsindex erhöhen sollen, ebenfalls erhöht werden.
+Die angenommenen transversalen Profile dieser Eingabewerte werden in Abbildung&nbsp;1 gezeigt.</p>
+<figure>
+<img src="img/fiberpower_srs_mm1.png" alt="transversale Profile">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Die transversalen Profile diverser Eingabewerte der Simulation: Brechungsindex, nichtlinearer Index, Raman-Gain-Koeffizient, Pump- und Signalintensität.
+</figcaption>
+</figure>
+<p>Für die Pump- und Signalstrahlen nehmen wir <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gauß-Profile</a> an, die beide ein wenig gegenüber der Mitte des Faserkerns versetzt sind.
+Sie sind nicht auf bestimmte Fasermoden angepasst.
+Deshalb regen wir mehrere Pump- und Signalmoden an, die dann miteinander wechselwirken.</p>
+<p>Da wir im Modell die transversalen Profile berücksichtigen müssen, verwenden wir die Methode der numerischen Strahlpropagation.
+Seit 03/2017 kann stimulierte Raman-Streuung in solchen Simulationen berücksichtigt werden.
+Man könnte dabei übrigens nicht nur eine Pump- und Signalwelle haben, sondern mehrere Wellenlängenkomponenten, die miteinander wechselwirken.
+Der Raman-Gain-Koeffizient kann einerseits von der optischen Frequenzdifferenz der involvierten Lichtstrahlen abhängen und andererseits von den transversalen Koordinaten.
+Ebenfalls könnte man in einem solchen Modell einfach auch beliebige Biegungen der Faser berücksichtigen.</p>
+<h3>Ergebnisse</h3>
+<p>Abbildung&nbsp;2 zeigt die Entwicklung der optischen Leistung in der Faser &ndash; nicht nur die gesamten Leistungen von Pump- und Signalwelle, sondern auch die Signalleistungen in einigen wichtigen Fasermoden.</p>
+<figure>
+<img src="img/fiberpower_srs_mm2.png" alt="optical powers along the fiber">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Entwicklung der optischen Leistungen in der Faser.
+</figcaption>
+</figure>
+<p>Es könnte erstauen, dass das Verhältnis von ausgehender Signalleistung zu eingehender Pumpleistung größer ist, als es vom Verhältnis der Photonenergien her möglich sein sollte.
+Man beachte jedoch, dass eine gewisse Signal-Eingangsleistung (200&nbsp;W) vorliegt.
+Die <em>Zunahme</em> der Signalleistung ist konsistent mit der Erhaltung der Photonenzahl.</p>
+<p>Obwohl die numerische Strahlpropagation als solche nicht auf dem Konzept der Fasermoden beruht, können wir die Leistungen in spezifischen Moden an jeder Stelle in der Faser mit einem Überlappintegral berechnen, welches die jeweilige Modenfunktion enthält.
+Letztere können wir mit dem eingebauten Mode Solver berechnen.
+Die folgende Funktion wurde für die Berechnung dieser Leistungen definiert:</p>
+<pre class="codedisplay">
+P_lm_s(l, m, z) := 
+  { signal power in LP_lm mode at position z }
+  abs2(int(int(bp_A%(x, y, z) * A_lm_xy(l, m, l_s, x, y),
+    x := -r_max to +r_max step dr),
+    y := -r_max to +r_max step dr))
+</pre>
+<p>Im obigen Diagramm wird auch der <a href="m2_factor.html" title="<i>M</i><sup>2</sup> factor: a parameter for quantifying the beam quality of laser beams"><i>M</i><sup>2</sup>-Faktor</a> des erhaltenen verstärkten Signalstrahls angezeigt (genau genommen der Mittelwert für <i>x</i>- und <i>y</i>-Richtung).
+Für diesen Zweck kann man einfach die Funktionen bp&lowbar;M2&lowbar;x() und bp&lowbar;M2&lowbar;y() verwenden.</p>
+<p>Die Berechnungen benötigen auf einem gewöhnlichen Büro-PC rund eine Minute.
+Beachten Sie, dass man die Amplitudenprofile in einer solchen Faser mit einer recht kleinen numerischen Schrittweite propagieren muss &ndash; in unserem Fall ist sie 2&nbsp;&mu;m, sodass wir insgesamt 100&thinsp;000 numerische Schritte brauchen.
+Jeder davon beinhaltet 2D-Fourier-Transformationen und andere aufwendige Berechnungen.
+Eine einfache Leistungs-Propagation (ohne Berücksichtigung transversale Profile) wäre weitaus weniger rechenaufwendig, ist aber nicht geeignet, um diverse interessante Details des Konversionsprozesses untersuchen zu können.</p>
+<p>Man kann dieses Modell leicht so weiterentwickeln, dass es die Propagation nicht nur für eine bestimmte Pump- und Signalleistung vornimmt, sondern für etliche Werte entlang eines Pump- und Signalpulses.
+Hier haben wir angenommen, dass Pump- und Signalpulse 8&nbsp;ns lang sind, zeitlich übereinstimmen und Peak-Leistungen von 8&nbsp;kW bzw. 200&nbsp;W haben.
+Die Propagation wird durchgeführt mit einer Schrittweite von 1&nbsp;ns, und die Ausgangsleistungen wurden integriert, um die gesamten Energien und die Konversionseffizienz zu berechnen.
+Abbildung&nbsp;3 zeigt die Resultate.
+Man kann sehen, dass die Raman-Konversion in den zeitlichen Ausläufern der Pulse nicht effizient ist, so dass die gesamte Konversionseffizienz für einen Puls deutlich tiefer liegt als diejenige für das Pulsmaximum.</p>
+<figure>
+<img src="img/fiberpower_srs_mm3.png" alt="powers versus time">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Zeitlicher Verlauf der Leistungen für 8-ns-Pump- und Signalpulse. Die gesamte Raman-Konversionseffizienz erhält man, indem man die Strahlpropagation für unterschiedliche Zeitpunkte durchführt und die Resultate aufintegriert.
+</figcaption>
+</figure>
+<p>(<a href="fiberpower_case_studies_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_srs_mm_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+</html>

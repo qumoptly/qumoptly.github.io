@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_aml.html?banner=RP_ProPulse by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP ProPulse - example case: active mode locking of a laser</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Active mode locking of a laser is simulated with the RP ProPulse software. It can be seen how the intracavity pulse converges to the steady state.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP ProPulse, modeling, software, demos, active mode locking, laser">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="propulse_demo_aml0276.html?banner=RP_ProPulse"; cat="S"; shownbanner=""; ref="marketing_honest.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="propulse_demo_aml_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html" class="sel">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP ProPulse &ndash; Numerical Simulation of Pulse Propagation</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="propulse.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="propulse_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2>Example Case: Active Mode Locking</h2>
+<p>In this simple example, we consider an <a href="active_mode_locking.html" title="active mode locking: a technique of mode locking, based on active modulation of the intracavity losses or the round-trip phase change">actively mode-locked</a> laser.
+The laser resonator is described in the script as follows:</p>
+<pre class="codedisplay">
+resonator: ring
+* Crystal: gain(l) = g(l) [P_sat_av = P_sat_g, KK = 0]
+* Modulator: mod(t) = t_mod(t)
+* OC: T_out = T_OC
+resonator end
+</pre>
+<p>This refers to some variable values, the definitions of which are not shown here.
+The gain function g(l) has a limited bandwidth of 0.2&nbsp;nm, and the modulator modulates the resonator round-trip losses with 100&nbsp;MHz and peak losses of 10&#37;.</p>
+<p>The initial pulse duration was chosen to be somewhat longer than in the steady state.
+It is found that the steady-state value of the pulse duration agrees with the result of Kuizenga&ndash;Siegman theory (see the diagram below).</p>
+<figure>
+<img src="img/propulse_demo_aml1.png" alt="evolution of pulse duration">
+</figure>
+<p>The <a href="software_script_language.html">script code</a> required for that diagram is pretty simple:</p>
+<pre class="codedisplay">
+; ---------------------------
+diagram 1:
+&nbsp;
+"Evolution of Pulse Parameters"
+&nbsp;
+x: 0, 20000
+"number of round trips", @x
+y: 0, 300
+"pulse duration (ps)", @y
+frame
+legpos 200, 160
+hx
+hy
+&nbsp;
+tau_th := 0.45 * ((0.5 * T_OC) / (0.25 * A_mod))^0.25 / sqrt(f_mod * df_g)
+ { theoretical value for steady-state pulse duration
+   according to Kuizenga-Siegman theory }
+&nbsp;
+f: tau_th / ps,
+  "steady-state value from theory",
+  style = dashed, width = 3
+&nbsp;
+f: (getpulse(x / rt_per_step,0); tau()) / ps,
+  "numerical simulation", color = blue, width = 3
+</pre>
+<p>Also, we can see the temporal pulse profile after 2000 resonator round trips (which are calculated within a few seconds on an ordinary PC):</p>
+<figure>
+<img src="img/propulse_demo_aml2.png" alt="profile of output pulse">
+</figure>
+<p>(<a href="propulse_demos.html">back to the list of example cases</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_aml.html?banner=RP_ProPulse by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:12 GMT -->
+</html>

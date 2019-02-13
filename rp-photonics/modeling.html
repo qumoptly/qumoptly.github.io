@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/modeling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>RP Photonics Consulting GmbH - modeling of lasers, amplifiers, nonlinear optical devices, fiber optics, etc.</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Modeling on optics and lasers as offered by RP Photonics Consulting GmbH. Modeling can be extremely useful in terms of efficiency, but requires significant experience and technical skills.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="consulting, photonics, modeling, laser modeling, numerical modeling, optics, lasers">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="modeling.html"; cat="C"; shownbanner=""; ref="consulting.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+<div id="other_language"><a href="modeling_d.html">deutsch</a></div>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html" class="sel">Services</a>
+<a id="Services_general" href="services.html" class="sub">general</a>
+<a id="Services_manufacturers" href="services_manu.html" class="sub">manufacturers</a>
+<a id="Services_investors" href="services_investors.html" class="sub">investors</a>
+<a id="Services_commun" href="services_commun.html" class="sub">communications</a>
+<a id="Services_design" href="design.html" class="sub">product design</a>
+<a id="Services_modeling" href="modeling.html" class="sub sel">modeling</a>
+<a id="Services_training" href="training.html" class="sub">staff training</a>
+<a id="Services_questions" href="services_questions.html" class="sub">questions</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html">Publications</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modeling of Optical Devices and Systems</h1>
+<p>A special strength of RP Photonics Consulting is the highly developed ability to model the physical details of systems such as lasers or fiber amplifiers.
+This makes it easier to optimize product designs, analyze problems, and explore limits &ndash; and this in a very reliable and cost-effective manner.</p>
+<table class="contentstable"><tr><th>Contents:</th></tr><tr><td><a href="#what">What is a model?</a></td></tr><tr><td><a href="#how">How models help you</a></td></tr><tr><td><a href="#conditions">Conditions for successful modeling</a></td></tr><tr><td><a href="#offer">What RP Photonics Consulting can offer</a></td></tr><tr><td><a href="#cost">About cost and efficiency</a></td></tr></table>
+<div id="what"></div>
+<h2>What is a Model?</h2>
+<p>A model is a more or less simplified description of some physical system.
+Usually it involves mathematical relations between different physical variables and parameters.
+Such relations can be investigated either with analytical tools (i.e. with mathematical methods based on equations and alike), with numerical tools (usually computer <a href="software.html">software</a>), or with a combination of both.</p>
+<div id="how"></div>
+<h2>How a Model Can Help You</h2>
+<p>A model can be an extremely valuable tool to ensure fast and cost-efficient progress in development and problem solving.</p>
+<p>As an example, a <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">model for some laser device</a> may bring you the following benefits:</p>
+<ul>
+<li>It helps you to optimize the <a href="laser_design.html" title="laser design: the design of a laser device, or the process of working out such a design">laser design</a> so as to obtain maximum performance, minimum sensitivity to detrimental influences (e.g. component or <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment tolerances</a>), and minimum parts and space requirements.</li>
+<li>It helps to find out how strongly certain detrimental influences really affect the performance of your device, so that you can concentrate on the real issues rather than wasting time and money with measures which won't help that much.</li>
+<li>It gives access to parameters which can hardly be experimentally measured, and supports the study of their dependencies.</li>
+</ul>
+<p>The modeling skills of <a href="paschotta.html">Dr. Paschotta</a> are certainly one of the crucial factors behind the success of his research and development activities.
+Utilize this experience for your own business!</p>
+<div id="conditions"></div>
+<h2>Conditions for Successful Modeling</h2>
+<p>The ultimate criterion for success of modeling should be <em>usefulness</em>, rather than e.g. some technical detail.
+Is modeling always useful? <em>For sure not!</em>
+For successful modeling, the following is required:</p>
+<ul>
+<li>the experience to judge <i>before</i> investing the time whether modeling can help in a certain case</li>
+<li>a decent understanding of the physics of your device or problem</li>
+<li>a competent decision on which aspects should be included and which ones shouldn't</li>
+<li>certain mathematical skills</li>
+<li>suitable software and/or programming skills</li>
+<li>reliable techniques for validation<br />
+(Wrong results may be worse than none at all!)</li>
+<li>last, but not least: the ability to generate useful and correct answers using the model.<br />
+This is where many modeling projects fail!</li>
+</ul>
+<div id="offer"></div>
+<h2>What RP Photonics Consulting Can Offer</h2>
+<p>In many years of research, <a href="paschotta.html">Dr. Paschotta</a> has developed a deep expertise in modeling of lasers, amplifiers, nonlinear optical devices, fiber devices, multilayer structures and others.
+Using this experience, RP Photonics Consulting GmbH can offer the following:</p>
+<ul>
+<li>Competent advice on where modeling can help you, what type of model to use, what you can expect from it, and where you should not invest.</li>
+<li>Efficient generation and reliable validation of a model which is tailored your needs.
+RP Photonics has powerful <a href="software.html">software</a> to perform such tasks quickly and reliably.
+And for many tasks, suitable models are available already.</li>
+<li>The systematic exploitation of a model for formulating and answering questions which benefit your project.
+The results are delivered in high-quality reports with precise and understandable explanations.</li>
+<li>In some cases, RP Photonics may also offer software licenses, allowing the customer's staff working with the software themselves.</li>
+</ul>
+<p>RP Photonics can do much more for your business than any software could do.
+You can not only quickly obtain calculated results, but also profit from an invaluable expertise, which helps you to reach your technological goals most efficient.</p>
+<div id="cost"></div>
+<h2>About Cost and Efficiency</h2>
+<p>If you are concerned about the cost, keep in mind the following:</p>
+<ul>
+<li>Setting up a useful model takes some time and money, but compare this with the cost of a trial-and-error approach, often leading to non-ideal technical solutions, spoiled parts, waiting customers, the waste of expensive working time and poor use of your infrastructure.
+Whether your company is large or small &ndash; what you can <em>not</em> afford is to choose the less efficient solution!</li>
+<li>Using a model is not <em>always</em> helpful and efficient.
+It takes a lot of experience to decide where a certain kind of model can be useful, how to set it up correctly and how to produce useful answers with it.
+Take care that a real expert is doing this work!</li>
+</ul>
+<p>Finally, be assured that Dr. Paschotta will tell you in case that for some reason modeling is <em>not</em> the right approach in your case.</p>
+</main>
+</div>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/modeling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:30 GMT -->
+</html>

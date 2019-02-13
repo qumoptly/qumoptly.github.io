@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/gain_saturation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:58:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - gain saturation, optical amplification, gain compression, Frantz-Nodvik equation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Gain saturation is the phenomenon that the gain of an amplifier is reduced for high input signal powers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="gain saturation, optical amplification, gain compression, Frantz-Nodvik equation">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="gain_saturation.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Gain Saturation</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="buyersguide.html" class="bg_bgheading">Buyer's Guide</a></p>
+<p>Use the <a href="buyersguide.html"><b>RP Photonics Buyer's Guide</b></a> to find suppliers for photonics products! You will hardly find a more convenient resource.</p>
+</aside>
+<aside class="boxadvertisement">
+<h1>Simulation of Gain Saturation in Amplifiers</h1>
+<p>Gain saturation is very relevant e.g. for high-energy ultrashort pulse amplifiers.
+It can be simulated with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a> &ndash; even in cases where the time dependence from gain saturation and various frequency dependencies must be taken into account at the same time.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the phenomenon that the gain of an amplifier is reduced for high input signal powers</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Verstärkungssättigung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_citede82.html?article=gain%20saturation">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>An amplifier device such as a laser <a href="gain_media.html" title="gain media: media for laser amplification">gain medium</a> cannot maintain a fixed <a href="gain.html" title="gain: a measure of the strength of optical amplification">gain</a> for arbitrarily high input powers, because this would require adding arbitrary amounts of power to the amplified signal.
+Therefore, the gain must be reduced for high input powers; this phenomenon is called <em>gain saturation</em> (or <em>gain compression</em>).</p>
+<p>In the case of a <a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">laser</a> gain medium, the gain does not instantly adjust to the level according to the optical input power, because the gain medium stores some amount of energy, and the stored energy determines the gain.
+For example, a sudden increase in the input power of a laser gain medium will reduce the gain only within a certain time, because the population of excited laser ions is only reduced with a certain finite rate.
+This has important consequences for the <a href="laser_dynamics.html" title="laser dynamics: the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a>.</p>
+<p>The general dynamic equation for the gain is</p>
+<div class="eqn"><img src="eqn/g_dyn.gif" width="145" height="49" alt="evolution of gain"></div>
+<p>where <span class="eqn_il"><i>g</i></span> is the logarithmic gain coefficient, i.e., the natural logarithm of the ratio of output power to input power; it is assumed to be small. (Otherwise, the <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> would vary substantially within the gain medium.) <span class="eqn_il"><i>g</i><sub>ss</sub></span> is the <a href="small_signal_gain.html" title="small-signal gain: optical gain for small signal intensities, where no amplifier saturation occurs">small-signal gain</a> (for a given pump intensity), <span class="eqn_il"><span class="greek">&tau;</span><sub>g</sub></span> the gain relaxation time, <span class="eqn_il"><i>P</i></span> the power of the amplified beam, and <span class="eqn_il"><i>E</i><sub>sat</sub></span> the <a href="saturation_energy.html" title="saturation energy: a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> of the gain medium.
+Note that the power amplification factor is <span class="eqn_il">exp(<i>g</i>)</span>, and must not be confused with <span class="eqn_il"><i>g</i></span>.</p>
+<p>Note that this way of treating gain saturation cannot easily be applied to wavelength-dependent gain; that issue is discussed further below.</p>
+<h2 class="togglediv">Gain Saturation in the Steady State</h2>
+<div>
+<p>In the steady state (i.e., for long time scales with constant pump power and resonator losses), the gain is</p>
+<div class="eqn"><img src="eqn/g_ss.gif" width="153" height="69" alt="steady-state gain"></div>
+<p>where <span class="eqn_il"><i>P</i><sub>sat</sub></span> is the <a href="saturation_power.html" title="saturation power: a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation power</a>.
+Note that it has been implicitly assumed that the pump rate is constant, i.e. there are no effects of pump saturation.
+This assumption is well justified in most, but not all cases.</p>
+<figure>
+<img src="img/gain_saturation_ss.png" alt="gain saturation in steady state">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Saturated gain versus signal power (for a constant pump power) in the steady state.
+</figcaption>
+</figure>
+<p>For example, the gain is reduced to half the <a href="small_signal_gain.html" title="small-signal gain: optical gain for small signal intensities, where no amplifier saturation occurs">small-signal gain</a> if the signal power equals the saturation power.</p>
+<p>Calculations for large gain are more sophisticated, essentially because the <a href="optical_intensity.html" title="optical intensity: optical power per unit area">optical intensity</a> varies significantly within the amplifier.
+A straightforward approach is to divide a high-gain amplifier into a sequence of low-gain amplifiers, which can all be treated with the low-gain approximation.
+However, there are numerically more efficient techniques which do not require such a subdivision.</p>
+<p>The transverse variation of optical intensity of a <a href="laser_beams.html" title="laser beams: light beams propagating dominantly in one direction">laser beam</a> can modify the saturation characteristics: laser-active ions in the outer parts of the beam require a higher <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> to be saturated.
+This effect somewhat modifies the saturation curves as shown e.g. in Figures 1 and 2.</p>
+<p>The presented equations can also be used for high <a href="pulse_repetition_rate.html" title="pulse repetition rate: the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">repetition rate</a> <a href="pulses.html" title="pulses: flashes of light">pulse</a> trains with sufficiently low <a href="pulse_energy.html" title="pulse energy: energy of an optical pulse">pulse energy</a>.
+Gain saturation may then be determined only by the average power.</p>
+</div>
+<h2 class="togglediv">Gain Saturation by an Optical Pulse</h2>
+<div>
+<p>For optical amplification of a short pulse (with a duration well below the <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a>), <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> during the time of pulse amplification is not important.
+Also, the influence of pump light can usually be neglected (except for pulsed pumping with high intensity).
+The gain after the pulse is then reduced by a factor <span class="eqn_il">exp(&minus;<i>E</i><sub>p</sub>&thinsp;/&thinsp;<i>E</i><sub>sat</sub>)</span>, where <span class="eqn_il"><i>E</i><sub>p</sub></span> is the <a href="pulse_energy.html" title="pulse energy: energy of an optical pulse">pulse energy</a>.
+For example, the gain is reduced to 1&thinsp;/&thinsp;e &asymp; 37&#37; of the initial value, if <span class="eqn_il"><i>E</i><sub>p</sub>&thinsp;=&thinsp;<i>E</i><sub>sat</sub></span>.</p>
+<figure>
+<img src="img/gain_saturation_p.png" alt="gain saturation by a pulse">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Reduction in gain by a short pulse. The solid curve shows the gain after the pulse, and the dashed curve the average gain experienced by the pulse.
+</figcaption>
+</figure>
+<p>The effective gain as experienced by the pulse is some averaged value, as the gain decreases during pulse amplification.
+This average gain can be calculated by considering the reduction in the stored energy in the gain medium.
+In the simpler case, where the gain is small, so that the intensity is approximately constant within the amplifier, the result is</p>
+<div class="eqn"><img src="eqn/g_p.gif" width="220" height="49" alt="gain for a short pulse"></div>
+<p>where <span class="eqn_il"><i>g</i><sub>0</sub></span> is the initial gain coefficient.
+(See the dashed curve in Figure&nbsp;2.)
+In the more general case with arbitrarily high gain, one may use the <em>Frantz-Nodvik equation</em></p>
+<div class="eqn"><img src="eqn/frantz_nodvik.gif" width="305" height="29" alt="Frantz-Nodvik equation"></div>
+<p>and obtain</p>
+<div class="eqn"><img src="eqn/g_p_fn.gif" width="334" height="46" alt="effective gain of a high-gain saturated amplifier"></div>
+<p>(Note that as in the equations above, <span class="eqn_il"><i>g</i><sub>0</sub></span> and <span class="eqn_il"><i>g</i><sub>p</sub></span> are dimensionless gain coefficients, <em>not</em> the gain per unit length.)</p>
+<p>Note that an implicit underlying assumption is that there is always a thermal equilibrium within the involved Stark level manifolds.
+That assumption may be violated for an intense femtosecond pulse.
+In such cases, the effective amplification and energy extraction may be smaller than estimated with the presented equations.</p>
+<p>Figure&nbsp;3 shows a numerically simulated example where an optical pulse is amplified in a <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifier</a>
+The shape of the amplified pulse is substantially distorted, since the amplifier gain drops substantially during the pulse due to gain saturation.</p>
+<figure>
+<img src="img/pulsed_amplifier.png" alt="pulse amplification in a fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Amplification of an optical pulse in an ytterbium-doped fiber amplifier. The solid blue curve shows the output power versus time; it substantially deviates from the output power for neglected gain saturation (dot-dashed curve), since the gain is substantially saturated. The black dashed curve shows how the upper-level population drops during the pulse. The diagram has been taken from a <a href="fiberpower_pamp.html">case study</a> done with the <a href="fiberpower.html">RP Fiber Power</a> software.
+</figcaption>
+</figure>
+<p>Such strong saturation effects are common for cases where one tries to extract much of the stored energy from a high-gain amplifier with a single pulse.
+Numerical simulations are often needed for analyzing such devices.
+Note that the saturation conditions can be very different between the input and output ends of the amplifier, and <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinear effects</a> can additionally complicate the behavior.</p>
+</div>
+<h2 class="togglediv">Homogeneous and Inhomogeneous Saturation</h2>
+<div>
+<p>An important issue is the <a href="homogeneous_saturation.html" title="homogeneous saturation: saturation of an absorption or gain, where the shape of the absorption or gain spectrum is not modified">homogeneous</a> or <a href="inhomogeneous_saturation.html" title="inhomogeneous saturation: gain saturation effects which alter the shape of the gain spectrum">inhomogeneous</a> nature of gain saturation.
+Homogeneous gain saturation means that the spectral shape of the gain is not affected by the saturation.
+This is the case e.g. when all laser-active ions have the same emission spectrum.
+In some gain media, particularly in disordered media such as <a href="laser_crystals_versus_glasses.html">glasses</a>, the laser ions can occupy different sites in the lattice, and the differing local electric fields affect the wavelengths and strength of the different transitions.
+This can lead to inhomogeneous saturation (Figure&nbsp;4), where the spectral shape changes; typically, the gain around the laser wavelength is saturated more than the gain at other wavelengths.</p>
+<figure>
+<img src="img/inhom_sat.png" alt="inhomogeneous gain saturation">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Demonstration of inhomogeneous gain saturation.
+A laser at 1064&nbsp;nm saturates the gain around 1064&nbsp;nm more than the gain at other wavelengths.
+For comparison, the unsaturated gain (without laser power) is shown as a dotted curve.
+</figcaption>
+</figure>
+<p>Another cause of inhomogeneous gain medium can be <a href="spatial_hole_burning.html" title="spatial hole burning: a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a> in linear <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonators</a>, caused by the wavelength-dependent standing-wave pattern in the gain medium.</p>
+<p>In any case, inhomogeneous gain saturation can make it difficult to achieve <a href="single_frequency_operation.html" title="single-frequency operation: an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a>, since non-lasing <a href="resonator_modes.html" title="resonator modes: modes of an optical or microwave resonator">resonator modes</a> are favored in terms of gain.
+The homogeneous or inhomogeneous nature of gain saturation also has important effects on the <a href="mode_locking.html" title="mode locking: a group of techniques for generating ultrashort pulses in lasers">mode-locking behavior</a> and particularly for <a href="q_switching.html" title="Q switching: a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> and for <a href="amplifiers.html" title="amplifiers: devices for amplifying the power of light beams">amplifiers</a>.</p>
+</div>
+<h2 class="togglediv">Saturation of Wavelength-dependent Gain</h2>
+<div>
+<p>Gain saturation is often described with differential equations in the time domain, as explained above.
+A substantial difficulty is under certain circumstances that both the laser gain and the amplified optical fields have a substantial <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>, and those wavelength dependencies should be taken into account.
+This is particularly the case for the amplification of intense femtosecond pulses, e.g. in <a href="chirped_pulse_amplification.html" title="chirped-pulse amplification: a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplifier systems</a>.
+Various approaches have been applied in order to address that challenge:</p>
+<ul>
+<li>In time-domain differential equations for pulse envelopes, one can take into account the frequency dependence of the laser gain in the form of temporal derivatives; for example, a parabolic spectral gain shape would be described with a second-order time derivative.
+At the same time, gain saturation can be described based on the time-integrated optical power [1].
+That approach, however, ignores the effect of the frequency dependence of the optical fields on the saturation.
+It is therefore not appropriate in cases where the pulse bandwidth is not small compared with the gain bandwidth.</li>
+<li>A completely different approach is to describe ultrashort pulses with time&ndash;frequency distributions [2].
+Numerically, one uses two-dimensional grids involving both the time and frequency dimension; that allows the simultaneous treatment of time and frequency dependence in a way is developed in the context of radiative transfer theory.
+The weakness of that approach is that coherent effects, which are often important in the context of ultrashort pulses (e.g. related to limitations of the <a href="time_bandwidth_product.html" title="time&ndash;bandwidth product: product of temporal and spectral width of a pulse">time&ndash;bandwidth product</a>), are ignored.
+That is acceptable in some cases, but problematic e.g. for an all-purpose simulation software.</li>
+<li>Models have been developed where short sections of strongly chirped pulses are considered as quasi-monochromatic, so that simple rate equations can be applied [3].
+That approach can give a reasonable accuracy but requires quite specific assumptions on the amplified pulse; it is therefore not well applicable to a general simulation software, for example.</li>
+<li>Another possibility is to use Maxwell&ndash;Bloch equations.
+That allows one to include the full microscopic dynamics of the gain medium.
+However, this approach is usually not practical for application to solid-state laser amplifiers, where a huge number of laser-active ions with microscopically different properties are interacting with a laser pulse.</li>
+<li>Ref. [4] describes a method where essentially a pulse is divided into multiple temporal sections, but without requiring specific assumptions on the details of the amplified pulse.
+Numerical artifacts are avoided by using a &ldquo;soft&rdquo; slicing algorithm based on a smooth window function.
+For each slice, a Fourier transform into the frequency domain is used in order to take into account the frequency dependence of the gain, and the numerical accuracy is good as long as the saturation caused by a single slice is relatively weak.
+Although the slices cannot be made arbitrarily short, because otherwise one would lose the required frequency resolution, the method is practical in a wide range of cases, for example for CPA-type <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a>.
+The algorithm is used in the <a href="fiberpower.html">RP Fiber Power</a> software.</li>
+</ul>
+</div>
+<h2 class="togglediv">Saturation Characteristics of Different Gain Media</h2>
+<div>
+<p>Different kinds of <a href="gain_media.html" title="gain media: media for laser amplification">gain media</a> differ very much in their gain saturation characteristics:</p>
+<ul>
+<li><a href="solid_state_lasers.html" title="solid-state lasers: lasers based on solid-state gain media (usually ion-doped crystals or glasses)">Solid-state</a> gain media based on ion-doped <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">crystals</a> or <a href="laser_crystals_versus_glasses.html">glasses</a> typically operate on so-called <a href="forbidden_transitions.html" title="forbidden transitions: transitions between different energy levels of some atoms or ions for which dipole transitions are suppressed via symmetries"><em>weakly allowed transitions</em></a>, leading to small laser <a href="transition_cross_sections.html" title="transition cross sections: material parameters for quantifying the likelihood or rate of optical transition events">cross sections</a>, large <a href="saturation_energy.html" title="saturation energy: a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation fluence</a> and intensity, and long <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a> (microseconds to milliseconds).
+Such lasers are suitable for <a href="q_switching.html" title="Q switching: a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a> but also have a tendency for <a href="spiking.html" title="spiking: the tendency of some lasers to emit spikes of output power, particularly after being switched on">spiking behavior</a>.
+For <a href="passive_mode_locking.html" title="passive mode locking: a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a>, they tend to exhibit <a href="q_switching_instabilities.html" title="Q-switching instabilities: instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a>.</li>
+<li>Semiconductors and laser <a href="dye_lasers.html" title="dye lasers: lasers based on liquid or solid dyes as gain media">dyes</a> exhibit a small saturation fluence and intensity, in addition to a short <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a> of typically a few nanoseconds.
+They are thus not suitable for <a href="q_switching.html" title="Q switching: a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q switching</a>, but for <a href="passive_mode_locking.html" title="passive mode locking: a technique of mode locking, based on a saturable absorber inside the laser resonator">passive mode locking</a> without <a href="q_switching_instabilities.html" title="Q-switching instabilities: instabilities of passively mode-locked lasers where the pulse energy is unstable">Q-switching instabilities</a>, and they react very quickly to changes in the pump power.
+The latter has implications on the <a href="intensity_noise.html" title="intensity noise: noise of the optical intensity or power of a laser beam">intensity noise</a>.</li>
+<li><a href="optical_parametric_amplifiers.html" title="optical parametric amplifiers: optical amplifiers based on parametric nonlinear interactions">Optical parametric amplifiers</a> instantaneously adapt the gain to the amplified signal power level, since they do not store energy in the gain medium.</li>
+</ul>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">G. P. Agrawal, &ldquo;Effect of gain dispersion on ultrashort pulse amplification in semiconductor laser amplifiers&rdquo;, <a href="http://ieeexplore.ieee.org/document/90014/" rel="nofollow">IEEE J. Quantum Electron. 27 (6), 1843 (1991)</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[2]</td><td class="refs">E. Yahel, O. Hess, and A. A. Hardy, &ldquo;Ultrashort-pulse high-power Yb<sup>3+</sup>-doped fiber amplifiers&rdquo;, <a href="http://ieeexplore.ieee.org/document/4285702/" rel="nofollow">IEEE J. Quantum Electron. 43 (9), 824 (2007)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">D. N. Schimpf, J. Limpert, and A. Tünnermann, &ldquo;Optimization of high performance ultrafast fiber laser systems to 10 GW peak power&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-27-10-2051" rel="nofollow">J. Opt. Soc. Am. B 27 (10), 2051 (2010)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">R. Paschotta, &ldquo;Modeling of ultrashort pulse amplification with gain saturation&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-16-19112" rel="nofollow">Opt. Express 25 (16), 19112 (2017)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="saturable_absorbers.html" title="saturable absorbers: light absorbers with a degree of absorption which is reduced at high optical intensities">saturable absorbers</a>, <a href="laser_dynamics.html" title="laser dynamics: the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a>, <a href="inhomogeneous_saturation.html" title="inhomogeneous saturation: gain saturation effects which alter the shape of the gain spectrum">inhomogeneous saturation</a>, <a href="spatial_hole_burning.html" title="spatial hole burning: a distortion of the gain shape in a laser medium (or the loss spectrum in a saturable absorber medium), caused by saturation effects of a standing wave">spatial hole burning</a><br>and other articles in the categories <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="gain_saturation.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="coating_demo_bragg_mirror1766.html?banner=RP_Coating_3"><img src="img/coating_demo_bragg_mirror6b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>Color-coded field penetration in a Bragg mirror as a function of wavelength.</p>
+<p>This diagram has been made with the <a href="coating1766.html?banner=RP_Coating_3"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Fighting Fraud in Science</h2>
+<p>We occasionally read about scientific fraud &ndash; things like fabricated measurement results &ndash; which is utterly unfair and also undermines the trust of the public in science and its results.</p>
+<p>How to fight that problem?</p>
+<ul>
+<li>Do we need to tell young scientists more clearly that fraud is evil?</li>
+<li>Do supervisors have to stop trusting the results of their coworkers?</li>
+<li>Does the pressure to produce results inevitably favor fraud?</li>
+<li>Where exactly lies the responsibility, if something goes wrong?</li>
+</ul>
+<p>Our <a href="spotlight_2009_10_1930d7.html?banner=science_fraud">Photonics Spotlight article on science fraud</a> analyzes that carefully.
+It suggests that <b>the risk of fraud is close to zero where supervisors do a responsible job</b>.
+Relations to a more widespread problem &ndash; <b>corrupt authorship practices</b> &ndash; are also identified.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/gain_saturation.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:58:34 GMT -->
+</html>

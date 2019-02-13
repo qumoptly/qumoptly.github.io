@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/modeling_get_started.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:31 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Getting started with laser modeling: who should do the modeling, how to find suitable software, develop the technical expertise</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="It is discussed what is needed to get started with laser modeling.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, computer, modeling, laser development">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="modeling_get_started.html"; cat="S"; shownbanner=""; ref="software_modeling.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="modeling_get_started_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html" class="sel">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modeling in Photonics</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="software_modeling.html">What is a Model?</a></td>
+<td class="sub_nav"><a class="sub_n" href="modeling_examples.html">Examples</a></td>
+<td class="sub_nav"><a class="sub_n" href="transparent_laser.html">Transparent Laser</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="modeling_get_started.html">Get started</a></td>
+</tr>
+</table>
+<h2>How to Get Started with Laser Modeling?</h2>
+<aside class="callout red">The first question should be: Would modeling increase the efficiency of our work?</aside>
+<p>Many people understand well that laser modeling (or more generally, models in photonics) could be extremely valuable for their industrial laser development or for their scientific research, for example.
+However, they may hesitate to get started because of the concern that it would be too hard to get into this field.
+Here, we show that it may actually not be that hard; there are some routes which make it fairly easy to profit from laser modeling.</p>
+<p>Essentially, you can proceed as follows:</p>
+<h3>Identify the Technical Aspects of Interest</h3>
+<p>A first step is to think about what are the most important technical areas for your work as an industrial laser developer or as an scientific researcher, for example:</p>
+<ul>
+<li>Do you need to acquire good understanding of laser dynamics, e.g. in the context of Q-switched lasers or pulse amplification?</li>
+<li>Do you need to analyze the detailed behavior of laser resonators?</li>
+<li>Are you concerned with ultrashort pulse generation, e.g. with mode-locked lasers or with amplifier systems?</li>
+<li>Are the detailed processes in some optical components particularly relevant?</li>
+</ul>
+<p>It is a good idea to first formulate a number of concrete questions which you would like to address &ndash; for example:</p>
+<aside class="callout red">Setting up concrete questions of interest focuses your mind on what is important for the success of your projects.</aside>
+<ul>
+<li>What would be the performance of my laser, if all components would work perfectly according to the specifications?</li>
+<li>How relevant are gain guiding effects (or unavoidable misalignment, inhomogeneities of pump profiles, etc.) in my bulk laser or amplifier for the performance?</li>
+<li>Why can I not obtain shorter pulses from my mode-locked laser? What are the principal limitations? Would it help to change certain details of my system?</li>
+</ul>
+<p>Of course, more and more such questions will come up as you get started with modeling.
+It is important, though, to move on in the right direction.</p>
+<h3>Who Should Do the Modeling?</h3>
+<aside class="callout green">Should the modeling be done by yourself, by a colleague in your team, or better by an external expert?</aside>
+<p>You may want to <span class="redbold">do the required modeling yourself</span>.
+That way, you will personally acquire a very good understanding of your systems, and you will be able to fully apply the software and the acquired insight to future projects.
+However, you will have to get into the technical details &ndash; mostly the physics and normally to a smaller extent concerning the handling of some software.</p>
+<p>In some cases, <span class="redbold">a colleague in your team</span> may be better positioned to get into this.
+It can be very sensible that just one or two persons in a team focus on laser modeling, supporting the whole team with the created insight.</p>
+<p>If nobody in your team can do that job, that does not imply that you cannot profit from modeling!
+After all, you can <span class="redbold">get it done by an external expert</span>.
+Of course, you want to have an expert who is known to understand the relevant details very well, who has the required software and works with great care.
+Consider asking <a href="paschotta.html">Dr. Paschotta</a> from <a href="consulting.html">RP Photonics</a>.</p>
+<h3>Get Computer and Software</h3>
+<p>If you want to get started yourself, you need a suitable computer and software.</p>
+<p>The computer hardware is the smallest of all problems.
+Most laser models can easily be operated on ordinary personal computers (PCs).
+Even for quite sophisticated simulations, computation time or memory on a normal PC is not an issue.
+Where this is different, one may often solve the problem by using a more appropriate kind of model.</p>
+<aside class="callout blue">High-quality software is powerful and flexible, is well documented and comes with competent and helpful technical support.</aside>
+<p>Concerning <span class="redbold">software</span>, find out which supplier is most likely to provide <span class="redbold">powerful simulation and design software</span> which comes with <span class="redbold">clear documentation</span> and with <span class="redbold">competent, helpful technical support</span>.
+Ideally, you get a software which has been developed by a <a href="paschotta.html">distinguished technical expert</a>, and where <a href="software_support.html">technical support</a> is delivered by the same expert.
+Also, make sure that you get software which not only gives you an easy start, but also offers enough flexibility to be applied for real work.</p>
+<aside class="callout green">Is it worthwhile to develop own modeling software?</aside>
+<p>You may also consider to <span class="redbold">develop your own modeling software</span>.
+This gives you highest flexibility and full control, and you will learn a lot.
+However, the huge effort of developing a really good and reliable simulation software can often not be justified with the application by a single user.
+Keep in mind that some quick-and-dirty solution (with a poor user interface, without proper validation and no documentation) can hardly be recommended; it may give misleading results, may be too inconvenient to use and cannot be maintained or even used any more if its creator leaves the group.
+Also keep in mind that your actual task as an engineer or scientist is probably not developing tools, but delivering results.
+You are more productive when working with a good simulation and design software, rather than developing such software yourself.</p>
+<h3>Develop the Technical Expertise</h3>
+<aside class="callout red">Working with laser models belongs to the best ways of learning on lasers!</aside>
+<p>Of course, a certain technical know-how is required when working with laser models; it is not sufficient to have some good software.
+Note that working with laser models exactly belongs to the very best ways of acquiring a decent understanding &ndash; not only concerning quantitative details, but also concerning all the basic physics.
+Starting with textbook knowledge, you will soon learn more e.g. concerning the limitations of certain concepts or the importance of various effects.</p>
+<aside class="callout blue">You do not need to worry about challenges if you can be sure to get competent support from the software supplier.</aside>
+<p>It may well happen that you encounter certain challenges, where your existing know-how is not yet fully sufficient for getting to the solution.
+Here, high quality technical support coming together with the simulation software can be of crucial importance.
+Ideally, the software supplier provides technical support not only on handling details of the software, but more generally as a kind of technical consultancy.
+This is, for example, what RP Photonics offers &ndash; note the full name RP Photonics Consulting GmbH.</p>
+<h3>Just Ask!</h3>
+<p>Maybe you are not sure whether or not modeling would be sensible in a concrete case.
+It can be very helpful to discuss this with an experienced expert.
+Simply <a href="contact.html">contact RP Photonics</a>; you will get honest answers e.g. about which type of model would be suitable and whether modeling is the right approach in your case.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/modeling_get_started.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:31 GMT -->
+</html>

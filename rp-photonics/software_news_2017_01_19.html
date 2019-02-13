@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_01_19.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:10 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Character Encodings: a Useful Overview and New Features for Software of RP Photonics</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2017-01-19">
+<meta name="description" content="A summary of this blog article: Here you can get a quite useful introduction into the problem of character encodings in computer memory and files. Also, the article discusses how software from RP Photonics has been modernized such that it can avoid encoding problems in virtually all cases.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2017_01_19.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Character Encodings: a Useful Overview and New Features for Software of RP Photonics</h1>
+<div class="posting_details">
+<p>Posted on 2017-01-19 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2017_01_19.html">https://www.rp-photonics.com/software_news_2017_01_19.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: Here you can get a quite useful introduction into the problem of character encodings in computer memory and files. Also, the article discusses how software from RP Photonics has been modernized such that it can avoid encoding problems in virtually all cases.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Probably every computer user has encountered problems related to character encodings &ndash; for example, special characters (examples: &mu;<sup>2</sup>, &deg;) being corrupted when reading data from a text file.
+Such problems are at least less nasty if you properly understand that matter, but few people do that; things can be rather complicated.</p>
+<p>In this article, I give you two things: a hopefully useful, somewhat simplified introduction into the technical background, and also explanations concerning profound improvements of the handling of character encodings which I have just implemented in our software.
+(Hard work, I tell you!)</p>
+<p>Many users may just not use any special characters, thus avoiding any encoding problems straightaway.
+However, you may get some special outputs, in particular the Greek &mu; used as the micro sign in formatted numerical outputs.
+In some countries, you may even want to use much more, in particular when creating <a href="software_custom_forms.html">custom forms</a> containing e.g. explanations in Chinese or Japanese language, or some box drawing symbols.</p>
+<h2 class="togglediv">General Explanations on Character Encodings</h2>
+<div>
+<p>Computer memories and files do not store numbers or characters as such, but only bit sequences.
+Those are often interpreted as numbers or characters based on some encodings.
+Both for numbers and characters, very different kinds of encodings exist and are currently used.</p>
+<h3 class="togglediv">Encoding vs. Fonts</h3>
+<div>
+<p>One should <b>not confuse the issues of character encodings and fonts</b>; nowadays, those aspects are normally handled separately.
+An encoding determines what kind of character (e.g. a certain letter) is associated with a certain bit sequence, while a font determines how that character looks when it is displayed on a screen or printed.
+By using different fonts, one can have different graphical looks of the letter &ldquo;A&rdquo;, for example.</p>
+</div>
+<h3 class="togglediv">ASCI Encoding</h3>
+<div>
+<p>For characters, the ASCII encoding was used in the early days, providing only 128 usable different characters, represented with a single byte (a set of 8 bits), where only the lower 7 bits were used.
+That is of course only sufficient for the simplest purposes.</p>
+</div>
+<h3 class="togglediv">ANSI Code Pages</h3>
+<div>
+<p>Due to the need for more different characters, one soon started to use extended character ranges where the full 256 characters which can be encoded with 8 bits were utilized.
+However, many different versions of such <b>ANSI character sets</b> have been used (and are still used); some of them contain primarily things like accented letters (e.g. for the French language), while others contain letters of other languages or more symbols of certain types, e.g. box drawing symbols.
+Basically, the problem is that overall people in this world need far more than 256 different characters.
+In Windows, different ANSI character sets are characterized with so-called <b>code pages</b> (originally introduced by IBM).
+For example, in parts of Europe it is common that Windows systems use code page 1252 &ldquo;Western European&rdquo;.
+Note that for countries like Japan, where more than 256 characters are needed, 8 bits are not sufficient for representing one character.</p>
+<p>Although the use of different ANSI code pages made possible the use of a vast variety of characters, this approach has <b>serious limitations</b>.
+In particular, when displaying e.g. the content of the text file with such an encoding, this works correctly only when the corresponding code page is known and correctly taken into account.
+Unfortunately, plain text files often do not contain any information on the used code page, so that additional information (e.g. manually transmitted by the user) is often needed to display such files properly; if such information is available, it may or may not be correct.
+In addition, one can of course not convert files from one code page to another without information loss, unless the file contains only characters which occur in both code pages.</p>
+</div>
+<h3 class="togglediv">Unicode as a Universal Solution</h3>
+<div>
+<p>In order to solve such problems, the <b>Unicode system</b> (i.e., Unicode character definitions in conjunction with various encoding systems) has been developed.
+Here, a huge number of different characters (each one represented by a so-called code point) can be encoded &ndash; essentially any characters which one would normally require.</p>
+<p>Of course, one byte (8 bits) is not sufficient for encoding an arbitrary Unicode character.
+Now there are a couple of different encoding schemes for handling Unicode characters in computer memory or files.
+A common scheme is <b>UTF-16</b>, where 16 bits (2 bytes) are normally used for one character, but for some characters one in fact uses 2 of those items, i.e., 32 bits in total, called surrogate pairs.
+This scheme is quite practical for use in CPUs and main memories.
+Another common encoding scheme for Unicode characters is <b>UTF-8</b>, where the most common characters are encoded with a single bytes (8 bits), most other characters need two bytes, and some need even three or four bytes.</p>
+<p>The content of a <b>computer file</b>, for example, can only be correctly handled if the used encoding (e.g. ANSI or Unicode, and which particular scheme) is known.
+Unfortunately, that information is often lost or corrupted e.g. by wrong assumptions on an encoding.
+This problem has been solved for many Unicode files by writing a so-called byte order mark (BOM), consisting of a few bytes, at the beginning of a file.
+A program finding such a BOM in a text file can use it to determine (a) that it is a Unicode file and (b) what UTF encoding exactly has been used.
+However, it is common e.g. for web pages that one uses Unicode by <em>without</em> a BOM; the used encoding is indicated elsewhere (in an HTTP header transmitted before the page content).
+It is then often difficult or impossible for software to determine what encoding has been used for some file; asking the user may be impractical or not work because the user doesn't know that either.</p>
+<p>Of course, an encoding which does not use a fixed number of bytes for one character implies some technical difficulties.
+For example, in order to find the 23rd character in such a byte sequence, one has to scan it from the beginning in order to properly take into account the number of bytes for each previous character.
+Due to such difficulties, it is often not easy to modify old software such that it can handle Unicode data.
+That problem can in principle be solved by using UTF-32 encoding, where each character is represented by 32 bits (4 bytes), but that is rarely used because it does not present a memory-efficient way for storing text.</p>
+</div>
+</div>
+<h2 class="togglediv">The Handling of Encoding in Our Software</h2>
+<div>
+<p>In earlier versions of software from RP Photonics (before 2017), Unicode in the form of UTF-16 was internally used throughout, but text files (e.g. scripts) were written with ANSI encoding based on the standard code page in the Windows system of the user.
+That approach is quite common, but it led to problems e.g. for users in Japan.
+Also, there were (rare) problems e.g. with the Greek &mu; (micro) character missing or encoded differently with some code pages.
+Therefore, the workings have now been modernized profoundly, arriving at the following rules:</p>
+<ul>
+<li><b>Internally, UTF-16 is used throughout</b>, allowing virtually all characters to be handled.
+Only it does not care about surrogate pairs at some locations; that might cause problems, but hardly any user of our software will deal with such characters, and even then it will often work.</li>
+<li>When the software writes a plain text file (e.g. when the user saves a script or the settings of an interactive form), it <b>now always uses UTF-8 encoding with a BOM</b> (see above).
+This implies (a) that virtually all characters can now be stored in a file and (b) that one can determine automatically without doubt what encoding has been used for such a file.</li>
+<li>The software offers various <b>functions for saving information in text files</b>; for example, see the page describing the function open&lowbar;file().
+By default, it now uses UTF-8 also for such files, but the mentioned function offers the new feature that one can change the file encoding which is used for writing or assumed when reading a text file.
+Therefore, one <b>can now easily write or read text files with any encoding</b> &ndash; in case of Unicode with or without BOM.</li>
+<li>All demo scripts and related files are now encoded with UTF-8 (with BOM).</li>
+<li>When a plain text file without a BOM is read, and the software is not explicitly told what the encoding is, it assumes ANSI encoding with a certain code page.
+That code page is by default 1252 (Western European), which leads to correct results e.g. when demo scripts from old versions are loaded.
+However, this assumption can lead to problems if a user having a different code page in his Windows system saved a file with an older version of the software.
+Therefore, one can change the assumed code page in the general settings (see Options | Options); one needs to set the correct code page there before opening such a file.
+One can thereafter just save the file in order to obtain it with UTF-8 encoding.
+So even in such rare cases you don't need an additional software utility for converting old files.</li>
+<li>A remaining question is how to <b>enter special characters</b> in the software.
+There is a <b>new character map</b> form which you get in the main menu with Edit | Character map.
+There, you can select a certain character block and click on any of the displayed characters in order to collect them for pasting them into your script, for example.
+Anyway, you can paste any text into the script editor, so you might use some external utility for entering special characters.</li>
+</ul>
+<p>The taken approach implies that you can now use all kinds of Unicode characters, even in a single script or output file, and they will not be corrupted when you read such files later on.
+The encoding of text files written from now on will always be correctly recognized, so you will have no problems with corrupted special characters.
+So normally you don't need to care, and it just works.
+And with some care (see above), you can correctly load old files (even those containing special characters) and save them again with UTF-8 encoding.</p>
+<p>By the way, it is now also possible to open a large number of text files at once, i.e. with a single File | Open action.
+This is useful for converting a bunch of files: just open all of them and save each one with Ctrl-S.</p>
+<p>Most users of our software probably never had in encoding problems even with old versions, but if you like to have a free update in order to enjoy the above described features, just tell me.
+That offer applies even to those using quite old versions.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_01_19.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:10 GMT -->
+</html>

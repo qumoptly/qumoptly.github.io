@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<rss version="2.0">
+<channel>
+<title>RP Photonics Software News</title>
+<description>News on simulation software from RP Photonics: new features, updates and upgrades, use and application.</description>
+<link>https://www.rp-photonics.com/software_news.html?s=rss</link>
+<language>en-us</language>
+<copyright>RP Photonics Consulting GmbH, 2018</copyright>
+<lastBuildDate>Mon, 03 Dec 2018 12:04:45 +0100</lastBuildDate>
+<item>
+<title>Using Monitors With High Screen Resolution</title>
+<link>https://www.rp-photonics.com/software_news_2018_12_03.html?s=rss</link>
+<description>Software applications occasionally have problems with correctly displaying the user interface when using monitors with particularly high resolution. This article explains the problem and how to solve it. Also, it informs you how RP Photonics has handled this technical issue.</description>
+<pubDate>Mon, 3 Dec 2018 12:04:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_12_03.html</guid>
+</item>
+<item>
+<title>Propagating Optical Fields in Fibers Based on Modes or with Numerical Beam Propagation</title>
+<link>https://www.rp-photonics.com/software_news_2018_09_12.html?s=rss</link>
+<description>Mode-based techniques and numerical beam propagation are very different technical methods for propagating optical fields. This article explains them and discusses their limitations in various cases.</description>
+<pubDate>Wed, 12 Sep 2018 17:32:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_09_12.html</guid>
+</item>
+<item>
+<title>Data Grids for Numerical Beam Propagation</title>
+<link>https://www.rp-photonics.com/software_news_2018_08_02.html?s=rss</link>
+<description>Numerical beam propagation is a very versatile technique in optics and photonics. However, the choice of grid parameters is not a trivial matter; this issue is discussed in some detail here.</description>
+<pubDate>Thu, 2 Aug 2018 18:24:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_08_02.html</guid>
+</item>
+<item>
+<title>Namespaces: An Elegant Approach for Avoiding Name Conflicts</title>
+<link>https://www.rp-photonics.com/software_news_2018_07_02.html?s=rss</link>
+<description>The concept of namespaces is very useful for avoiding name conflicts in programming languages. It has thus been implemented in the script language supported by software from RP Photonics - e.g. RP Fiber Power. Here, it is explained with a real-life example which awkward problems can be elegantly solved with namespaces.</description>
+<pubDate>Mon, 2 Jul 2018 18:42:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_07_02.html</guid>
+</item>
+<item>
+<title>Numerical Representation of Ultrashort Pulses</title>
+<link>https://www.rp-photonics.com/software_news_2018_05_22.html?s=rss</link>
+<description>When simulating the propagation of ultrashort light pulses, you need to numerically represent those pulses. Here, you can learn how to properly do that and take care of various important limitations. That is highly relevant if you either use a pulse propagation software or develop one yourself.</description>
+<pubDate>Tue, 22 May 2018 17:32:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_05_22.html</guid>
+</item>
+<item>
+<title>How to Treat Thermal Lensing in Simulations</title>
+<link>https://www.rp-photonics.com/software_news_2018_04_20.html?s=rss</link>
+<description>Thermal lensing needs to be taken into account in some simulations concerning lasers or amplifiers. Here, it is briefly described what the origins of thermal lensing and then how that effect can be treated in software from RP Photonics, namely in RP Fiber Power and RP Resonator.</description>
+<pubDate>Fri, 20 Apr 2018 17:14:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_04_20.html</guid>
+</item>
+<item>
+<title>Various Improvements for the Simulation Software RP Fiber Power</title>
+<link>https://www.rp-photonics.com/software_news_2018_03_19.html?s=rss</link>
+<description>This article reports various improvements of the simulation and design software RP Fiber Power for fiber lasers, fiber amplifiers and passive fiber devices. Existing users can obtain free updates.</description>
+<pubDate>Mon, 19 Mar 2018 16:30:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_03_19.html</guid>
+</item>
+<item>
+<title>Modeling Pair-induced Quenching in Erbium-doped Fiber Amplifiers</title>
+<link>https://www.rp-photonics.com/software_news_2018_02_22.html?s=rss</link>
+<description>For modeling pair-induced quenching processes e.g. in erbium-doped fiber amplifiers, one needs array equation model where the excitation rate is properly reduced for paired ions. Recently, the software RP Fiber Power has been extended such that this can be done. License holders can get a free update.</description>
+<pubDate>Thu, 22 Feb 2018 11:51:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_02_22.html</guid>
+</item>
+<item>
+<title>Making Color Plots</title>
+<link>https://www.rp-photonics.com/software_news_2018_01_19.html?s=rss</link>
+<description>This article explains how to make nice color plots in various software programs of RP Photonics. It is quite simple to use the cp: command in conjunction with predefined color scale functions.</description>
+<pubDate>Fri, 19 Jan 2018 14:23:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2018_01_19.html</guid>
+</item>
+<item>
+<title>Modeling Multi-Stage Amplifiers with RP Fiber Power</title>
+<link>https://www.rp-photonics.com/software_news_2017_11_17.html?s=rss</link>
+<description>Optical amplifiers and other devices containing multiple active fiber stages can be modeled with the software RP Fiber Power. The article discusses different approaches and shows you how to easily implement quite sophisticated models.</description>
+<pubDate>Fri, 17 Nov 2017 14:23:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_11_17.html</guid>
+</item>
+<item>
+<title>Self Starting of Passively Mode-locked Lasers: Difficult to Model</title>
+<link>https://www.rp-photonics.com/software_news_2017_10_23.html?s=rss</link>
+<description>Although it may seem to be simple to numerically simulate the self-starting behavior of a passively mode-locked laser, there can be various substantial difficulties, making such approaches impractical.</description>
+<pubDate>Mon, 23 Oct 2017 18:52:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_10_23.html</guid>
+</item>
+<item>
+<title>Pulse Amplification in the Steady State</title>
+<link>https://www.rp-photonics.com/software_news_2017_09_22.html?s=rss</link>
+<description>In simulations of the amplification of ultrashort pulse trains, it can be a challenge to find the steady state of the amplifier. The article explains different matters, which can be easily applied with suitable simulation software such as RP Fiber Power.</description>
+<pubDate>Fri, 22 Sep 2017 09:21:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_09_22.html</guid>
+</item>
+<item>
+<title>How to Efficiently Track Down Numerical Problems</title>
+<link>https://www.rp-photonics.com/software_news_2017_08_18.html?s=rss</link>
+<description>It can be rather hard to track down numerical problems e.g. in beam propagation and to find practical solutions. However, some good methodology can help a lot. An example case allows you to take home a number of quite useful lessons.</description>
+<pubDate>Fri, 18 Aug 2017 16:10:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_08_18.html</guid>
+</item>
+<item>
+<title>New Editor Features: Syntax Highlighting, Parameter Help, Syntax Checking, Automatic Code Reformatting</title>
+<link>https://www.rp-photonics.com/software_news_2017_07_13.html?s=rss</link>
+<description>The main software products of RP Photonics have been equipped with further substantial new features, including syntax highlighting, parameter help on built-in functions, syntax checking and automatic code reformatting.</description>
+<pubDate>Thu, 13 Jul 2017 15:58:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_07_13.html</guid>
+</item>
+<item>
+<title>A Powerful Debugger and Further New Software Features</title>
+<link>https://www.rp-photonics.com/software_news_2017_05_31.html?s=rss</link>
+<description>Various software products from RP Photonics have obtain substantial improvements - notably a script debugger in the latest versions, but also a number of other nice features which users of previous versions can obtain with free updates.</description>
+<pubDate>Wed, 31 May 2017 18:13:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_05_31.html</guid>
+</item>
+<item>
+<title>How to Calculate Misalignment Effects in Laser Resonators</title>
+<link>https://www.rp-photonics.com/software_news_2017_04_26.html?s=rss</link>
+<description>For practical laser resonator designs, it is essential to consider the sensitivity to a misalignment of resonator mirrors. Here, it is explained how that sensitivity can be calculated and taken into account in numerical optimizations.</description>
+<pubDate>Wed, 26 Apr 2017 09:09:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_04_26.html</guid>
+</item>
+<item>
+<title>At which Wavelength will a Laser Emit?</title>
+<link>https://www.rp-photonics.com/software_news_2017_03_28.html?s=rss</link>
+<description>It is explained what physically determines the emission wavelength of a laser with a broadband gain medium, and how one can most efficiently calculate the emission wavelength with a numerical model.</description>
+<pubDate>Tue, 28 Mar 2017 11:03:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_03_28.html</guid>
+</item>
+<item>
+<title>Stimulated Raman Scattering in Beam Propagation Calculations</title>
+<link>https://www.rp-photonics.com/software_news_2017_03_01.html?s=rss</link>
+<description>The RP Fiber Power software it has been extended such that stimulated Raman scattering can now be included in simulations with numerical beam propagation. The implementation is highly flexible, allowing for arbitrary transverse profiles of nonlinear coefficients and interactions between a substantial number of waves with different wavelengths.</description>
+<pubDate>Wed, 1 Mar 2017 14:21:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_03_01.html</guid>
+</item>
+<item>
+<title>Character Encodings: a Useful Overview and New Features for Software of RP Photonics</title>
+<link>https://www.rp-photonics.com/software_news_2017_01_19.html?s=rss</link>
+<description>Here you can get a quite useful introduction into the problem of character encodings in computer memory and files. Also, the article discusses how software from RP Photonics has been modernized such that it can avoid encoding problems in virtually all cases.</description>
+<pubDate>Thu, 19 Jan 2017 12:53:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2017_01_19.html</guid>
+</item>
+<item>
+<title>Laser Simulations which Do Not Work</title>
+<link>https://www.rp-photonics.com/software_news_2016_12_21.html?s=rss</link>
+<description>There are certain situations where the results from simplified analytical or numerical laser models can be very misleading, because reality is substantially more complicated. In some situations, it is even better to refrain from laser modeling, because realistic models are not practical. In practice, it can be essential to obtain competent otherwise on such matters.</description>
+<pubDate>Wed, 21 Dec 2016 15:22:00 +0100</pubDate>
+<guid isPermaLink="true">https://www.rp-photonics.com/software_news_2016_12_21.html</guid>
+</item>
+</channel>
+</rss>

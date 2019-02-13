@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_sc.html?banner=RP_Fiber_Power_2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP Fiber Power: supercontinuum generation, numerically simulated</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Supercontinuum generation in a fiber is simulated with the RP Fiber Power software. Strong spectral broadening results from a complicated interplay of effects.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, regenerative amplifier, simulation, software">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_sc28d9.html?banner=RP_Fiber_Power_2"; cat="S"; shownbanner=""; ref="fiber_lasers.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_sc_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Fiber Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+</tr>
+</table>
+<h2>Example Case: Supercontinuum Generation</h2>
+<h3>Description of the Model</h3>
+<p>Here, we numerically simulate supercontinuum generation in a germanosilicate fiber.
+The fiber has been designed such that its zero-dispersion wavelength is not too far from the pump wavelength of 1550&nbsp;nm, because this allows for better spectral broadening.
+The mode solver is used to calculate the fiber's <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> and <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> from the given refractive index profile.
+The wavelength dependence of refractive indices must be fully taken into account, using <a href="sellmeier_formula.html" title="Sellmeier formula: an equation for calculating the wavelength-dependent refractive index of a medium">Sellmeier equations</a>.</p>
+<p>Soliton-shaped pulses with 1&nbsp;nJ energy and 400&nbsp;fs duration are injected into the fiber.
+Supercontinuum generation results from a complicated interplay of fiber nonlinearity and chromatic dispersion.
+Concerning the nonlinearity, not only the simple Kerr effect is taken into account, but also <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman scattering</a> and self-steepening.
+The full chromatic dispersion profile (to arbitrarily high orders) is directly taken over from the mode solver.
+The integrated automatic step size control is useful, since substantially finer steps are required in the last part of the fiber in order to maintain a high accuracy.</p>
+<h3>Results</h3>
+<p>Figure&nbsp;1 shows the wavelength-dependent <a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> and <a href="group_index.html" title="group index: the ratio of the vacuum velocity of light to the group velocity in a medium">group index</a> of the fiber, which have been calculated from the refractive index profile.
+We see that the zero-dispersion wavelength is around 1500&nbsp;nm, close to the pump wavelength of 1550&nbsp;nm.</p>
+<figure>
+<img src="img/fiberpower_sc2.png" alt="dispersion profile of the fiber">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Group delay dispersion and group index of the fiber.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows the output pulse in the time domain.</p>
+<figure>
+<img src="img/fiberpower_sc3.png" alt="pulses in time domain">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Output pulse in the time domain.
+The beginning of the pulse has not changed much, but there are strong changes thereafter.
+</figcaption>
+</figure>
+<p>Figure&nbsp;3 shows the logarithmic spectrum of the output pulse.
+Substantial spectral broadening is observed.</p>
+<figure>
+<img src="img/fiberpower_sc4.png" alt="pulses in frequency domain">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Output pulse in the frequency domain.
+</figcaption>
+</figure>
+<p>Figure&nbsp;4 shows how the pulse spectrum evolves within the fiber.
+Initially, the broadening increases slowly, then more rapidly, and later on there is no more significant further broadening.</p>
+<figure>
+<img src="img/fiberpower_sc5.png" alt="evolution of pulse spectra in the fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Evolution of the pulse spectra in the fiber.
+</figcaption>
+</figure>
+<p>Figure&nbsp;5 is a spectrogram of the output pulse.
+The color scale has been made logarithmic, so that weak parts are also visible.</p>
+<figure>
+<img src="img/fiberpower_sc6.png" alt="spectrogram of the output pulse">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Spectrogram of the output pulse.
+</figcaption>
+</figure>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_sc.html?banner=RP_Fiber_Power_2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:44 GMT -->
+</html>

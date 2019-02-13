@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/rp_q_switch_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Q-switch f&uuml;r die Simulation von aktivem oder passivem G&uuml;teschalten, Laserdynamik, Spiking, Relaxationsoszillationen</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-11-09">
+<meta name="description" content="Die Software RP Q-switch kann für die Simulation der Dynamik von Festkörperlasern dienen, insbesondere für Güteschalten, Spiking und Relaxationsoszillationen.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Firma, RP Photonics Consulting, Paschotta, Kundengruppen">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="rp_q_switch_d.html"; cat="S"; shownbanner=""; ref="software_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="rp_q_switch.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html" class="sel">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Die Software &ldquo;RP Q-switch&rdquo;</h1>
+<h2>Ein leistungsfähiges Werkzeug für das Design von gütegeschalteten Festkörperlasern</h2>
+<p>Die Software <b>RP Q-switch</b> wurde entwickelt für numerische Berechnungen betreffend aktiv oder passiv gütegeschaltete Festkörperlaser sowie Spiking-Phänomene.
+Für gegebene Parameter des Lasers simuliert es numerisch die zeitliche Entwicklung der Laserleistung und berechnet die Parameter der erzeugten Pulse.
+Die Software ist ein wertvolles Werkzeug insbesondere für das Design von aktiv oder passiv gütegeschalteten Festkörperlasern.
+(Für <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">Faserlaser</a> und teils sogar für Bulk-Laser ist die Software <a href="fiberpower_d.html"><b>RP Fiber Power</b></a> besser geeignet.)
+Sie kann ebenfalls für Ausbildungszwecke verwendet werden.
+So wird etwa ein Laserentwickler durch die Arbeit mit diesem Simulationsprogramm ein vertieftes Verständnis gütegeschalteter Laser erreichen können.</p>
+<p><b>RP Q-switch</b> erlaubt es, z.&nbsp;B. die folgenden Fragen anzugehen:</p>
+<ul>
+<li>Ist das experimentell beobachtete Verhalten meines gütegeschalteten Lasers (betreffend Pulsenergie und -dauer, Neigung zu Doppelpulsen, u.&nbsp;ä.) im Einklang mit theoretischen Erwartungen?</li>
+<li>Falls nicht, welche Abweichungen von Parametern könnten dies erklären?</li>
+<li>Wie sind die Chancen, durch bestimmte Designänderungen die Leistungsfähigkeit des Lasers zu verbessern?</li>
+<li>Ist mein Güteschalter schnell genug, und erzeugt er genügend hohe Verluste zum Unterdrücken vorzeitiger Laseroszillationen?
+Falls nein, wie viel besser müsste er sein, um meine Probleme zu lösen?</li>
+<li>Ist ein Laserdesign möglich, welches zu dreimal kürzeren Pulsen führt?
+Wodurch ist die erreichbare Pulsdauer limitiert?</li>
+<li>Ist es möglich, eine verbesserte Effizienz der Frequenzverdopplung zu erreichen, indem man einen Frequenzverdoppler resonatorintern betreibt? In welchem Maße werden die Pulse dann länger? Welcher Wert der Verdopplungseffizienz wäre dann ideal?</li>
+</ul>
+<p>Benutzerlizenzen sind verfügbar sowohl für kommerzielle Anwendung in Laserfirmen als auch für Universitäten.
+<a href="software_contact_d.html">Kontaktieren Sie RP Photonics</a>, um Auskunft über die Konditionen zu erhalten.</p>
+<h2 class="togglediv">Leistungsmerkmale</h2>
+<div>
+<ul>
+<li>Es lässt sich eine beliebige Folge der folgenden Arten von Intracavity-Komponenten definieren: Laserkristall, Auskoppelspiegel, Modulator (aktiver Güteschalter), sättigbare Absorber (passiver Güteschalter), sowie parasitäre Verluste.</li>
+<li>Sowohl Vierniveau-Laser als auch Quasi-Dreiniveau-Laser können behandelt werden.
+Dies bedeutet, dass die Software z.&nbsp;B. auch für Yb:YAG-Laser oder Erbium-dotierte Faserlaser einsetzbar ist.</li>
+<li>Man kann zusätzlich bis zu drei verschiedene Verstärkerstufen außerhalb des Laserresonators berücksichtigen.
+Ihr Sättigungsverhalten wird detailliert berechnet.</li>
+<li>Die Software kann Pulsparameter wie Energie, Spitzenleistung, Dauer und zeitliche Position berechnen.
+Sie erlaubt ebenfalls die Überwachung verschiedener anderer Größen, die für den Laserentwickler von Interesse sind, z.&nbsp;B. die zeitliche Entwicklung der Laserverstärkung oder der Sättigung eines Absorbers.</li>
+<li>Für kontinuierlich laufende Laser können Spiking und Relaxationsoszillationen untersucht werden.</li>
+<li>Die Pumpleistung kann mit verschiedenen Formaten moduliert sein (z.&nbsp;B. rechteckförmig, sinusförmig, oder entsprechend einem Sägezahn).</li>
+<li>Diverse unerwünschte Phänomene können im Detail untersucht werden, z.&nbsp;B. reduzierte Leistung aufgrund der begrenzten Geschwindigkeit des Modulators, Bildung von Mehrfachpulsen für zu lange Öffnungszeit des Modulators, etc.</li>
+<li>Ein- und Ausgabe von Parametern geschieht über ein praktisches Formular, so dass neue Benutzer sehr rasch mit dem Programm vertraut werden.</li>
+<li>Die Software kann grafische Ausgaben erzeugen, die sehr flexibel handhabbar sind.
+Es gibt acht vordefinierte Arten von Grafiken, und die Benutzer können viele weitere Arten von Diagrammen (einschließlich parametrischen Plots) selbst erstellen.</li>
+<li>Es ist ebenfalls möglich, berechnete Daten in Tabellenform in Ausgabedateien zu schreiben.
+Dies ermöglicht den Export von Daten zur weiteren Verarbeitung mit anderer Software.</li>
+</ul>
+<p>Bei Bedarf kann RP Photonics auch Sonderversionen der Software mit zusätzlichen Fähigkeiten erstellen</p>
+<p><b>RP Q-switch</b> läuft auf einem PC unter Windows ab Version XP.</p>
+</div>
+<h2 class="togglediv">Begrenzungen und eine mögliche Alternative</h2>
+<div>
+<p>Eine grundlegende Einschränkung mit RP Q-switch ist, dass es die transversalen Abhängigkeiten nicht berücksichtigen kann.
+Effektiv werden bei diesem Modell top-hat-Profile angenommen, d.&thinsp;h. dass die Intensität jedes Strahls innerhalb eines gewissen Radius konstant ist und außerhalb verschwindet.
+Diese Näherung ist in vielen Fällen akzeptabel, aber eben nicht immer.</p>
+<p>Für ausgefeilter Simulationen empfehlen wir unsere Software <a href="fiberpower_d.html"><b>RP Fiber Power</b></a>.
+Obwohl dieses Produkt eigentlich für <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">Faserlaser</a> entwickelt wurde, kann es auch für die meisten <a href="end_pumping.html" title="end pumping: a technique of optically pumping a laser medium in a direction along the laser beam">endgepumpten</a> <a href="bulk_lasers.html" title="bulk lasers: lasers based on bulk crystals as gain media">Bulk-Laser</a> verwendet werden.
+<b>RP Fiber Power</b> kann die transversalen Intensitäts- und Dotierungsprofile berücksichtigen und auch komplizierte Energieniveau-Schemata behandeln.
+Ebenfalls ist die Flexibilität wesentlich höher als mit <b>RP Q-switch</b>.
+Beispielsweise kann <b>RP Fiber Power</b> beliebige Zeitabhängigkeiten von Pumpleistungen und Signal-Inputs verarbeiten und mehr graphische Diagramme erzeugen.
+Aus diesen Gründen wird <b>RP Fiber Power</b> für ausgefeiltere Simulationen empfohlen, während RP Q-switch das richtige Werkzeug ist, um sehr schnell Resultate für einfachere Situationen zu erhalten.</p>
+</div>
+<h2 class="togglediv">Dokumentation</h2>
+<div>
+<p>Die Software enthält eine detaillierte Dokumentation.
+Selbst ohne eine Lizenz zu kaufen, können Sie die detaillierte englische <a href="RP_Q-switch3a3f.pdf">Dokumentation im PDF-Format</a> herunterladen, um einen Eindruck zu bekommen.
+Die laufende Software kann dieselbe Dokumentation am Bildschirm anzeigen, ebenfalls detaillierte Informationen zu bestimmten Ein- und Ausgabefeldern der Formulare (siehe unten).</p>
+</div>
+<h2 class="togglediv">Lizenzbedingungen</h2>
+<div>
+<p><a href="contact_d.html">Kontaktieren Sie RP Photonics</a>, um über die Lizenzbedingungen zu erfahren.
+Die kommerzielle Software-Lizenz beinhaltet bis zu acht Arbeitsstunden für zusätzliche Unterstützung, zu benutzen für technische Aspekte der Software und des verwendeten physikalischen Modells, oder für Beratung über Laserdynamik, Design von gütegeschalteten Lasern u. ä.</p>
+<p>Die Software wird gelegentlich weiter verbessert.
+Kunden, die im Besitz einer Lizenz sind, bekommen verbesserte Versionen in der Regel ohne zusätzliche Zahlungen.</p>
+<p>Übrigens ist der Kauf einer Lizenz für die Software nicht die einzige Möglichkeit: Sie können die Berechnungen auch durch RP Photonics durchführen und sich die Resultate zusammen mit entsprechenden Interpretationen und Schlussfolgerungen z.&nbsp;B. für Ihr Laserdesign schicken lassen.
+Sie bezahlen dann lediglich für die Arbeit (z.&nbsp;B. auf Stundenbasis), benötigen aber weder eine eigene Softwarelizenz noch die Zeit, um sich in die Details einzuarbeiten.</p>
+</div>
+<h2 class="togglediv">Screen Shot</h2>
+<div>
+<p>Das Bild unten zeigt einen &quot;screen shot&quot; des Hauptformulars von <b>RP Q-switch</b>.</p>
+<p class="fig"><img src="img/rp_qs_screenshot.png" width="694" height="669" alt="screen shot von RP Q-switch" /></p>
+<p>(Das Panel &quot;Passive Q switch&quot; ist hier gerade ausgeblendet, weil bei &quot;component order&quot; gerade kein &quot;A&quot; für &quot;absorber&quot; angewählt ist.)</p>
+</div>
+<h2 class="togglediv">Beispiele für grafische Ausgaben von RP Q-switch</h2>
+<div>
+<p>Die folgende Diagramme beziehen sich alle auf das Beispiel eines aktiven gütegeschalteten Nd:YAG-Lasers.</p>
+<figure>
+<img src="img/rpqs_tevol.png" alt="dynamics of an actively Q-switched Nd:YAG laser">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Zeitliche Entwicklung von Verstärkung, Verlusten und Laserleistung für einen aktiv gütegeschalteten Nd:YAG-Laser nach dem Einschalten der Pumpquelle.
+Eine logarithmische Skalierung der Achsen wäre auch möglich.
+</figcaption>
+<img src="img/rpqs_tevol2.png" alt="dynamics of an actively Q-switched Nd:YAG laser">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Vergrößerter Ausschnitt aus dem oberen Diagramm. Gezeigt sind das Pulsprofil und die Sättigung der Verstärkung.
+</figcaption>
+<img src="img/rpqs_phspace.png" alt="pulse evolution in phase space">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Pulsentwicklung im Phasenraum: parametrisches Diagramm mit Laserleistung vs. Verstärkung.
+</figcaption>
+<img src="img/rpqs_modspeed.png" alt="influence of modulator speed">
+<figcaption><span class="start">Abbildung&nbsp;4:</span> 
+Einfluss der Schaltgeschwindigkeit des Modulators (aktiven Güteschalters) auf der Laserleistung.
+</figcaption>
+</figure>
+<p>Wenn Sie noch <b>Fragen</b> haben oder ein <b>Angebot</b> benötigen:
+<div class="button action"><a href="software_contact_d.html"><b>Kontaktieren Sie uns!</b></a></div></p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/rp_q_switch_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:08 GMT -->
+</html>

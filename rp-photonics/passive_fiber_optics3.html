@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Passive Fiber Optics&rdquo;: single-mode fiber, V number, numerical aperture, NA, mode radius, launching light, effective mode area</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on passive fiber optics. Part 3 discusses single-mode fibers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber optics, optical fibers, single-mode fiber, V number, numerical aperture, NA, core size, mode radius, launching light, launch conditions, effective mode area">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="passive_fiber_optics3.html"; cat="C"; shownbanner=""; ref="encyclopedia_s.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 3 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>3</span>
+<p>1:&nbsp;<a href="passive_fiber_optics1.html">Guiding light in a glass fiber</a>, 2:&nbsp;<a href="passive_fiber_optics2.html">Fiber modes</a>, 3:&nbsp;<span style="text-decoration:underline;">Single-mode fibers</span>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<a href="passive_fiber_optics5.html">Fiber ends</a>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<a href="passive_fiber_optics7.html">Propagation losses</a>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<a href="passive_fiber_optics9.html">Polarization issues</a>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<a href="passive_fiber_optics11.html">Nonlinearities of fibers</a>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 3: Single-mode Fibers</h2>
+<div>
+<p>In the <a href="passive_fiber_optics2.html">previous part</a>, we have seen that depending on its <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> profile and the wavelength, a fiber may guide different numbers of <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>.
+It may be only a single guided mode (the LP<sub>01</sub> mode), if the <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> and the refractive index contrast are small.
+In this regime, the fiber is called a single-mode fiber.
+Higher-order modes like LP<sub>11</sub>, LP<sub>20</sub> etc. then do not exist &ndash; only <a href="cladding_modes.html" title="cladding modes: modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a>, which are not localized around the fiber core.</p>
+<p>Note that in most cases light with different polarization states can be guided.
+The term &ldquo;single-mode&rdquo; ignores the fact that usually (for radially symmetric index profiles and no <a href="birefringence.html" title="birefringence: the polarization dependence of the refractive index of a medium">birefringence</a>) one actually has two different modes with same intensity profile but orthogonal linear polarization directions.
+Any other polarization state can be considered as a linear superposition of these two.
+(See also <a href="passive_fiber_optics6.html">part 6 on polarization issues</a>.)</p>
+<h3 class="togglediv">Condition for Single-mode Guidance</h3>
+<div>
+<p>For step-index fiber designs, there is a simple criterion for single-mode guidance: the <a href="v_number.html" title="V number: a normalized frequency parameter, which determines the number of modes of a step-index fiber">V number</a> has to be below &asymp;2.405.
+The V number is defined as</p>
+<div class="eqn"><img src="eqn/v_number.gif" width="256" height="41" alt="V number"></div>
+<aside class="callout red">You need more refined tools to check the single-mode condition for non-step-index profiles!</aside>
+<p>where <span class="eqn_il"><span class="greek">&lambda;</span></span> is the vacuum wavelength, <span class="eqn_il"><i>a</i></span> is the radius of the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber core</a>, and NA is the <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>.</p>
+<p>For other radial dependencies of the refractive index, or even for non radially symmetric index profiles, the single-mode condition normally has to be calculated numerically.
+It would <em>not</em> be correct to use the criterion <span class="eqn_il"><i>V&thinsp;&lt;</i>&thinsp;2.405</span>, e.g. with <span class="eqn_il"><i>V</i></span> calculated from the maximum index difference.</p>
+</div>
+<h3 class="togglediv">Influence of the Core Size</h3>
+<div>
+<p>Generally, one might expect that a smaller core implies a smaller fiber mode.
+For a constant <a href="v_number.html" title="V number: a normalized frequency parameter, which determines the number of modes of a step-index fiber"><em>V</em> number</a>, this is true; the index contrast is then getting smaller for a larger core.
+However, if we keep the <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> constant, the <span class="eqn_il"><i>V</i></span> number changes with the core radius, and the mode radius shows a non-monotonic dependence on the core radius, as can be seen in Figure&nbsp;2 for an NA of 0.1:</p>
+<figure>
+<img src="img/mode_size_vs_core_size_01.png" alt="mode size vs. core size">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Dependence of mode radius on the core radius for a constant numerical aperture of 0.12.
+The mode radius is defined via the second moment of the intensity profile (D4&sigma; value).
+The single-mode regime is left of the gray vertical line.
+</figcaption>
+</figure>
+<p>One can see that for core radii below &asymp;4.8&nbsp;&mu;m, where the V number gets rather small, the mode radius <em>increases</em>.
+In the regime of small V values, the mode extends far beyond the core, and it deviates substantially from a Gaussian shape.</p>
+<p>Figure&nbsp;3 shows the same for a higher NA of 0.3:</p>
+<figure>
+<img src="img/mode_size_vs_core_size_03.png" alt="mode size vs. core size">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Dependence of mode radius on the core radius for a constant numerical aperture of 0.12.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Example: a Typical Single-mode Fiber</h3>
+<div>
+<p>A typical kind of single-mode fiber for 1.5&nbsp;&mu;m wavelength may have a <a href="step_index_fibers.html" title="step-index fibers: optical fibers with a step-index refractive index profile">step-index</a> profile with a <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">core</a> radius of 4&nbsp;&mu;m and a <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of 0.12.
+The guided mode then has a mode radius of 5.1&nbsp;&mu;m and an <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a> of 75&nbsp;&mu;m<sup>2</sup>.
+That is not too far from the data of the often used SMF-28 telecom fiber from Corning.</p>
+<figure>
+<img src="img/bp_in_sm_fiber1.png" alt="intensity profile of LP01 mode">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Radial intensity profile of the LP<sub>01</sub> mode of a single-mode fiber.
+The dotted curve shows a Gaussian profile, which is very similar.
+The gray vertical lines show the position of the core/cladding boundary.
+</figcaption>
+</figure>
+<p>As is typical for single-mode fibers, the field distribution extends significantly beyond the core; only 54.4&#37; of the power propagates in the core.
+(It may seem according to Figure&nbsp;3 that it is more, but note the factor <span class="eqn_il"><i>r</i></span> in the area integral, which makes the outer parts of the profile more important.)
+However, the intensity drops quickly with increasing radial coordinate.
+The intensity profile is close to a Gaussian profile.</p>
+<p>When we decrease the wavelength, we find that the fiber is no more single-mode below the <em>cut-off wavelength</em> of 1254&nbsp;nm: in addition to the LP<sub>01</sub> mode, it then also supports LP<sub>11</sub> modes (actually two of these with orthogonal orientation).
+Below 787&nbsp;nm, the LP<sub>02</sub> mode comes in additionally.</p>
+<p>In principle, the fiber stays single-mode for any wavelength above the LP<sub>11</sub> cut-off, which is 1254&nbsp;nm.
+However, for longer wavelengths the mode becomes larger and larger, and it will become increasingly sensitive to <a href="bend_losses.html" title="bend losses: propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a>, resulting both from macroscopic bending and from microscopic imperfections.
+For the design discussed here, another problem is actually more serious: beyond &asymp;2&nbsp;&mu;m, absorption of the base material (<a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica</a>) sets in.
+So in practice there is a limited wavelength interval into which a single-mode fiber can be used.</p>
+</div>
+</div>
+<h2 class="togglediv">Launching Light into a Single-mode Fiber</h2>
+<div>
+<p>Efficiently launching light into a single fiber modes requires that the complex amplitude profile of the incident light (assuming monochromatic light) has a high overlap with the corresponding mode amplitude profile.
+Fortunately, the fundamental mode of a single-mode fiber has in most cases a profile which is close to that of a Gaussian beam (for robust guiding, with large enough <span class="eqn_il"><i>V</i></span> value), and Gaussian beams are well approximated by the outputs of most <a href="single_mode_operation.html" title="single-mode operation: operation of a laser on axial (longitudinal) resonator modes only, or even on a single axial mode">single-mode</a> <a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">lasers</a>.
+So the remaining task is</p>
+<ul>
+<li>to properly focus a laser beam such that the <a href="beam_radius.html" title="beam radius: a measure of the transverse extension of a light beam">beam radius</a> is close to that of the fiber mode,</li>
+<li>to place the fiber end at the beam focus (beam waist), and</li>
+<li>to align the fiber such that the beam focus hits the fiber core with proper orientation.</li>
+</ul>
+<p>Obviously, the position error of the incident beam should be small compared with the mode radius.
+The following formula tells how the launch efficiency (disregarding possible reflections of the interface) depends on the position error <span class="eqn_il"><span class="greek">&Delta;</span><i>x</i></span> and also on possible deviations between the input beam radius <span class="eqn_il"><i>w</i><sub>1</sub></span> and the mode radius <span class="eqn_il"><i>w</i><sub>2</sub></span>, if we can assume Gaussian mode profiles:</p>
+<aside class="callout red">Caution: For non-Gaussian mode profiles, you need more refined tools for calculating the launch efficiency &ndash; for example, our <a href="rp_fiber_calculator.html"><b>RP Fiber Calculator PRO</b></a> software.</aside>
+<div class="eqn"><img src="eqn/eta_wdx.gif" width="221" height="62" alt="coupling efficiency for single-mode fibers"></div>
+<p>We see that for a perfect beam size, an offset of one beam radius reduces the coupling efficiency already to <span class="eqn_il">1&thinsp;/&thinsp;<i>e</i></span> &asymp; 37&#37;, and a 5 times smaller error allows for a 90&#37; coupling efficiency.
+Note that the equation holds only for Gaussian profiles, but in most cases this is a good approximation.</p>
+<p>The beam direction also has to be correct.
+This is not so sensitive, however, for typical single-mode fibers.
+The angle error should be well below the <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">beam divergence</a>, but that is relatively large for small more areas.</p>
+</div>
+<h2 class="togglediv">The Effect of Imperfect Launch Conditions</h2>
+<div>
+<p>What happens, for example, if we somewhat misalign the input beam?</p>
+<p>Figure&nbsp;2 shows a simulated example, where the input laser beam is displaced by 1/10 of the beam radius.
+After some propagation length, only light in the guided mode remains.
+All other light is lost in the cladding.
+(The cladding/coating interface is often quite lossy.)
+At the end of a 10&nbsp;cm long fiber, for example, one will find only light in the core, having a profile which is only determined by the mode profile.
+The launch conditions influence only the launched power, but not the output beam profile.</p>
+<figure>
+<img src="img/sm_and_mm_fiber1.png" alt="single-mode regime">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Light propagation at 1.5&nbsp;&mu;m wavelength in a single-mode fiber with displayed input beam.
+The numerical simulation has been done with the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<h3 class="togglediv">Obtaining Large Mode Areas</h3>
+<div>
+<p>For some applications, it is desirable to have rather large mode areas while still having single-mode guidance.
+For example, one may want to minimize <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinear effects</a> or maximize the amount of stored energy in pulsed fiber amplifier while preserving a high <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>.</p>
+<p>In principle, it is easy to obtain single-mode guidance even for a rather large core: one only has to reduce the index contrast (thus the <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>).
+For example, one could increase the core radius in the above example fivefold to 20&nbsp;&mu;m.
+If we reduce the numerical aperture by the same factor to 0.024, we still obtain single-mode guidance &ndash; now with an active area of 1869&nbsp;&mu;m<sup>2</sup>, which is 5<sup>2</sup> = 25 times larger than before.
+Unfortunately, however, that brings with it some trouble:</p>
+<ul>
+<li>As the index contrast is now extremely weak (0.0002), the fiber becomes extremely sensitive to small random index changes resulting from not perfectly controlled fabrication conditions.
+The NA of 0.024 is considered impractically small for currently available technology.</li>
+<li>Even if a perfect fiber is made based on that design, it will be very sensitive to bending.
+Figure&nbsp;2 shows a numerical simulation, where the inverse bend radius grows linearly along the fiber.
+On the right side, a bend radius of 1&nbsp;m is reached.
+Before that happens, the light experiences serious bend loss.
+This means that the fiber could be used only if it were essentially kept straight, and if any significant microbends could be avoided.</li>
+</ul>
+<figure>
+<img src="img/bp_in_sm_lma_fiber2.png" alt="bending of a large mode area step-index fiber">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Amplitude profile in a large mode area fiber, which is bent more and more strongly towards the right side (where a bend radius of 1&nbsp;m is reached).
+On the right side, serious bend losses occur.
+It is assumed that the fiber cladding radius is 125&nbsp;&mu;m, and that light is fully reflected at that outer interface.
+</figcaption>
+</figure>
+<p>More advanced fiber designs have been developed, where mode areas well above 1000&nbsp;&mu;m<sup>2</sup> can be obtained in combination with better bending properties and lower sensitivity to fabrication errors.
+However, the described problems cannot be fully avoided.
+The fundamental problem is that a very large mode is necessarily only weakly guided, and thus sensitive to various additional effects.</p>
+<p>Efficient launching light into a large mode area single-mode fiber is simpler than for a small area, as far as the position alignment is concerned.
+Note, however, that as the beam divergence gets smaller, the angular alignment becomes more sensitive.</p>
+<p>Go to <a href="passive_fiber_optics4.html">Part 4: Multimode Fibers</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:51 GMT -->
+</html>

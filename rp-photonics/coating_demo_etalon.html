@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_etalon.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:35 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The thin-film software RP Coating - demo file: air-spaced etalon</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="An air-spaced etalon is analyzed with the software RP Coating, including its chromatic dispersion properties.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Coating, modeling, software, optical multilayer structures, demo files, air-spaced etalon">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="coating_demo_etalon.html"; cat="S"; shownbanner=""; ref="coating.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="coating_demo_etalon_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html" class="sel">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP Coating &ndash; Advanced Software for<br>Designing Optical Multilayer Structures</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="coating.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Demo File: Air-spaced Etalon</h2>
+<div>
+<p>Here, we analyze an air-spaced etalon, consisting of two simple mirrors with some air space in between.
+That design can be described as a single structure, which includes one &ldquo;layer&rdquo; of air:</p>
+<pre class="codedisplay">
+d_units: nm
+l_units: nm
+&nbsp;
+l_Bragg := 1000  { Bragg wavelength }
+N_Bragg := 2  { number of layer pairs }
+d := 0.1 mm / d_units  { distance between the mirrors (in d_units) }
+&nbsp;
+beam from superstrate
+substrate: BK7
+for j := 1 to N_Bragg do
+begin
+* SiO2, l / 4 at l_Bragg
+* TiO2, l / 4 at l_Bragg
+end
+* air, d = d, d_max = d
+for j := 1 to N_Bragg do
+begin
+* TiO2, l / 4 at l_Bragg
+* SiO2, l / 4 at l_Bragg
+end
+superstrate: BK7
+</pre>
+<p>The first diagram shows the transmittivity profile:</p>
+<pre class="codedisplay">
+diagram 1:
+&nbsp;
+"Transmissivity Profile"
+&nbsp;
+x: 990, 1010
+"wavelength (nm)", @x
+y: 0, 100
+"transmissivity (%)", @y
+frame
+hx
+hy
+&nbsp;
+f: 100 * T(x), color = red, width = 3, step = 1
+</pre>
+<figure>
+<img src="img/coating_demo_etalon1.png" alt="transmittivity profile of an air-spaced etalon">
+</figure>
+<p>We see the transmission peaks corresponding to resonances of the structure.</p>
+<p>A second diagram shows the transmittivity for a variable angle of incidence:</p>
+<pre class="codedisplay">
+diagram 2:
+&nbsp;
+"Transmissivity for Different Angles of Incidence"
+&nbsp;
+"(for p polarization)"
+&nbsp;
+x: 990, 1010
+"wavelength (nm)", @x
+y: -5, +5
+"angle of incidence (°)", @y
+frame
+hx
+hy
+&nbsp;
+cp: color_I(T_p(x, y * deg))
+</pre>
+<figure>
+<img src="img/coating_demo_etalon2.png" alt="transmittivity spectrum of an air-spaced etalon for different angles of incidence">
+</figure>
+<p>We see that the resonances move to shorter wavelengths when the etalon is tilted.
+Also, we see that a Gaussian beam with 100&nbsp;&mu; <a href="beam_radius.html" title="beam radius: a measure of the transverse extension of a light beam">beam radius</a>, for example, having a <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">beam divergence</a> of only 3.2&nbsp;mrad = 0.18&deg;, will experience a nearly constant transmissivity over its angular range, as long as the angle of incidence is not too large.</p>
+<p>The third diagram plots the group delay in transmission as a function of wavelength, which is highest on the resonances (which are shown with the dotted curve):</p>
+<pre class="codedisplay">
+diagram 3:
+&nbsp;
+"Group Delay"
+&nbsp;
+x: 990, 1010
+"wavelength (nm)", @x
+y: -2, +2
+"T_g (ps)", @y
+frame
+hx
+hy
+legpos 420, 150
+clip
+&nbsp;
+f: T_g_t(x) / ps,
+ color = green, width = 3
+&nbsp;
+f: CS_y1 + T(x) * (CS_y2 - CS_y1), style = dotted
+&nbsp;
+f: 0
+</pre>
+<figure>
+<img src="img/coating_demo_etalon3.png" alt="group delay for transmission through an air-spaced etalon">
+</figure>
+<p>Next we look at the group delay dispersion, which is essentially the frequency derivative of the group delay:</p>
+<pre class="codedisplay">
+diagram 4:
+&nbsp;
+"Chromatic Dispersion"
+&nbsp;
+x: 998, 1002
+"wavelength (nm)", @x
+y: -2, +2
+"GDD (ps^2)", @y
+frame
+hx
+hy
+legpos 420, 150
+clip
+&nbsp;
+f: GDD_t(x) / ps^2, color = blue, width = 3, step = 1, maxconnect = 1
+&nbsp;
+f: CS_y1 + R(x) * (CS_y2 - CS_y1), style = dotted
+&nbsp;
+f: 0
+</pre>
+<figure>
+<img src="img/coating_demo_etalon4.png" alt="group delay dispersion for transmission through an air-spaced etalon">
+</figure>
+<p>We can also show how the field intensity is in and around the lower mirror:</p>
+<pre class="codedisplay">
+diagram 6:
+&nbsp;
+"Field Penetration"
+&nbsp;
+x: 990, 1010
+"wavelength (nm)", @x
+y: -500, +2000
+"depth in the mirror structure (nm)", @y
+frame
+&nbsp;
+! begin  { show the color scale on the right side of the diagram }
+    var x1, x2;
+    x1 := CS_x2 + 0.02 * (CS_x2 - CS_x1);
+    x2 := CS_x2 + 0.04 * (CS_x2 - CS_x1);
+    for y := CS_y1 to CS_y2 step (CS_y2 - CS_y1) / 500 do
+    begin
+      setcolor(color_I((y - CS_y1) / (CS_y2 - CS_y1)));
+      line(x1 + i * y, x2 + i * y);
+    end;
+    setcolor(black);
+  end
+&nbsp;
+! (set_dir(1); R(lambda_t))
+&nbsp;
+cp: color_I((R(x); E2(y) / 4))  { color plot }
+&nbsp;
+; Show the layer boundaries:
+f: 0
+f: get_z(j), style = solid, color = lightgray, for j := 2 to nolayers()
+f: get_z(2 * N_Bragg + 1)
+&nbsp;
+"substrate", 200c, (-200)c
+"mirror", 200c, (0.5 * get_z(2 * N_Bragg + 1))c
+"air", 200c, (get_z(2 * N_Bragg + 1) + 200)c
+</pre>
+<figure>
+<img src="img/coating_demo_etalon6.png" alt="optical intensities in air-spaced etalon">
+</figure>
+<p>Finally, we explore what happens to an ultrashort pulse which is transmitted through the etalon.
+Although <b>RP Coating</b> does not have explicit ultrashort pulse features, its powerful <a href="software_script_language.html">script language</a> makes it easy to simulate such things.</p>
+<p>We first define the incident pulse with a <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">duration</a> of 2&nbsp;ps:</p>
+<pre class="codedisplay">
+A0 := 1  { peak amplitude }
+tau0 := 2000 fs  { duration }
+l0 := 1000 nm  { center wavelength }
+f0 := c / l0  { center frequency }
+A0%(t) := A0 / cosh(1.76 * t / tau0)  { envelope function }
+E0(t) := Re(A0%(t) * expi(2pi * f0 * t))  { electric field }
+</pre>
+<p>Then we define one complex array for the complex amplitudes in the time domain, and another one for the frequency domain:</p>
+<pre class="codedisplay">
+T := 20 ps  { width of the time range }
+N := 2^10  { number of points }
+dt := T / N  { temporal resolution }
+t1 := -T / 2 + dt  { beginning of time trace }
+t2 := T / 2  { end of time trace }
+df := 1 / T  { frequency resolution }
+f2 := (N / 2) * df  { end of frequency trace }
+f1 := -f2 + df  { beginning of frequency trace }
+defarray A%[0, T - dt, dt] (periodic)
+defarray A_f%[f1, f2, df] (periodic)
+</pre>
+<p>Now we do the actual calculation: store the initial amplitudes in the time domain, do a fast Fourier transform (FFT) to get to the frequency domain, apply the effect of transmission through the etalon there, and transform back to the time domain:</p>
+<pre class="codedisplay">
+calc
+  begin
+  for t := t1 to t2 step dt do A%[t] := A0%(t);
+  FFT_n(A%[], A_f%[], +1);
+  for f := f1 to f2 step df do A_f%[f] := t%(c / (f0 + f) / l_units) * A_f%[f];
+  FFT_n(A_f%[], A%[], -1);
+  end
+</pre>
+<p>Finally, we can define functions for the field at the output and use these for plots:</p>
+<pre class="codedisplay">
+A%(t) := A%[t]
+E(t) := Re(A%(t) * expi(2pi * f0 * t))
+&nbsp;
+f: E0(x * fs), color = lightgray, step = 1
+f: E(x * fs), color = blue, step = 1
+&nbsp;
+f: abs(A0%(x * fs)), color = lightgray, step = 1
+f: -abs(A0%(x * fs)), color = lightgray, step = 1
+f: abs(A%(x * fs)), color = blue, step = 1
+f: -abs(A%(x * fs)), color = blue, step = 1
+</pre>
+<p>We obtain the following:</p>
+<figure>
+<img src="img/coating_demo_etalon7a.png" alt="ultrashort pulse transmitted through an etalon">
+</figure>
+<p>The transmitted pulse (in blue) is delayed against the incident pulse (gray).
+This is because it takes several round trips in the resonant structure until the internal field is fully built up.</p>
+<p>We now do the same again for a pulse with a duration of only 200&nbsp;fs.
+This leads to several transmitted pulses, separated by one round-trip time in the structure:</p>
+<figure>
+<img src="img/coating_demo_etalon7b.png" alt="ultrashort pulse transmitted through an etalon">
+</figure>
+<p>(Note that the fast electric field oscillations cannot be resolved with the limited resolution of the graphics windows.)</p>
+<p>As the bandwidth of the pulse is of the order of the <a href="free_spectral_range.html" title="free spectral range: frequency spacing of the axial modes of an optical resonator">free spectral range</a>, we cannot expect that we simply get a single pulse out, which is delayed by the <a href="group_delay.html" title="group delay: a measure of the time delay experienced by narrow-band light pulses in an optical device">group delay</a> at the center wavelength.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_etalon.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:37 GMT -->
+</html>

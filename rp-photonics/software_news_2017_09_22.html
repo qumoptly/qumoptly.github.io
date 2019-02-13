@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_09_22.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:30 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Pulse Amplification in the Steady State</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2017-09-22">
+<meta name="description" content="A summary of this blog article: In simulations of the amplification of ultrashort pulse trains, it can be a challenge to find the steady state of the amplifier. The article explains different matters, which can be easily applied with suitable simulation software such as RP Fiber Power.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2017_09_22.html"; cat="S"; shownbanner=""; ref="encyclopedia_f.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Pulse Amplification in the Steady State</h1>
+<div class="posting_details">
+<p>Posted on 2017-09-22 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2017_09_22.html">https://www.rp-photonics.com/software_news_2017_09_22.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: In simulations of the amplification of ultrashort pulse trains, it can be a challenge to find the steady state of the amplifier. The article explains different matters, which can be easily applied with suitable simulation software such as RP Fiber Power.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>The amplification of <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a> in <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a> can be simulated with suitable software, e.g. our product <a href="fiberpower.html"><b>RP Fiber Power</b></a> (since version V4).
+A frequently encountered question is how can one simulate the amplification of a fast pulse train, with a <a href="pulse_repetition_rate.html" title="pulse repetition rate: the number of pulses emitted per second e.g. by a mode-locked or Q-switched laser">pulse repetition rate</a> of 80&nbsp;MHz, for example, in the steady state.
+The software may easily simulate the amplification for an arbitrary initial state of the amplifier (concerning the excitation of laser-active ions), but it can be a challenge to correctly determine the state of that amplifier for the steady state.
+Depending on the situation, different methods can be used, and I discuss those in the following.
+You may find them useful in conjunction with our software or your own code, provided that it is sufficiently flexible.</p>
+<h2 class="togglediv">Using a Continuous-wave Simulation</h2>
+<div>
+<p>In some cases, you can use a simple and computationally very fast method.
+Here, you calculate the steady state of the amplifier <b>with a continuous-wave input instead of the pulse train</b>.
+That signal input has an optical power equal to the average power of the pulse train (i.e., the product of <a href="pulse_energy.html" title="pulse energy: energy of an optical pulse">pulse energy</a> and pulse repetition rate), and its wavelength is the mean wavelength of the input pulses.
+When you let the software calculate the signal output power (being the average power) for that simple case, it gives you the amplifier in a state which is close to the steady state for pulse amplification, provided that the following conditions are fulfilled:</p>
+<ul>
+<li>The pulse energy is well below the <a href="saturation_energy.html" title="saturation energy: a measure of the incident optical pulse energy required for achieving significant saturation of an absorber or a gain medium">saturation energy</a> of the amplifier, which means that <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> is negligible for a single pulse, and becomes substantial only for the fast sequence of pulses.
+In situations with high repetition rates like 80&nbsp;MHz, that condition is usually well fulfilled.</li>
+<li>The optical <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> of the pulses is not so large that the amplifier <a href="gain.html" title="gain: a measure of the strength of optical amplification">gain</a> varies substantially within that bandwidth.
+For pulse durations below about 100&nbsp;fs, or for longer pulses with strong <a href="chirp.html" title="chirp: time dependence of the instantaneous frequency of an optical pulse">chirp</a>, that might be a problem, for which however we have a simple solution (see below).</li>
+<li>During amplification, the pulse spectrum does not substantially shift to other wavelengths, where the gain could be lower or higher, or strongly broaden due to nonlinear effects.
+In many cases, that condition is fulfilled, but there are some others, to be discussed further below.</li>
+</ul>
+<p>Of course, the described method can be easily automated with a software like ours.
+You just define the fiber amplifier model with a single &ldquo;optical channel&rdquo;, as we call it, having a wavelength and input power as described above.
+Then you call any output, for example the signal output power, to trigger the steady-state calculation &ndash; which usually takes less than a second, even if you have to include <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE) in forward and backward direction.
+The amplifier model is then in the steady state, and you can send in your ultrashort pulse just once to get its amplification simulated.</p>
+<p>For broadband pulses, where the second of the above mentioned conditions is not fulfilled, you can use a relatively easy generalization.
+Instead of a single signal channel, you <b>use a set of signal channels</b> with a certain wavelength spacing.
+To each channel, you apply an input power which is part of the total power, just according to the spectrum of the input pulse.
+That way, the model can take into account the wavelength dependence within the pulse spectrum.
+As a sanity check, you can then compare the resulting continuous-wave output spectrum with that of the simulated pulse spectrum.</p>
+<p>Note that particularly in high-gain amplifiers you may see significant effects even if the gain varies only by 10&#37; within the gain spectrum: 10&#37; of 30&nbsp;dB is 3&nbsp;dB, i.e., a factor of 2 in the resulting <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a>.</p>
+<p>Of course, in our software you would not manually enter all the different signal channels, their wavelengths and powers, etc., but rather produce such things with loop structures.
+As inputs, you just define a few parameters like the number of signal channels and their wavelength spacing, and you get all the details calculated from that using a few simple formulas.
+Later on, you can e.g. easily check whether the results change if you use a larger number of signal channels.
+Anyway, such simulations are still very fast &ndash; you will have no problem concerning computation time.</p>
+</div>
+<h2 class="togglediv">Iterative Method</h2>
+<div>
+<p>In some cases, the above-described simple method does not work.
+That is the case if the evolution of the pulse spectrum is not properly described by the continuous-wave model &ndash; usually because of the fiber <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinearity</a>, which is experienced only by the ultrashort pulses (having substantial <a href="peak_power.html" title="peak power: maximum optical power of a pulse">peak powers</a>).
+For example, it can happen that the pulses undergo strong spectral broadening due to <a href="self_phase_modulation.html" title="self-phase modulation: nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a> (SPM) if the pulses are in the femtosecond duration regime.</p>
+<p>A conceptually straightforward approach would be to <b>directly simulate what happens in reality</b>: you just start with an arbitrary initial state of the amplifier (e.g. the non-excited state) and simulate the subsequent amplification of pulses, until the output pulses do not change much anymore.
+Each pulse amplification will take a small amount of energy out of the laser-active ions, while the pump source adds some energy during each pulse period.
+The energy stored in the amplifier will slowly rise until it reaches a level where the effects of energy extraction and pumping just cancel each other.</p>
+<p>Unfortunately, that straightforward method is often not really practical, simply because too many pulse publications would have to be simulated, which takes excessive time.
+For example, for an 80-MHz pulse train it takes thousands of pulses to reach the steady state.
+Even if a single pulse propagation takes only half a second, for thousands of propagations you would have to wait longer than desirable.</p>
+<p>An elegant way to solve that problem is to <b>artificially reduce the pulse repetition rate</b> e.g. by a factor of 10,000, while also artificially increasing the strength of <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers">gain saturation</a> by the same factor.
+The latter can usually not be achieved simply by using a 10,000 times higher input pulse energy, because that would also make the nonlinear effects correspondingly stronger.
+Our software, however, presents a nice solution: you can simply include the function call set&lowbar;gain&lowbar;sat(10000); that makes the gain saturation stronger without changing nonlinear effects.</p>
+<p>If you do it that way, you may require only like 20 or 50 pulse propagations to reach the steady state, and the whole calculation may last only a couple of seconds.
+For accurate results, you should reduce the pulse repetition rate such that the amplification of a single pulse causes a gain saturation by a few percent.
+Of course, one can simply try out how the results depend on that factor in order to find the right compromise between speed and accuracy.</p>
+</div>
+<h2 class="togglediv">Using Advice from an Expert</h2>
+<div>
+<p>If you are not yet an expert yourself in such matters, you may need some <a href="software_support.html">technical support</a>.
+If you have our software, you get that support from myself personally, and that will not be limited to purely software-specific details.
+For example, if the model shows you that the amplification would not work as desired, you can get valuable advice concerning how you may optimize your configuration.
+Obviously, such high quality support &ndash; actually technical consultancy on laser technology &ndash; can be a huge benefit for your project.
+A substantial number of companies and research groups already profit from that support &ndash; not only in terms of making progress in their projects, but also because people can learn a lot, becoming experts in the field themselves.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_09_22.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:30 GMT -->
+</html>
