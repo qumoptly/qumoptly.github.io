@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2014_10_20.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:11 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Typical Limitations of Numerical Modeling</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2014-10-20">
+<meta name="description" content="A summary of this blog article: This article gives an overview on typical problems and limitations for numerical modeling projects in the context of laser technology.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2014_10_20.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Typical Limitations of Numerical Modeling</h1>
+<div class="posting_details">
+<p>Posted on 2014-10-20 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2014_10_20.html">https://www.rp-photonics.com/software_news_2014_10_20.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: This article gives an overview on typical problems and limitations for numerical modeling projects in the context of laser technology.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Without doubt, numerical modeling can bring extremely useful results, and often at a much lower cost than with alternative approaches such as trial &amp; error in the laboratory.
+However, modeling attempts can fail in many ways.
+In this article, I want to give an overview on typical problems and limitations, and of course mention possibilities to deal with them.</p>
+<h2 class="togglediv">Oversimplified or Overly Complicated Models</h2>
+<div>
+<p>It is a basic principle that a numerical model, and indeed any kind of model we ever use, should be simpler than the reality which it tries to describe.
+After all, the purpose is essentially to increase the understanding of the reality which can be rather complicated.</p>
+<p>When going too far in terms of simplification, the capability of a model to give correct answers can of course suffer.
+For example, one may construct a model describing the optical power evolution within a <a href="q_switched_lasers.html" title="Q-switched lasers: lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>.
+It is often a good idea to assume fixed transverse beam profiles for that purpose, is that makes the calculations far simpler and more efficient.
+However, the model will then obviously not be able to describe possible <a href="gain_guiding.html" title="gain guiding: guiding of light based on spatially inhomogeneous optical gain">gain guiding</a> effects in the laser.
+That may be perfectly okay if we know in advance that gain guiding cannot have substantial effects in our laser.</p>
+<p>On the other hand, it would often be a very bad idea to strive for the most sophisticated and comprehensive type of model.
+For example, if we unnecessarily include full numerical beam propagation in a bulk or fiber laser where we can know that the transverse profiles cannot significantly change, we do not only invest into an overly complicated model, but also pay a substantial price in terms of computation time and possibly suffer from more complicated handling.</p>
+<p>Determining what type of model is most appropriate for given purpose is often not a trivial task.
+For good decision, one does not only need a thorough understanding of the system of interest, but also one needs to be aware of possible effects occurring in the system and to judge which aspects are really relevant.
+In addition, of course one should be able to judge how much additional effort and computation time will be required when including certain additional aspects.</p>
+<p>Note that my previous article &quot;<a href="software_news_2014_07_17.html">What Makes a Good Physics Model?</a>&quot; gives more details on such aspects.
+At this point, I only want to add one essential advice: before investing anything into modeling, one should carefully state the questions which should be answered using the model.
+As long as one does not have these questions, one cannot possibly determine what kind of modeling will be appropriate.</p>
+</div>
+<h2 class="togglediv">Hidden Errors</h2>
+<div>
+<p>A numerical model may produce wrong results if it's implementation contains some hidden errors.
+Unfortunately, it is often not easy to check the validity of a model.
+For this aspect, I refer to the article &quot;<a href="software_news_2013_06_13.html" rel="nofollow">Validating Numerical Simulation Software</a>&quot;.</p>
+</div>
+<h2 class="togglediv">Poor Software</h2>
+<div>
+<p>In relatively trivial cases, it may not be important to have particularly good software.
+For example, every simple resonator design software should be suitable for calculating the basic mode properties of a resonator with a given design.
+However, optimizing a resonator design is already much more difficult.</p>
+<p>There are software products which really look appealing at the first glance, exhibiting a beautiful graphical user interface.
+However, they may still be poor in terms of flexibility, for example.
+For example, it may seem simple to click on graphically illustrated optical elements in order to modify their properties.
+But what if you have a sequence of elements where certain elements are repeated many times &ndash; will you have to click so many times and do the modifications for every single instance?
+Can you have certain parameters automatically calculated from some basic inputs, or do you have to calculate them yourself and type them into some forms?
+In practice, many programs become hardly usable because it would be far too tedious to provide them with the required inputs, particularly in optimization procedures.</p>
+<p>In our <a href="software.html">software products</a>, we use a powerful script language which allows the user to do real programming.
+For example, in our <a href="resonator.html">advanced resonator design software</a> you could program a loop which generates a sequence of <span class="eqn_il"><i>N</i></span> mirrors and corresponding air spaces, where parameters like incidence angles are automatically calculated.
+On our website, we have an <a href="resonator_mp_amp.html">example for a multipass amplifier</a>.</p>
+</div>
+<h2 class="togglediv">Missing Data</h2>
+<div>
+<p>In many cases, a substantial number of data such as material parameters are required as inputs for a numerical model.
+It can be difficult to acquire all these data with a sufficient degree of reliability.
+For example, laser models often require spectroscopic data such as <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetimes</a> and <a href="transition_cross_sections.html" title="transition cross sections: material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a>.
+For common laser <a href="gain_media.html" title="gain media: media for laser amplification">gain media</a>, such data can be found in the literature.
+When working with less common materials, however, available data may be incomplete or uncertain.
+Sometimes, additional data will have to be measured before a numerical model can be put to work.</p>
+<p>Note, however, that a complete and reliable data set is not always a prerequisite for doing useful work with a model.
+First of all, one purpose of modeling can be exactly to extract such data from experimental measurements or to validate them.
+Second, many aspects can be checked even if a complete reliable data set is not available.
+For example, one can check how sensitive the system reacts to certain influences even if the magnitude of other influences is not exactly known.
+The purpose of modeling is often not just predicting some performance, but getting a good quantitative understanding of relations between different quantities.</p>
+</div>
+<h2 class="togglediv">Getting Advice on Modeling</h2>
+<div>
+<p>Particularly if you are not yet very experienced in modeling, it is vital for the efficiency of your work that you can obtain competent advice.
+The best piece of modeling software alone cannot be sufficient in that respect.</p>
+<p>At RP Photonics, initially we did not sell any software licenses, and only offered <a href="consulting.html">technical consultancy</a>.
+This means that I did the modeling myself and communicated the results to my customers.
+Later on, however, some customers expressed an interest to have the software themselves, and in that way I more and more got into selling user licenses.
+However, such user licenses come with technical support, and I take this very serious.
+For most software packages, eight hours of technical support are included in the fee for the first user license (assuming commercial licenses).
+Moreover, I do not limit the technical support to clearly software-related questions like &ldquo;why does this function not work as expected&rdquo; or &ldquo;how to create a certain diagram&rdquo;.
+Instead, the users can ask me for all sorts of it twice in the given technical area.
+Effectively, the support means technical consultancy &ndash; which is in a way quite natural for company which started out with exactly that service!</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2014_10_20.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:11 GMT -->
+</html>

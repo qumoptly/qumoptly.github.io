@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_pml.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP ProPulse - example case: passive mode locking of a laser, comparison with Kuizenga&ndash;Siegman theory</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Passive mode locking of a laser has been numerically simulated and compared with Kuizenga-Siegman theory.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP ProPulse, modeling, software, demos">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="propulse_demo_pml.html"; cat="S"; shownbanner=""; ref="encyclopedia_p.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="propulse_demo_pml_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html" class="sel">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP ProPulse &ndash; Numerical Simulation of Pulse Propagation</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="propulse.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="propulse_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2>Example Case: Passive Mode Locking</h2>
+<p>In this simple example, we consider an <a href="passive_mode_locking.html" title="passive mode locking: a technique of mode locking, based on a saturable absorber inside the laser resonator">passively mode-locked</a> laser.
+The laser resonator is described in the script as follows:</p>
+<pre class="codedisplay">
+resonator: ring
+* OC: T_out = T_OC
+* Crystal: gain(l) = g(l) [P_sat_av = P_sat_g, KK = 0]
+* SESAM: satloss = dR_S [E_sat = E_sat_S, tau = tau_S]
+resonator end
+</pre>
+<p>This refers to some variable values, the definitions of which are not shown here.
+Here, the gain function g(l) has a bandwidth of 5&nbsp;nm, the <a href="semiconductor_saturable_absorber_mirrors.html" title="semiconductor saturable absorber mirrors: saturable semiconductor absorber devices acting as nonlinear mirrors">SESAM</a> has a <a href="modulation_depth.html" title="modulation depth: a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a> of 1&#37; and the output coupler has a transmission of 5&#37;.
+For simplicity, we have ignored the effects of chromatic dispersion and the Kerr nonlinearity.</p>
+<p>The initial pulse duration was chosen to be longer than in the steady state.
+It is found that the steady-state value of the pulse duration agrees with the result of a theoretical paper, see R. Paschotta, Appl. Phys. B 73, 653 (2001), eq.&nbsp;(6).</p>
+<figure>
+<img src="img/propulse_demo_pml1.png" alt="evolution of pulse duration">
+</figure>
+<p>Also, we can see the temporal pulse profile after 5000 resonator round trips (which are calculated within a few seconds on an ordinary PC):</p>
+<figure>
+<img src="img/propulse_demo_pml2.png" alt="profile of output pulse">
+</figure>
+<p>The pulse has drifted away from <i>t</i>= 0, because the slow saturable absorber always attenuates the leading wing more than the trailing wing.</p>
+<p>(<a href="propulse_demos.html">back to the list of example cases</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_pml.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:42 GMT -->
+</html>

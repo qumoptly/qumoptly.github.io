@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:33:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 3: self-consistent solutions for the steady state, shooting method, relaxation methods</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on fiber amplifiers. The third part explains how one obtains self-consistent steady-state solutions for optical powers and excitation densities. This can be a difficult task.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber amplifiers, gain, excitation densities, steady state, shooting method, relaxation methods, software">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_fiber_amplifiers3.html"; cat="C"; shownbanner=""; ref="tutorial_fiber_amplifiers4.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 3 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>3</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<span style="text-decoration:underline;">Self-consistent solutions for the steady state</span>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 3: Self-consistent Solutions for the Steady State</h2>
+<div>
+<h3 class="togglediv">Total Gain from Local Gain</h3>
+<div>
+<p>Once we know the local gain coefficients along the fiber, the dimensionless overall gain of a fiber amplifier can be calculated by integration over the whole fiber length:</p>
+<div class="eqn"><img src="eqn/total_gain.gif" width="128" height="50" alt="total gain"></div>
+<p>You can multiply this by 4.343 in order to obtain in <a href="decibel.html" title="decibel: a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">decibels</a>, or take the exponential of it to get the power amplification factor.</p>
+</div>
+<h3 class="togglediv">Self-consistent Steady-State Solutions</h3>
+<div>
+<p>A substantial challenge lies ahead: how to calculate the overall gain in the steady state?
+The equation above seems to make it easy, but how to know the required gain coefficients at all locations in the fiber?
+After all, these depend on the local pump and signal powers, and we don't know these yet!
+They in turn depend on the yet unknown excitation densities.
+Obviously, we need to find a <em>self-consistent solution</em> for the optical powers and excitation densities at all positions in the fiber.</p>
+<p>In some situations, this is relatively simple to get.
+For example, if you have only a copropagating pump and signal, you can calculate the excitation density at the input end, get the local pump absorption and signal gain from that, and use it to propagate the powers a small step into the fiber.
+There, again calculate the excitation densities, the gain and absorption, etc.; just iterate this procedure until you have reached the fiber end.</p>
+<aside class="callout blue">Situations with counterpropagating signal and pump are not necessarily difficult, except if there are multiple waves.</aside>
+<p>For counterpropagating signal and pump, it is a bit more difficult, but you can use the <em>shooting algorithm</em>.
+Start at one end with the signal input and a rough estimate of the pump power remaining there.
+(It depends on the excitation of the fiber, which is not yet known.)
+Then propagate the pump power together with the signal to the other end.
+(The pump power will grow in that direction; you propagate it backward!)
+At the signal output end, you will generally find that the pump power doesn't fit the actually injected pump power.
+However, you can then refine your guess and iterate the procedure until you have the self-consistent solution.</p>
+<p>The real trouble comes when you have multiple counterpropagating waves.
+For example, even if you inject only a single pump wave and no signal, you may get intense light via <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (see <a href="tutorial_fiber_amplifiers4.html">part 4</a>), traveling in both directions.
+In principle, one can generalize the mentioned shooting algorithm, but that involves multi-dimensional root finding.
+The involved exponential dependencies don't make that easier&hellip;</p>
+<aside class="callout blue">The challenge with relaxation methods is to obtain fast and reliable convergence.</aside>
+<p>There are other algorithms such as <em>relaxation methods</em>, where one propagates powers with estimated distributions of the excitation densities and later changes these to reduce errors.
+The challenge is to get such procedures converge nicely, i.e., both quickly and reliably.
+Here, reliability is rather difficult to get, as the behavior of such algorithms can be influenced strongly by various parameters of the amplifier.</p>
+<p>As this part is really hard, you may enjoy very much to have a piece of software which does that job for you.
+For example, our <a href="fiberpower.html">RP Fiber Power</a> software uses a very refined algorithm which does the job quickly and reliably.
+As a user, you just provide all the inputs and get the solution without any hazzle.</p>
+</div>
+<h3 class="togglediv">Example Case: Ytterbium-doped Fiber Amplifier</h3>
+<div>
+<p>As an example, consider an ytterbium-doped fiber amplifier with 500&nbsp;mW pump power at 940&nbsp;nm and a 1-mW signal input at 1030&nbsp;nm:</p>
+<figure>
+<img src="img/fiber_amplifier3.png" alt="ASE in fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Optical powers along the length of an ytterbium-doped fiber amplifier.
+</figcaption>
+</figure>
+<p>The behavior of the fiber is surprisingly complicated:</p>
+<ul>
+<li>The resulting degree of Yb excitation is highest not at the input, where the pump power is highest, but a bit inside the fiber.
+This is because <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE, see <a href="tutorial_fiber_amplifiers4.html">part 4</a>) in backward direction becomes strong at the left end.</li>
+<li>Forward ASE also has an effect, but only in some region within the fiber.
+(One would hardly notice it in an experiment!)</li>
+<li>On the right side, where the pump is fully exhausted, the signal experiences some reabsorption.
+That is not very strong, however, as the reabsorption is saturated: the signal with &asymp;300&nbsp;mW of power (not the exhausted pump!) maintains the ytterbium excitation at &asymp;7&#37;, strongly reducing the absorption.
+(For a weak signal, that effect would be much stronger.)</li>
+<li>The pump power first drops quickly, then less rapidly where the Yb excitation is highest, and more quickly again.</li>
+</ul>
+<p>The fiber length in the example case was somewhat longer than ideal.
+Note, however, that changing a fiber length can modify ASE power levels in unexpected ways.
+So one should rather calculate such things rather than just guess.</p>
+<p>So we clearly see that the evolution of powers in the fiber depends substantially on the Yb excitations, whereas these of course are determined by the power levels.
+The resulting behavior can be quite complicated, so that even experienced persons are often surprised about the simulated results, and confused about unexpected experimental results.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers4.html">Part 4: Amplified Spontaneous Emission</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers3.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+</html>

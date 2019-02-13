@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2015_05_14.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Alignment Sensitivity of Laser Resonators - an Important Design Criterion</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2015-05-14">
+<meta name="description" content="A summary of this blog article: It is explained that the alignment sensitivity of a laser resonator can be calculated and should often absolutely be taken into account in design optimizations. Suitable resonator design software is crucial to have, but cannot fully replace human expertise. Instead of acquiring such expertise and software, one may consider letting an experienced expert develop such resonator designs.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2015_05_14.html"; cat="P"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Alignment Sensitivity of Laser Resonators &ndash; an Important Design Criterion</h1>
+<div class="posting_details">
+<p>Posted on 2015-05-14 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2015_05_14.html">https://www.rp-photonics.com/spotlight_2015_05_14.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It is explained that the alignment sensitivity of a laser resonator can be calculated and should often absolutely be taken into account in design optimizations. Suitable resonator design software is crucial to have, but cannot fully replace human expertise. Instead of acquiring such expertise and software, one may consider letting an experienced expert develop such resonator designs.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p class="ref">Ref.: encyclopedia articles on <a href="optical_resonators.html" title="optical resonators: arrangements of optical components which allow a beam of light to circulate">optical resonators</a>, <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a>, <a href="resonator_design.html" title="resonator design: the description of the optical components from which an optical resonator is made, and their exact arrangement">resonator design</a></p>
+<p>Everyone in the field knows that an essential design criterion for <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonators</a> is to have appropriate <a href="mode_radius.html" title="mode radius: a measure of the transverse extent of a laser mode or laser beam">mode radii</a>, particularly within a <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">laser crystal</a>.
+For example, the mode radius in the laser crystal should approximately match the mode radius of the pump beam if one wants to achieve transverse single-mode operation, which results in a high <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>.</p>
+<p>What is much less known is the importance of the <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a> of laser resonators, and that it can be greatly influenced by the resonator design.
+The easy part is to understand why a low alignment sensitivity is very desirable; obviously, you do not want a resonator which needs to be aligned with extreme care, and it needs to be realigned when ever some optomechanical parts (e.g. mirror holders) are slightly affected e.g. by thermal expansion, or when the <a href="thermal_lensing.html" title="thermal lensing: a lensing effect induced by temperature gradients">thermal lens</a> is modified by changes of the pump beam profile.
+Particularly for an industrial product, an excessive alignment sensitivity cannot be tolerated.</p>
+<p>In extreme cases, one would not even achieve any reasonable performance, even when working hard on a fine alignment, if thermal effects in the laser crystal are strong.
+Interestingly, the alignment affects the power and position of the circulating laser beam, which can also lead to modifications of thermal lensing, and that again affects the beam position and power; if such mutual influences are strong enough, you can get a very strange behavior of the laser which prevents any reasonable performance.</p>
+<h2 class="togglediv">Calculating Alignment Sensitivities and Applying that Knowledge</h2>
+<div>
+<p>Experts in the field of laser resonator design know very well that the alignment sensitivity of a laser resonator, e.g. concerning angular positions of laser mirrors, can be calculated with suitable software, which does not use a simple <a href="abcd_matrix.html" title="ABCD matrix: a 2-by-2 matrix describing the effect of an optical element on a laser beam">ABCD matrix</a> algorithm but rather an extended algorithm using 3&times;3 matrices.
+The alignment sensitivity can then be used as a criterion for the quality of the laser design; it can (and often should) even be included in a figure of merit within an automatic optimization procedure.
+Ignoring this important aspect in laser design can easily lead to designs with unnecessarily high alignment sensitivity which do not work well in practice.</p>
+</div>
+<h2 class="togglediv">Mode Areas are Important &ndash; What Else?</h2>
+<div>
+<p>It is also known that lasers with large mode areas tend to have a higher alignment sensitivity.
+(This is the essential reason why <a href="high_power_lasers.html" title="high-power lasers: lasers emitting very high optical powers">high-power lasers</a> are often much more delicate to align; the wide-spread believe that this results simply from the large size of the resonator itself is wrong, as discussed in an <a href="spotlight_2011_06_10.html">earlier posting</a>.)
+However, there is no fixed relation between mode size and alignment sensitivity; one can have two different laser resonator designs with the same mode area in the laser crystal which differ very much (e.g. by a factor larger than 5) concerning alignment sensitivity.
+In case of linear resonators (standing-wave resonators), one has two different stability zones in terms of the focusing power of the thermal lens, and these can have very different alignment sensitivities.
+Unfortunately, one cannot always use the less sensitive zone, because that involves limitations in other aspects.</p>
+<p>The issue of alignment sensitivities even at the heart of an often encountered trade-off: high-power laser can often be designed either for a high power conversion efficiency and robustness or for highest beam quality, but not both at the same time.
+Obviously, one can hardly find optimized designs without understanding these issues very well.</p>
+</div>
+<h2 class="togglediv">How to Find a Suitable Resonator Design?</h2>
+<div>
+<p>Even in seemingly simple cases, it is very desirable that the person developing a laser resonator design understands the matter well.
+The required knowledge goes far beyond a basic understanding of resonator modes; it should definitely include a precise knowledge on alignment sensitivity issues and substantial experience concerning various typical trade-offs.
+Simply having a heavy textbook in the office, or even having read it, will often not be sufficient.</p>
+<p>A suitable laser resonator design software (such as our product <a href="resonator.html"><b>RP Resonator</b></a>) must definitely be able to calculate alignment sensitivities and to take them into account in optimizations.
+However, no software in this area can replace a decent technical understanding of the person using it; I think it is not possible to make it such that it takes into account all important issues without bothering the user with it.
+For example, a software can hardly &ldquo;know&rdquo; the importance of various resonator properties for the particular application, i.e., it could not put appropriate weights on certain factors in the trade-offs which are necessary.
+At least, however, software from a good source comes with very helpful <a href="software_support.html">technical support</a>, giving you crucial pieces of advice.</p>
+<p>If you need a proper laser resonator design, you basically have two different options:</p>
+<ul>
+<li>You can try to acquire all the required expertise (which is certainly not easy and will require substantial time) and also get a good resonator design software.</li>
+<li>You can try to find an <a href="consulting.html">experienced expert</a> who can do that job for you.
+That person would first closely analyze the concrete requirements in a dialog with you, then translate that into appropriate resonator properties such as mode sizes and maximum alignment sensitivities, and finally work out a suitable design using proper design software.</li>
+</ul>
+<p>If you quite often need resonator designs, it will probably try to get into the position of doing it yourself.
+If that is not the case, however, it will often be much more economical (and also lead to better results) to have an external expert doing it.</p>
+<p>In any case, I warmly recommend to take the question of resonator design very serious, because this very much contributes to an efficient product development, avoiding a lot of possible problems causing delays and cost overruns.</p>
+<p>By the way, the fact that a very simple resonator has been used so far for certain lasers does in no way prove that more elaborate laser design considerations would be wasting resources.
+After all, how can you know that the simple type of resonator is doing its job well and could not be improved?
+Also, even seemingly simple resonators are not so easy to understand.
+Finally, a few hours of good work by a competent expert cost far less than what you might well pay for wrong decisions on such matters.</p>
+</div>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2015_05_14.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="http://www.technicasa.com/" data-supplier="Technica Optical Components" data-location="banner" rel="nofollow" class="bg externallink"><img src="bg/banners/technica_optical_components.jpg" alt="Technica Optical Components"></a></a>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Photonics in Times of Trouble for International Trade</h2>
+<p style="font-size:14px;">This <a href="spotlight_2017_02_17c8d6.html?banner=International_trade">article in the Photonics Spotlight</a> addresses the current serious concerns about the future of international trade and more generally international cooperation. Some key points:</p>
+<ul>
+<li>The <b>German trade surplus</b> deserves attention, but claiming unfair practices without differentiating between different sectors of the economy is just stupid talk.</li>
+<li>Already announced changes of US policy constitute a serious threat of beginning <b>trade wars</b>, which could have disastrous consequences.</li>
+<li>There are also <b>ruthless attacks on essential values</b>, contributing to a breakdown of cooperation.</li>
+<li>If we do not stop these developments in time, we may get into the <b>big crunch</b>.</li>
+<li>We must <b>fiercely defend fundamental values</b> as well as <b>international cooperation</b>, because this is the only chance to solve a wide range of serious problems.</li>
+</ul>
+<p style="font-size:14px;">You are welcome to <a href="spotlight_2017_02_17c8d6.html?banner=International_trade">read the article</a>. Note that you can get the <a href="spotlightc8d6.html?banner=International_trade">Photonics Spotlight</a> as an e-mail newsletter.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2015_05_14.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:07 GMT -->
+</html>

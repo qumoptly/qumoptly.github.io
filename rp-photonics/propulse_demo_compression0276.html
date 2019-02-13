@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_compression.html?banner=RP_ProPulse by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:13 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP ProPulse - example case: nonlinear pulse compression with a fiber and a dispersive compressor</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Nonlinear pulse compression in an optical fiber is simulated with the RP ProPulse software. An automatically optimized compressor can be applied to the output pulse.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP ProPulse, modeling, software, demos, pulse compression">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="propulse_demo_compression0276.html?banner=RP_ProPulse"; cat="S"; shownbanner=""; ref="marketing_honest.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="propulse_demo_compression_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html" class="sel">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP ProPulse &ndash; Numerical Simulation of Pulse Propagation</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="propulse.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="propulse_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2>Example Case: Nonlinear Pulse Compression</h2>
+<p>Here, we consider the nonlinear <a href="pulse_compression.html" title="pulse compression: linear or nonlinear techniques for reducing the durations of optical pulses">compression</a> of pulses.
+First, the pulses are spectrally broadened by the <a href="kerr_effect.html" title="Kerr effect: a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">nonlinearity</a> of a fiber; at the same time, the <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">pulse duration</a> increases somewhat due to <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.
+After the fiber, a dispersive compressor is used for obtaining near <a href="bandwidth_limited_pulses.html" title="bandwidth-limited pulses: pulses with a duration as short as possible with their optical spectrum">bandwidth-limited pulses</a> with accordingly shorter duration.</p>
+<pre class="codedisplay">
+resonator: ring
+* FiberPiece:
+  GDD = GDD_f * dL, SPM = gamma_f * dL
+resonator end
+&nbsp;
+external at 0:
+* Compressor: compress [order = 2, goal = maxpeak]
+  { optimized dispersion for maximum peak power }
+external end
+</pre>
+<p>The dispersive compressor is numerically optimized for maximum <a href="peak_power.html" title="peak power: maximum optical power of a pulse">peak power</a> of the pulses.
+The diagram below also shows the amount of <a href="group_delay_dispersion.html" title="group delay dispersion: the frequency dependency of the group delay, or (quantitatively) the corresponding derivative with respect to angular frequency">group delay dispersion</a> (GDD) used for the compressor.
+Interestingly, for a longer fiber piece one requires less GDD.
+This is due to the increased pulse <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>.</p>
+<figure>
+<img src="img/propulse_demo_compression2.png" alt="pulse parameters vs. fiber length">
+</figure>
+<p>(<a href="propulse_demos.html">back to the list of example cases</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_compression.html?banner=RP_ProPulse by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:08:14 GMT -->
+</html>

@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_modeling2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:32:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo;, Part 2: Optical channels - wavelengths, propagation directions</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on modeling of fiber amplifiers and lasers. The second part explains how to define so-called optical channels for a model.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, modeling, fiber amplifiers, fiber lasers, optical channels, wavelength, propagation direction">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_modeling2.html"; cat="C"; shownbanner=""; ref="tutorial_modeling.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>This is part 2 of a <a href="tutorial_modeling.html">tutorial on modeling of fiber amplifiers and lasers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:0 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>2</span>
+<p>1:&nbsp;<a href="tutorial_modeling1.html">Introduction</a>, 2:&nbsp;<span style="text-decoration:underline;">Optical channels</span>, 3:&nbsp;<a href="tutorial_modeling3.html">Power propagation or field propagation</a>, 4:&nbsp;<a href="tutorial_modeling4.html">The laser-active ions</a>, 5:&nbsp;<a href="tutorial_modeling5.html">Continuous-wave operation of amplifiers and lasers</a>, 6:&nbsp;<a href="tutorial_modeling6.html">Amplifying and generating short pulses</a>, 7:&nbsp;<a href="tutorial_modeling7.html">Ultrashort pulses</a>, 8:&nbsp;<a href="tutorial_modeling8.html">Using home-made software or a commercial product?</a>
+</p>
+</div>
+<h2 class="togglediv">Part 2: Optical Channels</h2>
+<div>
+<p>Within a quantitative model for the fiber amplifier or fiber laser, we somehow need to describe the light propagating in the fiber.
+How that should be done in detail, depends very much on the circumstances.</p>
+<p>In most cases, we are dealing with different light waves at substantially different wavelengths &ndash; for example, the pump wave and a signal wave.
+In more complicated cases, we may have multiple pump and signal waves, and there may also be light from <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE) (see <a href="tutorial_fiber_amplifiers4.html">section 4</a> of our <a href="tutorial_fiber_amplifiers.html">fiber amplifier tutorial</a>).</p>
+<p>Although one could in principle describes the whole light field as a whole, it is normally very sensible to distinguish some number of <b>optical channels</b>, as we call them.
+In an amplifier model, we may have</p>
+<ul>
+<li class="ta_left">one or several pump channels,</li>
+<li class="ta_left">one or several signal channels, and</li>
+<li class="ta_left">typically between 10 and 100 ASE channels.</li>
+</ul>
+<p>We split ASE light into multiple channels with different wavelengths, normally using equidistant wavelength values.
+Each ASE channel represents some narrow wavelength region within which properties like <a href="photons.html" title="photons: quanta of light energy">photon energy</a> and <a href="transition_cross_sections.html" title="transition cross sections: material parameters for quantifying the likelihood or rate of optical transition events">transition cross-sections</a> are approximately constant.
+Of course, there are cases where ASE can be neglected altogether &ndash; for example, when the amplifier gain is too low for ASE to be significant and one is not interested in that low-level ASE.</p>
+<p>Pump and signal channels are often considered as monochromatic.
+For these, one usually does not take into account spontaneous emission.
+In case of a broadband signal, one can of course again use an array of channels with different wavelengths.</p>
+<figure>
+<img src="img/optical_channels.png" alt="optical channels">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Optical channels in the model for an erbium-doped fiber amplifier.
+</figcaption>
+</figure>
+<p>As an example, Figure&nbsp;1 shows the optical channels chosen for a simple model of an erbium-doped fiber amplifier.
+The ASE channels span the wavelength range from 1520&nbsp;nm to 1600&nbsp;nm with a spacing of 5&nbsp;nm.
+The two signal channels are also in that wavelength range, but are treated separately: we consider signal inputs only for these, whereas spontaneous emission is taken into account only for the ASE channels.</p>
+<p>Another important aspect is the propagation direction.
+Each optical channel describes light which is either propagating from the left side to the right side (let's call it the <em>forward direction</em>) or vice versa (<em>backward direction</em>).</p>
+<aside class="callout blue">Each optical channel represents only one propagation direction.</aside>
+<p>In many cases, light at some wavelength is propagating in both directions.
+For example, one may have a double-pass amplifier or a linear laser resonator.
+At one or both ends of the active fiber, light may be reflected, and we describe this quantitatively with some reflectivity, which can of course depend on the optical channel (usually due to the wavelength dependence).
+In many cases, it does not matter whether that reflection occurs directly at the fiber end (e.g., due to Fresnel reflection of a bare end) or in some larger distance (e.g., with a loop reflector made with additional passive fiber); only the reflectivities are relevant, i.e., how much light comes back.</p>
+<p>Over all, an optical channel is characterized by</p>
+<ul>
+<li>its wavelength (which may be the center wavelength of a narrow wavelength region),</li>
+<li>its bandwidth (for ASE channels, but not for monochromatic pump or signal channels),</li>
+<li>its propagation direction (forward or backward), and</li>
+<li>its spatial properties in the fiber &ndash; to be discussed in the next section.</li>
+</ul>
+<p>For simulations involving <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a>, some more details have to be considered; we do this in <a href="tutorial_modeling7.html">section 7</a>.</p>
+<p>Go to <a href="tutorial_modeling3.html">Part 3: Power propagation or field propagation</a>, or back to the <a href="tutorial_modeling.html">start page</a>.</p>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_modeling2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:32:28 GMT -->
+</html>

@@ -1,0 +1,8 @@
+body { font-family:Arial; font-size:14px; background-color:#EEE; }
+table { margin-bottom:10px; border:1px solid #CCC; }
+td { background-color:white; padding:3px 20px; text-align:center; }
+td:first-child { text-align:left; }
+div.diagram { width:640px; margin:0px 0 25px 20px; padding:10px;
+ border-radius:8px; background-color:white;
+ box-shadow:2px 5px 5px #AAA; }
+p.caption { margin:0 0 25px 20px; }

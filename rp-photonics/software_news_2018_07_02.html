@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_07_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - Namespaces: An Elegant Approach for Avoiding Name Conflicts</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-07-02">
+<meta name="description" content="A summary of this blog article: The concept of namespaces is very useful for avoiding name conflicts in programming languages. It has thus been implemented in the script language supported by software from RP Photonics - e.g. RP Fiber Power. Here, it is explained with a real-life example which awkward problems can be elegantly solved with namespaces.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2018_07_02.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">Namespaces: An Elegant Approach for Avoiding Name Conflicts</h1>
+<div class="posting_details">
+<p>Posted on 2018-07-02 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2018_07_02.html">https://www.rp-photonics.com/software_news_2018_07_02.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: The concept of namespaces is very useful for avoiding name conflicts in programming languages. It has thus been implemented in the script language supported by software from RP Photonics - e.g. RP Fiber Power. Here, it is explained with a real-life example which awkward problems can be elegantly solved with namespaces.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>There are cases where name conflicts in scripts can lead to awkward problems, and the concept of <b>namespaces</b> can provide a powerful solution for those.
+Realizing this, I have implemented this concept for our software products <a href="fiberpower.html"><b>RP Fiber Power</b></a>, <a href="resonator.html"><b>RP Resonator</b></a>, <a href="coating.html"><b>RP Coating</b></a> and <a href="propulse.html"><b>RP ProPulse</b></a>.</p>
+<p>In this article, I show you with a typical example what the problem is and how that solution with namespaces works.
+It may thus be of interest even for people using other programming languages offering namespaces, e.g. C++; the general ideas are the same, although the syntax is a bit different.
+You know, such concepts are often explained in a very abstract way; a good example from real life can be very helpful.</p>
+<h2 class="togglediv">What's the Problem?</h2>
+<div>
+<p>Imagine that we generate a computer model for a fiber amplifier with two amplifier stages based on two different fibers.
+For example, there could be a <a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a> for the preamplifier and a <a href="double_clad_fibers.html" title="double-clad fibers: optical fibers with different waveguide structures for pump and signal light">double-clad fiber</a> as a power amplifier.</p>
+<p>Our software <a href="fiberpower.html"><b>RP Fiber Power</b></a> comes with a large set of fiber data files, mostly for commercially available fibers, each one defining variables like r&lowbar;co (the core radius) and functions like s&lowbar;abs&lowbar;Yb(l) (the absorption cross sections).
+The problem is quite obvious: if you simply include the data files for both fibers, the first one will define e.g. the variable r&lowbar;co, and the second one will override that with its own value &ndash; a typical name conflict!</p>
+<p>In principle, there is an easy solution: make a copy of the data file for the second fiber, where you rename all variables and functions &ndash; for example, from r&lowbar;co to r&lowbar;co2.
+Obviously, however, that is not really convenient.
+We could in principle deliver all those data files with variable and function names containing some product code, but that would again be relatively awkward to use: who would like to have variable names like r&lowbar;co&lowbar;CorActive&lowbar;DCF&lowbar;10&lowbar;128?</p>
+</div>
+<h2 class="togglediv">How to Use Namespaces</h2>
+<div>
+<p>Namespaces provide an elegant solution.
+Essentially, you use a namespace called stage1 for the first amplifier stage and another namespace called stage2 for the second stage.
+Before reading a data file, you just declare the defined namespace:</p>
+<pre class="codedisplay">
+calc
+namespace: define stage1:
+begin
+  include "Yb-Liekki Yb1200-6-125.inc"
+end
+namespace: define stage2:
+begin
+  include "Yb-CorActive DCF-YB-10-128.inc"
+end
+</pre>
+<p>As a result, the variables and functions defined in the first data file get &ldquo;stage1.&rdquo; added to their names.
+For example, the core radius will be stored in stage1.r&lowbar;co instead of simply r&lowbar;co.</p>
+<p>In principle, the problem is already solved with that.
+However, a second feature is highly convenient when later using the defined quantities.
+For example, you can use the following code when defining the two amplifier stages:</p>
+<pre class="codedisplay">
+calc
+  begin
+    namespace: use stage1:
+    begin
+      set_device(1);
+      set_ns('stage1');
+      set_fiber(L_f, No_z_steps, 'Yb');
+      add_ring(r_co, N_Yb);
+      pump1 := addinputchannel(P_pump_in, l_p, 'I_p', loss_p, dir_p);
+      signal1 := addinputchannel(P_signal_in, l_s, 'I_s', loss_s, forward);
+      finish_fiber();
+    end;
+    namespace: use stage2:
+    begin
+      set_device(2);
+      set_ns('stage2');
+      set_fiber(L_f, No_z_steps, 'Yb');
+      add_ring(r_co, N_Yb);
+      pump2 := addinputchannel(P_pump_in, l_p, 'I_p', loss_p, dir_p);
+      signal2 := addinputchannel(P_signal_in, l_s, 'I_s', loss_s, forward);
+      finish_fiber();
+    end;
+  end
+</pre>
+<p>Here, we have declared within an expression that we will use a certain namespace stage1 and later stage2.
+As a result, we do not have to put &ldquo;stage1.&rdquo; or &ldquo;stage2.&rdquo; in front of every name; that is now done automatically.</p>
+<p>When we write &ldquo;use&rdquo; instead of &ldquo;define&rdquo; in a namespace statement, this means that the namespace applies only to those items which can already be found in that namespace.
+Others, which are not defined in there, remain unaffected.
+For example, we really get the channel index pump1 defined, not stage1.pump1.</p>
+<p>A further detail: by calling the function set&lowbar;ns(), we tell the fiber model which namespace is associated with it.
+This is important because the software retrieves some fiber data from certain variables and functions &ndash; for example, it normally would take the upper-state lifetime from the variable tau&lowbar;Yb, and the mentioned function call changes that to stage1.tau&lowbar;Yb or stage2.tau&lowbar;Yb.</p>
+<p>There are some further tricks which I do not want to completely describe here.
+Just to give you some examples:</p>
+<ul>
+<li>One can always enforce the use of the global namespace by putting &ldquo;std.&rdquo; In front of a name.</li>
+<li>It is possible to exempt certain items &ndash; or just all constants &ndash; from the application of a namespace.
+Example: &ldquo;namespace: define stage1, global constants:&rdquo; would exempt all global constants.</li>
+</ul>
+<p>Those who already have a user license can get a free update in order to enjoy namespaces as well &ndash; just tell us.</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2018_07_02.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_08_18.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Software from RP Photonics - How to Efficiently Track Down Numerical Problems</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2017-08-18">
+<meta name="description" content="A summary of this blog article: It can be rather hard to track down numerical problems e.g. in beam propagation and to find practical solutions. However, some good methodology can help a lot. An example case allows you to take home a number of quite useful lessons.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, modeling, software, optics, lasers, simulations, analysis, optimization, news, newsletter">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_news_2017_08_18.html"; cat="S"; shownbanner=""; ref="software_news.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html" class="sel">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main" style="margin-top:20px;">
+<main>
+<h1 class="spotlight_heading">The RP Photonics Software News</h1>
+<h1 class="posting">How to Efficiently Track Down Numerical Problems</h1>
+<div class="posting_details">
+<p>Posted on 2017-08-18 in the <a href="software_news.html">RP Photonics Software News (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="software_news_2017_08_18.html">https://www.rp-photonics.com/software_news_2017_08_18.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It can be rather hard to track down numerical problems e.g. in beam propagation and to find practical solutions. However, some good methodology can help a lot. An example case allows you to take home a number of quite useful lessons.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>When working with a numerical model, it sometimes happens that one encounters problems with non-ideal numerical accuracy.
+In some cases, it can be very tedious to understand and solve such problems, when not applying good methods of problem analysis.
+I thought it might be helpful for many to describe an example case which I recently had in the technical support for our software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+Although certain technical details are quite specific to that problem, you can learn essential interesting techniques of more general applicability from this report.</p>
+<h2 class="togglediv">What was the Problem?</h2>
+<div>
+<p>The customer (a scientific researcher) was investigating the propagation of so-called orbital angular momentum modes (OAM modes) in fibers, using the numerical beam propagation feature of our software.
+(Such modes exhibit helical wavefronts; if you circle around the center in some arbitrary distance from it, you see in over all phase change which is an integer multiple of <span class="eqn_il">2&thinsp;<span class="greek">&pi;</span></span>.)
+Specifically, the customer wanted to find out how additional effects like amplification might cause <a href="mode_coupling.html" title="mode coupling: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a>, i.e., the transfer of optical power into other modes.
+He then noticed that some amount of mode coupling happened even without any physical effects from which it could be expected &ndash; even for propagating in a passive fiber without any special properties.
+The difficulty was that the simulation was rather time-consuming, so that it was not practical to do many experiments e.g. with different settings of numerical parameters or other changes to the simulation scripts.
+He had already found that using a final transverse resolution of the numerical grid deed reduce the numerical errors significantly, but not dramatically, while a finer longitudinal resolution did not help at all.
+So it was unclear what to do.</p>
+</div>
+<h2 class="togglediv">Steps Towards the Solution</h2>
+<div>
+<p>At that stage, I took over.
+Because it can happen that one overlooks some vital detail in a longer script, I first <b>radically simplified the script</b>, deleting all sorts of details which seemed not to be relevant for the problem.
+Indeed, the numerical problem remained after that, but I could be sure that the problem had to be a quite fundamental one, rather than the result of some overlooked detail of the script.
+That was definitely worth spending 10 or 15 minutes.</p>
+<p>I was definitely not keen at all to do lots of time-consuming test runs.
+Therefore, the next step was to <b>modify the simulation such that the computation time is much shorter</b>.
+In the present case, the essential and very simple measure was to radically cut down the length of fiber considered.
+In addition, I somewhat reduced the transverse resolution.
+As a result, one simulation run now took only a few seconds instead of many minutes.
+That gave me the opportunity to much more quickly test the effect of changes e.g. to numerical details or included physical effects.
+And it was no problem that the investigated numerical errors were now on a much lower level; they could still be easily observed.</p>
+<p>Further, I required better <b>tools for assessing the magnitude and kind of the problem</b>.
+That was also relatively straightforward.
+With a few lines of script code, I defined a function which calculates the optical power in a particular orbital angular momentum mode at a certain longitudinal position, and a diagram where the evolution of the relevant mode powers was nicely shown.</p>
+<p>Also, I wanted to find out whether the problem is mainly related to errors of the field amplitudes or the phases.
+Therefore, I defined modified functions for the mode powers, where I combined the amplitudes of the beam propagation results with the optical phases of calculated modes (from the mode solver) and vice versa; this quickly showed that the problem was mainly with the optical phases.</p>
+<p>Further, I defined a diagram with a color plot showing the spatial distribution of phase errors at the fiber end:</p>
+<figure>
+<img src="img/oam_test2.png" alt="phase errors in beam propagation">
+</figure>
+<p>The correct phase values result in green color, while red and white indicate deviations to different sides.
+By the way, phase errors in the outer regions are not relevant, since the mode amplitudes anyway get extremely small when reaching a distance of 15&nbsp;&mu;m from the center.</p>
+<p>Not much script code was required for that nice and instructive diagram:</p>
+<pre class="codedisplay">
+diagram 2, size_px = (600, 600):
+&nbsp;
+"Phase Errors"
+&nbsp;
+x: -r_max / um, +r_max / um
+"x position (µm)", @x
+y: -r_max / um, +r_max / um
+"y position (µm)", @y
+frame
+hx
+hy
+&nbsp;
+phase_error(x, y, z) :=
+  arg(bp_A%(x, y, z) / bp_A%(10 um, 0, z) * A_lm_xy_oam%(-l, m, lambda_s, x, y))
+&nbsp;
+cp: color_I(0.5 + 10 * phase_error(x * um, y * um, L_f))
+</pre>
+<p>I could now quite quickly check how the situation changes with modified numerical parameters, but again found that only a higher transverse spatial resolution helps, and that did not even help much.
+For some time, it looked like a hard problem without a nice solution.
+Just working with far higher numerical resolution would not have been a practical solution for the client.</p>
+<p>Now came the difficult part, requiring <b>careful observations and the use of physical intuition</b>:</p>
+<ul>
+<li>I made a <b>similar test with</b> <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance"><b>LP modes</b></a> instead of orbital angular momentum modes.
+There, the numerical errors were far smaller; there was nearly no artificial coupling in that case.
+This observation confirmed a previous suspicion that the problem is related to the lack of radial symmetry of the numerical grid.
+The idea is basically that radial symmetry is important for those orbital angular momentum modes (but not for LP modes), while the numerical grid (considering just one plane) is of course rectangular.</li>
+<li>I also looked again at the diagram with the phase errors (see above).
+I noticed how much the problem was apparently starting at the <b>core&ndash;cladding boundary</b>.
+Now came the essential idea: the fiber was assumed to be a <a href="step_index_fibers.html" title="step-index fibers: optical fibers with a step-index refractive index profile">step-index fiber</a>, i.e., to have a sharp transition from core index to cladding index.
+When you describe such a circular structure with sharp edges on our rectangular grid, of course you don't get a perfect circle, but rather the more or less <b>pronounced structures around the circle</b>.
+So it is actually not far-fetched to imagine that those structures could cause the artificial mode coupling between OAM modes of opposite circulation.</li>
+<li>Once that was realized, it was easy to make further progress: just try a refractive index profile with a somewhat <b>smoother core&ndash;cladding interface</b>, which looks much more circular on a rectangular grid.
+I just used a supergaussian function with high order (e.g. 40, 60 or even 80), which is quite similar to a rectangular profile, but has a somewhat smoothed transition.
+And indeed the numerical errors now became far smaller than before, even though I did not use a particularly fine grid resolution! <b>Problem solved!</b></li>
+</ul>
+<p>The conclusion in this particular problem case was that for numerical beam propagation one should not use a step-index profile, but rather one which is at least a little smoothed: it is sufficient if the transition from core to cladding can be sampled with only a few points of the numerical grid.
+Such an index profile is even more realistic, since diffusion during the fiber drawing process will anyway not allow for an ideally sharp transition.</p>
+</div>
+<h2 class="togglediv">Lessons to Take Home</h2>
+<div>
+<p>Here is a short summary of the general lessons you can take home.
+When you tackle such numerical problems, consider the following points:</p>
+<ul>
+<li>First remove all details which are presumably irrelevant to the problem.
+That avoids the risk of spending a lot of time on various aspects while overlooking some nasty factor.</li>
+<li>Try to reproduce the numerical problem in a situation which requires much less computation time.
+That way, you can try many more things within an hour.</li>
+<li>Don't hesitate to invest a little time into creating useful tools for problem analysis &ndash; for example, displaying crucial numbers or some instructive diagrams.
+That way, you can much more easily make use of following test runs.</li>
+<li>Try to make use of your physical intuition, rather than considering the problem as a purely mathematical one.
+That may suggest additional tests which can rule out certain explanations and confirm others, so that you get closer and closer to the core of the problem.
+This is probably the most difficult part, but I often found it to be absolutely essential to make progress.</li>
+</ul>
+<p>Well, there is actually another important lesson.
+When looking for simulation software, make sure that you get one where you get excellent <b>technical support</b> &ndash; not restricted to purely software-specific details, but helping you also with more general advice, e.g. concerning the related physics.
+I am afraid that you can rarely be sure to get that when searching for simulation software, but I am doing my best to make sure that our customers are getting it!</p>
+</div>
+<p style="font-size:85%; margin-bottom:10px;">This article is a posting of the <a href="software_news.html">RP Photonics Software News</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page, because its location is permanent.</p>
+<p style="font-size:85%; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="software_news.rss">RSS feed</a>.</p>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide</span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_news_2017_08_18.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:10:09 GMT -->
+</html>

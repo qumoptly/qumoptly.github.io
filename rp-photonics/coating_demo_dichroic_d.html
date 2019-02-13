@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_dichroic_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:33:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Coating: dichroitischer Spiegel</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Ein dichroitischer Spiegel wird mit der Software RP Coating entworfen. Die numerische Optimierung mit einer figure-of-merit-Funktion ist nicht schwierig.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Coating, Design, Software, Optimierung, dichroitischer Spiegel">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="coating_demo_dichroic_d.html"; cat="S"; shownbanner=""; ref="coating_demo_dichroic5675.html?banner=RP_Coating"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="coating_demo_dichroic.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html" class="sel">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP Coating &ndash; das Software-Werkzeug für das<br>Design optischer Vielschichtstrukturen</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="coating_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose_d.html">Anwendung</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating_demos_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Beispiel: dichroitischer Spiegel</h2>
+<div>
+<p>Dies ist eine einfache Demonstration, die ohne ein <a href="software_custom_forms_d.html">maßgeschneidertes Formular</a> arbeitet; die Eingabedaten sind einfach im Skript selbst enthalten.</p>
+<p>Beachten Sie, dass es auch eine neuere, deutlich <a href="coating_demo_filter_d.html"><b>fortgeschrittenere Version mit maßgeschneidertem Formular</b></a> gibt.</p>
+<p>Wir entwickeln einen dichroitischen Spiegel mit hoher Reflektivität bei 1064&nbsp;nm und hoher Transmission bei 808&nbsp;nm.
+Solche Spiegel werden oft eingesetzt zum Pumpen von <a href="yag_lasers.html" title="YAG lasers: lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG-</a> und <a href="vanadate_lasers.html" title="vanadate lasers: lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub>-Lasern</a>.</p>
+<p>Als Ausgangsdesign verwenden wir einen einfach Bragg-Spiegel:</p>
+<pre class="codedisplay">
+beam from superstrate
+substrate: BK7
+for j := 1 to 8 do
+begin
+* TiO2, l / 4 at 1200
+* SiO2, l / 4 at 1200
+end
+superstrate: air
+</pre>
+<p>Dieses Design hat bereits eine hohe Reflektivität bei 1064&nbsp;nm.
+Die Transmission bei 808&nbsp;nm ist dagegen nicht ideal, auch wenn diese Wellenlänge außerhalb des Haupt-Reflexionsbands des Spiegels liegt.</p>
+<p>Wir definieren nun die Zielfunktion:</p>
+<pre class="codedisplay">
+d_units: nm
+l_units: nm
+&nbsp;
+l_HR := 1064  { HR wavelength }
+l_HT := 808   { HT wavelength }
+&nbsp;
+FOM() := 
+  sqrt(sum(d := -20 to +20 step 5, T(l_HR + d)^2)
+      +sum(d := -20 to +20 step 5, R(l_HT + d)^2))
+</pre>
+<p>Hiermit &ldquo;bestrafen&rdquo; wir jegliche Transmission in einem Bereich um 1064&nbsp;nm sowie jede Reflektivität um 808&nbsp;nm.
+Es ist vorteilhaft, diese Eigenschaften jeweils für einen gewissen Wellenlängenbereich zu fordern, da man sonst oft Designs erhält, die ziemlich empfindlich auf Herstellungsfehler reagieren.</p>
+<p>Wir machen nun eine einfache lokale Optimierung:</p>
+<pre class="codedisplay">
+optimize coating for minimum of FOM(), ytol = 1e-5
+</pre>
+<p>Nun erzeugen wir ein Diagramm für das Reflektivitätsprofil:</p>
+<pre class="codedisplay">
+diagram 1:
+&nbsp;
+"Reflectivity Profile"
+["Merit value: ", FOM():d3]
+&nbsp;
+x: 400, 1600
+"wavelength (nm)", @x
+y: 0, 100
+"reflectivity (%)", @y
+frame
+hx
+hy
+&nbsp;
+f: 100 * R(x), color = red, width = 3
+</pre>
+<p>Wenn wir dies ausführen, erhalten wir das Folgende:</p>
+<figure>
+<img src="img/coating_demo_dichroic1.png" alt="reflectivity profile of a dichroic mirror">
+</figure>
+<p>Ein zweites Diagramm zeigt das erzeugte Design:</p>
+<pre class="codedisplay">
+diagram 2:
+&nbsp;
+"Design of the Multilayer Structure"
+&nbsp;
+x: -500, get_d(0) + 500
+"position (nm)", @x
+y: 0, 3
+"refractive index (nm)", @y
+frame
+&nbsp;
+! begin
+    for j := 1 to nolayers() do
+    begin
+      var g;
+      g := if get_material$(j) = "TiO2" then 0.8 else 0.9;
+      setcolor(rgb(g, g, g));
+      box(get_z(j), get_z(j + 1) + i * CS_y2);
+    end;
+    draw_cs();  { draw the coordinate system again }
+  end
+ 
+[get_d(j):f0:"nm"],
+ (get_z(j) + 0.5 * get_d(j))c, (0.1 * CS_y2)b, direction = 90,
+ for j := 1 to nolayers()
+"substrate", (-200)c, (0.1 * CS_y2)b, direction = 90
+"superstrate", (get_d(0) + 200)c, (0.1 * CS_y2)b, direction = 90
+&nbsp;
+f: n(x, 1200), step = 1, color = blue
+</pre>
+<figure>
+<img src="img/coating_demo_dichroic2.png" alt="design of dichroic mirror">
+</figure>
+<p>Man erkennt, dass das erhaltene Design nicht allzu stark von dem eines Bragg-Spiegels abweicht.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_dichroic_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:33:01 GMT -->
+</html>

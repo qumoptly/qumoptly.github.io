@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers8.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 8: fiber amplifiers for ultrashort pulses, fiber nonlinearities, parabolic pulse amplification, chirped-pulse amplification, ultrafast fiber amplifiers</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on fiber amplifiers. The eights part discusses fiber amplifiers for ultrashort pulses with picosecond or femtosecond durations. It is shown how and to which extent nonlinear effects can be mitigated with parabolic pulse amplification and chirped-pulse amplification.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber amplifiers, ultrashort pulses, fiber nonlinearities, parabolic pulse amplification, chirped-pulse amplification">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_fiber_amplifiers8.html"; cat="C"; shownbanner=""; ref="encyclopedia_u.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 8 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>8</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<a href="tutorial_fiber_amplifiers3.html">Self-consistent solutions for the steady state</a>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<span style="text-decoration:underline;">Fiber amplifiers for ultrashort pulses</span>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 8: Fiber Amplifiers for Ultrashort Pulses</h2>
+<div>
+<p>We now consider the amplification of <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a>, i.e., light pulses with picosecond or femtosecond <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">durations</a>.
+Fiber amplifiers are often used for that purpose.
+They are then sometimes called <a href="ultrafast_amplifiers.html" title="ultrafast amplifiers: amplifiers for ultrashort optical pulses"><em>ultrafast fiber amplifiers</em></a>, although this term is somewhat vague: strictly speaking, what is fast is only the rise and fall of the optical power of an ultrashort pulse, but not the amplifier.</p>
+<h3 class="togglediv">Attractions of Fibers for Ultrashort Pulse Amplification</h3>
+<div>
+<p>In some ways, fiber amplifiers look like the ideal devices for amplifying ultrashort pulses.
+They offer a high <a href="gain.html" title="gain: a measure of the strength of optical amplification">gain</a> and high <a href="gain_efficiency.html" title="gain efficiency: small-signal gain of an optical amplifier per unit pump power or per unit stored energy">gain efficiency</a>, as is often required in this area, e.g. when amplifying pulses from some low-energy seed laser to considerable energies in order to reach enormous peak powers.
+Also, their quite large <a href="gain_bandwidth.html" title="gain bandwidth: the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> allows one to do that even with pretty short pulses, e.g. with pulse durations of 100&nbsp;fs or even less.
+Add various general advantages of optical <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a> to that, such as the often high power conversion efficiency and the normally quite high <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a> of the generated outputs, and we have an impressive set of advantages.</p>
+</div>
+<h3 class="togglediv">The Basic Problem: Fiber Nonlinearities</h3>
+<div>
+<p>In <a href="passive_fiber_optics11.html">part 11</a> of our tutorial <a href="passive_fiber_optics.html">Passive Fiber Optics</a>, we have already explained what kind of <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> occur in optical <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>: in particular, the <a href="kerr_effect.html" title="Kerr effect: a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>, leading to <a href="self_phase_modulation.html" title="self-phase modulation: nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, nonlinear <a href="self_focusing.html" title="self-focusing: focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>, <a href="parametric_amplification.html" title="parametric amplification: a process of optical amplification based on a parametric nonlinearity">parametric amplification</a> and <a href="four_wave_mixing.html" title="four-wave mixing: an interaction of light waves based on a &chi;<sup>(3)</sup> nonlinearity">four-wave mixing</a>, and the delayed nonlinear response, leading to stimulated <a href="brillouin_scattering.html" title="Brillouin scattering: a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a> (SBS) and <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman scattering</a> (SRS).
+And in the <a href="tutorial_fiber_amplifiers7.html">previous part</a> of this tutorial we have discussed what that means for nanosecond pulse amplification.
+For ultrashort pulses, the situation is similar, but with some notable differences:</p>
+<ul>
+<li>For the same <a href="pulse_energy.html" title="pulse energy: energy of an optical pulse">pulse energy</a>, the <a href="peak_power.html" title="peak power: maximum optical power of a pulse">peak power</a> is even much higher.
+This means that generally nonlinear effects become severe already for lower pulse energies.</li>
+<li>As an exception to this, stimulated Brillouin scattering is less of a problem in this regime due to the large intrinsic <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> of ultrashort pulses.</li>
+<li>Some nonlinear effects are also mitigated by the <a href="group_velocity_mismatch.html" title="group velocity mismatch: the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> between different frequency components.</li>
+</ul>
+<p>As an example for the group velocity mismatch, if the fiber's <a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> is 15,000&nbsp;fs<sup>2</sup>/m, light produced by SRS with an offset of 13&nbsp;THz will have an inverse <a href="group_velocity.html" title="group velocity: the velocity with which the envelope of a weak narrow-band optical pulse propagates in a medium">group velocity</a> which differs from that of the original wave by 15,000&nbsp;fs<sup>2</sup>/m &middot; <span class="eqn_il">2<span class="greek">&pi;</span></span> &middot; 13&nbsp;THz = 1.23&nbsp;ps/m.
+That means that a 1-ps pulse will experience much less SRS in a 10&nbsp;m long fiber amplifier than one might expect when considering its peak power only.
+(For <a href="self_phase_modulation.html" title="self-phase modulation: nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, the chromatic dispersion helps much less, as we have an interaction within a smaller frequency range.)</p>
+<p>Generally, the <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> of the amplifier fiber has a strong influence of nonlinear effects.
+It is not only the mentioned group velocity mismatch between totally different wavelength components, but also the dispersion within smaller wavelength regions.
+For example, in the anomalous dispersion regime (i.e., for negative <a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a>), we can have soliton effects, which sometimes lead to <a href="pulse_compression.html" title="pulse compression: linear or nonlinear techniques for reducing the durations of optical pulses">pulse compression</a> and thus even increased peak powers (particularly for injected pulse energies well above the fundamental soliton energy).
+In the normal dispersion regime, however, we get increased temporal pulse broadening and thus reduced peak powers, so that higher pulse energies become possible without complete pulse break-up.
+Overall, what happens is often rather complicated, and some easy rules of thumb are not sufficient for understanding what will happen and how severe nonlinear effects will be.
+Numerical simulations are then required.
+In the following, we present two example cases.</p>
+</div>
+<h3 class="togglediv">Example 1: Parabolic Pulse Amplifier</h3>
+<div>
+<p>One method to mitigate nonlinear effects in fiber amplifiers is to use parabolic pulse amplification in the normal dispersion regime.
+Here, wave breaking can be avoided, if the parameters do not get too extreme.
+For a given gain per unit length, there is an asymptotic solution for the pulses with a parabolic temporal shape.
+The gain (considered to be constant over the bandwidth of the pulses) determines the growth of <a href="pulse_energy.html" title="pulse energy: energy of an optical pulse">pulse energy</a> along the fiber.
+For each pulse energy, the asymptotic solution sets a certain <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">pulse duration</a> and <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>, which both depend on the gain per unit length, the group velocity dispersion and the strength of the Kerr nonlinearity.
+The latter depends on the <a href="nonlinear_index.html" title="nonlinear index: a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a> and the <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>.
+For the details, see our encyclopedia article on <a href="parabolic_pulses.html" title="parabolic pulses: pulses with a parabolic intensity profile">parabolic pulses</a>.</p>
+<p>Generally, pulses are <em>not</em> injected into an amplifier such that they already match the asymptotic solution; they then approach that solution more and more during propagation.
+The exact properties of the input pulses turn out not to be critical, which is a nice feature of this amplification method.</p>
+<p>Unfortunately, there is only a limited scope for high pulse energies with parabolic pulses, because the <a href="gain_bandwidth.html" title="gain bandwidth: the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> is a limiting factor.
+As an example, consider an ytterbium-doped fiber amplifier a double-clad fiber (see <a href="tutorial_fiber_amplifiers6.html">part 6</a>) with an effective mode area of &asymp;320&nbsp;&mu;m<sup>2</sup>, which is several times more than often used for preamplifiers.
+Figure&nbsp;1 shows the result of a simulation, where already chirped pulses from a preamplifier stage enter that double-clad amplifier with an energy of 0.65&nbsp;nJ and are amplified to 36&nbsp;nJ.</p>
+<figure>
+<img src="img/parabolic_pulse_amplifier4.png" alt="amplified pulses, time domain">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Temporal profile of the pulses at the output of a parabolic pulse amplifier (red curve) and after a dispersive compressor (blue curve).
+Power losses in the compressor have been neglected.
+</figcaption>
+</figure>
+<p>The pulse profile is similar to a parabolic one, although the input pulses to the preamplifier were of Gaussian shape.
+However, the pulses have not fully reached the asymptotic solution.</p>
+<p>Figure&nbsp;2 shows the pulses in the spectral domain.
+Their <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> is of the order of 20&nbsp;nm, where the limited <a href="gain_bandwidth.html" title="gain bandwidth: the width of the optical frequency range in which significant gain is available from an amplifier">gain bandwidth</a> starts to have some effects.
+That happens already for a moderate output pulse energy &ndash; far below the multi-microjoule level as required for applications in laser material processing, for example.</p>
+<figure>
+<img src="img/parabolic_pulse_amplifier3.png" alt="amplified pulses, wavelength domain">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Spectral profile of the pulses at the output of a parabolic pulse amplifier (red curve) and the <a href="spectral_phase.html" title="spectral phase: the phase of the electric field in the frequency domain">spectral phase</a>, which is close to parabolic.
+</figcaption>
+</figure>
+<p>Note that the <a href="spectral_phase.html" title="spectral phase: the phase of the electric field in the frequency domain">spectral phase</a> has a nearly parabolic shape.
+This is very convenient, as one can then obtain a flat spectral phase (and thus a strongly reduced pulse duration) with a <a href="pulse_compression.html" title="pulse compression: linear or nonlinear techniques for reducing the durations of optical pulses">pulse compressor</a> having only a constant <a href="group_velocity_dispersion.html" title="group velocity dispersion: the frequency dependence of the group velocity in a medium, or (quantitatively) the derivative of the inverse group velocity with respect to angular frequency">group velocity dispersion</a> over that spectral range.</p>
+<p>Remarkably, the compressed pulses do not change much if the input pulse duration to the preamplifier is 2 times higher or lower, or if the input pulses are strongly chirped.</p>
+<p>One could push the pulse energy somewhat further, using a large mode area and possibly accepting some reduction in pulse quality.
+However, one can see that parabolic pulse amplification does not easily scale into the millijoule region.</p>
+</div>
+<h3 class="togglediv">Example 2: Chirped-pulse Amplifier</h3>
+<div>
+<p>For higher pulse energies, one can employ the principle of <a href="chirped_pulse_amplification.html" title="chirped-pulse amplification: a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a> (CPA).
+That means that we apply strong dispersive pulse stretching before the fiber amplifier, and dispersive pulse compression after the amplifier.</p>
+<p>As an example, consider an ytterbium-doped fiber amplifier for 1-nJ seed pulses, having a duration of 5.7&nbsp;ps (see Figure&nbsp;3).
+These pulses have been generated in a dissipative soliton fiber laser, which is subject of a <a href="fiberpower_ml_fl.html">case study</a> for our <a href="fiberpower.html">RP Fiber Power</a> software.
+The pulses are already up-chirped (see the rising <a href="instantaneous_frequency.html" title="instantaneous frequency: temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a>) and have a spectral width of 7.6&nbsp;nm (measured at the 10&#37; level).</p>
+<figure>
+<img src="img/fiberpower_cpa1.png" alt="pulses of laser in time domain">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Pulses from the mode-locked laser in the time domain.
+</figcaption>
+</figure>
+<p>Their peak power of 160&nbsp;W is moderate, but still too high to directly apply a high gain.
+Therefore, we first use a 100&nbsp;m long passive fiber as a dispersive pulse stretcher, increasing the pulse duration to 46&nbsp;ps, so that the peak power drops to 23&nbsp;W.
+Note that the initial chirp of the pulses from the laser enhances the broadening; a transform-limited pulse with the same duration would require a much longer fiber length for that broadening.</p>
+<p>Figure&nbsp;4 shows that the instantaneous frequency of the stretched input pulses rises quite linearly with time.</p>
+<figure>
+<img src="img/fiberpower_cpa3.png" alt="pulses after the stretcher in the time domain">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Pulses after the stretcher in the time domain.
+</figcaption>
+</figure>
+<p>Because the fiber nonlinearity is not negligible, the spectrum is further broadened to a width of 10.4&nbsp;nm:</p>
+<figure>
+<img src="img/fiberpower_cpa4.png" alt="pulses after the stretcher in the frequency domain">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Pulses after the stretcher in the frequency domain.
+</figcaption>
+</figure>
+<p>Now we inject these pulses into an amplifier fiber with a mode area of 310&nbsp;&mu;m<sup>2</sup>, which raises the pulse energy from 1&nbsp;nJ to 1.55&nbsp;&mu;J.
+That level of pulse energy easily allows the operation with a high pulse repetition rate of e.g. 100&nbsp;kHz, which leads to an average output power of only 155&nbsp;mW.
+The output pulses in the time domain are shown in Figure&nbsp;6:</p>
+<figure>
+<img src="img/fiberpower_cpa5.png" alt="pulses after the amplifier fiber in the time domain">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Pulses after the amplifier fiber in the time domain.
+</figcaption>
+</figure>
+<p>The temporal shape has been somewhat distorted, as the influence of fiber nonlinearities is not negligible despite the substantial pulse stretching; the peak power becomes 40&nbsp;kW at the output.
+The spectrum is also further distorted, although the spectral phase remains close to parabolic:</p>
+<figure>
+<img src="img/fiberpower_cpa6.png" alt="pulses after the amplifier fiber in the frequency domain">
+<figcaption><span class="start">Figure&nbsp;7:</span> 
+Pulses after the amplifier fiber in the frequency domain.
+</figcaption>
+</figure>
+<p>Finally, we can employ a dispersive compressor with numerically optimized second- and third-order dispersion.
+That temporally compresses the pulses to 285&nbsp;fs.
+The peak power rises up to 4.8&nbsp;MW, if energy losses in the compressor are neglected.</p>
+<figure>
+<img src="img/fiberpower_cpa7.png" alt="pulses after the compressor in the time domain">
+<figcaption><span class="start">Figure&nbsp;8:</span> 
+Pulses after the compressor in the time domain.
+</figcaption>
+</figure>
+<p>The spectral phase of the compressed pulses is quite flat, except in the wings:</p>
+<figure>
+<img src="img/fiberpower_cpa8.png" alt="pulses after the compressor in the frequency domain">
+<figcaption><span class="start">Figure&nbsp;9:</span> 
+Pulses after the compressor in the frequency domain.
+</figcaption>
+</figure>
+</div>
+<h3 class="togglediv">Limits for Fiber CPA Systems</h3>
+<div>
+<p>One sees that for higher pulse energies one should use stronger pulse stretching in order to limit the peak power in the fiber.
+The longest practical stretched pulse durations (with a bulky pair of diffracting gratings for compression) are a couple of nanoseconds, which in combination with the self-focusing limit for the peak power (a few megawatts) leads to maximum pulse energies of the order of 10&nbsp;mJ.</p>
+<p><a href="volume_bragg_gratings.html" title="volume Bragg gratings: Bragg gratings written into some bulk material">Volume Bragg gratings</a> allow for much more compact setups, but only allow for stretched pulse durations in the picosecond regime.
+Therefore, the possible pulse energies (combined with reasonable pulse quality) are accordingly lower.</p>
+<p>As one will not want to employ a stronger pulse stretching than really necessary, substantial nonlinear effects can still occur in the fiber.
+Ideally, the pulse compressor should be optimized such that the compression works well despite some nonlinear effects.</p>
+</div>
+<h3 class="togglediv">Conclusions</h3>
+<div>
+<p>Nonlinear effects are the main limiting factor for the performance of ultrafast amplifiers.
+There are ways to mitigate such effects &ndash; we have discussed two techniques, namely parabolic pulse amplification and <a href="chirped_pulse_amplification.html" title="chirped-pulse amplification: a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplification</a>.
+Still, severe limitations remain.
+For higher pulse energies, bulk amplifiers are superior.</p>
+<p>Note, however, that ultrafast fiber amplifiers can be made to operate with very high average output powers, if one limits the pulse energies by using very high pulse repetition rates.
+In this regime, they are often superior over bulk amplifiers, as they can offer high output powers with no substantial thermal effects, and with an often higher power conversion efficiency.</p>
+<p>Obviously, numerical simulations are indispensable for the design of ultrafast amplifiers, as one needs to check various aspects, such as higher-order dispersion, nonlinear distortions, the limited gain bandwidth, gain saturation and ASE.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers9.html">Part 9: Noise of Fiber Amplifiers</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers8.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:54 GMT -->
+</html>

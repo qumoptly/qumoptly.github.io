@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics7.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:30:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Passive Fiber Optics&rdquo;: propagation losses in optical fibers, attenuation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on passive fiber optics. Part 7 discusses propagation losses.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber optics, passive optical fibers, propagation losses, attenuation">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="passive_fiber_optics7.html"; cat="C"; shownbanner=""; ref="bend_losses.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 7 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>7</span>
+<p>1:&nbsp;<a href="passive_fiber_optics1.html">Guiding light in a glass fiber</a>, 2:&nbsp;<a href="passive_fiber_optics2.html">Fiber modes</a>, 3:&nbsp;<a href="passive_fiber_optics3.html">Single-mode fibers</a>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<a href="passive_fiber_optics5.html">Fiber ends</a>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<span style="text-decoration:underline;">Propagation losses</span>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<a href="passive_fiber_optics9.html">Polarization issues</a>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<a href="passive_fiber_optics11.html">Nonlinearities of fibers</a>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 7: Propagation Losses in Optical Fibers</h2>
+<div>
+<p>When light propagates as a guided wave in a <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber core</a>, it experiences some power losses.
+These are particularly important for long-haul data transmission through fiber-optic telecom cables.</p>
+<p>Usually, the propagation losses are approximately constant on the way, with some attenuation coefficient <span class="eqn_il"><span class="greek">&alpha;</span></span>.
+The power then simply decays in proportion to <span class="eqn_il">exp(&minus;<span class="greek">&alpha;</span>&thinsp;<i>z</i>)</span>, where <span class="eqn_il"><i>z</i></span> is the propagation distance.
+The losses are often specified in dB/km; that value is &asymp;4.343 times the power attenuation coefficient in 1/km.
+Of course, the losses are dependent on the optical wavelength.</p>
+<h3 class="togglediv">Origins of Propagation Losses</h3>
+<div>
+<p>Propagation losses in fibers can have various origins:</p>
+<ul>
+<li>The material may have some intrinsic absorption.
+For example, <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fibers</a> increasingly absorb light when the wavelength gets longer than &asymp;1.7&nbsp;&mu;m.
+Therefore, they are rarely used for wavelengths longer than 2&nbsp;&mu;m.<br>
+Additional isolated absorption peaks can result from certain impurities.
+For example, silica fibers exhibit increased absorption losses around 1.39&nbsp;&mu;m and 1.24&nbsp;&mu;m if the core material is not water-free.</li>
+<li>At short wavelengths, <a href="rayleigh_scattering.html" title="Rayleigh scattering: scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a> in the glass becomes more and more important; the contribution of Rayleigh scattering to the attenuation coefficient scales with the inverse fourth power of the wavelength.
+Note that the core glass, being an amorphous material, is microscopically never fully homogeneous; there are &ldquo;frozen-in&rdquo; density fluctuations which are unavoidable even with most modern <a href="fiber_fabrication.html" title="fiber fabrication: the fabrication of optical fibers">fiber fabrication</a> technology.</li>
+<li>There is also some inelastic scattering &ndash; spontaneous <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman scattering</a> and <a href="brillouin_scattering.html" title="Brillouin scattering: a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a>.
+These effects are measurable via the scattered (and frequency-shifted) light, but normally do not contribute substantially to propagation losses.
+However, Raman and Brillouin scattering can lead to huge losses (by transfer of energy to other wavelengths) at high optical intensities, where <em>stimulated</em> scattering is possible.
+This is a nonlinear effect, and is treated in <a href="passive_fiber_optics11.html">part 11</a>.</li>
+<li>Increased scattering losses can result from irregularities of the core/cladding interface.
+This problem is more severe for fibers with large <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> contrast (high <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>).
+Also, a large index contrast often means higher germania doping of the core, which makes it tentatively less homogeneous.
+Therefore, low-loss single-mode fibers for long-haul data transmission through telecom <a href="fiber_cables.html" title="fiber cables: cables containing one or several optical fibers">fiber cables</a> are made with relatively small NA, even though a higher NA would provide a more robust guidance.</li>
+<li>Further, there can be <a href="bend_losses.html" title="bend losses: propagation losses in an optical fiber (or other waveguide) caused by bending">bend losses</a> (see below).</li>
+</ul>
+<p>Intrinsic losses are usually quite uniform over the length of a fiber.
+For additional losses, that is not necessarily the case; for example, irregularities of the core/cladding interface or chemical impurities may not be smoothly distributed.</p>
+<p>Figure&nbsp;1 shows the intrinsic unavoidable propagation losses of <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fibers</a>.
+There is a loss minimum of &asymp;&thinsp;0.2&nbsp;dB/km around 1.55&nbsp;&mu;m (which happens to be the wavelength region where <a href="erbium_doped_fiber_amplifiers.html" title="erbium-doped fiber amplifiers: fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a> work well).
+Some <a href="telecom_fibers.html" title="telecom fibers: optical fibers for use in optical fiber communications">telecom fibers</a> as developed for long-haul <a href="optical_fiber_communications.html" title="optical fiber communications: the technology of transmitting information through optical fibers">optical fiber communications</a> nearly reach that low loss level, which requires a very pure glass material.
+If the fiber contains hydroxyl (OH) ions, additional peaks at 1.39&nbsp;&mu;m and 1.24&nbsp;&mu;m can be seen in the loss spectrum.</p>
+<figure>
+<img src="img/silica_losses.png" alt="intrinsic losses of silica">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Intrinsic losses of silica. At long wavelengths, infrared absorption related to vibrational resonances are dominating. At shorter wavelengths, <a href="rayleigh_scattering.html" title="Rayleigh scattering: scattering of light at scattering centers which are much smaller than the wavelength">Rayleigh scattering</a> at the unavoidable density fluctuations of the glass is more important.
+</figcaption>
+</figure>
+<p>If the fiber losses are only 0.2&nbsp;dB/km, this means that even after 100&nbsp;km of propagation distance one still has 1&#37; of the original optical power.
+That is often sufficient for reliable detection of data signals, even at very high bit rates.</p>
+<p>Multimode fibers often have somewhat higher propagation losses, because they often have a higher numerical aperture.</p>
+</div>
+<h3 class="togglediv">Bend Losses</h3>
+<div>
+<p><a href="bend_losses.html" title="bend losses: propagation losses in an optical fiber (or other waveguide) caused by bending">Bend losses</a> are propagation losses which arise from strong bending of a fiber, for example.
+Typically, such losses are negligibly small under normal conditions, but steeply increase once a certain <em>critical bend radius</em> is reached.
+That critical radius is rather small for fibers with robust guiding characteristics (high <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>) &ndash; it can be as small as a few millimeters.
+However, for <a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction">single-mode fibers</a> with large effective mode areas (<a href="large_mode_area_fibers.html" title="large mode area fibers: optical fibers with relatively large mode areas and a single transverse mode or only a few modes"><em>large mode area fibers</em></a> having a very low <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>), it can be much larger &ndash; often tens of centimeters.
+Such fibers then have to be kept quite straight during use.</p>
+<aside class="callout red">The <a href="fiberpower.html"><b>RP Fiber Power</b></a> software allows one to simulate light propagation in fibers with arbitrary evolution of the bend radius.</aside>
+<p>For the calculation of bend losses, there are certain analytical formulas, based on simplified models, which may or may not accurately reflect reality.
+Numerical beam propagation is often the method of choice; it does not require stronger simplifications and tells us in detail what happens to the light.</p>
+<p>As an example, consider a few-mode fiber with a core radius of 20&nbsp;&mu;m and a low <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of 0.05.
+As a test, we arrange the fiber such that the bending becomes tighter and tighter along the length of the fiber: the inverse radius of curvature increases linearly with the propagation distance.
+The launched light is entirely in the fundamental mode.</p>
+<figure>
+<img src="img/fiberpower_bend_loss1.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Amplitude distribution along the fiber for increasing bending.
+The beam propagation was numerically simulated with the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows the simulated amplitude distribution in the y-z plane.
+One can see that the mode gets more and shifted to one side (the outer side of the bending curve), gets substantially smaller, and finally loses more and light to the cladding.
+In the middle (<span class="eqn_il"><i>z</i></span> = 100&nbsp;mm), the bend radius has reached a value of 50&nbsp;mm; that is about the critical bend radius.</p>
+<p>For the LP<sub>11</sub> mode, attenuation through bend losses gets more serious, as shown in Figure&nbsp;3.
+Here, the bend losses set in earlier, and basically all power is lost already after 120&nbsp;mm.</p>
+<figure>
+<img src="img/fiberpower_bend_loss2.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Same as Figure&nbsp;2, but for the LP<sub>11</sub> mode.
+</figcaption>
+</figure>
+<p>Typically, the critical bend radius is significantly larger for higher-order modes.
+(That is sometimes exploited for filtering out higher-order modes.)
+Figure&nbsp;4 shows how the numerically simulated bend losses of all modes depend on the bend radius:</p>
+<figure>
+<img src="img/fiberpower_bend_loss3.png" alt="amplitude distribution along the fiber">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Bend losses as a function of the bend radius for different guide modes of the fiber.
+</figcaption>
+</figure>
+<p>Go to <a href="passive_fiber_optics8.html">Part 8: Fiber Couplers and Splitters</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics7.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:30:00 GMT -->
+</html>

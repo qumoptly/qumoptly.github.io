@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/frequency_doubling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:58:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - frequency doubling, frequency-doubled laser, second-harmonic generation, SHG, design, physical mechanism, pulses</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Frequency doubling (or second-harmonic generation) is the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="frequency doubling, frequency-doubled laser, second-harmonic generation, SHG, design, physical mechanism, pulses">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="frequency_doubling.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_frequency_doubling.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Frequency Doubling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_frequency_doubling1fbf.html?s=vbox" class="bg_bgheading">Suppliers for nonlinear crystals and related equipment for frequency doubling</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_frequency_doubling1fbf.html?s=vbox" class="redlink"><b>24 suppliers for nonlinear crystals and related equipment for frequency doubling</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/products/tunable-diode-lasers/frequency-converted-lasers/ta-shg-pro/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink"><img src="bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/nonlinear-and-laser-crystals/nonlinear-crystals/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink"><img src="bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="http://hcphotonics.com/ppln-chips.html" data-supplier="HC Photonics" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink"><img src="bg/logos/hc_photonics.png" alt="HC Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.covesion.com/products/magnesium-doped-ppln-mgoppln-crystals/mgo-ppln-for-second-harmonic-generation.html" data-supplier="Covesion" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink"><img src="bg/logos/covesion.png" alt="Covesion" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_frequency_doubling1fbf.html?s=vbox">List of suppliers for<br>frequency doubling</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="advicebox">
+<p>Ask <a href="index-2.html">RP Photonics</a> for an optimized design of a frequency doubler, caring about all details. <a href="paschotta.html">Dr. Paschotta</a> has extensive experience with nonlinear frequency conversion and a wide range of <a href="software.html">software</a> e.g. for calculating design details.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p>Acronym: SHG = second-harmonic generation</p>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Frequenzverdopplung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<p><a href="encyclopedia_citecaff.html?article=frequency%20doubling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>Crystal materials lacking inversion symmetry can exhibit a so-called <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> nonlinearity (&rarr;&nbsp;<a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type"><em>nonlinear crystal materials</em></a>).
+This can give rise to the phenomenon of frequency doubling [1], where an input (pump) wave generates another wave with twice the <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequency</a> (i.e. half the vacuum <a href="wavelength.html" title="wavelength: the spatial period of a plane wave">wavelength</a>) in the medium.
+This process is also called <em>second-harmonic generation</em>.
+In most cases, the pump wave is delivered in the form of a <a href="laser_beams.html" title="laser beams: light beams propagating dominantly in one direction">laser beam</a>, and the frequency-doubled (second-harmonic) wave is generated in the form of a beam propagating in a similar direction.</p>
+<figure>
+<img src="img/frequency_doubling.png" alt="frequency doubling">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A typical configuration for frequency doubling: an <a href="infrared_light.html" title="infrared light: invisible light with wavelengths roughly between 750&thinsp;&thinsp;nm and 1&thinsp;&thinsp;mm">infrared</a> input beam at 1064&nbsp;nm generates a green 532-nm wave during its path through a nonlinear crystal.
+</figcaption>
+</figure>
+<p>The article on <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a> lists a number of crystal materials, many of which are popular for frequency doubling.
+Examples are lithium niobate (LiNbO<sub>3</sub>), potassium titanyl phosphate (KTP = KTiOPO<sub>4</sub>), and lithium triborate (LBO = LiB<sub>3</sub>O<sub>5</sub>).</p>
+<h2 class="togglediv">The Physical Mechanism</h2>
+<div>
+<p>The physical mechanism behind frequency doubling can be understood as follows.
+Due to the <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> nonlinearity, the fundamental (pump) wave generates a <a href="nonlinear_polarization.html" title="nonlinear polarization: the part of the light-induced electric polarization which depends nonlinearly on the electric field of the light">nonlinear polarization</a> wave which oscillates with twice the fundamental frequency.
+According to Maxwell's equations, this nonlinear <a href="polarization_waves.html" title="polarization waves: patterns of electric (or magnetic) polarization of a medium which are usually caused by light waves">polarization wave</a> radiates an electromagnetic field with this doubled frequency.
+Due to <a href="phase_matching.html" title="phase matching: a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matching</a> issues (see below), the generated second-harmonic field propagates dominantly in the direction of the nonlinear polarization wave.
+The latter also interacts with the fundamental wave, so that the pump wave can be attenuated (<em>pump depletion</em>) when the second-harmonic intensity develops: energy is transferred from the pump wave to the second-harmonic wave.</p>
+<p>For low pump intensities, the second-harmonic conversion efficiency is small and grows linearly with increasing pump intensity, so that the <a href="optical_intensity.html" title="optical intensity: optical power per unit area">intensity</a> of the second-harmonic (frequency-doubled) wave grows with the square of the pump intensity:</p>
+<div class="eqn"><img src="eqn/shg_p.gif" width="64" height="26" alt="SHG efficiency"></div>
+<p>where the factor <span class="eqn_il"><span class="greek">&gamma;</span></span> depends on many details such as the <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>, the length of the crystal and many crystal properties including the effective nonlinearity.</p>
+<p>Once pump depletion becomes significant, the further rise of second-harmonic power becomes slower.
+Of course, the converted power <span class="eqn_il"><i>P</i><sub>2</sub></span> cannot become larger than the input power <span class="eqn_il"><i>P</i><sub>1</sub></span>.</p>
+<p>Frequency doubling is a phase-sensitive process which usually requires <a href="phase_matching.html" title="phase matching: a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a> to be efficient.
+This means that the second-harmonic field contributions generated at different locations in the nonlinear crystal coherently add up at the crystal's exit face.
+With proper phase matching and a pump beam with high intensity, high <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>, and moderate optical <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>, achievable power conversion efficiencies often exceed 50&#37;, in extreme cases even 80&#37; [9,&thinsp;11,&thinsp;18].
+Even values of the order of 90&#37; are possible with <a href="flat_top_beams.html" title="flat-top beams: a light beam with a flat intensity profile">flat-top</a> spatial and temporal profiles.
+On the other hand, the conversion efficiencies are typically extremely small when phase matching does not occur.
+In such cases, the energy transferred by the <span class="eqn_il"><span class="greek">&chi;</span><sup>(2)</sup></span> nonlinearity quickly oscillates back and forth between pump and second-harmonic wave, rather than consistently going in a certain direction.
+The lack of phase matching is also the reason why second-harmonic generation is usually not accompanied by other processes such as <a href="sum_and_difference_frequency_generation.html" title="sum and difference frequency generation: nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a> of the pump and second-harmonic wave, or second-harmonic generation of the second-harmonic wave itself: phase matching for second-harmonic generation usually does not imply phase matching for the other mentioned processes.</p>
+</div>
+<h2 class="togglediv">Nonlinear Frequency Conversion of Laser Pulses</h2>
+<div>
+<p>High conversion efficiencies can be achieved even with moderate or low average pump powers when the pump light is delivered in the form of <a href="pulses.html" title="pulses: flashes of light">pulses</a>, as e.g. generated with a <a href="mode_locking.html" title="mode locking: a group of techniques for generating ultrashort pulses in lasers">mode-locked</a> or <a href="q_switching.html" title="Q switching: a method for obtaining energetic pulses from lasers by modulating the intracavity losses">Q-switched</a> laser.
+This is simply because for a given average power a pulsed laser exhibits higher peak powers, which lead to a stronger nonlinear interaction.
+Note, however, that for frequency conversion of <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a>, the effective interaction length and hence the conversion efficiency can be limited by <a href="group_velocity_mismatch.html" title="group velocity mismatch: the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a>, which causes a <a href="temporal_walk_off.html" title="temporal walk-off: the loss of temporal overlap of pulses, caused by group velocity mismatch">temporal walk-off</a>.
+This effect is not relevant for nanosecond pulses from <a href="q_switched_lasers.html" title="Q-switched lasers: lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>, but in that case there can still be some change of <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">pulse duration</a>; often, the frequency-doubled pulses are somewhat shorter than the pump pulses.</p>
+</div>
+<h2 class="togglediv">Intracavity and Resonant Frequency Conversion</h2>
+<div>
+<p>Efficient frequency doubling at moderate powers (e.g. in <a href="continuous_wave_operation.html" title="continuous-wave operation: operation mode of a laser with continuous light emission">continuous-wave operation</a>) is often accomplished with <a href="intracavity_frequency_doubling.html" title="intracavity frequency doubling: frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a>, i.e., by placing the frequency doubler crystal inside a <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonator</a>, thus exploiting the high intracavity intensity.
+Yet another technique is to use a resonant <a href="enhancement_cavities.html" title="enhancement cavities: optical cavities for exploiting the resonant enhancement of the power of circulating light">enhancement cavity</a> external to the laser (&rarr;&nbsp;<a href="resonant_frequency_doubling.html" title="resonant frequency doubling: frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity"><em>resonant frequency doubling</em></a>).
+This is possible for <a href="single_frequency_operation.html" title="single-frequency operation: an operation mode of a laser where only a single resonator mode acquires a significant power">single-frequency operation</a> and also with <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, but usually requires active stabilization of one of the involved <a href="optical_resonators.html" title="optical resonators: arrangements of optical components which allow a beam of light to circulate">resonators</a>.</p>
+</div>
+<h2 class="togglediv">Second-harmonic Generation in Waveguides</h2>
+<div>
+<p>Nonlinear <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguides</a> present a way to achieve efficiency frequency doubling at fairly low power levels, i.e., without resorting either to short pulses or to resonant enhancement.
+They key is that a waveguide makes it possible to maintain a small mode area (and thus high intensities for a given power level) over a greater length than would be possible in a bulk medium, where diffraction would limit the interaction length to something of the order of the <a href="rayleigh_length.html" title="Rayleigh length: the distance from a beam waist where the mode radius increased by a factor square root of 2">Rayleigh length</a>.</p>
+<p>In particular, high-quality channel waveguides can be fabricated with different techniques in lithium niobate (LiNbO<sub>3</sub>) and lithium tantalate (LiTaO<sub>3</sub>), which are <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a> with particularly high nonlinearity.
+The most important techniques are ion exchange or proton exchange (exposing a small stripe on the crystal surface to a liquid, e.g. benzoic acid) and titanium or zinc indiffusion (by strongly heating a crystal with a narrow stripe of titanium or zinc metal deposited on the surface with lithographic techniques).
+(A variation is vapor phase indiffusion.)
+Such waveguides can be several centimeters long and can exhibit propagation losses well below 1&nbsp;dB/cm and second-harmonic conversion efficiencies of more than 100&#37;/W in a 1&nbsp;cm long device.</p>
+<p>Unfortunately, frequency doubling in waveguides involves various disadvantages, which limit its usefulness in many cases:</p>
+<ul>
+<li>Waveguides requires special fabrication techniques, which are not well established for all materials.
+(Particularly well developed are waveguides in LiNbO<sub>3</sub> and LiTaO<sub>3</sub>.)</li>
+<li>It is necessary to efficiently couple the pump light into the waveguide.
+This introduces coupling losses and tight alignment tolerances.</li>
+<li>Angle tuning is not possible with a waveguide.</li>
+<li>Waveguides typically exhibit higher propagation losses.</li>
+</ul>
+<p>For these reasons, the use of waveguides for frequency doubling is not very widespread.</p>
+</div>
+<h2 class="togglediv">Generating Short Wavelengths</h2>
+<div>
+<p>Frequency doubling is a frequently used technique for generating light with short wavelengths:</p>
+<ul>
+<li><a href="green_lasers.html" title="green lasers: lasers emitting in the green spectral region">Green</a> light with wavelength 532&nbsp;nm can be generated by frequency-doubling the output of a <a href="neodymium_doped_gain_media.html" title="neodymium-doped gain media: laser gain media containing laser-active neodymium ions">neodymium</a>- or <a href="ytterbium_doped_gain_media.html" title="ytterbium-doped gain media: laser gain media containing laser-active ytterbium ions">ytterbium</a>-based 1064-nm laser (&rarr;&nbsp;<a href="green_lasers.html" title="green lasers: lasers emitting in the green spectral region"><em>green lasers</em></a>).
+Green <a href="laser_pointers.html" title="laser pointers: devices used for pointing at items with laser beams">laser pointers</a> are also usually based on this approach.</li>
+<li>Many <a href="blue_lasers.html" title="blue lasers: lasers emitting blue light">blue laser systems</a> are based on a frequency-doubled laser in the 0.9-&mu;m region (e.g. 914&nbsp;nm from <a href="vanadate_lasers.html" title="vanadate lasers: lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub></a>).</li>
+<li>By further frequency doubling (or by <a href="sum_and_difference_frequency_generation.html" title="sum and difference frequency generation: nonlinear processes generating beams with the sum or difference of the frequencies of the input beams">sum frequency generation</a>) still shorter wavelengths in the <a href="ultraviolet_light.html" title="ultraviolet light: invisible light with wavelengths shorter than &asymp;&thinsp;400&thinsp;&thinsp;nm">ultraviolet</a> region (&rarr;&nbsp;<a href="ultraviolet_lasers.html" title="ultraviolet lasers: lasers (or other laser-based light sources) generating ultraviolet light"><em>ultraviolet lasers</em></a>) become accessible.
+The main challenges in this spectral region are the limited transparency range and (sometimes) limited durability of <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, and the strong <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> (sometimes preventing <a href="phase_matching.html" title="phase matching: a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a> or at least a large <a href="phase_matching_bandwidth.html" title="phase-matching bandwidth: the width of an optical frequency range in which some process (e.g. a nonlinear interaction) can be efficient due to more or less precise phase matching">phase-matching bandwidth</a>).</li>
+</ul>
+<p>Frequency-doubled neodymium-based lasers can compete with large-sized <a href="argon_ion_lasers.html" title="argon ion lasers: gas lasers based on light amplification in ionized argon in a gas discharge">argon ion lasers</a> in terms of output power and <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>, whereas having a far higher <a href="wall_plug_efficiency.html" title="wall-plug efficiency: total electrical-to-optical power efficiency of a laser system">power efficiency</a> and a longer lifetime.</p>
+<p>For frequency doubling of <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a>, high single-pass conversion efficiencies are difficult to obtain at short wavelengths, because strong <a href="group_velocity_mismatch.html" title="group velocity mismatch: the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> limits the interaction length, while <a href="laser_induced_damage.html" title="laser-induced damage: damage of optical components induced by laser radiation">optical damage</a> limits the applicable optical intensities.</p>
+</div>
+<h2 class="togglediv">Design of a Frequency Doubler</h2>
+<div>
+<p>For the design of a frequency doubler, a number of non-trivial aspects have to be considered:</p>
+<ul>
+<li>What <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal material</a> to use? Where to get it from with suitable <a href="anti_reflection_coatings.html" title="anti-reflection coatings: optical thin-film coatings for reducing reflections from surfaces">anti-reflection coatings</a>? How much protection will it need? Will it be sufficiently durable?</li>
+<li>Use <a href="noncritical_phase_matching.html" title="noncritical phase matching: a technique of phase matching which does not require a critical angular adjustment">noncritical</a> or <a href="critical_phase_matching.html" title="critical phase matching: phase matching of a nonlinear interaction by adjustment of a propagation direction">critical phase matching</a>?</li>
+<li>What is the optimum crystal length and pump beam radius, taking into account factors such as <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">beam divergence</a>, <a href="spatial_walk_off.html" title="spatial walk-off: the phenomenon that the intensity distribution of a beam in an anisotropic crystal drifts away from the direction of the wave vector">spatial walk-off</a>, <a href="group_velocity_mismatch.html" title="group velocity mismatch: the phenomenon that pulses become temporally separated in a medium due to different group velocities, or (quantitatively) the difference of inverse group velocities">group velocity mismatch</a> and <a href="laser_induced_damage.html" title="laser-induced damage: damage of optical components induced by laser radiation">damage threshold</a> (see the <a href="spotlight_2007_09_21.html">Spotlight article of 2007-09-21</a>)?</li>
+<li>For noncritical phase matching: how good does the spatial homogeneity of the crystal temperature in the oven have to be? Can the coatings withstand the temperature cycles?</li>
+<li>For critical phase matching: how asymmetric will the second-harmonic beam profile be? What is the expected <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>? Should one use <a href="spatial_walk_off.html" title="spatial walk-off: the phenomenon that the intensity distribution of a beam in an anisotropic crystal drifts away from the direction of the wave vector">walk-off</a> compensation?</li>
+<li>In the case of a double pass through a crystal: what is the influence of relative phase changes of the fundamental and second-harmonic waves between the two passes?</li>
+<li>If <a href="resonant_frequency_doubling.html" title="resonant frequency doubling: frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity">resonant frequency doubling</a> is considered: how to design the enhancement resonator for optimum performance and minimum sensitivity?</li>
+</ul>
+<p>For finding the best configuration without costly and time-consuming iterations in the laboratory, it is recommended to carry out a careful design study as the first step.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_frequency_doubling1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 24 suppliers for nonlinear crystals and related equipment for frequency doubling. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://hcphotonics.com/" data-supplier="HC Photonics" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink" title="Visit the website of HC Photonics"><img src="bg/logos/hc_photonics.png" alt="HC Photonics" class="supplierlogo"></a><h3><a href="bg/profiles/hc_photonics.html" title="See the profile of HC Photonics">HC Photonics</a></h3><p>Stock periodic poled MgO:LN (PPMgO:LN) crystals <a href="http://hcphotonics.com/ppln-chips.html" data-supplier="HC Photonics" data-keyword="frequency doubling" rel="nofollow" class="externallink bg"> and modules <a href="http://hcphotonics.com/ppln-mixers.html" data-supplier="HC Photonics" data-keyword="frequency doubling" rel="nofollow" class="externallink bg"> are provided for frequency doubling/SHG application from 976&nbsp;nm to 2300&nbsp;nm.</p><p>PPMgO:LN waveguide for extreme efficient SHG application is also available now!</p><p>See us at <a href="https://www.world-of-photonics-china.com/" rel="nofollow" class="externallink">Laser World of Photonics China 2019 in Shanghai, March 20&ndash;22</a> (booth W4.4742)!</p>
+</aside>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><a href="https://www.toptica.com/products/tunable-diode-lasers/frequency-converted-lasers/ta-shg-pro/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="bg/products/toptica_photonics/frequency_doubling.jpg" alt="frequency doubling" class="product"></a><h3><a href="bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>TOPTICA provides <a href="https://www.toptica.com/products/tunable-diode-lasers/frequency-converted-lasers/ta-shg-pro/" data-supplier="TOPTICA Photonics" data-keyword="frequency doubling" rel="nofollow" class="externallink bg">frequency-doubled continuous-wave diode and fiber lasers</a>. The wavelength range covers 330&nbsp;nm &ndash; 780&nbsp;nm with up to 20&nbsp;nm of tuning. In addition, stand-alone resonant frequency-doubling units are available.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.covesion.com/" data-supplier="Covesion" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink" title="Visit the website of Covesion"><img src="bg/logos/covesion.png" alt="Covesion" class="supplierlogo"></a><a href="https://www.covesion.com/products/magnesium-doped-ppln-mgoppln-crystals/mgo-ppln-for-second-harmonic-generation.html" data-supplier="Covesion" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink" title="Visit the website of Covesion"><img src="bg/products/covesion/frequency_doubling.jpg" alt="frequency doubling" class="product"></a><h3><a href="bg/profiles/covesion.html" title="See the profile of Covesion">Covesion</a></h3><p><a href="https://www.covesion.com/products/magnesium-doped-ppln-mgoppln-crystals/mgo-ppln-for-second-harmonic-generation.html" data-supplier="Covesion" data-keyword="frequency doubling" rel="nofollow" class="externallink bg">Frequency doubling/SHG crystals:</a> stock MgO:PPLN SHG crystals are available for a wide range of common pump laser wavelengths from 976&nbsp;nm to 2100&nbsp;nm.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.eksmaoptics.com/" data-supplier="EKSMA OPTICS" data-location="product-enc" data-keyword="frequency doubling" rel="nofollow" class="bg externallink" title="Visit the website of EKSMA OPTICS"><img src="bg/logos/eksma_optics.png" alt="EKSMA OPTICS" class="supplierlogo"></a><h3><a href="bg/profiles/eksma_optics.html" title="See the profile of EKSMA OPTICS">EKSMA OPTICS</a></h3><p><a href="https://www.eksmaoptics.com/nonlinear-and-laser-crystals/nonlinear-crystals/" data-supplier="EKSMA OPTICS" data-keyword="frequency doubling" rel="nofollow" class="externallink bg">Nonlinear crystals</a> for second harmonic generation include a wide choice of BBO, LBO, DKDP, KDP, KTP, crystals for quick delivery. We also offer AgGaS<sub>2</sub>, AgGaSe<sub>2</sub>, GaSe, ZnGeP<sub>2</sub>, LilO<sub>3</sub>, KTA crystals for SHG at IR and mid-IR ranges. Crystals can be also cut and optimized to your particular laser specifications.</p><p>See us at <a href="http://www.photonics-expo.ru/en/" rel="nofollow" class="externallink">Photonics. World of Lasers and Optics 2019 in Moscow, March 4&ndash;7</a> (booth 73A23) and <a href="https://www.world-of-photonics-china.com/" rel="nofollow" class="externallink">Laser World of Photonics China 2019 in Shanghai, March 20&ndash;22</a> (booth  W3.3610)!</p>
+</aside>
+</div>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">P. A. Franken <i>et al.</i>, &ldquo;Generation of optical harmonics&rdquo;, <a href="http://prola.aps.org/abstract/PRL/v7/i4/p118_1" rel="nofollow">Phys. Rev. Lett. 7 (4), 118 (1961)</a> (first report of second-harmonic generation, not yet phase-matched)</td></tr>
+<tr><td class="refno">[2]</td><td class="refs">A. Savage and R. C. Miller, &ldquo;Measurements of second harmonic generation of the ruby laser line in piezoelectric crystals&rdquo;, <a href="https://www.osapublishing.org/ao/abstract.cfm?uri=ao-1-5-661" rel="nofollow">Appl. Opt. 1 (5), 661 (1962)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">A. Ashkin, G. D. Boyd, and J. M. Dziedzic, &ldquo;Resonant optical second harmonic generation and mixing&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1074007" rel="nofollow">IEEE J. Quantum Electron. 2 (6), 109 (1966)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">W. J. Kozlovsky <i>et al.</i>, &ldquo;Efficient second harmonic generation of a diode-laser pumped cw Nd:YAG laser using monolithic MgO:LiNbO<sub>3</sub> external resonant cavities&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=211" rel="nofollow">IEEE J. Quantum Electron. 24, 913 (1988)</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">G. D. Boyd and D. A. Kleinman, &ldquo;Parametric interaction of focused Gaussian light beams&rdquo;, <a href="http://jap.aip.org/resource/1/japiau/v39/i8/p3597_s1" rel="nofollow">J. Appl. Phys. 39 (8), 3597 (1968)</a> (a seminal work with a comprehensive quantitative discussion)</td></tr>
+<tr><td class="refno">[6]</td><td class="refs">J. Reintjes, &ldquo;Phase matching limitations of high efficiency second harmonic generation&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1072294" rel="nofollow">IEEE J. Quantum Electron. 20 (10), 1178 (1984)</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">K. Kato, &ldquo;Second-harmonic generation to 2048&thinsp;&Aring; in &beta;-BaB<sub>2</sub>O<sub>4</sub>&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1073097" rel="nofollow">IEEE J. Quantum Electron. 22 (7), 1013 (1986)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">Y. B. Band <i>et al.</i>, &ldquo;Spectrum of second-harmonic generation for multimode fields&rdquo;, <a href="http://prola.aps.org/abstract/PRA/v42/i3/p1515_1" rel="nofollow">Phys. Rev. A 42 (3), 1515 (1990)</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">Z. Y. Ou <i>et al.</i>, &ldquo;85&#37; efficiency for cw frequency doubling from 1.08 to 0.54&nbsp;&mu;m&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-17-9-640" rel="nofollow">Opt. Lett. 17 (9), 640 (1992)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Nonlinear mode coupling in doubly-resonant frequency doublers&rdquo;, <a href="http://link.springer.com/article/10.1007%2FBF01082345" rel="nofollow">Appl. Phys. B 58, 117 (1994)</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;82&#37; efficient continuous-wave frequency doubling of 1.06&nbsp;&mu;m with a monolithic MgO:LiNbO<sub>3</sub> resonator&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-19-17-1325" rel="nofollow">Opt. Lett. 19 (17), 1325 (1994)</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">V. Pruneri <i>et al.</i>, &ldquo;49&nbsp;mW of cw blue light generated by first-order quasi-phase-matched frequency doubling of a diode-pumped 946-nm Nd:YAG laser&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-20-23-2375" rel="nofollow">Opt. Lett. 20 (23), 2375 (1995)</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">R. Wynands <i>et al.</i>, &ldquo;How accurate is optical second-harmonic generation?&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-20-10-1095" rel="nofollow">Opt. Lett. 20 (10), 1095 (1995)</a></td></tr>
+<tr><td class="refno">[14]</td><td class="refs">J.-P. Meyn <i>et al.</i>, &ldquo;Tunable ultraviolet radiation by second-harmonic generation in periodically poled lithium tantalate&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-22-16-1214" rel="nofollow">Opt. Lett. 22 (16), 1214 (1997)</a></td></tr>
+<tr><td class="refno">[15]</td><td class="refs">J. Webjorn <i>et al.</i>, &ldquo;Visible laser sources based on frequency doubling in nonlinear waveguides&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=631263" rel="nofollow">IEEE J. Quantum Electron. 33 (10), 1673 (1997)</a></td></tr>
+<tr><td class="refno">[16]</td><td class="refs">W. J. Alford and A. V. Smith, &ldquo;Frequency-doubling broadband light in multiple crystals&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-18-4-515" rel="nofollow">J. Opt. Soc. Am. B 18 (4), 515 (2001)</a></td></tr>
+<tr><td class="refno">[17]</td><td class="refs">Q. H. Xue <i>et al.</i>, &ldquo;High-power efficient diode-pumped Nd:YVO<sub>4</sub>/LiB<sub>3</sub>O<sub>5</sub> 457&nbsp;nm blue laser with 4.6&nbsp;W of output power&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-31-8-1070" rel="nofollow">Opt. Lett. 31 (8), 1070 (2006)</a></td></tr>
+<tr><td class="refno"><sup>&nbsp;</sup>[18]</td><td class="refs">T. Südmeyer <i>et al.</i>, &ldquo;Efficient 2<sup>nd</sup> and 4<sup>th</sup> harmonic generation of a single-frequency, continuous-wave fiber amplifier&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-16-3-1546" rel="nofollow">Opt. Express 16 (3), 1546 (2008)</a></td></tr>
+<tr><td class="refno">[19]</td><td class="refs">A. Canagasabey <i>et al.</i>, &ldquo;High-average-power second-harmonic generation from periodically poled silica fibers&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-34-16-2483" rel="nofollow">Opt. Lett. 34 (16), 2483 (2009)</a></td></tr>
+<tr><td class="refno">[20]</td><td class="refs">C. Stolzenburg <i>et al.</i>, &ldquo;700&nbsp;W intracavity-frequency doubled Yb:YAG thin-disk laser at 100&nbsp;kHz repetition rate&rdquo;, <a href="http://proceedings.spiedigitallibrary.org/proceeding.aspx?articleid=1335971" rel="nofollow">Proc. SPIE 7578, 75780A (2010)</a></td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="resonant_frequency_doubling.html" title="resonant frequency doubling: frequency doubling with a nonlinear crystal placed in a resonant enhancement cavity">resonant frequency doubling</a>, <a href="intracavity_frequency_doubling.html" title="intracavity frequency doubling: frequency doubling with a nonlinear crystal within the laser resonator">intracavity frequency doubling</a>, <a href="phase_matching.html" title="phase matching: a group of techniques for achieving efficient nonlinear interactions in a medium">phase matching</a>, <a href="parametric_nonlinearities.html" title="parametric nonlinearities: instantaneous optical nonlinearities based on the &chi;<sup>(2)</sup> or &chi;<sup>(3)</sup> nonlinear tensor of a transparent medium">parametric nonlinearities</a>, <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, <a href="frequency_tripling.html" title="frequency tripling: the phenomenon that an input laser beam generates a beam with three times the optical frequency">frequency tripling</a>, <a href="frequency_quadrupling.html" title="frequency quadrupling: the phenomenon that an input laser beam generates a beam with four times the optical frequency">frequency quadrupling</a>, <a href="green_lasers.html" title="green lasers: lasers emitting in the green spectral region">green lasers</a>, <a href="blue_lasers.html" title="blue lasers: lasers emitting blue light">blue lasers</a>, <a href="ultraviolet_lasers.html" title="ultraviolet lasers: lasers (or other laser-based light sources) generating ultraviolet light">ultraviolet lasers</a>, <a href="spotlight_2006_08_15.html">Spotlight article 2006-08-15</a>, <a href="spotlight_2006_09_29.html">Spotlight article 2006-09-29</a>, <a href="spotlight_2007_03_05.html">Spotlight article 2007-03-05</a>, <a href="spotlight_2007_09_21.html">Spotlight article 2007-09-21</a>, <a href="spotlight_2007_10_17.html">Spotlight article 2007-10-17</a>, <a href="spotlight_2008_01_14.html">Spotlight article 2008-01-14</a>, <a href="spotlight_2008_01_27.html">Spotlight article 2008-01-27</a><br>and other articles in the category <a href="categories.html#nonlinear_optics" title="other articles on nonlinear optics">nonlinear optics</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<p style="font-size:12px; line-height:18px; margin-bottom:12px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index-2.html" class="redlink">RP Photonics Consulting GmbH</a>.
+<a href="contact.html" class="redlink">Contact</a> this distinguished expert in laser technology, nonlinear optics and fiber optics, and find out how his <a href="services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, or staff training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="frequency_doubling.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="software_script_language3916.html?banner=Debugger">script language</a> (e.g. <a href="fiberpower3916.html?banner=Debugger">RP Fiber Power</a> and <a href="coating3916.html?banner=Debugger">RP Coating</a>) have now got a <a href="software_news_2017_05_313916.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="software_news_2017_05_313916.html?banner=Debugger"><img src="img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="software_news3916.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="spotlight_2018_09_280eaf.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="spotlight_2018_08_220eaf.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="spotlight_2018_06_080eaf.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="spotlight_2018_05_110eaf.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="spotlight_2018_04_060eaf.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="spotlight_2018_01_080eaf.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="spotlight_2017_12_040eaf.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="software_news_2018_08_020eaf.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="software_news_2018_05_220eaf.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="newsletters0eaf.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/frequency_doubling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:58:18 GMT -->
+</html>

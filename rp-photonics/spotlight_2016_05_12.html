@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2016_05_12.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Measurement of Absorption Spectra of Active Fibers: Not as Easy as One Might Think!</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2016-05-12">
+<meta name="description" content="A summary of this blog article: It appears to be quite simple to measure the absorption spectrum of an active fiber with a white light source and an optical spectrum analyzer. It turns out, however, that fluorescence light captured by guided fiber modes can seriously spoil the results.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2016_05_12.html"; cat="P"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Measurement of Absorption Spectra of Active Fibers: Not as Easy as One Might Think!</h1>
+<div class="posting_details">
+<p>Posted on 2016-05-12 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2016_05_12.html">https://www.rp-photonics.com/spotlight_2016_05_12.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: It appears to be quite simple to measure the absorption spectrum of an active fiber with a white light source and an optical spectrum analyzer. It turns out, however, that fluorescence light captured by guided fiber modes can seriously spoil the results.</p>
+</div>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p><a href="rare_earth_doped_fibers.html" title="rare-earth-doped fibers: optical glass fibers which are doped with rare earth ions">Rare-earth-doped fibers</a> are mainly used for making <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber lasers</a>.
+An essential part of their characterization is the measurement of the ground state absorption, i.e., the absorption spectrum of the fiber without a significant excitation of the laser-active ions.</p>
+<p>An often used measurement technique is the following.
+One feeds some broadband light from a <a href="white_light_sources.html" title="white light sources: light sources with very broad optical bandwidth">white light source</a> into the fiber and analyzes the light coming out from the other end with an optical spectrum analyzer.
+As the <a href="optical_spectrum.html" title="optical spectrum: the decomposition of the power or energy of light according to different wavelengths or optical frequencies">optical spectrum</a> of the launched light is normally not known, one usually uses the so-called <em>cut-back technique</em>: after recording the spectrum, one shortens the fiber by a certain amount and measures the spectrum again.
+By comparing the two spectra, one can obtain the attenuation of light within the length by which the fiber was shortened.</p>
+<aside class="callout red">Fluorescent light can mess up the results, even though most of it cannot get to the detector!</aside>
+<p>It is probably quite surprising for most people that the results from that very common method can be seriously spoiled by the following effect.
+Despite the typically very low optical power launched into the fiber, some laser-active ions are excited and subsequently produce a tiny amount of <a href="fluorescence.html" title="fluorescence: luminescence arising from irradiation with light">fluorescence</a>.
+Some small portion of that light gets into guided fiber <a href="lp_modes.html" title="LP modes: linearly polarized modes of optical fibers with radially symmetric index profiles in the approximation of weak guidance">modes</a> and can propagate to the spectrum analyzer, thus increasing the amount of registered optical power.</p>
+<p>One might think that this effect is negligible, because each absorbed photon can typically produce only one photon of fluorescence light, and that photon can in most cases not find its way to the detector.
+With that reasoning, however, one does not only overlook that in cases with strong absorption we are quite sensitive to additional registered optical powers &ndash; even at levels far below the incident power.
+More importantly, the mentioned excitation of laser-active ions can be caused not only by input light in a narrow spectral bin corresponding to some specific part of the absorption spectrum, but from an often far wider spectral region according to the bandwidth of the input light.
+It turns out that the input bandwidth is indeed a crucial parameter, while the detection bandwidth (i.e., the spectral resolution of the spectrum analyzer) is not: reducing the latter, one does reduce the amount of captured fluorescence light, but to the same extent one reduces the amount of the wanted light, effectively not reducing the problem.</p>
+<h2 class="togglediv">Investigation with a Computer Model</h2>
+<div>
+<p>I was made aware of this issue by the team of Prof. Johan Nilsson at the Optoelectronics Research Centre (ORC) at the University of Southampton (where I had spent a very nice and fruitful time as a post-doc in the 1990s).
+We then started to put together a model, using my software <a href="fiberpower.html">RP Fiber Power</a>, beginning with the simple case of an ytterbium-doped <a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a>.
+This turned out to be quite simple:</p>
+<ul>
+<li>We use some number of &ldquo;optical channels&rdquo; corresponding to the wavelength bins of the optical spectrum analyzer &ndash; for example, width a spectral width of 1&nbsp;nm.</li>
+<li>Each optical channel obtains some small input power according to the white light input.</li>
+<li>The optical channels are defined as &ldquo;ASE channels&rdquo;, so that not only the absorption or optical gain is taken into account, but also the fluorescence into the corresponding modes.
+Although we of course do not have any positive net gain for the typical situation with a very low input power, and consequently no <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE), this type of model is fully adequate for analyzing such a situation.</li>
+<li>For each optical channel, the resulting output power is calculated, and from that the apparent absorption of the fiber in <a href="decibel.html" title="decibel: a logarithmic measure for power ratios, applied e.g. to optical powers or to noise powers">dB</a>/m.</li>
+</ul>
+<p>For simplicity, the same intensity mode profile has been used for the whole wavelength region; to be more precise, one could use calculated fiber modes, having somewhat larger profiles for longer wavelengths, so that the mode overlap factor becomes wavelength-dependent.</p>
+<p>Figure&nbsp;1 shows the calculated optical spectrum at the fiber output.
+For comparison, the same spectrum has been calculated with the <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a> of the ytterbium ions set to zero, so that the fluorescence is totally quenched.
+One can see that there is a serious discrepancy between these results at the strong absorption peak around 975&nbsp;nm, whereas the fluorescence effect is negligible at other wavelengths:</p>
+<figure>
+<img src="img/yb_absorption_measurement1.png" alt="output spectrum">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Optical spectrum recorded at the fiber output with a white light input. The solid curve is the actual result, while the dashed curve has been calculated with the upper-state lifetime set to zero.
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows the absorption spectra calculated from that, of course exhibiting the same discrepancy around 975&thinsp;nm:</p>
+<figure>
+<img src="img/yb_absorption_measurement2.png" alt="absorption spectrum">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Calculated absorption spectrum of the fiber.
+</figcaption>
+</figure>
+<p>It is clear why the fluorescence is most disturbing at wavelengths where the absorption of the fiber is very high: there, the transmitted optical power to be measured is very low, so that even small amounts of fluorescent light can spoil the results.
+Well, one might think that as the fluorescence light is also strongly absorbed in the fiber, it should also become very weak towards the fiber end.
+Note, however, that there is also input light at other wavelengths, which experiences much lower absorption; that light can still be absorbed close to the fiber end and generate fluorescence light there.
+This is easily calculated with the model (see Figure&nbsp;3), whereas you could hardly find this out with a measurement.</p>
+<figure>
+<img src="img/yb_absorption_measurement3.png" alt="absorption spectrum">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Evolution of the optical power spectral density in the fiber for two different wavelengths.
+One could see that light at wavelength around 880&nbsp;nm, for example, is still strong in the right half; the fluorescence caused by absorption of such light can prevent the power around 975&nbsp;nm from dropping too much towards the end.
+</figcaption>
+</figure>
+<p>Additional aspects come into play for <a href="multimode_fibers.html" title="multimode fibers: fibers supporting more than one guided mode per polarization direction">multimode fibers</a>.
+Here, the number of guided modes and their intensity profiles (and thus their overlap with the doped fiber core) can change substantially over the considered wavelength range.
+This can cause additional features in the apparent absorption spectrum, which would not be seen in the true absorption spectrum.
+Particularly interesting is the case of <a href="double_clad_fibers.html" title="double-clad fibers: optical fibers with different waveguide structures for pump and signal light">double-clad fibers</a>, having a large number of low-loss cladding modes which can capture fluorescent light.
+For the modeling of such situations, one needs to deal with a large number of modes in the many wavelength bins.</p>
+<p>Some first results have been published in a conference paper (Betty Meng Zhang et al., &ldquo;<a href="https://www.osapublishing.org/abstract.cfm?uri=assl-2015-AM5A.20" rel="nofollow">Fiber absorption measurement errors resulting from re-emission of radiation</a>&rdquo;, Advanced Solid State Lasers, OSA Technical Digest, paper AM5A.20).
+More results will probably soon be shown at another conference; a regular journal paper is also planned.</p>
+<p>Curiously, I am not aware of any earlier scientific literature addressing this issue.
+Although the large number of researchers has done such measurements, apparently nobody became aware of this problem, or at least nobody cared to publish about it.
+In case that we have overlooked something, you are welcome to tell me, and I will update the article accordingly.</p>
+</div>
+<h2 class="togglediv">How to Fix the Problem?</h2>
+<div>
+<p>An interesting question is of course how to avoid the explained problem.</p>
+<p>In principle, one could do such measurements with a bandpass filter applied to the input light, so that each measurement is done only with a quite limited bandwidth.
+With the described model, one can easily test that approach.
+Unfortunately, it turns out that even when the spectral range is set to 970&ndash;980&nbsp;nm (only 10&nbsp;nm wide), the error in the peak absorption is still roughly 10&nbsp;dB.
+The problem is essentially that even in that narrow wavelength range there is a strong variation of the absorption.
+So to be sure one should really measure each wavelength bin separately, which effectively leads to a quite different (and probably less practical) measurement method.</p>
+<p>Another approach is just to optimize certain parameters.
+In the example case above, using half the fiber length (i.e., 1&nbsp;m instead of 2&nbsp;m) one would already drastically reduce the error; the measured peak absorption would then be only off by 17&#37; instead of more than a factor of 2.
+Note, however, that it may not always be sufficient to limit the peak absorption to 30 or 40&nbsp;dB; the problem can also become more severe for multimode fibers and double-clad fibers.
+Also, the measurement of the weaker absorption at other wavelengths requires a longer fiber; this means that more measurements are needed.</p>
+<p>Obviously, it is difficult to guess how large that measurement error will be in certain situations.
+A solution could be to take measurements with different fiber lengths; the results for some absorption peak can be considered reliable if the two or three measurements with the shortest fiber lengths lead to the same result.
+However, it is certainly better to have a computer model with which such effects can be quantified very quickly.</p>
+<p>This is really a very general finding: for making fast progress in research and development projects on such matters, one really needs a simulation tool.
+Once a potential problem of this kind has been recognized, it can easily be studied how exactly things work and what is the dependence on certain parameters.
+With that, one can much better plan the experiments or avoid certain problems right away by choosing suitable parameters.
+Some people think that they cannot afford using such a thing; apparently, however, they can afford to waste time and resources by fishing in the dark.</p>
+</div>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2016_05_12.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Thin-film Optics Software</h2>
+<p><a href="coating5675.html?banner=RP_Coating">RP Coating</a> is a most versatile software for thin-film design.
+Analyze and optimize a wide range of devices:</p>
+<ul>
+<li>dielectric mirrors, including <a href="coating_demo_dichroic5675.html?banner=RP_Coating">dichroic</a> and <a href="coating_demo_gti5675.html?banner=RP_Coating">dispersive mirrors</a></li>
+<li><a href="coating_demo_ar5675.html?banner=RP_Coating">AR coatings</a></li>
+<li>filters (including <a href="coating_demo_rugate5675.html?banner=RP_Coating">rugate filters</a>)</li>
+<li><a href="coating_demo_polarizer5675.html?banner=RP_Coating">thin-film polarizers</a></li>
+<li>VECSELs</li>
+</ul>
+<p style="text-align:center;"><a href="coating5675.html?banner=RP_Coating"><img src="img/rp_coating_220.png" alt="coating design"></a></p>
+<p>Further features:</p>
+<ul>
+<li>extreme flexibility due to <a href="software_script_language5675.html?banner=RP_Coating">scripting</a>: arbitrary parametrization e.g. of chirped layer structures, definition of arbitrary figure of merits for numerical optimization, generation of arbitrary plots</li>
+<li>comprehensive documentation (PDF and online)</li>
+<li>competent <a href="software_support5675.html?banner=RP_Coating">technical support</a></li>
+</ul>
+<p>Use <a href="coating5675.html?banner=RP_Coating"><b>RP Coating</b></a> to quickly become a thin-film expert!</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="spotlight_2014_12_17af33.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2016_05_12.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:05 GMT -->
+</html>

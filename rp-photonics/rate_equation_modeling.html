@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/rate_equation_modeling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:02:32 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - rate equation modeling, gain medium, laser model, transition rates, laser dynamics</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Rate equation modeling is a method of modeling the dynamics of laser gain media with differential equations for level populations.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="rate equation modeling, gain medium, laser model, transition rates, laser dynamics">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="rate_equation_modeling.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Rate Equation Modeling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="buyersguide.html" class="bg_bgheading">Buyer's Guide</a></p>
+<p>Use the <a href="buyersguide.html"><b>RP Photonics Buyer's Guide</b></a> to find suppliers for photonics products! You will hardly find a more convenient resource.</p>
+</aside>
+<aside class="boxadvertisement">
+<h1>Get Started with Rate Equation Modeling</h1>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can solve rate equations not only for simple gain systems with a single metastable level, but even for user-defined energy level schemes involving arbitrary optical and non-radiative transitions and energy transfers, where the rate equations become nonlinear.
+It can simulate the temporal evolution and calculate the steady state.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a method of modeling the dynamics of laser gain media</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Ratengleichungs-Modellierung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<p><a href="encyclopedia_cite1d1c.html?article=rate%20equation%20modeling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>The dynamics of energy level populations in <a href="lasers.html" title="lasers: devices generating visible or invisible light, based on stimulated emission of light">laser</a> <a href="gain_media.html" title="gain media: media for laser amplification">gain media</a> (e.g. <a href="rare_earth_doped_gain_media.html" title="rare-earth-doped gain media: laser gain media which are doped with rare earth ions">rare-earth-doped</a> <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">crystals</a> or <a href="rare_earth_doped_fibers.html" title="rare-earth-doped fibers: optical glass fibers which are doped with rare earth ions">fibers</a>) are often <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">modeled</a> using a system of <em>rate equations</em>.
+These are differential equations, describing the temporal evolution of level populations under the influence of optically induced and non-radiative transitions:</p>
+<ul>
+<li>absorption processes, possibly including <a href="excited_state_absorption.html" title="excited-state absorption: absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a></li>
+<li><a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous</a> and <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a></li>
+<li><a href="multi_phonon_transitions.html" title="multi-phonon transitions: transitions between electronic levels of atoms or ions in solid media, involving the emission of multiple phonons">multi-phonon transitions</a></li>
+<li><a href="energy_transfer.html" title="energy transfer: the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfers</a> which can lead to <a href="upconversion.html" title="upconversion: a process where light can be emitted with photon energies higher than those of the light generating the excitation">upconversion</a> and <a href="quenching.html" title="quenching: the reduction or limitation of an excited-state population, mostly by unwanted effects">quenching</a></li>
+</ul>
+<p>Rate equation models can be part of more comprehensive numerical models, which describe e.g. the spatial distribution of <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical powers</a> in <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a> or <a href="bulk_lasers.html" title="bulk lasers: lasers based on bulk crystals as gain media">bulk lasers</a>, or the dynamic behavior of <a href="q_switched_lasers.html" title="Q-switched lasers: lasers which emit optical pulses, relying on the method of Q switching">Q-switched lasers</a>.
+They can thus help in understanding quantitatively the operation of laser and amplifier devices, and allow one, e.g., to evaluate whether the performance of a device is close to the limitations set by the fundamental principle of operation.</p>
+<h2 class="togglediv">Example: Rate Equations for Erbium-doped Gain Media</h2>
+<div>
+<figure class="right" style="width:222px;">
+<img src="img/erbium_transitions.png" alt="erbium levels and transitions">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Energy levels and transitions in an erbium-doped gain medium.
+</figcaption>
+</figure>
+<p>As an example, consider the dynamics of an <a href="erbium_doped_gain_media.html" title="erbium-doped gain media: laser gain media doped with erbium ions">erbium-doped gain medium</a>, such as used in, e.g., <a href="erbium_doped_fiber_amplifiers.html" title="erbium-doped fiber amplifiers: fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>.
+Figure&nbsp;1 shows the energy level diagram and the most important radiative and non-radiative transitions.
+Erbium amplifiers and lasers operating in the 1.5-&mu;m spectral region exhibit a <a href="four_level_and_three_level_gain_media.html" title="four-level and three-level gain media: laser gain media without/with reabsorption from the lower laser level">quasi-three-level scheme</a>.
+For simplicity, the energy levels (actually Stark level manifolds) of the erbium (Er<sup>3+</sup>) ions are labeled on the left-hand side with an index which is e.g. 1 for the ground-state manifold <sup>4</sup>I<sub>15/2</sub> and 2 for the upper-state manifold <sup>4</sup>I<sub>13/2</sub>.
+Optical absorption and <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a> transitions, as caused by a pump beam at 980&nbsp;nm and a signal beam at 1550&nbsp;nm, are indicated with blue arrows, and the gray arrows indicate spontaneous and non-radiative transitions.
+The lower transition (level 2 &rarr;&nbsp;1) is mostly caused by <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>, whereas the upper transition (3 &rarr;&nbsp;2) is dominated by <a href="multi_phonon_transitions.html" title="multi-phonon transitions: transitions between electronic levels of atoms or ions in solid media, involving the emission of multiple phonons">multi-phonon transitions</a>.
+Only transitions between the lowest three levels are considered, assuming that <a href="excited_state_absorption.html" title="excited-state absorption: absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a> to higher levels and <a href="upconversion.html" title="upconversion: a process where light can be emitted with photon energies higher than those of the light generating the excitation">upconversion</a> processes are weak.</p>
+<p>For that situation, the rate equation system obtained is the following:</p>
+<div class="eqn"><img src="eqn/erbium_rates.gif" width="405" height="149" alt="transition rates in erbium ions"></div>
+<p>where <span class="eqn_il"><i>n</i><sub><i>j</i></sub></span> indicates the fractional level population of level <span class="eqn_il"><i>j</i></span>.
+This variable is e.g. 1 if all ions are in the corresponding level manifold.
+As only the mentioned three levels are involved, we have <span class="eqn_il"><i>n</i><sub>1</sub>&thinsp;+&thinsp;<i>n</i><sub>2</sub>&thinsp;+&thinsp;<i>n</i><sub>3</sub></span> = 1.
+(The parameters <span class="eqn_il"><i>n</i><sub><i>j</i></sub></span> can also be interpreted as excitation densities with units of m<sup>&minus;3</sup>; only in rate equation systems containing nonlinear terms, e.g. for energy transfers, the form of the equations depends on that interpretation.)
+The parameters <span class="eqn_il"><i>A</i><sub><i>jk</i></sub></span> indicate spontaneous transition rates from level <span class="eqn_il"><i>j</i></span> to <span class="eqn_il"><i>k</i></span>, with units of s<sup>&minus;1</sup>.
+For example, <span class="eqn_il"><i>A</i><sub>21</sub></span> is the inverse <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a>.
+Furthermore, the equations contain absorption and stimulated emission rates, which are determined by <a href="transition_cross_sections.html" title="transition cross sections: material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a> <span class="eqn_il"><span class="greek">&sigma;</span><sub><i>jk</i></sub></span> (the values of which are dependent on the <a href="wavelength.html" title="wavelength: the spatial period of a plane wave">wavelengths</a> involved), optical intensities <span class="eqn_il"><i>I</i><sub>p</sub></span> and <span class="eqn_il"><i>I</i><sub>s</sub></span> at the pump and signal wavelength, and <a href="photons.html" title="photons: quanta of light energy">photon</a> energies <span class="eqn_il"><i>h<span class="greek">&nu;</span></i></span>.</p>
+<p>The multi-phonon transition 3 &rarr;&nbsp;2 is usually strong if the gain medium (e.g. a <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fiber</a>) has a high phonon energy.
+Therefore, <span class="eqn_il"><i>n</i><sub>3</sub></span> will usually be small (except for extremely high pump intensities), as ions pumped into level 3 will rapidly be transferred to level 2.
+Consequently, it is often valid to neglect the population in level 3, and also the other transitions starting from that level.
+The equation system then simplifies to</p>
+<div class="eqn"><img src="eqn/erbium_rates_s.gif" width="289" height="101" alt="simplified rate equations for erbium"></div>
+<p>where of course one of the equations is redundant, as the sum of the two level populations must stay unity in any case.</p>
+<p>Various circumstances can lead to additional complications:</p>
+<ul>
+<li>It is common to insert additional terms, e.g. for <em><a href="energy_transfer.html" title="energy transfer: the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfer</a> processes</em>.
+There may be, e.g., terms proportional to <span class="eqn_il"><i>n</i><sub>2</sub><sup>2</sup></span> for cooperative upconversion processes, where one ion in level 2 transfers energy to another ion in the same level, resulting in one more ion in the ground-state manifold and the other one in a higher level.
+Assuming that the higher levels quickly decay to level 2, the additions to the equation system are relatively simple.
+As another example, Ref. [3] discusses rate equations for the more complicated level scheme of thulium (Tm<sup>3+</sup>) ions in <a href="fluoride_fibers.html" title="fluoride fibers: optical fibers based on fluoride glasses">fluoride fibers</a>, including several <a href="excited_state_absorption.html" title="excited-state absorption: absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a> processes.</li>
+<li>It is also possible to include energy transfers between different species of ions.
+A common case is that of erbium&ndash;ytterbium-doped fibers, where primarily ytterbium ions absorb pump radiation, and transfer energy to erbium ions.
+The model then includes level populations for all involved types of ions, and the corresponding coupling terms.</li>
+<li>Additional optical wavelengths can be involved e.g. if <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified"><em>amplified spontaneous emission</em></a> (ASE) occurs in a <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifier</a>.
+In numerical models, the ASE <a href="optical_spectrum.html" title="optical spectrum: the decomposition of the power or energy of light according to different wavelengths or optical frequencies">spectrum</a> is divided into discrete wavelength slots, each one being associated with different values of the absorption and emission cross sections.</li>
+<li>Generally, the rate equations have to be solved for different positions within the gain medium, as the optical intensities depend on both the longitudinal and transverse coordinates.</li>
+</ul>
+</div>
+<h2 class="togglediv">Solving and Using the Rate Equations</h2>
+<div>
+<p>For a given location in the gain medium and for given optical intensities, the temporal evolution of the population densities can be calculated by temporal integration of the rate equations.
+This can be done e.g. with the Runge&ndash;Kutta method.
+Note, however, that rate equations are often a so-called &ldquo;stiff&rdquo; system of differential equations, involving very different time constants.
+The fastest processes in the system (e.g. related to relatively fast <a href="non_radiative_transitions.html" title="non-radiative transitions: transitions between energy levels of atoms or ions which are not associated with the emission of light">non-radiative transitions</a>) then force one to use a fairly small temporal step size, as the numerical solution would otherwise become unstable.
+At the same time, much slower processes often imply that the evolution must be calculated over a long time span, so that in effect many numerical steps are needed.
+For such reasons, it can be inefficient to calculate the steady-state population densities for given optical intensities simply by simulating the temporal evolution.
+(See also the <a href="spotlight_2008_10_20.html">Spotlight article of 2008-10-20</a>.)</p>
+<p>For simple cases, it is easy to calculate analytically the steady-state populations for given pump and signal intensities.
+For example, the simplified equation system above leads to the following result:</p>
+<div class="eqn"><img src="eqn/erbium_n2.gif" width="213" height="97" alt="steady-state upper-state population in erbium"></div>
+<p>It is also possible to calculate the evolution of both the population densities and the optical powers, e.g., in order to model the <a href="laser_dynamics.html" title="laser dynamics: the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a> of a <a href="q_switched_lasers.html" title="Q-switched lasers: lasers which emit optical pulses, relying on the method of Q switching">Q-switched laser</a>.
+The set of differential equations then includes the rate equations for the populations as well as dynamical equations for the optical powers.</p>
+<p>In many situations, it is possible and convenient to derive equations for spatially averaged population densities.
+In the case of a simple level scheme, the population of the gain medium is then described with a single variable, which is directly related to the laser <a href="gain.html" title="gain: a measure of the strength of optical amplification">gain</a>.
+This variable can then be used e.g. as a dynamic variable in the dynamic equations for population (or gain) and laser intensity, as discussed in the article on <a href="laser_dynamics.html" title="laser dynamics: the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a>.</p>
+</div>
+<h2 class="togglediv">Limitations of Rate Equation Modeling</h2>
+<div>
+<p>Rate equations describe the statistical evolution of level populations, and are based on a number of assumptions.
+They do not describe coherent phenomena such as <a href="rabi_oscillations.html" title="Rabi oscillations: oscillations of level populations (or quantum mechanical probability amplitudes) under the influence of an incident light field">Rabi oscillations</a>, as they average over many ions, which experience slightly different microscopic environments and different optical intensities.
+It is further assumed that all ions essentially function in the same way.
+The latter assumption can be violated e.g. if <a href="clustering.html" title="clustering: the tendency e.g. of laser-active ions in laser gain media to form clusters in their host medium">clustering</a> occurs in the gain medium.
+In such a case, ions within clusters may exhibit, e.g., much stronger upconversion processes than other ions do, and should therefore be treated in the model as a separate species.
+Such extended models have been developed [8], but they are more complicated, and often involve a number of parameters which are hard to access experimentally.</p>
+</div>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">M. Peroni and M. Tamburrini, &ldquo;Gain in erbium-doped fiber amplifiers: a simple analytical solution for the rate equations&rdquo;, <a href="https://www.osapublishing.org/ol/abstract.cfm?uri=ol-15-15-842" rel="nofollow">Opt. Lett. 15 (15), 842 (1990)</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">C. R. Giles and E. Desurvire, &ldquo;Modeling erbium-doped fiber amplifiers&rdquo;, <a href="https://www.osapublishing.org/jlt/abstract.cfm?uri=jlt-9-2-271" rel="nofollow">J. Lightwave Technol. 9 (2), 271 (1991)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Characterization and modeling of thulium:ZBLAN blue upconversion fiber lasers&rdquo;, <a href="https://www.osapublishing.org/josab/abstract.cfm?uri=josab-14-5-1213" rel="nofollow">J. Opt. Soc. Am. B 14 (5), 1213 (1997)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">G. C. Valley, &ldquo;Modeling cladding-pumped Er/Yb fiber amplifiers&rdquo;, <a href="http://www.sciencedirect.com/science/article/pii/S1068520000903511" rel="nofollow">Opt. Fiber Technol. 7, 21 (2001) (useful review on amplifier modeling)</a></td></tr>
+<tr><td class="refno">[5]</td><td class="refs">O. Svelto, <i>Principles of Lasers</i>, Plenum Press, New York (1998)</td></tr>
+<tr><td class="refno">[6]</td><td class="refs">E. Desurvire, <i>Erbium-Doped Fiber Amplifiers: Principles and Applications</i>, John Wiley &amp; Sons, New York (1994)</td></tr>
+<tr><td class="refno">[7]</td><td class="refs">A. E. Siegman, <i>Lasers</i>, University Science Books, Mill Valley, CA (1986)</td></tr>
+<tr><td class="refno">[8]</td><td class="refs">M. J. F. Digonnet, <i>Rare-Earth-Doped Fiber Lasers and Amplifiers</i>, 2nd edn., CRC Press, Boca Raton, FL (2001)</td></tr>
+<tr><td class="refno">[9]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_fiber_amplifiers.html">Fiber Amplifiers</a>&quot;, <a href="tutorial_fiber_amplifiers6.html">part 6</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">R. Paschotta, tutorial on &quot;<a href="tutorial_modeling.html">Modeling of Fiber Amplifiers and Lasers</a>&quot;</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser modeling</a>, <a href="laser_dynamics.html" title="laser dynamics: the temporal evolution of quantities such as the optical power and gain in a laser">laser dynamics</a>, <a href="rare_earth_doped_gain_media.html" title="rare-earth-doped gain media: laser gain media which are doped with rare earth ions">rare-earth-doped gain media</a>, <a href="spotlight_2008_10_20.html">Spotlight article 2008-10-20</a><br>and other articles in the categories <a href="categories.html#optical_amplifiers" title="other articles on optical amplifiers">optical amplifiers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a>, <a href="categories.html#physical_foundations" title="other articles on physical foundations">physical foundations</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="rate_equation_modeling.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<a href="coating_demo_bragg_mirror0d19.html?banner=RP_Coating_5"><img src="img/coating_demo_bragg_mirror7b.png" alt="Bragg mirror" style="margin-bottom:8px"></a>
+<p>Evolution of the reflectivity spectrum of a Bragg mirror during fabrication.</p>
+<p>This diagram has been made with the <a href="coating0d19.html?banner=RP_Coating_5"><b>RP Coating</b></a> software.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Amplifiers</h2>
+<p>See our <a href="tutorial_fiber_amplifiers14a3.html?banner=fiber_amplifier_tutorial">comprehensive tutorial on fiber amplifiers</a>:</p>
+<ul>
+<li>laser-active dopants, gain and pump absorption</li>
+<li>double-clad fibers, pulse amplification</li>
+<li>ASE, noise issues, multi-stage amplifiers</li>
+</ul>
+<p style="margin-left:10px;"><a href="tutorial_fiber_amplifiers14a3.html?banner=fiber_amplifier_tutorial"><img src="img/yb_gain_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/rate_equation_modeling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:02:33 GMT -->
+</html>

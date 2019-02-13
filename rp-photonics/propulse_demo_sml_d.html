@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_sml_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP ProPulse - Beispiel: passiv modengekoppelter Soliton-Bulk-Laser</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Passives Modenkoppeln eines Lasers wurde numerisch simuliert und mit Resultaten der Kuizenga-Siegman-Theorie verglichen.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP ProPulse, Modellierung, Software, Beispielfälle, Demos">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="propulse_demo_sml_d.html"; cat="S"; shownbanner=""; ref="propulse_demo_sml.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="propulse_demo_sml.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html" class="sel">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP ProPulse &ndash; Simulation der Ausbreitung ultrakurzer Pulse</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="propulse_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_purpose_d.html">Anwendung</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="propulse_demos_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Beispiel: Passiv modengekoppelter Soliton-Bulk-Laser</h2>
+<p>Im Gegensatz zum vorherigen einfachen Beispiel eines <a href="propulse_demo_pml_d.html">passiv modengekoppelten Lasers</a> berücksichtigen wir nun auch die chromatische Dispersion und die Kerr-Nichtlinearität; diese sind relevant für den Betrieb im Sub-Pikosekunden-Regime.
+Hier können wir <a href="solitons.html" title="solitons: pulses with a certain balance of nonlinear and dispersive effects">Solitonen</a>effekte ausnutzen; man spricht von (quasi-)<a href="soliton_mode_locking.html" title="soliton mode locking: a mechanism for laser mode locking based on soliton pulses">soliton mode locking</a>.
+Die Pulsformung geschieht hier hauptsächlich durch dispersive und nichtlineare Effekte, während der sättigbare Absorber nur das Modenkoppeln startet und die entstehenden Pulse stabilisiert; er hat nur einen schwachen Einfluss auf die Pulsparameter.</p>
+<p>Der Laserresonator wird im Skript wie folgt beschrieben:</p>
+<pre class="codedisplay">
+resonator: linear
+* OC: T_out = T_oc
+* Crystal: gain(l) = g(l) [P_sat_av = P_sat_g, KK = 0], SPM = gamma_g
+* SESAM: satloss = dR_S [E_sat = E_sat_S, tau = tau_S],
+  GDD = GDD_tot,
+  center [N = 10]
+resonator end
+</pre>
+<p>Der Einfachheit halber nehmen wir an, dass alle chromatische Dispersion im SESAM konzentriert ist.
+Diverse Variablenwerte werden benutzt, deren Definitionen hier nicht gezeigt werden.
+Die <a href="gain_bandwidth.html" title="gain bandwidth: the width of the optical frequency range in which significant gain is available from an amplifier">Gain-Bandbreite</a> ist 40&nbsp;nm, der <a href="semiconductor_saturable_absorber_mirrors.html" title="semiconductor saturable absorber mirrors: saturable semiconductor absorber devices acting as nonlinear mirrors">SESAM</a> hat eine <a href="modulation_depth.html" title="modulation depth: a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">Modulationstiefe</a> von 1,5&thinsp;&#37;, und der Auskoppelspiegel hat eine Transmission von 5&thinsp;&#37;.
+Das Modell berücksichtigt eine realistische Stärke der Kerr-Nichtlinearität und eine Gruppendispersion von &minus;1500&nbsp;fs<sup>2</sup> pro Umlauf.</p>
+<p>Die Pulsdauer ist in der Simulation anfangs 500&nbsp;fs, und innerhalb von rund tausend Resonatorumläufen erreicht sie den stationären Wert, der mithilfe einer einfachen Solitonen-Formel gut abgeschätzt werden kann.</p>
+<figure>
+<img src="img/propulse_demo_sml1.png" alt="evolution of pulse duration">
+</figure>
+<p>Die Erholzeit des SESAM war hier 1&nbsp;ps.
+Es ändert sich wenig, wenn wir diese auf 2&nbsp;ps verdoppeln.
+Für 6&nbsp;ps werden die Pulse jedoch instabil:</p>
+<figure>
+<img src="img/propulse_demo_sml2.png" alt="evolution of pulse duration">
+</figure>
+<p>In diesem Regime kann das SESAM das Wachstum von Rauschen direkt hinter dem Hauptpuls nicht mehr unterdrücken.
+Solches Rauschen kann hier von dem immer noch fast voll gesättigten Absorber profitieren und deswegen eine positive Netto-Verstärkung pro Umlauf erreichen.
+Die Resultate des Modells bestätigen auch die experimentelle Erfahrung, dass die SESAM-Parameter die Resultate nicht stark beeinflussen, solange sie ausreichend sind, um im stabilen Regime zu bleiben &ndash; wofür eine genügend kurze Erholzeit und eine genügend starke Modulationstiefe nötig sind.
+Die Grenzen der Stabilität können mit einem solchen Modell natürlich gut erkundet werden &ndash; viel einfacher als mit Experimenten.</p>
+<p>Im folgenden Diagramm wurde die Gruppendispersion pro Umlauf variiert (für eine Erholzeit des SESAMs von 1&nbsp;ps).
+Für genügend starke Dispersion sind wir im stabilen Regime, wo die Pulsdauer etwa proportional zum Betrag der Dispersion ist.
+(Eine leichte Abweichung von dieser Linearität resultiert von der Tatsache, dass die Pulsenergie für lange Pulse, die am SESAM höhere Verluste erleiden, etwas niedriger wird.)
+Für nur wenig negative Dispersion werden die Pulse instabil &ndash; deswegen fehlen die entsprechenden Marker im Diagramm.</p>
+<figure>
+<img src="img/propulse_demo_sml3.png" alt="pulse duration vs. GDD">
+</figure>
+<p>Wir können ebenfalls das Verhalten im instabilen Regime untersuchen, beispielsweise mit einer Dispersion von &minus;400&nbsp;fs<sup>2</sup>; das folgende Diagramm zeigt die Entwicklung des optischen Spektrums innerhalb einiger tausend Umläufe:</p>
+<figure>
+<img src="img/propulse_demo_sml5.png" alt="unstable regime">
+</figure>
+<p>Für eine Dispersion von &minus;800&nbsp;fs<sup>2</sup> wären wir noch im stabilen Regime:</p>
+<figure>
+<img src="img/propulse_demo_sml5b.png" alt="stable regime">
+</figure>
+<p>Hier beobachtet man nur anfängliche Oszillationen des Spektrums, aber diese sind gedämpft und deswegen nicht von Dauer.</p>
+<p>(<a href="propulse_demos_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/propulse_demo_sml_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:34:00 GMT -->
+</html>

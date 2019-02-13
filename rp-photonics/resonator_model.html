@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/resonator_model.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP Resonator for advanced laser resonator design and optimization</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="The physical model used in the software RP Resonator allows one to calculate not only beam radii, but also alignment tolerance, dispersive effects etc.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Resonator, modeling, software, resonator design, resonator design, laser, thermal lens">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="resonator_model.html"; cat="S"; shownbanner=""; ref="resonator.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="resonator_model_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html" class="sel">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/resonator_logo.png" width="73" height="73" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Resonator &ndash; Advanced Software for <br> Laser Resonator Design and Optimization</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="resonator.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_purpose.html">Purpose</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="resonator_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_interface.html">Interface</a></td>
+<td class="sub_nav"><a class="sub_n" href="resonator_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2>ABCDEF Matrix Algorithm</h2>
+<p>The calculations in <b>RP Resonator</b> are based on an extended ABCDEF matrix algorithm.
+In contrast to the usually used <a href="abcd_matrix.html" title="ABCD matrix: a 2-by-2 matrix describing the effect of an optical element on a laser beam">ABCD matrix</a> algorithm, this allows not only the calculation of <a href="mode_radius.html" title="mode radius: a measure of the transverse extent of a laser mode or laser beam">mode radii</a>, but also the changes of beam position resulting from the <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">misalignment</a> of mirrors.</p>
+<p>It is also possible to treat wavelength-dependent refraction, for example at prisms.
+This occurs, for example, in resonators of <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked lasers</a>, where <a href="dispersion_compensation.html" title="dispersion compensation: the control of the overall chromatic dispersion of a system by adding optical elements with a suitable amount of dispersion">dispersion compensation</a> is done with a prism pair (see an <a href="resonator_tisa.html">example case</a>).
+The software can calculate the wavelength-dependent path length and from this the resulting <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>.</p>
+<p>Linear and ring resonators can be treated as well as single-pass propagation, e.g. of the output beam from a laser resonator.
+For ring resonators, the beam path can be closed automatically, i.e., the orientation of the first and last mirror and the path length between these are computed automatically.
+The resulting setup can be shown graphically in order to immediately recognize possible mistakes in the inputs.</p>
+<h2>Full Parametrization</h2>
+<p>In contrast to many other programs, <b>RP Resonator</b> allows you to fully parametrize all resonator properties.
+This means that instead of using simple numbers for arm lengths, mirror radii etc., you can use mathematical expressions.
+In the generated graphics, you can vary any resonator properties (or combinations thereof) along the horizontal axis, or in 2D color plots.
+Also, any parameters can be involved in numerical optimizations.</p>
+<p>This feature together with the powerful <a href="software_script_language.html">script language</a> gives you an extraordinary flexibility, as you will hardly find in any other software product.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/resonator_model.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:20 GMT -->
+</html>

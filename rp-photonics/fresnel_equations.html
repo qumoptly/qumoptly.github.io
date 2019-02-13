@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/fresnel_equations.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - Fresnel equations</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Fresnel equations are equations for the amplitude coefficients of transmission and reflection at the interface between two transparent homogeneous media.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Fresnel equations">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="fresnel_equations.html"; cat="E"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Fresnel Equations</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="buyersguide.html" class="bg_bgheading">Buyer's Guide</a></p>
+<p>Use the <a href="buyersguide.html"><b>RP Photonics Buyer's Guide</b></a> to find suppliers for photonics products! You will hardly find a more convenient resource.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: equations for the amplitude coefficients of transmission and reflection at the interface between two transparent homogeneous media</p>
+<p><a href="categories.html" title="articles sorted by categories">Category</a>: <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<p><a href="encyclopedia_cite4eb6.html?article=Fresnel%20equations">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>Fresnel equations specify the amplitude coefficients for transmission and reflection at the interface between two transparent homogeneous media:</p>
+<figure class="right" style="width:254px;">
+<img src="img/refraction.png" alt="refraction at an interface">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Refraction at an interface between two media.
+</figcaption>
+</figure>
+<div class="eqn"><img src="eqn/fresnel_t_s.gif" width="164" height="46" alt="Fresnel t_s"></div>
+<div class="eqn"><img src="eqn/fresnel_r_s.gif" width="165" height="46" alt="Fresnel r_s"></div>
+<div class="eqn"><img src="eqn/fresnel_t_p.gif" width="165" height="46" alt="Fresnel t_p"></div>
+<div class="eqn"><img src="eqn/fresnel_r_p.gif" width="165" height="46" alt="Fresnel r_p"></div>
+<p>For example, <span class="eqn_il"><i>t</i><sub>s</sub></span> is the amplitude transmission coefficient for s polarization; the transmitted amplitude is that factor times the incident amplitude in that case (disregarding any <a href="optical_phase.html" title="optical phase: the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> changes for transmission in the media). <span class="eqn_il"><i>n</i><sub>1</sub></span> and <span class="eqn_il"><i>n</i><sub>2</sub></span> are the <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive indices</a> of the two media.
+The corresponding propagation angles (measured against the normal direction) are <span class="eqn_il"><span class="greek">&theta;</span><sub>1</sub></span> and <span class="eqn_il"><span class="greek">&theta;</span><sub>2</sub></span> (see Figure&nbsp;1).</p>
+<p>For example, the amplitude transmission coefficient is <span class="eqn_il"><i>t</i><sub><i>s</i></sub></span> for s <a href="polarization_of_laser_emission.html" title="polarization of laser emission: direction of the electric field oscillation of a laser beam">polarization</a>, i.e., if the electric field vector is perpendicular to the plane of incidence.</p>
+<p>The power reflection coefficients are obtained simply by taking the modulus squared of the corresponding amplitude coefficients.
+For the transmission, one must add a factor <span class="eqn_il">(<i>n</i><sub>2</sub>&thinsp;cos&thinsp;<span class="greek">&theta;</span><sub>2</sub>)&thinsp;/&thinsp;(<i>n</i><sub>1</sub>&thinsp;cos&thinsp;<span class="greek">&theta;</span><sub>1</sub>)</span> in order to take into account the different propagation angles.</p>
+<form id="calc_w" class="calculatorform">
+<h2>Calculator for Fresnel Equations</h2>
+<table>
+<tr>
+<td>Refractive index of medium 1:</td>
+<td><input name="n1" value="" class="cf_calc_w"></td>
+</tr>
+<tr>
+<td>Refractive index of medium 2:</td>
+<td><input name="n2" value="" class="cf_calc_w"></td>
+</tr>
+<tr>
+<td>Angle of incidence:</td>
+<td><input name="theta1" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_theta1()">calc</span></td>
+</tr>
+<tr>
+<td>Output angle:</td>
+<td><input name="theta2" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_theta2()">calc</span></td>
+<td >(must be calculated before calculating the values below!)</td>
+</tr>
+<tr>
+<td>Power transmittivity, s pol.:</td>
+<td><input name="t_s" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_t_s()">calc</span></td>
+</tr>
+<tr>
+<td>Power reflectivity, s pol.:</td>
+<td><input name="r_s" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_r_s()">calc</span></td>
+</tr>
+<tr>
+<td>Power transmittivity, p pol.:</td>
+<td><input name="t_p" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_t_p()">calc</span></td>
+</tr>
+<tr>
+<td>Power reflectivity, p pol.:</td>
+<td><input name="r_p" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_r_p()">calc</span></td>
+</tr>
+<tr>
+<td>R_s / R_p:</td>
+<td><input name="r_s_p" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_r_s_p()">calc</span></td>
+</tr>
+<tr>
+<td>T_s / T_p:</td>
+<td><input name="t_s_p" value="" class="cf_calc_w"></td>
+<td><span class="calcbutton" onclick="calc_t_s_p()">calc</span></td>
+</tr>
+</table>
+<p class="comment">Enter input values with units, where appropriate. After you have modified some values, click a "calc" button to recalculate the field left of it.</p>
+<p class="comment"> The calculations cannot be done in the regime of <a href="total_internal_reflection.html" title="total internal reflection: the phenomenon that light incident on the boundary between two transparent media is fully reflected if the light is coming from the optical more dense medium and the angle of incidence is sufficiently large">total internal reflection</a>.</p>
+<noscript>
+<p style="color:red">Attention: The buttons do not work, as Javascript is turned off in your browser!</p>
+</noscript>
+</form>
+<script type="text/javascript" src="calcform.js"></script>
+<script type="text/javascript">
+funits = new Array();
+funits["n1"] = "";
+funits["n2"] = "";
+funits["theta1"] = "deg";
+function calc_theta1() {
+  $("input[name=theta1]").val("???");
+  GetFieldValues("theta1","calc_w");
+  theta1 = Math.asin(n2*Math.sin(theta2*pi/180)/n1)*180/pi;
+  $("input[name=theta1]").val(format_u(theta1, "deg"));
+ }
+funits["theta2"] = "deg";
+function calc_theta2() {
+  $("input[name=theta2]").val("???");
+  GetFieldValues("theta2","calc_w");
+  theta2 = Math.asin(n1*Math.sin(theta1*pi/180)/n2)*180/pi;
+  $("input[name=theta2]").val(format_u(theta2, "deg"));
+ }
+funits["t_s"] = "&%";
+function calc_t_s() {
+  $("input[name=t_s]").val("???");
+  GetFieldValues("t_s","calc_w");
+  t_s = 100*sqr(2*n1*cos(theta1*pi/180)/(n1*cos(theta1*pi/180)+n2*cos(theta2*pi/180)))*(n2*cos(theta2*pi/180))/(n1*cos(theta1*pi/180));
+  $("input[name=t_s]").val(format_u(t_s, "&%"));
+ }
+funits["r_s"] = "&%";
+function calc_r_s() {
+  $("input[name=r_s]").val("???");
+  GetFieldValues("r_s","calc_w");
+  r_s = 100*sqr((n1*cos(theta1*pi/180)-n2*cos(theta2*pi/180))/(n1*cos(theta1*pi/180)+n2*cos(theta2*pi/180)));
+  $("input[name=r_s]").val(format_u(r_s, "&%"));
+ }
+funits["t_p"] = "&%";
+function calc_t_p() {
+  $("input[name=t_p]").val("???");
+  GetFieldValues("t_p","calc_w");
+  t_p = 100*sqr(2*n1*cos(theta1*pi/180)/(n1*cos(theta2*pi/180)+n2*cos(theta1*pi/180)))*(n2*cos(theta2*pi/180))/(n1*cos(theta1*pi/180));
+  $("input[name=t_p]").val(format_u(t_p, "&%"));
+ }
+funits["r_p"] = "&%";
+function calc_r_p() {
+  $("input[name=r_p]").val("???");
+  GetFieldValues("r_p","calc_w");
+  r_p = 100*sqr((n2*cos(theta1*pi/180)-n1*cos(theta2*pi/180))/(n1*cos(theta2*pi/180)+n2*cos(theta1*pi/180)));
+  $("input[name=r_p]").val(format_u(r_p, "&%"));
+ }
+funits["r_s_p"] = "";
+function calc_r_s_p() {
+  $("input[name=r_s_p]").val("???");
+  GetFieldValues("r_s_p","calc_w");
+  r_s_p = sqr((n1*cos(theta1*pi/180)-n2*cos(theta2*pi/180))/(n1*cos(theta1*pi/180)+n2*cos(theta2*pi/180))) / sqr((n2*cos(theta1*pi/180)-n1*cos(theta2*pi/180))/(n1*cos(theta2*pi/180)+n2*cos(theta1*pi/180)));
+  $("input[name=r_s_p]").val(format_u(r_s_p, ""));
+ }
+funits["t_s_p"] = "";
+function calc_t_s_p() {
+  $("input[name=t_s_p]").val("???");
+  GetFieldValues("t_s_p","calc_w");
+  t_s_p = sqr(2*n1*cos(theta1*pi/180)/(n1*cos(theta1*pi/180)+n2*cos(theta2*pi/180)))*(n2*cos(theta2*pi/180))/(n1*cos(theta1*pi/180)) / (sqr(2*n1*cos(theta1*pi/180)/(n1*cos(theta2*pi/180)+n2*cos(theta1*pi/180)))*(n2*cos(theta2*pi/180))/(n1*cos(theta1*pi/180)));
+  $("input[name=t_s_p]").val(format_u(t_s_p, ""));
+ }
+$("input[name=n1]").val("1");
+$("input[name=n2]").val("1.5");
+$("input[name=theta1]").val("30 deg");
+calc_theta2();
+calc_t_s();
+calc_r_s();
+calc_t_p();
+calc_r_p();
+calc_r_s_p();
+calc_t_s_p();
+</script>
+<figure>
+<img src="img/fresnel_reflection.png" alt="Fresnel reflectivity">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Power reflectivity of the interface for s and p polarization, if a beam is incident from air onto a medium with refractive index 1.47 (e.g., silica at 1064&nbsp;nm).
+</figcaption>
+</figure>
+<p>Figure&nbsp;2 shows in an example case how the reflectivity of the interface depends on the angle of incidence and the <a href="polarization_of_laser_emission.html" title="polarization of laser emission: direction of the electric field oscillation of a laser beam">polarization</a>.
+The reflection coefficient vanishes for p polarization if the angle of incidence is Brewster's angle (here: &approx;55.4&deg;).</p>
+<p class="seealso">See also: <a href="refraction.html" title="refraction: the change of the propagation direction when a wave comes from one medium into another one">refraction</a>, <a href="total_internal_reflection.html" title="total internal reflection: the phenomenon that light incident on the boundary between two transparent media is fully reflected if the light is coming from the optical more dense medium and the angle of incidence is sufficiently large">total internal reflection</a>, <a href="brewsters_angle.html" title="Brewster's angle: an angle of incidence at which there is no reflection of p-polarized light at an uncoated optical surface">Brewster's angle</a>, <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a><br>and other articles in the category <a href="categories.html#general_optics" title="other articles on general optics">general optics</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="fresnel_equations.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Evaluation of Technologies</h2>
+<p>In the laser and photonics industry, it is often essential to obtain competent evaluations of certain technologies:</p>
+<ul>
+<li>A CTO of a laser company needs to know whether some new technical idea is worthwhile pursuing. Maybe there are some hidden problems?</li>
+<li>A user of lasers is told about a great new laser architecture &ndash; but will it really serve her needs?</li>
+<li>Venture capital firms need to find out what the potentials and limitations of certain technologies are. We call that applying <em>due diligence</em>.</li>
+</ul>
+<h3>Get help!</h3>
+<p>Involving a top expert such as <a href="paschotta4875.html?banner=technology_evaluation">Dr. Paschotta</a> into technology evaluations can have many advantages:</p>
+<ul>
+<li>He has a good overview on many technologies and their potentials and limitations.</li>
+<li>His analytic mind allows him to develop a balanced perspective, taking into account all relevant aspects.</li>
+<li>He is well trained in writing useful reports.</li>
+<li>He may bring in new perspectives and ideas.</li>
+</ul>
+<p>Just <a href="contact4875.html?banner=technology_evaluation">contact RP Photonics</a> to find out what we can do for you!</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Interesting Articles</h2>
+<p>We offer a huge selection of interesting articles on laser technology and photonics. Some examples:</p>
+<ul>
+<li><a href="spotlight_2018_09_280eaf.html?banner=articles">Resonator modes in microchip lasers</a></li>
+<li><a href="spotlight_2018_08_220eaf.html?banner=articles">What is different for quasi-three-level lasers?</a></li>
+<li><a href="spotlight_2018_06_080eaf.html?banner=articles">Understanding intensity noise</a></li>
+<li><a href="spotlight_2018_05_110eaf.html?banner=articles">Gain saturation in solid-state lasers</a></li>
+<li><a href="spotlight_2018_04_060eaf.html?banner=articles">The essential roles of phonons in solid-state lasers</a></li>
+<li><a href="spotlight_2018_01_080eaf.html?banner=articles">Self-starting of passively mode-locked lasers</a></li>
+<li><a href="spotlight_2017_12_040eaf.html?banner=articles">Energy levels of solid-state gain media</a></li>
+<li><a href="software_news_2018_08_020eaf.html?banner=articles">Data grids for numerical beam propagation</a></li>
+<li><a href="software_news_2018_05_220eaf.html?banner=articles">Numerical representation of ultrashort pulses</a></li>
+</ul>
+<p>These articles belong to our newsletters, which appear about once per month.
+You will not regret to <a href="newsletters0eaf.html?banner=articles">register</a>!</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fresnel_equations.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:54:45 GMT -->
+</html>

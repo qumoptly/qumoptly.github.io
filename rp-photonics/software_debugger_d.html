@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/software_debugger_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Skript-Debugging in Software von RP Photonics</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Die meisten Softwareprodukte von RP Photonics unterstützen eine leistungsfähige Skriptsprache und enthalten einen nützlichen Debugger.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="Simulation, Design, Software, Debugger, Haltepunkte">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_debugger_d.html"; cat="S"; shownbanner=""; ref="software_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="software_debugger.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html" class="sel">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Debugging von Skripten in Software von RP Photonics</h1>
+<aside class="textbox tb_right redmargin" style="width:240px;">
+<p><b>Nicht jeder muss sich mit Skriptcode befassen!</b></p>
+<p>Unsere Software kann auch über einfach zu bediendende Formulare genutzt werden.
+Jedoch erlauben Ihnen Skripte, auch die ausgefeiltesten Simulationen auszuführen.</p>
+<p>Man kann solchen Code auch in <a href="software_custom_forms.html"><b>maßgeschneiderten Formularen</b></a> einsetzen; eine Person kann so ein Formular entwickeln, und andere können es verwenden, ohne überhaupt mit Skriptcode in Berührung zu kommen.</p>
+</aside>
+<p>Die meisten unserer Softwareprodukte unterstützen eine leistungsfähige <a href="software_script_language_d.html">Skriptsprache</a>, und die neuesten Versionen enthalten auch einen nützlichen Debugger:</p>
+<ul>
+<li class="ta_left"><a href="fiberpower_d.html"><b>RP Fiber Power</b></a> seit V7</li>
+<li class="ta_left"><a href="resonator_d.html"><b>RP Resonator</b></a> seit V4</li>
+<li class="ta_left"><a href="coating_d.html"><b>RP Coating</b></a> seit V4</li>
+<li class="ta_left"><a href="propulse_d.html"><b>RP ProPulse</b></a> seit V4</li>
+</ul>
+<p>Der Debugger kann sehr nützlich sein, wenn man in Skripten für raffinierte Simulationen Fehler sucht.
+Er kann auf zwei verschiedene Weisen verwendet werden:</p>
+<ul>
+<li class="ta_left">Sie können Skripte Kommando für Kommando ausführen.</li>
+<li class="ta_left">Sie können ebenfalls Debugging sogar innerhalb von mathematischen Ausdrücken betreiben.
+Dies ist wichtig, da unsere Software Ausdrücke erlaubt, die beispielsweise verschachtelte Kontrollstrukturen enthalten.</li>
+</ul>
+<p>In jedem Fall können Sie den Zustand des Systems nach der Ausführung jedes Kommandos bzw. jedes Teils eines Ausdrucks genau inspizieren.
+Dadurch können Sie schnell herausfinden, in welchem Schritt etwas falsch lief.
+Oder sie finden zusätzliche quantitative Details Ihres Systems heraus, die vom Skript normalerweise nicht angezeigt würden.</p>
+<p>Im Folgenden werden die beiden die Debugging-Methoden im Detail erklärt, womit auch demonstriert wird, wie gut ausgearbeitet das System ist.</p>
+<h2 class="togglediv">Skripte Kommand für Kommando ausführen</h2>
+<div>
+<p>Die Software kann sich in einem der folgenden Modi befinden:</p>
+<ul>
+<li><b>Editing mode:</b> Sie können Skripte oder die Inhalte von Formularen editieren.
+Die Software führt momentan noch gar nichts aus.</li>
+<li><b>Running mode:</b> Ein Skript wird momentan ausgeführt.
+Normalerweise werden Sie einfach warten, bis dies erledigt ist und die Resultate angezeigt werden.</li>
+<li><b>Debug mode:</b> In diesem Modus hat die Software die Ausführung unterbrochen und wartet auf Ihre Entscheidung darüber, wie weiter verfahren werden soll.
+Sie zeigt die momentane Position im ausgeführten Skript an, und Sie können den Zustand des Systems inspizieren, bevor Sie über das weitere Vorgehen entscheiden &ndash; etwa, das nächste Kommando auszuführen, das Skript normal weiterlaufen zu lassen, oder die Ausführung abzubrechen.</li>
+</ul>
+<p>Wenn Sie ein Skript ausführen lassen, wird die Software normalerweise vom Editing-Modus in den Running-Modus wechseln, und nach der Ausführung wieder zurück.
+Jedoch können Sie auf die folgenden Weisen in den <b>Debug-Modus</b> wechseln:</p>
+<ul>
+<li>Sie können direkt dorthin gelangen, indem sie die Ctrl-Taste gedrückt halten, während Sie die Ausführung beginnen (z.&thinsp;B. Ctrl-F8 statt F8).</li>
+<li>Im Running-Modus können Sie <b>Ctrl-B drücken</b> oder die &ldquo;Break&rdquo;-Schaltfläche auf dem Hauptfenster betätigen.</li>
+<li>Die Software geht ebenfalls in den Debug-Modus über, wenn bei der Ausführung ein <b>Haltepunkt</b> (breakpoint) im Code getroffen wird.</li>
+</ul>
+<p>Hier sehen Sie das Hauptformular im Debug-Modus:</p>
+<figure>
+<img src="img/debug_panel.png" alt="RP Fiber Power in debug mode">
+</figure>
+<p>Unter dem Toolbar sehen Sie die Fläche &ldquo;Execution and debugging&rdquo; mit diversen Informationen:</p>
+<ul>
+<li class="ta_left">den Status &ldquo;debug&rdquo;</li>
+<li class="ta_left">den Namen des momentan ausgeführten Skripts</li>
+<li class="ta_left">die momentane Position im Code (ggf. mit nützlichen Zusatzinformationen über aktive Kontrollstrukturen)</li>
+<li class="ta_left">die gesamte Ausführungszeit</li>
+</ul>
+<p>Es gibt diverse Schaltflächen, um die nächste Aktion zu bestimmen:</p>
+<ul>
+<li><b>Abort:</b> Die Ausführung wird definitiv beendet, und die Software geht zurück in den Editing-Modus.</li>
+<li><b>Break:</b> Damit können Sie während der Ausführung in den Debug-Modus wechseln.
+Das kann z.&thinsp;B. praktisch sein, wenn das Skript offenbar in eine Endlosschleife geraten ist.</li>
+<li><b>Single command:</b> Es soll nur das nächste Kommando ausgeführt werden.</li>
+<li><b>Resume:</b> Die Ausführung soll weiterlaufen, bis das Ende des Skripts oder der nächste Haltepunkt gefunden wird.</li>
+<li><b>Inspectors</b> (Lupen-Symbol): Damit rufen Sie das Tool auf, mit dem Sie den momentanen Zustand des Systems inspizieren können.</li>
+</ul>
+<p>Sie sehen ebenfalls die Anzeige des ausgeführten Codes; die nächste Codezeile ist blau hervorgehoben.</p>
+<p><b>Haltepunkte</b> (breakpoints) können auf zwei verschiedene Weisen gesetzt werden:</p>
+<ul>
+<li class="ta_left">Sie können einfach vor eine Code-Zeile im Editor klicken.</li>
+<li class="ta_left">In einem Skript kann eine Zeile mit &ldquo;@&rdquo; beginnen.</li>
+</ul>
+<p>Beide Arten von Haltepunkten können auch konditional gemacht werden, so dass sie nur aktiv sind, wenn eine bestimmte Bedingung erfüllt ist.</p>
+<p>Hier sehen Sie das Tool zum Inspizieren des Systemzustands:</p>
+<figure>
+<img src="img/inspectors_variables.png" alt="inspectors tool">
+</figure>
+<p>Hier ist momentan der Reiter für die Anzeige der globalen Variablen aktiv; es gibt andere Reiter für das Inspizieren von Feldern und benutzerdefinierten Funktionen.
+Es kann zusätzliche Reiter mit Physik-spezifischen Details geben, z.&thinsp;B. in RP Fiber Power für die definierten Faser-Modelle und Details der numerischen Strahlpropagation.</p>
+<p>Im unteren Bereich können Sie einen Ausdruck eingeben, dessen Resultat darunter angezeigt wird.</p>
+</div>
+<h2 class="togglediv">Debugging von Ausdrücken</h2>
+<div>
+<p>Die Software kann auch komplexe Ausdrücke auswerten, die sogar verschachtelte Kontrollstrukturen enthalten können.
+Deswegen ist es oft sehr wünschenswert, Debugging auch innerhalb solcher Ausdrücke betreiben zu können.</p>
+<p>Sie können <b>Haltepunkte innerhalb eines Ausdrucks</b> setzen &ndash; hier nicht mit dem &ldquo;@&rdquo;-Zeichen, sondern durch Funktionsaufrufe wie debug('message').
+Wenn dies ausgeführt wird, wird die Software an dieser Stelle in den Debug-Modus gehen und die übertragene Nachricht anzeigen, die nützliche Informationen enthalten kann.
+Sie können später den Debug-Modus mit debug('') (oder auch manuell) wieder beenden.
+Der Debug-Modus wird ebenfalls beendet, wenn das Ende des Blocks erreicht wird, indem die debug()-Funktion aufgerufen wurde.
+Sie können also gezielt die Code-Teile untersuchen, die für Sie gerade von Interesse sind.</p>
+<p>Das Konzept mit der debug()-Funktion anstelle eines einfachen Haltepunkt-Symbols wie &ldquo;@&rdquo; gibt Ihnen zusätzliche Flexibilität.
+Insbesondere können Sie die Funktion auch nur dann aufrufen, wenn eine bestimmte Bedingung erfüllt ist.
+Ebenfalls können Sie eine berechnete Meldung anzeigen, die Sie genauer über den momentanen Zustand informiert (etwa 'Iteration 17').</p>
+<p>Wenn bei der Ausführung ein solcher Haltepunkt getroffen wird, zeigt die Software wieder das Tool zum Inspizieren an, aber diesmal mit dem zusätzlichen Reiter &ldquo;Debug expression&rdquo;:</p>
+<figure>
+<img src="img/expression_debugger.png" alt="expression debugger window">
+</figure>
+<p>Hier sehen Sie im Einzelnen:</p>
+<ul>
+<li class="ta_left">die Nachricht, die von der debug()-Funktion übermittelt wurde</li>
+<li class="ta_left">den Code (mit der blau gekennzeichneten aktuellen Position)</li>
+<li class="ta_left">die Schaltfläche &ldquo;Next expression&rdquo;: Ausführung des nächsten Ausdrucks</li>
+<li class="ta_left">die Schaltfläche &ldquo;End debug mode&rdquo;: Ausführung bis zum nächsten Haltepunkt (oder Ende des Blocks)</li>
+<li class="ta_left">die Schaltfläche &ldquo;Abort&rdquo;: Die Ausführung des Ausdrucks und des gesamten Skripts wird abgebrochen.</li>
+<li class="ta_left">die anderen Reiter für das Inspizieren von globalen Variablen, Feldern etc.</li>
+</ul>
+<p>Es gibt diverse weitere nützliche Features und Tricks, die im Detail in der Dokumentation der Software erklärt werden.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_debugger_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:08 GMT -->
+</html>

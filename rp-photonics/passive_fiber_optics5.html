@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:32:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Passive Fiber Optics&rdquo;: fiber ends, angle cleaving, stripping</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on passive fiber optics. Part 5 discusses fiber ends.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber optics, optical fibers, fiber ends, cleaving, fiber cleaver, stripping, cleave angle, angle cleaving">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="passive_fiber_optics5.html"; cat="C"; shownbanner=""; ref="passive_fiber_optics.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 5 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>5</span>
+<p>1:&nbsp;<a href="passive_fiber_optics1.html">Guiding light in a glass fiber</a>, 2:&nbsp;<a href="passive_fiber_optics2.html">Fiber modes</a>, 3:&nbsp;<a href="passive_fiber_optics3.html">Single-mode fibers</a>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<span style="text-decoration:underline;">Fiber ends</span>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<a href="passive_fiber_optics7.html">Propagation losses</a>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<a href="passive_fiber_optics9.html">Polarization issues</a>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<a href="passive_fiber_optics11.html">Nonlinearities of fibers</a>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 5: Fiber Ends</h2>
+<div>
+<h3 class="togglediv">Preparing Clean Fiber Ends: Stripping, Cleaving, Polishing</h3>
+<div>
+<p>In most cases when a fiber is used, it is essential to prepare clean ends.
+A first step is usually to strip the polymer coating on the last centimeters, using a mechanical stripper.
+In in problematic cases, one may have to use a solvent (<em>chemical stripping</em>).
+The mantle of the glass fiber will then usually be quite clean, but the fiber end, if it simply has been broken, will still have an irregular shape.
+We thus need some method to obtain a nice surface &ndash; normally, a flat surface, which is perpendicular to the fiber axis, or sometimes with some other angle.</p>
+<aside class="callout blue">Cleaving, even with simple means, works surprisingly well, at least for standard glass fibers.</aside>
+<p>The most common method for preparing clean ends is <a href="cleaving_of_fibers.html" title="cleaving of fibers: preparing fiber ends with clean optical surfaces by controlled breaking">cleaving</a>.
+Essentially, this means controlled breaking of the glass of the bare fiber.
+One begins with making a tiny scratch on the side of the fiber, e.g. with a sharp diamond, carbide or ceramic blade, before or while some defined tension or bending is applied to the fiber.
+This causes the fiber to break, starting at the mentioned fracture point.
+Often, the resulting surface is quite smooth.</p>
+<p>Cleaving is often done with a simple diamond blade.
+One slightly scratches the fiber and then breaks it e.g. by tipping an end with a finger.
+This procedure requires some practicing, and the results are somewhat variable.
+For more consistent results, one needs to cleave under more controlled conditions, using a precision fiber cleaver apparatus.
+Some of these devices can also be used to prepare <em>angle cleaves</em> (see Figure&nbsp;2), with a relatively well controlled angle between the cleaved surface and the fiber axis.</p>
+<p>Cleaving gets more difficult in non-standard situations, such as large fiber diameters or non-standard glass compositions.
+When cleaving <a href="fluoride_fibers.html" title="fluoride fibers: optical fibers based on fluoride glasses">fluoride fibers</a>, for example, one at least needs to use adapted parameters for a precision cleaver.</p>
+<p>See our encyclopedia article on <a href="cleaving_of_fibers.html" title="cleaving of fibers: preparing fiber ends with clean optical surfaces by controlled breaking">cleaving of fibers</a> for more details.
+<a href="passive_fiber_optics13.html">Part 13 on fiber accessories and tools</a> also presents some more details on cleaving tools.</p>
+<p>Recleaving a fiber can be a substitute for cleaning, as it is hard to reliably clean fiber ends.</p>
+<aside class="callout blue">Polishing can produce higher-quality fiber ends, but means more work.</aside>
+<p>For very high-quality fiber surfaces, or when using fibers with large diameter, or when attaching a fiber connector, it may be necessary to apply some polishing procedure after cleaving.
+One may, for example, insert the fiber end into a <em>ferrule</em> (a hollow ceramic, glass or metal tube) and fix it there with a glue.
+The fiber is then polished down together with the glass tube, using a special polishing machine.
+This procedure allows one to produce a high-quality surface with an arbitrary well-defined orientation of the fiber surface.
+However, it takes substantially more time than simple cleaving, and of course it is essential to have all details of a polishing machine (e.g., the load force, speed and time) and the polishing agent well adapted to the ferrule and fiber material and size.
+Hand polishing is also possible, but usually leads to inferior results.</p>
+<p>Polished fiber ends, other than cleaved ends, may have some convex curvature, resulting from the use of a flexible polishing pad.
+Such a &ldquo;domed surface&rdquo; facilitates a good contact e.g. between two single-mode fibers in a connector set.</p>
+</div>
+<h3 class="togglediv">Relevance of Cleave Angles</h3>
+<div>
+<p>In some cases, it is important to have a cleaved fiber surface just perpendicular to the fiber axis.
+For example, this is often the case when a fiber is inserted into a fiber connector (see <a href="passive_fiber_optics6.html">part 6</a>), although some connectors require angle cleaves.
+Mechanical splices also don't work well with non-perpendicular ends (see Figure&nbsp;1).</p>
+<figure>
+<img src="img/fiber_joint_with_angle.png" alt="joining two fibers with imperfect cleave">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+When a fiber cleave is not perpendicular, a fiber joint will not work well: an air gap will be formed, or alternatively a kink.
+</figcaption>
+</figure>
+<p>Note that due to refraction at the fiber end, a non-normal cleave causes a deviation of the output beam direction from the fiber axis (see Figure&nbsp;2).
+Also, one then requires an appropriately tilted input beam for efficient launching.
+This makes the use of angle cleaves somewhat inconvenient.</p>
+<figure>
+<img src="img/angle_cleaved_fiber.png" alt="angle-cleaved fiber end">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+When light comes out of a fiber with angled cleave, it will be somewhat deflected.
+The direction for reflected light is also shown; it will not go back to the fiber core.
+</figcaption>
+</figure>
+<aside class="callout red">Caution: it depends on the size and the shape of the fiber mode how much an angled fiber end suppresses back reflections. For approximately Gaussian modes, simple formulas are sufficient. Otherwise, you need a more refined tool such as <a href="rp_fiber_calculator.html"><b>RP Fiber Calculator PRO</b></a>.</aside>
+<p>The cleave angle also has an important influence on back-reflected light.
+If it is small, light reflected at the output surface (<a href="fresnel_equations.html" title="Fresnel equations: equations for the amplitude coefficients of transmission and reflection at the interface between two transparent homogeneous media"><em>Fresnel reflection</em></a> due to the index difference to air) will essentially travel backward in the fiber core.
+For large enough cleave angles, however, the light will entirely get into the cladding and will be lost there.
+This means that there is a very large <a href="return_loss.html" title="return loss: a measure for how much reflected light is attenuated">return loss</a> (e.g. 60&nbsp;dB) despite a significant reflection, which for a normal cleave would cause a return loss of only 14&nbsp;dB.</p>
+<p>It depends on the fiber details how large the cleave angle needs to be for a high feedback suppression.
+For a usual single-mode fiber, for example, the mode has a <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">beam divergence</a> of several degrees.
+One may then require a cleave angle as large as 8&deg;, for example.
+For a fiber with high <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a>, it may be even more.
+For <a href="large_mode_area_fibers.html" title="large mode area fibers: optical fibers with relatively large mode areas and a single transverse mode or only a few modes">large mode area fibers</a>, however, rather small cleave angles are sufficient to suppress feedback.</p>
+<p>In some cases, the Fresnel reflection from a fiber end is utilized, e.g. for an effective output coupler of a fiber laser, or in optical time domain reflectometry (OTDR).</p>
+</div>
+<h3 class="togglediv">Other End Shapes</h3>
+<div>
+<p>In most cases, fiber ends are just flat &ndash; either perpendicularly cut or at some angle against the fiber axis as discussed above.
+In some cases, however, one uses different geometrical shapes of fiber ends:</p>
+<ul>
+<li><em>Lensed fiber ends</em> are equipped with a strong curvature which leads to collimation or at least a reduction in <a href="beam_divergence.html" title="beam divergence: a measure for how fast a laser beam expands far from its focus">beam divergence</a> of the beam exiting the fiber.
+Due to the typically rather small core sizes, rather small curvature radii are required to obtain a substantial lensing effect.
+A particular implementation is the <em>fiber ball lens</em>, where a tiny glass sphere is fused to a fiber end.
+Special <a href="fusion_splicing_of_fibers.html" title="fusion splicing of fibers: a technique of making low-loss fiber joints by fusing fiber ends together">fusion splicers</a> can be used for that purpose.
+The natural surface tension of the glass facilitates the fabrication of high quality fiber ball lenses.</li>
+<li>The above mentioned glass sphere can also be processed further; for example, it can be equipped with a reflecting flat surface which reflects the outgoing beam to the side.
+This is useful, for example, for some medical applications where a fiber is embedded in an endoscope.</li>
+<li>There are fiber axion lenses, where near a fiber end the fiber diameter is rapidly reduced down essentially to zero.
+This can be achieved either by polishing (leading to a kind of pencil shape) or with the tapering technique.
+Only in the latter case, the core size is also reduced towards the end; this aspect, however, may not be important for the performance of the device.
+Light coming from the fiber and going through such an axicon end is focused down to a rather small diameter, so that it can be launched into a very small waveguide of a photonic integrated circuit, for example.
+Conversely, light from such a waveguide can be efficiently transferred into a single-mode fiber.</li>
+<li>A fiber end may be tapered down (&rarr;&nbsp;<a href="tapered_fibers.html" title="tapered fibers: optical fibers which are over some length stretched out to a very small diameter"><em>tapered fibers</em></a>) and then cleaved in the region with reduced fiber diameter.
+Such a piece can be used for a <em>mode field adapter</em>, if the reduced mode size at the smaller end fits to that of a different kind of fiber.</li>
+<li>A <em>core-less end cap</em> is a homogeneous glass part spliced to the end of a fiber.
+(In case of a photonic crystal fiber, one may simply collapse the holes in the end region using a fusion splicer.)
+Light coming from the fiber core will expand within the core-less end cap, so that its <a href="beam_radius.html" title="beam radius: a measure of the transverse extension of a light beam">beam radius</a> is substantially increased (at the intensity decreased accordingly) once it reaches the glass/air interface.
+Such devices allow the transfer of light at very high power levels from a fiber into air or vice versa.</li>
+</ul>
+<p>Go to <a href="passive_fiber_optics6.html">Part 6: Fiber Joints</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:32:28 GMT -->
+</html>

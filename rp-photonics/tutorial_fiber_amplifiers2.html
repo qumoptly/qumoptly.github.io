@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:33 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 2: gain and pump absorption, signal reabsorption, quasi-three-level characteristics</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on fiber amplifiers. The second part explains how the local gain and pump absorption depend on the degree of excitation of the laser-active ions.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber amplifiers, gain, pump absorption, reabsorption, quasi-three-level characteristics, erbium, ytterbium">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_fiber_amplifiers2.html"; cat="C"; shownbanner=""; ref="encyclopedia_g.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 2 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>2</span>
+<p>1:&nbsp;<a href="tutorial_fiber_amplifiers1.html">Rare earth ions in fibers</a>, 2:&nbsp;<span style="text-decoration:underline;">Gain and pump absorption</span>, 3:&nbsp;<a href="tutorial_fiber_amplifiers3.html">Self-consistent solutions for the steady state</a>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 2: Gain and Pump Absorption</h2>
+<div>
+<p>In <a href="tutorial_fiber_amplifiers.html">part 1</a> we have already seen how the excitation densities of laser-active ions can be calculated from given optical intensities.
+From these, we easily obtain the local gain coefficient.
+If the laser transition is that between levels 1 and 2, the gain coefficient (in units of 1/m) is</p>
+<div class="eqn"><img src="eqn/gain_coeff.gif" width="310" height="26" alt="gain coefficient"></div>
+<p>where <span class="eqn_il"><i>z</i></span> is the longitudinal position, <span class="eqn_il"><i>N</i><sub>dop</sub></span> is the <a href="doping_concentration.html" title="doping concentration: the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a> of laser-active ions in the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber core</a> and <span class="eqn_il"><span class="greek">&xi;</span>(<span class="greek">&lambda;</span>)</span> is an overlap factor, taking into account that part of the light propagates outside the core and thus does not &ldquo;see&rdquo; the doping.
+Note the term with negative sign, taking into account reabsorption of the signal.
+The reabsorption effect will be particularly important at locations where the excitation density is low; the net gain can then even become negative.
+Even in the strongly excited parts of a fiber amplifier, it is often quite relevant.</p>
+<p>We can apply the same kind of equation for the pump wave.
+There, the gain will come out negative as the absorption term is dominant &ndash; the pump wave is attenuated by absorption.</p>
+<p>The equation above is somewhat simplified, assuming a constant pump intensity within the core for a given <span class="eqn_il"><i>z</i></span> position.
+To generalize that, one would have to insert an integration over the area of the doped region.
+Such a version would allow for arbitrary transverse variations of field intensities and doping concentration.
+Suitable <a href="fiberpower.html">simulation software</a> takes such things into account.</p>
+<p>One may also insert a negative addition to the equation above in order to take into account parasitic propagation losses of the fibers.
+These are usually quite weak, however, in the small length of an amplifier.</p>
+<p>A nice aspect is that if the fiber is <a href="passive_fiber_optics3.html">single-mode</a>, the spatial distributions of pump and signal light are fixed except for the longitudinal evolution of powers due to absorption, gain and possible parasitic power losses.
+So we only need to calculate how the optical powers evolve, and often do not have to do full-blown numerical beam propagation (with wavefronts, etc.).
+Even in multimode fibers, one often gets around that.</p>
+<h3 class="togglediv">Example: Erbium-doped Phosphate Glass Fiber</h3>
+<div>
+<p>As an example, consider an erbium-doped phosphate glass.
+Figure&nbsp;1 shows its effective transition cross sections in the 1.5-&mu;m spectral region.</p>
+<figure>
+<img src="img/er_cs.png" alt="erbium cross sections">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Absorption and emission cross sections for erbium ions in an Er:Yb-doped <a href="phosphate_glasses.html" title="phosphate glasses: certain glasses from which certain optical fibers and laser gain media can be made, for example">phosphate glass</a>, with data from S. Konkanen et al., Proc. SPIE 2996, 32 (1997).
+</figcaption>
+</figure>
+<p>From this we can calculate the effective gain coefficient according to the equation above for different excitation levels:</p>
+<figure>
+<img src="img/er_cs2.png" alt="erbium gain">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Effective gain from the data in Figure&nbsp;1, with a degree of excitation from 0 to 100&#37; in steps of 10&#37;.
+</figcaption>
+</figure>
+<p>For the ground state (lowest curve), we have absorption (negative gain) at all wavelengths.
+With 50&#37; excitation of the erbium ions (middle curve), we get some gain in the 1550-nm region, whereas there is still net absorption at 1500&nbsp;nm, for example; however, that absorption is now much weaker than for the ground state.
+With 80&#37; excitation, the net gain in the 1550-nm region and particularly around 1535&nbsp;nm gets quite high, and there is now also some gain even at 1500&nbsp;nm.
+This implies that such a high excitation level is not possible with 1500-nm pumping; it requires a shorter pump wavelength in order to reduce stimulated emission by the pump wave.
+It is practically only possible with pumping into level manifold 3 (<sup>4</sup>I<sub>11/2</sub>) with a wavelength around 980&nbsp;nm.
+Unfortunately, the power efficiency of pumping is then worse due to the high <a href="quantum_defect.html" title="quantum defect: energy difference between pump and laser photons">quantum defect</a>.</p>
+<p>Figure&nbsp;2 shows that stronger excitation levels do not only provide more gain, but also change the shape of the gain spectrum.
+This is a typical phenomenon for fiber amplifiers.</p>
+</div>
+<h3 class="togglediv">Example: Ytterbium-doped Germanosilicate Fiber</h3>
+<div>
+<p>We get a somewhat similar behavior for ytterbium-doped devices, only that everything happens in the wavelength region around 1&nbsp;&mu;m.
+Figure&nbsp;3 shows the transition cross sections for ytterbium (Yb<sup>3+</sup>) ions in a germanosilicate glass (as is mostly used for ytterbium-doped fiber amplifiers):</p>
+<figure>
+<img src="img/yb_fiber_cs.png" alt="cross sections of Yb-doped glass">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Absorption and emission cross sections of ytterbium-doped germanosilicate glass, as used in the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">cores</a> of ytterbium-doped <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>.
+(Data from spectroscopic measurements by R. Paschotta)
+</figcaption>
+</figure>
+<p>Again we can calculate the effective gain:</p>
+<figure>
+<img src="img/yb_gain.png" alt="ytterbium gain">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Effective gain from the data in Figure&nbsp;3, with a degree of excitation from 0 to 100&#37; in steps of 10&#37;.
+</figcaption>
+</figure>
+<p>Due to the strong absorption and emission peak at 975&nbsp;nm, the so-called <em>zero-phonon line</em>, the behavior is somewhat different, but overall still similar to the case of erbium:</p>
+<ul>
+<li>For little ytterbium excitation, we first get gain in the long-wavelength region.
+If it increases further, we get gain also in the 1030-nm region, where it can get much stronger.</li>
+<li>Only when &asymp;50&#37; is reached, the strong absorption at 975&nbsp;nm is saturated, and above that we get a strong gain there.
+This means that for high pump intensities at 975&nbsp;nm, the excitation becomes &asymp;50&#37;.
+Strong absorption and stimulated emission of about the same strength compensate each other.</li>
+<li>At short wavelengths like 920&nbsp;nm, there is hardly any stimulated emission, so that pump light can be absorbed for even more than 90&#37; excitation.</li>
+</ul>
+</div>
+<h3 class="togglediv">Quasi-three-level Characteristics</h3>
+<div>
+<p>In both cases &ndash; erbium and ytterbium &ndash; we observed a pronounced <a href="four_level_and_three_level_gain_media.html" title="four-level and three-level gain media: laser gain media without/with reabsorption from the lower laser level">quasi-three-level behavior</a>, particularly for short signal wavelengths: without pumping, the fiber provides losses (i.e., negative gain) due to reabsorption of signal light, and only above some value of pump power one can obtain positive gain.
+(For longer signal wavelengths, the reabsorption effects gets weaker.)
+That behavior is typical for fiber amplifiers, as most of them operate on such transitions where the lower laser level is the ground state manifold, or more precisely the higher-lying sublevels of it.
+A notable exception are neodymium-doped amplifiers operating on a four-level transition in the 1050-nm or 1.3-&mu;m region.
+These do not exhibit signal reabsorption (only rather low parasitic losses) and can provide some positive gain already for very low pump power levels.</p>
+<p>So far, we discussed only the local gain in the fiber.
+The overall gain of a fiber amplifier is treated in the next part.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers3.html">Part 3: Self-consistent Steady-state Solutions</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers2.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:34 GMT -->
+</html>

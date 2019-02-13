@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics9.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Passive Fiber Optics&rdquo;: polarization issues, PM fibers, polarization controller, polarization-insensitive designs</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on passive fiber optics. Part 9 discusses polarization issues.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber optics, passive optical fibers, polarization, polarization-maintaining fibers, polarization controller, polarization-insensitive">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="passive_fiber_optics9.html"; cat="C"; shownbanner=""; ref="encyclopedia_b.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 9 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>9</span>
+<p>1:&nbsp;<a href="passive_fiber_optics1.html">Guiding light in a glass fiber</a>, 2:&nbsp;<a href="passive_fiber_optics2.html">Fiber modes</a>, 3:&nbsp;<a href="passive_fiber_optics3.html">Single-mode fibers</a>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<a href="passive_fiber_optics5.html">Fiber ends</a>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<a href="passive_fiber_optics7.html">Propagation losses</a>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<span style="text-decoration:underline;">Polarization issues</span>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<a href="passive_fiber_optics11.html">Nonlinearities of fibers</a>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 9: Polarization Issues</h2>
+<div>
+<h3 class="togglediv">Birefringence in Nominally Symmetric Fibers</h3>
+<div>
+<p>In principle, a fiber with a fully rotationally symmetric design should have no <a href="birefringence.html" title="birefringence: the polarization dependence of the refractive index of a medium">birefringence</a>.
+It should thus fully preserve the <a href="polarization_of_laser_emission.html" title="polarization of laser emission: direction of the electric field oscillation of a laser beam">polarization</a> of light.
+In reality, however, some amount of birefringence always results from imperfections of the fiber (e.g., a slight ellipticity of the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber core</a>), or from bending.
+Therefore, the polarization state of light is changed within a relatively short length of fiber &ndash; sometimes only within a few meters, sometimes much faster.</p>
+<p>Note that the index difference between polarization directions is not necessarily larger in fibers than in other devices.
+However, fibers tend to be long, so that even weak index differences can have substantial effects.</p>
+<p>Another important aspect is that the resulting polarization changes are not only random and unpredictable, but also strongly dependent on the wavelength, the fiber's temperatures along its whole length, and on any bending of the fiber.
+Therefore, it often doesn't help that much to adjust a polarization state, e.g. using a fiber polarization controller (see below); some slight changes of environmental parameters or wavelength may again spoil the polarization.</p>
+</div>
+<h3 class="togglediv">Fiber Polarization Controllers</h3>
+<div>
+<p>Strong bending of a fiber introduces birefringence.
+This means that some appropriate length of fiber, bent with a certain radius and fixed on a coil, can have a relative phase delay of &pi;, or &pi;/2, for example, between the two polarization directions.
+It can thus act like a &lambda;/2 waveplate (half-waveplate) or a &lambda;/4 waveplate (quarter-waveplate).
+If one rotates the whole coil around an axis which coincides with the incoming and outgoing fiber, one obtains a similar effect as for rotating a bulk waveplate in a free-space laser beam.
+One often uses a combination of an effective quarter-waveplate coil with a half-waveplate coil and another quarter-waveplate coil in series to transform some input polarization state into any wanted polarization state.
+Such a <em>fiber polarization controller</em> (Figure&nbsp;1) can work over some substantial wavelength region.</p>
+<figure>
+<img src="img/fiber_pc.png" alt="fiber polarization controller">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+A &ldquo;bat ear&rdquo; polarization controller, containing three fiber coils which can be rotated around the input fiber's axis.
+</figcaption>
+</figure>
+<p>As mentioned before, the problem may remain that the input polarization state drifts with changing environmental conditions, so that the fiber polarization controller would have to be realigned frequently in order to preserve a constant output polarization state.</p>
+</div>
+<h3 class="togglediv">Polarization-maintaining Fibers</h3>
+<div>
+<p>Fibers can be made <a href="polarization_maintaining_fibers.html" title="polarization-maintaining fibers: specialty optical fibers with strong built-in birefringence, preserving the properly oriented linear polarization of an input beam">polarization-maintaining</a> (<em>PM fiber</em>) &ndash; but not by avoiding any birefringence!
+To the contrary, one intentionally introduces a significant birefringence.
+Such fibers are thus <em>high-birefringence fibers</em> (<em>HIBI fibers</em>).</p>
+<p>There are essentially two common ways for doing that:</p>
+<ul>
+<li>A fiber can be made with an elliptical core.
+This results in some level of <em>form birefringence</em>.
+Of course, the fiber <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> will also be affected by the elliptical shape, and the efficiency of coupling light to or from fibers with circular core is somewhat reduced.</li>
+<li>Some mechanical stress can be applied, e.g. by introducing stress rods made from a different glass.
+See Figure&nbsp;2 for some typical realizations.</li>
+</ul>
+<figure>
+<img src="img/pm_fibers.png" alt="polarization-maintaining fibers">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Polarization-maintaining PANDA fiber (left) and bow-tie fiber (right). The built-in stress elements, made from a different type of glass, are shown with a darker gray tone.
+</figcaption>
+</figure>
+<p>Note: a polarization-maintaining fiber does <em>not</em> preserve any polarization state of injected light!
+It does so only for linearly polarized light, where the polarization direction must be one of two orthogonal directions, e.g. along a line between the stress rods or perpendicular to it.
+The <span class="eqn_il"><span class="greek">&beta;</span></span> value for some wavelength will significantly depend on that polarization direction.</p>
+<p>What happens if we inject monochromatic with some other linear polarization direction?
+That can be considered as a superposition of the two basic polarization states.
+After a short length of propagation, these components will have acquired significantly different phase delays (due to their different <span class="eqn_il"><span class="greek">&beta;</span></span> values).
+Therefore, they will no longer combine to the original linear polarization state, but rather in general to some elliptical state.
+After integer multiples of the polarization beat length, however, one again obtains a linear polarization.</p>
+<aside class="callout red">Particularly for non-monochromatic light, a &ldquo;polarization-maintaining&rdquo; fiber does about the <em>opposite</em> of preserving the polarization state!</aside>
+<p>For non-monochromatic light, the situation becomes even more complicated.
+Over some length of fiber, the different wavelength components will experience different polarization-dependent phase shifts, so that the resulting polarization state becomes wavelength-dependent.
+To convert that back into a linear state would be difficult task &ndash; a simple polarization controller could not do that.</p>
+<p>The need to align the input polarization state to a fiber axis in order to have the polarization preserved is of course a serious practical disadvantage of PM fibers.
+It requires more work to fabricate PM fiber-optic setups, for which additional equipment is required.
+Also, not all fiber components are available as PM versions.
+On the other hand, detrimental effects of drifting polarization states, which may otherwise require other measures, are safely avoided with PM setups.</p>
+<p>Note that the introduced birefringence essentially removes any effect of some small additional random birefringence, as can result from moderate bending, for example.
+Such random influences may only very slightly change the local polarization, but will normally not have any significant effect on longer lengths.
+One can understand this by considering <a href="mode_coupling.html" title="mode coupling: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">mode coupling</a>: significant mode coupling requires a perturbation which has a period equal to the beat period of the two polarization states.
+For strong birefringence, that beat period (the <a href="polarization_beat_length.html" title="polarization beat length: the period of interference effects in a birefringent medium"><em>polarization beat length</em></a>) is rather short (for example, a few millimeters), and the usual perturbations are spatially too &ldquo;slow&rdquo; to cause any significant coupling, or at least do not have a strong spatial Fourier component according to the polarization beat.</p>
+</div>
+<h3 class="togglediv">Polarization-insensitive Designs</h3>
+<div>
+<aside class="callout blue">Often it is better to design systems such that polarization does not matter.</aside>
+<p>Another way of eliminating polarization issues is to design devices such that polarization does not matter.
+This approach is usually taken in <a href="optical_fiber_communications.html" title="optical fiber communications: the technology of transmitting information through optical fibers">optical fiber communications</a>, for example.
+One simply takes care that no components are used which could cause substantial polarization-dependent losses, or which would rely on a certain polarization state.
+For example, one generally cannot use <a href="electro_optic_modulators.html" title="electro-optic modulators: optical modulators based on the electro-optic effect">electro-optic modulators</a>, and needs to carefully design any semiconductor devices for low polarization dependence.
+Some polarization effects still remain, which may limit the performance of very fast <a href="fiber_optic_links.html" title="fiber-optic links: optical communication links where the signal light is transported in fibers">fiber-optic links</a>.
+In particular, there is the phenomenon of <a href="polarization_mode_dispersion.html" title="polarization mode dispersion: the polarization dependence of the propagation characteristics of light waves in optical fibers">polarization mode dispersion</a> (PMD), which may be quantified as a <em>differential group delay</em> (DGD): signal components with different polarization may require slightly different times for traveling through a fiber cable, and that may deteriorate the signal quality.
+For short transmission distances and/or moderate bit rates, however, PMD is not a big issue.</p>
+<p>Go to <a href="passive_fiber_optics10.html">Part 10: Chromatic Dispersion of Fibers</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics9.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:25 GMT -->
+</html>

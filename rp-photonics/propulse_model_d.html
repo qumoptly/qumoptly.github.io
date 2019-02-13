@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/propulse_model_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP ProPulse - das physikalische Modell</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Beschreibung des physikalischen Modells der Software RP ProPulse">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP ProPulse, Modellierung, Software, Pulsausbreitung, physikalisches Modell">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="propulse_model_d.html"; cat="S"; shownbanner=""; ref="propulse_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="propulse_model.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html" class="sel">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP ProPulse &ndash; Simulation der Ausbreitung ultrakurzer Pulse</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="propulse_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_purpose_d.html">Anwendung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="propulse_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_interface_d.html">Benutzung</a></td>
+<td class="sub_nav"><a class="sub_n" href="propulse_demos_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Das physikalische Modell</h2>
+<h3>Zeit- und Frequenzdomäne</h3>
+<p>In <b>RP ProPulse</b> wird der Zustand eines optischen Pulses an einer Stelle im modellierten System mit einer komplexen Amplitude <span class="eqn_il"><i>A</i>(<i>t</i>)</span> in der Zeitdomäne oder mit einer Amplitude <span class="eqn_il"><i>A</i>(<i>f</i>)</span> im Frequenzbereich beschrieben.
+Diese Amplituden hängen unmittelbar mit dem elektrischen Feld zusammen.
+Der Algorithmus der Fast Fourier Transform (FFT) erlaubt den Wechsel zwischen beiden Domänen nach Bedarf.
+Der Benutzer der Software muss sich nicht selbst darum kümmern, da die Software automatisch das Feld in der benötigten Domäne berechnet, wenn ein Funktionsaufruf eine entsprechende Eigenschaft des Pulses anspricht.
+Beispielsweise wird die Software die Amplituden im Zeitbereich berechnen (soweit sie nicht bereits berechnet wurden), wenn der Benutzer die Leistung oder Phase als Funktion der Zeit abruft, und das Feld in der Frequenzdomäne wird berechnet, wenn die <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a> benötigt wird.</p>
+<h3>Numerische Repräsentation</h3>
+<p>In jeder Domäne (Zeit oder Frequenz) werden die komplexen Amplitude an Stützstellen mit einem gewissen Abstand in einem bestimmten Bereich gespeichert.
+Je kleiner der Abstand der Stützstellen im Zeitbereich, desto größer ist der abrufbare Bereich von optischen Frequenzen.
+Je größer der gesamte Bereich in der zeitlichen Domäne, desto feiner ist die Frequenzauf&shy;lösung.</p>
+<p>Typischerweise wird ein Puls mit 256, 512 oder 1024 Stützstellen abgebildet.
+Dies reicht meist aus, um die Performance eines üblichen <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">modengekoppelten Lasers</a> zu simulieren, und führt zu sehr schnellen Berechnungen.
+Für extreme Fälle ist es jedoch möglich, bis zu 2<sup>18</sup> = 262&thinsp;144 Stützstellen zu verwenden, z.&thinsp;B. um oktavumspannende <a href="supercontinuum_generation.html" title="supercontinuum generation: a nonlinear process for strong spectral broadening of light">Superkontinuum-Erzeugung</a> zu simulieren.</p>
+<p>Der Benutzer ist selbst verantwortlich dafür, die numerische Auflösung so hoch zu wählen, dass die benötigte Genauigkeit erzielt wird.
+Jedoch ist es möglich, mit Hilfe einfacher <a href="software_script_language_d.html">Skript-Kommandos</a> die Auflösung automatisch den gegebenen Modell-Parametern anpassen zu lassen.</p>
+<h3>Optische Komponenten und Operatoren</h3>
+<p>Der Benutzer kann einen <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">Laserresonator</a> definieren, der eine praktisch unbegrenzte Zahl <em>optischer Komponenten</em> enthalten kann &ndash; beispielsweise <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">Laserkristalle</a>, <a href="laser_mirrors.html" title="laser mirrors: high-quality mirrors used in laser resonators and other optical setups">Spiegel</a>, <a href="optical_modulators.html" title="optical modulators: devices allowing one to manipulate properties of light beams, such as the optical power or phase">Modulatoren</a>, <a href="saturable_absorbers.html" title="saturable absorbers: light absorbers with a degree of absorption which is reduced at high optical intensities">sättigbare Absorber</a>, etc.
+Auch ein Luftweg kann als optische Komponente beschrieben werden, wenn seine <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatische Dispersion</a> oder <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">optische Nichtlinearität</a> relevant ist.</p>
+<p>In einem <a href="ring_lasers.html" title="ring lasers: lasers with a ring resonator">Ringlaser</a> wird der Puls bei jedem Umlauf alle optischen Komponenten in der angegebenen Reihenfolge durchlaufen.
+In einem linearen Resonator dagegen wird der Puls an einem Endspiegel reflektiert und läuft dann in umgekehrter Reihenfolge wieder durch die anderen Komponenten.
+Die Software berücksichtigt dies automatisch und erlaubt es, die Eigenschaften des Pulses an beliebigen Stellen zwischen den Komponenten auf dem Hin- oder Rückweg abzurufen.</p>
+<p>Jede optische Komponente kann viele Eigenschaften haben, die mit sogenannten <em>Operatoren</em> beschrieben werden.
+Beispielsweise könnte ein <a href="laser_mirrors.html" title="laser mirrors: high-quality mirrors used in laser resonators and other optical setups">Laserspiegel</a> Operatoren für wellenlängen&shy;abhängige Verluste und für <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatische Dispersion</a> aufweisen.
+Ein <a href="laser_crystals.html" title="laser crystals: transparent crystals with laser-active dopants, used as laser gain media">Laserkristall</a> könnte einen Operator für die <a href="gain.html" title="gain: a measure of the strength of optical amplification">Laserverstärkung</a> (wellenlängenabhängig, mit einer breiten Auswahl betreffend das Sättigungsverhalten) enthalten, zusätzlich ggf. weitere Operatoren für <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatische Dispersion</a>, die <a href="kerr_effect.html" title="Kerr effect: a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr-Nichtlinearität</a> oder sogar eine nicht-instantane nichtlineare Antwort, die stimulierte <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Ramanstreuung</a> (SRS) beschreibt.
+Andere Operatoren beschreiben <a href="two_photon_absorption.html" title="two-photon absorption: a nonlinear absorption process where two photons are simultaneously absorbed">Zweiphotonen&shy;absorption</a>, <a href="parametric_amplification.html" title="parametric amplification: a process of optical amplification based on a parametric nonlinearity">parametrische Verstärkung</a>, <a href="frequency_doubling.html" title="frequency doubling: the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">Frequenzverdopplung</a>, <a href="pulse_compression.html" title="pulse compression: linear or nonlinear techniques for reducing the durations of optical pulses">Pulskompression</a> (sogar mit automatischer Optimierung der <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatischen Dispersion</a>), oder den Einfluss von <a href="quantum_noise.html" title="quantum noise: noise arising from quantum fluctuations">Quantenrauschen</a>.
+Die enorme Auswahl von Operatoren erlaubt es zusammen mit der extremen Flexibilität der <a href="software_script_language_d.html">Skriptsprache</a>, einen riesigen Bereich von Apparaten und physikalischen Effekten zu modellieren.</p>
+<h3>Rechengeschwindigkeit</h3>
+<p><b>RP ProPulse</b> ist nicht nur für eine sehr flexible Handhabung, sondern auch für hohe Rechengeschwindigkeit optimiert.
+Dies wurde mit einer Kombination von Maßnahmen erreicht, insbesondere durch ein raffiniertes Design des Konzepts und der Datenstrukturen sowie durch die Wahl optimierter Algorithmen.
+Die Benutzer sind häufig erstaunt von der Geschwindigkeit dieser Software.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/propulse_model_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:48 GMT -->
+</html>

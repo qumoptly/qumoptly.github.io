@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/software_modeling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Modeling in Photonics: what are computer models, and how are they applied in laser technology and other areas?</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Modeling means the development of mental constructions and formalized structures for analyzing real objects. It can be applied in laser technology as in many other technical areas.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, computer, modeling, laser development">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="software_modeling.html"; cat="S"; shownbanner=""; ref="software.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="software_modeling_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html" class="sel">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modeling in Photonics</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="software_modeling.html">What is a Model?</a></td>
+<td class="sub_nav"><a class="sub_n" href="modeling_examples.html">Examples</a></td>
+<td class="sub_nav"><a class="sub_n" href="transparent_laser.html">Transparent Laser</a></td>
+<td class="sub_nav"><a class="sub_n" href="modeling_get_started.html">Get started</a></td>
+</tr>
+</table>
+<h2>What is a Model?</h2>
+<aside class="callout blue">Modeling begins with thinking.</aside>
+<p>Essentially, a model is <span class="redbold">a mental construction</span> which is supposed to <span class="redbold">resemble some aspects of reality</span>.
+Typically, it is used for acquiring a better understanding of reality, which then helps for making good decisions.</p>
+<aside class="callout blue">Simplifications are essential for understanding things.</aside>
+<p>A <span class="redbold">model is always simpler than reality</span>, so that we can better cope with the remaining level of complexity.
+Of course, it should not be <em>over-simplified</em>, i.e., it must properly describe certain aspects which are of interest in an investigation.
+The optimum type of model if often one which incorporates everything necessary but nothing more.</p>
+<aside class="callout blue">Computer models reveal not only expected outputs, but also the internal workings!</aside>
+<p>In technical areas, modeling starts with some <span class="redbold">thoughts and ideas</span>, which are then <span class="redbold">condensed to more formal structures</span>, involving certain quantities, mathematical equations, etc.
+Computers equipped with suitable <a href="software.html"><b>software</b></a> can be used for the corresponding calculations.
+<span class="redbold">Computer models</span> simulate the behavior of real objects (e.g., buildings, cars, electronic circuits or lasers) and reveal not only expected outputs, but also the internal workings.</p>
+<h3>Examples for Models</h3>
+<p>Models are routinely used in many technical areas; some examples:</p>
+<table class="stdtable">
+<tr>
+<th class="tdl" style="width:140px;">Application Area</th>
+<th class="tdl" style="width:150px;">Type of Model</th>
+<th class="tdl">Aspects to Investigate</th>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Architecture</td>
+<td class="tdl">small-scale artifact or computer model of a building</td>
+<td>
+<ul>
+<li>space for inhabitants and installations</li>
+<li>distribution of light (sunlight, illumination)</li>
+<li>energy flows</li>
+<li>structural stability</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Cars</td>
+<td class="tdl">model of a car body</td>
+<td>
+<ul>
+<li>space for passengers</li>
+<li>structural stability, safety in crashes</li>
+<li>dynamic driving behavior</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Electronics</td>
+<td class="tdl">model of an electronic circuit</td>
+<td>
+<ul>
+<li>validation of functionality</li>
+<li>influences of imperfections and tolerances of parts</li>
+<li>operation with over- or under-voltage</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl" style="font-size:16px;">Laser Technology</td>
+<td class="tdl">model for a Q-switched laser with laser crystal, modulator and resonator</td>
+<td>
+<ul>
+<li>dynamics of pulse generation</li>
+<li>power conversion efficiency</li>
+<li>beam quality</li>
+<li>effects of gain guiding, limited modulator speed, etc.</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>The <a href="modeling_examples.html">next page</a> gives you more concrete examples for models in laser technology.</p>
+<h3>General Purposes of Models</h3>
+<p>Modeling is not a purpose itself, but is done in order to obtain important benefits:</p>
+<table class="stdtable">
+<tr>
+<th class="tdl" style="width:210px;">Purpose</th>
+<th class="tdl">Examples in laser technology</th>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Develop a clear understanding</span> of how things work</td>
+<td>
+<ul>
+<li>power conversion in laser crystal or doped fiber</li>
+<li>beam formation in a laser resonator</li>
+<li>dynamics of pulse generation or amplification</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Plan the construction</span> of prototypes and final products</td>
+<td>
+<ul>
+<li>laser resonators</li>
+<li>laser heads</li>
+<li>pulse amplification systems</li>
+<li>data transmissions systems</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Analyze problems</span> of existing or planned devices</td>
+<td>
+<ul>
+<li>poor beam quality</li>
+<li>poor power conversion efficiency</li>
+<li>instabilities</li>
+<li>optical damage</li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="tdl"><span class="redbold">Develop and analyze new ideas</span></td>
+<td>
+<ul>
+<li>new resonator design concepts</li>
+<li>new pumping arrangements</li>
+<li>new gain materials</li>
+<li>new principles of pulse amplification</li>
+</ul>
+</td>
+</tr>
+</table>
+<p>But why should you do such investigations on computer models rather than on the real objects?</p>
+<aside class="callout green">Would you build and test ten different versions of your laser in order to see which one works best?</aside>
+<ul>
+<li>Making a computer model is often much <span class="redbold">simpler, quicker and cheaper</span> than fabricating the real object.
+In particular, making modified versions (copies with some modifications) is by far cheaper with computer models. <br>
+So you can easily try out many different versions without ordering a lot of expensive parts, waiting for delivery and spending ages in the lab.</li>
+</ul>
+<aside class="callout green">If your real laser doesn't work properly, does it tell you why?</aside>
+<ul>
+<li>In contrast to real objects, a computer model is <span class="redbold">fully transparent</span>: you can easily inspect any internal details of its operation, which would often be hard or impossible to observe in a real object.
+(This aspect is discussed in depth in the presentation &quot;<a href="transparent_laser.html"><b>The Transparent Laser</b></a>&quot;.)</li>
+<li>Tests on computer models are <span class="redbold">never destructive</span> &ndash; even crash tests for cars or simulations of laser amplifiers at extremely high intensity levels.</li>
+</ul>
+<aside class="callout green">If your modification does not have the expected effect: could it be imperfect alignment or a dirty component?</aside>
+<ul>
+<li>Experiments on computer models are often <span class="redbold">more conclusive than experimental tests</span>, because they are not affected by poorly controlled influences. <br>
+For example, two versions of a laser model can be <em>exactly the same</em> except for one detail you have changed; you will clearly see the effect of that change, and you can at any time easily switch between different versions.</li>
+</ul>
+<aside class="callout green">How can you know whether your laser works as well is it should?</aside>
+<ul>
+<li>Comparisons of real experiments with computer simulations show whether <span class="redbold">unexpected phenomena</span> occur in your devices.
+For example, find out whether the performance is as good as it can be for your design.</li>
+</ul>
+<p>Building and testing the real objects stays necessary &ndash; but is then based on prototype or product designs which result from a clear understanding.
+Don't build and test what cannot work anyway!</p>
+<h3>The Benefits</h3>
+<p>Typical achieved benefits of working with computer models are:</p>
+<aside class="callout blue">The point is not to simply do some additional nice things, but to improve your understanding and make your work more efficient.</aside>
+<ul>
+<li>You can <span class="redbold">develop laser devices more efficiently</span>, i.e., <span class="redbold">get results more quickly</span> and <span class="redbold">save resources</span>.</li>
+<li>You can <span class="redbold">deepen your technical competences</span> far beyond the level of textbook knowledge.</li>
+<li>When playing with models, you <span class="redbold">get new ideas</span> e.g. for optimizations or new technical approaches.</li>
+</ul>
+<p>Such benefits are of crucial importance for the productivity e.g. of a <span class="redbold">laser development engineer</span> or a <span class="redbold">scientist in laser research</span>.
+Both need to understand exactly how things work and how to effectively optimize them.</p>
+<p>For more details, see also our <a href="tutorial_modeling.html"><b>tutorial on modeling</b></a>.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/software_modeling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:44 GMT -->
+</html>

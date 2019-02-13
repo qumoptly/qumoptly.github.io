@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/mode_coupling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:00:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - mode coupling, coupled-mode theory, fibers, waveguides, cavities, resonators</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Mode coupling is a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="mode coupling, coupled-mode theory, fibers, waveguides, cavities, resonators">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="mode_coupling.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Mode Coupling</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="buyersguide.html" class="bg_bgheading">Buyer's Guide</a></p>
+<p>Use the <a href="buyersguide.html"><b>RP Photonics Buyer's Guide</b></a> to find suppliers for photonics products! You will hardly find a more convenient resource.</p>
+</aside>
+<aside class="boxadvertisement">
+<h1>Simulation of Mode Coupling Effects</h1>
+<p>The software <a href="fiberpower.html"><b>RP Fiber Power</b></a> can be used for simulating mode coupling effects.
+See demo cases for <a href="fiberpower_hom_coupler.html"><b>mode coupling in a fiber Bragg grating</b></a> or in a <a href="fiberpower_coupler.html"><b>fiber coupler</b></a>.</p>
+<figure>
+<img src="img/fiberpower_coupler_small.gif" alt="fiber coupler">
+</figure>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Modenkopplung, Kopplung zwischen Moden</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cited189.html?article=mode%20coupling">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>The concept of mode coupling is very often used e.g. to describe the propagation of light in some <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguides</a> or optical <a href="cavities.html" title="cavities: resonators for light (or for microwaves)">cavities</a> under the influence of additional effects, such as external disturbances or nonlinear interactions.
+The basic idea of coupled-mode theory is to decompose all propagating light into the known <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a> of the <em>undisturbed</em> device, and then to calculate how these modes are coupled with each other by some additional influence.
+This approach is often technically and conceptually much more convenient than, e.g., recalculating the propagation modes for the actual situation in which light propagates in the device.</p>
+<p>Some examples of mode coupling are discussed in the following:</p>
+<ul>
+<li>An optical <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fiber</a> may have several propagation modes, to be calculated for the fiber being kept straight.
+If the fiber is strongly bent, this can introduce coupling e.g. from the fundamental mode to higher-order propagation modes (even to cladding modes), or coupling between different polarization states.
+<a href="bend_losses.html" title="bend losses: propagation losses in an optical fiber (or other waveguide) caused by bending">Bend losses</a> can be understood as <a href="mode_coupling.html" title="mode coupling: a concept for describing and calculating light propagation in certain situations, e.g. involving nonlinear interactions">coupling</a> to non-guided (and thus lossy) modes.
+<a href="fiber_bragg_gratings.html" title="fiber Bragg gratings: reflective structures in the core of an optical fiber with a periodic or aperiodic perturbation of the effective refractive index">Fiber Bragg gratings</a> (FBGs) can be understood is fibers which are equipped with additional means for mode coupling &ndash; for example, for reflecting light (with short period gratings) or for coupling to modes (guided modes or cladding modes) propagating in the same direction (with long period gratings).</li>
+<li><a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">Nonlinear interactions</a> in a <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguide</a> can also couple the modes (as calculated for low light intensities) to each other.
+This picture can serve e.g. to describe processes such as <a href="frequency_doubling.html" title="frequency doubling: the phenomenon that an input wave in a nonlinear material can generate a wave with twice the optical frequency">frequency doubling</a> in a waveguide, where the nonlinear coupling mechanism transfers amplitude (and <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a>) from the pumped mode into a mode with twice the optical frequency.</li>
+<li>In high-power fiber amplifiers, a mechanism has been identified which can couple power from the fundamental fiber mode into higher-order modes [12].
+This mechanism can involve either a <a href="kramers_kronig_relations.html" title="Kramers&ndash;Kronig relations: mathematical relations between absorption and refractive index of transparent media">Kramers&ndash;Kronig</a> effect or thermal distortions influencing the <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> profile.
+This leads to a strong loss of <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a> above a certain pump power level.</li>
+<li><a href="optical_resonators.html" title="optical resonators: arrangements of optical components which allow a beam of light to circulate">Optical resonators</a> (<a href="cavities.html" title="cavities: resonators for light (or for microwaves)">cavities</a>) can exhibit various kinds of mode coupling phenomena.
+For example, aberrations of the <a href="thermal_lensing.html" title="thermal lensing: a lensing effect induced by temperature gradients">thermal lens</a> in the <a href="gain_media.html" title="gain media: media for laser amplification">gain medium</a> of a <a href="solid_state_lasers.html" title="solid-state lasers: lasers based on solid-state gain media (usually ion-doped crystals or glasses)">solid-state</a> <a href="bulk_lasers.html" title="bulk lasers: lasers based on bulk crystals as gain media">bulk laser</a> couple the modes of the <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">laser resonator</a>, as calculated without these aberrations.
+In this situation, however, not all involved modes are necessarily resonant at the same time.
+This means then that the amplitude contribution which is fed e.g. from a fundamental (Gaussian) mode into a particular <a href="higher_order_modes.html" title="higher-order modes: transverse modes of a resonator or waveguide, excluding the fundamental (axial) modes">higher-order</a> <a href="resonator_modes.html" title="resonator modes: modes of an optical or microwave resonator">resonator mode</a> in each resonator round trip will have a different <a href="optical_phase.html" title="optical phase: the phase of the electric field of an optical wave, usually considered in the time domain">phase</a> each time.
+This nonresonant nature of the coupling means that the coupling will in general have a small effect &ndash; which is essential for laser operation with high <a href="beam_quality.html" title="beam quality: a measure for how well a laser beam can be focused">beam quality</a>, since otherwise aberrations would strongly excite higher-order modes, having a higher <a href="beam_parameter_product.html" title="beam parameter product: product of the beam radius in a focus and the far-field beam divergence">beam parameter product</a>.
+Strong resonant coupling can occur in certain situations, involving frequency degeneracies of resonator modes.
+See Ref.&nbsp;[9] for more details.</li>
+</ul>
+<p>Technically, the mode coupling approach is often used in the form of coupled differential equations for the complex excitation amplitudes of all the involved modes.
+These equations contain coupling coefficients, which are usually calculated from overlap integrals, involving the two mode functions and the disturbance causing the coupling.
+Typically, the applied procedure is first to calculate the mode amplitudes for the given light input, then to propagate these amplitudes based on the above-mentioned coupled differential equations (e.g. using some Runge&ndash;Kutta algorithm), and finally (if required) to recombine the mode fields to obtain the resulting field distribution.</p>
+<p>Instead of using coupled-mode theory, which is based on simplifying assumptions (which are not always well fulfilled), one can also study mode coupling phenomena with numerical beam propagation.
+This method is computationally more intense, but can generate more detailed insight.
+As an example, Figure&nbsp;1 shows how the optical powers of several guided modes evolve in a long-period fiber Bragg grating.
+The field evolution has been calculated with numerical beam propagation, and the local mode powers have been obtained from the results using overlap integrals with the mode functions as obtained from a mode solver applied to the bare fiber.</p>
+<figure>
+<img src="img/fiberpower_hom_coupler_mode_powers.png" alt="coupling to a higher-order mode in a fiber Bragg grating">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Evolution of mode powers in a long-period fiber Bragg grating, which couples light from the injected fundamental mode radiation into higher-order modes. This diagram has been taken from a <a href="fiberpower_hom_coupler.html">case study on beam propagation in fiber devices</a>.
+</figcaption>
+</figure>
+<p>An important physical aspect of such coherent mode coupling phenomena is that the <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical power</a> transferred between two modes depends on the amplitudes which are already in both modes.
+A consequence of that is that the power transfer from a mode A to another mode B can be kept very small simply by strongly attenuating mode B.
+In this way, mode B is prevented from acquiring sufficient power to extract power from mode A efficiently, so that mode A experiences only little loss, despite the coupling.</p>
+<p>For some cases with statistical variations of coupling effects, one may use a coupled-power theory instead of standard theories based on amplitude coupling [11].</p>
+<h3 class="biblio togglediv">Bibliography</h3>
+<div>
+<table class="reftable">
+<tr><td class="refno">[1]</td><td class="refs">A. W. Snyder, &ldquo;Coupled-mode theory for optical fibers&rdquo;, <a href="https://www.osapublishing.org/josa/abstract.cfm?uri=josa-62-11-1267" rel="nofollow">J. Opt. Soc. Am. 62 (11), 1267 (1972)</a></td></tr>
+<tr><td class="refno">[2]</td><td class="refs">H. Kogelnik and C. V. Shank, &ldquo;Coupled-wave theory of distributed feedback lasers&rdquo;, <a href="http://jap.aip.org/resource/1/japiau/v43/i5/p2327_s1" rel="nofollow">J. Appl. Phys. 43 (5), 2327 (1972)</a></td></tr>
+<tr><td class="refno">[3]</td><td class="refs">A. Yariv, &ldquo;Coupled-mode theory for guided-wave optics&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=1077767" rel="nofollow">IEEE J. Quantum Electron. 9 (9), 919 (1973)</a></td></tr>
+<tr><td class="refno">[4]</td><td class="refs">H. Haus <i>et al.</i>, &ldquo;Coupled-mode theory of optical waveguides&rdquo;, J. Lightwave Technol. 5 (1), 16 (1987)</td></tr>
+<tr><td class="refno">[5]</td><td class="refs">W. P. Huang <i>et al.</i>, &ldquo;Optical wavelength filter with tapered couplers&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=84501" rel="nofollow">IEEE Photon. Technol. Lett. 3 (9), 812 (1991)</a></td></tr>
+<tr><td class="refno">[6]</td><td class="refs">R. Paschotta <i>et al.</i>, &ldquo;Nonlinear mode coupling in doubly-resonant frequency doublers&rdquo;, <a href="http://link.springer.com/article/10.1007%2FBF01082345" rel="nofollow">Appl. Phys. B 58, 117 (1994)</a></td></tr>
+<tr><td class="refno">[7]</td><td class="refs">W.-P. Huang, &ldquo;Coupled-mode theory for coupled optical waveguides: an overview&rdquo;, <a href="https://www.osapublishing.org/josaa/abstract.cfm?uri=josaa-11-3-963" rel="nofollow">J. Opt. Soc. Am. A 11 (3), 963 (1994)</a></td></tr>
+<tr><td class="refno">[8]</td><td class="refs">N. Matuschek <i>et al.</i>, &ldquo;Exact coupled-mode theories for multilayer interference coatings with arbitrarily strong index modulations&rdquo;, <a href="http://ieeexplore.ieee.org/xpl/articleDetails.jsp?arnumber=555995" rel="nofollow">IEEE J. Quantum Electron. 33 (3), 295 (1997)</a></td></tr>
+<tr><td class="refno">[9]</td><td class="refs">R. Paschotta, &ldquo;Beam quality deterioration of lasers caused by intracavity beam distortions&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-14-13-6069" rel="nofollow">Opt. Express 14 (13), 6069 (2006)</a></td></tr>
+<tr><td class="refno">[10]</td><td class="refs">M. B. Shemirani <i>et al.</i>, &ldquo;Principle modes in graded-index multimode fiber in presence of spatial- and polarization-mode coupling&rdquo;, <a href="https://www.osapublishing.org/jlt/abstract.cfm?uri=jlt-27-10-1248" rel="nofollow">J. Lightwave Technol. 27 (10), 1248 (2009)</a></td></tr>
+<tr><td class="refno">[11]</td><td class="refs">M. Koshiba <i>et al.</i>, &ldquo;Multi-core fiber design and analysis: Coupled-mode theory and coupled-power theory&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-19-26-B102" rel="nofollow">Opt. Express 19 (26), B102 (2001)</a></td></tr>
+<tr><td class="refno">[12]</td><td class="refs">A. V. Smith and J. J. Smith, &ldquo;Mode instability in high power fiber amplifiers&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-19-11-10180" rel="nofollow">Opt. Express 19 (11), 10180 (2011)</a></td></tr>
+<tr><td class="refno">[13]</td><td class="refs">A. W. Snyder and J. D. Love, <i>Optical Waveguide Theory</i>, Chapman and Hall, London (1983)</td></tr>
+</table>
+<p class="suggest_literature"><a href="encyclopedia_literature.html">(Suggest additional literature!)</a></p>
+</div>
+<p class="seealso">See also: <a href="modes.html" title="modes: self-consistent electric field distributions in waveguides, optical resonators or in free space">modes</a>, <a href="fibers.html" title="fibers: a kind of long and thin optical waveguides which can be bent to some degree">fibers</a>, <a href="multi_core_fibers.html" title="multi-core fibers: optical fibers containing more than one fiber core">multi-core fibers</a>, <a href="waveguides.html" title="waveguides: spatially inhomogeneous transparent structures for guiding light">waveguides</a><br>and other articles in the categories <a href="categories.html#fiber_optics_and_waveguides" title="other articles on fiber optics and waveguides">fiber optics and waveguides</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="mode_coupling.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2 style="font-size:20px;">Debugging Is Now Fun!</h2>
+<p>The software products which are supporting our <a href="software_script_language3916.html?banner=Debugger">script language</a> (e.g. <a href="fiberpower3916.html?banner=Debugger">RP Fiber Power</a> and <a href="coating3916.html?banner=Debugger">RP Coating</a>) have now got a <a href="software_news_2017_05_313916.html?banner=Debugger">powerful debugger</a>!</p>
+<a href="software_news_2017_05_313916.html?banner=Debugger"><img src="img/expression_debugger_small.png" alt="debugger" style="margin:10px 0;"></a>
+<p>It works even within expressions, not only after each command!</p>
+<p>The <a href="software_news3916.html?banner=Debugger">RP Photonics Software News</a> keep you informed.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Field Guide on Lasers</h2>
+<p>Enjoy a compact introduction to laser technology:</p>
+<ul>
+<li>basic principles</li>
+<li>laser beams</li>
+<li>laser resonators</li>
+<li>various types of lasers</li>
+<li>Q switching and mode locking</li>
+<li>frequency conversion</li>
+<li>laser safety</li>
+</ul>
+<p style="text-align:center;"><a href="http://spie.org/x648.html?product_id=767474"><img src="img/fg_lasers.png" alt="FG Lasers"></a></p>
+<p>This book soon became a bestseller among the SPIE Field Guides.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/mode_coupling.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:00:09 GMT -->
+</html>

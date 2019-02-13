@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics11.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Passive Fiber Optics&rdquo;: nonlinearities, Kerr effect, self-phase modulation, nonlinear self-focusing cross-phase modulation, Brillouin scattering, Raman scattering</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-11-09">
+<meta name="description" content="Tutorial on passive fiber optics. Part 11 discusses nonlinearities of fibers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber optics, nonlinearities, Kerr effect, self-phase modulation, nonlinear self-focusing cross-phase modulation, Brillouin scattering, Raman scattering">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="passive_fiber_optics11.html"; cat="C"; shownbanner=""; ref="encyclopedia_n.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Passive Fiber Optics</h1>
+<p>This is part 11 of a <a href="passive_fiber_optics.html">tutorial on passive fiber optics</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>11</span>
+<p>1:&nbsp;<a href="passive_fiber_optics1.html">Guiding light in a glass fiber</a>, 2:&nbsp;<a href="passive_fiber_optics2.html">Fiber modes</a>, 3:&nbsp;<a href="passive_fiber_optics3.html">Single-mode fibers</a>, 4:&nbsp;<a href="passive_fiber_optics4.html">Multimode fibers</a>, 5:&nbsp;<a href="passive_fiber_optics5.html">Fiber ends</a>, 6:&nbsp;<a href="passive_fiber_optics6.html">Fiber joints</a>, 7:&nbsp;<a href="passive_fiber_optics7.html">Propagation losses</a>, 8:&nbsp;<a href="passive_fiber_optics8.html">Fiber couplers and splitters</a>, 9:&nbsp;<a href="passive_fiber_optics9.html">Polarization issues</a>, 10:&nbsp;<a href="passive_fiber_optics10.html">Chromatic dispersion of fibers</a>, 11:&nbsp;<span style="text-decoration:underline;">Nonlinearities of fibers</span>, 12:&nbsp;<a href="passive_fiber_optics12.html">Ultrashort pulses and signals in fibers</a>, 13:&nbsp;<a href="passive_fiber_optics13.html">Accessories and tools</a>
+</p>
+</div>
+<h2 class="togglediv">Part 11: Nonlinearities of Fibers</h2>
+<div>
+<p>In an optical fiber, light is confined to a small transverse region, so that even moderate optical powers leads to high optical intensities.
+In addition, light often propagates over considerable distances in a fiber.
+For these reasons, nonlinear effects due to fiber <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> often have substantial effects.
+This is particularly the case if fibers are used to transmit short pulses, and in <a href="tutorial_fiber_amplifiers7.html">fiber amplifiers for short pulses</a>.</p>
+<h3 class="togglediv">The Kerr Nonlinearity</h3>
+<div>
+<p>The simplest and most common nonlinear effect in fibers is the <a href="kerr_effect.html" title="Kerr effect: a nonlinear interaction of light in a medium with an instantaneous response, related to the nonlinear electronic polarization">Kerr effect</a>.
+Essentially, this means that the phase delay in the fiber gets larger if the optical intensity increases.
+This can be described via an increase of <a href="refractive_index.html" title="refractive index: a measure of the reduction in the velocity of light in a medium">refractive index</a> in proportion to the intensity:</p>
+<div class="eqn"><img src="eqn/spm_dn.gif" width="61" height="24" alt="index change via SPM"></div>
+<p>That increase can often be considered as instantaneous, even though this is not exactly true in reality.
+Below we also consider effects of non-instantaneous nonlinearities.</p>
+<p>The <a href="nonlinear_index.html" title="nonlinear index: a parameter for quantifying the Kerr nonlinearity of a medium">nonlinear index</a> <span class="eqn_il"><i>n</i><sub>2</sub></span> is rather small for <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fibers</a> &ndash; around 2.7&thinsp;&middot;&thinsp;10<sup>&minus;16</sup>&thinsp;cm<sup>2</sup>/W for wavelengths around 1.5&nbsp;&mu;m.
+In numerical simulations, one usually uses a value according to the center <a href="optical_frequency.html" title="optical frequency: the oscillation frequency of the electric field of light">optical frequency</a>, i.e., tentatively higher values for shorter wavelengths.
+Other glasses, e.g. <a href="fluoride_fibers.html" title="fluoride fibers: optical fibers based on fluoride glasses">fluoride glasses</a> or chalcogenide fibers, often have substantially stronger nonlinearities.</p>
+<p>Note that electrostriction leads to some reduction in fiber diameter at high intensities.
+That effect, however, requires some time.
+For nanosecond pulses, it leads to some increase of the effective nonlinear index, which is not seen for picosecond or femtosecond pulses.
+This is one of the reasons why somewhat different nonlinear index values appear in the literature.</p>
+</div>
+<h3 class="togglediv">Self-phase Modulation</h3>
+<div>
+<p>One of the consequences of the Kerr effect is <a href="self_phase_modulation.html" title="self-phase modulation: nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a> (SPM).
+This means that a light wave in the fiber experiences a nonlinear phase delay which results from its own intensity.</p>
+<p>For a fiber mode, the phase change per unit optical power and unit length is described by the proportionality constant</p>
+<div class="eqn"><img src="eqn/spm_gamma_fiber.gif" width="93" height="46" alt="SPM"></div>
+<p>(in units of rad/(W &middot; m)) where <span class="eqn_il"><i>A</i><sub>eff</sub></span> is the <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>.
+Interestingly, for a nearly Gaussian mode shape with <a href="beam_radius.html" title="beam radius: a measure of the transverse extension of a light beam">beam radius</a> <span class="eqn_il"><i>w</i></span> this value is only half the value for a <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian beam</a> in a homogeneous medium, where only the on-axis value is considered.
+In the fiber, we have lower phase changes away from the fiber axis, and the overall nonlinear phase delay is only half the peak value.
+(Note that the wavefronts of a mode in the fiber are kept approximately plane despite SPM; the mode is &ldquo;kept together&rdquo; by the balance of diffraction and waveguiding, and the nonlinear phase change is &ldquo;spread&rdquo; over the whole beam profile.)</p>
+<p>If an optical <a href="pulses.html" title="pulses: flashes of light">pulse</a> is transmitted through a fiber, the Kerr effect causes a time-dependent phase shift according to the time-dependent pulse intensity.
+In this way, an initial unchirped optical <a href="pulses.html" title="pulses: flashes of light">pulse</a> acquires a so-called <a href="chirp.html" title="chirp: time dependence of the instantaneous frequency of an optical pulse">chirp</a>, i.e., a temporally varying instantaneous frequency.
+This is shown in Figure&nbsp;1:</p>
+<figure>
+<img src="img/spm.png" alt="effect of self-phase modulation on a pulse">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Instantaneous frequency of an initially unchirped pulse which has experienced self-phase modulation.
+The central part of the pulse exhibits an up-chirp.
+</figcaption>
+</figure>
+<p>For <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a> with picosecond or femtosecond <a href="pulse_duration.html" title="pulse duration: the duration of an optical pulse">pulse duration</a> and a high <a href="peak_power.html" title="peak power: maximum optical power of a pulse">peak power</a>, the <a href="instantaneous_frequency.html" title="instantaneous frequency: temporal derivative of the oscillation phase divided by 2&pi;">instantaneous frequency</a> can wiggle around in a range of many terahertz.
+This can lead to substantial spectral broadening, i.e., increase of the spectral <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>.
+Note, however, that the optical spectrum (Fourier spectrum) does <em>not</em> simply reflect the range of instantaneous frequencies.
+Typically, it shows strong oscillations if SPM is the dominant effect and <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> effects (see <a href="passive_fiber_optics10.html">part 10</a>) are much weaker.
+This is shown in Figure&nbsp;2 for an example case:</p>
+<figure>
+<img src="img/spm_spectrum.png" alt="effect of self-phase modulation on a pulse">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Spectrum of an initially unchirped 1-ps pulse which has experienced strong self-phase modulation (with a peak nonlinear phase shift of 20&nbsp;rad), leading to characteristic oscillations of the <a href="power_spectral_density.html" title="power spectral density: optical power or noise power per unit frequency interval">power spectral density</a>.
+</figcaption>
+</figure>
+<p>As explained in our encyclopedia article on <a href="self_phase_modulation.html" title="self-phase modulation: nonlinear phase modulation of a beam, caused by its own intensity via the Kerr effect">self-phase modulation</a>, these oscillations can be understood as a kind of <a href="interference.html" title="interference: a range of phenomena associated with the superposition of waves">interference</a> effect, related to the fact that the instantaneous frequency reaches each value at two different times.</p>
+<p>As a rule of thumb, substantial broadening begins if the nonlinear phase shift exceeds <span class="eqn_il">2<span class="greek">&pi;</span></span>.
+For a standard <a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction">single-mode fiber</a> with a mode area of 75&nbsp;&mu;m<sup>2</sup>, for example, this starts for a peak power of a few kilowatts over a meter of fiber.
+Note that 1&nbsp;kW peak power for a 1-ps pulse means only about 1&nbsp;nJ of <a href="pulse_energy.html" title="pulse energy: energy of an optical pulse">pulse energy</a>; one easily reaches many kilowatts with <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a>.</p>
+<p>Note that <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> (see <a href="passive_fiber_optics10.html">part 10</a>) also often has a strong influence on ultrashort pulses.
+The overall effect of Kerr nonlinearity and dispersion is therefore strongly dependent on the dispersion properties.
+For example, <a href="solitons.html" title="solitons: pulses with a certain balance of nonlinear and dispersive effects">soliton</a> pulses can be formed in a fiber with anomalous dispersion.
+For a fundamental soliton, self-phase modulation and dispersion act together such that there is no temporal or spectral broadening any more.
+For higher-order solitons, there is a periodic evolution, which becomes rather complicated for high orders.
+In the normal dispersion regime, chromatic dispersion leads to temporal broadening, which reduces nonlinear phase shifts, and strongly <a href="chirp.html" title="chirp: time dependence of the instantaneous frequency of an optical pulse">chirped pulses</a> may arise.</p>
+</div>
+<h3 class="togglediv">Nonlinear Self-focusing</h3>
+<div>
+<p>Another consequence of the Kerr effect is nonlinear <a href="self_focusing.html" title="self-focusing: focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>.
+One can recalculate the fiber modes (see <a href="passive_fiber_optics2.html">part 2</a>) such that the nonlinear self-focusing is included.
+The modes then shrink significantly if the optical power reaches 1&nbsp;MW or higher.
+This is illustrated in Figure&nbsp;3:</p>
+<figure>
+<img src="img/fiberpower_self_focusing2.png" alt="mode area vs. optical power">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Numerically calculated mode area of a <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fiber</a> versus optical power.
+The nonlinear index was assumed to be 2.2 &middot; 10<sup>&minus;20</sup>&nbsp;m<sup>2</sup>/W.
+The red line indicates the critical power for catastrophic self-focusing.
+The figure has been taken from a <a href="fiberpower_self_focusing.html">demonstration</a> of the software <a href="fiberpower.html"><b>RP Fiber Power</b></a>.
+</figcaption>
+</figure>
+<p>For a peak power of the order of 5&nbsp;MW (in <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fibers</a>), <em>catastrophic self-focusing</em> occurs: the shrinking intensity profile further increases the nonlinear focusing effect, which in turn leads to more shrinking, and the profile collapses totally.
+The enormously high intensities subsequently destroy the fiber; a single ultrashort pulse is sufficient for that.</p>
+<p>Self-focusing also destabilizes higher-order modes of a multimode fiber.
+Figure&nbsp;5 shows an example, where a power of 4&nbsp;MW has been injected into the LP<sub>11</sub> mode of a fiber (as calculated without the fiber nonlinearity).
+After about 10&nbsp;mm of propagation distance, the light is transferred into a mixture of LP<sub>01</sub> and LP<sub>11</sub>:</p>
+<figure>
+<img src="img/fiberpower_self_focusing4.png" alt="numerical beam propagation with Kerr nonlinearity">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Amplitude profile in the x-z plane for injection of the LP<sub>11</sub> mode (as calculated without the nonlinearity). The simulation has been done with the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software.
+</figcaption>
+</figure>
+<p>(This is part of a <a href="fiberpower_self_focusing.html">case study on nonlinear self-focusing</a>.)</p>
+<p>Most nonlinear effects can be reduced by using a fiber with a large <a href="effective_mode_area.html" title="effective mode area: a quantitative measure of the area which a waveguide or fiber mode effectively covers in the transverse dimensions">effective mode area</a>, as this leads to lower optical intensities for a given power level.
+However, the power threshold for critical self-focusing does <em>not</em> depend on the mode area.
+This is essentially because larger modes are more sensitive to lensing effects.
+As a result, the optical <a href="peak_power.html" title="peak power: maximum optical power of a pulse">peak power</a> in a fiber must always be limited to a few megawatt; self-focusing introduces a rather hard limit.</p>
+</div>
+<h3 class="togglediv">Cross-phase Modulation</h3>
+<div>
+<p>If two different waves, e.g. at two different wavelengths, propagate together in a fiber, there can be a nonlinear phase change of each beam resulting from the intensity of the other beam.
+This phenomenon of <a href="cross_phase_modulation.html" title="cross-phase modulation: a nonlinear effect where the optical intensity of one beam influences the phase change of another beam">cross-phase modulation</a> (XPM), which occurs in addition to self-phase modulation, can be relevant in <a href="optical_fiber_communications.html" title="optical fiber communications: the technology of transmitting information through optical fibers">optical fiber communications</a> with <a href="wavelength_division_multiplexing.html" title="wavelength division multiplexing: a multiplexing technique working in the wavelength domain">wavelength division multiplexing</a>, for example.</p>
+<p>Curiously, the resulting phase changes are two times larger than one would expect from the equation for self-phase modulation as given above, if both beams have the same linear polarization.
+For XPM, we then have a phase change of beam 2 resulting from the intensity of beam 1 according to</p>
+<div class="eqn"><img src="eqn/xpm_dn.gif" width="96" height="26" alt="index change via XPM"></div>
+<p>while a 3 times smaller nonlinear phase change than that would result for orthogonal polarization directions.</p>
+</div>
+<h3 class="togglediv">Four-wave Mixing</h3>
+<div>
+<figure class="right" style="width:200px;">
+<img src="img/fwm.png" alt="four-wave mixing">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Generation of new frequency components via four-wave mixing.
+</figcaption>
+</figure>
+<p>Another effect resulting from the Kerr effect is <a href="four_wave_mixing.html" title="four-wave mixing: an interaction of light waves based on a &chi;<sup>(3)</sup> nonlinearity">four-wave mixing</a>.
+For example, if two wavelength components travel together through a fiber, four-wave mixing may lead to two new frequency components (see Figure&nbsp;5).
+This can be understood as follows: the two input frequencies lead to a <a href="beat_note.html" title="beat note: an oscillation of the optical intensity arising from the superposition of light with different optical frequencies">beat note</a>, i.e., an oscillation of the total intensity with a frequency which is the difference of the two optical frequencies.
+Through the Kerr effect, this leads to a phase modulation, which creates sidebands.
+Note, however, that this process can be effective over long lengths of fiber only if it is <a href="phase_matching.html" title="phase matching: a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matched</a>.
+Otherwise, the amplitudes added to the sidebands at some point in the fiber do not constructively add to those generated at other points.
+Therefore, four-wave mixing often occurs only near the <a href="zero_dispersion_wavelength.html" title="zero dispersion wavelength: a wavelength where the group delay dispersion of a fiber or a material is zero">zero dispersion wavelength</a> of a fiber.
+Note that the phase matching is also influenced by the Kerr effect.</p>
+</div>
+<h3 class="togglediv">Parametric Amplification and Oscillation</h3>
+<div>
+<p>An effect related to four-wave mixing is <a href="optical_parametric_amplifiers.html" title="optical parametric amplifiers: optical amplifiers based on parametric nonlinear interactions">optical parametric amplification</a> and <a href="optical_parametric_oscillators.html" title="optical parametric oscillators: coherent light sources based on parametric amplification within an optical resonator">oscillation</a>.
+Injection of light at some wavelength into a fiber can generate a nonlinear gain at other wavelength.
+That can be exploited for amplifying signals or for parametric oscillation, i.e., the generation of new wavelength components without injecting light at such wavelengths.
+In contrast to parametric amplifiers and oscillators based on <a href="nonlinear_crystal_materials.html" title="nonlinear crystal materials: crystal materials exhibiting an optical nonlinearity, usually of &chi;<sup>(2)</sup> type">nonlinear crystal materials</a>, parametric fiber devices have signal and idler wavelengths around the pump wavelength, instead of twice the pump wavelength.
+This is because they are based on a &chi;<sup>(3)</sup> nonlinearity rather than a &chi;<sup>(2)</sup> nonlinearity.</p>
+</div>
+<h3 class="togglediv">Non-instantaneous Nonlinear Response</h3>
+<div>
+<p>We have already mentioned electrostriction as a nonlinear effect with a finite response time.
+For quickly changing optical powers, this can excite lattice vibrations.
+These in turn can influence the propagating light.
+This leads to stimulated <a href="raman_scattering.html" title="Raman scattering: a nonlinear scattering process involving optical phonons">Raman scattering</a> and <a href="brillouin_scattering.html" title="Brillouin scattering: a nonlinear scattering effect involving acoustic phonons">Brillouin scattering</a>, which are discussed in the following.</p>
+</div>
+<h3 class="togglediv">Brillouin Scattering</h3>
+<div>
+<p>Simulated Brillouin scattering (SBS) is associated with acoustical phonons (in the gigahertz range).
+It turns out that this interaction can normally be intrinsically <a href="phase_matching.html" title="phase matching: a group of techniques for achieving efficient nonlinear interactions in a medium">phase-matched</a> only such that it couples two counterpropagating optical waves.
+Energy conservation demands that the optical frequencies differ by the acoustic frequency.
+If we inject a single monochromatic wave into the fiber, there will be a nonlinear gain for counterpropagating waves with optical frequencies which are lower by the <em>Brillouin frequency shift</em></p>
+<div class="eqn"><img src="eqn/brillouin_shift.gif" width="72" height="42" alt="Brillouin frequency shift"></div>
+<p>which depends on the refractive index, the acoustic velocity and the vacuum wavelength.
+For <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fibers</a>, the Brillouin frequency shift is of the order of 10&ndash;20&nbsp;GHz, and the Brillouin gain occurs within a <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> of typically 50&ndash;100&nbsp;MHz.
+The Brillouin gain spectrum may actually be substantially broadened by transverse variations of the acoustic phase velocity or longitudinal temperature variations, for example.
+Accordingly, the peak gain may be reduced.</p>
+<p>One might think that one doesn't have to worry about Brillouin scattering if one doesn't inject any counterpropagating light into a fiber.
+However, if the Brillouin gets quite large &ndash; to the order of 90&nbsp;dB &ndash;, it is enough to amplify <a href="vacuum_noise.html" title="vacuum noise: quantum noise of the vacuum state, or quantum noise introduced into an optical system via a vacuum input">vacuum noise</a> (the vacuum fluctuations of the electromagnetic field) to substantial power levels.
+Therefore, above a certain SBS power threshold one suddenly obtains a strong nonlinear reflection of light in the fiber, and low-loss transmission is no longer possible.
+Unfortunately, that often nasty effect can kick in at rather low power levels, at least for light with a low optical <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a>.
+For example, for a fiber length of 10&nbsp;m it may occur for only a few watts of optical power.</p>
+<p>A common method to suppress SBS is to make sure that injected light has a large optical bandwidth.
+This &ldquo;smears out&rdquo; the Brillouin gain spectrum and accordingly reduces the peak gain.
+For ultrashort pulses, SBS then basically disappears as a problem &ndash; but Raman scattering can still occur:</p>
+</div>
+<h3 class="togglediv">Raman Scattering</h3>
+<div>
+<p>Stimulated Raman scattering (SRS) is based on optical phonons, having quite high frequencies in the terahertz range.
+Here, the interaction is similarly strong in forward and backward direction.
+Backward scattering can be suppressed for short pulses, as these can overlap in a fiber only over a limited length.
+Forward SRS, however, can act over a long length of fiber and can lead to a substantial transfer of power to a Raman-shifted wavelength component, which typically has a wavelength which is longer by some dozens of nanometers.
+That effect is already substantial for a nonlinear Raman gain of 40&nbsp;dB: one requires less nonlinear gain than for Brillouin scattering, as it occurs in a much broader bandwidth (several terahertz).</p>
+<p>If a pulse has a very large optical bandwidth, SRS may even act within the pulse spectrum: energy is redistributed from higher-frequency components to lower-frequency components of the pulse.
+As a result, the overall pulse spectrum drifts towards longer wavelengths.</p>
+<p>Go to <a href="passive_fiber_optics12.html">Part 12: Ultrashort Pulses and Signals in Fibers</a> or back to the <a href="passive_fiber_optics.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/passive_fiber_optics11.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:42 GMT -->
+</html>

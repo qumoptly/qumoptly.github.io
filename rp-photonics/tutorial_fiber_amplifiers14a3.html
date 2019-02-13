@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Fiber Amplifiers&rdquo; - rare earth ions, gain and pump absorption, steady state, ASE, forward and backward pumping, double-clad fibers, pulse amplification, amplifier noise, multi-stage amplifiers</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="A comprehensive physics-based tutorial on fiber amplifiers. Learn about rare earth ions, gain and pump absorption, steady state, ASE, forward and backward pumping, double-clad fibers, pulse amplification, amplifier noise and multi-stage amplifiers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber amplifiers, rare earth ions, gain and pump absorption, steady state, ASE, forward and backward pumping, double-clad fibers, pulse amplification, amplifier noise, multi-stage amplifiers">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_fiber_amplifiers14a3.html?banner=fiber_amplifier_tutorial"; cat="C"; shownbanner=""; ref="encyclopedia_e.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Fiber Amplifiers</h1>
+<p>Author: <a href="paschotta.html">Dr. Paschotta</a></p>
+<p>This tutorial should be useful both as an introduction to <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a> and for learning more details on them.
+We believe that even people already having a substantial experience with fiber amplifiers will find it helpful for deepening the understanding.
+The focus is on the underlying physics and the resulting technical consequences; we do not simply treat a fiber amplifier as a &ldquo;black box&rdquo;, but rather look inside.</p>
+<figure>
+<img src="img/fiber_amplifier.png" alt="erbium-doped fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Schematic setup of a simple erbium-doped fiber amplifier.
+</figcaption>
+</figure>
+<p>We do not go into mathematical details, but rather try to create an intuitive understanding of the operation principles &ndash; often by demonstrating certain effects with numerically simulated example cases.
+The simulation and design software <a href="fiberpower.html">RP Fiber Power</a> of RP Photonics is an excellent tool for such purposes and has been extensively used for this tutorial.</p>
+<p>Here, we focus on <em>active</em> fibers, containing some laser-active dopant(s).
+For the basics of fibers, please look at our <a href="passive_fiber_optics.html"><b>tutorial on passive fiber optics</b></a>.</p>
+<p>The probably most important application of fiber amplifiers is in <a href="optical_fiber_communications.html" title="optical fiber communications: the technology of transmitting information through optical fibers">optical fiber communications</a>, i.e., data transmission through optical fibers.
+In long-haul transmission systems, one needs to periodically recover the optical power of signals, e.g. every 50&nbsp;km of fiber.
+Also, there are amplifiers used to boost the output of a low-power laser diode generating a signal, particularly before splitting a signal into many fibers (e.g., in cable TV = CATV).
+Sometimes, amplifiers are used before a receiver to obtain a better signal-to-noise ratio in <a href="photodetectors.html" title="photodetectors: devices used for the detection of light">photodetection</a>.
+Totally different applications are in <a href="high_power_fiber_lasers_and_amplifiers.html" title="high-power fiber lasers and amplifiers: fiber lasers and fiber amplifiers with high output powers of e.g. &gt;&thinsp;10&thinsp;&thinsp;W">high-power laser systems</a>, where fiber amplifiers boost laser radiation to enormous power levels &ndash; often for continuous-wave sources, but also for short and ultrashort pulse sources.
+This tutorial covers the foundations for all such applications.</p>
+<p>Click on the headings to get to the following parts of the tutorial:</p>
+<div class="tutorialpart">
+<table><tr><td class="part_number">1</td><td>
+<h3><a href="tutorial_fiber_amplifiers1.html"><b>Part 1: Rare Earth Ions in Fibers</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/stark_level_manifolds_small.png" alt="Stark level manifolds">
+</figure>
+<p>How can erbium or ytterbium ions in a fiber amplify light?
+How can we describe the behavior of such ions with complex Stark level manifolds and effective transition cross sections?
+Why are effective transition cross sections temperature-dependent?
+How does inband pumping work?
+Why are saturation effects often very strong in fibers?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">2</td><td>
+<h3><a href="tutorial_fiber_amplifiers2.html"><b>Part 2: How to Describe the Light</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/yb_gain_small.png" alt="Yb gain">
+</figure>
+<p>How to calculate the gain and pump absorption from the excitation densities?
+Why is the shape of the gain or loss spectrum often dependent on the degree of excitation, e.g. in erbium-doped and ytterbium-doped fiber amplifiers?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">3</td><td>
+<h3><a href="tutorial_fiber_amplifiers3.html"><b>Part 3: Self-consistent Solutions for the Steady State</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiber_amplifier3_small.png" alt="powers and excitation densities in a fiber amplifier">
+</figure>
+<p>How to calculate a self-consistent steady-state solution for optical powers and excitation densities along the fiber?
+In which situations is that difficult?
+What are the limitations of the shooting method and relaxation methods?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">4</td><td>
+<h3><a href="tutorial_fiber_amplifiers4.html"><b>Part 4: Amplified Spontaneous Emission</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiber_amplifier2_small.png" alt="ASE">
+</figure>
+<p>What is amplified spontaneous emission (ASE)?
+Which factors influence its strength?
+Why can the power and spectral shape of ASE be strongly depend on the propagation direction?
+Why does ASE often limit the achievable amplifier gain?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">5</td><td>
+<h3><a href="tutorial_fiber_amplifiers5.html"><b>Part 5: Forward and Backward Pumping</b></a></h3>
+<p>What are the merits and problems of forward and backward pumping?
+In which cases does that influence the power conversion efficiency or the amplifier noise level?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">6</td><td>
+<h3><a href="tutorial_fiber_amplifiers6.html"><b>Part 6: Double-clad Fibers for High-power Operation</b></a></h3>
+<figure class="right" style="width:300px;">
+<img src="img/dcf_designs_part.png" alt="DCF designs">
+</figure>
+<p>How does cladding pumping work?
+Why can it lead to problems with incomplete pump absorption, and how to mitigate these?
+Why can short-wavelength operation be difficult with double-clad fibers?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">7</td><td>
+<h3><a href="tutorial_fiber_amplifiers7.html"><b>Part 7: Fiber Amplifiers for Nanosecond Pulses</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/pulsed_amplifier_small.png" alt="pulse in amplifier">
+</figure>
+<p>What are the merits and limitations of fiber amplifier systems as sources of intense light pulses?
+How do they compare with Q-switched bulk lasers?
+Which nonlinearities can cause trouble for the amplification of short pulses?
+When does gain saturation lead to pulse distortion?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">8</td><td>
+<h3><a href="tutorial_fiber_amplifiers8.html"><b>Part 8: Fiber Amplifiers for Ultrashort Pulses</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/fiberpower_cpa5_small.png" alt="CPA">
+</figure>
+<p>Which additional issues arise for the amplification of <em>ultrashort</em> (picosecond or femtosecond) pulses?
+How do nonlinear and dispersive effects play together?
+To which extent can parabolic pulse amplification or chirped-pulse amplification (CPA) mitigate such problems?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">9</td><td>
+<h3><a href="tutorial_fiber_amplifiers9.html"><b>Part 9: Noise of Fiber Amplifiers</b></a></h3>
+<figure class="right" style="width:200px;">
+<img src="img/edfa_nf8_fw_small.png" alt="noise in EDFA">
+</figure>
+<p>What are the origins of fiber amplifier noise?
+How is the noise figure defined?
+Why do quasi-three-level amplifiers have higher noise figures?
+How can forward pumping of a fiber amplifier be better in this respect?
+Is the influence of pump noise critical?</p>
+</td></tr>
+</table>
+</div>
+<div class="tutorialpart">
+<table><tr><td class="part_number">10</td><td>
+<h3><a href="tutorial_fiber_amplifiers10.html"><b>Part 10: Multi-stage Fiber Amplifiers</b></a></h3>
+<p>For what reasons can it be advantageous to use multiple amplifier stages?
+What methods are available for ASE suppression?
+How to minimize amplifier noise?</p>
+</td></tr>
+</table>
+</div>
+<p>By the way, on this website we have a lot of other materials on fiber optics &ndash; not only the other <a href="tutorials.html">tutorials</a>, but also a lot of <a href="categories.html#fiber_optics_and_waveguides">encyclopedia articles on fiber optics</a> and various articles of the <a href="spotlight.html">Photonics Spotlight</a> (for example, those of <a href="spotlight_2016_09_12.html">2016-09-12</a>, <a href="spotlight_2016_08_11.html">2016-08-11</a>, <a href="spotlight_2016_05_12.html">2016-05-12</a>, <a href="spotlight_2015_03_11.html">2015-03-11</a>, <a href="spotlight_2014_07_28.html">2014-07-28</a>, <a href="spotlight_2013_07_08.html">2013-07-08</a>, <a href="spotlight_2011_02_10.html">2011-02-10</a> and <a href="spotlight_2011_05_28.html">2011-05-28</a>).</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers.html?banner=fiber_amplifier_tutorial by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:30 GMT -->
+</html>

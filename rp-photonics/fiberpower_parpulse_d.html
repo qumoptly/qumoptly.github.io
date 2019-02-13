@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_parpulse_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:47 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Fiber Power: parabolische Pulse in einem Faserverst&auml;rker, numerische Simulation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Parabolische Pulse in einem Faserverstärker werden mit der Software RP Fiber Power simuliert.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, Simulation, Design, Software, Faserverstärker, parabolische Pulse">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_parpulse_d.html"; cat="S"; shownbanner=""; ref="fiberpower_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="fiberpower_parpulse.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power: Simulations- und Design-Software <br> für Faseroptik, Faserverstärker und Faserlaser</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features_d.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data_d.html">Faser-Daten</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions_d.html">Versionen</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface_d.html">Benutzung</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2>Beispiel: parabolische Pulse in einem Faserverstärker</h2>
+<h3>Beschreibung des Modells</h3>
+<p>Hier simulieren wir numerisch die Verstärkung von ursprünglich ungechirpten ultrakurzen Pulsen in einem Yb-dotierten Faserverstärker mit normaler chromatischer Dispersion.</p>
+<p>Der folgende Code definiert die Startpulse, die relevanten Fasereigenschaften und einige numerische Parameter:</p>
+<pre class="codedisplay">
+lambda0 := 1030 nm
+E0 := 0.1 nJ  { initial pulse energy }
+tau0 := 100 fs  { initial pulse duration }
+&nbsp;
+GVD_f := 20000 fs^2 { per meter }
+n2_f := 3e-20  { nonlinear index }
+&nbsp;
+N_t := 2^10  { number of grid points }
+T := 60 * tau0  { width of temporal range }
+&nbsp;
+DoPulsePropagation() := 
+  begin
+  set_pulse_grid(T, N_t, lambda0);
+  startpulse_G(E0, tau0, 0);
+  set_n2(n2_f);  { nonlinear index }
+  set_GVD(GVD_f);  { group velocity dispersion (no higher-order dispersion) }
+  pp_fiber(1, signal);
+  end
+</pre>
+<p>Die Zentralwellenlänge und die Modenfläche werden von der Definition des optischen Kanals genommen (hier nicht gezeigt).</p>
+<p>Wenn nötig, könnte man Dispersion höherer Ordnung hinzufügen (ggf. mit dem mode solver berechnet), ebenfalls stimulierte Raman-Streuung, kompliziertere Eingangs-Pulsprofile, etc.</p>
+<h3>Ergebnisse</h3>
+<p>Abbildung&nbsp;1 zeigt den resultierenden verstärkten Puls in der zeitlichen Domäne.
+Wegen der Kerr-Nichtlinearität und der chromatischen Dispersion wird der Puls sehr viel länger als der ursprüngliche Puls und weist einen starken &ldquo;Up-Chirp&rdquo; auf.
+Die Pulsform ist etwa parabo&shy;lisch.
+Die Details hängen kaum von den Eigenschaften des Startpulses ab; beispielsweise sind sie recht ähnlich, wenn dessen Dauer verdoppelt wird.</p>
+<figure>
+<img src="img/fiberpower_parpulse1.png" alt="parabolic pulse">
+<figcaption><span class="start">Abbildung&nbsp;1:</span> 
+Zeitliches Profil des verstärkten Pulses und seine instantane Frequenz, die einen Up-Chirp anzeigt.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;2 zeigt das Spektrum und die spektrale Phase des verstärkten Pulses.
+Der etwa parabolische Verlauf der spektralen Phase zeigt, dass dispersive Kompression allein mit Dispersion zweiter Ordnung für eine starke Pulskompression gut geeignet sein sollte.
+(Hierzu mehr weiter unten.)</p>
+<figure>
+<img src="img/fiberpower_parpulse2.png" alt="parabolic pulse">
+<figcaption><span class="start">Abbildung&nbsp;2:</span> 
+Spektrum und spektrale Phase des verstärkten Pulses.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;3 zeigt das Spektrogramm des Pulses nach der Faser.
+Auch hier kann man den Up-Chirp erkennen.</p>
+<figure>
+<img src="img/fiberpower_parpulse3.png" alt="parabolic pulse">
+<figcaption><span class="start">Abbildung&nbsp;3:</span> 
+Spektrogramm des Pulses nach der Faser.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;4 zeigt, wie sich die optische Bandbreite, die Energie und die Dauer des Pulses in der Faser entwickeln.
+Die optische Bandbreite wird auf einem Niveau von 1&thinsp;&#37; des Spitzenwerts der spektralen Leistungsdichte gemessen.</p>
+<figure>
+<img src="img/fiberpower_parpulse4.png" alt="parabolic pulse">
+<figcaption><span class="start">Abbildung&nbsp;4:</span> 
+Entwicklung der Pulsparameter in der Faser.
+</figcaption>
+</figure>
+<p>Abbildung&nbsp;5 zeigt, wie die verstärkten Pulse in einem dispersiven Kompressor zeitlich komprimiert werden könnten.
+Die Spitzenleistung und die Pulsdauer werden als Funktionen der angewandten Dispersion zweiter Ordnung gezeigt.
+Die beste Kompression wird für eine Dispersion von ca. &minus;15&thinsp;000&nbsp;fs<sup>2</sup> erzielt.
+Ebenfalls wird in Textform angezeigt, welche Kompressions-Resultate man erzielen würde mit einem Kompressor, dessen Dispersion bis zur vierten Ordnung optimiert wäre.</p>
+<figure>
+<img src="img/fiberpower_parpulse5.png" alt="compression of parabolic pulse">
+<figcaption><span class="start">Abbildung&nbsp;5:</span> 
+Spitzenleistung und Pulsdauer als Funktionen der angewandten Dispersion zweiter Ordnung.
+</figcaption>
+</figure>
+<p>(<a href="fiberpower_case_studies_d.html">zurück zu der Liste der Beispiele</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_parpulse_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:47 GMT -->
+</html>

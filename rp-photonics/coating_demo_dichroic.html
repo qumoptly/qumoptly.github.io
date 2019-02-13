@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_dichroic.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The thin-film software RP Coating - demo file: dichroic mirror</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="A dichroic mirror is designed with the RP Coating software. Numerical optimization with a figure-of-merit function is easy.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Coating, modeling, software, optical multilayer structures, demo files">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="coating_demo_dichroic.html"; cat="S"; shownbanner=""; ref="encyclopedia_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="coating_demo_dichroic_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html" class="sel">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP Coating &ndash; Advanced Software for<br>Designing Optical Multilayer Structures</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="coating.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Demo File: Dichroic Mirror</h2>
+<div>
+<p>This is a simple demo file, not containing a <a href="software_custom_forms.html">custom form</a>; the input are simply defined within the script.
+This case demonstrates how you can quickly get some calculations done with a few lines of script code.</p>
+<p>Note that we also have a newer, <a href="coating_demo_filter.html"><b>more advanced version with a custom form</b></a>.</p>
+<p>We design a dichroic mirror with high reflectivity at 1064&nbsp;nm and high transmission at 808&nbsp;nm at normal incidence.
+Such mirrors are often used for pumping <a href="yag_lasers.html" title="YAG lasers: lasers based on YAG (yttrium aluminum garnet) crystals, usually Nd:YAG or Yb:YAG">Nd:YAG</a> and <a href="vanadate_lasers.html" title="vanadate lasers: lasers based on rare-earth-doped yttrium, gadolinium or lutetium vanadate crystals, usually Nd:YVO<sub>4</sub>">Nd:YVO<sub>4</sub> lasers</a>.</p>
+<p>As an initial design, we use a simple Bragg mirror:</p>
+<pre class="codedisplay">
+beam from superstrate
+substrate: BK7
+for j := 1 to 8 do
+begin
+* TiO2, l / 4 at 1200
+* SiO2, l / 4 at 1200
+end
+superstrate: air
+</pre>
+<p>Such a mirror already has a high reflectivity at 1064&nbsp;nm.
+The transmission at 808&nbsp;nm, however, is not ideal, even though that wavelength is outside the main reflection band.</p>
+<p>Then we define the figure-of-merit function describing the design goal:</p>
+<pre class="codedisplay">
+d_units: nm
+l_units: nm
+&nbsp;
+l_HR := 1064  { HR wavelength }
+l_HT := 808   { HT wavelength }
+&nbsp;
+FOM() := 
+  sqrt(sum(d := -20 to +20 step 5, T(l_HR + d)^2)
+      +sum(d := -20 to +20 step 5, R(l_HT + d)^2))
+</pre>
+<p>With that, we &ldquo;punish&rdquo; any transmission around 1064&thinsp;nm and any reflectivity around 532&nbsp;nm.
+It is advantageous to demand such properties not only at isolated wavelengths, as that may lead to designs which are sensitive to fabrication errors.</p>
+<p>We can then apply a simple local optimization:</p>
+<pre class="codedisplay">
+optimize coating for minimum of FOM(), ytol = 1e-5
+</pre>
+<p>Next, we make a diagram showing the reflectivity profile:</p>
+<pre class="codedisplay">
+diagram 1:
+&nbsp;
+"Reflectivity Profile"
+["Merit value: ", FOM():d3]
+&nbsp;
+x: 400, 1600
+"wavelength (nm)", @x
+y: 0, 100
+"reflectivity (%)", @y
+frame
+hx
+hy
+&nbsp;
+f: 100 * R(x), color = red, width = 3
+</pre>
+<p>When executing the script, we get the following:</p>
+<figure>
+<img src="img/coating_demo_dichroic1.png" alt="reflectivity profile of a dichroic mirror">
+</figure>
+<p>A second diagram is made for showing the obtained thin-film design:</p>
+<pre class="codedisplay">
+diagram 2:
+&nbsp;
+"Design of the Multilayer Structure"
+&nbsp;
+x: -500, get_d(0) + 500
+"position (nm)", @x
+y: 0, 3
+"refractive index (nm)", @y
+frame
+&nbsp;
+! begin
+    for j := 1 to nolayers() do
+    begin
+      var g;
+      g := if get_material$(j) = "TiO2" then 0.8 else 0.9;
+      setcolor(rgb(g, g, g));
+      box(get_z(j), get_z(j + 1) + i * CS_y2);
+    end;
+    draw_cs();  { draw the coordinate system again }
+  end
+ 
+[get_d(j):f0:"nm"],
+ (get_z(j) + 0.5 * get_d(j))c, (0.1 * CS_y2)b, direction = 90,
+ for j := 1 to nolayers()
+"substrate", (-200)c, (0.1 * CS_y2)b, direction = 90
+"superstrate", (get_d(0) + 200)c, (0.1 * CS_y2)b, direction = 90
+&nbsp;
+f: n(x, 1200), step = 1, color = blue
+</pre>
+<figure>
+<img src="img/coating_demo_dichroic2.png" alt="design of dichroic mirror">
+</figure>
+<p>We see that this design does not deviate much from that of a simple Bragg mirror.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/coating_demo_dichroic.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:25 GMT -->
+</html>

@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:33:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Fiber Amplifiers&rdquo;, Part 1: rare earth ions, erbium, Stark level manifolds, transitions, effective transition cross sections, rate equations, excitation, absorption, saturation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on fiber amplifiers. The first part explains how rare earth ions in fibers (e.g. erbium ions in an erbium-doped fiber amplifier) interact with pump and signal light.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, fiber amplifiers, rare earth ions, erbium, Stark level manifolds, transitions, effective transition cross sections, rate equations, excitation, absorption, saturation">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_fiber_amplifiers1.html"; cat="C"; shownbanner=""; ref="tutorial_fiber_amplifiers4.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Fiber Amplifiers</h1>
+<p>This is part 1 of a <a href="tutorial_fiber_amplifiers.html">tutorial on fiber amplifiers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:5px 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>1</span>
+<p>1:&nbsp;<span style="text-decoration:underline;">Rare earth ions in fibers</span>, 2:&nbsp;<a href="tutorial_fiber_amplifiers2.html">Gain and pump absorption</a>, 3:&nbsp;<a href="tutorial_fiber_amplifiers3.html">Self-consistent solutions for the steady state</a>, 4:&nbsp;<a href="tutorial_fiber_amplifiers4.html">Amplified spontaneous emission</a>, 5:&nbsp;<a href="tutorial_fiber_amplifiers5.html">Forward and backward pumping</a>, 6:&nbsp;<a href="tutorial_fiber_amplifiers6.html">Double-clad fibers for high-power operation</a>, 7:&nbsp;<a href="tutorial_fiber_amplifiers7.html">Fiber amplifiers for nanosecond pulses</a>, 8:&nbsp;<a href="tutorial_fiber_amplifiers8.html">Fiber amplifiers for ultrashort pulses</a>, 9:&nbsp;<a href="tutorial_fiber_amplifiers9.html">Noise of fiber amplifiers</a>, 10:&nbsp;<a href="tutorial_fiber_amplifiers10.html">Multi-stage fiber amplifiers</a>
+</p>
+</div>
+<h2 class="togglediv">Part 1: Rare Earth Ions in Fibers</h2>
+<div>
+<p>Active fibers are optical fibers which can not only guide light, but also provide laser amplification.
+For that purpose, some amount of rare-earth ions is incorporated into the <a href="fiber_core.html" title="fiber core: the region in an optical fiber which guides light">fiber core</a>.
+(Our encyclopedia article on <a href="fiber_fabrication.html" title="fiber fabrication: the fabrication of optical fibers">fiber fabrication</a> tells how this can be done.)
+The basic operation principle is simple to understand:</p>
+<ul>
+<li>If some pump light, typically at a shorter wavelength than the signal to be transmitted, is injected into the fiber, that pump light is absorbed by laser-active ions.
+These are excited into some <a href="metastable_states.html" title="metastable states: excited states (particularly electronic states in laser gain media) which have a relatively long lifetime due to slow radiative and non-radiative decay">metastable states</a>, i.e., excited electronic energy levels with a relatively long <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a>.</li>
+<li>The excited ions can now amplify signal light via <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>: the signal light brings the ions down to a lower level (often the ground state manifold) and takes the excitation energy with it.</li>
+</ul>
+<p>Importantly, the stimulated emission always goes into the same mode of the light which causes it.
+Therefore, we really get amplification of the signal light, rather than e.g. just enhanced <a href="fluorescence.html" title="fluorescence: luminescence arising from irradiation with light">fluorescence</a> going into all directions.</p>
+<h3 class="togglediv">Erbium Ions</h3>
+<div>
+<figure class="right" style="width:291px;">
+<img src="img/erbium_levels.png" alt="energy level structure of the trivalent erbium ion">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Energy level structure of the trivalent erbium ion, and some common optical transitions.
+</figcaption>
+</figure>
+<p>As an important example, consider what can be done with trivalent erbium ions (Er<sup>3+</sup>), as are utilized in <a href="erbium_doped_fiber_amplifiers.html" title="erbium-doped fiber amplifiers: fiber amplifiers based on erbium-doped optical fibers">erbium-doped fiber amplifiers</a>.
+Figure&nbsp;1 shows the Stark level manifolds of these ions and some important transitions between them.
+For now, we consider these Stark level manifolds as simple energy levels, even though we will have to reconsider that later on.
+For simplicity, let us count the level manifolds from the bottom; for example, let us denote level <sup>4</sup>I<sub>13/2</sub> simply as level 2.</p>
+<p>The transition from level 2 to 1 can be used as the laser transition for amplifying light in the 1.5-&mu;m wavelength region, which is often used for <a href="optical_fiber_communications.html" title="optical fiber communications: the technology of transmitting information through optical fibers">optical fiber communications</a>.
+The used pump light often has a wavelength near 980&nbsp;nm.
+This actually pumps ions from the ground state (level 1) into level 3.
+From there, ions in the fiber glass quickly decay to level 2.
+In the mostly used <a href="silica_fibers.html" title="silica fibers: optical fibers based on fused silica or related materials">silica fibers</a> (more precisely, fibers with silica-based materials), this is mostly <em>not</em> due to emission of light around 2.9&nbsp;&mu;m, but rather by much more rapid <a href="multi_phonon_transitions.html" title="multi-phonon transitions: transitions between electronic levels of atoms or ions in solid media, involving the emission of multiple phonons">multi-phonon transitions</a>, i.e., by emission of multiple phonons (quanta of lattice vibrations).
+The upper laser level (level 2) is quite long-lived, with an <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a> of the order of 10&nbsp;ms.
+When an ion gets down again to the ground state manifold (level 1) via <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous</a> or <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a>, it can again be pumped.</p>
+<p>As the non-radiative transition 3 &rarr;&nbsp;2 is rather fast, the level scheme used in a model can often be simplified.
+One assumes that the mentioned transition takes no time at all &ndash; with the consequence that at any time an ion can only be in level 2 or level 1.
+Here, we also neglect possible excitation into higher-lying levels, e.g. via <a href="energy_transfer.html" title="energy transfer: the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfer</a> processes, which are weak if the erbium concentration is low enough, or via <a href="excited_state_absorption.html" title="excited-state absorption: absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited-state absorption</a>, which does not occur for the typically used pump wavelengths.</p>
+</div>
+<h3 class="togglediv">In-band Pumping</h3>
+<div>
+<p>Instead of pumping at 980&nbsp;nm, we can also use a pump source around 1.45&nbsp;&mu;m, which puts the ions directly into level 2; this is called <em>in-band pumping</em>.</p>
+<figure class="right" style="width:200px;">
+<img src="img/stark_level_manifolds.png" alt="Stark level manifolds">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Due to the energy distribution within the Stark level manifolds, pump and signal light with different wavelengths can interact with the same pair of manifolds.
+</figcaption>
+</figure>
+<p>Well, text books will tell you that laser amplification is not possible with a two-level system, since the pump wave will then also cause stimulated emission, and a <a href="population_inversion.html" title="population inversion: a state of a medium where a higher-lying electronic level has a higher population than a lower-lying level">population inversion</a> cannot be reached.
+That is true in principle, but not applicable to our case, as we are dealing not with real energy levels, but rather with Stark level manifolds, each consisting of multiple sub-levels.
+These have slightly different energies, depending on the local electric fields.
+Different ions in the amorphous glass material see different fields, and overall we have a kind of &ldquo;smeared out&rdquo; distribution of level energies, shown as gray bars in Figure&nbsp;2.</p>
+<p>Now what happens here is that the pump wave, having a somewhat shorter wavelength (and thus a higher photon energy) than the signal wave, preferably pumps ions into the higher sub-levels of manifold 2.
+Within each manifold, there is a very fast thermalization (within picoseconds), so that at low temperatures (like room temperature) the majority of ions will always be in the lower sub-levels, from where pump light cannot reach them any more.
+Therefore, stimulated emission by the pump wave is weak.
+However, the slightly longer-wavelength signal light is more effective for stimulated emission.
+In turn, it is less effective for absorption, since absorption with its low <a href="photons.html" title="photons: quanta of light energy">photon energy</a> would require ions in the higher sub-levels of manifold 1, which are again only weakly populated at low temperatures.</p>
+</div>
+<h3 class="togglediv">Effective Transition Cross Sections Leading to a Simple Model</h3>
+<div>
+<p>This section is somewhat technical.
+If you are not interested in learning the physics details and how to calculate the behavior of a fiber amplifier, you may skip the next few paragraphs and resume reading near Figure&nbsp;4. </p>
+<p>Looking at the spectroscopic details, one may get the impression that the situation is horribly complicated:
+We have a statistical distribution of actual energy levels (the sub-levels of each manifold), and for any optical wavelength, transitions between multiple sub-levels can occur.
+It will be extremely hard to find out the statistical distribution of energy levels in our glass and the wavelength-dependent <a href="transition_cross_sections.html" title="transition cross sections: material parameters for quantifying the likelihood or rate of optical transition events">transition cross sections</a> for each pair of sub-levels.
+So how should we ever manage to model this system?</p>
+<p>Fortunately, it turns out to be far simpler than it may seem.
+We can proceed as follows:</p>
+<ul>
+<li>We do not care about where exactly the ions are, but only care about the total populations of the two Stark level manifolds.
+Due to the rapid thermalization within the manifolds, we essentially always have a well-defined distribution of ions on the different sub-levels (a Boltzmann distribution).
+(Only in some extreme cases with intense ultrashort pulses, there may be significant deviations from that assumption.)
+So there are no additional free variables which we would have to take into account.</li>
+<li>If we now expose the ions to light at some wavelength, we again do not care how exactly (with which sub-level transitions) they get pumped from manifold 1 to 2, for example.
+We will just get some overall transition rate, which is proportional to the optical intensity <span class="eqn_il"><i>I</i></span> and the density of ions in manifold 1.
+Here, as a proportionality constant we use an effective cross section <span class="eqn_il"><span class="greek">&sigma;</span><sub>12</sub></span> which will of course depend on the wavelength (<a href="photons.html" title="photons: quanta of light energy">photon energy</a>):</li>
+</ul>
+<div class="eqn"><img src="eqn/transition_rate12.gif" width="146" height="41" alt="transition rate with effective transition cross section"></div>
+<ul>
+<li>If we consider pump and signal light both as monochromatic, each of these will in general have some absorption cross section <span class="eqn_il"><span class="greek">&sigma;</span><sub>12</sub></span> and an emission cross section <span class="eqn_il"><span class="greek">&sigma;</span><sub>21</sub></span> (with different values for pump and signal).</li>
+</ul>
+<p>For pumping via level 3 (around 980&nbsp;nm), we will of course use the transition cross section according to that transition into level 3, and zero for the effective absorption cross section.
+(Note that the ions can <em>not</em> be pushed down again to level 1 by pump light, since the pump light is not resonant with the transition 3 &rarr;&nbsp;1. That process cannot happen as the ions never spend any significant time in level 3.)</p>
+<p>So we end up with a rather simple model, which contains only the following (see Figure&nbsp;3):</p>
+<figure class="right" style="width:200px;">
+<img src="img/two_level_model.png" alt="two-level model">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Simplified model for Er<sup>3+</sup> ions.
+</figcaption>
+</figure>
+<ul>
+<li class="ta_left">There are two levels considered, called level 1 and 2.</li>
+<li class="ta_left">Ions can be excited from level 1 to 2 by absorbing pump light.
+For in-band pumping, stimulated emission by the pump is also possible.
+The two parameters describing these processes are <span class="eqn_il"><span class="greek">&sigma;</span><sub>12p</sub></span> and <span class="eqn_il"><span class="greek">&sigma;</span><sub>21p</sub></span>.
+(For pumping into level 3, we may also call it <span class="eqn_il"><span class="greek">&sigma;</span><sub>13p</sub></span>.)</li>
+<li class="ta_left">Ions can be deexcited by <a href="stimulated_emission.html" title="stimulated emission: a quantum effect, where photon emission is triggered by other photons">stimulated emission</a> with signal light.
+Also, signal light may be absorbed to excite them again into level 2.
+(That is called signal reabsorption.)
+For these things, we have the parameters <span class="eqn_il"><span class="greek">&sigma;</span><sub>21s</sub></span> and <span class="eqn_il"><span class="greek">&sigma;</span><sub>12s</sub></span>.</li>
+<li class="ta_left">From level 2, the ions can also get down by <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a>.
+We will have a constant transition rate <span class="eqn_il"><i>A</i><sub>21</sub>&thinsp;=&thinsp;1&thinsp;/&thinsp;<span class="greek">&tau;</span><sub>2</sub></span> for ions in the upper state, where <span class="eqn_il"><span class="greek">&tau;</span><sub>2</sub></span> is the <a href="upper_state_lifetime.html" title="upper-state lifetime: the lifetime of the population of the upper laser level">upper-state lifetime</a>.</li>
+</ul>
+<p>Based on these elements, one can easily set up a <a href="rate_equation_modeling.html" title="rate equation modeling: a method of modeling the dynamics of laser gain media">rate equation model</a>.
+With the simplifications made for pumping into level 3, we obtain the equation system</p>
+<div class="eqn"><img src="eqn/erbium_rates_s.gif" width="289" height="101" alt="simplified rate equations for erbium"></div>
+<p>for the fractional level populations <span class="eqn_il"><i>n</i><sub>1</sub>&thinsp;=&thinsp;<i>N</i><sub>1</sub>&thinsp;/&thinsp;<i>N</i><sub>dop</sub></span> and <span class="eqn_il"><i>n</i><sub>2</sub>&thinsp;=&thinsp;<i>N</i><sub>2</sub>&thinsp;/&thinsp;<i>N</i><sub>dop</sub></span>.
+(We normalize the ion densities to the overall erbium <a href="doping_concentration.html" title="doping concentration: the concentration of some dopant, e.g. of laser-active ions in a laser gain medium">doping concentration</a>.)
+Of course, one of the equations is redundant, as we always must have <span class="eqn_il"><i>n</i><sub>1</sub>&thinsp;+&thinsp;<i>n</i><sub>2</sub>&thinsp;=&thinsp;1</span>.
+For in-band pumping, stimulated emission terms for the pump would have to be included in addition.
+It would also be easy to insert terms for additional waves with other wavelengths.</p>
+<p>Note that the equation system is linear and therefore easy to solve.
+For the steady state with given optical intensities, we can simply set the left side to zero and solve for the upper-state population <span class="eqn_il"><i>n</i><sub>2</sub></span>, using the relation <span class="eqn_il"><i>n</i><sub>1</sub>&thinsp;+&thinsp;<i>n</i><sub>2</sub>&thinsp;=&thinsp;1</span>.</p>
+<p>A more complicated rate equation system is needed if one does not neglect the time for the nonradiative transition 3 &rarr;&nbsp;2, or if one includes <a href="excited_state_absorption.html" title="excited-state absorption: absorption of light by ions or atoms in an excited electronic state, rather than in the electronic ground state">excited state absorption</a> and <a href="energy_transfer.html" title="energy transfer: the phenomenon that dopant ions in laser-active media can exchange excitation energy among each other">energy transfer</a> effects.
+With the latter, the equation system gets nonlinear and thus more difficult to solve for the steady state.
+Of course, suitable <a href="fiberpower.html">software</a> makes it easy to handle even such cases.</p>
+<p>Let us now look at the results in some simple cases.
+First consider a pump wave only.
+Figure&nbsp;4 shows how the upper-state population depends on the pump intensity:</p>
+<figure>
+<img src="img/n2_vs_i_p.png" alt="upper-state population vs. pump intensity">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Upper-state population versus pump intensity in an erbium-doped fiber.
+The underlying spectroscopic data are for an erbium-doped germanoaluminosilicate fiber and a pump wavelength of 980&nbsp;nm.
+</figcaption>
+</figure>
+<p>For increasing intensity, the upper-state population first increases linearly (dotted line) but then levels off; it approaches 1 (= 100&#37;) for high intensities.
+Note that with a moderate pump power of 100&nbsp;mW put on an area with radius 5&nbsp;&mu;m, we already get a pump intensity of 1.27&nbsp;mW/&mu;m<sup>2</sup>, i.e., a value beyond the axis range in our diagram.
+We see that we easily get strong <em>pump saturation</em> in a fiber: the substantial upper-state population means an accordingly reduced lower-level population and thus reduced pump absorption.
+For Yb<sup>3+</sup> ions, having higher absorption cross-sections particularly around 975&nbsp;nm, pump saturation effects can be even much stronger.</p>
+<p>Now we check the influence of the signal intensity at 1550&nbsp;nm, which is a typical signal wavelength:</p>
+<figure>
+<img src="img/n2_vs_i_s.png" alt="upper-state population vs. pump intensity">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Upper-state population versus signal intensity at 1550&nbsp;nm in an erbium-doped fiber.
+The curves apply to pump intensities from 0.1 to 1&nbsp;mW/&mu;m<sup>2</sup> in steps of 0.1&nbsp;mW/&mu;m<sup>2</sup>.
+</figcaption>
+</figure>
+<p>We can learn several thing from this:</p>
+<ul>
+<li>For increasing signal intensity, the upper-stage population does <em>not</em> go to zero, but rather approaches some finite value (here: 42&#37;).
+This is because of the signal reabsorption.
+For high intensities, there must be a balance of absorption and stimulated emission events.</li>
+<li>The curves for higher pump intensities start out higher, but again we see the pump saturation.</li>
+<li>The signal <a href="saturation_power.html" title="saturation power: a measure of the incident optical power required for achieving significant saturation of an absorber or a gain medium">saturation power</a>, calculated with a common formula which assumes a constant pump rate, is only 0.030&nbsp;mW/&mu;m<sup>2</sup>.
+However, the curves for higher pump intensities show that strong signal saturation in fact requires much higher intensities.
+This is because the pump rate is in reality not constant, as it is reduced by pump saturation.
+For a constant pump intensity and increasing signal intensity, the pump rate <em>increases</em> because the ground-state population increases.
+Rapid repumping of the ions makes the resulting amplifier <a href="gain.html" title="gain: a measure of the strength of optical amplification">gain</a> &ldquo;stiffer&rdquo;.</li>
+</ul>
+<p>For a longer signal wavelength of 1600&nbsp;nm, the emission cross section gets smaller, and the absorption cross sections gets much smaller.
+Therefore, the signal can bring the upper-state population further down, but only at higher intensities:</p>
+<figure>
+<img src="img/n2_vs_i_s2.png" alt="upper-state population vs. pump intensity">
+<figcaption><span class="start">Figure&nbsp;6:</span> 
+Like Figure&nbsp;5, but for a longer signal wavelength of 1600&nbsp;nm.
+</figcaption>
+</figure>
+<p>These examples have already shown that both signal reabsorption and pump saturation effects have a substantial influence in fiber amplifiers, so that one can be entirely mislead when using some basic textbook knowledge for other amplifier systems where these effects can be ignored.</p>
+<p>Go to <a href="tutorial_fiber_amplifiers2.html">Part 2: Gain and Pump Absorption</a> or back to the <a href="tutorial_fiber_amplifiers.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_fiber_amplifiers1.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:33:59 GMT -->
+</html>

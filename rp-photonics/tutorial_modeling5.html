@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_modeling5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:32:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Tutorial &ldquo;Modeling of Fiber Amplifiers and Lasers&rdquo;, Part 5: Continuous-wave operation of amplifiers and lasers, self-consistent steady-state solutions</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Tutorial on modeling of fiber amplifiers and lasers. This part explains algorithms for calculating the steady-state in continuous-wave operation of fiber amplifiers and lasers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="tutorial, modeling, fiber amplifiers, fiber lasers, continuous-wave operation, steady-state, differential equations, algorithm">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="tutorial_modeling5.html"; cat="C"; shownbanner=""; ref="tutorial_modeling.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td class="selected"><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Consulting</span> <span id="slogan">&hellip; competent technical support for your business!!</span></p>
+</div>
+<nav id="con">
+<div id="navitems">
+<a id="Home" href="consulting.html">Home</a>
+<a id="Company" href="company.html">Company</a>
+<a id="Topics" href="topics.html">Topics</a>
+<a id="Services" href="services.html">Services</a>
+<a id="Software" href="software_con.html">Software</a>
+<a id="Publications" href="encyc.html" class="sel">Publications</a>
+<a id="Publications_Encyclopedia" href="encyc.html" class="sub">Encyclopedia</a>
+<a id="Publications_FG_lasers" href="fg_lasers.html" class="sub">FG to Lasers</a>
+<a id="Publications_FG_laser_pulses" href="fg_laser_pulses.html" class="sub">FG Laser Pulses</a>
+<a id="Publications_FG_fiber_optics" href="fg_fiber_optics.html" class="sub">FG Fiber Optics</a>
+<a id="Publications_Tutorials" href="tutorials.html" class="sub sel">Tutorials</a>
+<a id="Publications_Scientific" href="scipubs.html" class="sub">Scientific</a>
+<a id="Publications_Articles" href="journal_articles.html" class="sub">Trade journals</a>
+<a id="Publications_Downloads" href="downloads.html" class="sub">Downloads</a>
+<a id="News" href="news.html">News</a>
+<a id="Anniversary" href="anniversary10.html">Anniversary</a>
+<a id="Website" href="website.html">Website</a>
+<a id="Nletters" href="newsletters.html">Newsletters</a>
+<a id="Contact" href="contact.html">Contact</a>
+</div>
+<div id="newsbox">
+<!-- Our bestseller: the simulation software<br><a href="/fiberpower.html?s=news">RP Fiber Power</a> -->
+Read our <a href="tutorialsaee8.html?s=news">fiber optics tutorials</a> and get our <a href="newslettersaee8.html?s=news">newsletters</a> on <a href="spotlightaee8.html?s=news">technology</a> and <a href="software_newsaee8.html?s=news">software</a>!
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>Modeling of Fiber Amplifiers and Lasers</h1>
+<p>This is part 5 of a <a href="tutorial_modeling.html">tutorial on modeling of fiber amplifiers and lasers</a> from <a href="paschotta.html">Dr. Paschotta</a>. The tutorial has the following parts:</p>
+<div class="article_parts"><span style='float:left; margin:0 25px 5px 10px; font-size:60px; color:#888; font-weight:bold; line-height:100%;'>5</span>
+<p>1:&nbsp;<a href="tutorial_modeling1.html">Introduction</a>, 2:&nbsp;<a href="tutorial_modeling2.html">Optical channels</a>, 3:&nbsp;<a href="tutorial_modeling3.html">Power propagation or field propagation</a>, 4:&nbsp;<a href="tutorial_modeling4.html">The laser-active ions</a>, 5:&nbsp;<span style="text-decoration:underline;">Continuous-wave operation of amplifiers and lasers</span>, 6:&nbsp;<a href="tutorial_modeling6.html">Amplifying and generating short pulses</a>, 7:&nbsp;<a href="tutorial_modeling7.html">Ultrashort pulses</a>, 8:&nbsp;<a href="tutorial_modeling8.html">Using home-made software or a commercial product?</a>
+</p>
+</div>
+<h2 class="togglediv">Part 5: Continuous-wave Operation of Amplifiers and Lasers</h2>
+<div>
+<p>In this section, you will learn how to calculate the optical powers occurring during continuous-wave operation of fiber amplifiers and lasers in their steady state.
+We will always propagate only optical powers, not whole fields (see <a href="tutorial_modeling3.html">section 3</a>) in order to avoid all the complications of numerical beam propagation and the correspondingly more difficult boundary conditions.
+Fortunately, this approach is often quite realistic, as the guiding properties of the fiber lead to more or less constant intensity profiles along the fiber.</p>
+<p>This section contains some relatively tricky operations.
+Keep in mind, however, that you need to deal with those only if you develop a simulation software yourself.
+When using some existing software, you may simply enjoy getting the solutions.</p>
+<p>Let us first recall from section&nbsp;3 the differential equation for the optical power of a certain optical channel:</p>
+<div class="eqn"><img src="eqn/dpdz.gif" width="188" height="44" alt="variation of power in a fiber amplifier"></div>
+<aside class="callout blue">The general difficulty with steady-state solutions is that one needs to find a self-consistent solution for optical powers and excitation densities. This is highly non-trivial in cases with multiple counterpropagating waves.</aside>
+<p>The local gain <span class="eqn_il"><i>g</i><sub><i>j</i></sub>(<i>z</i>)</span> depends on the excitation levels of the laser-active ions, which themselves can depend on the optical intensities related to all the optical channels.
+Therefore, we need to find a <b>self-consistent solution</b> for the optical powers and level excitations along the whole fiber.</p>
+<p>Equations for ASE must contain one more terms related to <a href="spontaneous_emission.html" title="spontaneous emission: a quantum effect, causing the spontaneous decay of excited states of atoms or ions">spontaneous emission</a> &ndash; but of course only that small part of the emitted power which remains guided in the fiber core.
+For a single-mode fiber and a <a href="four_level_and_three_level_gain_media.html" title="four-level and three-level gain media: laser gain media without/with reabsorption from the lower laser level">four-level gain system</a>, it turns out that only the local gain and the optical channel's bandwidth are relevant for the added power.
+A purely geometric reasoning, based on a limited angular acceptance range is defined by the <a href="numerical_aperture.html" title="numerical aperture: sine of the maximum angle of an incident beam of some optical device, or the sine of the acceptance angle of a waveguide or fiber">numerical aperture</a> of the fiber, turns out to be appropriate only for highly multimode fibers.
+You can find more on this in a <a href="spotlight_2013_07_08.html">blog article on ASE</a>.</p>
+<h3 class="togglediv">Calculating the Local Gain</h3>
+<div>
+<p>Before looking into solutions of these equations, let us discuss how to calculate the local gain <span class="eqn_il"><i>g</i><sub><i>j</i></sub>(<i>z</i>)</span> from given optical powers of the channels.
+In the simplest kind of model based on top-hat intensity profiles, the intensity corresponding to an optical channel can be calculated as the power divided by the core area.
+For arbitrary intensity profiles, the procedure is a bit more complicated:</p>
+<figure class="right" style="width:217px;">
+<img src="img/fiber_r.png" alt="Dividing a fiber core into rings">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Dividing a fiber core into rings.
+</figcaption>
+</figure>
+<ul>
+<li>Assuming that there is only a radial (but not azimuthal) dependence of the intensity, we can mathematically divide the fiber core into some set of rings (see Figure&nbsp;1), i.e., regions with certain ranges of the radial coordinate within which the intensity does not vary that much.
+(If there is also an azimuthal dependence, we also have to divide the rings into angular sections. In case of a non-symmetric waveguide, a rectangular grid may be more appropriate.)</li>
+<li>For each ring, the given optical power can be divided by the ring's area to obtain the intensity.</li>
+<li>Using the rate equations, we can now calculate the fractional excitations of all relevant levels for each ring from the intensities.</li>
+<li>From the fractional excitations, we obtain the gain coefficient within each ring.
+Different transitions may contribute to it, as far as they have non-zero transition cross sections at the wavelength of the optical channel.
+Each contribution contains the product of the doping density, the fractional excitation of a level and the transition cross section.</li>
+<li>The total gain at the given <span class="eqn_il"><i>z</i></span> position is obtained as the sum of contributions from all the rings.
+The higher the optical intensity in a certain ring and the larger its area is, the higher is its contribution to the total gain.
+This means that the total gain is a kind of weighted average over the gain values in all the rings.</li>
+</ul>
+</div>
+<h3 class="togglediv">Solving the Propagation Equations for Amplifiers and Lasers</h3>
+<div>
+<p>Now we think about how to find the self-consistent solution for the optical powers and level excitations.
+In general, this is rather difficult, but in simpler cases it can be done easily.</p>
+<p>In the easiest case, all light propagates only in one direction &ndash; for example, pump and signal light in a <b>copropagating fiber amplifier</b>.
+Here, one can proceed as follows:</p>
+<ul>
+<li>At the input end of the fiber, all optical powers and thus also the intensities are known already.
+From these, one can calculate the local gain values (or absorption, for the pump wave), and from these the derivatives of the powers with respect to <span class="eqn_il"><i>z</i></span>.</li>
+<li>With these data, one can propagate the powers over some small distance into the fiber in order to obtain the optical powers at that point.
+Again, one can calculate the level excitations, gain and power derivatives.</li>
+<li>One simply iterates this procedure until one reaches the output end.</li>
+</ul>
+<p>Effectively, we are dealing with a simple initial value problem.
+Figure&nbsp;2 shows the results from an example case.
+Here, the pump power decreases due to pump absorption, whereas the signal power rises.
+Note that the decay of pump power is <em>not</em> an exponential decay, because we have substantial saturation effects.
+That is very common in fiber devices, which are typically operated at very high intensity levels.
+One of the consequences of that is that the required fiber length for an amplifier can be far longer than one would expect based on a single estimate ignoring saturation effects.</p>
+<figure>
+<img src="img/fiber_amplifier_fw.png" alt="fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Pump and signal power in an ytterbium-doped fiber amplifier with co-propagating pump and signal.
+</figcaption>
+</figure>
+<p>For an <b>amplifier with counter-propagating pump and signal</b>, the explained method cannot be directly applied, because at each end we know only one of the powers (signal or pump).
+However, there is a relatively simple extension of the algorithm:</p>
+<ul>
+<li>Start at the signal input end and use an estimated value for the remaining pump power at this point.</li>
+<li>Propagate both fields to the other end.
+The pump power will grow in that direction, as it is backward-propagating.</li>
+<li>Compare the resulting pump power at the signal output end with the actual pump input power, and on that basis correct your estimate for the remaining pump power at the signal input end.</li>
+</ul>
+<p>With a few iterations, you can find the self-consistent solution.
+The required numerical procedure is simple; essentially, one is dealing with a one-dimensional root finding problem.</p>
+<p>Figure&nbsp;3 shows the results from an example case &ndash; same as for Figure&nbsp;2, except that the pump wave now travels from right to left.
+By the way, one can show that the residual pump power (as well as the signal gain) must be the same as in the previous case, as long as ASE is not relevant.
+So in that case one could actually have avoided the iteration, just taking the residual pump power from the case with co-propagating waves.</p>
+<p>Despite the same output powers in both cases, the distribution of the ytterbium excitation along the fiber is very different.
+For that reason, ASE output powers can also be very different between forward and backward direction.</p>
+<figure>
+<img src="img/fiber_amplifier_bw.png" alt="fiber amplifier">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Pump and signal power in an ytterbium-doped fiber amplifier with counterpropagating pump and signal.
+</figcaption>
+</figure>
+<p>Further extending that method for including <a href="amplified_spontaneous_emission.html" title="amplified spontaneous emission: a process where spontaneously emitted radiation (luminescence) is amplified">amplified spontaneous emission</a> (ASE) as well is not easy, unfortunately.
+The challenge is that one obtains a <em>multidimensional root finding problem</em>, which is substantially more difficult.
+The strong exponential dependencies in a high-gain system don't exactly make it easier &hellip;</p>
+<p>For a <b>fiber laser</b> resonator, however, the required extension of the method is not difficult.
+Here, we can start at the pump input end with an estimated value of the forward signal power at that point.
+We then propagate pump, forward and backward signal powers to the other end.
+The relation of forward and backward signal power in conjunction with the reflectivity for the signal wave at that end tells us whether the used estimate was too high or too low.</p>
+<p>Figure&nbsp;4 shows results from an example case.
+For the signal power of 148&nbsp;mW at the left end, the signal powers at the right end are consistent with the chosen output coupler reflectivity of 10&#37;.</p>
+<figure>
+<img src="img/fiber_laser1.png" alt="fiber laser">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Pump and signal power in an ytterbium-doped fiber laser.
+</figcaption>
+</figure>
+<p>As fiber lasers usually have a not that high signal gain, ASE (or at least its influence on the level excitations) can usually be neglected.</p>
+</div>
+<h3 class="togglediv">Other Algorithms</h3>
+<div>
+<p>Unfortunately, the explained relatively easy mathematical tricks are not always suitable due to the difficult multidimensional root finding in case of multiple counterpropagating waves.
+Therefore, other algorithms have been developed &ndash; in particular, <b>relaxation techniques</b>.
+Here, the basic idea is to start with an estimated distribution of level excitations and propagate all optical powers based on these.
+Thereafter, one recalculates the level excitations based on the obtained optical powers.
+Repeating these steps, one will hopefully get to the solution.</p>
+<p>As each wave can be numerically propagated in its real propagation direction, one does not need to use estimated starting values any more.
+In a laser model, for example, the starting values for the signal powers in both directions are also not known from the beginning, but one can always use the value resulting from the last iteration.</p>
+<aside class="callout blue">Although relaxation techniques may seem to be reasonably simple to implement, it is quite demanding to achieve reliable and fast convergence of the algorithm in a wide range of cases.</aside>
+<p>However, it is again difficult to implement an algorithm which reliably converges to the solution.
+Often, one applies some kind of damping mechanism in order to achieve convergence.
+That, however, can make the convergence quite slow.</p>
+<p>It may be reasonably easy to manually adjust the numerical parameters of an algorithm such that it converges <em>in one given case</em>.
+It is far more difficult, however, to develop an algorithm which <em>reliably and efficiently converges in all cases</em>.
+Note that the cases which can be encountered in practice can be very diverse, involving different device configurations, different spectroscopic data, different intensity regimes, etc.
+Lasers present special difficulties, e.g. because small errors in the gain can lead to substantial drifts of the signal powers away from the solution.</p>
+<p>For our product <a href="fiberpower.html"><b>RP Fiber Power</b></a>, we have developed a quite sophisticated algorithm based on the general idea of relaxation methods.
+It further uses various numerical tricks which are based on physical insight.
+(When using some all-purpose numerical libraries, one could not profit from such kind of specialized ideas!)
+It took rather serious efforts and substantial time to develop this to a point where it works very well in a wide range of test cases.
+The algorithm now works very efficiently, finding the solution within quite little computation time.
+Also, it is quite long ago that a customer presented a case where convergence was not achieved.</p>
+<p>Students may want to try themselves to implement an algorithm which can at least handle the simpler cases.
+However, be warned that a lot of hard work is required to obtain a stable and efficient all-purpose solution.</p>
+</div>
+<h3 class="togglediv">Calculating the Laser Wavelength</h3>
+<div>
+<p>In the discussion on fiber lasers, we have so far implicitly assumed that the laser wavelength is already known: a given parameter of the corresponding <a href="tutorial_modeling2.html">optical channels</a>.
+That is not always the case, however.
+Some laser resonators do not contain a strongly wavelength-selective element (e.g., a fiber Bragg grating) which determines the emission wavelength.
+The laser can then select the emission wavelength itself.
+How can be addressed that aspect in a model?</p>
+<aside class="callout green">What determines the emission wavelength of a laser?</aside>
+<p>Let us first consider the involved physics.
+When the laser is pumped, the excitation of the laser-active ions rises until the laser reaches the <a href="laser_threshold.html" title="laser threshold: an operation condition of a laser where laser emission just starts to occur">laser threshold</a>.
+That will be the case when the net round-trip gain becomes 0&nbsp;dB at some wavelength.
+That wavelength will be the final emission wavelength: light at any other wavelengths, having a lower net round-trip-trip gain (i.e., less than 0&nbsp;dB) has no chance to come up with any substantial power.
+Note that the resulting emission wavelength will often depend on the length of fiber and on the resonator losses, because in <a href="four_level_and_three_level_gain_media.html" title="four-level and three-level gain media: laser gain media without/with reabsorption from the lower laser level">quasi-three-level laser transitions</a>, as are typically encountered in active fibers, the shape of the gain spectrum depends on the degree of excitation.</p>
+<aside class="callout blue">The conceptually simple approach is not always most efficient and accurate.</aside>
+<p>At conceptually simple approach would be to construct a model containing a large set of optical channels with different wavelengths where lasing might occur.
+The computer model should then produce the correct result &ndash; lasing only on the optical channels (forward and backward direction) having the highest net gain.
+That is not numerically efficient, however, and also may not produce exactly the correct wavelength, since we always need to work with a limited set of wavelengths.</p>
+<p>An alternative approach, which is more efficient and accurate, uses only a single pair of optical channels for a certain laser wavelength.
+For each setting of that wavelength, one can calculate the average degree of excitation of the laser-active ions &ndash; of course, after setting the end reflectivities corresponding to the chosen wavelength.
+One can then numerically vary that wavelength until the average excitation reaches its minimum.
+Such an algorithm can be easily implemented with a flexible simulation software such as <a href="fiberpower.html"><b>RP Fiber Power</b></a>.</p>
+<p>Go to <a href="tutorial_modeling6.html">Part 6: Amplifying and Generating Short Pulses</a>, or back to the <a href="tutorial_modeling.html">start page</a>.</p>
+</div>
+</div>
+<hr>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="<?php echo $page_fname; ?>"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a></span>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/tutorial_modeling5.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:32:28 GMT -->
+</html>

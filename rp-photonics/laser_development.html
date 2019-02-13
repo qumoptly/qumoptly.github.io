@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/laser_development.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:59:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - laser development, systematic procedure, design report, efficiency</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-19">
+<meta name="description" content="Lasers can and should be developed based on systematic procedures, involving a careful assessment of requirements, the comparison of suitable laser technologies, the development and testing of prototype, and of the final product.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="laser development, systematic procedure, design report, efficiency">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="laser_development.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_laser_development.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Laser Development</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_laser_development1fbf.html?s=vbox" class="bg_bgheading">Suppliers for laser development services</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_laser_development1fbf.html?s=vbox" class="redlink"><b>15 suppliers for laser development services</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.raab-photonik.de/en/competences/measurements/" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="laser development" rel="nofollow" class="bg externallink"><img src="bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="services_manu.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="laser development" rel="nofollow" class="bg externallink"><img src="bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_laser_development1fbf.html?s=vbox">List of suppliers for<br>laser development</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+<aside class="boxadvertisement">
+<h1>Help on Laser Development</h1>
+<p>Efficient laser development, avoiding excessive delays and cost overruns, requires a systematic procedure based on a thorough theoretical understanding of laser physics.
+RP Photonics offers competent help in this area as well as powerful simulation software.</p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: the process of developing a laser device</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laserentwicklung</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<p><a href="encyclopedia_cite6726.html?article=laser%20development">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>This article discusses the process of developing laser devices.
+It does not focus on any particular technical details, but rather addresses the more general issue of arranging an efficient development process.</p>
+<p>Many aspects apply in very similar form to other types of <a href="photonics.html" title="photonics: the science and technology of light">photonic</a> devices, such as <a href="optical_parametric_oscillators.html" title="optical parametric oscillators: coherent light sources based on parametric amplification within an optical resonator">parametric oscillators</a>.</p>
+<h2 class="togglediv">A Systematic Procedure for Laser Development</h2>
+<div>
+<p>Non-systematic approaches to laser development can fail for many reasons.
+A systematic procedure as described in the following can be much more efficient concerning time and resources:</p>
+<h3 class="togglediv">Assessment of Requirements</h3>
+<div>
+<p>The first step is a careful assessment of what exactly is required.
+It is essential to realize <em>all</em> requirements at this stage, because it can be much more costly to introduce additional properties of the laser at a later stage.</p>
+<p>As an example, one may consider a <a href="pulsed_lasers.html" title="pulsed lasers: lasers emitting light in the form of pulses">pulsed laser</a> for an application where the precise pulse timing is critical.
+If that requirement is overlooked in the beginning, one may in the worst case choose a technological approach which makes it very hard to achieve the required timing accuracy.
+One may then be forced to either implement costly additional measures or to change the technological approach at a later stage.</p>
+</div>
+<h3 class="togglediv">Suitability of Technology</h3>
+<div>
+<p>The second step is to check whether the envisaged technology is overall appropriate, and perhaps to compare the chosen approach with competing options.
+This step is essential, because mistakes made at this stage would affect the whole development process.
+An experienced laser engineer is therefore strictly required.</p>
+<p>As an example, there are many cases where a certain laser could either be realized as a <a href="bulk_lasers.html" title="bulk lasers: lasers based on bulk crystals as gain media">bulk laser</a> or as a <a href="fiber_lasers.html" title="fiber lasers: lasers with a doped fiber as gain medium, or (sometimes) just lasers where most of the laser resonator is made of fibers">fiber laser</a>.
+Both technologies have specific advantages and limitations, the relevance of which strongly depends on the concrete case.</p>
+</div>
+<h3 class="togglediv">Working out a Prototype Design</h3>
+<div>
+<aside class="textbox tb_right greenmargin" style="width:250px;">
+<h2>In Short</h2>
+<p>Due to the complexity of laser devices and their physical basis, the effectiveness, speed and cost of laser development projects are strongly dependent on a well structured process.
+A crucial point is solid laser design work at the beginning, not only as a reaction to already severe problems.
+The laser design is then not the result of a complicated development process, but rather its basis, as well as a valuable input for the next project.</p>
+</aside>
+<p>The next step is to work out a detailed <a href="laser_design.html" title="laser design: the design of a laser device, or the process of working out such a design">laser design</a> which can be used for building a prototype.
+This process involves quantitative checks of various issues before any laboratory work is started.</p>
+<p>For example, if a passively <a href="mode_locked_lasers.html" title="mode-locked lasers: lasers which emit ultrashort pulses on the basis of the technique of mode locking">mode-locked</a> <a href="bulk_lasers.html" title="bulk lasers: lasers based on bulk crystals as gain media">bulk laser</a> is developed, this process can include calculations (not necessarily detailed <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">modeling</a>) concerning the pump intensity and laser gain (at different wavelengths), the <a href="threshold_pump_power.html" title="threshold pump power: the pump power at which the laser threshold is reached">threshold pump power</a>, the balance of <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a> and <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinearity</a> in the <a href="laser_resonators.html" title="laser resonators: optical resonators serving as basic building blocks of lasers">resonator</a>, the expected <a href="alignment_sensitivity.html" title="alignment sensitivity: the sensitivity of a laser, an optical resonator or some other device with respect to misalignment">alignment sensitivity</a>, the required <a href="modulation_depth.html" title="modulation depth: a relative modulation amplitude, or (for a saturable absorber) the maximum change in absorption">modulation depth</a> of the <a href="semiconductor_saturable_absorber_mirrors.html" title="semiconductor saturable absorber mirrors: saturable semiconductor absorber devices acting as nonlinear mirrors">SESAM</a>, the overall operation point of the SESAM concerning degree of saturation, the strength of pulse shaping, etc.</p>
+<p>Such calculations go well beyond what could be done with a simple calculator; one will usually require a <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser modeling</a> software.
+With such a tool, various problems can be identified at the very early stage, then enforcing design changes until one obtains a design which is free of a number of foreseeable problems.</p>
+<p>The &ldquo;deliverable&rdquo; of this design phase is a clearly written design report, containing not only all the parameters of the suggested prototype but also a clear description of the reasoning behind the design and possibly the likely limitations, some warnings, the list of required parts, etc.</p>
+</div>
+<h3 class="togglediv">Building and Testing the Prototype</h3>
+<div>
+<aside class="callout red">Laboratory testing is often the most expensive and time-consuming process in the laser development. Therefore, maximizing its efficiency e.g. with a fellow worked out a laser design can save a lot of resources and time.</aside>
+<p>Once the valve worked out prototype design exists, the required parts can be ordered and the prototype can be built, following the detailed prescriptions in the laser design.
+Obviously, it would be inefficient to start that phase without a proper prototype design, e.g. because one may then need to order additional components during the laboratory testing phase (causing additional cost and delays), and because various types of problems would be more difficult and costly to identify and solve.</p>
+<p>The prototype may still exhibit some unforeseen problems &ndash; depending of course on the level of care and experience applied in the design phase.
+The design than his to be revised accordingly after identifying the origins of problems and suitable solutions for them.</p>
+<p>Optimizing a design with further changes based on experimental tests in a trial &amp; error procedure is often very time-consuming.
+For example, rearranging a laser setup often requires a complete realignment, and the same applies to rebuilding the original design if change turns out to be detrimental.
+Furthermore, the experimental results are often not conclusive or even misleading, since measured performance values can be affected by poorly controlled influences such as non-ideal alignment, dirty components or temperature changes.
+For such reasons, the effects of possible design changes can be much more efficiently and reliably evaluated with a suitable laser design software on a computer.</p>
+</div>
+<h3 class="togglediv">Finalizing a Product Design</h3>
+<div>
+<p>For various reasons, further steps often have to be taken to turn the prototype design into a final product design:</p>
+<ul>
+<li>Sometimes, the performance requirements change during the development phase, or additional requirements are discovered only then.</li>
+<li>One may discover that some tolerances (e.g. concerning misalignment) are still too strict for the final product.</li>
+<li>Generally, and industrial laser design must be subject to stricter requirements than a prototype, e.g.  concerning aspects like efficient production, sufficient robustness for practical applications until harsh conditions, and overall convenient for the customers.</li>
+<li>One may want to minimize the production cost by working with fewer or cheaper components.</li>
+</ul>
+<p>Again, one will have to evaluate the detailed effects of various design changes, which is often more time-consuming and less conclusive when done with experimental tests rather than using a <a href="laser_modeling.html" title="laser modeling: the investigation of phenomena and quantitative relations in lasers, using theoretical models and computational methods">laser model</a>.</p>
+</div>
+<h3 class="togglediv">User Manual</h3>
+<div>
+<aside class="callout red">A user manual must be helpful for the end user and not just clear enough for the development engineer!</aside>
+<p>Other than the design document, the user manual can be written <em>after</em> all the prototype testing and refinement.
+Here, it is an advantage already to have all the practical experience with the device.
+It is important, however, that the author of a laser manual is able to fully recognize the needs of the end users, who have a less detailed knowledge of the technical details of the device.
+For laser engineer, this aspect can be somewhat challenging; it can then be very advantageous to have amenable checked by people who are not as closely familiar with the details.</p>
+</div>
+</div>
+<h2 class="togglediv">Advantages of a Structured Development Strategy</h2>
+<div>
+<p>The advantages of this structured approach are manifold:</p>
+<aside class="callout blue">As well structured laser development strategy is vital for completing a development in time and avoiding serious cost overruns.</aside>
+<ul>
+<li>Most importantly, the costly and time-consuming laboratory work can be done in the most efficient way.
+Compared with a trial-and-error approach in the laboratory, it is easier to identify problems, their causes and suitable solutions on paper and/or with a computer, because this process is not limited by, e.g., available diagnostics, access to inner parts of the device, or available alternative optical components.</li>
+<li>As another consequence, the laser product can enter the market sooner, thus generating revenue at an earlier time and positioning the company in the market.</li>
+<li>The well-documented laser design helps the development team to learn more about the technical details, and is a very useful input for any further development &ndash; even if that is carried out by other personnel.</li>
+<li>Another advantage of a well-planned development process is that fewer parts are ordered which are not used in the end.</li>
+</ul>
+<p>A frequent mistake is to consider the <a href="laser_design.html" title="laser design: the design of a laser device, or the process of working out such a design">laser design</a> document as a side product of the development process, rather than as its basis.
+This easily leads to inefficient iterative steps in the laboratory, which can consume much more time and resources than the process of working out a detailed design in an earlier phase.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_laser_development1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 15 suppliers for laser development services. Among them:</p>
+<aside class="bg_vendoritem"><a href="http://www.optikexpertisen.com/en" data-supplier="Optikexpertisen" data-location="product-enc" data-keyword="laser development" rel="nofollow" class="bg externallink" title="Visit the website of Optikexpertisen"><img src="bg/logos/optikexpertisen.png" alt="Optikexpertisen" class="supplierlogo"></a><h3><a href="bg/profiles/optikexpertisen.html" title="See the profile of Optikexpertisen">Optikexpertisen</a></h3><p>We offer to <a href="http://www.raab-photonik.de/en/competences/optical-design/" data-supplier="Optikexpertisen" data-keyword="laser development" rel="nofollow" class="externallink bg">design, simulate</a>, and <a href="http://www.raab-photonik.de/en/competences/measurements/" data-supplier="Optikexpertisen" data-keyword="laser development" rel="nofollow" class="externallink bg">experimentally test</a> laser systems to your requirements, preferably around diode lasers. They can be based on our previous &ndash; partially patented &ndash; designs or on your specific needs. (<a ref="http://www.raab-photonik.com/en/projects/multispectral-laser/">Read more</a> or <a href="http://www.raab-photonik.com/en/interactive/contact-form/" data-supplier="Optikexpertisen" data-keyword="laser development" rel="nofollow" class="externallink bg">ask us</a>.)</p></aside>
+<aside class="bg_vendoritem"><a href="index.html" data-supplier="RP Photonics" data-location="product-enc" data-keyword="laser development" rel="nofollow" class="bg externallink" title="Visit the website of RP Photonics"><img src="bg/logos/rp_photonics.png" alt="RP Photonics" class="supplierlogo"></a><h3><a href="bg/profiles/rp_photonics.html" title="See the profile of RP Photonics">RP Photonics</a></h3><p>We offer <a href="services_manu.html" data-supplier="RP Photonics" data-keyword="laser development" rel="nofollow" class="externallink bg">prototype and product design services</a>, based on detailed experience and specialized <a href="software.html" data-supplier="RP Photonics" data-keyword="laser development" rel="nofollow" class="externallink bg">simulation software</a> for designing all kinds of solid-state lasers.</p></aside>
+</div>
+</div>
+<p class="seealso">See also: <a href="laser_design.html" title="laser design: the design of a laser device, or the process of working out such a design">laser design</a>, <a href="spotlight_2006_07_05.html">Spotlight article 2006-07-05</a>, <a href="spotlight_2006_12_09.html">Spotlight article 2006-12-09</a>, <a href="spotlight_2007_03_16.html">Spotlight article 2007-03-16</a>, <a href="spotlight_2007_11_26.html">Spotlight article 2007-11-26</a>, <a href="spotlight_2008_02_14.html">Spotlight article 2008-02-14</a>, <a href="spotlight_2009_06_29.html">Spotlight article 2009-06-29</a>, <a href="spotlight_2010_07_12.html">Spotlight article 2010-07-12</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#methods" title="other articles on methods">methods</a></p>
+<hr style="margin-top:16px; margin-bottom:12px;">
+<a href="paschotta.html"><img src="img/paschotta3_small.jpg" alt="Dr. R. Paschotta" style="float:left; margin:0px 16px 20px 18px;" width="80" height="97"></a>
+<p style="font-size:12px; line-height:18px; margin-bottom:12px; padding-right:20px;">This encyclopedia is authored by <a href="paschotta.html" class="redlink">Dr. Rüdiger Paschotta</a>, the founder and executive of <a href="index-2.html" class="redlink">RP Photonics Consulting GmbH</a>.
+<a href="contact.html" class="redlink">Contact</a> this distinguished expert in laser technology, nonlinear optics and fiber optics, and find out how his <a href="services.html" class="redlink">technical consulting services</a> (e.g. product designs, problem solving, independent evaluations, or staff training) and <a href="software.html" class="redlink">software</a> could become very valuable for your business!</p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="laser_development.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Learn About Photonics Marketing!</h2>
+<p>We have published a number of comprehensive articles where we explain how a wide range of tools for the marketing of photonics, optics and laser product works.</p>
+<p>Start reading here:</p>
+<p><a href="marketing_overview0205.html?banner=marketing_articles" style="font-size:20px; font-weight:bold;">Marketing of Photonics and Laser Technology Products &ndash; an Overview</a></p>
+<p>You will learn not only about the tools which we offer ourselves &ndash; the <a href="buyersguide0205.html?banner=marketing_articles">RP Photonics Buyer's Guide</a>, <a href="marketing_promotions0205.html?banner=marketing_articles">special promotions</a> and <a href="marketing_banners0205.html?banner=marketing_articles">banners</a> &ndash; but also about many others.</p>
+<p>See also our <a href="marketing_glossary0205.html?banner=marketing_articles">glossary of photonics marketing</a>.</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>How PhD Students Should Get Supported by Supervisors</h2>
+<p>A recent <a href="spotlight_2014_12_17af33.html?banner=supervisors">article in the Photonics Spotlight</a> discusses the responsibilities of supervisors (professors and senior research assistance).</p>
+<p>Some key statements:</p>
+<ul>
+<li>Even if PhD students can carry out most of the work in a research project, vital inputs are needed from supervisors particularly in the planning phase and when a crisis occurs.</li>
+<li>A helpful supervisor does not only benefit the supported students, but contributes to the effectiveness of the whole research team.</li>
+<li>If serious engagement were the condition of authorship of supervisors, supervisors would be more likely to do their job.</li>
+<li>A substantial risk for science fraud arises only in a serious crisis &ndash; and is in that case strongly dependent on how the supervisor performs!</li>
+</ul>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/laser_development.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:59:28 GMT -->
+</html>

@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<!-- Mirrored from www.rp-photonics.com/coating_interface_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Die Software RP Coating: Konzept, Benutzeroberfl&auml;che und Dokumentation</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Die Software RP Coating hat eine ausgefeilte Benutzeroberfläche mit schönen Grafiken, Skripting, maßgeschneiderten Formularen und umfassender Dokumentation.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Coating, Design, Software, Optimierung, Vielschichtstrukturen, Konzept, Benutzeroberfläche, Dokumentation">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="coating_interface_d.html"; cat="S"; shownbanner=""; ref="coating_d.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia_de.html">Encyclopedia</a></td>
+<td><a href="buyersguide_d.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting_d.html">Dienste und Modellierung</a></td></tr>
+<tr><td><a href="consulting_d.html">Beratung</a></td>
+<td class="selected"><a href="software_d.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; leistungsfähige Tools für Ihre Forschung &amp; Entwicklung!</span></p>
+<div id="other_language"><a href="coating_interface.html">English</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software_d.html">Überblick</a>
+<a id="Modellierung" href="software_modeling_d.html">Modellierung</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator_d.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower_d.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator_d.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse_d.html">RP ProPulse</a>
+<a id="rp_coating" href="coating_d.html" class="sel">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch_d.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language_d.html">Scriptsprache</a>
+<a id="debugger" href="software_debugger_d.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms_d.html">Formulare</a>
+<a id="licenses" href="software_licenses_d.html">Lizenzen</a>
+<a id="documentation" href="software_docu_d.html">Dokumentation</a>
+<a id="support" href="software_support_d.html">Support</a>
+<a id="distributors" href="software_distributors_d.html">Distributoren</a>
+<a id="software_news" href="software_news_d.html">Software News</a>
+<a id="contact" href="software_contact_d.html">*Angebot anfordern*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP Coating &ndash; das Software-Werkzeug für das<br>Design optischer Vielschichtstrukturen</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="coating_d.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose_d.html">Anwendung</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model_d.html">Modell</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions_d.html">Versionen</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating_interface_d.html">Benutzung</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_demos_d.html">Beispiele</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Das Konzept der Benutzung</h2>
+<div>
+<p>Die Software kann mit <b>praktischen Formularen</b> bedient werden; man man trägt einfach diverse Eingabeparameter in die Felder ein, startet die Berechnung und erhält diverse Ausgaben:</p>
+<ul>
+<li>Numerische Werte können in Ausgabefeldern im Formular angezeigt werden und/oder in der &ldquo;Output area&rdquo; auf der rechten Seite.</li>
+<li>Im Formular kann es sogar grafische Ausgaben geben, beispielsweise farbige Balken.</li>
+<li>Außerdem kann man mehrere grafische Diagramme erzeugen, etwa für die Anzeige von Reflexionsspektren.</li>
+</ul>
+<p>Hier zeigen wir ein Beispiel für ein solches Formular (eine der Demo-Dateien, die man mit der Software erhält), mit dem man Anti-Reflex-Beschichtungen berechnen kann.
+Man gibt einfach die Anforderungen ein (bis zu drei Wellenlängen, eine Bandbreite, Einfallswinkel, Polarization), dazu ein paar Angaben über die Struktur (gewählte Materialien, Anzahl Schichten) und numerische Parameter (Anzahl Monte-Carlo-Versuche):</p>
+<figure>
+<img src="img/coating_form_ar_coating.png" alt="form for anti-reflection coating">
+</figure>
+<p>Wichtig: Diese Formulare und die zugrundeliegenden Berechnungen sind nicht fest codiert.
+Sie erhalten <a href="software_script_language_d.html"><b>Skripte</b></a>, d.&thinsp;h. Textdateien, die eine Schichtstruktur definieren, alle benötigten Berechnungen und die Erzeugung der grafischen Diagramme, und (optional) ein <a href="software_custom_forms_d.html"><b>maßgeschneidertes Formular</b></a>.
+<b>Sie können solche Skripte nun Ihren spezifischen Anforderungen anpassen.</b>
+Die Benutzeroberfläche der Software enthält leistungsfähige Editoren und eine Menge zusätzlicher nützlicher Features, um solche Skripte zu ändern oder neue Skripte zu entwickeln.</p>
+<p>Das Scripting gibt Ihnen eine enorme Flexibilität.
+Damit können Sie selbst ausgefeilte Modelle erstellen; Sie können damit sogar richtiggehend programmieren.
+Programme anderer Hersteller, die keine Scripting-Fähigkeiten haben, können mit <b>RP Coating</b> in punkto Flexibilität nicht mithalten:</p>
+<ul>
+<li>In <b>RP Coating</b> muss die Schichtstruktur nicht unbedingt als eine Tabelle eingegeben werden (was sehr mühsam sein kann), sondern kann auch mit Schleifen konstruiert werden, wo die Schichtdicken systematisch entsprechend einem mathematischen Ausdruck variieren (siehe ein Beispiel unten).
+Man kann verschiedene Teile eines Designs einfach miteinander kombinieren &ndash; beispielsweise einen Bragg-Spiegel, eine Abstandsschicht und einige zusätzliche Schichten darauf.
+Das gesamte Design kann einfach parametrisiert werden.</li>
+<li><b>RP Coating</b> erlaubt Optimierungen mit einer <em>beliebigen mathematischen Form</em> der Zielfunktion (figure-of-merit).
+Bei anderen Programmen können Sie meist nur Parameter einer fest vorgegebenen Zielfunktion eingeben.</li>
+<li>Sie können beliebige zusätzliche Berechnungen hinzufügen: beispielsweise irgendwelche Größen über einen Bereich von Einfallswinkeln mitteln oder Effekte auf ultrakurze Pulse simulieren.</li>
+<li>Sie können <b>alle möglichen zusätzliche Diagramme erzeugen</b> &ndash; nicht einfach nur aus einer vorgegebenen Liste von Diagrammen auswählen.
+Für grafische Ausgaben wie auch für die Ausgabe in Textform bietet die <a href="software_script_language_d.html">Skriptsprache</a> eine enorme Flexibilität; was immer Sie für nützlich halten, kann implementiert werden &ndash; normalerweise mit nur ein paar Zeilen Skriptcode.</li>
+<li>Natürlich können Sie innerhalb eines Skripts und zwischen verschiedenen Skripten mit <b>copy &amp; paste</b> arbeiten, das weitaus angenehmer ist, als viele Formulare durchzugehen und Werte dort erneut einzugeben.</li>
+</ul>
+<p>Beachten Sie, dass Softwareprodukte anderer Hersteller in der Regel nur fest vorgegebene Formulare anbieten.
+Sie müssen dann hoffen, dass diese auch all Ihre Bedürfnisse erfüllen werden.</p>
+</div>
+<h2 class="togglediv">Die Skriptsprache</h2>
+<div>
+<p><b>RP Coating</b> unterstützt eine sehr leistungsfähige Skriptsprache.
+Jedes Skript kann das Folgende enthalten:</p>
+<ul>
+<li class="ta_left">die Definition einer Schichtstruktur</li>
+<li class="ta_left">beliebige Berechnungen, um die interessierenden Größen zu erhalten</li>
+<li class="ta_left">die Definition einer beliebigen Anzahl grafischer Diagramme</li>
+<li class="ta_left">zusätzlichen Code, um Daten zu exportieren oder importieren (z.&thinsp;B. gemessene Reflexionsspektren)</li>
+<li class="ta_left">ein maßgeschneidertes Formular für eine praktische Handhabung</li>
+</ul>
+<p>Natürlich können Sie häufig benötigte Skriptteile auch in externen Dateien speichern und diese in Ihren Skripten aufrufen.</p>
+<p>Einige Code-Fragmente zeigen Ihnen im Folgenden, wie einfach die Skriptsprache verwendbar ist.</p>
+<h3 class="togglediv">Bragg-Spiegel</h3>
+<div>
+<p>Das erste Beispiels zeigt die Definition eines Bragg-Spiegels:</p>
+<pre class="codedisplay">
+l_Bragg := 1000 nm  { Bragg wavelength }
+N_Bragg := 8  { number of layer pairs }
+&nbsp;
+beam from superstrate
+substrate: BK7
+for j := 1 to N_Bragg do
+begin
+* SiO2, d = l/4 at l_Bragg
+* TiO2, d = l/4 at l_Bragg
+end
+superstrate: air
+</pre>
+</div>
+<h3 class="togglediv">Gechirpter Spiegel</h3>
+<div>
+<p>Ein zweites Beispiel zeigt die Definition eines &ldquo;gechirpten&rdquo; Spiegels, bei dem die Schichtdicken innerhalb der Struktur systematisch variieren:</p>
+<pre class="codedisplay">
+l_Bragg0 := 1000 nm  { Bragg wavelength in the middle }
+dl := 5 nm  { change of Bragg wavelength with each layer pair }
+N_Bragg := 8  { number of layer pairs }
+l_B(j) := l_Bragg0 + (j - N_Bragg / 2) * dl  { Bragg wavelength for layer pair j }
+d_SiO2(j) := (var l; l := l_B(j); l / 4 / n_SiO2(l))
+d_TiO2(j) := (var l; l := l_B(j); l / 4 / n_TiO2(l))
+&nbsp;
+beam from superstrate
+substrate: BK7
+for j := 1 to N_Bragg do
+begin
+* SiO2, d = d_SiO2(j)
+* TiO2, d = d_TiO2(j)
+end
+superstrate: air
+</pre>
+<p>Sie sehen, dass man einfach auch andere Arten von &ldquo;Chirps&rdquo; realisieren, zusätzliche Schichten einfügen könnte etc.
+Diese Flexibilität finden Sie in anderen Produkten häufig nicht.</p>
+</div>
+<h3 class="togglediv">Numerische Optimierung</h3>
+<div>
+<p>Hier ist etwas Code für eine numerische Optimierung:</p>
+<pre class="codedisplay">
+l_HR := 1064  { HR wavelength }
+l_HT := 808   { HT wavelength }
+FOM():= { merit function }
+  sqrt(sum(d := -20 to +20 step 5, T(l_HR + d)^2)
+      +sum(d := -20 to +20 step 5, R(l_HT + d)^2))
+&nbsp;
+optimize coating for minimum of FOM()
+</pre>
+<p>Die definierte Zielfunktion FOM() ergäbe Null für einen Spiegel mit verschwindender Transmission um 1064&nbsp;nm und verschwindender Reflektivität um 808&nbsp;nm &ndash; dies ist das Design-Ziel für einen dichroischen Spiegel, mit dem Pumplicht in einen Nd:YAG-Laser eingebracht werden kann.
+Das Kommando &ldquo;optimize&rdquo; verfeinert die Schichtstruktur so, dass diese Zielfunktion den minimal möglichen Wert liefert.</p>
+</div>
+<h3 class="togglediv">Anzeige des Reflexionsspekrums</h3>
+<div>
+<p>Schließlich ist hier noch etwas Code für die Anzeige des Reflexionsspekrums:</p>
+<pre class="codedisplay">
+diagram 1:
+&nbsp;
+"Reflectivity Profile"
+&nbsp;
+x: lambda_min, lambda_max
+"wavelength (nm)", @x
+y: 0, 100
+"reflectivity (%)", @y
+frame
+hx
+hy
+&nbsp;
+f: 100 * R(x),
+  color = red, width = 3
+</pre>
+<h2>Editoren für Skriptcode</h2>
+<p>Für das Editieren von Skriptcode bietet die Software leistungsfähige Editoren und zusätzliche Tools.
+Hier sehen Sie einen Editor:</p>
+<figure>
+<img src="img/coating_editors.png" alt="script editing in RP Resonator">
+</figure>
+<p>Einige sehr nützliche Features dieser Editoren:</p>
+<ul>
+<li><b>Multilevel undo/redo</b>: Sie können mehrere Änderungen im Text schrittweise rückgängig machen oder doch wieder anwenden.</li>
+<li><b>Syntax highlighting</b>: erkannte Namen von Befehlen oder Funktionen, Schlüsselworte und Kommentare werden mit unterschiedlichen Farben angezeigt.
+Dies erleichtert sehr die Erkennung der Struktur.</li>
+<li><b>Parameter-Hilfe</b>: Wenn Sie einen Funktionsnamen gefolgt von einer öffnenden Klammer eintippen, zeigt der Editor Infomationen über die benötigte Parameterliste an.
+Damit wird es wesentlich einfacher, hunderte von Funktionen zu nutzen.</li>
+<li><b>Syntaxprüfung</b>: Sie können die Syntax eines Skripts schnell überprüfen lassen, ohne es auszuführen.</li>
+<li><b>Code snippets library</b>: Sie können ganz einfach häufig benötigte Code-Teile in Ihr Skript einfügen (siehe das Bild unten).
+Dies ist wesentlich praktischer, als beispielsweise Code-Teile in der Dokumentation oder den Demo-Dateien zu suchen.
+Nutzer können auch eigenen Code in die Library einfügen.</li>
+</ul>
+<figure>
+<img src="img/code_snippets_coating.png" alt="code snippets library">
+</figure>
+</div>
+</div>
+<h2 class="togglediv">Grafische Ausgaben</h2>
+<div>
+<p>Ein Skript kann mehrere Diagramme erzeugen, um die Resultate der Berechnungen darzustellen.
+Beispiele finden Sie auf den Seiten für verschiedene <a href="coating_demos_d.html">Demo-Dateien</a>.
+Jedes Diagramm wird in einem separaten Fenster gezeigt.
+Unten sehen Sie ein Beispiel für solch ein Grafik-Fenster, das zeigt, wie die optischen Intensitäten in einen Bragg-Spiegel für unterschiedliche Wellenlängen eindringen.</p>
+<figure>
+<img src="img/coating_field_penetration.png" alt="field penetration into a Bragg mirror">
+</figure>
+<p>Die Grafik-Fenster haben etliche sehr nützliche Features:</p>
+<ul>
+<li class="ta_left">Messung von Positionen und Distanzen mit zwei Cursorn</li>
+<li class="ta_left">Abspeicherung der Grafik im PNG- oder GIF-Format</li>
+<li class="ta_left">Export numerischer Daten</li>
+<li class="ta_left">Kopieren der Grafik in die Windows-Zwischenablage</li>
+<li class="ta_left">Zurückholen der Grafik der letzten Berechnung (z.&thinsp;B. für ein etwas anderes Coating-Design), um Unterschiede deutlich zu sehen</li>
+<li class="ta_left">Blättern in mehrfachen Versionen einer Grafik</li>
+</ul>
+</div>
+<h2 class="togglediv">Umfassende Dokumentation</h2>
+<div>
+<p><b>RP Coating</b> wird mit einer gut ausgearbeiteten Dokumentation geliefert, welche Ihnen einen schnellen Einstieg und eine effiziente Arbeit auch bei komplizierten Projekten erlaubt:</p>
+<ul>
+<li>Zunächst gibt es ein Manual im PDF-Format, das detailliert (auf ca. 40 Seiten) alles Wichtige erklärt: die Prinzipien des physikalischen Modells, die Bedieneroberfläche, die Skriptsprache, etc.</li>
+<li>Die zusätzliche kontextsensitive Hilfefunktion ist sogar noch detaillierter.
+Das Bild unten gibt Ihnen einen Eindruck.</li>
+</ul>
+<figure>
+<img src="img/coating_help.png" alt="online help of RP Coating">
+</figure>
+</div>
+<h2 class="togglediv">Technischer Support</h2>
+<div>
+<p>Falls es noch irgendwelche Schwierigkeiten gibt, können diese mit dem <a href="software_support_d.html">technischen Support</a> effizient angegangen werden.
+Wir stellen sicher, dass Ihre Probleme schnell gelöst werden.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">Kontakt und Impressum</a>, <a href="privacy_d.html">Datenschutzerklärung</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/coating_interface_d.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:48 GMT -->
+</html>

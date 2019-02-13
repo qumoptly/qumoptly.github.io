@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/rp_fiber_calculator.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:44 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The free fiber optics software RP Fiber Calculator: calculating fiber mode properties and light propagation in fibers with a powerful mode solver</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-11-02">
+<meta name="description" content="The software RP Fiber Calculator of RP Photonics Consulting GmbH can calculate fiber mode properties and light propagation in fibers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Calculator, free, software, fiber optics, mode solver, guided modes, light, propagation">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="rp_fiber_calculator.html"; cat="S"; shownbanner=""; ref="software.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="rp_fiber_calculator_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html" class="sel">RP Fiber Calculator</a>
+<a href="rp_fiber_calculator_download.html" class="sub">Download</a>
+<a href="rp_fiber_calculator_docu.html" class="sub">Documentation</a>
+<a href="rp_fiber_calculator_feedback.html" class="sub">Feedback</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Calculator &ndash; <br> the Convenient Fiber Optics Software</h1>
+<aside class="textbox tb_left redmargin" style="float:none; margin-bottom:20px;;width:550px;">
+<p>In the context of its <a href="anniversary10.html"><b>10-year anniversary</b></a> in 2014, <b>RP Photonics</b> has published this software and made it available via <a href="rp_fiber_calculator_download.html"><b>free download</b></a> &ndash; even for commercial use!</p>
+<p>There is also an enhanced version (<b>RP Fiber Calculator PRO</b>), for which user licenses are sold regularly.</p>
+</aside>
+<p><b>RP Fiber Calculator</b> is a highly convenient software for doing various calculations on optical fibers with radially symmetric refractive index profiles.
+It has an intuitive graphical user interface with tabs for the following purposes:</p>
+<figure class="right" style="width:400px;">
+<a href="video/rp_fiber_calculator_quick_tour/rp_fiber_calculator_quick_tour.html"><img src="img/rp_fiber_calculator_screenshot.png" alt="RP Fiber Calculator"></a>
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Click on the image to start the demo video!
+</figcaption>
+</figure>
+<ul>
+<li><b>Index profiles:</b> define the radial refractive index profiles. Just click into the diagram to change a profile!</li>
+<li><b>Guided modes:</b> get the properties of the guided modes calculated: indices <span class="eqn_il"><i>l</i></span> and <span class="eqn_il"><i>m</i></span> (<span class="eqn_il">LP<sub><i>l</i>,<i>m</i></sub></span> modes), effective refractive index, phase constant, effective mode area, fraction of power propagating within the fiber core, cut-off wavelength.
+The mode solver is powerful, reliable and efficient.</li>
+<li><b>Launch a beam:</b> define a Gaussian laser beam and possibly misalignment of the fiber end, and get the powers launched into all the guided modes, also the total guided power.</li>
+<li><b>Propagation:</b> see how the beam profile evolves in the fiber and what is the corresponding far field profile of light exiting the fiber.</li>
+<li><b>Coupling:</b> calculate how light can be coupled from one fiber to another (a feature of the PRO version only).</li>
+</ul>
+<h2 class="togglediv">An Extremely Useful Tool for Your Everyday Work in Fiber Optics</h2>
+<div>
+<p>Even beginners in fiber optics will have no problem getting started with this software.
+Playing with it trains your intuition and gives you a quantitative feeling and understanding for fiber optics &ndash; a great supplement to all the explanations you find on our website.
+And fiber optics experts will also appreciate to have a highly convenient tool for their everyday work.
+Use it, for example, to address questions like the following ones:</p>
+<aside class="textbox tb_right redmargin" style="width:300px;">
+<h2>Take Action Now!</h2>
+<ul>
+<li>Read the <a href="rp_fiber_calculator_docu.html"><b>detailed software documentation</b></a>.</li>
+<li>See our <a href="video/rp_fiber_calculator_quick_tour/rp_fiber_calculator_quick_tour.html"><b>quick video tour</b></a>, if you like.</li>
+<li><a href="rp_fiber_calculator_download.html"><b>Download the software</b></a> and get started!</li>
+<li>Spread the word &ndash; your colleagues can also profit.</li>
+</ul>
+</aside>
+<ul>
+<li>How low does the index contrast have to be in order to obtain <a href="single_mode_fibers.html" title="single-mode fibers: optical fibers supporting only a single guided mode per polarization direction">single-mode</a> guidance?
+In which wavelength range will that work?</li>
+<li>How many guided modes is my fiber expected to have?</li>
+<li>How quickly will the multimode intensity pattern in the fiber evolve?</li>
+<li>What are the effects of having a central dip in the index profile, or a low-index region around the core, or whatever feature you can imagine?
+Is the fundamental mode still close to Gaussian-shaped?</li>
+<li>How critical will be a mismatch of beam focus size for launching light into the fiber?
+How critical are other parameters e.g. for displacements or tilts?</li>
+</ul>
+<aside class="textbox tb_right redmargin" style="width:300px;">
+<h2>Fiber Optics Tutorial</h2>
+<p>Did you know that we offer a high-quality <a href="passive_fiber_optics.html"><b>tutorial on fiber optics</b></a>?</p>
+</aside>
+<ul>
+<li class="ta_left">Is the observed far field pattern consistent with the design parameters?</li>
+<li class="ta_left">What is the insertion loss of a splice between two different multimode fibers?
+How important is it to have matched core sizes and NA values?</li>
+</ul>
+<p>Find this out easily with the software, rather than doing tedious calculations based on equations found in textbooks, or just fishing in the dark.
+You may also test numerically what you have calculated in order to be sure.</p>
+<div id="comparison"></div>
+</div>
+<h2 class="togglediv">Comparison of Software Versions</h2>
+<div>
+<p>Here, you can get a short overview on what the different software versions for fiber optics offer:</p>
+<table style="width:100%; margin-bottom:12px;" class="comparison">
+<tr><th></th><th>RP Fiber Calculator<br>free version</th><th>RP Fiber Calculator<br>PRO version</th><th><a href="fiberpower.html"><b>RP Fiber Power</b></a> V6</th></tr>
+<tr><th>Mode solver</th><td>LP modes with <i>l</i>, <i>m</i> up to 20</td><td>LP modes with <i>l</i>, <i>m</i> up to 150</td><td>LP modes with <i>l</i>, <i>m</i> up to 150</td></tr>
+<tr><th>Refractive index profiles</th><td>direct graphical input</td><td>direct graphical input, via doping profile or mathematical expression</td><td>via arbitrary mathematical expressions<br>(fully flexible)</td></tr>
+<tr><th>Chromatic dispersion</th><td>&ndash;</td><td>yes</td><td>yes</td></tr>
+<tr><th>Table of mode properties</th><td>yes, with graphical user interface</td><td>yes, with graphical user interface</td><td>can generate any listings of mode properties via scripting</td></tr>
+<tr><th>Plots of mode properties</th><td>&ndash;</td><td>yes, as functions of wavelength</td><td>can generate any plots of mode properties</td></tr>
+<tr><th>Export of mode properties</th><td>&ndash;</td><td>yes, in text form with editable format</td><td>can generate outputs of any format (text, binary, graphics)</td></tr>
+<tr><th>Optimization of fiber designs</th><td>(no special support)</td><td>can display any mode properties and an arbitrarily defined &ldquo;figure of merit&rdquo;</td><td>can display any mode properties and an arbitrarily defined &ldquo;figure of merit&rdquo;</td></tr>
+<tr><th>Launching a laser beam</th><td>yes, with graphical user interface</td><td>yes, with graphical user interface</td><td>can do this and much more via scripting</td></tr>
+<tr><th>Evolution of beam profile in fiber</th><td>yes, with graphical user interface</td><td>yes, with graphical user interface</td><td>can do this and much more via scripting</td></tr>
+<tr><th>Fiber-to-fiber coupling</th><td>&ndash;</td><td>yes, with graphical user interface</td><td>can do this and much more via scripting</td></tr>
+<tr><th>Reflections at fiber ends</th><td>&ndash;</td><td>yes, with graphical user interface</td><td>can do this and much more via scripting</td></tr>
+<tr><th>Numerical beam propagation</th><td>&ndash;</td><td>&ndash;</td><td>yes, fully programmable</td></tr>
+<tr><th>Ultrashort pulse and signal propagation</th><td>&ndash;</td><td>&ndash;</td><td>yes, with chromatic dispersion, nonlinearities, saturable absorbers, filters, etc.</td></tr>
+<tr><th>Fiber laser and amplifier simulations</th><td>&ndash;</td><td>&ndash;</td><td>very advanced capabilities, including user-defined level schemes, short and ultrashort pulse amplification, mode locking, etc. (except in the Passive Edition)</td></tr>
+<tr><th>Scripting</th><td>&ndash;</td><td>can define refractive index functions (e.g., Sellmeier formulas)</td><td>extremely powerful script language: can do full-blown programming</td></tr>
+<tr><th>Documentation</th><td>in the program and on the website</td><td>in the program and on the website</td><td>PDF manual with over 100 pages; context-sensitive online help system</td></tr>
+<tr><th>Technical support</th><td>not included, but bug reports and suggestions are welcome</td><td>4 hours commercial<br>2 hours non-commercial<br>including advice on related scientific issues</td><td>8 hours commercial<br>4 hours non-commercial<br>including advice on related scientific issues</td></tr>
+</table>
+<p>Our most powerful fiber optics software is <a href="fiberpower.html"><b>RP Fiber Power</b></a> &ndash; see the comprehensive description.
+If you work with passive fiber only, the cheaper &ldquo;Passive Edition&rdquo; will be sufficient.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<div class="software_questions">
+<p>If you have any <b>further questions</b> or need a <b>quotation</b>:</p>
+<div class="button action"><a href="software_contact.html"><b>Contact us</b></a></div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/rp_fiber_calculator.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:52:46 GMT -->
+</html>

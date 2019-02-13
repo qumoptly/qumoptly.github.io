@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/coating.html?banner=Debugger by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:20 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The thin-film software RP Coating for the design of optical multilayer structures: laser mirrors, anti-reflection coatings, edge filters, thin-film polarizers, etc.</title>
+<link rel="stylesheet" type="text/css" href="engine7/style.css">
+<script type="text/javascript" src="engine7/jquery.js"></script>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-11-02">
+<meta name="description" content="The thin-film software RP Coating can be used for the design of optical multilayer structures: laser mirrors, anti-reflection coatings, edge filters, thin-film polarizers, etc.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Coating, thin-film software, modeling, multilayer structures, laser mirrors, anti-reflection coatings, edge filters, thin-film polarizers">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="coating3916.html?banner=Debugger"; cat="S"; shownbanner=""; ref="encyclopedia_de.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="coating_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html" class="sel">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<h1>RP Coating &ndash; Advanced Software for<br>Designing Optical Multilayer Structures</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="coating.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_purpose.html">Purpose</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_interface.html">Interface</a></td>
+<td class="sub_nav"><a class="sub_n" href="coating_demos.html">Demos</a></td>
+</tr>
+</table>
+<h2>A Flexible Tool for Developing Laser Mirrors, Dispersive Mirrors, Filters and Polarizers</h2>
+<p><b>RP Coating V4</b> is a particularly flexible and powerful thin-film software tool for developing all kinds of optical multilayer structures.
+It is not limited to standard devices as conceived by the developer, but also gives the developer the power to analyze and optimize anything new.
+At the same time, it is extremely convenient for industry people who often need to quickly adapt designs to new parameter values: designs can be fully parameterized such that the whole structure can be controlled with a few parameters instead of a long list of layer thickness values.</p>
+<figure>
+<img src="img/rp_coating.png" alt="RP Coating">
+</figure>
+<h2 class="togglediv">Start with Simple Forms</h2>
+<div>
+<p>There are various demo files, containing handy <a href="software_custom_forms.html"><b>custom forms</b></a>, with which you can very easily get started.
+See examples for a Bragg mirror and a GTI mirror:</p>
+<figure>
+<img src="img/coating_form_ar_coating.png" alt="form for designing anti-reflection coating">
+</figure>
+<figure>
+<img src="img/coating_form_filter.png" alt="form for the design of optical filters">
+</figure>
+<p>When executing the calculation, you get various diagrams (not shown here).
+You can also get outputs displayed in the form.
+Further numerical outputs can appear in the output area on the right side.</p>
+<p>A great feature is that those forms and calculations are not hard-wired: you obtain <a href="software_script_language.html"><b>script files</b></a>, in which you can <b>easily modify the forms and calculations according to your specific needs</b>!
+For example, you may introduce more optical elements to the resonator or create additional diagrams.
+And in case that things are getting too difficult for you, you will get very helpful <a href="software_support.html"><b>technical support</b></a>.
+You can get even complete new scripts made according to your informal description of what you need.</p>
+</div>
+<h2 class="togglediv">The Product Brochure</h2>
+<div>
+<p>The following brochure explains the software in some detail:</p>
+<div id="wowslider-container7">
+<div class="ws_images"><ul>
+<li><img src="data7/images/slide1.jpg" alt="Slide1" title="Slide1" id="wows7_0"/></li>
+<li><img src="data7/images/slide2.jpg" alt="Slide2" title="Slide2" id="wows7_1"/></li>
+<li><img src="data7/images/slide3.jpg" alt="Slide3" title="Slide3" id="wows7_2"/></li>
+<li><img src="data7/images/slide4.jpg" alt="Slide4" title="Slide4" id="wows7_3"/></li>
+<li><img src="data7/images/slide5.jpg" alt="Slide5" title="Slide5" id="wows7_4"/></li>
+<li><img src="data7/images/slide6.jpg" alt="Slide6" title="Slide6" id="wows7_5"/></li>
+<li><img src="data7/images/slide7.jpg" alt="Slide7" title="Slide7" id="wows7_6"/></li>
+<li><img src="data7/images/slide8.jpg" alt="Slide8" title="Slide8" id="wows7_7"/></li>
+<li><img src="data7/images/slide9.jpg" alt="Slide9" title="Slide9" id="wows7_8"/></li>
+<li><img src="data7/images/slide10.jpg" alt="Slide10" title="Slide10" id="wows7_9"/></li>
+<li><img src="data7/images/slide11.jpg" alt="Slide11" title="Slide11" id="wows7_10"/></li>
+<li><img src="data7/images/slide12.jpg" alt="Slide12" title="Slide12" id="wows7_11"/></li>
+<li><img src="data7/images/slide13.jpg" alt="Slide13" title="Slide13" id="wows7_12"/></li>
+<li><img src="data7/images/slide14.jpg" alt="Slide14" title="Slide14" id="wows7_13"/></li>
+<li><img src="data7/images/slide15.jpg" alt="Slide15" title="Slide15" id="wows7_14"/></li>
+<li><img src="data7/images/slide16.jpg" alt="Slide16" title="Slide16" id="wows7_15"/></li>
+<li><img src="data7/images/slide17.jpg" alt="Slide17" title="Slide17" id="wows7_16"/></li>
+</ul></div>
+<div class="ws_shadow"></div>
+</div>	
+<script type="text/javascript" src="engine7/wowslider.js"></script>
+<script type="text/javascript" src="engine7/script.js"></script>
+<p>Note that you can flip the pages by clicking on the left or right side of the brochure display.</p>
+<p>You can also <a href="RP_Coatingae83.pdf"><b>download our brochure in PDF format</b></a>.</p>
+</div>
+<h2 class="togglediv">Design Anything You Need!</h2>
+<div>
+<p><b>RP Coating</b> can be used, for example, to analyze and optimize the following kinds of thin-film devices:</p>
+<ul>
+<li><a href="coating_demo_bragg_mirror.html">dielectric mirrors</a> (laser mirrors), including chirped mirrors (e.g. most advanced double-chirped mirror designs with extremely high bandwidth) or other kinds of dispersive mirrors (e.g. <a href="coating_demo_gti.html">GTIs</a>)</li>
+<li><a href="coating_demo_ar.html">anti-reflection coatings</a>, including advanced multilayer structures, found e.g. with a Monte-Carlo technique</li>
+<li>optical filters (short-pass and long-pass edge filters, band-pass filters, monolithic and air-spaced <a href="coating_demo_etalon.html">etalons</a>, <a href="volume_bragg_gratings.html" title="volume Bragg gratings: Bragg gratings written into some bulk material">volume Bragg gratings</a>, <a href="coating_demo_rugate.html">rugate filters</a> and other types of interference filters)</li>
+<li>thin-film polarizers (<a href="coating_demo_polarizer.html">plate polarizers</a>, <a href="coating_demo_polarizing_cube.html">polarizing cubes</a>)</li>
+<li>semiconductor structures, such as <a href="semiconductor_saturable_absorber_mirrors.html" title="semiconductor saturable absorber mirrors: saturable semiconductor absorber devices acting as nonlinear mirrors">SESAMs</a>, including saturable absorption characteristics, chromatic dispersion, etc., and also <a href="vertical_external_cavity_surface_emitting_lasers.html" title="vertical external-cavity surface-emitting lasers: surface-emitting semiconductor lasers with an external laser resonator">VECSEL</a> gain structures</li>
+</ul>
+<p>You may also define any other multilayer structures, for whatever purpose.</p>
+</div>
+<h2 class="togglediv">Main Features</h2>
+<div>
+<ul>
+<li><b>RP Coating</b> offers different methods to define a thin-film multilayer structure.
+Apart from simply listing all layer materials and thickness values one by one, it is also possible to specify a structure with mathematical expressions (e.g. to calculate a chirped mirror structure according to a few given parameters).
+This allows you to <b>fully parameterize your designs</b>: you can control the whole design with a couple of parameters instead of a long list of layer thickness values.
+Another option is to read a structure from a file &ndash; with great flexibility concerning binary and text file formats.</li>
+<li>The program can calculate a <b>large number of relevant properties</b> of a multilayer structure, including its reflection and transmission amplitudes and phases (with a variable angle of incidence), <a href="chromatic_dispersion.html" title="chromatic dispersion: the frequency dependence of the phase velocity in a transparent medium">chromatic dispersion</a>, field distribution inside the structure, etc.</li>
+<li>There are <a href="coating_model.html">material data</a> for a substantial selection of materials.
+It is also no problem to add data for any additional materials, using essentially any kind of definition: tabulated data (refractive index versus wavelength), a <a href="sellmeier_formula.html" title="Sellmeier formula: an equation for calculating the wavelength-dependent refractive index of a medium">Sellmeier formula</a> or whatever may be more appropriate.</li>
+<li>The software allows for various kinds of <b>optimizations</b>.
+A <b>figure of merit can be freely defined as a mathematical expression</b> which may refer to arbitrary combinations of different properties, including fabrication error tolerances.
+(Note that competing products normally only allow you to modify parameters of a fixed type of figure of merit.)
+The optimization can be a local one or use a Monte-Carlo algorithm.
+It can affect all layer thickness values separately, or only some parameters which indirectly determine a layer structure.</li>
+<li>By <b>fitting to experimental data</b>, deviations from specified thickness values or material data can be calculated.</li>
+<li>All results can be shown graphically.
+The user can essentially <b>define any kind of plot or color diagram</b>, and not only select from a set of predefined diagrams.</li>
+<li>Also, <b>results can be shown in text form</b>: written into a special area in the software window, written into graphical diagrams or to text files.
+There is full flexibility concerning text or binary file formats.
+For example, you can <b>read files from a spectrometer</b> and write files for <b>controlling your coating machine</b>.</li>
+</ul>
+<p>You will hardly find a competing software which is similarly flexible and suitable for such a wide range of applications.</p>
+<p>More than 15 <a href="coating_demos.html"><b>demo files</b></a> are delivered the software, treating simple mirror structures as well as sophisticated optimizations.</p>
+</div>
+<div class="software_questions">
+<p>If you have any <b>further questions</b> or need a <b>quotation</b>:</p>
+<div class="button action"><a href="software_contact.html"><b>Contact us</b></a></div>
+</div>
+</main>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/coating.html?banner=Debugger by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:09:20 GMT -->
+</html>

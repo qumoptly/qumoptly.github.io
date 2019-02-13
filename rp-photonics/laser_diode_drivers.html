@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/laser_diode_drivers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:59:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>Encyclopedia of Laser Physics and Technology - laser diode drivers, current control, constant power mode, wavelength tuning, protective features, safety, interlocks, temperature control, monitoring, modulation, computer control</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-20">
+<meta name="description" content="Laser diode drivers are electronic current supplies for one or several laser diodes. Depending on the application and power level, the requirements on laser diodes drivers can be very different.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="laser diode drivers, current control, constant power mode, wavelength tuning, protective features, safety, temperature control, monitoring, modulation, computer control">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="laser_diode_drivers.html"; cat="E"; shownbanner=""; ref="glossary.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="bg/buy_laser_diode_drivers.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+<table id="letters" class="lettertable">
+<tr>
+<td><a href="encyclopedia_a.html">A</a></td>
+<td><a href="encyclopedia_b.html">B</a></td>
+<td><a href="encyclopedia_c.html">C</a></td>
+<td><a href="encyclopedia_d.html">D</a></td>
+<td><a href="encyclopedia_e.html">E</a></td>
+<td><a href="encyclopedia_f.html">F</a></td>
+<td><a href="encyclopedia_g.html">G</a></td>
+<td><a href="encyclopedia_h.html">H</a></td>
+<td><a href="encyclopedia_i.html">I</a></td>
+<td><a href="encyclopedia_j.html">J</a></td>
+<td><a href="encyclopedia_k.html">K</a></td>
+<td><a href="encyclopedia_l.html">L</a></td>
+<td><a href="encyclopedia_m.html">M</a></td>
+</tr><tr>
+<td><a href="encyclopedia_n.html">N</a></td>
+<td><a href="encyclopedia_o.html">O</a></td>
+<td><a href="encyclopedia_p.html">P</a></td>
+<td><a href="encyclopedia_q.html">Q</a></td>
+<td><a href="encyclopedia_r.html">R</a></td>
+<td><a href="encyclopedia_s.html">S</a></td>
+<td><a href="encyclopedia_t.html">T</a></td>
+<td><a href="encyclopedia_u.html">U</a></td>
+<td><a href="encyclopedia_v.html">V</a></td>
+<td><a href="encyclopedia_w.html">W</a></td>
+<td><a href="encyclopedia_x.html">X</a></td>
+<td><a href="encyclopedia_y.html">Y</a></td>
+<td><a href="encyclopedia_z.html">Z</a></td>
+</tr>
+</table>
+<div class="ui-widget" style="font-size:14px;">
+<input id="articlekeyword" placeholder="Article keyword" style="border:1px solid #888; width:99%; min-width:160px">
+<p id="articlekeywordnote" style="color:#444; font-size:11px;">Note: this box searches only for keywords in the titles. For full-text searches, use our <a href="encyclopedia_search.html">search page</a>.</p>
+</div>
+<div id="warning_dialog" title="Sorry!" style="display:none;">
+<p>Sorry, we don't have an article for that keyword!</p>
+</div>
+<noscript>
+<p style="font-size:12px; color:#888;">Note: the article keyword search field and some other of the site's functionality would require Javascript, which however is turned off in your browser.</p>
+</noscript>
+</nav>
+<div id="main"><main>
+<h1>Laser Diode Drivers</h1>
+<!--googleoff: index-->
+<aside class="floatbox">
+<aside class="bg_vendorbox">
+<p><a href="bg/buy_laser_diode_drivers1fbf.html?s=vbox" class="bg_bgheading">Suppliers for laser diode drivers</a></p>
+<p>The RP Photonics Buyer's Guide contains <a href="bg/buy_laser_diode_drivers1fbf.html?s=vbox" class="redlink"><b>36 suppliers for laser diode drivers</b></a>.</p>
+<p>Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/products/tunable-diode-lasers/laser-driving-electronics/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink"><img src="bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/types/laser-diode-driver/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink"><img src="bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a></aside>
+<aside class="bg_vendoritem"><a href="https://www.apichip.com/buy-our-ultra-low-noise-high-power-lasers-today/" data-supplier="APIC" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink"><img src="bg/logos/apic.png" alt="APIC" class="supplierlogo"></a></aside>
+<p>Find more supplier details at the <a href="#supplier_section">end of the encyclopedia article</a>, or go to our</p>
+<div class="button action" style="display:block; margin-left:10px; width:250px; font-size:110%;"><a href="bg/buy_laser_diode_drivers1fbf.html?s=vbox">List of suppliers for<br>laser diode drivers</a></div>
+<p style="font-size:90%;">You are not yet listed? <a href="bg_entries.html">Get your entry!</a></p>
+</aside>
+</aside>
+<!--googleon: index-->
+<header>
+<p><a href="glossary.html" title="go to the glossary">Definition</a>: electronic current supplies for one or several laser diodes</p>
+<p><a href="encyclopedia_de.html">German</a>: <span lang="de">Laserdiodentreiber</span></p>
+<p><a href="categories.html" title="articles sorted by categories">Categories</a>: <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<p><a href="encyclopedia_cite36ea.html?article=laser%20diode%20drivers">How to cite the article</a>; <a href="encyclopedia_literature.html">suggest additional literature</a></p>
+</header>
+<p>Laser diodes drivers are electronic devices which are used to supply one or several <a href="laser_diodes.html" title="laser diodes: semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a> with the required electrical drive current.
+Most of them obtain electrical power from the public grid, but there are also battery-operated devices.</p>
+<h2 class="togglediv">Basic Functionality</h2>
+<div>
+<p>In many cases, a diode driver simply needs to supply a constant operation current, resulting in <a href="continuous_wave_operation.html" title="continuous-wave operation: operation mode of a laser with continuous light emission">continuous-wave operation</a> of the laser with approximately constant <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical output power</a>.
+Due to the highly nonlinear voltage&ndash;current characteristics of laser diodes with a low differential
+impedance (high d<i>I</i>/d<i>V</i>) (see Figure&nbsp;1), which also significantly depend on the junction temperature, it is usually not sufficient to apply a certain constant voltage; instead, the electrical current needs to be stabilized by automatically adjusting the applied voltage.
+This <em>constant current mode</em> is the function of a so-called <em>current source</em>.
+For increasing device temperature, the curve in Figure&nbsp;1 is shifted to the right; one then requires a lower voltage for the same current.
+If one would instead keep the voltage constant, the current could rise substantially, which would further increase the junction temperature.
+This might even result in a run-away situation, where the laser diode is destroyed, if the current is not limited.</p>
+<p>Note that the drive current and not the voltage determines the rate with which electrical carriers are injected into the junction of the <a href="laser_diodes.html" title="laser diodes: semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diode</a>.
+Therefore, the optical output power is strongly linked to the drive current and less directly to the drive voltage.</p>
+<figure>
+<img src="img/ld_ui.png" alt="voltage-current characteristics of a laser diode">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Current vs. applied voltage for an 808-nm laser diode. For a current of 1.2&nbsp;A, as needed for the nominal output power of 1&nbsp;W, the required voltage is roughly 1.8&nbsp;V.
+(For comparison, the <a href="photons.html" title="photons: quanta of light energy">photon energy</a> for 808&nbsp;nm is 1.53&nbsp;eV.)
+</figcaption>
+</figure>
+<p>For preventing damage of a laser diode, it is important to avoid any excessive drive currents; even short current spikes could destroy a laser diode, e.g. in the form of <em>catastrophic optical damage</em> due to excessive optical intensity as the diode's output facet.
+Particularly if a laser diodes driver is not made for diodes with a specific maximum drive current, it should have a separate control where the maximum drive current can be adjusted, and the limit set there should be respected by any other controls, e.g. the one which is regularly used to adjust the drive current.
+(When the current limit is reached, the current may either be clamped to the limit value or switched off until the user reactivates the device e.g. by pushing a button.)
+In that way, one can greatly reduce the risk that a user accidentally draws the power knob too far; special care has to be applied only when the current limit is set.</p>
+<p>In some cases, laser diodes are intentionally overdriven, i.e., operated with a drive current above the recommended maximum.
+In that way, one may achieve an increased output power, but at the cost of a reduced laser lifetime, and possibly even with the risk of instant damage.</p>
+<p>Obviously, a laser diode driver should be relatively immune against external influences such as voltage spikes on the electrical grid or current transients resulting from faulty electrical contacts.</p>
+</div>
+<h2 class="togglediv">Different Power Levels</h2>
+<div>
+<p>Laser diodes and therefore also laser diodes drivers are available in a very wide range of powers.
+Some low-power diodes require drive currents of only e.g. 20&nbsp;mA, whereas high-power <a href="diode_bars.html" title="diode bars: a type of semiconductor laser containing a one-dimensional array of broad-area emitters">diode bars</a> may be operated with drive currents of dozens of amperes.
+In case of high-power diode drivers, it is of interest to have a switching power supply and related control electronics with high power conversion efficiency &ndash; not only in order to save electricity, but also to limit the amount of waste heat which normally needs to be dissipated with additional means such as a ventilator or a water cooling system.</p>
+<p>If the system contains multiple laser diodes, one in principle use a separate driver for each one.
+However, as long as independent power control of these diodes is not required, it is simpler, more convenient and more economical to operate multiple diodes with a single diode driver.
+Usually, the laser diodes are connected in series, since this guarantees that they are all operated with the same drive current; if they would be connected in parallel, the hottest diode may consume the largest part of the current and thus become even hotter.
+Also, parallel connections could lead to excessive drive currents in the electrical cables and connectors, also to a reduced efficiency of the driver, whereas higher voltages are often not a problem.
+For cases with a very large number of laser diodes, one may group the diodes into packages where there is a serial connection of the diodes within each package, and the different packages are driven by separate output stages of the driver (with separate current stabilization).
+Obviously, the via ring of the used laser diodes (e.g. common cathode or common anode) must fit to the connections of the used laser diode driver.</p>
+<p>It is often advisable not to use a laser diode driver which is designed for a much higher drive current than required.
+Even if a proper current limit can be set, the accuracy of the set operation current may otherwise be worse, the current noise may be higher, and the transient protection may be not sufficiently sensitive for a low-power diode.</p>
+</div>
+<h2 class="togglediv">Additional Functionality</h2>
+<div>
+<p>Beyond the mentioned basic functionality, laser diodes drivers can offer a number of additional functions:</p>
+<h3 class="togglediv">Interlock Systems</h3>
+<div>
+<p>Very often, a diode driver has some interlock system, which can switch off the laser in case that a certain safety condition is detected &ndash; for example, and opened device housing.
+It can be very useful to have multiple interlock connections for implementing advanced safety features.
+Some of them may treat conditions like insufficient coolant flow on a chiller in order to avoid hardware defects.</p>
+</div>
+<h3 class="togglediv">Constant Power Mode</h3>
+<div>
+<p>There are devices which can stabilize the <a href="optical_power.html" title="optical power: the energy per unit time, e.g. transported by a laser beam, or a focusing power">optical output power</a> (<em>constant power mode</em>), based on a signal from the <a href="photodetectors.html" title="photodetectors: devices used for the detection of light">photodetector</a>, which may be integrated into the laser diode package.
+(That is particularly often the case for <a href="fiber_coupled_diode_lasers.html" title="fiber-coupled diode lasers: diode laser devices where the generated light is coupled into an optical fiber">fiber-coupled laser diodes</a>.)
+Of course, a certain maximum drive current must never be exceeded; otherwise, a laser diode could be killed as a result of a faulty photodetector signal.
+Often, it is possible to switch between constant current mode and constant power mode.</p>
+</div>
+<h3 class="togglediv">Electrical Monitoring Outputs</h3>
+<div>
+<p>There may be electrical outputs, e.g. delivering a voltage proportional to the laser diode current or the monitored optical power, possibly with a calibration feature.</p>
+</div>
+<h3 class="togglediv">Protective Features</h3>
+<div>
+<p>The applied voltage should be monitored, and if an unusual operation voltage is detected, the device may switch off the diode in order to prevent damage.
+If several laser diodes are operated in series, a sudden drop of the voltage may indicate the death of one of the diodes, and it may then be wise to investigate the situation before the other laser diodes are also destroyed.
+Also, it is useful if the driver recognizes wrong poling of a diode, because it could be destroyed by an excessive reverse voltage.</p>
+<p>For transient protection, the diode's cables should not simply be disconnected when switched off, but rather electrically connected together (shorted), so that electrostatic discharges cannot build up a voltage across the pins.</p>
+</div>
+<h3 class="togglediv">Temperature Control and Monitoring</h3>
+<div>
+<p>Some devices have an integrated temperature controller, driving e.g. a Peltier element based on the signal of some temperature sensor.
+Even without a temperature stabilization feature, it can be useful to monitor the junction temperature for switching off the laser before it gets too hot.
+Alternatively, one may monitor the emission wavelengths, which reacts sensitively to temperature changes, unless an optical wavelength stabilization is used, e.g. based on optical feedback from a <a href="volume_bragg_gratings.html" title="volume Bragg gratings: Bragg gratings written into some bulk material">volume Bragg grating</a>.</p>
+<p>Also, it is sensible to monitor the internal temperature of the electronic driver device, since overheating e.g. due to a blocked air or water flow may destroy the driver and possibly the laser diode(s) in addition.</p>
+</div>
+<h3 class="togglediv">Low-noise Operation</h3>
+<div>
+<p>Some drivers are made for operation with a particularly low current noise.
+This can be important, for example, when driving lasers for sensitive optical measurements.
+Low-noise operation is mostly offered for low-power devices.</p>
+</div>
+<h3 class="togglediv">Slow Start Feature and Turn-on Delay</h3>
+<div>
+<p>Particularly for high-power laser diodes, it can be useful to limit the rate with which the current can be ramped up and down (<em>slow start feature</em>), because this reduces the internal mechanical stress related to temperature changes.
+In addition, a turn-on delay is often used as a safety feature; people in the room are warned about coming laser radiation before it is actually turned on.</p>
+</div>
+<h3 class="togglediv">Wavelength Tuning</h3>
+<div>
+<p>Some <a href="diode_lasers.html" title="diode lasers: semiconductor lasers based on laser diodes">diode lasers</a>, in particular <a href="external_cavity_diode_lasers.html" title="external-cavity diode lasers: non-monolithic diode lasers where the laser cavity (resonator) is completed with external optical elements">external-cavity diode lasers</a>, are suitable for <a href="wavelength_tuning.html" title="wavelength tuning: the manipulation of the output wavelength of an optical device such as a laser or an optical parametric oscillator">wavelength tuning</a> in a substantial range.
+For example, a <a href="diffraction_gratings.html" title="diffraction gratings: optical components containing a periodic structure which diffracts light">diffraction grating</a> on a motorized stage can be used for controlling the emission wavelength.
+Some laser diodes drivers contain functionality for tuning the wavelength e.g. via controlling some stepper motor.</p>
+</div>
+<h3 class="togglediv">Quasi-continuous Wave Operation</h3>
+<div>
+<p>Some drivers are suited for <a href="quasi_continuous_wave_operation.html" title="quasi-continuous-wave operation: an operation mode of lasers (e.g. diode bars) where the pump power is switched on for short time intervals in order to limit thermal effects">quasi-continuous-wave operation</a> (<em>QCW mode</em>).
+This means that they can apply current pulses with an adjustable duration e.g. between 1&nbsp;&mu;s and 10&nbsp;ms, which can be triggered with an external electric signals or with a built-in clock.
+The possible peak current may be well above the current which the driver could deliver continuously, or which the laser diode could tolerate continuously.</p>
+</div>
+<h3 class="togglediv">Short and Ultrashort Pulse Generation</h3>
+<div>
+<p>They are specialized drivers for producing nanosecond or picosecond pulses, e.g. by <a href="gain_switching.html" title="gain switching: a technique for generating short optical pulses in a laser by modulating the laser gain">gain switching</a>.
+Here, it is particularly important to select a suitable laser diode and to properly adjust the parameters of the applied current pulses.</p>
+</div>
+<h3 class="togglediv">Current Modulation</h3>
+<div>
+<p>In other cases, a laser diode driver allows some other kind of modulation of the supplied current.
+This can be done in many different forms.
+For example, a TTL input signal may be used to switch the current on or off.
+In other cases, an analog input signal is added to the base current set with the controls.
+Drivers can differ very much in terms of modulation <a href="bandwidth.html" title="bandwidth: the width of some frequency or wavelength range">bandwidth</a> and depth of modulation.</p>
+<p>Current modulation is often available only in current control mode, i.e., not in combination with output power stabilization.
+This is because the limited feedback bandwidth of the stabilization circle it would strongly limit the possible modulation bandwidth.</p>
+</div>
+<h3 class="togglediv">Computer Control</h3>
+<div>
+<p>A diode driver may be computer-controlled, connected e.g. via a USB, GPIB or a serial interface like RS-232.
+It may receive inputs, e.g. concerning the requested drive current, and deliver outputs, e.g. concerning the achieved optical output power or the required diode voltage.</p>
+</div>
+</div>
+<h2 class="togglediv">Different Types of Diode Drivers</h2>
+<div>
+<p>Some laser diodes drivers are made as instruments specifically for use in laboratories.
+Here, the user usually has direct access to the device and its controls, which usually include various knobs, buttons and switches, e.g. for adjusting the diode current or temporarily switching it off.
+Laboratory diode drivers usually have a front panel with a digital display for the diode current, possibly also for other quantities like the applied voltage or the diode temperature, if the latter can be measured with a built-in temperature sensor.
+Such devices are often not built for a specific type of laser diode, but with increased flexibility for using different diodes.
+This implies that different maximum voltages and currents can be applied.</p>
+<p>Some devices have a standardized housing for mounting in a rack, where they can be combined with other electronic devices.</p>
+<p>Finally, there are driver modules for integration into other devices (e.g. mounted on a chassis heat sink) and sold as OEM packages, if not produced by the manufacturer of the system.
+They often have only electronic interfaces for interaction with other parts of the system electronics, and not directly with the user of the laser device.
+They are often used in larger quantities and available at lower prices.</p>
+</div>
+<h2 class="togglediv">Further Remarks</h2>
+<div>
+<p>Laser diodes are generally not suitable for &ldquo;hot plugging&rdquo;: they should be connected or disconnected only while the diode driver is switched off, and proper precautions have to be taken to avoid damage by electrostatic discharge (ESD).
+For example, one may shorten the pins at the diode before disconnecting the wires from the driver.</p>
+<p>Before using a diode driver within some larger system, one should check whether problems could arise due to improper grounding.
+Some diode drivers have one output pin connected to the case and to earth ground, and may then interfere with additional grounding on other devices.
+Even if the same pin is connected to earth ground at different locations, problems may result due to a &ldquo;ground loop&rdquo; in which magnetic fields can induce disturbing currents.</p>
+</div>
+<a name="supplier_section"></a>
+<div class="bg_vendorbox2">
+<h2 class="encsubhead togglediv">Suppliers</h2>
+<div>
+<p>The <a href="bg/buy_laser_diode_drivers1fbf.html?s=vbox"><b>RP Photonics Buyer's Guide</b></a> contains 36 suppliers for laser diode drivers. Among them:</p>
+<aside class="bg_vendoritem"><a href="https://www.toptica.com/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="bg/logos/toptica_photonics.png" alt="TOPTICA Photonics" class="supplierlogo"></a><a href="https://www.toptica.com/products/tunable-diode-lasers/laser-driving-electronics/" data-supplier="TOPTICA Photonics" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink" title="Visit the website of TOPTICA Photonics"><img src="bg/products/toptica_photonics/laser_diode_drivers.jpg" alt="laser diode drivers" class="product"></a><h3><a href="bg/profiles/toptica_photonics.html" title="See the profile of TOPTICA Photonics">TOPTICA Photonics</a></h3><p>Apart from a well-engineered optomechanical design and the integrated laser diode, the most important part of a tunable diode laser system is its driving electronics, which is responsible for getting the most out of a laser system.</p><p>Wide mode-hop-free tuning with Littrow setups requires a well-defined interplay between piezo actuator and current driver. Drifts of the laser diode current, the temperature or the piezo voltage determine the drift of the laser frequency and the stability against mode-hopping. Noise on any of these outputs increases the laser linewidth. The digital <a href="https://www.toptica.com/products/tunable-diode-lasers/laser-driving-electronics/dlc-pro/" data-supplier="TOPTICA Photonics" data-keyword="laser diode drivers" rel="nofollow" class="externallink bg">DLC pro</a> represents the latest stage of development of laser control electronics. Its noise and drift properties are even better than the well established and widely used preceeding electronics SYS DC 110.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.apichip.com/" data-supplier="APIC" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink" title="Visit the website of APIC"><img src="bg/logos/apic.png" alt="APIC" class="supplierlogo"></a><a href="https://www.apichip.com/buy-our-ultra-low-noise-high-power-lasers-today/" data-supplier="APIC" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink" title="Visit the website of APIC"><img src="bg/products/apic/laser_diode_drivers.jpg" alt="laser diode drivers" class="product"></a><h3><a href="bg/profiles/apic.html" title="See the profile of APIC">APIC</a></h3><p>APIC produces a <a href="https://www.apichip.com/buy-our-ultra-low-noise-high-power-lasers-today/" data-supplier="APIC" data-keyword="laser diode drivers" rel="nofollow" class="externallink bg">turnkey tabletop laser drive module</a> specifically designed to operate its high power, ultra low RIN lasers. The OEM laser of choice is integrated into the laser drive module at the factory. The laser drive module includes a high-quality laser driver with a low-noise power source, current driver and accurate temperature control circuit to maintain stable laser output with minimal noise. APIC is in the process of developing a similar turnkey driver module for its Direct Modulated Lasers (DML).</p><p>A high-quality laser driver with a low-noise power source, current driver and accurate temperature controls is required. If you do not have such equipment, we recommend you consider purchasing our turnkey tabletop CW laser drive module. The drive module has power conditioning with laser and TEC control electronics designed specifically to operate our lasers with minimal noise.</p></aside>
+<aside class="bg_vendoritem"><a href="https://www.rpmclasers.com/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="bg/logos/rpmc_lasers.png" alt="RPMC Lasers" class="supplierlogo"></a><a href="https://www.rpmclasers.com/types/laser-diode-driver/" data-supplier="RPMC Lasers" data-location="product-enc" data-keyword="laser diode drivers" rel="nofollow" class="bg externallink" title="Visit the website of RPMC Lasers"><img src="bg/products/rpmc_lasers/laser_diode_drivers.html" alt="laser diode drivers" class="product"></a><h3><a href="bg/profiles/rpmc_lasers.html" title="See the profile of RPMC Lasers">RPMC Lasers</a></h3><p>RPMC Lasers offers a wide range of <a href="https://www.rpmclasers.com/types/laser-diode-driver/" data-supplier="RPMC Lasers" data-keyword="laser diode drivers" rel="nofollow" class="externallink bg">laser diode drivers</a> for CW, QCW, and pulsed operation. We offer turnkey laboratory laser drivers, rack-mountable laser drivers, and board level OEM drivers with currents ranging from 100&nbsp;mA to 300&nbsp;A. Additionally, the pulsed driver boards are capable of producing transform limited pluses down to 250 ps.</p></aside>
+</div>
+</div>
+<p class="seealso">See also: <a href="laser_diodes.html" title="laser diodes: semiconductor lasers with a current-carrying p&ndash;n junction as the gain medium">laser diodes</a>, <a href="diode_lasers.html" title="diode lasers: semiconductor lasers based on laser diodes">diode lasers</a>, <a href="laser_safety.html" title="laser safety: safety of the use of laser devices">laser safety</a><br>and other articles in the categories <a href="categories.html#lasers" title="other articles on lasers">lasers</a>, <a href="categories.html#photonic_devices" title="other articles on photonic devices">photonic devices</a></p>
+<!--googleoff: index-->
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="laser_diode_drivers.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyright_bottom">
+<!--googleon: index-->
+<span class="copyright">&copy; RP Photonics Consulting GmbH, <a href="paschotta.html">Dr. Rüdiger Paschotta</a> (<a href="https://google.com/+RudigerPaschotta?rel=author">G+</a>) &nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="contact.html">Contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a></span>
+<!--googleoff: index-->
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>Buyer&#39;s Guide</h2>
+<p>On our website, you find not only the famous <a href="encyclopedia1bb7.html?banner=buyers_guide">encyclopedia</a>, but also the <a href="buyersguide1bb7.html?banner=buyers_guide">RP Photonics Buyer&#39;s Guide</a>:</p>
+<p style="text-align:center; margin:10px 0;"><a href="buyersguide1bb7.html?banner=buyers_guide"><img src="img/bg_products.png" alt="RP Photonics Buyer&#39;s Guide"></a></p>
+<ul>
+<li>Find suppliers for many hundreds of photonics products.</li>
+<li>Enjoy high-quality product information (checked listings) and the convenient user interface.</li>
+<li>Use high-quality technical information of the encyclopedia nearby.</li>
+</ul>
+<p>Is it actually surprising that you find <a href="encyclopedia1bb7.html?banner=buyers_guide">the best buyer&#39;s guide</a> at the same place as the <a href="encyclopedia1bb7.html?banner=buyers_guide">best photonics information source</a>?</p>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Numerical Modeling</h2>
+<p>Developing devices or systems in photonics requires a <b>comprehensive quantitative understanding</b> &ndash; otherwise, it becomes inefficient, waisting time and money.</p>
+<p><a href="laser_modelinge50a.html?banner=numerical_modeling">Numerical modeling</a> is often the most efficient way towards results:</p>
+<ul>
+<li>understand <em>quantitatively</em> what is going on</li>
+<li>check the influence of design changes or possible detrimental effects</li>
+<li>understand strange experimental observations</li>
+<li>find optimized designs more reliably and faster</li>
+</ul>
+<p style="text-align:center; margin:10px 0;"><a href="laser_modelinge50a.html?banner=numerical_modeling"><img src="img/modeling.png" width="234" height="91" alt="laser modeling"></a></p>
+<h3>How to Get Your Modeling Done?</h3>
+<p>We offer both <a href="consultinge50a.html?banner=numerical_modeling">technical consultancy</a> and powerful <a href="softwaree50a.html?banner=numerical_modeling">simulation software</a>.</p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/laser_diode_drivers.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:59:29 GMT -->
+</html>

@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2017_08_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:53:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The Photonics Spotlight - Fiber Amplifiers: Modeling of Ultrashort Pulse Amplification with Saturation of Wavelength-dependent Gain</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="styles_enc.css">
+<link rel="stylesheet" type="text/css" href="jquery-ui-1.12.1.custom/jquery-ui.min.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2017-08-01">
+<meta name="description" content="A summary of this blog article: A new algorithm has been developed for simulating the amplification of femtosecond pulses in fiber amplifiers, for example. It allows one to properly describe both the time dependence due to gain saturation and the frequency dependencies of optical fields and gain. The details have been published in the open-access journal Optics Express.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="photonics, spotlight, news, publications, blog, RSS feed, encyclopedia, laser physics, technology">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="jquery-ui-1.12.1.custom/jquery-ui.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript" src="articles.js"></script>
+<script type="text/javascript" src="encyclopedia.js"></script>
+<script type="text/javascript">
+page="spotlight_2017_08_01.html"; cat="P"; shownbanner=""; ref="spotlight.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td class="selected"><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Encyclopedia</span> <span id="slogan">&hellip; combined with a great <a href="buyersguide.html" style="color:#666; font-variant:small-caps; font-size:120%; font-weight:bold;">Buyer's Guide</a>!</span></p>
+</div>
+<div id="vlibbox"><table><tr><td><a href="http://vlib.org/"><img src="img/vl.png" alt="VLib"></a></td><td><br>Virtual<br>Library</td></tr></table></div>
+<nav id="enc">
+<div style="margin:0 -20px;">
+<table id="encnavtable">
+<tr>
+<td id="home"><a href="encyclopedia.html" title="">Home</a></td>
+<td id="spotlight" class="selected"><a href="spotlight.html" title="The Photonics Spotlight: interesting articles on photonics science, technology and business">Spotlight</a></td>
+<td id="quiz"><a href="quiz.html" title="Test your knowledge with our photonics quiz!">Quiz</a></td>
+<td id="buyersguide"><a href="buyersguide.html" title="">Buyer's&nbsp;Guide</a></td>
+</tr>
+<tr>
+<td id="search"><a href="encyclopedia_search.html" title="Full-text search in our encyclopedia">Search</a></td>
+<td id="categories"><a href="categories.html" title="Find our encyclopedia articles grouped by topics.">Categories</a></td>
+<td id="glossary"><a href="glossary.html" title="Our glossary of photonics terms">Glossary</a></td>
+<td id="advertising"><a href="marketing.html" title="">Advertising</a></td>
+</tr>
+</table>
+</div>
+</nav>
+<div id="main"><main>
+<h1 class="spotlight_heading">The Photonics Spotlight</h1>
+<h1 class="posting">Fiber Amplifiers: Modeling of Ultrashort Pulse Amplification with Saturation of Wavelength-dependent Gain</h1>
+<div class="posting_details">
+<p>Posted on 2017-08-01 as a part of the <a href="spotlight.html">Photonics Spotlight (available as e-mail newsletter!)</a>
+<p>Permanent link: <a href="spotlight_2017_08_01.html">https://www.rp-photonics.com/spotlight_2017_08_01.html</a></p>
+<p>Author: <a href="paschotta.html">Dr. Rüdiger Paschotta</a>, <a href="index.html">RP Photonics Consulting GmbH</a></p>
+<p>Abstract: A new algorithm has been developed for simulating the amplification of femtosecond pulses in fiber amplifiers, for example. It allows one to properly describe both the time dependence due to gain saturation and the frequency dependencies of optical fields and gain. The details have been published in the open-access journal Optics Express.</p>
+</div>
+<p class="ref">Ref.: R. Paschotta, &ldquo;Modeling of ultrashort pulse amplification with gain saturation&rdquo;, <a href="https://www.osapublishing.org/oe/abstract.cfm?uri=oe-25-16-19112" rel="nofollow">Opt. Express 25 (16), 19112 (2017)</a></p>
+<figure class="right" style="width:130px;">
+<img src="img/paschotta5.jpg" alt="Dr. Rüdiger Paschotta">
+</figure>
+<p>Numerical models for the laser amplification of <a href="ultrashort_pulses.html" title="ultrashort pulses: optical pulses with durations of picoseconds or less">ultrashort pulses</a> have been developed over many years.
+Surprisingly, it seems that for one relatively fundamental issue in this context there has not been a good solution until now.
+The point is how to simultaneously treat <a href="gain_saturation.html" title="gain saturation: the phenomenon that the gain of an amplifier is reduced for high input signal powers"><b>gain saturation</b></a> and the <b>wavelength dependencies of gain and the optical fields</b>.</p>
+<p>The fundamental difficulty is that gain saturation is essentially a time-dependent effect and should thus be described in the time domain, whereas frequency dependencies of course suggest to work in the frequency domain.
+But how to formulate (not just solve) a differential equation which correctly addresses the time and frequency domain at the same time?</p>
+<p>I encountered that problem in the context of the development of our software <a href="fiberpower.html"><b>RP Fiber Power</b></a>, which since version V4 can simulate the amplification of ultrashort pulses e.g. in <a href="fiber_amplifiers.html" title="fiber amplifiers: optical amplifiers with doped fibers as gain media">fiber amplifiers</a>.
+In most cases, the problem is not severe because the pulse energies are too low for causing substantial gain saturation.
+In some <a href="chirped_pulse_amplification.html" title="chirped-pulse amplification: a technique for amplifying pulses to very high optical intensities while avoiding excessive nonlinear pulse distortions or optical damage">chirped-pulse amplifier systems</a>, however, we do see substantial gain saturation (as is necessary for efficient power conversion) in conjunction with a large gain and optical bandwidth.
+Note that without strongly chirped pulses in the fiber, one cannot have strong gain saturation of femtosecond pulses, since the applicable peak intensities are limited by fiber <a href="nonlinearities.html" title="nonlinearities: optical phenomena involving a nonlinear response to a driving light field">nonlinearities</a> (in particular by nonlinear <a href="self_focusing.html" title="self-focusing: focusing of a beam in a transparent medium, caused by the beam itself through a nonlinear process in the medium">self-focusing</a>) so that only relatively long (temporally stretched) pulses can cause substantial gain saturation.</p>
+<p>When reviewing the literature, I found that a number of different approaches has been used to address that challenge, but all of them appears to have serious limitations:</p>
+<ul>
+<li>In some cases, one can correctly include both the time dependence through gain saturation and the frequency dependence of the gain, but not the frequency dependence of the gain saturation, since the saturation is described by a purely time-domain equation.</li>
+<li>Others have used a two-dimensional numerical description of pulses based on time&ndash;frequency distributions, effectively adapting matters from radiation transfer theory, which however cannot take into account coherent effects.
+Unfortunately, however, coherent effects can often not be ignored in the context of ultrashort pulses.</li>
+<li>A relatively simple and still accurate approach is possible in the context of chirped-pulse amplifiers, but here one requires quite specific assumptions on the pulses, so that such an algorithm is not well usable for an all-purpose simulation software, for example.</li>
+<li>It is also not practical to use Maxwell&ndash;Bloch equations, where one would have to include a lot of microscopic details of the gain medium.</li>
+</ul>
+<p>I finally developed a new algorithm which has the following advantages:</p>
+<ul>
+<li>It can fully take into account both the time dependence from gain saturation and the relevant frequency dependencies.</li>
+<li>It is fully compatible with the typically used numerical representation of ultrashort pulses in the time or frequency domain.</li>
+<li>It does not require specific assumptions on the pulses &ndash; for example, a quasi-monochromatic nature of small temporal slices of a pulse.</li>
+</ul>
+<p>Essentially, the new method requires some &ldquo;soft&rdquo; temporal slicing of pulses, where for each slice separately one applies a Fourier transform to get into the frequency domain and apply the frequency-dependent gain there; another Fourier transform leads back to the time domain.
+In the end, all the slices are properly combined to obtain the amplified pulse in the time domain.
+Some technical details of the implementation are not straightforward; various technical issues had to be solved in order to obtain an accurate and robust algorithm.
+That is now used in the <a href="fiberpower.html"><b>RP Fiber Power</b></a> software.</p>
+<p>I decided to publish the details in a scientific paper, which has just appeared in an open-access journal &ndash; see the reference given at the beginning of the article.
+(See also the references therein if you want to learn more about the previously described algorithms.)
+Although that publication will allow competitors to implement the algorithm themselves, I think it is good that everyone can verify how solid scientific expertise is the basis of our simulation software.</p>
+<p style="font-size:90%; margin-bottom:10px;">This article is a posting of the <a href="spotlight.html">Photonics Spotlight</a>, authored by <a href="paschotta.html">Dr. Rüdiger Paschotta</a>.
+You may link to this page and cite it, because its location is permanent.
+See also the <a href="encyclopedia.html">Encyclopedia of Laser Physics and Technology</a>.</p>
+<p style="font-size:11px; margin-bottom:15px;">Note that you can also receive the articles in the form of a <a href="newsletters.html">newsletter</a> or with an <a href="spotlight.rss">RSS feed</a>.</p>
+<footer id="feedbackbox">
+<h2>How do you rate this article?</h2>
+<p><a id="showfeedbackformlink" href=".html" onclick="return showfeedbackform()">Click here to send us your feedback!</a></p>
+<noscript><p>(As Javascript is not activated, you don't need to click.)</p></noscript>
+<script type="text/javascript">
+function showfeedbackform() {
+  $("div#feedbackstuff").css("display","block");
+  $("a#showfeedbackformlink").css("display","none");
+  return false;
+  };
+$(document).ready(function() {
+  $("div#feedbackstuff").css("display","none");
+  });
+</script>
+<div id="feedbackstuff">
+<form name="articlefeedback" action="https://www.rp-photonics.com/articlefeedback.html" method="post" onsubmit="return(check_form())" title="Feedback for encyclopedia article">
+<table style="font-size:11px;">
+<tr>
+<td style="width:150px;">Your general impression:</td>
+<td>
+<input type="radio" name="generalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="generalquality" value="poor">poor
+<input type="radio" name="generalquality" value="satisfactory">satisfactory
+<input type="radio" name="generalquality" value="good">good
+<input type="radio" name="generalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="trtechnical">
+<td>Technical quality:</td>
+<td>
+<input type="radio" name="technicalquality" value="don't know" checked="checked">don't know
+<input type="radio" name="technicalquality" value="poor">poor
+<input type="radio" name="technicalquality" value="satisfactory">satisfactory
+<input type="radio" name="technicalquality" value="good">good
+<input type="radio" name="technicalquality" value="excellent">excellent
+</td>
+</tr>
+<tr id="truseful">
+<td>Usefulness:</td>
+<td>
+<input type="radio" name="usefulness" value="don't know" checked="checked">don't know
+<input type="radio" name="usefulness" value="poor">poor
+<input type="radio" name="usefulness" value="satisfactory">satisfactory
+<input type="radio" name="usefulness" value="good">good
+<input type="radio" name="usefulness" value="excellent">excellent
+</td>
+</tr>
+<tr id="trreadable">
+<td>Readability:</td>
+<td>
+<input type="radio" name="readability" value="don't know" checked="checked">don't know
+<input type="radio" name="readability" value="poor">poor
+<input type="radio" name="readability" value="satisfactory">satisfactory
+<input type="radio" name="readability" value="good">good
+<input type="radio" name="readability" value="excellent">excellent
+</td>
+</tr>
+<tr id="trcomments">
+<td>Comments:</td>
+<td><textarea name="comments" rows="5" cols="45"></textarea><p style="font-size:11px;">Found any errors? Suggestions for improvements? Do you know a better web page on this topic?</p></td>
+</tr>
+<tr><td>Spam protection:</td><td><input type="text" name="spam" size="5"> (enter the value of 5 + 8 in this field!)<input type="hidden" name="page" value="spotlight_2017_08_01.html"></td></tr>
+</table>
+<p>If you want a response, you may leave your e-mail address in the comments field, or directly <a href="contact.html">send an e-mail</a>.</p>
+<p>If you enter any personal data, this implies that you agree with storing it; we will use it only for the purpose of improving our website and possibly giving you a response; see also our <a href="privacy.html">declaration of data privacy</a>.</p>
+<p>If you like our website, you may also want to get our <a href="newsletters.html">newsletters</a>!</p>
+<div style="margin-top:6px;"><input type="submit" name="form_submitted" value="Submit" /></div>
+</form>
+</div>
+<script type="text/javascript">
+function check_form() {
+ with (document.articlefeedback) {
+ if (generalquality[0].checked && technicalquality[0].checked && usefulness[0].checked && readability[0].checked)
+   { alert("Error: the input ''don't know'' is no rating!");
+     return false; }
+  else if ((generalquality[1].checked || technicalquality[1].checked) && (comments.value == ""))
+   { alert("Please explain in the comments field the reason for your low rating and submit the rating again!");
+     return false; }
+  else { return true; }
+ }
+}
+</script>
+</footer>
+<p style="margin-top:15px;">If you like this article, share it with your friends and colleagues, e.g. via social media:</p>
+<div class="shariff" data-services="[&quot;linkedin&quot;,&quot;facebook&quot;,&quot;twitter&quot;,&quot;googleplus&quot;]" data-theme="standard" data-lang="en" data-orientation="horizontal"></div>
+<script type="text/javascript" src="shariff/shariff.min.js"></script>
+</main></div>
+<footer id="copyrightbox">
+<span class="copyright">&copy; <a href="paschotta.html">Dr. Paschotta</a>, RP Photonics Consulting GmbH, also at <a href="https://profiles.google.com/109063044353551581702?rel=author">Google+</a>&nbsp;&nbsp;&nbsp;&nbsp; All rights reserved worldwide &nbsp;&nbsp;&nbsp;&nbsp; <a href="marketing_contact.html">contact</a>, <a href="privacy.html">data privacy</a></span>
+</footer>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+<!--googleoff: index-->
+<aside id="bannerbox"><div class="bannercontent">
+<h2>You have found the Best Place for Your Banner &ndash; <em>Here!</em></h2>
+<p>Make your</p>
+<ul>
+<li><b>photonics product</b>,</li>
+<li><b>company or organization</b>,</li>
+<li><b>publication or event</b></li>
+</ul>
+<p>well known with an <a href="marketing_bannersd853.html?banner=your_banner">extra-wide<br>skyscraper banner</a> which will be displayed here (with a given probability per page view).</p>
+<div id="my_rot_box" class="rot_box" style="height:270px;">
+<div>
+<h2>Aspect 1: Huge Traffic</h2>
+<p>This website is <a href="website_statisticsd853.html?banner=your_banner">immensely popular</a> &ndash; see the <a href="website_statisticsd853.html?banner=your_banner">detailed statistical data</a>.</p>
+<p>For example, your banner gets &asymp;13,000 views per month if you choose 10% probability per page view.</p>
+</div>
+<div>
+<h2>Aspect 2: Audience</h2>
+<p>The users of this resource are mostly</p>
+<ul>
+<li><b>industry people</b></li>
+<li><b>researchers</b></li>
+</ul>
+<p>working on laser technology and related areas of photonics &ndash; exactly those you want to reach.</p>
+</div>
+<div>
+<h2>Aspect 3: Precise Targeting</h2>
+<p>You can even make the <b>display probability dependent on certain topics</b> &ndash; e.g., increase it for pages on lasers!</p>
+<p>With our <a href="website_statisticsd853.html?banner=your_banner">convenient selection tool</a>, this is easy to do.</p>
+<p>Which other photonics website can offer that?</p>
+</div>
+<div>
+<h2>Aspect 4: High-quality Environment</h2>
+<p>Get your banner placed on <b>pages with high-quality content</b>, rather than on pages which are crowed with ads! Our pages give visibility <em>just for you!</em></p>
+</div>
+<div>
+<h2>Aspect 5: Transparency</h2>
+<p>On this website, you know exactly on what kind of pages your banner is placed: mostly <a href="encyclopediad853.html?banner=your_banner">encyclopedia articles</a> and <a href="buyersguided853.html?banner=your_banner">buyer's guide pages</a> &ndash; not some undefined bunch of materials.</p>
+<p>We also publish <a href="website_statisticsd853.html?banner=your_banner">clear statistical data</a>.</p>
+</div>
+<div>
+<h2>Aspect 6: Convenience</h2>
+<p>Our <a href="website_statisticsd853.html?banner=your_banner">convenient tool</a> makes it easy for you to define the placement of your banner and to find out the cost.</p>
+<p>Also, we deliver a <b>diligent and flexible service</b>, helping you to save time. We even offer to assemble your animated banner!</p>
+</div>
+<div>
+<h2>Aspect 7: Competitive Pricing</h2>
+<p>Compare our prices with those at other places: we deliver better value for money!</p>
+</div>
+</div>
+<table class="rot_box_buttons">
+<tr><td>
+<button title="move backward" onclick='clearInterval(timer); $("#tbutton").text("--"); if (pp > 0) pp--; MoveContent(200, 0);'>&lt;</button>
+<button id="tbutton" title="stop automatic movement" onclick="tbuttonclick()">| |</button>
+<button title="move forward" onclick='clearInterval(timer); $("#tbutton").text("--"); if (pp < ns - 1) pp++; MoveContent(200, 0);'>&gt;</button></td></tr>
+</table>
+<script type="text/Javascript">
+  period = 15000
+  hh = parseInt($("#my_rot_box").css("height")) + 30;
+  $("#my_rot_box").children().css("height", hh);
+  var ns = $("#my_rot_box").children().length;
+  var pp = 0;
+  function MoveContent(t_move, t_fade) {
+    var y = (hh + 4) * pp;
+    if (t_fade != 0)
+      $("#my_rot_box").fadeTo(t_fade, 0.5).animate({scrollTop:y}, t_move, "swing").fadeTo(t_fade, 1);
+    else
+      $("#my_rot_box").animate({scrollTop:y}, t_move, "swing");
+    }
+  function advance() {
+    pp++;  if (pp == ns) pp = 0;
+    if (pp == 0) t = 1800; else t = 600;
+    MoveContent(t, 1800);
+    }
+  function tbuttonclick() {
+    if ($("#tbutton").text() == "| |") {
+      clearInterval(timer);
+      $("#tbutton").text("---");
+      $("#tbutton").attr("title", "restart automatic movement");
+      }
+    else {
+      $("#tbutton").text("| |");
+      timer = setInterval(advance, period);
+      $("#tbutton").attr("title", "stop automatic movement");
+      }
+    }
+  timer = setInterval(advance, period);
+</script>
+<div style="border:1px solid #888; box-shadow:2px 5px 5px #AAA; padding:8px;">
+<p>Visit our <a href="marketing_bannersd853.html?banner=your_banner">page on advertising banners</a> to get more details!</p>
+</div>
+</div>
+</aside>
+<aside id="bannerbox2"><div class="bannercontent">
+<h2>Tutorial on Fiber Optics</h2>
+<p>See our <a href="passive_fiber_opticsb7d0.html?banner=fiber_optics_tutorial">comprehensive fiber optics tutorial</a>:</p>
+<ul>
+<li>guiding light in single-mode and multimode fibers</li>
+<li>fiber ends and joints, propagation and coupling losses</li>
+<li>couplers and splitters</li>
+<li>polarization issues, chromatic dispersion, nonlinearities, pulse propagation</li>
+<li>fiber accessories and tools</li>
+</ul>
+<p style="margin-left:10px;"><a href="passive_fiber_opticsb7d0.html?banner=fiber_optics_tutorial"><img src="img/fiber_joint_with_angle_small.png" alt="&nbsp;"></a></p>
+</div>
+</aside>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/spotlight_2017_08_01.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 02:53:59 GMT -->
+</html>

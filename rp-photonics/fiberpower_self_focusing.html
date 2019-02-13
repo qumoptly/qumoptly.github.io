@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_self_focusing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The software RP Fiber Power: nonlinear self-focusing in a fiber</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Nonlinear self-focusing in a fiber is simulated. The software can calculate modes which are modified by the nonlinearity, and the evolution using numerical beam propagation.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Power, nonlinear self-focusing, simulation, software">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="fiberpower_self_focusing.html"; cat="S"; shownbanner=""; ref="fiberpower.html"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="fiberpower_self_focusing_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html">RP Fiber Calculator</a>
+<a id="rp_fiberpower" href="fiberpower.html" class="sel">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Power &ndash; Simulation and Design Software <br> for Fiber Optics, Amplifiers and Fiber Lasers</h1>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="fiberpower.html">Start</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_features.html">Features</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_model.html">Model</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_data.html">Fiber Data</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_versions.html">Versions</a></td>
+<td class="sub_nav"><a class="sub_n" href="fiberpower_interface.html">Interface</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="fiberpower_case_studies.html">Demos</a></td>
+</tr>
+</table>
+<h2>Example Case: Nonlinear Self-focusing in a Fiber</h2>
+<h3>Description of the Model</h3>
+<p>Here, we investigate details of nonlinear self-focusing in a fiber.
+First, we calculate how the fundamental mode of a large mode area fiber shrinks as the effect of nonlinear self-focusing.</p>
+<p>The mode solver actually ignores nonlinear effects.
+However, with a few lines of <a href="software_script_language.html">script code</a> we can store the refractive index profile including its nonlinear changes and then recalculate the fiber modes.
+This is repeated until we get a self-consistent solution:</p>
+<pre class="codedisplay">
+dr := 0.05 um
+defarray I[0, 200 um, dr]
+n_f_nl(r) := n_f(r) + n2 * (if r &lt;= r_max then I~[r])
+  { nonlinear refractive index profile }
+store_I(P) := 
+  for r := 0 to 2 * r_co step dr do
+    I[r] := P * I_lm(0, 1, lambda, r)
+    { ignore index changes outside 2 * r_co, where the intensity is small }
+&nbsp;
+CalcNonlinearMode(P) := 
+  { Calculate the lowest-order mode with self-focusing for the power P. }
+  begin
+    var A, A_l;
+    A := 0;
+    repeat
+      A_l := A;
+      store_I(P);
+      set_n_profile("n_f_nl", r_max);
+      A := A_eff_lm(0, 1, lambda);
+    until abs(A_l / A - 1) &lt; 1e-6;
+  end
+</pre>
+<p>We can also numerically simulate the beam propagation, considering the fiber nonlinearity.
+For that, we need to define a numerical grid and set various other inputs for the beam propagation:</p>
+<pre class="codedisplay">
+x_max := 30 um { maximum x or y value }
+N := 2^5 { number of grid points in x and y direction }
+dx := 2 * x_max / N { transverse resolution }
+z_max := 30 mm { fiber length }
+dz := 100 um { longitudinal resolution }
+N_z := z_max / dz { number of z steps }
+N_s := 100 { number of sub-steps per dz step }
+&nbsp;
+P_11 := 4 MW
+A0%(x, y) := sqrt(P_11) * A_lm_xy(1, 1, lambda, x, y)  { initial field }
+&nbsp;
+calc
+  begin
+    bp_set_grid(x_max, N, x_max, N, z_max, N_z, N_s);
+    bp_define_channel(lambda);
+    bp_set_n('n_f(sqrt(x^2 + y^2))'); { index profile }
+    bp_set_loss('10e2 * ((x^2 + y^2) / (20 um)^2)^3');  { simulate loss for cladding modes }
+    bp_set_n2('n2');
+    bp_set_A0('A0%(x, y)'); { initial amplitude }
+    bp_set_interpol(2); { quadratic interpolation }
+  end
+</pre>
+<h3>Results</h3>
+<p>Figure 1 shows the mode profile for an optical power of 5&nbsp;MW (not far below the power for catastrophic self-focusing), and the corresponding refractive index profile.</p>
+<figure>
+<img src="img/fiberpower_self_focusing1.png" alt="mode profile with strong self-focusing">
+<figcaption><span class="start">Figure&nbsp;1:</span> 
+Calculated normalized mode intensity profiles with and without self-focusing.
+The refractive index profiles are also shown.
+One sees that the index profile is substantially modified by the nonlinear effect.
+</figcaption>
+</figure>
+<p>Figure 2 shows the mode area as a function of the optical power.
+The mode area shrinks dramatically as the critical power is approached.</p>
+<figure>
+<img src="img/fiberpower_self_focusing2.png" alt="mode area vs. optical power">
+<figcaption><span class="start">Figure&nbsp;2:</span> 
+Mode area versus optical power. The red line indicates the critical power for catastrophic self-focusing.
+</figcaption>
+</figure>
+<p>Figure 3 shows the maximum power as a function of the core radius.
+For each core radius, one has to calculate the optical power for which the on-axis intensity reaches the <a href="laser_induced_damage.html" title="laser-induced damage: damage of optical components induced by laser radiation">damage threshold</a>.
+Of course, the modes need to be recalculated for each power value.</p>
+<figure>
+<img src="img/fiberpower_self_focusing3.png" alt="maximum power in fiber vs. core radius">
+<figcaption><span class="start">Figure&nbsp;3:</span> 
+Maximum optical power in the fiber as a function of the core radius.
+</figcaption>
+</figure>
+<p>Initially, the maximum power scales with the core area.
+For large cores, however, the rise becomes substantially slower, as the mode area is reduced by self-focusing.</p>
+<p>Now we investigate what happens if we inject light into the LP<sub>11</sub> mode (the first higher-order mode) of the fiber, as calculated without the nonlinearity.
+For that, we can use numerical beam propagation.
+Figure&nbsp;4 shows the result if we inject an optical power of 4&nbsp;MW, not far below the critical power for self-focusing.
+Here, the higher-order mode becomes unstable.
+Even the slightest asymmetry, here resulting from small numerical errors, causes that mode to be transferred into a superposition of the LP<sub>01</sub> mode and the LP<sub>11</sub> mode after about 10&nbsp;mm of propagation distance:</p>
+<figure>
+<img src="img/fiberpower_self_focusing4.png" alt="numerical beam propagation with Kerr nonlinearity">
+<figcaption><span class="start">Figure&nbsp;4:</span> 
+Amplitude profile in the x-z plane for injection of the LP<sub>11</sub> mode as calculated without the nonlinearity.
+</figcaption>
+</figure>
+<p>We can also show the evolution of optical powers in the guided modes:</p>
+<figure>
+<img src="img/fiberpower_self_focusing5.png" alt="numerical beam propagation with Kerr nonlinearity">
+<figcaption><span class="start">Figure&nbsp;5:</span> 
+Evolution of optical powers in the LP<sub>11</sub> and LP<sub>01</sub> mode.
+</figcaption>
+</figure>
+<p>It may seem surprising that the total power undergoes some oscillations: how can the power increase at some locations, even though we only have some losses (for cladding modes)?
+One can understand this as an energy exchange with cladding modes, enabled by the fiber's nonlinearity.
+Note also that the nonlinear interaction couples light into the cladding mode, which would not happen at low optical powers.</p>
+<p>(<a href="fiberpower_case_studies.html">back to the list of example cases</a>)</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/fiberpower_self_focusing.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:06:08 GMT -->
+</html>

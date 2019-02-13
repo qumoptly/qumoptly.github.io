@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.rp-photonics.com/rp_fiber_calculator_la.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<title>The fiber optics software RP Fiber Calculator: launching a laser beam into a fiber</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<link rel="stylesheet" type="text/css" href="shariff/shariff.complete.css">
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<link rel="alternate" type="application/rss+xml" title="The Photonics Spotlight" href="spotlight.rss">
+<link rel="alternate" type="application/rss+xml" title="The RP Photonics Software News" href="software_news.rss">
+<link rel="alternate" type="application/rss+xml" title="New encyclopedia articles" href="new_articles.rss">
+<meta name="date" content="2018-10-28">
+<meta name="description" content="Documentation for the software RP Fiber Calculator of RP Photonics Consulting GmbH, which can calculate fiber mode properties and light propagation in fibers.">
+<meta name="copyright" content="2019 RP Photonics Consulting GmbH">
+<meta name="author" content="Dr. R&uuml;diger Paschotta">
+<meta name="publisher" content="RP Photonics Consulting GmbH">
+<meta name="referrer" content="always">
+<meta name="geo.position" content="48.018; 8.540">
+<meta name="geo.placename" content="Bad D&uuml;rrheim">
+<meta name="geo.region" content="DE">
+<meta name="distribution" content="global">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="keywords" content="RP Fiber Calculator, software, fiber optics, documentation, launching, laser beam, powers">
+<script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+<script type="text/javascript" src="general.js"></script>
+<script type="text/javascript">
+page="rp_fiber_calculator_la.html"; cat="S"; shownbanner=""; ref="rp_fiber_calculator_docu18e9.html?banner=RP_Fiber_Calculator"; ts = new Date().toJSON().substring(0, 19);
+$(document).ready(function($){ $.get("log.html",{cat:cat,page:page,ref:ref,shownbanner:shownbanner,ts:ts}); })
+</script>
+</head>
+<body>
+<div id="logohead">
+<div class="areadiv"><table id="areatable"><tr><td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="marketing.html">RP Photonics Marketing</a></td></tr>
+<tr><td><a href="encyclopedia.html">Encyclopedia</a></td>
+<td><a href="buyersguide.html">Buyer's Guide</a></td></tr>
+</table></div>
+</td>
+<td>
+<div class="areadiv"><table class="areasubtable">
+<tr><td colspan="2" class="basicarea"><a href="consulting.html">RP Services and Tools</a></td></tr>
+<tr><td><a href="consulting.html">Consulting</a></td>
+<td class="selected"><a href="software.html">Software</a></td></tr>
+</table></div>
+</td></tr></table></div>
+<p><span id="title1">RP Photonics</span></p>
+<p><span id="title2">Software</span> <span id="slogan">&hellip; powerful tools for your research &amp; development!</span></p>
+<div id="other_language"><a href="rp_fiber_calculator_la_d.html">deutsch</a></div>
+</div>
+<nav id="soft">
+<div id="navitems">
+<a id="Software" href="software.html">Overview</a>
+<a id="Modeling" href="software_modeling.html">Modeling</a>
+<a id="rp_fiber_calculator" href="rp_fiber_calculator.html" class="sel">RP Fiber Calculator</a>
+<a href="rp_fiber_calculator_download.html" class="sub">Download</a>
+<a href="rp_fiber_calculator_docu.html" class="sub">Documentation</a>
+<a href="rp_fiber_calculator_feedback.html" class="sub">Feedback</a>
+<a id="rp_fiberpower" href="fiberpower.html">RP Fiber Power</a>
+<a id="rp_resonator" href="resonator.html">RP Resonator</a>
+<a id="rp_propulse" href="propulse.html">RP ProPulse</a>
+<a id="rp_coating" href="coating.html">RP Coating</a>
+<a id="rp_q_switch" href="rp_q_switch.html">RP Q-switch</a>
+<a id="script_language" href="software_script_language.html">Script language</a>
+<a id="debugger" href="software_debugger.html">Debugger</a>
+<a id="custom_forms" href="software_custom_forms.html">Custom forms</a>
+<a id="licenses" href="software_licenses.html">Licenses</a>
+<a id="documentation" href="software_docu.html">Documentation</a>
+<a id="support" href="software_support.html">Support</a>
+<a id="distributors" href="software_distributors.html">Distributors</a>
+<a id="software_news" href="software_news.html">Software News</a>
+<a id="contact" href="software_contact.html">*Get a quotation*</a>
+</div>
+</nav>
+<div id="main">
+<main>
+<div class="softwarelogo">
+<p class="fig" style="margin-top:12px"><img src="img/fiberpower_logo.png" width="75" height="75" alt="RP Fiber Power logo"></p>
+</div>
+<h1>RP Fiber Calculator &ndash; Documentation</h1>
+<p>Here we explain in detail how the <b>RP Fiber Calculator</b> software is used. <br>
+Each of the menu items explains one of the tabs.</p>
+<table class="subnavtable">
+<tr>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_docu.html">Index profiles</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_gm.html">Guided modes</a></td>
+<td class="sub_nav_sel"><a class="sub_n_sel" href="rp_fiber_calculator_la.html">Launching a beam</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_pr.html">Propagation</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_co.html">Fiber to fiber</a></td>
+<td class="sub_nav"><a class="sub_n" href="rp_fiber_calculator_fe.html">Fiber ends</a></td>
+</tr>
+</table>
+<h2 class="togglediv">Launching a Beam</h2>
+<div>
+<p>Here you can calculate how a <a href="gaussian_beams.html" title="Gaussian beams: light beams where the electric field profile in a plane perpendicular to the beam axis can be described with a Gaussian function, possibly with an added parabolic phase profile">Gaussian</a> laser beam is coupled into a fiber.
+More precisely, it is calculated what optical powers get into the guided modes of the fiber &ndash; using the wavelength and corresponding modes as calculated in the &ldquo;Guided modes&rdquo; tab.
+The fiber end may be misaligned.</p>
+<figure>
+<img src="img/rp_fiber_calculator_la.png" alt="RP Fiber Calculator, launching a beam">
+</figure>
+<h3 class="togglediv">Input Parameters</h3>
+<div>
+<aside class="textbox tb_right redmargin" style="width:300px;">
+<p><a href="fiberpower.html">The <b>RP Fiber Power</b></a> software offers more features:</p>
+<ul>
+<li class="ta_left">launch arbitrary field profiles (not only Gaussian beams)</li>
+<li class="ta_left">create any kind of plots</li>
+<li class="ta_left">export data in any format</li>
+</ul>
+<p>For example, in some diagram you could vary the magnitude of any kind of alignment error, of some parameter of the index profile, or the wavelength, and plot anything you like.</p>
+</aside>
+<p>The following parameters can be entered:</p>
+<ul>
+<li>The position offset of the fiber end in <span class="eqn_il"><i>x</i></span>, <span class="eqn_il"><i>y</i></span> and <span class="eqn_il"><i>z</i></span> direction (where z corresponds to the longitudinal direction) against the beam focus position.
+For example, a positive <span class="eqn_il"><i>z</i></span> value means that the fiber end is placed behind the beam focus, and a positive <span class="eqn_il"><i>x</i></span> value means that the fiber is shifted to the right.</li>
+<li>The angular orientation error of the fiber end.
+If this is possible for the <span class="eqn_il"><i>x</i></span> direction, for example, the fiber runs to the right, and a centrally coupled beam initially runs to the left in the fiber.</li>
+</ul>
+<p>It is always assumed that the fiber end is cut perpendicular to its axis.</p>
+<p>You can also determine whether or not the Fresnel reflection of the (uncoated) fiber end is taken into account, and whether or not modes with very small power are displayed.</p>
+</div>
+<h3 class="togglediv">Calculated Results</h3>
+<div>
+<p>The results are obtained by calculating a complex overlap integral containing the transverse input beam profile and the mode profile.</p>
+<p>The calculated results are displayed below when you press the button &ldquo;Calculate launch efficiency&rdquo;.
+For each guided mode of the fiber, the fraction of the incident power which gets into that mode is displayed numerically and graphically.
+(For modes with non-zero <span class="eqn_il"><i>l</i></span> value, the two possible orientations are listed separately: the one with the <span class="eqn_il">sin&thinsp;<i>l&thinsp;<span class="greek">&phi;</span></i></span> dependence is indicated with a negative <span class="eqn_il"><i>l</i></span> value.)</p>
+<p>The calculation does not consider <a href="cladding_modes.html" title="cladding modes: modes in optical fibers (or other waveguides) which are not restricted to the region around the core">cladding modes</a>.
+These, however, will usually exhibit much higher losses, so that after some propagation distance only the power in guided modes remains.</p>
+<div id="up_arrow">
+<a href="javascript:scroll(0,0)"><img src="img/up.png" width="32" height="20" alt="arrow"></a>
+</div>
+</div>
+</div>
+</main>
+</div>
+<footer id="copyrightbox">
+<span style="margin-right:20px;">&copy; RP Photonics Consulting GmbH</span>
+<a href="contact.html">contact and legal info</a>, <a href="privacy.html">declaration of data privacy</a>
+</footer>
+</body>
+
+<!-- Mirrored from www.rp-photonics.com/rp_fiber_calculator_la.html by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 12 Feb 2019 03:29:49 GMT -->
+</html>
