@@ -9,8 +9,8 @@
 	<link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css">
 	<link rel="stylesheet" href="css/glowing.css"/>
 	<link rel="stylesheet" type="text/css" href="css/input.css">
-	<script src="js/jquery-1.11.0.min.js"></script>
-	<script src="js/a.js"></script>	
+	<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<style type="text/css">
 		.box{
 			 width:98%;text-align:center;margin:10px;padding:10px;
@@ -28,26 +28,25 @@
 				<div class="glowing disco box"><div class="pull-right hidden-phone">
 						<p id="api-key-show" style="cursor: pointer"> 点击简介 </p>
 						<p id="api-key-content" style="display:none">
-						<a style="font-size: 20px; color:#99BBFF ;" href="./">主页：<br></a>
-						<a style="font-size:16px; color:#CC0000 ;" >
+						<a style="font-size: 24px; color:#99BBFF ;" href="./">主页：<br></a>
+						<a style="font-size:16px; color:#CC0000  ;" >
 						1、激光器：<a style="font-size:16px;color:#C63300 ;" href="./laser/">[打开]</a>
-						<a style="font-size:16px;color:#C63300 ;" href="http://www.swissrocketman.fr/m/index.cfm">来自[外链]
+						<a style="font-size:16px;color:#C63300 ;" href="http://www.swissrocketman.fr/m/index.cfm">来自[外链]</a>
 						</a><br>
 						<a style="font-size:16px; color:#DDAA00;" >
 						2、PoseNet：<a style="font-size:16px;color:#DDAA00 ;" href="./posenet/">[打开]</a>
-						<a style="font-size:16px;color:#DDAA00 ;" >在浏览器上使用 TensorFlow.js 实时运行人体姿态检测！</a><br>
-						<a style="font-size:16px; color:#FF9999;" href="./body-pix/">2.1、BodyPix：打开</a>
+						<a style="font-size:16px;color:#DDAA00 ;" >在浏览器上使用 TensorFlow.js 实时运行人体姿态检测！</a>
+						<a style="font-size:16px; color:#FF9999;" href="./body-pix/">BodyPix：打开</a>
 						</a><br>
 						<a style="font-size:16px; color:#008800 ;" >
 						3、Tiny YOLO：<a style="font-size:16px;color:#008800 ;" href="./tfjs-yolo-tiny/">[打开]</a>
-						<a style="font-size:16px;color:#008800 ;" >在浏览器上使用Tensorflow.js实现目标检测！</a><br>
-						</a>
+						<a style="font-size:16px;color:#008800 ;" >在浏览器上使用Tensorflow.js实现目标检测！</a>
+						</a><br>
 						<a style="font-size:16px; color:#5599FF;" >
-						4、NASA火星车：<a style="font-size:16px;color:#5599FF ;" href="./rover/">[打开]</a>
-						<a style="font-size:16px;color:#99BBFF ;" href="https://github.com/nasa-jpl/open-source-rover">the rovers on Mars！<br></a>
-						</a>
+						4、NASA火星车：<a style="font-size:16px;color:#99BBFF ;" href="https://github.com/nasa-jpl/open-source-rover">the rovers on Mars！</a>
+						</a><br>
 						<a style="font-size:16px; color:#9F88FF ;" >
-						5、Quirk：<a style="font-size:16px;color:#B088FF ;" href="./quirk/">一个量子电路模拟器！<br></a></a>
+						5、Quirk：<a style="font-size:16px;color:#B088FF ;" href="./quirk/">一个量子电路模拟器！</a></a><br>
 						<a style="font-size:16px; color:#9F88FF ;" >
 						6、其他...
 						</a>
@@ -80,20 +79,29 @@
 						<a id="api-key"> </a>
 						</p>
 					</div>
-					<a style="font-size: 10px;color:#999888;" href="https://www.tuling123.com/" target="_blank">修复机器人API链接</a>
 					<div class="clear"></div>
+					<a style="font-size:8px;color:#999888;">机器人API更新：因图灵收费改为思知！</a>
 			    </div>
 			    <div style="text-align:center">
-                    <input type="text" id="robot" placeholder="图灵机器人"  onkeypress="showHint(this.value)"/>  
-                    <!--<input type="button" value="确认" onclick="Send(document.getElementById('robot').value)"/>-->
-                    <p><h4 style="color:#5E6C77"><span id="txtHint"></span> </h4></p>
-                </div> 
-				<div class="navbar navbar-top">
-				</div>
+                    <input type="text" style="font-size: 16px;" id="f-left" placeholder="输入" />  
+                    <!--<input type="text" id="robot" placeholder="机器人"  onkeypress="showHint(this.value)"/>
+					<input type="button" value="确认" onclick="Send(document.getElementById('robot').value)"/>
+                    <p><h4 style="color:#5E6C77"><span id="txtHint"></span> </h4></p>-->
+					<h4 style="color:#5E6C77">
+						<div class="b-body">
+							<div class="rotWord" >
+							</div>
+							<div class="mWord" >
+							</div>
+						</div>
+					</h4>
+				</div> 
+				
 			
 			<em>
-			<p><a href="https://openmct-demo.herokuapp.com" target="_blank" ><img src="./img/setmin.png" alt="img"></a> 
-			<a style="color:#5E6C77" href="https://qumoptly.github.io">&nbsp; 2018-2019  qumoptly </a> </p>
+			<p><a href="https://openmct-demo.herokuapp.com" target="_blank" ><img style="width:24px;height:24px;" src="./img/setmin.png" alt="img"></a> 
+			<a style="color:#5E6C77" href="https://qumoptly.github.io">&nbsp; 2018-2019  qumoptly &nbsp; </a> 
+			</p>
 			</em>
 			</div>
 		</div>
@@ -104,6 +112,6 @@
 });
 
 </script>	
-
+<script src="js/bota.js" type="text/javascript" charset="utf-8"></script>
 </body>
 </html>
