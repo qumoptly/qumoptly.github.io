@@ -1,0 +1,59 @@
+@CHARSET "UTF-8";
+
+	.b-body {
+		width: 100%;
+		height: 250px;
+		overflow: auto;
+		margin: 10px 0;
+	}
+	
+	.rotWord,.mWord{
+		width: 100%;
+		margin-top: 5px;
+		overflow: hidden;
+	}
+	
+	.rotWord span {
+		background: url(../img/robt.png);
+		height: 24px;
+		width: 24px;
+		margin-left: 20px;
+		float: left;
+	}
+	
+	.rotWord p {
+		word-break: break-all;
+		top: 2px;
+		float: left;
+		color: #B088FF;
+		font-size: 14px;
+		margin-left: 5px;
+		padding: 2px;
+		line-height: 24px;
+		background: #;
+		border-radius: 6px;
+		max-width: 50%;
+	}
+	
+	.mWord span {
+		background: url(../img/ocatm.png);
+		height: 24px;
+		width: 29px;
+		float: right;
+		margin-right: 20px;
+	}
+	
+	.mWord p {
+		word-break: break-all;
+		top: 2px;
+		float: right;
+		color: #008800;
+		font-size: 14px;
+		margin-right: 5px;
+		padding: 2px;
+		line-height: 24px;
+		background: #;
+		border-radius: 6px;
+		max-width: 50%;
+	}
+	
