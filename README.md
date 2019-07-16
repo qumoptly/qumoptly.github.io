@@ -3,7 +3,7 @@
 ***
 ### [1.激光器：](https://qumoptly.github.io/laser/) Thanks goes to these wonderful people! [arnold neracher]
 
-<img src="https://qumoptly.github.io/laser/img/2.gif" alt="show" />
+![p2](laser/img/2.gif)
 
 ### [2.PoseNet：](https://qumoptly.github.io/posenet/) 在浏览器上使用 TensorFlow.js 实时运行人体姿态检测！ 
 
@@ -17,7 +17,8 @@
 
 ### 6.其他 ... 
 
-[![Watch the video](https://raw.github.com/GabLeRoux/WebMole/master/ressources/WebMole_Youtube_Video.png)](http://youtu.be/vt5fpE0bzSY)
+![p1](laser/img/1.gif)
+[![the video](laser/img/a.png)](laser/img/a.mp4)
 
 >* [light.co](https://qumoptly.github.io/light.co/)
 >* [silk](https://qumoptly.github.io/silk/)
