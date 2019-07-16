@@ -3,7 +3,7 @@
 ***
 ### [1.激光器：](https://qumoptly.github.io/laser/) Thanks goes to these wonderful people! [arnold neracher]
 
-<iframe height=394 width=700 src="https://qumoptly.github.io/laser/img/2.gif">
+![](https://qumoptly.github.io/laser/img/2.gif)
 
 ### [2.PoseNet：](https://qumoptly.github.io/posenet/) 在浏览器上使用 TensorFlow.js 实时运行人体姿态检测！ 
 
@@ -13,7 +13,11 @@
 ### [4.NASA火星车：](https://github.com/nasa-jpl/open-source-rover) the rovers on Mars！ 
 ### [5.Quirk：](https://qumoptly.github.io/quirk/)一个量子电路模拟器！
 ### 6.其他 ... 
-<iframe height=394 width=700 src="https://qumoptly.github.io/laser/img/a.mp4">
+
+<video id="video" controls="" preload="none" >
+    <source id="mp4" height=394 width=700 src="https://qumoptly.github.io/laser/img/a.mp4" type="video/mp4">
+</video>
+
 >* [light.co](https://qumoptly.github.io/light.co/)
 >* [silk](https://qumoptly.github.io/silk/)
 >* [vfm2](https://qumoptly.github.io/vfm2)
