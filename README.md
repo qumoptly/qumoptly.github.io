@@ -12,5 +12,5 @@
 ### 6.其他 ... 
 
 >[light.co](https://qumoptly.github.io/light.co/)
->[silk](https://qumoptly.github.io/silk/)
->[vfm2](https://qumoptly.github.io/vfm2)
+>* [silk](https://qumoptly.github.io/silk/)
+>* [vfm2](https://qumoptly.github.io/vfm2)
