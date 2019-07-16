@@ -18,7 +18,7 @@
 ### 6.其他 ... 
 
 ![p1](laser/img/1.gif)
-[![the video](laser/img/a.png)](laser/img/a.mp4)
+[![the video](laser/img/a.png)](https://qumoptly.github.io/laser/img/a.mp4)
 
 >* [light.co](https://qumoptly.github.io/light.co/)
 >* [silk](https://qumoptly.github.io/silk/)
