@@ -1,0 +1,349 @@
+<krpano version="1.17" title="Virtuelle Tour PSI" onstart="startup();" logkey="false">
+
+	<include url="skin/vtourskin.xml" />
+
+	<!-- set skin settings: bingmaps? gyro? thumbnail controlling? tooltips? -->
+	<skin_settings bingmaps="false"
+	               bingmaps_key=""
+	               bingmaps_zoombuttons="false"
+	               gyro="false"
+	               thumbs_width="120" thumbs_height="80" thumbs_padding="10" thumbs_crop="0|40|240|160"
+	               thumbs_opened="true"
+	               thumbs_text="true"
+	               thumbs_dragging="true"
+	               thumbs_onhoverscrolling="false"
+	               thumbs_scrollbuttons="true"
+	               thumbs_scrollindicator="false"
+	               thumbs_loop="false"
+	               tooltips_thumbs="false"
+	               tooltips_hotspots="true"
+	               tooltips_mapspots="false"
+	               controlbar_offset="30"
+	               />
+
+	<!-- set optional skin logo url -->
+	<layer name="skin_logo" url="skin/PSI-Logo.png" scale="1.00" align="top left" x="30" y="30" alpha="0.8" onclick="" />
+
+
+	<action name="startup">
+		if(startscene === null, copy(startscene,scene[0].name));
+		loadscene(get(startscene), null, MERGE);
+	</action>
+
+
+
+
+	<scene name="scene_pano_PSI_Luft" title="Übersicht" onstart="" thumburl="panos/pano_PSI_Luft.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-132.453" vlookat="15" fovtype="MFOV" fov="110" maxpixelzoom="0.8" fovmin="100" fovmax="120" limitview="range" vlookatmin="-15.0" vlookatmax="+90.0" />
+
+		<preview url="panos/pano_PSI_Luft.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="5719" tiledimageheight="5719">
+				<cube url="panos/pano_PSI_Luft.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="2860" tiledimageheight="2860">
+				<cube url="panos/pano_PSI_Luft.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1430" tiledimageheight="1430">
+				<cube url="panos/pano_PSI_Luft.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="715" tiledimageheight="715">
+				<cube url="panos/pano_PSI_Luft.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_PSI_Luft.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_enter" ath="-154.300" atv="10.538" linkedscene="scene_pano_sls_halle" />
+		<hotspot name="spot2" style="skin_enter" ath="-164.901" atv="17.847" linkedscene="scene_250mev01" />
+		<hotspot name="spot3" style="skin_enter" ath="32.039" atv="32.204" linkedscene="scene_pano_ilab_schall" />
+		<hotspot name="spot4" style="skin_enter" ath="-114.867" atv="14.932" linkedscene="scene_pano_ehhalle" />
+		<hotspot name="spot5" style="skin_enter" ath="-102.949" atv="20.055" linkedscene="scene_pano_cockcroft" />
+		<hotspot name="spot6" style="skin_enter" ath="-83.303" atv="14.109" linkedscene="scene_pano_auditorium" />
+		<hotspot name="spot7" style="skin_enter" ath="9.800" atv="10.136" linkedscene="scene_pano_hotlabor" />
+
+	</scene>
+
+
+
+
+
+	<scene name="scene_250mev01" title="SwissFEL Testanlage Halle" onstart="" thumburl="panos/pano_250mev01.tiles/thumb.jpg" lat="" lng="" heading="">
+	
+			<view hlookat="-4.748" vlookat="39.828" fovtype="MFOV" fov="128.486" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />	
+				
+			<preview url="panos/pano_250mev01.tiles/preview.jpg" />		
+			<image type="CUBE" multires="true" tilesize="512" progressive="false">			
+			<level tiledimagewidth="3757" tiledimageheight="3757">				
+				<cube url="panos/pano_250mev01.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />			
+			</level>			
+			<level tiledimagewidth="1879" tiledimageheight="1879">				
+				<cube url="panos/pano_250mev01.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />			
+			</level>			
+			<level tiledimagewidth="940" tiledimageheight="940">				
+				<cube url="panos/pano_250mev01.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />			
+			</level>			
+			<level tiledimagewidth="512" tiledimageheight="512">				
+				<cube url="panos/pano_250mev01.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />			
+			</level>			
+			<mobile>				
+			<cube url="panos/pano_250mev01.tiles/mobile_%s.jpg" />			
+			</mobile>		
+			</image>		
+			<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_enter" ath="4.915" atv="37.607" linkedscene="scene_pano_250mev02" />
+		<hotspot name="spot2" style="skin_exit" ath="171.261" atv="-15.380" linkedscene="scene_pano_psi_luft" />	
+	</scene>
+
+
+
+
+
+	<scene name="scene_pano_250mev02" title="SwissFEL Testanlage Tunnel" onstart="" thumburl="panos/pano_250mev02.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_250mev02.tiles/preview.jpg" /> 
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="3748" tiledimageheight="3748">
+				<cube url="panos/pano_250mev02.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1874" tiledimageheight="1874">
+				<cube url="panos/pano_250mev02.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="937" tiledimageheight="937">
+				<cube url="panos/pano_250mev02.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_250mev02.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_250mev02.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="26.817" atv="-31.262" linkedscene="scene_250mev01" />
+
+	</scene>
+
+
+
+
+
+	<scene name="scene_pano_SLS_halle" title="SLS Halle" onstart="" thumburl="panos/pano_SLS_halle.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="0" vlookat="0" fovtype="MFOV" fov="120" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_SLS_halle.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="2237" tiledimageheight="2237">
+				<cube url="panos/pano_SLS_halle.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1119" tiledimageheight="1119">
+				<cube url="panos/pano_SLS_halle.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_SLS_halle.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_SLS_halle.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_enter" ath="-163.072" atv="12.022" linkedscene="scene_pano_sls_beamline" />
+		<hotspot name="spot2" style="skin_exit" ath="160.524" atv="3.048" linkedscene="scene_pano_psi_luft" />
+	</scene>
+
+
+	<scene name="scene_pano_SLS_Beamline" title="SLS Beamline" onstart="" thumburl="panos/pano_SLS_Beamline.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-0.258" vlookat="20.895" fovtype="MFOV" fov="120.000" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_SLS_Beamline.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="2217" tiledimageheight="2217">
+				<cube url="panos/pano_SLS_Beamline.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1109" tiledimageheight="1109">
+				<cube url="panos/pano_SLS_Beamline.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_SLS_Beamline.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_SLS_Beamline.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="148.996" atv="2.952" linkedscene="scene_pano_sls_halle" />
+
+	</scene>
+
+
+
+
+	<scene name="scene_pano_EHHalle" title="Experimentierhalle" onstart="" thumburl="panos/pano_EHHalle.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-0.568" vlookat="23.255" fovtype="MFOV" fov="120.000" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_EHHalle.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="2162" tiledimageheight="2162">
+				<cube url="panos/pano_EHHalle.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/pano_EHHalle.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_EHHalle.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_EHHalle.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="3.798" atv="-3.821" linkedscene="scene_pano_psi_luft" />
+
+	</scene>
+
+
+
+	<scene name="scene_pano_Cockcroft" title="Cockcroft-Walton" onstart="" thumburl="panos/pano_Cockcroft.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="356.131" vlookat="-8.388" fovtype="MFOV" fov="136.451" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_Cockcroft.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="2158" tiledimageheight="2158">
+				<cube url="panos/pano_Cockcroft.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/pano_Cockcroft.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_Cockcroft.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_Cockcroft.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="-118.147" atv="10.431" linkedscene="scene_pano_psi_luft" />
+
+	</scene>
+
+
+
+
+	<scene name="scene_pano_auditorium" title="Auditorium" onstart="" thumburl="panos/pano_auditorium.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-84.051" vlookat="-0.230" fovtype="MFOV" fov="120.000" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_auditorium.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="3743" tiledimageheight="3743">
+				<cube url="panos/pano_auditorium.tiles/%s/l4/%v/l4_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1872" tiledimageheight="1872">
+				<cube url="panos/pano_auditorium.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="936" tiledimageheight="936">
+				<cube url="panos/pano_auditorium.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_auditorium.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_auditorium.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="85.336" atv="-8.453" linkedscene="scene_pano_psi_luft" />
+
+	</scene>
+
+
+
+
+	<scene name="scene_pano_Hotlabor" title="Hotlabor" onstart="" thumburl="panos/pano_Hotlabor.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="78.969" vlookat="4.516" fovtype="MFOV" fov="120.000" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_Hotlabor.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="4511" tiledimageheight="4511">
+				<cube url="panos/pano_Hotlabor.tiles/%s/l4/%0v/l4_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="2256" tiledimageheight="2256">
+				<cube url="panos/pano_Hotlabor.tiles/%s/l3/%0v/l3_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="1128" tiledimageheight="1128">
+				<cube url="panos/pano_Hotlabor.tiles/%s/l2/%0v/l2_%s_%0v_%0h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_Hotlabor.tiles/%s/l1/%0v/l1_%s_%0v_%0h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_Hotlabor.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="-52.970" atv="-2.646" linkedscene="scene_pano_psi_luft" />
+
+	</scene>
+
+
+
+
+
+
+
+	<scene name="scene_pano_iLab_Schall" title="iLab Schülerlabor" onstart="" thumburl="panos/pano_iLab_Schall.tiles/thumb.jpg" lat="" lng="" heading="">
+
+		<view hlookat="-2.554" vlookat="19.552" fovtype="MFOV" fov="102.863" maxpixelzoom="1.2" fovmin="100" fovmax="120" limitview="auto" />
+
+		<preview url="panos/pano_iLab_Schall.tiles/preview.jpg" />
+
+		<image type="CUBE" multires="true" tilesize="512" progressive="false">
+			<level tiledimagewidth="2135" tiledimageheight="2135">
+				<cube url="panos/pano_iLab_Schall.tiles/%s/l3/%v/l3_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="1024" tiledimageheight="1024">
+				<cube url="panos/pano_iLab_Schall.tiles/%s/l2/%v/l2_%s_%v_%h.jpg" />
+			</level>
+			<level tiledimagewidth="512" tiledimageheight="512">
+				<cube url="panos/pano_iLab_Schall.tiles/%s/l1/%v/l1_%s_%v_%h.jpg" />
+			</level>
+			<mobile>
+				<cube url="panos/pano_iLab_Schall.tiles/mobile_%s.jpg" />
+			</mobile>
+		</image>
+
+		<!-- place your scene hotspots here -->
+		<hotspot name="spot1" style="skin_exit" ath="-158.277" atv="3.693" linkedscene="scene_pano_psi_luft" />
+
+	</scene>
+
+
+
+
+
+</krpano>
