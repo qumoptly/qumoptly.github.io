@@ -44,7 +44,9 @@ function action()
 				var result = array[0]
 				result = result.replace(/\s+/g, ","); //如果有空格，用，代替
 				var url = 'https://dds.dui.ai/runtime/v1/synthesize?voiceId=qianranfa&speed=0.8&volume=100&audioType=wav&text='+result;
-				var obj = $("<audio src="+url+" autoplay></audio>");
+				var obj = $("<audio src="+url+" id="audio" autoplay></audio>");
+				var audio = document.getElementById("audio");
+					document.ontouchend = function() {audio.play()};
 				$("body").remove("audio");
 				$("body").append(obj);
 			}
