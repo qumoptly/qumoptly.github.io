@@ -47,6 +47,7 @@ function action()
 				var obj = $("<audio src="+url+" autoplay></audio>");
 				$("body").remove("audio");
 				$("body").append(obj);
+				$(function(){$("#audio")[0].play();})
 			}
 		}
 	
