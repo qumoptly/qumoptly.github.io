@@ -29,7 +29,7 @@
 						<p id="api-key-show" style="cursor: pointer"> 点击简介 </p>
 						<p id="api-key-content" style="display:none">
 						<a style="font-size: 24px; color:#99BBFF ;" href="./">资源学习整理：<br></a>
-						<a style="font-size:16px; color:#CC0000  ;" >
+						<a style="font-size:16px; color:#CC0000 ;" >
 						1、激光：<a style="font-size:16px;color:#C63300 ;" href="./laser/">[打开]</a>
 						<a style="font-size:16px;color:#C63300 ;" >来自[arnold neracher]</a>
 						</a><br>
@@ -81,9 +81,11 @@
 			<div class="glowing disco box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
 			    <div class="quicknav">
 					<div class="pull-right hidden-phone">
-						<p id="api-key-show" style="cursor: pointer"><a style="color:#55AA00" href="./rp-photonics/" >RP Photonics镜像</a></p>
-						<p id="api-key-content" style="display:none">
-						<a style="color:#5599FF" href="./photonics/" >RP-Photonics</a>
+						<p id="rp-show" style="cursor: pointer"><a style="color:#55AA00" >RP Photonics</a></p>
+						<p id="rp-content" style="display:none">
+						<a style="color:#999888" >镜像：</a>
+						<a style="color:#55AA00" href="./photonics/" >V20</a> &nbsp;&nbsp; 
+						<a style="color:#5599FF" href="./rp-photonics/" >V19</a>
 						<a id="api-key"> </a>
 						</p>
 					</div>
@@ -104,8 +106,6 @@
 						</div>
 					</h4>
 				</div> 
-				
-			
 			<em>
 			<p><a href="https://openmct-demo.herokuapp.com" target="_blank" ><img style="width:24px;height:24px;" src="./img/setmin.png" alt="img"></a> 
 			<a style="color:#5E6C77" href="https://qumoptly.github.io">&nbsp; 2016-2019 by qumoptly &nbsp; </a> 
@@ -118,7 +118,10 @@
     $('#api-key-show').hide();
     $('#api-key-content').show();
 });
-
+$('#rp-show').on('click', function() {
+    $('#rp-show').hide();
+    $('#rp-content').show();
+});
 </script>
 <script src="js/bota.js" type="text/javascript" charset="utf-8"></script>
 </body>
