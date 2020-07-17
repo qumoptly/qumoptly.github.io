@@ -1,0 +1,453 @@
+@media (max-width:1170px){
+    .respd {
+    padding-right:15px !important;
+    padding-left:15px !important;
+}
+}
+
+.shand:hover {
+    text-decoration:none !important;
+}
+
+#tabsBar {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+    margin-bottom: 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    color: #000;
+    padding: 10px 40px 2px 40px;
+}
+
+.tabsBar {
+    margin: 0;
+    padding-top: 9px;
+    margin-left: 0px !important;
+        padding-left:0px;
+}
+    .tabsBar li {
+        display: inline-block;
+        margin-top: 4px;
+        padding: 0px 15.5px 0px 15.5px;
+        color: #000;
+        text-decoration: none !important;
+        cursor: pointer;
+    }
+    .tabsBar > .active {
+        border-bottom: #FFFFFF solid 1px;
+        border-left: 1px solid #DADADA;
+        border-right: 1px solid #DADADA;
+        border-top-left-radius: 5px;
+        border-top: 6px solid #ffd51e;
+        border-top-right-radius: 5px;
+        position: relative;
+        top: 3px;
+        background-color: #fff;
+        padding: 10px !important;
+    }
+
+#tabTechnicalImages {
+    text-align:center;
+}
+
+
+.breadcrumbs {
+    margin-top: 10px;
+    margin-left: -5px;
+    margin-bottom: 10px;
+}
+
+/*
+* === Downloads ===
+*/
+
+.btn-downloads {
+    color:#fff;
+    background-color:#0462be;
+    padding-top:2px!important;
+    padding-bottom:3px !important;
+}
+
+.btn-downloads:hover {
+    background-color:#286090;
+}
+
+/*
+* === START Resources ===
+*/
+
+#resourcesTabs > .arrow {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #efefef;
+    margin: auto;
+    margin-top: 8px;
+    padding-top: 4px;
+}
+
+.boldResources {
+
+    color: #0462be!important;
+}
+
+ul#resourcesTabs {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 15px;
+    padding: 0;
+    font-weight: bolder;
+}
+
+ul#resourcesTabs li a {
+    color:#000;
+}
+
+ul#resourcesTabs li a:hover {
+    text-decoration:none !Important;
+}
+
+    ul#resourcesTabs li {
+        float: left;
+        text-align: center;
+        cursor:pointer;
+        width:16.5%
+    }
+    ul#resourcesTabs li.resourcesTabActive {
+        display:normal;
+    }
+.resourcesTab {
+    display:none;
+    background-color: #efefef;
+    padding: 30px;
+    padding-bottom: 15px;
+    float:left;
+}
+
+.nodisplay {
+    display:none
+    }
+    
+    @media (max-width: 767px) {  
+    .nodisplay {
+    display:block !Important;
+    }
+
+}
+
+/* dividers */
+
+.divied-5 {
+    width: 100%;
+    height: 5px;
+    clear: both;
+}
+
+.divied-10 {
+    width: 100%;
+    height: 10px;
+    clear: both;
+}
+
+.divied-20 {
+    width: 100%;
+    height: 20px;
+    clear: both;
+}
+
+.divied-30 {
+    width: 100%;
+    height: 30px;
+    clear: both;
+}
+
+.divied-40 {
+    width: 100%;
+    height: 40px;
+    clear: both;
+}
+
+.divied-60 {
+    width: 100%;
+    height: 60px;
+    clear: both;
+}
+
+/*
+* === New Names ===
+*/
+
+
+#tabsBar {
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    background-color: #f7f7f7;
+    margin-bottom: 0;
+    border-top: 1px solid #e7e7e7;
+    border-bottom: 1px solid #e7e7e7;
+    color: #000;
+    padding: 10px 40px 2px 40px;
+    margin-top:30px;
+}
+
+.tabs-bar {
+    margin: 0;
+    padding-top: 9px;
+    margin-left: 0px !important;
+
+}
+
+.tabs-bar li {
+    display: inline-block;
+    margin-top: 4px;
+    padding: 0px 15.5px 0px 15.5px;
+    color: #000;
+    text-decoration: none !important;
+    cursor: pointer;
+}
+
+.tabs-bar > .active {
+    border-bottom: #FFFFFF solid 1px;
+    border-left: 1px solid #DADADA;
+    border-right: 1px solid #DADADA;
+    border-top-left-radius: 5px;
+    border-top: 6px solid #ffd51e;
+    border-top-right-radius: 5px;
+    position: relative;
+    top: 3px;
+    background-color: #fff;
+    padding: 10px !important;
+}
+
+.tab-product {
+    display: none;
+}
+
+.display-none {
+    display: none
+}
+
+    @media (max-width: 767px) {  
+    #tabsBar {
+    padding:0px;
+    background-color:#fff;
+    border-top:0px;
+    margin-top:0px
+    }
+    .tabsBar {
+        padding-left:0px;
+        text-align:center;
+        background-color:#efefef;
+        padding-top:0px;
+        margin-top:15px;
+    }
+    .tabsBar > .active {
+        width:100%;
+        border-radius:unset;
+        border:none;
+        background-color:#ffd51e;
+top:0px;
+margin-top:0px;
+margin-bottom:0px;
+    }
+    .tabsBar li {
+     height:40px;
+     padding-top:7px;
+     width:100%
+    }
+
+    .resourcesTab {
+        background-color:transparent;
+    }
+
+}
+
+#tableAccessories {
+    width: 100%;
+}
+
+
+
+/* Slick Carousels */
+.carouselArrows {
+    cursor: pointer;
+    margin-top: -110px;
+    display: inline;
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+.carouselPrev {
+    float: left;
+}
+.carouselNext {
+    float: right;
+}
+.slick-initialized {
+    visibility: visible !important;
+}
+/*.slick-slider {
+    background: url(http://www.edmundoptics.com/assets/images/ui/ajax-loader.gif);
+}*/
+.slick-slider .slick-list {
+    opacity: 0;
+    position: absolute;
+}
+.slick-slider.slick-initialized {
+    background: none;
+}
+.slick-slider.slick-initialized .slick-list {
+    opacity: 1;
+    position: relative;
+    transition: opacity 0.2s ease-in;
+}
+
+
+/* Primary Image Carousel */
+#primaryImageCarousel {
+    visibility: hidden;
+}
+
+@media (max-width: 700px) {
+    #primaryImageCarousel {
+        margin-top: 15px;
+    }
+    #primaryImageCarouselContainer .carouselArrows {
+        opacity: .9 !important;
+        margin-right: 0px !important;
+    }
+}
+#primaryImageCarouselContainer:hover .carouselArrows {
+    opacity: .7;
+    margin-top: -110px;
+    display: inline;
+}
+#primaryImageCarouselText .slick-dots {
+    bottom: -20px;
+}
+
+
+/*** Resources Tabs ***/
+
+/* App Notes*/
+.appNoteBox {
+
+    border-radius: 0px !important;
+    background-color: white !important;
+    border: none !important;
+    border-left: solid 5px gold !important;
+    padding:15px;
+}
+
+/* Glossary */
+.glossarybox {
+    font-size: 13px !important;
+    background-color: white !important;
+    border-radius: 8px !important;
+}
+
+.glossaryTerm {
+    font-weight: bold;
+}
+
+/* Video */
+.vidBlockTitle {
+    font-size: 14px !important;
+}
+
+
+/* Category Specs */
+
+.specsRow {
+    font-size:13px;
+    line-height:1.3em
+}
+
+.specs > div > div:first-child {
+    font-weight:bold;
+}
+
+.specsRow:nth-child(odd) {
+    background-color: #efefef;
+}
+
+.specs:nth-child(even) {
+    border-left: 1px solid #dadada;
+}
+
+@media (max-width: 1200px)
+{
+    .specsRow .specs:nth-child(even) {
+        border-right: none;
+        background-color:#ffffff;
+    }
+
+    .specsRow .specs:nth-child(odd) {
+        border-right:none;
+        background-color: #efefef;
+    }
+
+
+}
+
+
+i.fa-chevron-circle-right, i.fa-chevron-circle-down {
+    color: #0462be;
+    font-size: 20px;
+    position: relative;
+    margin-top: 3px;
+}
+
+button.btn-specifications {
+    background: transparent;
+    border: none;
+    height: 33px;
+}
+.volPrice {
+    border: 1px solid #dadada;
+    border-radius: 10px;
+    text-align: center;
+    padding: 4px 0px 4px 0px;
+    margin-right: 15px;
+    height: 58px;
+}
+
+/* TECHSPEC hover*/
+#tstip {
+    position: relative;
+    cursor: help;
+    text-decoration: underline !important;
+    color: #000;
+    text-align: left !important
+}
+#tstip > img {
+    margin-top: -9px;
+    }
+#tstip > span {
+    display:none;
+    z-index: 100;
+    position: absolute;
+    padding: .6em;
+    padding-left: 1em;
+    left: 0px;
+    top: 2.1em;
+    width: 20em;
+    background-color: #dadada;
+    border-radius: 0.5em;
+    font-weight: normal;
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+#tstip > span > a {
+    display: inline;
+    color: #0462be;
+    font-weight: normal;
+}
+#tstip:hover > span {
+    display: inline-block;
+}
+
+/* End TECHSPEC hover*/

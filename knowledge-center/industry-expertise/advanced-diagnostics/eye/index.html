@@ -1,0 +1,1841 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="94ae87c0-4163-47a8-a565-c09ba562fb67" type="text/javascript" data-blockingmode="auto" data-georegions="{'region':'AW,AF,AO,AI,AX,AL,AD,AE,AR,AM,AS,AQ,TF,AG,AU,AZ,BI,BJ,BQ,BF,BD,BH,BS,BA,BL,BY,BZ,BM,BO,BR,BB,BN,BT,BV,BW,CF,CA,CC,CH,CL,CN,CI,CM,CD,CG,CK,CO,KM,CV,CR,CU,CW,CX,KY,DJ,DM,DO,DZ,EC,EG,ER,EH,ET,FJ,FK,FO,FM,GA,GE,GG,GH,GI,GN,GP,GM,GW,GQ,GD,GL,GT,GF,GU,GY,HK,HM,HN,HT,ID,IM,IN,IO,IR,IQ,IL,JM,JE,JO,JP,KZ,KE,KG,KH,KI,KN,KR,KW,LA,LB,LR,LY,LC,LK,LS,MO,MF,MA,MC,MD,MG,MV,MX,MH,MK,MT,MM,ME,MN,MP,MZ,MR,MS,MQ,MU,MW,MY,YT,NA,NC,NE,NF,NG,NI,NU,NP,NR,NZ,OM,PK,PA,PN,PE,PH,PW,PG,PR,KP,PY,PS,PF,QA,RE,RU,RW,SA,SD,SN,SG,GS,SH,SJ,SB,SL,SV,SM,SO,PM,RS,SS,ST,SR,SZ,SX,SC,SY,TC,TD,TG,TH,TJ,TK,TM,TL,TO,TT,TN,TR,TV,TW,TZ,UG,UA,UM,UY,US,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,ZA,ZM,ZW', 'cbid':'c540f2e8-c4fa-49cd-a6c0-b828f88912be'}" data-culture="ZH"></script>
+<script src="/Assets/javascript/layout-bundled/!jquery-3.3.1.js?v=636639559960000000"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a599ef7b57","applicationID":"10142686","transactionName":"bgdUbEMAX0sEBU0NW1dNe25yTmFKCgtWNFVeB3VXXxVDVwkKXBYbUAxSXUk=","queueTime":0,"applicationTime":48,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQcHVVJQGwIAVVVQAQkB",licenseKey:"a599ef7b57",applicationID:"10142686"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="twitter:card" content="summary" />
+<title>Eye | 爱特蒙特光学</title>
+<meta property="fb:page_id" content="73885277291" />
+<meta name="debug.ipAddress" content="172.104.102.238, 162.158.119.235" />
+<meta http-equiv="content-language" content="zh-CN" />
+
+<link rel="canonical" href="https://www.edmundoptics.cn/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+
+<link rel="alternate" hreflang="x-default" href="https://www.edmundoptics.com/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="en" href="https://www.edmundoptics.com/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="en-tw" href="https://www.edmundoptics.com.tw/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="en-au" href="https://www.edmundoptics.com.au/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="en-sg" href="https://www.edmundoptics.com.sg/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="ko" href="https://www.edmundoptics.co.kr/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="en-gb" href="https://www.edmundoptics.co.uk/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="fr" href="https://www.edmundoptics.fr/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="es-es" href="https://www.edmundoptics.es/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="de" href="https://www.edmundoptics.de/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="en-eu" href="https://www.edmundoptics.eu/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="zh-cn" href="https://www.edmundoptics.cn/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<link rel="alternate" hreflang="ja" href="https://www.edmundoptics.jp/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<meta name="title" data-type="string" content="Eye | 爱特蒙特光学" />
+<meta name="LanguageId" data-type="string" content="12" />
+<meta property="og:title" content="Eye | 爱特蒙特光学" />
+<meta property="og:url" content="https://www.edmundoptics.cn/knowledge-center/industry-expertise/advanced-diagnostics/eye/" />
+<meta property="og:image" content="https://www.edmundoptics.com//contentassets/ab0b3487ab27401ea57343c370c9473b/eye.jpg" />
+<meta name="twitter:image" content="https://www.edmundoptics.com//contentassets/ab0b3487ab27401ea57343c370c9473b/eye.jpg">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/bootstrap.css?v=636898818760000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/shared.css?v=637298997960000000" media="all">
+<style>
+
+
+.tip {
+
+  position: relative;
+  cursor: help;
+  text-decoration: none;
+  color: #fff;
+background-color:#fa5301;
+font-size:12px;
+padding:3px;
+   border-radius: 0.5em;
+
+
+}
+.tip > span {
+  display: none;
+    z-index: 100;
+    position: absolute;
+    padding: .6em;
+    padding-left: 1em;
+    top: 1.5em;
+    left: 1em;
+    width: 20em;
+    background-color: #fa5301;
+    border-radius: 0.5em;
+
+}
+.tip:hover > span {
+  display: inline-block;
+}
+.sg-question-set,
+.sg-type-radio ul.sg-list-vertical li,
+.sg-type-checkbox ul.sg-list-vertical li,
+.sg-question-options,
+.sg-type-radio-likert .sg-question-options,
+.sg-type-table .sg-question-options,
+.sg-instructions
+{
+  overflow: visible;
+}
+
+
+
+@media (max-width: 776px) {
+
+.containerleftm {
+padding-left:15px !Important;
+}
+.toppadm {
+padding-top:50px;
+}
+
+}
+.used {
+background-color: #fa5301;
+    border-radius: 25px;
+    width: 87px;
+    padding-left: 9px;
+    color: #fff;
+    font-size: 10px;
+    text-transform: uppercase;
+}
+
+.arrow-down {
+  width: 0; 
+  height: 0; 
+  border-left: 20px solid transparent;
+  border-right: 20px solid transparent;
+  border-top: 20px solid #fa5301;
+    margin: auto;
+    top: 12px;
+    position: relative;
+}
+
+
+
+
+
+.buyPromobtn {
+background-color: #7286a8 !important; 
+width: 100%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative;
+    padding-top: 7px;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+.buyPromo {
+background-color: #292929 !important; 
+width: 33%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative;
+    border-right: 1px solid #565456;
+}
+
+
+.buyPromo:hover  { background-color:red !important}
+
+
+
+.buyPromo2 {
+background-color: #292929 !important; 
+width: 33%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative
+    border-right: 1px solid #565456;
+}
+
+.buyPromo2:hover  { 
+background-color:#0bc02c !important
+}
+
+
+
+.buyPromo3 {
+background-color: #fa5301 !important; 
+width: 33%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative
+}
+
+
+@media (max-width: 596px)
+ {
+  .buyPromo {
+width:100%;
+}
+
+  .buyPromo2 {
+width:100%;
+margin-top:0px;
+margin-bottom:40px;
+}
+}
+
+
+h2 a:hover {
+text-decoration:none!important
+}
+
+.smallpara {
+padding-top: 10px;border-bottom:1px solid #5c5c5c; padding-bottom:15px; margin-bottom:20px !important; line-height:1.4em; color:#dadada
+}
+
+.title {
+text-align: center;width: 1100px; position: relative; margin: 0 auto;
+}
+
+#flowCytometryPopup a {
+color:#fff !important;
+text-decoration:underline !important;
+}
+#GFPPopup a {
+color:#fff !important;
+text-decoration:underline !important;
+}
+#OCTPopup a {
+color:#fff !important;
+text-decoration:underline !important;
+}
+
+.close-btn {
+    border: 4px solid #fff;
+    border-radius: 100px;
+    background-color: #fff;
+    padding-left: 4px;
+    padding-right: 4px;
+    font-weight: bolder;
+    position: relative;
+    top: -15px;
+    left: 225px;
+    color: #000;
+}
+
+.notimeline {
+display:none;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  background-color: #000 !important;
+
+}
+
+body > div.container {
+width:100%
+}
+
+
+.grey {
+background-color: #636363;
+padding:40px;
+
+
+}
+
+.white {
+    background-color: #636363;
+    padding: 40px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: 20px;
+    margin: 20px;
+    color: #fff;
+padding-top:10px
+
+
+}
+
+
+
+
+.darkgrey {
+background-color: #353535;
+padding:40px;
+padding-bottom:80px
+
+
+}
+
+
+
+.eye {
+background-image: url(/contentassets/19e789d80a5e400590e1a964a6bef708/eye2.jpg);
+background-repeat:no-repeat;
+background-size:cover;
+background-position:center;
+height: 700px;
+
+
+}
+
+.wrap {
+    width: 500px;
+    float: right;
+    margin-top: 50px;
+
+}
+
+
+
+
+.eye-wrap {
+    width: 500px;
+    float: right;
+    margin-top: 20px;
+}
+
+
+
+
+.circle3 {
+  position: relative;
+  width: 480px;
+  height: 480px;
+  border-radius: 50%;
+  background: transparent;
+left:10px;
+  
+}
+
+
+
+
+
+.border
+{
+    position: relative;
+    width:30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.circleText {
+
+    text-transform: uppercase;
+    font-size:12px
+}
+
+.circleText:hover {
+  cursor: pointer
+}
+
+
+
+.circleText {
+    -webkit-animation: circleText .5s ease .8s forwards;
+color:#fff;
+}
+
+
+  @keyframes border {
+  0% {
+    border:none;
+  }
+  25% {
+        border-left:none;
+    border-bottom: 1px solid #fff;
+      border-left:none;
+      border-left:none;
+  }
+  50% {
+    border-left:none;
+    border-bottom: 1px solid #fff;
+    border-right:1px solid #fff;
+  border-left:none;
+  }
+  75% {
+    border-left:none;
+    border-bottom: 1px solid #fff;
+    border-right:1px solid #fff;
+     border-top: 1px solid #fff;
+  }
+  100% {
+    border: 1px solid #fff;
+  }
+}
+
+
+
+
+
+
+
+.border
+{
+    position: relative;
+    width:30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.circleText {
+
+    text-transform: uppercase;
+    font-size:12px
+}
+
+.circleText:hover {
+  cursor: pointer
+}
+
+
+
+
+.border {
+    -webkit-animation: b-ball .5s ease forwards;
+
+-ms-animation-name: b-ball 0.5s;
+ -moz-animation: b-ball 0.5s;
+ -moz-animation-timing-function: ease;
+-ms-animation-timing-function: ease; 
+   -webkit-animation-timing-function: ease;
+ -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+   -webkit-animation-timing-function: forwards;
+  -webkit-box-shadow: 0px 0px 4px 0px #ffffff; 
+          box-shadow: 0px 0px 4px 0px #ffffff;
+
+}
+
+.circleText {
+    -webkit-animation: circleText .5s ease .8s forwards;
+color:#fff;
+}
+
+
+
+/* EYE BALLS */
+
+
+#e-ball9 {
+        z-index: 1;
+	position:relative;
+	top:465px;
+	left:-34px;
+}
+#e-ball9:hover {
+   background-color:#fa5301;
+     cursor: pointer
+}
+
+
+#e-ball10 {
+        z-index: 1;
+	position:relative;
+	top:489px;
+	left:-23px;
+}
+#e-ball10:hover {
+   background-color:#fa5301;
+     cursor: pointer
+}
+
+#e-ball11 {
+    z-index: 2;
+	position:relative;
+	top:410px;
+	left:137px;
+}
+#e-ball11:hover {
+   background-color:#fa5301;
+     cursor: pointer
+}
+
+#e-ball12 {
+    z-index: 3;
+	position:relative;
+	top:419px;
+	left:35px;
+}
+#e-ball12:hover {
+   background-color:#fa5301;
+     cursor: pointer
+}
+
+#e-ball13 {
+    z-index: 4;
+	position:relative;
+	top:362px;
+	left:191px;
+	
+}
+
+#e-ball13:hover {
+   background-color:#fa5301;
+     cursor: pointer
+}
+
+
+.border
+{
+    position: relative;
+    width:30px;
+    height: 30px;
+    border-radius: 100px;
+}
+
+.circleText {
+
+    text-transform: uppercase;
+    font-size:12px
+}
+
+.circleText:hover {
+  cursor: pointer
+}
+
+
+
+/* EYE LINES */
+
+.e-line1 {
+    transform: rotate(145deg);
+
+    top: 421px;
+    margin-left: -23px;
+}
+
+
+
+
+.e-line10 {
+       transform: rotate(135deg);
+-webkit-transform: rotate(135deg);
+    top: 473px;
+    margin-left: -28px;
+}
+
+.e-line11 {
+    transform: rotate(125deg);
+-webkit-transform: rotate(125deg);
+    top: 502px;
+    margin-left: 16px;
+}
+
+.e-line12 {
+      transform: rotate(110deg);
+      -webkit-transform: rotate(110deg);
+    top: 479px;
+    margin-left: 130px;
+}
+
+.e-line13 {
+    transform: rotate(95deg);
+    -webkit-transform: rotate(95deg);
+    top: 515px;
+    margin-left: 149px;
+}
+
+
+/* END EYE LINES */
+
+/* EYE ANIMATIONS */
+.circle3 .e-line1,
+.circle3 .e-line2,
+.circle3 .e-line3,
+.circle3 .e-line4,
+.circle3 .e-line5,
+.circle3 .e-line6,
+.circle3 .e-line7,
+.circle3 .e-line8,
+.circle3 .e-line9,
+.circle3 .e-line10,
+.circle3 .e-line11,
+.circle3 .e-line12,
+.circle3 .e-line13
+ {
+  position: absolute;
+  border-top: 1px solid #fff;
+  transform-origin: 50% 50%;
+}
+
+.circle3 {
+  -webkit-animation: border .45s linear .55s forwards;
+-webkit-box-shadow: 0px 0px 4px 0px #ffffff;
+   box-shadow: 0px 0px 4px 0px #ffffff;
+    background-image: url(/contentassets/19e789d80a5e400590e1a964a6bef708/eye-gif8.gif);
+    background-attachment: fixed;
+background-position:center
+
+}
+
+.e-line1, .e-line3, .e-line5, .e-line7, .e-line9, .e-line13 {
+  animation: line .5s ease .6s forwards;
+    width: 100px;
+
+}
+
+.e-line6, .e-line8, .e-line12 {
+  animation: line2 .5s ease .65s forwards;
+    width: 50px;
+
+}
+
+.e-line2, .e-line4, .e-line10, .e-line11 {
+  animation: line3 .5s ease .7s forwards;
+    width: 150px;
+
+}
+
+.border {
+    -webkit-animation: e-ball .5s ease forwards;
+
+-ms-animation-name: e-ball 0.5s;
+ -moz-animation: e-ball 0.5s;
+ -moz-animation-timing-function: ease;
+-ms-animation-timing-function: ease; 
+   -webkit-animation-timing-function: ease;
+ -moz-animation-fill-mode: forwards;
+    -ms-animation-fill-mode: forwards;
+   -webkit-animation-timing-function: forwards;
+  -webkit-box-shadow: 0px 0px 4px 0px #ffffff; 
+          box-shadow: 0px 0px 4px 0px #ffffff;
+
+}
+
+.circleText {
+    -webkit-animation: circleText .5s ease .8s forwards;
+color:#fff;
+}
+
+
+  @keyframes border {
+  0% {
+    border:none;
+  }
+  25% {
+        border-left:none;
+    border-bottom: 1px solid #fff;
+      border-left:none;
+      border-left:none;
+  }
+  50% {
+    border-left:none;
+    border-bottom: 1px solid #fff;
+    border-right:1px solid #fff;
+  border-left:none;
+  }
+  75% {
+    border-left:none;
+    border-bottom: 1px solid #fff;
+    border-right:1px solid #fff;
+     border-top: 1px solid #fff;
+  }
+  100% {
+    border: 1px solid #fff;
+  }
+}
+
+@keyframes e-line {
+  0% {
+    left: 60px;
+    width: 0;
+  }
+  100% {
+    left: 10px;
+    width: 100px;
+  }
+}
+
+@keyframes e-line2 {
+  0% {
+    left: 60px;
+    width: 0;
+  }
+  100% {
+    left: 10px;
+    width: 50px;
+  }
+}
+
+@keyframes e-line3 {
+  0% {
+    left: 60px;
+    width: 0;
+  }
+  100% {
+    left: 10px;
+    width: 150px;
+  }
+}
+
+@keyframes e-ball {
+  0% {
+     border: 1px solid #000
+  }
+  100% {
+     border: 1px solid #fff
+  }
+}
+
+@keyframes circleText {
+  0% {
+     color:#000;
+  }
+  100% {
+     color:#fff;
+ 
+  }
+}
+
+/* END EYE ANIMATIONS */
+
+
+/* The actual popup */
+.popuptext {
+    display:none;
+    width: 260px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 8px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: -125%;
+    margin-left: -80px;
+    text-transform: none;
+
+}
+
+/* Popup arrow 
+.popup .popuptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}*/
+
+/* Show / hide the popup 
+.popup .show {
+    visibility: visible;
+    -webkit-animation: fadeIn 1s;
+    animation: fadeIn 1s;
+}
+
+
+/* Add animation (fade in the popup) */
+@-webkit-keyframes fadeIn {
+    from {opacity: 0;} 
+    to {opacity: 1;}
+}*/
+
+@keyframes fadeIn {
+    from {opacity: 0;}
+    to {opacity:1 ;}
+}
+
+
+@media (max-width: 1200px) {
+.title {
+    width:100%;
+padding:20px;
+}
+
+.title img {
+    width:100%;
+
+}
+.noblood {
+display:none;
+}
+.nobrain {
+display:none;
+}
+.yesblood {
+display:block !Important;
+}
+
+.blood-title {
+width:100% !important
+}
+
+.blood {
+height:auto
+}
+
+.brain-title {
+float:left !important;
+padding-left:40px;
+padding-right:40px;
+width:100% !important;
+
+}
+
+.brain {
+height:auto;
+}
+
+
+
+.eye-title {
+width:100% !important
+}
+
+.eye {
+height:auto
+}
+
+}
+
+
+@media (max-width: 1050px) {
+
+.bloodmobile {
+padding-left:40px;
+padding-right:40px
+
+}
+
+}
+
+.yesblood {
+display:none
+}
+
+
+</style>
+
+
+
+<script type="application/ld+json">
+    {"@context": "http://schema.org",
+    "@id":"www.edmundoptics.cn",
+    "@type": "Organization",
+    "name": "Edmund Optics",
+    "url": "www.edmundoptics.cn",
+    "logo": "www.edmundoptics.cn/globalassets/img/eo-logo-google.jpg",
+    "contactPoint": [
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "sales"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "technical support"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "customer support"
+    }
+    ],
+    "sameAs": [
+    "https://www.facebook.com/edmundoptics",
+    "https://twitter.com/edmundoptics",
+    "https://www.youtube.com/edmundoptics",
+    "https://www.linkedin.com/company/edmund-optics/",
+    "https://plus.google.com/+edmundoptics",
+    "https://www.instagram.com/edmund_optics/"
+    ]
+}
+</script>
+
+<meta name="SearchPageType" data-type="string" content="AdditionalResource" />
+</head>
+<body role="document" itemscope itemtype="http://schema.org/WebPage">
+<div class="thetop"></div>
+<script>
+    var liveChatGroupId = 27;
+    var liveChatSalesOrg = '6800';
+    var liveChatLanguageCode = 'CN';
+    var liveChatIsRestricted = false;
+</script>
+<div id="chatInvite" style="display:none;">
+<div class="chat-header">
+有什么可以帮到您？ <a id="chatInviteX" onclick="declineInvite();"><i class="fa fa-times" aria-hidden="true"></i></a>
+</div>
+<div class="row">
+<div class="col-lg-6 chatInviteMessage">工程师接受在线咨询</div>
+<div class="col-lg-6">
+<img data-src="/globalassets/contact-and-support/asia-chat-pic.jpg?w=100" width="100" height="93" class="lazy" />
+</div>
+</div>
+<div style="text-align:center">
+<input type="button" value="发起对话" class="btn-liveChat" onclick="acceptInvite()" style="padding: 10px 20px; font-weight:bold" />
+</div>
+</div>
+<div id="chatOfflineMessage" style="display:none;">
+<a id="chatOfflineX" onclick="closeOfflineWindow();"><i class="fa fa-times" aria-hidden="true"></i></a>
+我们的操作人员目前都在忙碌。请留言，我们将会很快与您联系。
+<div style="text-align:center">
+<a href="/contact-support/email-support/" target="_blank" style="text-align:center" onclick="trackEvent('LiveChat', 'Offline Message', 'Click');">
+<h4 class="btn-liveChat" style="text-align:center">留言</h4>
+</a>
+</div>
+</div>
+<div id="logo-wrap" style="display:none">
+<img data-src="/assets/images/ui/print-screen/print-screen-header.png" width="360" height="50" class="lazy" />
+</div>
+<div class="headertop slitherBannerWrapper" style="display:none">
+<div class="container" style="height:0px">
+<i class="fa fa-times slitherBannerX" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<span><div><div class="block htmlblock  ">
+<span></span>
+</div></div></span>
+</div>
+<div class="headermiddle">
+<div class="container">
+<div>
+<div style="width:100%; margin:0 auto">
+<div class="headerFloat">
+<a href="/" title="Edmund Optics Worldwide" class="eo-header" style="float:left"><img src="/globalassets/homepage/eo_logo.svg" width="283" height="47" /></a>
+<span class="nomobile no1199">
+<span id="searchbar" class="button-dropdown col-lg-7 col-md-6" style="display: inline-block;">
+<form id="WebsiteSearchForm" action="/search" method="post" class="input-group-sh mb-3-sh website-search-form">
+<input id="WebsiteSearchTerm" name="criteria" class="searchbox website-search-form form-control-sh" onkeyup="SearchAutoComplete()" type="text" autocomplete="off" placeholder="关键词或产品编码" />
+<div class="input-group-append-sh"><button class="btn-sh btn-outline-secondary-sh" type="submit"><i class="fa fa-search">&nbsp;</i></button></div>
+</form>
+<div class="search-result dropdown-menu" style="position: absolute; background: white; z-index: 100; padding: 10px; width:98%; display:none"></div>
+</span>
+</span>
+<div style="float:right; padding-top:0px;" class="headerlinks nomobile no1199">
+<p>
+<div style="margin-top:-14px"> <i class="fa fa-phone" aria-hidden="true">&nbsp;</i><span class="headerPhoneNumber"><strong class="CountrySpecificPhoneNumber"></strong></span></div>
+<span class="header-contact2"> <span onclick="openlc()"> <i class="fa fa-comment" aria-hidden="true">&nbsp;</i><span class="chat-h">聊天</span></span>&nbsp;&nbsp; &nbsp; <a href="/contact-support/email-support/"><i class="fa fa-envelope" aria-hidden="true">&nbsp;</i><span style="color:#dadada">电子邮件</span></a></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="lowerheader">
+<div class="theme-showcase" id="lowerheadercontainer" style="padding-left:0px !Important">
+<div style="text-align:center">
+<div class="yesmobile yes1199" id="searchbar-mobile">
+<form action="" id="search-form-mobile" method="get" class="website-search-form">
+<input type="text" class="searchbox searchbox2 yesmobile yes1199" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索">
+<button id="SearchButton"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+</form>
+<div class="search-result" style="z-index:99; position:absolute; width:100%; background-color:#ffffff"></div>
+</div>
+</div>
+<div style="width:100%; margin:0 auto">
+<header class="cd-main-header">
+<ul class="cd-header-buttons">
+<li>
+<a class="cd-nav-trigger" href="#cd-primary-nav">
+<span class="fa fa-bars">&nbsp;</span>
+</a>
+</li>
+</ul>
+
+</header>
+<div class="header-m-bkgd">
+<div class="container">
+<ul class="lowerheadernav pw">
+<li class="button-dropdown cbutton-dropdown country-header">
+<div style="line-height:13px;">
+<span style="color:white; font-size:10px; padding-left: 29px;font-weight:lighter">选择国家或地区</span>
+<a href="javascript:void(0)" class="dropdown-toggle country-arrow-link" id="countrylink">
+<span id="countryname" class="countryname"></span><span><i class="fa fa-chevron-down country-arrow" aria-hidden="true" id="cchevron" style="color:#fff; font-size:11px; position:relative; top:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu cdropdown-menu">
+<li>
+<div id="countryLG" class="country-form">
+<div class="countryContent">
+<p>我们已将您所在国家/地区设置为 <strong>China</strong></p>
+<span id="countryErrorMessage">
+<p>您可在任意时间修改这个选项，但是如果改变所在国家/地区，您购物车中的产品，清单，或者报价有可能会被清空。</p>
+</span>
+</div>
+<p>
+<strong>请选择您的国家/地区
+</strong>
+</p>
+<form name="countryForm" onsubmit="return false;">
+<input name="referrer" value="/knowledge-center/industry-expertise/advanced-diagnostics/eye/" type="hidden" />
+<input name="ga" value="" type="hidden" />
+<select id="countryId" name="countryId" style="width:216px;"><option value="13">Australia (AUD) </option>
+<option selected="selected" value="286">China (RMB) </option>
+<option value="335">European Union (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="110">Japan (JPY) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="0">---------------</option>
+<option value="338">Aland Islands (GBP) </option>
+<option value="278">Albania (EUR) </option>
+<option value="3">Algeria (EUR) </option>
+<option value="5">Andorra (EUR) </option>
+<option value="290">Angola (EUR) </option>
+<option value="9">Antigua and Barbuda (USD) </option>
+<option value="10">Argentina (USD) </option>
+<option value="287">Armenia (EUR) </option>
+<option value="13">Australia (AUD) </option>
+<option value="14">Austria (EUR) </option>
+<option value="288">Azerbaijan (EUR) </option>
+<option value="16">Bahamas (USD) </option>
+<option value="17">Bahrain (EUR) </option>
+<option value="18">Bangladesh (SGD) </option>
+<option value="19">Barbados (USD) </option>
+<option value="279">Belarus (EUR) </option>
+<option value="21">Belgium (EUR) </option>
+<option value="22">Belize (USD) </option>
+<option value="23">Benin (EUR) </option>
+<option value="24">Bermuda (USD) </option>
+<option value="25">Bhutan (SGD) </option>
+<option value="26">Bolivia (USD) </option>
+<option value="318">Bosnia and Herzegovina (EUR) </option>
+<option value="28">Botswana (EUR) </option>
+<option value="30">Brazil (USD) </option>
+<option value="32">Brunei Darussalam (SGD) </option>
+<option value="33">Bulgaria (EUR) </option>
+<option value="34">Burkina Faso (EUR) </option>
+<option value="291">Burma (SGD) </option>
+<option value="36">Burundi (EUR) </option>
+<option value="292">Cambodia (SGD) </option>
+<option value="38">Cameroon (EUR) </option>
+<option value="39">Canada (USD) </option>
+<option value="320">Canary Islands (Spain) (EUR) </option>
+<option value="40">Cape Verde (EUR) </option>
+<option value="42">Central African Republic (EUR) </option>
+<option value="43">Chad (EUR) </option>
+<option value="44">Chile (USD) </option>
+<option value="286">China (RMB) </option>
+<option value="48">Colombia (USD) </option>
+<option value="49">Comoros (EUR) </option>
+<option value="54">Costa Rica (USD) </option>
+<option value="281">Croatia (EUR) </option>
+<option value="293">Cyprus (EUR) </option>
+<option value="58">Czech Republic (EUR) </option>
+<option value="59">Denmark (EUR) </option>
+<option value="60">Djibouti (EUR) </option>
+<option value="61">Dominica (USD) </option>
+<option value="62">Dominican Republic (USD) </option>
+<option value="327">East Timor (USD) </option>
+<option value="64">Ecuador (USD) </option>
+<option value="65">Egypt (EUR) </option>
+<option value="66">El Salvador (USD) </option>
+<option value="322">Equatorial Guinea (EUR) </option>
+<option value="295">Eritrea (EUR) </option>
+<option value="71">Estonia (EUR) </option>
+<option value="296">Ethiopia (EUR) </option>
+<option value="335">European Union (EUR) </option>
+<option value="339">Falkland Islands (GBP) </option>
+<option value="75">Fiji (SGD) </option>
+<option value="76">Finland (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="78">French Guiana (USD) </option>
+<option value="81">Gabon (EUR) </option>
+<option value="82">Gambia (EUR) </option>
+<option value="83">Georgia (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="85">Ghana (EUR) </option>
+<option value="86">Gibraltar (EUR) </option>
+<option value="88">Greece (EUR) </option>
+<option value="89">Greenland (USD) </option>
+<option value="90">Grenada (USD) </option>
+<option value="93">Guatemala (USD) </option>
+<option value="337">Guernsey (UK) (GBP) </option>
+<option value="94">Guinea (EUR) </option>
+<option value="95">Guinea-Bissau (EUR) </option>
+<option value="96">Guyana (USD) </option>
+<option value="297">Haiti (USD) </option>
+<option value="100">Honduras (USD) </option>
+<option value="101">Hong Kong (SGD) </option>
+<option value="102">Hungary (EUR) </option>
+<option value="103">Iceland (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="298">Indonesia (SGD) </option>
+<option value="106">Ireland (EUR) </option>
+<option value="107">Israel (USD) </option>
+<option value="108">Italy (EUR) </option>
+<option value="109">Jamaica (USD) </option>
+<option value="110">Japan (JPY) </option>
+<option value="336">Jersey (UK) (GBP) </option>
+<option value="111">Jordan (EUR) </option>
+<option value="112">Kazakhstan (EUR) </option>
+<option value="113">Kenya (EUR) </option>
+<option value="114">Kiribati (SGD) </option>
+<option value="342">Kosovo (EUR) </option>
+<option value="118">Kuwait (EUR) </option>
+<option value="119">Kyrgyzstan (EUR) </option>
+<option value="299">Laos (SGD) </option>
+<option value="121">Latvia (EUR) </option>
+<option value="123">Lesotho (EUR) </option>
+<option value="125">Liechtenstein (EUR) </option>
+<option value="126">Lithuania (EUR) </option>
+<option value="127">Luxembourg (EUR) </option>
+<option value="301">Macau (SGD) </option>
+<option value="282">Macedonia (EUR) </option>
+<option value="130">Madagascar (EUR) </option>
+<option value="131">Malawi (EUR) </option>
+<option value="132">Malaysia (SGD) </option>
+<option value="133">Maldives (SGD) </option>
+<option value="134">Mali (EUR) </option>
+<option value="135">Malta (EUR) </option>
+<option value="138">Mauritania (EUR) </option>
+<option value="139">Mauritius (EUR) </option>
+<option value="141">Mexico (USD) </option>
+<option value="142">Micronesia (SGD) </option>
+<option value="144">Moldova (EUR) </option>
+<option value="146">Monaco (EUR) </option>
+<option value="312">Mongolia (SGD) </option>
+<option value="283">Montenegro (EUR) </option>
+<option value="149">Morocco (EUR) </option>
+<option value="150">Mozambique (EUR) </option>
+<option value="152">Namibia (EUR) </option>
+<option value="153">Nauru (SGD) </option>
+<option value="154">Nepal (SGD) </option>
+<option value="155">Netherlands (EUR) </option>
+<option value="157">New Caledonia (SGD) </option>
+<option value="158">New Zealand (SGD) </option>
+<option value="159">Nicaragua (USD) </option>
+<option value="160">Niger (EUR) </option>
+<option value="302">Nigeria (EUR) </option>
+<option value="319">North Ireland (UK) (GBP) </option>
+<option value="166">Norway (EUR) </option>
+<option value="167">Oman (EUR) </option>
+<option value="303">Pakistan (SGD) </option>
+<option value="169">Palau (SGD) </option>
+<option value="340">Palestine (GBP) </option>
+<option value="170">Panama (USD) </option>
+<option value="171">Papua New Guinea (SGD) </option>
+<option value="172">Paraguay (USD) </option>
+<option value="173">Peru (USD) </option>
+<option value="174">Philippines (SGD) </option>
+<option value="176">Poland (EUR) </option>
+<option value="177">Portugal (EUR) </option>
+<option value="179">Qatar (EUR) </option>
+<option value="313">Republic of the Congo (EUR) </option>
+<option value="180">Reunion (EUR) </option>
+<option value="181">Romania (EUR) </option>
+<option value="182">Russia (EUR) </option>
+<option value="304">Rwanda (EUR) </option>
+<option value="185">Saint Kitts and Nevis (USD) </option>
+<option value="186">Saint Lucia (USD) </option>
+<option value="187">Saint Vincent and the Grenadines (USD) </option>
+<option value="188">Samoa (SGD) </option>
+<option value="189">San Marino (EUR) </option>
+<option value="190">Sao Tome and Principe (EUR) </option>
+<option value="191">Saudi Arabia (EUR) </option>
+<option value="193">Senegal (EUR) </option>
+<option value="280">Serbia (EUR) </option>
+<option value="194">Seychelles (EUR) </option>
+<option value="305">Sierra Leone (EUR) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="197">Slovakia (EUR) </option>
+<option value="289">Slovenia (EUR) </option>
+<option value="199">Solomon Islands (SGD) </option>
+<option value="201">South Africa (EUR) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="332">South Sudan (EUR) </option>
+<option value="204">Spain (EUR) </option>
+<option value="205">Sri Lanka (SGD) </option>
+<option value="208">Suriname (USD) </option>
+<option value="210">Swaziland (EUR) </option>
+<option value="211">Sweden (EUR) </option>
+<option value="212">Switzerland (EUR) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="284">Tajikistan (EUR) </option>
+<option value="215">Tanzania (EUR) </option>
+<option value="216">Thailand (SGD) </option>
+<option value="217">Togo (EUR) </option>
+<option value="219">Tonga (SGD) </option>
+<option value="220">Trinidad and Tobago (USD) </option>
+<option value="222">Tunisia (EUR) </option>
+<option value="223">Turkey (EUR) </option>
+<option value="224">Turkmenistan (EUR) </option>
+<option value="226">Tuvalu (SGD) </option>
+<option value="228">Uganda (EUR) </option>
+<option value="229">Ukraine (EUR) </option>
+<option value="230">United Arab Emirates (EUR) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="234">Uruguay (USD) </option>
+<option value="235">Uzbekistan (EUR) </option>
+<option value="236">Vanuatu (SGD) </option>
+<option value="285">Vatican City (EUR) </option>
+<option value="237">Venezuela (USD) </option>
+<option value="307">Vietnam (SGD) </option>
+<option value="341">Western Sahara (GBP) </option>
+<option value="309">Yemen (EUR) </option>
+<option value="246">Zambia (EUR) </option>
+</select>
+<input type="submit" class="btn-other mshippmentbtn" name="countrySubmit" value="提交" style="margin-top:8px; width:98%" />
+</form>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown abutton-dropdown no1199 nomobile">
+<div style="line-height:13px;">
+<span id="helloFirstName" style="color:white; font-size:10px; padding-left:8px;font-weight:lighter"><span></span>，您好！</span>
+<a href="javascript:void(0)" class="dropdown-toggle myaccount-link" id="accountlink">
+我的帐户 <span><i class="fa fa-chevron-down myaccount-arrow" id="achevron" aria-hidden="true" style="color:#fff; font-size:11px; position:relative; top:-2px; margin-left:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu adropdown-menu">
+<li>
+<div style="display:none" id="MyAccountLogin">
+<a href="/my-account/" rel="nofollow" style="text-decoration: none !important;"><div style="width:100%" class="btn-other logout"> 登陆</div></a>
+<div style="text-align:center; padding-top:15px">新用户？ <a href="/my-account/createaccount">免费注册.</a></div>
+</div>
+<div id="MyAccountLogout" style="display:none">
+<h3 id="myaccountwelcome" style="display:none; margin-top:0px; font-weight:normal !important">欢迎 <span></span>！</h3>
+<span id="myaccountpadding" style="display:none"></span>
+<p>
+<strong>我的帐户</strong><br />
+<a href="/my-account/" rel="nofollow">账户概览</a>
+</p>
+<p>
+<strong>我的档案</strong><br />
+<a href="/profile/" rel="nofollow">更新我的档案</a>
+</p>
+<p>
+<strong>付款和运输</strong><br />
+<a href="/address-book" rel="nofollow">地址簿</a>,
+<a href="/tax-certificate/" rel="nofollow">缴税证明</a>
+</p>
+<p>
+<strong>网上订单</strong><br />
+<a href="/order-history/" rel="nofollow">浏览历史订单</a>
+</p>
+<p>
+<strong>购物车</strong><br />
+<a href="/saved-list" rel="nofollow">移入收藏夹</a>
+</p>
+<div style="width:100%" class="btn-other logout">
+<a href="/my-account/logout/?ReturnUrl=%2fknowledge-center%2findustry-expertise%2fadvanced-diagnostics%2feye%2f" rel="nofollow">退出登录</a>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown no1199 nomobile" style="position: relative;">
+<a href="javascript:void(0)" class="dropdown-toggle">
+<div id="cartshiftfull">
+<div id="miniCartClick" class="miniCartClick">
+<div style="width: auto; height: 30px; float: left; padding-top: 5px;">
+<i class="fa fa-shopping-cart cartImg" aria-hidden="true"></i>
+<span id="cartCount" class="miniCartCount">&nbsp;&nbsp;</span>
+</div>
+</div>
+</div>
+</a>
+<ul class="dropdown-menu" style="left: -150px; top: 34px; background: none;width: 0px; height: 0px;">
+<li>
+<div id="container-checkoutminicart" style="right: 233px; display:none"></div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="cd-nav container">
+<ul id="cd-primary-nav" class="cd-primary-nav is-fixed mm">
+
+<li class="has-children" style="cursor:pointer">
+<a id="productsTab" onclick="ToggleMenuTab('products')" data-tab-value="products">产品</a>
+<div id="mobileMenu-products"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="capabilitiesTab" onclick="ToggleMenuTab('capabilities')" data-tab-value="capabilities">能力</a>
+<div id="mobileMenu-capabilities"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="knowledge-centerTab" onclick="ToggleMenuTab('knowledge-center')" data-tab-value="knowledge-center">资源库</a>
+<div id="mobileMenu-knowledge-center"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="companyTab" onclick="ToggleMenuTab('company')" data-tab-value="company">公司</a>
+<div id="mobileMenu-company"></div>
+</li>
+<li><a id="contactTab" href="/contact-support/" data-tab-value="contact">联系我们</a></li>
+<li class="displayyes-mm is-fixed"><a href="/my-account/"><span class="fa fa-user">&nbsp;</span> My Account</a></li>
+<li class="displayyes-mm is-fixed"><a href="/cart/"><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;</i> Cart</a></li>
+</ul>
+</div><div class="cd-overlay">&nbsp;</div>
+<div class="cd-main-content">
+<div id="MenuContentWindow" class="cd-primary-nav is-fixed mm"></div>
+</div>
+<script>
+
+    function ToggleMenuTab(tabValue) {
+  
+
+      
+
+        var linkId = tabValue + "Tab";
+        var contentWindow = "";
+        if (window.innerWidth > 1198) {
+            contentWindow = "#MenuContentWindow"
+        } else { contentWindow = "#mobileMenu-" + tabValue }
+
+        if ($(contentWindow).is(":visible") && $(contentWindow).val() == tabValue) {
+            $(contentWindow).hide();
+            $("#" + linkId).removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+            $('.cd-overlay').removeClass('is-visible');
+        }
+        else {
+            MegaMenuWindow("/mega-menu/"+tabValue, tabValue, contentWindow);
+        }
+    }
+
+    function MegaMenuWindow(url, tabValue, contentWindow) {
+    var linkId = tabValue + "Tab"
+        var newUrl = url.replace(' ', '');
+        $(contentWindow).load(newUrl, function () {
+
+            $(contentWindow).val(tabValue);
+            $("#" + linkId).addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+            $(".cd-secondary-nav").removeClass('is-hidden');
+            $("#"+linkId).parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+            $(contentWindow).show();
+            $('.cd-overlay').addClass('is-visible');
+            insertMegaMenuScript();
+            if (window.innerWidth < 1199) {
+                if ($(".megaMenuContainer").hasClass("container")) {
+                    $(".megaMenuContainer").removeClass("container")
+                    $(".megaMenuContainer").removeClass("top-navigation")
+                }
+            }
+        });
+    }
+    function insertMegaMenuScript() {
+
+        var MqL = 1200;
+        //episerverCode
+        if (window.innerWidth < 1199) {
+            if ($(".megaMenuContainer").hasClass("container")) {
+                $(".megaMenuContainer").removeClass("container")
+                $(".megaMenuContainer").removeClass("top-navigation")
+            }
+            
+            $('ul.cd-secondary-nav  li.has-children a').click(function (event) {
+                if (event.target.parentElement.className.includes('has-children')) { event.preventDefault(); }
+              
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                }
+            });
+
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                if ($(this).parent('ul').hasClass('cd-secondary-nav')) {
+                    $("#cd-primary-nav").removeClass('moves-out');
+                    $('ul.cd-secondary-nav').addClass('is-hidden');
+                    $("#productsTab").val("none");
+                    $("#productsTab").removeClass("selected");
+                    $("#capabilitiesTab").val("none");
+                    $("#capabilitiesTab").removeClass("selected");
+                    $("#knowledge-centerTab").val("none");
+                    $("#knowledge").removeClass("selected");
+                    $("#companyTab").val("none");
+                    $("#companyTab").removeClass("selected");
+                    $("[id^=mobileMenu]").css("display", "none");
+                }
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+        else {
+
+
+            $('ul.cd-secondary-nav > li.has-children > ul.is-hidden > li.has-children').children('a').on('click', function (event) {
+                if (!checkWindowWidth()) event.preventDefault();
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                    $('.cd-overlay').removeClass('is-visible');
+                }
+                toggleSearch('close');
+            });
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+
+
+        function checkWindowWidth() {
+            //check window width (scrollbar included)
+            var e = window,
+                a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            if (e[a + 'Width'] >= MqL) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function toggleSearch(type) {
+            if (type == "close") {
+                //close search 
+                $('.cd-search').removeClass('is-visible');
+                $('.cd-search-trigger').removeClass('search-is-visible');
+                $('.cd-overlay').removeClass('search-is-visible');
+            } else {
+                //toggle search visibility
+                $('.cd-search').toggleClass('is-visible');
+                $('.cd-search-trigger').toggleClass('search-is-visible');
+                $('.cd-overlay').toggleClass('search-is-visible');
+                if ($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+                ($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible');
+            }
+        }
+    };
+</script>
+</div>
+</div>
+</div>
+<div class="respd" id="productCompareToolbar">
+<div class="col-md-12 row">
+</div>
+</div>
+<div id="alertBanners">
+<div class="alert alert-warning container" id="addToCartAlert" style="display:none; z-index: 99999;">
+<span id="addtoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addOrderToCartAlert" style="display:none; z-index: 99999;">
+订单号 <span id="addOrdertoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addAllToCartAlert" style="display:none; z-index: 99999;">
+All items have been added to your cart.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addToCompareList" style="display:none; z-index: 99999;">
+<span id="addtoCompareAlertContent"></span> has been added to your compare list.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+</div>
+<div class="container" id="MainBody">
+<div>
+</div>
+<div class="col-lg-12 col-xs-12">
+<div class="row equal-height"><div class="block htmlblock full span12">
+<span><div class="clearfix nomobile"><a href="/knowledge-center/industry-expertise/advanced-diagnostics/"><img alt="" src="/contentassets/9d7d4540d3b74c139aaca2000e21a075/top-area-cn.jpg" width="100%" /></a></div>
+<div class="clearfix nomobile" style="background-color: #fa5306;">
+<div class="buyPromo" onclick="location.href='/knowledge-center/industry-expertise/advanced-diagnostics/#blood'"><a style="color: #fff; padding-top: 0px; position: relative; top: 7px; font-size: 18px; cursor: pointer;" href="/knowledge-center/industry-expertise/advanced-diagnostics/#blood">血液</a></div>
+<div class="buyPromo2" onclick="location.href='/knowledge-center/industry-expertise/advanced-diagnostics/brain/'"><a style="color: #fff; padding-top: 0px; position: relative; top: 7px; font-size: 18px; cursor: pointer;" href="/knowledge-center/industry-expertise/advanced-diagnostics/brain/">大脑</a></div>
+<div class="buyPromo3"><span style="color: #fff; padding-top: 0px; position: relative; top: 7px; font-size: 18px; cursor: pointer;">眼睛</span><br />
+<div class="arrow-down">&nbsp;</div>
+</div>
+</div>
+<div class="clearfix">
+<div id="eye">
+<div class="container" style="margin-bottom: 75px;">
+<h1 style="color: #808184; font-size: 125px !important; margin: 0px; padding: 0px; position: relative;">眼睛</h1>
+<h2 style="margin-top: -30px; color: #fff;">光学和眼部诊断的发展</h2>
+<p style="color: #dadada;">眼睛是人体最强大的器官之一。随着科研级光学系统和便携式护理设备的发展，医疗技术在不断进步，某些健康问题，如失明，潜在的遗传病或糖尿病视网膜病变都可以被检测和治疗了。爱特蒙特光学®<a style="text-decoration: underline !important; color: #fff;" href="/optics/optical-lenses/aspheric-lenses/precision-uv-fused-silica-aspheric-lenses/2886/">非球面透镜</a>和<a style="text-decoration: underline !important; color: #fff;" href="/optics/optical-lenses/achromatic-lenses/vis-0-coated-achromatic-lenses/2684/">消色差透镜</a>常用于光学设备中，可以对眼睛及其所有细胞，层结构和神经进行成像。非球面透镜的球差校正特性能够帮助我们获得非常高质量的眼睛结构图像，而消色差透镜的色彩校正特性使其在宽带照明光源下拥有高性能。我们的宽带<a style="text-decoration: underline !important; color: #fff;" href="/capabilities/optical-coatings/">增透膜</a>具有宽泛的透射带，适用于各种LED或激光源，覆盖紫外，可见光和近红外波长。增透膜可用于任意光学元件，以获得多模态成像。</p>
+<a class="btn-other" style="position: relative; top: 10px; box-shadow: 4px 3px 4px #585858;" href="#product">查看产品</a></div>
+</div>
+</div>
+<div class="clearfix">
+<div style="background-color: #000;">
+<div class="container" style="margin-top: -85px;"><img alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/apheres-eyev2.png" width="100%" /></div>
+</div>
+</div>
+<div class="clearfix">
+<div class="container containerleftm" style="color: #dadada;">
+<h2 style="color: #fff; margin-bottom: 0px;">眼部疾病</h2>
+<p>以下是通过高级诊断技术检测到的常见眼部疾病。这些疾病的发生可能出于多种原因（如年龄或钝挫伤），而借助于光学行业的发展，它们更容易被检测和治疗。光学行业的进步带动了医疗技术和设备朝着更快速，更便捷，更易于使用的方向发展。</p>
+<div class="clearfix">
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/diabetic-retinopathy.jpg" width="100%" />
+<h3 style="color: #fff;">糖尿病视网膜病变</h3>
+糖尿病引起的<a class="tip" href="javascript:void(0)">视网膜<span>位于眼睛后部的薄膜，内含对光敏感的细胞。这些细胞能够触发从视神经传递到大脑的神经冲动，形成我们的视觉图像。对光敏感的细胞被称为光感受器。</span></a>损伤常常导致失明。占美国所有新失明病例的12％，并且对80％左右的糖尿病患者产生长期影响。</div>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/amd.jpg" width="100%" />
+<h3 style="color: #fff;">AMD</h3>
+老年性黄斑变性，这是一种会导致中心视力模糊或失去视力的医学病症。这种症状是由视网膜黄斑中的<a class="tip" href="javascript:void(0)">光感受器<span>一种在视网膜中发现的神经元，它可以将光转换成我们的大脑能够处理的信号 - 图像。 有两种类型的感光细胞：视杆细胞和视锥细胞，它们共同作用形成我们看到的图像。</span></a>受损而引起的，不过它很少引起完全失明。AMD大大降低了患者看清事物的能力。</div>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/glaucoma.jpg" width="100%" />
+<h3 style="color: #fff;">青光眼</h3>
+这种眼部疾病会造成<a class="tip" href="javascript:void(0)">视神经<span>这种感觉纤维能将视网膜中的光感受器产生的电脉冲传递到大脑中，再由大脑进行处理。</span></a>损伤和视力丧失。因为视力丧失的过程缓慢，导致青光眼往往容易被忽视，从而耽误治疗。这是全球范围内引起人们失明的第二大主因。</div>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/cataract.jpg" width="100%" />
+<h3 style="color: #fff;">白内障</h3>
+眼睛中的<a class="tip" href="javascript:void(0)">晶状体<span>位于虹膜和瞳孔后面的透明而柔软的组织。它有助于将光聚焦到视网膜上，并提供25-35％的眼部聚焦力。晶状体能够改变其弯曲形状从而调整其焦点。</span></a>混浊导致视力丧失。主要与年龄有关，也可能是由钝挫伤或健康状况恶化引起的。白内障导致失明的人数占世界失明人数的一半。</div>
+</div>
+<div class="clearfix" style="text-align: center;"><img style="border: 1px solid #dadada; margin-top: 20px;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/eye-anatomy.png" width="100%" />
+<h5><strong>图1:</strong> 眼部解剖图</h5>
+</div>
+<hr />
+<div class="clearfix" style="margin-bottom: 30px;">
+<h2 style="color: #fff; margin-bottom: 0px;">疾病诊断技术</h2>
+<p>现在，有各种先进的诊断技术可用于治疗眼部疾病。随着光学技术的进步，越来越多的技术和设备不断出现，提高了诊断疾病的准确性和及时性，并为了解和寻找不治之症的治疗方法提供了新的途径。</p>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/lasik.jpg" width="100%" />
+<h3 style="color: #fff;">LASIK</h3>
+激光眼部手术旨在矫正人的视力。LASIK是一种屈光手术，使用激光重塑眼睛角膜来矫正近视和散光，从而提高视力。</div>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/ophthalmology.jpg" width="100%" />
+<h3 style="color: #fff;">眼科</h3>
+是医学的一个分支，致力于研究眼睛的解剖学原理和相关疾病。 眼睛是诊断一些严重疾病的主要指标之一。由于其易于观察并拥有高水平的透射性，眼睛已经成为各种平台和技术（如光学相干断层扫描（OCT））进行非侵入性医学成像的“黄金标准”。</div>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/oct.jpg" width="100%" />
+<h3 style="color: #fff;">OCT</h3>
+光学相干断层扫描（OCT）是一种强大的医学成像技术，利用光线在生物组织中的光学散射，捕捉高分辨率的三维图像。其原理是利用近红外（NIR）光进行干涉测量，有效地穿透生物介质。在采用其他技术时，要权衡深度渗透和分辨率，而OCT通常能够与其他技术相结合，从而获得准确的多模态成像。</div>
+<div class="col-lg-3"><img style="border: 1px solid #dadada;" alt="" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/biometricsv2.jpg" width="100%" />
+<h3 style="color: #fff;">生物计量/虹膜识别</h3>
+自动生物识别是利用数学算法实现个体的虹膜识别。这种形式的生物识别非常可靠，因为人的眼睛图案是因人而异且长期稳定的，可以在很大的距离范围上辨别出来。</div>
+</div>
+</div>
+</div>
+<div style="background-color: #fff;">
+<div class="container containerleftm">
+<h1 id="product" style="margin-top: 40px;">产品亮点</h1>
+<nav class="navbar navbar-default">
+<div class="navbar-collapse collapse">
+<ul class="navcat navbar-nav">
+<li><a href="#aspheres">非球面透镜</a></li>
+<li><a href="#achromats">消色差透镜</a></li>
+<li><a href="#standard">标准单透镜和现货光学件</a></li>
+</ul>
+</div>
+</nav>
+<h2 id="aspheres">非球面透镜</h2>
+<p>非球面透镜的表面轮廓不是球面或柱面，它具有相对透镜中心径向变化的曲率半径。这种透镜最显着的优点是能够校正球面像差并产生高分辨率图像。非球面透镜可用于许多技术，包括OCT，生物识别和LASIK手术。</p>
+<div class="clearfix" style="margin-bottom: 40px;">
+<div class="col-lg-6 col-md-12">
+<div class="mobile100" style="margin: 0 auto; width: 500px;"><img class="mobile100" alt="Comparison of Spherical and Aspheric surface profiles" src="/contentassets/e8d7793c9f20433fac2538d86c5dcf67/fig-3-aaa.gif" />
+<h5><strong>图1:</strong> 球面与非球面的表面轮廓比较</h5>
+</div>
+</div>
+<div class="col-lg-6 col-md-12">
+<div class="mobile100" style="margin: 0 auto; width: 550px; margin-top: 50px;"><img class="mobile100" alt="Figure 1: Spherical aberration in a Spherical Lens (left) vs an Aspheric Lens (right)" src="/contentassets/e8d7793c9f20433fac2538d86c5dcf67/fig-1-aaa.gif" />
+<h5><strong>图2:</strong> 带有球差的球透镜，以及几乎没有任何球差的非球面透镜</h5>
+</div>
+</div>
+</div>
+<div class="clearfix" style="margin-bottom: 50px;">
+<div class="col-lg-4 col-sm-12"><a href="/knowledge-center/application-notes/optics/all-about-aspheric-lenses/"><img style="margin-right: 10px; float: left;" alt="Ruggedized Technical Article" src="/globalassets/icons/technical-article.png" height="93" width="75" /></a>
+<p>剖面图，优点和制造方法<br /> <a class="btn-other" href="/knowledge-center/application-notes/optics/all-about-aspheric-lenses/">阅读</a></p>
+</div>
+<div class="col-lg-4 col-md-12 toppadm"><a href="~/link/9d6b366eb9b943b49e54306f4bf5f42e.aspx"><img style="float: left; width: 120px; margin-right: 10px;" alt="Optical Lenses" src="/globalassets/commerce/products/1002013.jpg" /></a>
+<p>TECHSPEC<sup>®</sup> 非球面消色差透镜<br /> <a class="btn-other" href="~/link/9d6b366eb9b943b49e54306f4bf5f42e.aspx">浏览</a></p>
+</div>
+<div class="col-lg-4 col-md-12 toppadm"><a href="~/link/16d7b60fc4e94b978bf87fc3b7168642.aspx"><img style="width: 120px; float: left; margin-right: 10px;" alt="Optical Lenses" src="/globalassets/commerce/products/1006174.jpg" /></a>
+<p>TECHSPEC<sup>®</sup> 塑料混合非球面透镜<br /> <a class="btn-other" href="~/link/16d7b60fc4e94b978bf87fc3b7168642.aspx">浏览</a></p>
+</div>
+</div>
+<hr style="border-top: 1px solid #636363 !important;" />
+<div class="clearfix">
+<h2 id="achromats">消色差透镜</h2>
+<p>消色差透镜由两个光学元件胶合而成，能够限制色差和球面像差对图像的影响。它们被用于各种设备中，用来诊断眼睛的状况，例如眼底相机和适用于全波长光谱的宽带OCT系统。</p>
+<div class="clearfix" style="margin-top: 40px;">
+<div class="mobile100" style="margin: 0 auto; width: 550px;"><img class="mobile100" alt="Polychromatic Imaging using a Plano-Convex Lens versus an Achromatic Lens" src="/contentassets/5630c907f1804c17994c7cd5229c4664/fig-8-ual.gif" />
+<h5><strong>图3:</strong> 平凸透镜和消色差透镜所产生的多色光成像比较</h5>
+</div>
+</div>
+<div class="clearfix" style="margin-top: 20px; margin-bottom: 40px;">
+<div class="col-lg-4 col-md-12"><a href="/knowledge-center/application-notes/optics/why-use-an-achromatic-lens/"><img style="margin-right: 10px; float: left;" alt="Achromats and their Advantages" src="/globalassets/icons/technical-article.png" height="93" width="75" /></a>
+<p>消色差透镜及其优点<br /> <a class="btn-other" href="/knowledge-center/application-notes/optics/why-use-an-achromatic-lens/">阅读</a></p>
+</div>
+<div class="col-lg-4 col-md-12 toppadm"><a href="~/link/91b7dce0dbbb469c8032d03f9ce6cbf4.aspx"><img style="float: left; width: 120px; margin-right: 10px;" alt="TECHSPEC® YAG-BBAR Coated Achromatic Lenses" src="/globalassets/commerce/products/1008359.jpg" /></a>
+<p>TECHSPEC<sup>®</sup> YAG-BBAR镀膜消色差透镜<br /> <a class="btn-other" href="~/link/91b7dce0dbbb469c8032d03f9ce6cbf4.aspx">浏览</a></p>
+</div>
+<div class="col-lg-4 col-md-12 toppadm"><a href="~/link/6d73adafd9004050b8e5b735e12bc983.aspx"><img style="width: 120px; float: left; margin-right: 10px;" alt="TECHSPEC® Mounted Achromatic Lens Pairs" src="/globalassets/commerce/products/1006442.jpg" /></a>
+<p>TECHSPEC<sup>®</sup> 带夹具的消色差透镜组<br /> <a class="btn-other" href="~/link/6d73adafd9004050b8e5b735e12bc983.aspx">浏览</a></p>
+</div>
+</div>
+</div>
+<hr style="border-top: 1px solid #636363 !Important;" />
+<div class="clearfix">
+<h2 id="standard">标准单透镜和现货光学件</h2>
+<p>当您不确定时，请使用标准件！标准或现货光学元件为我们在设计或制造原型时提供了许多便利。与定制光学件不同，标准光学件拥有较低的价格，大量的库存，交货时间短，没有效率问题等等优点。</p>
+<div class="clearfix" style="margin-top: 20px; margin-bottom: 40px;">
+<div class="col-lg-4 col-md-12"><a href="/knowledge-center/application-notes/optics/5-tips-for-designing-with-off-the-shelf-optics/"><img style="margin-right: 10px; float: left;" alt="Ruggedized Technical Article" src="/globalassets/icons/technical-article.png" height="93" width="75" /></a>
+<p>使用现货光学件进行设计<br /> <a class="btn-other" href="/knowledge-center/application-notes/optics/5-tips-for-designing-with-off-the-shelf-optics/">阅读</a></p>
+</div>
+<div class="col-lg-4 col-md-12 toppadm"><a href="~/link/598a20f78d0f4a489b26c586dd58e027.aspx"><img style="float: left; width: 120px; margin-right: 10px;" alt="TECHSPEC® λ/20 PCX Lenses" src="/globalassets/commerce/products/1007914.jpg" /></a>
+<p>TECHSPEC<sup>®</sup> λ/20 平凸透镜<br /> <a class="btn-other" href="~/link/598a20f78d0f4a489b26c586dd58e027.aspx">浏览</a></p>
+</div>
+<div class="col-lg-4 col-md-12 toppadm"><a href="~/link/314e7e36c9084e408721367c4e17f684.aspx"><img style="width: 120px; float: left; margin-right: 10px;" alt="TECHSPEC® Beam Shaping PCX Cylinder Lenses" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/cylinder-family.jpg" /></a>
+<p>TECHSPEC<sup>®</sup> 光束成型PCX柱面透镜<br /> <a class="btn-other" href="~/link/314e7e36c9084e408721367c4e17f684.aspx">浏览</a></p>
+</div>
+</div>
+</div>
+</div>
+<div style="background-color: #dadada; margin-top: 40px;">
+<div class="container containerleftm" style="padding-top: 40px; padding-bottom: 40px;">
+<h1>案例分析</h1>
+<div class="clearfix">
+<div class="mobile100" style="float: right; padding-left: 15px; width: 300px;"><img class="mobile100" alt="3nethra, by Forus Health, plays a critical role in preventing treatable blindness worldwide" src="/contentassets/f9ba78b1cd244a4b8dc3dc0631ffd9b3/eye-machine.jpg" width="300px" />
+<h5><strong>图4:</strong> Fornet Health的3nethra设备在预防可治疗失明方面发挥了关键作用</h5>
+</div>
+<h2>Forus Health</h2>
+<p>Forus Health利用EO专业的光学设计和现货元件来构建3nethra设备，这是一种经济实惠的便携式眼科设备，用于在印度诊断眼部疾病。印度的眼科医生占总人数的比例很低，这种易于使用的设备有助于识别和预防白内障和青光眼，以及糖尿病视网膜病变，屈光和角膜问题。</p>
+<a class="btn-other" style="box-shadow: 4px 3px 4px #585858;" href="/Document/Download/149" target="_blank">下载</a></div>
+<div style="padding-top: 15px; padding-bottom: 15px;"><hr style="border-top: 1px solid #636363 !important;" /></div>
+</div>
+<div class="grey">
+<div id="partner" class="container" style="color: #dadada;">
+<h2>爱特蒙特光学<sup>®</sup>眼部诊断计划</h2>
+<ul>
+<li>设计和制造光学件提高全球的眼部健康状况</li>
+<li>促进光学系统的开发，从而准确诊断世界范围内经常出现且易被忽视的眼部疾病，如黄斑变性，糖尿病视网膜病变，老花眼和青光眼</li>
+<li>为医生，验光师，护士或技术人员提供易于使用的光学设备，快速准确地进行诊断</li>
+<li>研究和开发创新的光学元件，为无法获得现代医疗保健的贫困地区提供护理设备</li>
+<li>推进无创光学诊断技术，以减少视觉疾病对眼睛健康造成的负担</li>
+</ul>
+<div class="col-lg-12"><a class="btn-other" style="margin-top: 20px; display: block; text-align: center; background-color: #fa5301 !important; box-shadow: 4px 3px 4px #585858; color: #fff;" href="/contact-support/"> 联系我们</a></div>
+</div>
+</div>
+</div>
+</div></span>
+</div></div>
+</div>
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+</div>
+<script>
+        function gaDomainSwitch() { return ""; }
+        function trackEvent(category, action, label, lang, url) { if (url != null) { document.location = url; } }
+    </script>
+<script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?db39645f9402caaf9df562b3a6adfa02";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<div id="redirectCountryModal" class="eo-modal-window">
+<div class="eo-modal-content">
+<span class="close">&times;</span>
+<div id="redirectCountryContent"></div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/autocomplete.css?v=637103590040000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/font-awesome.css?v=636996553900000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/custom.kendo.css?v=636851485920000000" media="all" />
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/print.css?v=636969878340000000" media="print">
+<script src="/Assets/javascript/layout-bundled/js.cookie.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/layout-bundled/livechat.js?v=636845459280000000"></script>
+<script src="/Assets/javascript/layout-bundled/kendo.custom.min.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/combine/jquery.cookie.js?v=636645748340000000"></script>
+<script src="/Assets/javascript/layout-bundled/layout.js?v=637298997960000000"></script>
+<script src="/assets/javascript/jquery.lazy.min.js?v=636880606380000000"></script>
+<script>$('.lazy').Lazy()</script>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<script type="text/javascript">
+
+function popupFunction(id) { 
+    var popup= $("#"+id);
+    popup.show('.show');
+}
+function hidePopupFunction(id) { 
+    var popup= $("#"+id);
+    popup.hide('.show');
+}
+
+
+
+</script>
+<style>
+.headertop {
+    background-color: green;
+    height: auto;
+}
+.is-cov {
+background-color: #000!important; height: 40px; border-bottom: 6px solid #4a4949;
+}
+
+.cov1 {
+padding-right: 0px; border-right: 1px solid #4a4949;
+}
+
+.cov2 {
+background-image: url('https://www.edmundoptics.com/contentassets/c9b0ec54bc594de0b332c5f2cf3beddd/imaging-summitv4v.jpg'); background-position: center; /* margin-right: 20px; */
+    background-position-y: -350px; background-position-x: 748px; height: 34px;
+
+}
+
+@media (max-width: 1000px) {
+.is-cov {
+height:auto;
+}
+.cov1 {
+border-right: none;
+}
+.cov2 {
+height: auto;
+padding-bottom:10px;
+}
+}
+
+
+
+a:not([href]):not([tabindex]) {
+
+    color: #fff;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+}
+
+.faqQuestion {
+color:#000 !important
+}
+
+.cd-overlay {
+
+    z-index: 99;
+}
+
+.pagination li a {
+    color: #585858 !Important;
+}
+
+
+.jstree-default .jstree-icon:empty {
+
+    line-height: 31px;
+}
+
+.faqQuestion a {
+color: #0462be !important;
+}
+
+
+.cbutton-dropdown > div > span {
+    padding-left: 12px !important;
+}
+
+.slitherBannerX {
+color:#585858 !important;
+display:none
+}
+
+
+
+
+#CybotCookiebotDialog {
+    border-color: #000000;
+    border-radius: unset;
+    border-top: 1px solid #585858;
+    border-bottom: 1px solid #585858;
+    border-radius: unset;
+    box-shadow: none;
+
+}
+
+
+     #CybotCookiebotDialogBodyButtonAccept{ background-color: #fdcd00; border: 1px solid #fdcd00; cursor: pointer; padding: 5px 10px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: relative; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; background: #fbcc30; color: #000; box-shadow: 3px 3px 4px #585858; -webkit-transition: none; -moz-transition: none; transition: none; border-radius: 5px; font-size:12px; margin-top:-5px}
+
+
+
+
+      #CybotCookiebotDialogBody {max-width:1170px}
+
+
+
+
+      .CookieDeclarationDialogText, .CookieDeclarationIntro, .CookieDeclarationLastUpdated { margin: 0 0 14px 0 }
+
+#CybotCookiebotDialog a, #CybotCookiebotDialog br, #CybotCookiebotDialog div, #CybotCookiebotDialog td {
+    line-height: 1.5;
+}
+
+
+      .CookieDeclarationType { display: block; margin: 12px 0 12px 0; padding:8px 8px 0 8px; border: 1px solid #333333; vertical-align: top; }
+      .CookieDeclarationTypeHeader { font-weight: bold; }
+      .CookieDeclarationTypeDescription { margin: 2px 0 16px 0; }
+      .CookieDeclarationTable { table-layout: fixed; width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 0 18px 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+      .CookieDeclarationTableHeader { font-weight: bold; border-bottom: 1px solid #777777; text-align: left; padding: 4px; }
+      .CookieDeclarationTableHeader[dir='rtl'] { text-align: right; }
+      .CookieDeclarationTableCell { text-overflow: ellipsis; word-wrap: break-word; border-bottom: 1px solid #777777; vertical-align: top; padding: 4px 4px 5px 4px; }
+    #CybotCookiebotDialogBodyContent { padding-top:15px}
+    #CybotCookiebotDialog a, #CybotCookiebotDialog div, 
+
+
+#CybotCookiebotDialogBodyContentControls, #CybotCookiebotDialogBodyContentTitle { font-family: 'Heebo', Helvetica, Arial, sans-serif }
+
+#CybotCookiebotDialogBodyContentTitle {
+
+    padding: 0;
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 100%;
+    color: #ffffff;
+    display: block;
+    position: static;
+    margin: 2px 0 6px;
+}
+
+
+</style>
+<script src="/Assets/javascript/layout-bundled/ChinaTagManager.js?v=637100185060000000"></script>
+<script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#addToCartAlert').addClass('navbar-fixed-top');
+                $('#addAllToCartAlert').addClass('navbar-fixed-top');
+                $('#addToCompareList').addClass('navbar-fixed-top');
+            }
+            if ($(window).scrollTop() < 301) {
+                $('#addToCartAlert').removeClass('navbar-fixed-top');
+                $('#addAllToCartAlert').removeClass('navbar-fixed-top');
+                $('#addToCompareList').removeClass('navbar-fixed-top');
+
+            }
+        });
+    </script>
+<script data-cfasync="false">
+(function(W,i,s,e,P,o,p){W['WisePopsObject']=P;W[P]=W[P]||function(){(W[P].q=W[P].q||[]).push(arguments)},W[P].l=1*new Date();o=i.createElement(s),p=i.getElementsByTagName(s)[0];o.async=1;o.src=e;p.parentNode.insertBefore(o,p)})(window,document,'script','//loader.wisepops.com/get-loader.js?v=1&site=EJXiYx9y4t','wisepops');
+    </script>
+</body>
+</html>

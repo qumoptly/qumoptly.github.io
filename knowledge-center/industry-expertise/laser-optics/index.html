@@ -1,0 +1,3437 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="94ae87c0-4163-47a8-a565-c09ba562fb67" type="text/javascript" data-blockingmode="auto" data-georegions="{'region':'AW,AF,AO,AI,AX,AL,AD,AE,AR,AM,AS,AQ,TF,AG,AU,AZ,BI,BJ,BQ,BF,BD,BH,BS,BA,BL,BY,BZ,BM,BO,BR,BB,BN,BT,BV,BW,CF,CA,CC,CH,CL,CN,CI,CM,CD,CG,CK,CO,KM,CV,CR,CU,CW,CX,KY,DJ,DM,DO,DZ,EC,EG,ER,EH,ET,FJ,FK,FO,FM,GA,GE,GG,GH,GI,GN,GP,GM,GW,GQ,GD,GL,GT,GF,GU,GY,HK,HM,HN,HT,ID,IM,IN,IO,IR,IQ,IL,JM,JE,JO,JP,KZ,KE,KG,KH,KI,KN,KR,KW,LA,LB,LR,LY,LC,LK,LS,MO,MF,MA,MC,MD,MG,MV,MX,MH,MK,MT,MM,ME,MN,MP,MZ,MR,MS,MQ,MU,MW,MY,YT,NA,NC,NE,NF,NG,NI,NU,NP,NR,NZ,OM,PK,PA,PN,PE,PH,PW,PG,PR,KP,PY,PS,PF,QA,RE,RU,RW,SA,SD,SN,SG,GS,SH,SJ,SB,SL,SV,SM,SO,PM,RS,SS,ST,SR,SZ,SX,SC,SY,TC,TD,TG,TH,TJ,TK,TM,TL,TO,TT,TN,TR,TV,TW,TZ,UG,UA,UM,UY,US,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,ZA,ZM,ZW', 'cbid':'c540f2e8-c4fa-49cd-a6c0-b828f88912be'}" data-culture="ZH"></script>
+<script src="/Assets/javascript/layout-bundled/!jquery-3.3.1.js?v=636639559960000000"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a599ef7b57","applicationID":"10142686","transactionName":"bgdUbEMAX0sEBU0NW1dNe25yTmFKCgtWNFVeB3VXXxVDVwkKXBYbUAxSXUk=","queueTime":0,"applicationTime":49,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQcHVVJQGwIAVVVQAQkB",licenseKey:"a599ef7b57",applicationID:"10142686"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="twitter:card" content="summary" />
+<title>激光光学元件 | 爱特蒙特光学</title>
+<meta property="fb:page_id" content="73885277291" />
+<meta name="debug.ipAddress" content="172.104.102.238, 162.158.119.235" />
+<meta http-equiv="content-language" content="zh-CN" />
+
+<link rel="canonical" href="https://www.edmundoptics.cn/knowledge-center/industry-expertise/laser-optics/" />
+
+<link rel="alternate" hreflang="x-default" href="https://www.edmundoptics.com/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="en" href="https://www.edmundoptics.com/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="en-tw" href="https://www.edmundoptics.com.tw/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="en-au" href="https://www.edmundoptics.com.au/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="en-sg" href="https://www.edmundoptics.com.sg/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="ko" href="https://www.edmundoptics.co.kr/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="en-gb" href="https://www.edmundoptics.co.uk/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="fr" href="https://www.edmundoptics.fr/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="es-es" href="https://www.edmundoptics.es/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="de" href="https://www.edmundoptics.de/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="en-eu" href="https://www.edmundoptics.eu/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="zh-cn" href="https://www.edmundoptics.cn/knowledge-center/industry-expertise/laser-optics/" />
+<link rel="alternate" hreflang="ja" href="https://www.edmundoptics.jp/knowledge-center/industry-expertise/laser-optics/" />
+<meta name="title" data-type="string" content="激光光学元件 | 爱特蒙特光学" />
+<meta name="LanguageId" data-type="string" content="12" />
+<meta property="og:title" content="激光光学元件 | 爱特蒙特光学" />
+<meta property="og:url" content="https://www.edmundoptics.cn/knowledge-center/industry-expertise/laser-optics/" />
+<meta property="og:image" content="https://www.edmundoptics.com/globalassets/img/eo-logo-sm.jpg" />
+<meta name="twitter:image" content="https://www.edmundoptics.com/globalassets/img/eo-logo-sm.jpg">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/bootstrap.css?v=636898818760000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/shared.css?v=637298997960000000" media="all">
+<style>
+
+a.anchor {
+    display: block;
+    position: relative;
+    top: -75px;
+    visibility: hidden;
+}
+
+
+.hamburger {
+    background-color: #585858;
+    color: #fff;
+    text-align: center;
+    padding-top: 10px;
+
+}
+
+header.sticky div.hamburger {
+    width: 14%;
+opacity:.8;
+}
+
+@media (max-width: 767px)
+{
+header.sticky div.hamburger {
+    width: 40%;
+opacity:.8;
+}}
+
+
+
+.itemSubManu2 {
+    padding-left: 30px;
+    text-align: left;
+    padding-bottom: 15px;
+}
+
+.itemSubManu2 a:hover  {
+border-bottom:2px solid #fff;
+}
+
+.itemSubManu2 a {
+text-decoration:none !Important;
+  color:#fff
+}
+
+.burger {
+  display: inline-block;
+  border: 0;
+  background: none;
+  outline: 0;
+  padding: 0;
+  cursor: pointer;
+  border-bottom: 4px solid currentColor;
+  width: 28px;
+  transition: border-bottom 1s ease-in-out;
+  -webkit-transition: border-bottom 1s ease-in-out;
+}
+.burger::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+.burger:before {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger:after {
+  content: "";
+  display: block;
+  border-bottom: 4px solid currentColor;
+  width: 100%;
+  margin-bottom: 5px;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.burger-check {
+  display: none;
+}
+
+.burger-check:checked ~ .burger {
+  border-bottom: 4px solid transparent;
+  transition: border-bottom 0.8s ease-in-out;
+  -webkit-transition: border-bottom 0.8s ease-in-out;
+    margin-top: 10px;
+}
+.burger-check:checked ~ .burger:before {
+  transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  -webkit-transform: rotate(-405deg) translateY(1px) translateX(-3px);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+.burger-check:checked ~ .burger:after {
+  transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  -webkit-transform: rotate(405deg) translateY(-4px) translateX(-5px);
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+}
+
+.navigation {
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.burger-check:checked ~ .navigation {
+  max-height: 500px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+
+@media (min-width: 992px)
+{
+.col-md-9 {
+    width: 100% !important;
+    padding-right: 0px;
+}
+
+
+}
+
+.itemSubManu a:hover  {
+border-bottom:2px solid #fff;
+}
+
+
+.manutab::before { 
+text-transform: uppercase;
+color:#fff;
+
+    font-weight: bold;
+font-size:17px;
+position:relative;
+top:8px;
+left:10px;
+}
+
+
+header{
+
+  width: 100%;
+z-index:1;
+transition: all 0.4s ease;
+}
+
+
+
+header.sticky {
+z-index:1;
+top:0px;
+  position: fixed;
+}
+
+
+.itemSubManu {
+    padding-right: 30px;
+    padding: 10px;
+    padding-left: 0px;
+    padding-top: 15px;
+}
+
+.submanutab {
+    background-color: #000000;
+    position: relative;
+    color: #fff;
+    margin-top: -5px;
+height:48px;
+    opacity: .6;
+font-weight:bold;
+    text-transform: uppercase;
+}
+
+
+
+
+
+.headermenubtns a {
+
+    z-index: 99999999;
+    position: relative;
+}
+
+.itemSubManu a {
+text-decoration:none !Important;
+  color:#fff
+}
+
+@media (max-width: 1199px) {
+.submanutab {
+    height:100px!important;
+}}
+
+
+
+@media (max-width: 991px) {
+.submanutab {
+    margin-bottom: 0px;
+padding-left: 30px;
+margin-bottom:-30px !Important;
+    height: 310px !important;
+    border-top: 1px solid #000;
+}
+
+
+
+
+}
+
+
+
+@media (max-width: 992px) {
+.col-md-9 {
+    width: 100% !important;
+    padding-right: 0px;
+}}
+
+@media (max-width: 560px) {
+div.homepagebanner div.clearfix {
+height: 358px !Important;
+}}
+
+
+body > div.container.theme-showcase.noprint {
+    width: 100%;
+}
+
+
+
+
+
+</style>
+<style>
+
+
+.featuredbanner {
+background-image: url(/contentassets/5130fb4ec2ad4333af50a00d491796e7/laser-app.jpg);
+    background-position-x: right;
+    background-position-y: bottom;
+    border-top: 2px solid #fdcd00;
+    background-repeat: no-repeat;
+}
+
+
+
+.featured {
+background-color: #000;
+height: auto;
+padding: 30px;
+padding-top: 15px;
+padding-bottom: 60px;
+}
+
+.featuredh1 {
+    top: 0px;
+    font-size: 25px !important;
+    line-height: 30px;
+    color: #fdcd00;
+    margin-top: 10px;
+}
+
+
+.video-callout a:hover {
+text-decoration:none !important;
+}
+.video-img {
+    border: 1px solid #dadada;
+    margin-bottom: 5px;
+}
+.video-i {
+position: relative;
+    margin-top: -30px;
+    top: -130px;
+    left: 120px;
+    font-size: 40px;
+    color: #fff;
+    opacity: .8;
+    padding: 5px;
+    border-radius: 35px;
+    padding-left: 19px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+
+.video-i:hover {
+opacity:1
+}
+
+#carousel .btn-cart-outline {
+    width: 90%;
+    text-align: center;
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    right: 0;
+    left: 0;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+
+/** LIGHTBOX MARKUP **/
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 5%;
+    width: 90%;
+    height: 100%;
+}
+
+#popupVid {
+    position: fixed;
+    z-index: 999;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    top: 0px;
+    left: 0;
+    background: rgba(0,0,0,0.8);
+    padding-top: 7%;
+    overflow: auto;
+    padding-bottom: 30px;
+}
+
+#popupVid .modal-header {
+    border: 0;
+    position: relative;
+    width: 100%;
+}
+
+.modal-header {
+    min-height: 16.42857143px;
+    padding: 15px;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+#popupVid .close {
+    background: #6c6c6c;
+    color: #fff;
+    font-size: 15px;
+    opacity: 1;
+    position: absolute;
+    right: 35px;
+    width: 38px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 35px;
+    z-index: 999;
+}
+
+
+.item-style {
+background-color: #fff; box-shadow: 3px 4px 12px #9a999a; padding-right: 0px; margin-bottom: 30px; height: 500px; position:relative;
+}
+
+@media (max-width: 1319px) {
+.item-style {
+ height: 530px;
+}
+}
+
+@media (max-width: 1090px) {
+.item-style {
+ height: 550px;
+}
+}
+
+
+
+.carousel-inner {
+    top: -510px;
+    margin-bottom: -510px;
+    left: 6px;
+}
+
+.selection-size {
+width: 30.35%;
+}
+
+@media (max-width: 1090px) {
+.selection-size {
+width: 45%;
+}
+
+
+.item {
+display:block !important;
+}
+
+
+.carousel-inner {
+top:0px !important;
+margin-bottom:0px
+
+}
+
+#carousel .btn-cart-outline {
+    width: 95%;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+}
+
+
+@media (max-width: 682px) {
+.selection-size {
+width: 95%;
+}
+.item-style {
+    height: 650px;
+}
+}
+
+@media (max-width: 682px) {
+.selection-size {
+width: 95%;
+}
+    width: 100%;
+    margin-left: -10px !important;
+}
+}
+
+@media (max-width: 485px) {
+
+.item-style {
+    height: 580px;
+}
+}
+
+
+
+
+.carousel-control.left {
+    background-image: -webkit-linear-gradient(left,rgba(0,0,0,.5) 0%,rgba(0,0,0,.0001) 100%);
+    background-image: -o-linear-gradient(left,rgba(0,0,0,.5) 0%,rgba(0,0,0,.0001) 100%);
+    background-image: -webkit-gradient(linear,left top,right top,from(rgba(0,0,0,.5)),to(rgba(0,0,0,.0001)));
+    background-image: linear-gradient(to right,rgba(0,0,0,.5) 0%,rgba(0,0,0,.0001) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000',endColorstr='#00000000',GradientType=1);
+    background-repeat: repeat-x;
+    float: left;
+    height: 500px;
+   
+    position: relative;
+    padding-top: 20%;
+    font-size: 70px;
+    width: 30px;
+z-index:999999;
+}
+
+
+.carousel-control.right {
+
+    height: 500px;
+ 
+    position: relative;
+    padding-top: 20%;
+    font-size: 70px;
+float:right;
+    width: 30px;
+z-index:999999;
+
+}
+
+
+@media (max-width: 1319px) {
+.carousel-control.right {
+ height: 530px;
+}
+.carousel-control.left {
+ height: 530px;
+}
+.carousel-inner {
+top:-540px;
+left: -4px;
+}
+}
+
+
+@media (max-width: 1090px) {
+.carousel-control.left {
+display:none;
+}
+
+.carousel-control.right {
+display:none;
+}
+}
+
+.carousel-control:hover{
+text-decoration: none !important;
+}
+
+.row-fluid .selection {
+    width: 23.404255319148934%;
+}
+
+.thumbnails {
+    margin-left: -20px;
+    list-style: none;
+}
+
+.thumbnail {
+    display: block;
+    padding: 4px;
+    line-height: 20px;
+    border: 1px solid #ddd;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+    -webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+    -moz-box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+    box-shadow: 0 1px 3px rgba(0,0,0,0.055);
+    -webkit-transition: all .2s ease-in-out;
+    -moz-transition: all .2s ease-in-out;
+    -o-transition: all .2s ease-in-out;
+    transition: all .2s ease-in-out;
+}
+ 
+
+.row-fluid [class*="span"]:first-child {
+    margin-left: 0;
+}
+
+.row-fluid [class*="span"] {
+    display: block;
+    float: left;
+    width: 100%;
+    min-height: 30px;
+    margin-left: 2.127659574468085%;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.thumbnails>li {
+    float: left;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+.selection {
+    width: 220px;
+}
+
+
+
+
+/* Container */
+.container-fluid {
+    background: #FFFFFF;
+    margin: 40px auto 10px;
+    padding: 20px 40px 0;
+    max-width: 960px;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Thumbnail Box */
+.caption h4 {
+    font-size: 1rem;
+    color: #444;
+    }
+    .caption p {
+        font-size: 0.75rem;
+        color: #999;
+        }
+        .btn.btn-mini {
+            font-size: 0.63rem;
+            }
+
+
+/* Carousel Control */
+.control-box {
+    text-align: right;
+    width: 100%;
+    z-index: 99;
+    position: relative;
+    }
+    .carousel-control{
+        background: #666;
+        border: 0px;
+        border-radius: 0px;
+        display: inline-block;
+        font-size: 34px;
+        font-weight: 200;
+        line-height: 18px;
+        opacity: 0.5;
+        padding: 4px 10px 0px;
+        position: static;
+        height: 30px;
+        width: 15px;
+        }
+
+
+
+.resourceCallout {
+
+
+    background-color: #085a78;
+    color: #fff;
+    padding-bottom: 15px;
+    padding-left: 30px;
+    height: 240px;
+
+}
+
+@media (max-width: 1199px)
+{
+
+.resourceCallout {
+    height: auto;
+    padding-top: 15px;
+}}
+
+.btn-new2 {
+    margin-top: 10px;
+    cursor: pointer;
+    padding: 10px 90px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #026bce;
+    color: #fff;
+    box-shadow: 0 6px #dadada;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.btn-new2:hover {
+    box-shadow: 0 4px #dadada;
+    top: 2px;
+text-decoration: none !important;
+}
+
+
+.btn-new {
+margin-top:10px;
+    cursor: pointer;
+    padding: 10px 20px;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 700;
+    position: relative;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+    background: #fbcc30;
+    color: #000;
+    box-shadow: 0 6px #585858;
+    -webkit-transition: none;
+    -moz-transition: none;
+    transition: none;
+    border-radius: 5px;
+margin-bottom: 15px;
+}
+
+.btn-new:hover {
+    box-shadow: 0 4px #585858;
+    top: 2px;
+text-decoration: none !important;
+}
+
+@media (min-width: 1200px)
+{
+.col-lg-2 {
+    width: 14.28%;
+}
+
+}
+
+
+@media (max-width: 1200px)
+{
+
+h1, .h1 {
+padding-left:15px
+}
+}
+
+.appCallout {
+    color: #787878;
+    border-left: 4px solid #ffcd16;
+    padding-left: 10px;
+color: #787878;
+}
+
+
+.vid-container {
+	position: relative;
+	padding-bottom: 52%;
+	padding-top: 30px; 
+	height: 0; 
+}
+
+.vid-container iframe,
+.vid-container object,
+.vid-container embed {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+.vid-list-container {
+	width: 92%;
+	overflow: hidden;
+	margin-top: 20px;
+	margin-left:4%;
+	padding-bottom: 20px;
+}
+
+.vid-list {
+	width: 1344px;
+	position: relative;
+	top:0;
+	left: 0;
+}
+
+.vid-item {
+	display: block;
+	width: 148px;
+	height: 148px;
+	float: left;
+	margin: 0;
+	padding: 10px;
+}
+
+.thumb {
+	overflow:hidden;
+	height: 84px;
+}
+
+.thumb img {
+	width: 100%;
+cursor:pointer;
+}
+
+.vid-item .desc {
+	color: #21A1D2;
+	font-size: 15px;
+cursor:pointer;
+}
+
+
+.arrows {
+	position:relative;
+	width: 100%;
+}
+
+.arrow-left {
+	color: #fff;
+	position: absolute;
+	background: #777;
+	padding: 15px;
+	left: -25px;
+	top: 20px;
+	z-index: 99;
+	cursor: pointer;
+}
+
+.arrow-right {
+	color: #fff;
+	position: absolute;
+	background: #777;
+	padding: 15px;
+	right: -25px;
+	top: 20px;
+	z-index:100;
+	cursor: pointer;
+}
+
+@media (max-width: 624px) {
+	.arrows {
+		position:relative;
+		margin: 0 auto;
+		width:96px;
+	}
+	.arrow-left {
+		left: 0;
+		top: -20px;
+	}
+
+	.arrow-right {
+		right: 0;
+		top: -20px;
+	}
+}
+
+
+@media (max-width: 997px) {
+.rotatorhead {
+margin-left:30px;
+}
+
+p {
+padding-left:15px
+}
+}
+
+.nodisplay {
+display:none
+}
+
+
+@media (max-width: 850px) {
+.nodisplay {
+display:block !Important;
+}
+
+.sizeheight {
+height:190px
+}
+}
+
+
+
+.techCon {
+
+margin-bottom:30px;
+}
+
+.calculator {
+    color: green;
+    font-size: 70px !important;
+    background-color: #fff;
+    margin-right: 0px;
+    width: 65px;
+    border-radius: 15px;
+    margin-bottom: 17px;
+    margin-top: 15px;
+}
+
+
+.fa-r {
+font-size:20px;
+}
+
+.play {
+padding-bottom: 7px;
+    font-size: 70px !important;
+    color: #fff;
+    font-size: 50px !important;
+    background-color: #52cbf5;
+    margin-right: 0px;
+    width: 95px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    padding-top: 7px;
+    padding-left: 20px;
+}
+
+
+.arrow-down2 {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-bottom: 20px solid #fff;
+    margin: auto;
+    top: 28px;
+    position: relative;
+    padding-top: 4px;
+}
+
+
+
+
+.subhead {
+    font-size: 15px!important;
+    line-height: 0px;
+    text-transform: uppercase;
+}
+
+/* added floating buy button*/
+#btn_bar{
+display:none;
+}
+
+.button-fixed {
+height: auto;
+color:#000; 
+font-weight: bold; 
+cursor:pointer; 
+z-index: 200;
+position: fixed;
+background-color:#dadada !important;
+}
+
+
+.button-fixed #buyBtn{
+    background-color: #00adee!important;
+    color: #fff;
+    padding: 0px 15px 0px 15px;
+    font-size: 15px;
+    text-transform: uppercase;
+    font-weight: bolder;
+    border: 0;
+float:right;
+}
+
+@media (max-width: 596px) {
+.button-fixed #buyBtn{
+width:100% !important;
+}
+}
+
+.prodRoll {
+display:block;
+height: auto;
+padding-right:0px;
+margin-bottom:-20px
+
+}
+
+.prodRoll h3 {
+color: #FFFFFF
+
+}
+
+
+
+.prodRoll2 {
+display:block;
+height: 145px;
+padding-right:0px;
+border: 1px solid #dadada;
+
+}
+
+.rollText {
+    color: #000;
+    z-index: 100;
+    position: relative;
+    top: -30px;
+    text-align: center;
+    margin: 0;
+    font-size: 15px !important;
+    font-weight: normal !important;
+}
+
+
+div.prodRoll:hover {
+ opacity: 0.5;
+    filter: alpha(opacity=50);
+}
+
+.boldLaser {
+
+       background-color: #fbcc30;
+    padding: 14px;
+    padding-top: 18px;
+    padding-bottom: 15px;
+    color: #000 !important;
+}
+
+.boldResources {
+
+    color: #0462be!important;
+}
+
+
+
+.btn-laser {
+padding:10px;
+background-color:#585858;
+    text-transform: uppercase;
+    color: #fff;
+font-weight:bolder;
+position:relative;
+top:15px;
+
+}
+
+.techCallout {
+    padding: 20px;
+    text-align: left;
+padding-bottom:20px;
+}
+
+
+.techCallout a {
+color:#efefef;
+text-decoration:underline !important;
+    border-left: 1px solid #ffcd16;
+    padding-left: 10px;
+}
+
+.techCallout2 {
+border: 1px solid #dadada;
+    padding: 20px;
+    text-align: center;
+
+    height: auto;
+padding-bottom:40px;
+    background-color: #fff;
+}
+
+
+
+.lasertab {
+    top: 15px;
+    position: relative;
+    text-transform: uppercase;
+    color: #fff;
+    font-weight: bolder;
+}
+
+a:hover .lasertab  {
+text-decoration:none;
+}
+
+
+
+.resourcestab {
+    top: 18px;
+    position: relative;
+    color: #000;
+font-weight:bolder;
+}
+
+a:hover .resourcestab  {
+text-decoration:none !impotant;
+}
+
+
+#universityList {
+	margin-bottom:15px;
+	
+}
+
+
+#resourcesList {
+	margin-bottom:15px;
+	
+}
+
+
+ul#resourcesList {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+ul#resourcesList li {
+    float: left;
+    text-align: center;
+}
+
+
+
+.tab-inside {
+background-color:#fff;
+}
+
+
+
+.tab-inside1 {
+    background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/manufacturing-lasers.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    padding:40px;
+padding-top:20px;
+height: 1090px;
+}
+
+
+@media (max-width: 1199px) {
+.tab-inside1 {
+ background-image: none;
+height: auto;
+}
+
+.tab-inside2 {
+ background-image: none !Important;
+height: auto !Important;
+}
+
+.tab-inside3 {
+ background-image: none !Important;
+height: auto !Important;
+}
+
+.tab-inside4 {
+ background-image: none !Important;
+height: auto !Important;
+}
+
+.related {
+padding-top:0px !important
+}
+
+.prodRoll2 {
+
+    height: 300px;
+
+}
+
+.featuredbanner {
+background-image:none
+}
+
+}
+
+
+.tab-inside2 {
+font-family: Helvetica,Arial,sans-serif !important;
+padding:40px;
+   background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/medical-lasers-eye.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+color:#fff;
+padding-top:20px;
+height: 750px;
+}
+ 
+.tab-inside3 {
+padding:40px;
+   background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/entertainment-lasers.png);
+    background-repeat: no-repeat;
+    background-position: bottom;
+color:#fff;
+padding-top:20px;
+height: 650px;
+ 
+}
+ 
+.tab-inside4 {
+padding:40px;
+   background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/sensing-lasers-car.png);
+    background-repeat: no-repeat;
+    background-position: center;
+color:#fff;
+padding-top:20px;
+height: 1010px;
+}
+
+
+.blackLink, .blackLink a:hover {color:#000000; text-decoration:none; cursor: text;}   /* mouse over link */
+
+.div.hr {
+color: #fdb813;
+     }
+
+.yellow {
+           border-color: #fdb813;
+        }
+
+.laserManuLi {
+    background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-manufacturing-eo.png);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+@media (max-width: 850px) {
+.laserManuLi {
+    background-image: none !Important
+}
+}
+
+
+.laserSensingLi {
+    background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-sensing-eov2.png);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+@media (max-width: 850px) {
+.laserSensingLi {
+    background-image: none !Important
+}
+}
+
+
+
+.laserMedicalLi {
+    background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/medical-eo-laser-optics.png);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+@media (max-width: 850px) {
+.laserMedicalLi {
+    background-image: none !Important
+}
+
+
+}
+
+
+@media (max-width: 650px) {
+
+
+.prodRoll2 {
+height:250px
+
+}
+
+.featured p {
+width:100% !Important
+}
+}
+
+
+
+.laserEntertainmentLi {
+    background-image: url(/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-entertainment-eo.png);
+    height: 350px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    padding-top: 40px;
+    padding-bottom: 25px;
+}
+
+@media (max-width: 850px) {
+.laserEntertainmentLi {
+    background-image: none !Important
+}
+}
+
+
+
+ul#universityList {
+list-style-type: none;
+margin: 0;
+    padding: 0;
+
+}
+
+ul#universityList li {
+    float:left;
+text-align:center;
+}
+
+.rotator {
+position: relative;
+    list-style: none;
+    text-align: left;
+    padding: 0;
+    color: #fff;
+    padding-left: 25px;
+    font-size: 35px;
+    font-weight: normal;
+    top: -97px;
+    text-transform: uppercase;
+    height: 220px;
+    left: -4px;
+}
+
+.rotator > li {
+  position: absolute;
+
+  opacity: 0;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.rotator > li:first-child {
+  -webkit-animation: loop 15s infinite;
+}
+
+.rotator > li:nth-child(2) {
+  -webkit-animation: opsecond 15s infinite;
+}
+
+.rotator > li:nth-child(3) {
+  -webkit-animation: opthird 15s infinite;
+}
+
+.rotator > li:last-child {
+  -webkit-animation: oplast 15s infinite;
+}
+
+@-webkit-keyframes loop {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  23% { opacity: 1; } 
+  34% { opacity: 0; }
+}
+
+@-webkit-keyframes opsecond {
+  23% { opacity: 0; }
+  34% { opacity: 1; }
+  56% { opacity: 1; }
+  67% { opacity: 0; }
+}
+
+@-webkit-keyframes opthird {
+  56% { opacity: 0; }
+  67% { opacity: 1; }
+  76% { opacity: 1; }
+  87% { opacity: 0; }
+}
+  
+@-webkit-keyframes oplast {
+  76% { opacity: 0; }
+  87% { opacity: 1; }
+  100% { opacity: 1; }
+  0% { opacity: 1; }
+  10% { opacity: 0; }
+}
+
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    border-top: 20px solid #fbcc30;;
+    margin: auto;
+       top: 25px;
+    position: relative;
+    padding-top: 4px;
+}
+
+body > div.container.theme-showcase.noprint {
+    width: 1170px;
+}
+.notimeline {
+display:none;
+}
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+
+}
+
+body > div.container {
+width:100%
+}
+
+
+
+.Tech {
+background-color: #292929 !important; 
+width: 33%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative;
+    border-right: 1px solid #565456;
+}
+
+
+.buyPromo:hover  { background-color:red !important}
+
+
+
+.buyPromo2 {
+background-color: #292929 !important; 
+width: 33%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative
+    border-right: 1px solid #565456;
+}
+
+.buyPromo2:hover  { 
+background-color:#0bc02c !important
+}
+
+
+
+.buyPromo3 {
+background-color: #fa5301 !important; 
+width: 33%; 
+text-align: center; 
+height: 40px; 
+color:#fff; 
+font-weight: bold; 
+cursor:pointer; 
+float:left;
+position:relative
+}
+
+
+@media (max-width: 596px)
+ {
+  .buyPromo {
+width:100%;
+}
+
+  .buyPromo2 {
+width:100%;
+margin-top:0px;
+margin-bottom:40px;
+}
+}
+
+
+div.col-lg-4 img {
+width: 100%;
+magrin: auto;
+}
+
+div.col-lg-4 {
+padding-top: 15px !Important;
+}
+
+@media (min-width: 1200px) {
+div.col-lg-4 img {
+width: auto;
+}
+}
+
+</style>
+
+
+
+<script type="application/ld+json">
+    {"@context": "http://schema.org",
+    "@id":"www.edmundoptics.cn",
+    "@type": "Organization",
+    "name": "Edmund Optics",
+    "url": "www.edmundoptics.cn",
+    "logo": "www.edmundoptics.cn/globalassets/img/eo-logo-google.jpg",
+    "contactPoint": [
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "sales"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "technical support"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "customer support"
+    }
+    ],
+    "sameAs": [
+    "https://www.facebook.com/edmundoptics",
+    "https://twitter.com/edmundoptics",
+    "https://www.youtube.com/edmundoptics",
+    "https://www.linkedin.com/company/edmund-optics/",
+    "https://plus.google.com/+edmundoptics",
+    "https://www.instagram.com/edmund_optics/"
+    ]
+}
+</script>
+
+<meta name="SearchPageType" data-type="string" content="AdditionalResource" />
+</head>
+<body role="document" itemscope itemtype="http://schema.org/WebPage">
+<div class="thetop"></div>
+<script>
+    var liveChatGroupId = 27;
+    var liveChatSalesOrg = '6800';
+    var liveChatLanguageCode = 'CN';
+    var liveChatIsRestricted = false;
+</script>
+<div id="chatInvite" style="display:none;">
+<div class="chat-header">
+有什么可以帮到您？ <a id="chatInviteX" onclick="declineInvite();"><i class="fa fa-times" aria-hidden="true"></i></a>
+</div>
+<div class="row">
+<div class="col-lg-6 chatInviteMessage">工程师接受在线咨询</div>
+<div class="col-lg-6">
+<img data-src="/globalassets/contact-and-support/asia-chat-pic.jpg?w=100" width="100" height="93" class="lazy" />
+</div>
+</div>
+<div style="text-align:center">
+<input type="button" value="发起对话" class="btn-liveChat" onclick="acceptInvite()" style="padding: 10px 20px; font-weight:bold" />
+</div>
+</div>
+<div id="chatOfflineMessage" style="display:none;">
+<a id="chatOfflineX" onclick="closeOfflineWindow();"><i class="fa fa-times" aria-hidden="true"></i></a>
+我们的操作人员目前都在忙碌。请留言，我们将会很快与您联系。
+<div style="text-align:center">
+<a href="/contact-support/email-support/" target="_blank" style="text-align:center" onclick="trackEvent('LiveChat', 'Offline Message', 'Click');">
+<h4 class="btn-liveChat" style="text-align:center">留言</h4>
+</a>
+</div>
+</div>
+<div id="logo-wrap" style="display:none">
+<img data-src="/assets/images/ui/print-screen/print-screen-header.png" width="360" height="50" class="lazy" />
+</div>
+<div class="headertop slitherBannerWrapper" style="display:none">
+<div class="container" style="height:0px">
+<i class="fa fa-times slitherBannerX" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<span><div><div class="block htmlblock  ">
+<span></span>
+</div></div></span>
+</div>
+<div class="headermiddle">
+<div class="container">
+<div>
+<div style="width:100%; margin:0 auto">
+<div class="headerFloat">
+<a href="/" title="Edmund Optics Worldwide" class="eo-header" style="float:left"><img src="/globalassets/homepage/eo_logo.svg" width="283" height="47" /></a>
+<span class="nomobile no1199">
+<span id="searchbar" class="button-dropdown col-lg-7 col-md-6" style="display: inline-block;">
+<form id="WebsiteSearchForm" action="/search" method="post" class="input-group-sh mb-3-sh website-search-form">
+<input id="WebsiteSearchTerm" name="criteria" class="searchbox website-search-form form-control-sh" onkeyup="SearchAutoComplete()" type="text" autocomplete="off" placeholder="关键词或产品编码" />
+<div class="input-group-append-sh"><button class="btn-sh btn-outline-secondary-sh" type="submit"><i class="fa fa-search">&nbsp;</i></button></div>
+</form>
+<div class="search-result dropdown-menu" style="position: absolute; background: white; z-index: 100; padding: 10px; width:98%; display:none"></div>
+</span>
+</span>
+<div style="float:right; padding-top:0px;" class="headerlinks nomobile no1199">
+<p>
+<div style="margin-top:-14px"> <i class="fa fa-phone" aria-hidden="true">&nbsp;</i><span class="headerPhoneNumber"><strong class="CountrySpecificPhoneNumber"></strong></span></div>
+<span class="header-contact2"> <span onclick="openlc()"> <i class="fa fa-comment" aria-hidden="true">&nbsp;</i><span class="chat-h">聊天</span></span>&nbsp;&nbsp; &nbsp; <a href="/contact-support/email-support/"><i class="fa fa-envelope" aria-hidden="true">&nbsp;</i><span style="color:#dadada">电子邮件</span></a></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="lowerheader">
+<div class="theme-showcase" id="lowerheadercontainer" style="padding-left:0px !Important">
+<div style="text-align:center">
+<div class="yesmobile yes1199" id="searchbar-mobile">
+<form action="" id="search-form-mobile" method="get" class="website-search-form">
+<input type="text" class="searchbox searchbox2 yesmobile yes1199" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索">
+<button id="SearchButton"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+</form>
+<div class="search-result" style="z-index:99; position:absolute; width:100%; background-color:#ffffff"></div>
+</div>
+</div>
+<div style="width:100%; margin:0 auto">
+<header class="cd-main-header">
+<ul class="cd-header-buttons">
+<li>
+<a class="cd-nav-trigger" href="#cd-primary-nav">
+<span class="fa fa-bars">&nbsp;</span>
+</a>
+</li>
+</ul>
+
+</header>
+<div class="header-m-bkgd">
+<div class="container">
+<ul class="lowerheadernav pw">
+<li class="button-dropdown cbutton-dropdown country-header">
+<div style="line-height:13px;">
+<span style="color:white; font-size:10px; padding-left: 29px;font-weight:lighter">选择国家或地区</span>
+<a href="javascript:void(0)" class="dropdown-toggle country-arrow-link" id="countrylink">
+<span id="countryname" class="countryname"></span><span><i class="fa fa-chevron-down country-arrow" aria-hidden="true" id="cchevron" style="color:#fff; font-size:11px; position:relative; top:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu cdropdown-menu">
+<li>
+<div id="countryLG" class="country-form">
+<div class="countryContent">
+<p>我们已将您所在国家/地区设置为 <strong>China</strong></p>
+<span id="countryErrorMessage">
+<p>您可在任意时间修改这个选项，但是如果改变所在国家/地区，您购物车中的产品，清单，或者报价有可能会被清空。</p>
+</span>
+</div>
+<p>
+<strong>请选择您的国家/地区
+</strong>
+</p>
+<form name="countryForm" onsubmit="return false;">
+<input name="referrer" value="/knowledge-center/industry-expertise/laser-optics" type="hidden" />
+<input name="ga" value="" type="hidden" />
+<select id="countryId" name="countryId" style="width:216px;"><option value="13">Australia (AUD) </option>
+<option selected="selected" value="286">China (RMB) </option>
+<option value="335">European Union (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="110">Japan (JPY) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="0">---------------</option>
+<option value="338">Aland Islands (GBP) </option>
+<option value="278">Albania (EUR) </option>
+<option value="3">Algeria (EUR) </option>
+<option value="5">Andorra (EUR) </option>
+<option value="290">Angola (EUR) </option>
+<option value="9">Antigua and Barbuda (USD) </option>
+<option value="10">Argentina (USD) </option>
+<option value="287">Armenia (EUR) </option>
+<option value="13">Australia (AUD) </option>
+<option value="14">Austria (EUR) </option>
+<option value="288">Azerbaijan (EUR) </option>
+<option value="16">Bahamas (USD) </option>
+<option value="17">Bahrain (EUR) </option>
+<option value="18">Bangladesh (SGD) </option>
+<option value="19">Barbados (USD) </option>
+<option value="279">Belarus (EUR) </option>
+<option value="21">Belgium (EUR) </option>
+<option value="22">Belize (USD) </option>
+<option value="23">Benin (EUR) </option>
+<option value="24">Bermuda (USD) </option>
+<option value="25">Bhutan (SGD) </option>
+<option value="26">Bolivia (USD) </option>
+<option value="318">Bosnia and Herzegovina (EUR) </option>
+<option value="28">Botswana (EUR) </option>
+<option value="30">Brazil (USD) </option>
+<option value="32">Brunei Darussalam (SGD) </option>
+<option value="33">Bulgaria (EUR) </option>
+<option value="34">Burkina Faso (EUR) </option>
+<option value="291">Burma (SGD) </option>
+<option value="36">Burundi (EUR) </option>
+<option value="292">Cambodia (SGD) </option>
+<option value="38">Cameroon (EUR) </option>
+<option value="39">Canada (USD) </option>
+<option value="320">Canary Islands (Spain) (EUR) </option>
+<option value="40">Cape Verde (EUR) </option>
+<option value="42">Central African Republic (EUR) </option>
+<option value="43">Chad (EUR) </option>
+<option value="44">Chile (USD) </option>
+<option value="286">China (RMB) </option>
+<option value="48">Colombia (USD) </option>
+<option value="49">Comoros (EUR) </option>
+<option value="54">Costa Rica (USD) </option>
+<option value="281">Croatia (EUR) </option>
+<option value="293">Cyprus (EUR) </option>
+<option value="58">Czech Republic (EUR) </option>
+<option value="59">Denmark (EUR) </option>
+<option value="60">Djibouti (EUR) </option>
+<option value="61">Dominica (USD) </option>
+<option value="62">Dominican Republic (USD) </option>
+<option value="327">East Timor (USD) </option>
+<option value="64">Ecuador (USD) </option>
+<option value="65">Egypt (EUR) </option>
+<option value="66">El Salvador (USD) </option>
+<option value="322">Equatorial Guinea (EUR) </option>
+<option value="295">Eritrea (EUR) </option>
+<option value="71">Estonia (EUR) </option>
+<option value="296">Ethiopia (EUR) </option>
+<option value="335">European Union (EUR) </option>
+<option value="339">Falkland Islands (GBP) </option>
+<option value="75">Fiji (SGD) </option>
+<option value="76">Finland (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="78">French Guiana (USD) </option>
+<option value="81">Gabon (EUR) </option>
+<option value="82">Gambia (EUR) </option>
+<option value="83">Georgia (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="85">Ghana (EUR) </option>
+<option value="86">Gibraltar (EUR) </option>
+<option value="88">Greece (EUR) </option>
+<option value="89">Greenland (USD) </option>
+<option value="90">Grenada (USD) </option>
+<option value="93">Guatemala (USD) </option>
+<option value="337">Guernsey (UK) (GBP) </option>
+<option value="94">Guinea (EUR) </option>
+<option value="95">Guinea-Bissau (EUR) </option>
+<option value="96">Guyana (USD) </option>
+<option value="297">Haiti (USD) </option>
+<option value="100">Honduras (USD) </option>
+<option value="101">Hong Kong (SGD) </option>
+<option value="102">Hungary (EUR) </option>
+<option value="103">Iceland (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="298">Indonesia (SGD) </option>
+<option value="106">Ireland (EUR) </option>
+<option value="107">Israel (USD) </option>
+<option value="108">Italy (EUR) </option>
+<option value="109">Jamaica (USD) </option>
+<option value="110">Japan (JPY) </option>
+<option value="336">Jersey (UK) (GBP) </option>
+<option value="111">Jordan (EUR) </option>
+<option value="112">Kazakhstan (EUR) </option>
+<option value="113">Kenya (EUR) </option>
+<option value="114">Kiribati (SGD) </option>
+<option value="342">Kosovo (EUR) </option>
+<option value="118">Kuwait (EUR) </option>
+<option value="119">Kyrgyzstan (EUR) </option>
+<option value="299">Laos (SGD) </option>
+<option value="121">Latvia (EUR) </option>
+<option value="123">Lesotho (EUR) </option>
+<option value="125">Liechtenstein (EUR) </option>
+<option value="126">Lithuania (EUR) </option>
+<option value="127">Luxembourg (EUR) </option>
+<option value="301">Macau (SGD) </option>
+<option value="282">Macedonia (EUR) </option>
+<option value="130">Madagascar (EUR) </option>
+<option value="131">Malawi (EUR) </option>
+<option value="132">Malaysia (SGD) </option>
+<option value="133">Maldives (SGD) </option>
+<option value="134">Mali (EUR) </option>
+<option value="135">Malta (EUR) </option>
+<option value="138">Mauritania (EUR) </option>
+<option value="139">Mauritius (EUR) </option>
+<option value="141">Mexico (USD) </option>
+<option value="142">Micronesia (SGD) </option>
+<option value="144">Moldova (EUR) </option>
+<option value="146">Monaco (EUR) </option>
+<option value="312">Mongolia (SGD) </option>
+<option value="283">Montenegro (EUR) </option>
+<option value="149">Morocco (EUR) </option>
+<option value="150">Mozambique (EUR) </option>
+<option value="152">Namibia (EUR) </option>
+<option value="153">Nauru (SGD) </option>
+<option value="154">Nepal (SGD) </option>
+<option value="155">Netherlands (EUR) </option>
+<option value="157">New Caledonia (SGD) </option>
+<option value="158">New Zealand (SGD) </option>
+<option value="159">Nicaragua (USD) </option>
+<option value="160">Niger (EUR) </option>
+<option value="302">Nigeria (EUR) </option>
+<option value="319">North Ireland (UK) (GBP) </option>
+<option value="166">Norway (EUR) </option>
+<option value="167">Oman (EUR) </option>
+<option value="303">Pakistan (SGD) </option>
+<option value="169">Palau (SGD) </option>
+<option value="340">Palestine (GBP) </option>
+<option value="170">Panama (USD) </option>
+<option value="171">Papua New Guinea (SGD) </option>
+<option value="172">Paraguay (USD) </option>
+<option value="173">Peru (USD) </option>
+<option value="174">Philippines (SGD) </option>
+<option value="176">Poland (EUR) </option>
+<option value="177">Portugal (EUR) </option>
+<option value="179">Qatar (EUR) </option>
+<option value="313">Republic of the Congo (EUR) </option>
+<option value="180">Reunion (EUR) </option>
+<option value="181">Romania (EUR) </option>
+<option value="182">Russia (EUR) </option>
+<option value="304">Rwanda (EUR) </option>
+<option value="185">Saint Kitts and Nevis (USD) </option>
+<option value="186">Saint Lucia (USD) </option>
+<option value="187">Saint Vincent and the Grenadines (USD) </option>
+<option value="188">Samoa (SGD) </option>
+<option value="189">San Marino (EUR) </option>
+<option value="190">Sao Tome and Principe (EUR) </option>
+<option value="191">Saudi Arabia (EUR) </option>
+<option value="193">Senegal (EUR) </option>
+<option value="280">Serbia (EUR) </option>
+<option value="194">Seychelles (EUR) </option>
+<option value="305">Sierra Leone (EUR) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="197">Slovakia (EUR) </option>
+<option value="289">Slovenia (EUR) </option>
+<option value="199">Solomon Islands (SGD) </option>
+<option value="201">South Africa (EUR) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="332">South Sudan (EUR) </option>
+<option value="204">Spain (EUR) </option>
+<option value="205">Sri Lanka (SGD) </option>
+<option value="208">Suriname (USD) </option>
+<option value="210">Swaziland (EUR) </option>
+<option value="211">Sweden (EUR) </option>
+<option value="212">Switzerland (EUR) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="284">Tajikistan (EUR) </option>
+<option value="215">Tanzania (EUR) </option>
+<option value="216">Thailand (SGD) </option>
+<option value="217">Togo (EUR) </option>
+<option value="219">Tonga (SGD) </option>
+<option value="220">Trinidad and Tobago (USD) </option>
+<option value="222">Tunisia (EUR) </option>
+<option value="223">Turkey (EUR) </option>
+<option value="224">Turkmenistan (EUR) </option>
+<option value="226">Tuvalu (SGD) </option>
+<option value="228">Uganda (EUR) </option>
+<option value="229">Ukraine (EUR) </option>
+<option value="230">United Arab Emirates (EUR) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="234">Uruguay (USD) </option>
+<option value="235">Uzbekistan (EUR) </option>
+<option value="236">Vanuatu (SGD) </option>
+<option value="285">Vatican City (EUR) </option>
+<option value="237">Venezuela (USD) </option>
+<option value="307">Vietnam (SGD) </option>
+<option value="341">Western Sahara (GBP) </option>
+<option value="309">Yemen (EUR) </option>
+<option value="246">Zambia (EUR) </option>
+</select>
+<input type="submit" class="btn-other mshippmentbtn" name="countrySubmit" value="提交" style="margin-top:8px; width:98%" />
+</form>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown abutton-dropdown no1199 nomobile">
+<div style="line-height:13px;">
+<span id="helloFirstName" style="color:white; font-size:10px; padding-left:8px;font-weight:lighter"><span></span>，您好！</span>
+<a href="javascript:void(0)" class="dropdown-toggle myaccount-link" id="accountlink">
+我的帐户 <span><i class="fa fa-chevron-down myaccount-arrow" id="achevron" aria-hidden="true" style="color:#fff; font-size:11px; position:relative; top:-2px; margin-left:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu adropdown-menu">
+<li>
+<div style="display:none" id="MyAccountLogin">
+<a href="/my-account/" rel="nofollow" style="text-decoration: none !important;"><div style="width:100%" class="btn-other logout"> 登陆</div></a>
+<div style="text-align:center; padding-top:15px">新用户？ <a href="/my-account/createaccount">免费注册.</a></div>
+</div>
+<div id="MyAccountLogout" style="display:none">
+<h3 id="myaccountwelcome" style="display:none; margin-top:0px; font-weight:normal !important">欢迎 <span></span>！</h3>
+<span id="myaccountpadding" style="display:none"></span>
+<p>
+<strong>我的帐户</strong><br />
+<a href="/my-account/" rel="nofollow">账户概览</a>
+</p>
+<p>
+<strong>我的档案</strong><br />
+<a href="/profile/" rel="nofollow">更新我的档案</a>
+</p>
+<p>
+<strong>付款和运输</strong><br />
+<a href="/address-book" rel="nofollow">地址簿</a>,
+<a href="/tax-certificate/" rel="nofollow">缴税证明</a>
+</p>
+<p>
+<strong>网上订单</strong><br />
+<a href="/order-history/" rel="nofollow">浏览历史订单</a>
+</p>
+<p>
+<strong>购物车</strong><br />
+<a href="/saved-list" rel="nofollow">移入收藏夹</a>
+</p>
+<div style="width:100%" class="btn-other logout">
+<a href="/my-account/logout/?ReturnUrl=%2fknowledge-center%2findustry-expertise%2flaser-optics" rel="nofollow">退出登录</a>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown no1199 nomobile" style="position: relative;">
+<a href="javascript:void(0)" class="dropdown-toggle">
+<div id="cartshiftfull">
+<div id="miniCartClick" class="miniCartClick">
+<div style="width: auto; height: 30px; float: left; padding-top: 5px;">
+<i class="fa fa-shopping-cart cartImg" aria-hidden="true"></i>
+<span id="cartCount" class="miniCartCount">&nbsp;&nbsp;</span>
+</div>
+</div>
+</div>
+</a>
+<ul class="dropdown-menu" style="left: -150px; top: 34px; background: none;width: 0px; height: 0px;">
+<li>
+<div id="container-checkoutminicart" style="right: 233px; display:none"></div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="cd-nav container">
+<ul id="cd-primary-nav" class="cd-primary-nav is-fixed mm">
+
+<li class="has-children" style="cursor:pointer">
+<a id="productsTab" onclick="ToggleMenuTab('products')" data-tab-value="products">产品</a>
+<div id="mobileMenu-products"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="capabilitiesTab" onclick="ToggleMenuTab('capabilities')" data-tab-value="capabilities">能力</a>
+<div id="mobileMenu-capabilities"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="knowledge-centerTab" onclick="ToggleMenuTab('knowledge-center')" data-tab-value="knowledge-center">资源库</a>
+<div id="mobileMenu-knowledge-center"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="companyTab" onclick="ToggleMenuTab('company')" data-tab-value="company">公司</a>
+<div id="mobileMenu-company"></div>
+</li>
+<li><a id="contactTab" href="/contact-support/" data-tab-value="contact">联系我们</a></li>
+<li class="displayyes-mm is-fixed"><a href="/my-account/"><span class="fa fa-user">&nbsp;</span> My Account</a></li>
+<li class="displayyes-mm is-fixed"><a href="/cart/"><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;</i> Cart</a></li>
+</ul>
+</div><div class="cd-overlay">&nbsp;</div>
+<div class="cd-main-content">
+<div id="MenuContentWindow" class="cd-primary-nav is-fixed mm"></div>
+</div>
+<script>
+
+    function ToggleMenuTab(tabValue) {
+  
+
+      
+
+        var linkId = tabValue + "Tab";
+        var contentWindow = "";
+        if (window.innerWidth > 1198) {
+            contentWindow = "#MenuContentWindow"
+        } else { contentWindow = "#mobileMenu-" + tabValue }
+
+        if ($(contentWindow).is(":visible") && $(contentWindow).val() == tabValue) {
+            $(contentWindow).hide();
+            $("#" + linkId).removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+            $('.cd-overlay').removeClass('is-visible');
+        }
+        else {
+            MegaMenuWindow("/mega-menu/"+tabValue, tabValue, contentWindow);
+        }
+    }
+
+    function MegaMenuWindow(url, tabValue, contentWindow) {
+    var linkId = tabValue + "Tab"
+        var newUrl = url.replace(' ', '');
+        $(contentWindow).load(newUrl, function () {
+
+            $(contentWindow).val(tabValue);
+            $("#" + linkId).addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+            $(".cd-secondary-nav").removeClass('is-hidden');
+            $("#"+linkId).parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+            $(contentWindow).show();
+            $('.cd-overlay').addClass('is-visible');
+            insertMegaMenuScript();
+            if (window.innerWidth < 1199) {
+                if ($(".megaMenuContainer").hasClass("container")) {
+                    $(".megaMenuContainer").removeClass("container")
+                    $(".megaMenuContainer").removeClass("top-navigation")
+                }
+            }
+        });
+    }
+    function insertMegaMenuScript() {
+
+        var MqL = 1200;
+        //episerverCode
+        if (window.innerWidth < 1199) {
+            if ($(".megaMenuContainer").hasClass("container")) {
+                $(".megaMenuContainer").removeClass("container")
+                $(".megaMenuContainer").removeClass("top-navigation")
+            }
+            
+            $('ul.cd-secondary-nav  li.has-children a').click(function (event) {
+                if (event.target.parentElement.className.includes('has-children')) { event.preventDefault(); }
+              
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                }
+            });
+
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                if ($(this).parent('ul').hasClass('cd-secondary-nav')) {
+                    $("#cd-primary-nav").removeClass('moves-out');
+                    $('ul.cd-secondary-nav').addClass('is-hidden');
+                    $("#productsTab").val("none");
+                    $("#productsTab").removeClass("selected");
+                    $("#capabilitiesTab").val("none");
+                    $("#capabilitiesTab").removeClass("selected");
+                    $("#knowledge-centerTab").val("none");
+                    $("#knowledge").removeClass("selected");
+                    $("#companyTab").val("none");
+                    $("#companyTab").removeClass("selected");
+                    $("[id^=mobileMenu]").css("display", "none");
+                }
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+        else {
+
+
+            $('ul.cd-secondary-nav > li.has-children > ul.is-hidden > li.has-children').children('a').on('click', function (event) {
+                if (!checkWindowWidth()) event.preventDefault();
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                    $('.cd-overlay').removeClass('is-visible');
+                }
+                toggleSearch('close');
+            });
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+
+
+        function checkWindowWidth() {
+            //check window width (scrollbar included)
+            var e = window,
+                a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            if (e[a + 'Width'] >= MqL) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function toggleSearch(type) {
+            if (type == "close") {
+                //close search 
+                $('.cd-search').removeClass('is-visible');
+                $('.cd-search-trigger').removeClass('search-is-visible');
+                $('.cd-overlay').removeClass('search-is-visible');
+            } else {
+                //toggle search visibility
+                $('.cd-search').toggleClass('is-visible');
+                $('.cd-search-trigger').toggleClass('search-is-visible');
+                $('.cd-overlay').toggleClass('search-is-visible');
+                if ($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+                ($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible');
+            }
+        }
+    };
+</script>
+</div>
+</div>
+</div>
+<div class="respd" id="productCompareToolbar">
+<div class="col-md-12 row">
+</div>
+</div>
+<div id="alertBanners">
+<div class="alert alert-warning container" id="addToCartAlert" style="display:none; z-index: 99999;">
+<span id="addtoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addOrderToCartAlert" style="display:none; z-index: 99999;">
+订单号 <span id="addOrdertoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addAllToCartAlert" style="display:none; z-index: 99999;">
+All items have been added to your cart.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addToCompareList" style="display:none; z-index: 99999;">
+<span id="addtoCompareAlertContent"></span> has been added to your compare list.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+</div>
+<div class="container" id="MainBody">
+<div>
+</div>
+<div class="col-lg-12 col-xs-12">
+<div class="row equal-height"><div class="block htmlblock full span12">
+<span><div class="clearfix">
+<div>
+<div style="background-color: #ffffff; border-bottom: 1px solid #dadada; position: relative; top: -3px;">
+<div class="container"><img alt="Laser Optics" src="/contentassets/33e1c3e96bba42ae98237bc5fcc76266/main-banner-lov2-cn.jpg" width="100%" /></div>
+</div>
+</div>
+</div></span>
+</div><div class="block htmlblock full span12">
+<span><div class="topad"><header>
+<div class="yesmobile yesipad">
+<div class="hamburger"><input id="burger-check" class="burger-check" type="checkbox" /><label class="burger" for="burger-check"></label><nav id="navigation1" class="navigation">
+<div class="itemSubManu2 col-lg-1 col-md-3"><a href="#product">产品</a></div>
+<div class="itemSubManu2 col-lg-2 col-md-3"><a href="#metrology">测量</a></div>
+<div class="itemSubManu2 col-lg-2 col-md-3"><a href="#video">视频</a></div>
+<div class="itemSubManu2 col-lg-2 col-md-3"><a href="#applications">应用</a></div>
+<div class="itemSubManu2 col-lg-2 col-md-3"><a href="#partner">合作</a></div>
+<div class="itemSubManu2 col-lg-2 col-md-3"><a href="#contact">联络</a></div>
+</nav></div>
+</div>
+<div class="clearfix nomobile noipad"><header>
+<div class="submanutab">
+<div class="container">
+<div class="itemSubManu col-lg-2 col-md-2"><a style="color: #fff;" href="#product">产品</a></div>
+<div class="itemSubManu col-lg-2 col-md-2"><a style="color: #fff;" href="#metrology">测量</a></div>
+<div class="itemSubManu col-lg-2 col-md-2"><a style="color: #fff;" href="#video">视频</a></div>
+<div class="itemSubManu col-lg-2 col-md-2"><a style="color: #fff;" href="#applications">应用</a></div>
+<div class="itemSubManu col-lg-2 col-md-2"><a style="color: #fff;" href="#partner">合作</a></div>
+<div class="itemSubManu col-lg-3 col-md-2"><a style="color: #fff;" href="#contact">联络专家</a></div>
+</div>
+</div>
+</header></div>
+</header></div></span>
+</div><div class="block htmlblock full span12">
+<span><div class="container">
+<div class="clearfix" style="margin-top: 30px;">
+<div class="col-lg-6">
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<p><i class="fa fa-check" style="color: green;">&nbsp;</i></p>
+</td>
+<td>
+<p>激光光学元件和组件均自主制造</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<p><i class="fa fa-check" style="color: green;">&nbsp;</i></p>
+</td>
+<td>
+<p>先进的测量设备保证规格的稳定性</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-6">
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<p><i class="fa fa-check" style="color: green;">&nbsp;</i></p>
+</td>
+<td>
+<p>标准产品现货发售可当日出货</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<p><i class="fa fa-check" style="color: green;">&nbsp;</i></p>
+</td>
+<td>
+<p>设计和制造可全套定制并实现批量生产</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+<div class="ipadpd">
+<div class="clearfix">
+<div>
+<div class="container"><a id="metrology" class="anchor"></a>&nbsp;
+<h1 style="margin-top: 0px;">测量: 无法测量就无法制造</h1>
+<a class="carousel-control left" href="#carousel" data-slide="prev">‹</a> <a class="carousel-control right" href="#carousel" data-slide="next">›</a>
+<div id="carousel" class="carousel slide">
+<div class="carousel-inner">
+<div class="item active">
+<ul class="thumbnails">
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="LIDT Testing" src="/contentassets/5130fb4ec2ad4333af50a00d491796e7/laser-damage.png" />
+<div style="padding-left: 15px; padding-bottom: 15px;">
+<h3>激光损伤阈值（LIDT)测试</h3>
+<ul style="padding-left: 15px; padding-top: 10px; color: #585858;">
+<li>激光光学组件出厂前均经内部测试以保证激光损伤阈值 (LIDT)</li>
+<li>高功率 Nd:YAG 激光（1064nm ）与谐波（532nm 和 355nm)</li>
+<li>可提供测试数据</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Cavity Ring-Down Spectroscopy" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/metrology1.jpg" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>光腔衰荡光谱法(CRDS)</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>高精度损耗测量，部件灵敏度以百万计</li>
+<li>已针对普通 Nd:YAG 谐波调谐 - 应要求提供其他波长</li>
+<li>精确量化高反射率和低反射率激光光学元件</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Atomic Force Microscopy (AFM)" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/metrology2.jpg" />
+<div style="padding-left: 15px; padding-bottom: 15px;">
+<h3>原子力显微镜 (AFM)</h3>
+<ul style="padding-left: 15px; padding-top: 10px; color: #585858;">
+<li>表面粗糙度、特征尺寸和位置的高精度表征</li>
+<li>横向分辨率降至 3nm</li>
+<li>垂直分辨率降至 0.1nm</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="item">
+<ul class="thumbnails">
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Differential Interference Contrast (DIC) Microscopy" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/metrology3.jpg" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>差示干涉对比 (DIC) 显微镜</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>透射材料的高灵敏度缺陷检测</li>
+<li>用于查找光学镀膜和基片中的激光损伤</li>
+<li>在 100 倍放大倍率下分析表面</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Interferometry" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/metrology4.jpg" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>干涉测量</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>最高精度透射和反射波前测量结果低至&lt; λ/20</li>
+<li>多种配置，包括拼接、大小光圈以及计算机生成的全息图</li>
+<li>用于量化平面、球面和非球面部件以及光学组件的表面不规则性</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Shack-Hartmann Wavefront Sensors" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/metrology5.jpg" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>Shack-Hartmann 波前传感器</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>在266nm 至 1100nm 下，透射和反射波前测量结果低至 λ/10</li>
+<li>用于评估元件和组件的大动态范围波前变化</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="item">
+<ul class="thumbnails">
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Spectrophotometry" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/metrology6.jpg" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>分光光度法</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>用于描述反射和透射光谱性能的特征</li>
+<li>120nm - 20μm 的大光谱测量范围</li>
+<li>测量大于 OD 7 的截止，以准确表示透射率和截止带</li>
+</ul>
+</div>
+</div>
+</li>
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Interferometry" src="/contentassets/5130fb4ec2ad4333af50a00d491796e7/w-lightv.jpg" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>白光干涉测量</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>准确测量多层超快光学元件的群延迟色散 (GDD)</li>
+<li>250nm 至 2100nm 的超宽带光谱覆盖范围</li>
+<li>0-70°入射角下的 GDD 准确率为 ±5 fs<sup>2</sup></li>
+</ul>
+</div>
+</div>
+</li>
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Coordinate Measuring Machines (CMMs)" src="/contentassets/5130fb4ec2ad4333af50a00d491796e7/machine-met.png" />
+<div style="padding-left: 15px; padding-bottom: 15px;">
+<h3>坐标测量仪(CMM)</h3>
+<ul style="padding-left: 15px; padding-top: 10px; color: #585858;">
+<li>可测量透镜光轴和机械轴之间的对准情况</li>
+<li>TRIOPTICS Opticentric<sup>®</sup> 与 Zeiss Contura G2 坐标测试仪（CMM）</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+
+<div class="item">
+<ul class="thumbnails">
+<li class="col-lg-4 selection-size">
+<div class="item-style"><img style="width: 100%;" alt="Non-Contact 3D Profilometry" src="/contentassets/5130fb4ec2ad4333af50a00d491796e7/non-contrast.png" />
+<div style="padding-left: 15px; padding-right: 15px; padding-bottom: 15px;">
+<h3>非接触式 3D 轮廓测量</h3>
+<ul style="padding-left: 15px; color: #585858;">
+<li>验证精密非球面透镜的表面轮廓</li>
+<li>OptiPro UltraSurf 4X 100 非接触式轮廓测量仪</li>
+</ul>
+</div>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix"><a id="product" class="anchor"></a>&nbsp;
+<div class="container" style="background-color: #ff5705; height: 40px;">
+<h2 style="text-align: center; color: #fff; text-transform: uppercase; top: -17px; position: relative;">产品类别</h2>
+</div>
+</div>
+<div class="clearfix container" style="margin-bottom: 30px;">
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/c/Laser-Mirrors/1216', '_blank')"><img alt="Laser Line Mirrors" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-line-mirrors.jpg" width="100%" />
+<h3 class="rollText">激光<br />反射镜</h3>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/c/laser-windows/757/', '_blank')"><img alt="Laser Windows" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/windows.jpg" width="100%" />
+<h3 class="rollText">激光<br />窗口片</h3>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-lenses/', '_blank')"><img alt="Laser Lenses" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-lensesv2.jpg" width="100%" />
+<h3 class="rollText">激光<br />透镜</h3>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/c/laser-beam-expanders/981/', '_blank')"><img alt="Beam Expanders" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/expanders.jpg" width="100%" />
+<h3 class="rollText">激光扩束镜</h3>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beamsplitters/', '_blank')"><img alt="Beamsplitters" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/beamsplitters.jpg" width="100%" />
+<h3 class="rollText">激光<br />分光镜</h3>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-prisms/', '_blank')"><img alt="Prisms" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/prisms.jpg" width="100%" />
+<h3 class="rollText">激光<br />棱镜</h3>
+</div>
+<div class="col-lg-2 col-md-3 col-sm-6 col-xs-6 prodRoll2" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-polarizers/', '_blank')"><img alt="Laser Polarizers" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-polarizersv2.jpg" width="100%" />
+<h3 class="rollText">激光<br />偏振片</h3>
+</div>
+</div>
+<div style="border-top: 1px solid #dadada;">
+<div class="container" style="margin-top: 30px; margin-bottom: 30px;">
+<div class="respd">
+<h1 style="margin-top: 0px;">技术亮点</h1>
+<div class="col-lg-6">
+<h2>离子束溅射(IBS)镀膜</h2>
+<ul>
+<li>包括针对高反射率激光反射镜的低损耗镀膜</li>
+<li>对镀膜流程实施精密控制以实现高可重复性和精度</li>
+<li>沉积在超精密抛光的基片上可实现百万分之一数量级的散射</li>
+</ul>
+<a class="btn-new" href="/capabilities/optical-coatings/ion-beam-sputtered-coatings/">详细了解此技术</a></div>
+<div class="col-lg-6">
+<h2>Nebular™ 技术</h2>
+<ul>
+<li>纳米结构的增透表面</li>
+<li>亚波长表面结构透过率 &gt;99.8%</li>
+<li>传统增透膜的高功率替代技术</li>
+</ul>
+<a class="btn-new" href="/knowledge-center/webinars/nano-structured-anti-reflective-surfaces-register/">观看有关此技术的在线研讨会</a></div>
+</div>
+</div>
+</div>
+<div class="featured featuredbanner">
+<div class="container">
+<div class="respd">
+<h1 class="featuredh1">《激光光学资源指南》</h1>
+<p style="width: 70%; color: #fff;">《激光光学资源指南》包含集合了 23 个应用说明，涵盖了激光光学的多个核心概念。</p>
+<a class="btn-cart-outline" style="box-shadow: none; background-color: #fff; top: 10px; position: relative;" href="/knowledge-center/application-notes/lasers/laser-optics-resource-guide/">前往查看指南</a></div>
+</div>
+</div>
+<div class="clearfix">
+<div style="background-color: #efefef; border-top: 1px solid #dadada; padding-top: 15px; padding-bottom: 30px; margin-bottom: 30px;">
+<div class="container"><a id="video" class="anchor"></a>&nbsp;
+<h1>激光实验室视频系列</h1>
+<p>激光光学元件实验室系列视频涵盖包括产品类型、规格、镀膜技术等在内的激光光学元件概念。每个视频都深入研究激光光学元件的特定要素，让您拓宽知识范围并针对您的应用选择最好的产品。</p>
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="video-callout">
+<p><a style="font-weight: 100 !important; font-size: 18px !important;" onclick="toggleVideo('true');" href="javascript:;"><img class="video-img" alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/stefaan.jpg" /><br />预告<br /><i class="fa fa-play video-i">&nbsp;</i></a></p>
+<div id="popupVid" class="popup" style="display: none; position: fixed; z-index: 99999; width: 100%; height: 100%; text-align: center; top: 0px; left: 0; background: rgba(0,0,0,0.8); padding-top: 7%; overflow: auto;">
+<div class="container">
+<div class="popupmodal-header"><a class="popupclose" onclick="toggleVideo('hide');" href="javascript:;">X</a></div>
+<div class="video-container2"><iframe src="https://player.youku.com/embed/XNDA3NzU5MTExMg==?rel=0" height="315" width="500"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="video-callout">
+<p><a style="font-weight: 100 !important; font-size: 18px !important;" onclick="toggleVideo1('true');" href="javascript:;"><img class="video-img" alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-optics-lab1.jpg" /><br />激光光学实验室介绍<br /><i class="fa fa-play video-i">&nbsp;</i></a></p>
+<div id="popupVid1" class="popup" style="display: none; position: fixed; z-index: 99999; width: 100%; height: 100%; text-align: center; top: 0px; left: 0; background: rgba(0,0,0,0.8); padding-top: 7%; overflow: auto;">
+<div class="container">
+<div class="popupmodal-header"><a class="popupclose" onclick="toggleVideo1('hide');" href="javascript:;">X</a></div>
+<div class="video-container2"><iframe src="https://player.youku.com/embed/XNDA3NzU5NDYyNA==?rel=0" height="315" width="500"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="video-callout">
+<p><a style="font-weight: 100 !important; font-size: 18px !important;" onclick="toggleVideo2('true');" href="javascript:;"><img class="video-img" alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-optics-lab2.jpg" /><br />背向反射<br /><i class="fa fa-play video-i">&nbsp;</i></a></p>
+<div id="popupVid2" class="popup" style="display: none; position: fixed; z-index: 99999; width: 100%; height: 100%; text-align: center; top: 0px; left: 0; background: rgba(0,0,0,0.8); padding-top: 7%; overflow: auto;">
+<div class="container">
+<div class="popupmodal-header"><a class="popupclose" onclick="toggleVideo2('hide');" href="javascript:;">X</a></div>
+<div class="video-container2"><iframe src="https://player.youku.com/embed/XNDA3NzU5NzQ0NA==?rel=0" height="315" width="500"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="video-callout">
+<p><a style="font-weight: 100 !important; font-size: 18px !important;" onclick="toggleVideo3('true');" href="javascript:;"><img class="video-img" alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-optics-lab3.jpg" /><br />扩束镜的配置及设计<br /><i class="fa fa-play video-i">&nbsp;</i></a></p>
+<div id="popupVid3" class="popup" style="display: none; position: fixed; z-index: 99999; width: 100%; height: 100%; text-align: center; top: 0px; left: 0; background: rgba(0,0,0,0.8); padding-top: 7%; overflow: auto;">
+<div class="container">
+<div class="popupmodal-header"><a class="popupclose" onclick="toggleVideo3('hide');" href="javascript:;">X</a></div>
+<div class="video-container2"><iframe src="https://player.youku.com/embed/XNDA3NzYwMjc0OA==?rel=0" height="315" width="500"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="video-callout">
+<p><a style="font-weight: 100 !important; font-size: 18px !important;" onclick="toggleVideo4('true');" href="javascript:;"><img class="video-img" alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-optics-lab4.jpg" /><br />镀膜<br /><i class="fa fa-play video-i">&nbsp;</i></a></p>
+<div id="popupVid4" class="popup" style="display: none; position: fixed; z-index: 99999; width: 100%; height: 100%; text-align: center; top: 0px; left: 0; background: rgba(0,0,0,0.8); padding-top: 7%; overflow: auto;">
+<div class="container">
+<div class="popupmodal-header"><a class="popupclose" onclick="toggleVideo4('hide');" href="javascript:;">X</a></div>
+<div class="video-container2"><iframe src="https://player.youku.com/embed/XNDA3NzYwNDkyOA==?rel=0" height="315" width="500"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+<div class="video-callout">
+<p><a style="font-weight: 100 !important; font-size: 18px !important;" onclick="toggleVideo5('true');" href="javascript:;"><img class="video-img" alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-optics-lab5.jpg" /><br />选择激光的规格<br /><i class="fa fa-play video-i">&nbsp;</i></a></p>
+<div id="popupVid5" class="popup" style="display: none; position: fixed; z-index: 99999; width: 100%; height: 100%; text-align: center; top: 0px; left: 0; background: rgba(0,0,0,0.8); padding-top: 7%; overflow: auto;">
+<div class="container">
+<div class="popupmodal-header"><a class="popupclose" onclick="toggleVideo5('hide');" href="javascript:;">X</a></div>
+<div class="video-container2"><iframe src="https://player.youku.com/embed/XNDA3NzYwNzY0MA==?rel=0" height="315" width="500"></iframe></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix container"><a id="applications" class="anchor"></a>&nbsp;
+<h1>激光应用</h1>
+<div class="clearfix container" style="background-color: #000; padding-bottom: 40px; top: -3px; position: relative; margin-bottom: 30px;">
+<div class="clearfix  nomobile" style="background-color: #585858; height: 50px;">
+<div class="container">
+<ul id="universityList" style="width: 100%;">
+<li style="width: 25%;"><a id="txts7" class="doSwitch lasertab" href="javascript:void(0)">制造</a>
+<div>&nbsp;</div>
+</li>
+<li style="width: 25%;"><a id="txts8" class="doSwitch lasertab" href="javascript:void(0)">医疗</a>
+<div>&nbsp;</div>
+</li>
+<li style="width: 25%;"><a id="txts9" class="doSwitch lasertab" href="javascript:void(0)">娱乐</a>
+<div>&nbsp;</div>
+</li>
+<li style="width: 25%;"><a id="txts10" class="doSwitch lasertab" href="javascript:void(0)">传感</a>
+<div>&nbsp;</div>
+</li>
+</ul>
+</div>
+</div>
+<div style="background-color: #000; color: #fff;">
+<div id="hiddenArea_txts7" class="hidden-txt">
+<div class="tab-inside1">
+<div class="clearfix">
+<h2>激光光学制造</h2>
+<div style="padding-bottom: 15px;">使用激光进行材料加工正在迅速成为制造过程的重要一环。在制造过程中使用激光，能够以更快的加工速度实现更高的精度。激光制造包括多种工艺，如激光焊接，激光表面处理等，适用于各种类型的材料。不同的材料加工和制造过程会用到多种激光光学件，包括激光反射镜和扩束镜，以实现最佳激光输出。将激光应用到制造过程中，可以满足许多应用的大批量且苛刻的加工需求。</div>
+<div class="clearfix">
+<div class="col-lg-3 col-xs-12" style="margin-left: 0px !important;">
+<h4 class="subhead">焊接</h4>
+激光是一种快速的，自动化的工具，可用于沉积，点焊和缝焊，帮助您添加组件。精密激光焊接是一种强大的工艺，现代工业制造商可用其制造高精度电子产品。小光斑直径能够在高速下对各种材料进行低热变形焊接。</div>
+<div class="col-lg-3 col-xs-12">
+<h4 class="subhead">切割</h4>
+复杂的切割和产品轮廓导致了激光切割技术的兴起。激光的焦点直径很小，它是一种低畸变，快速的切割工具，适用于大多数金属材料。利用光束的局部能量输入，激光的切割宽度小。使用激光切割的优点是低热输入，热影响区域小，只影响光束所在的切割位置。</div>
+<div class="col-lg-3 col-xs-12">
+<h4 class="subhead">打标</h4>
+激光可以做出耐用，高对比度的标记，包括半导体，有机物和金属等材料的加工。使用激光打标，不会引起多余的材料或表面变化。激光打标还包括表面处理，例如通过改变材料的机械特性进行硬化处理。</div>
+<div class="col-lg-3 col-xs-12" style="margin-right: 0px !important;">
+<h4 class="subhead">雕刻</h4>
+激光还可用于雕刻，通过消融或刻画材料实现高精度打印，压花或侵蚀。激光雕刻是一种灵活的方法，利用微米级的光斑可以在拥有复杂几何表面的材料上打上耐用的2D和3D标记。</div>
+</div>
+</div>
+<div class="related" style="padding-top: 260px;">
+<h2>相关资源和产品</h2>
+<div class="col-lg-12" style="text-align: center;">
+<div class="techCallout col-lg-6 col-xs-12" style="margin-left: 0px !important;">
+<p style="font-weight: bolder;"><i class="fa fa-file-text-o fa-r" style="padding-bottom: 50px; color: #ffcd16; float: left; padding-right: 10px;">&nbsp;</i>应用案例</p>
+<p><a href="/knowledge-center/application-notes/optics/how-to-design-your-own-beam-expander-using-stock-optics/">如何利用现货光学元件设计扩束镜</a></p>
+<p><a href="/knowledge-center/application-notes/lasers/beam-expanders/">激光扩束镜: 理论知识及应用案例</a></p>
+</div>
+</div>
+<div class="clearfix" style="padding-top: 15px;">
+<div class="col-lg-12" style="text-align: center;">
+<div class="clearfix">
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-lenses', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-lenses.jpg" width="100%" />
+<h3 class="rollText">激光用透镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/optical-lenses/aspheric-lenses/laser-line-coated-precision-aspheric-lenses', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/aspheresv2.png" width="100%" />
+<h3 class="rollText">激光用非球面镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beam-expanders', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beam.jpg" width="100%" />
+<h3 class="rollText">激光扩束镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beamsplitters', '_blank')"><img alt="Laser Beamsplitters" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beamsplitters.jpg" width="100%" />
+<h3 class="rollText">激光分光镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-prisms', '_blank')"><img alt="Laser Prims" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-prisms.jpg" width="100%" />
+<h3 class="rollText">激光棱镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-polarizers', '_blank')"><img alt="Laser Polarizers" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-polarizers.png" width="100%" />
+<h3 class="rollText">激光偏光镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-line-mirrors/', '_blank')"><img alt="Laser Line Mirrors" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-mirrors.png" width="100%" />
+<h3 class="rollText">激光谱线反射镜</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="hiddenArea_txts8" class="hidden-txt nodisplay">
+<div class="tab-inside2">
+<div class="clearfix">
+<h2>医疗</h2>
+<div style="padding-bottom: 15px;">相比传统的侵入性治疗，激光是一种强大而多功能的替代方案。医疗激光的进步促进了安全，低侵入性的设备和治疗方法的实现，涉及美容，皮肤科，手术等领域。医疗激光系统使用非球面透镜和滤光片来实现新兴的激光治疗技术。</div>
+<div class="clearfix" style="border-radius: 10px;">
+<div class="col-lg-3 col-xs-12" style="margin-left: 0px !important;">
+<h4 class="subhead">去除毛发和纹身</h4>
+使用激光去除毛发和纹身正迅速成为最流行的美容方法。这是一种非侵入性的方法，主要利用激光波长与毛发或纹身之间的相互作用。脱毛旨在防止或减少新的毛发增长，而去除纹身是使用不同的激光波长和功率，一次一个，将油墨从表面去除.</div>
+<div class="col-lg-3 col-xs-12">
+<h4 class="subhead">口腔医学</h4>
+牙科激光是一种非常有效的工具，旨在治疗牙周病，在手术时管理组织或肌肉，也可用在其他治疗中。与传统牙科治疗相比，激光可以提高手术的效果。例如激光腔去除，这种激光治疗方法能提供比传统钻头更精准的去除效果.</div>
+<div class="col-lg-3 col-xs-12">
+<h4 class="subhead">眼科手术</h4>
+激光是进行眼科手术的主要工具，包括屈光矫正，如LASIK。激光治疗常用于治疗眼部疾病，纠正屈光不正，或修复视网膜裂孔。这种技术对于人眼是安全的，能够改善许多眼部疾病。此应用是一种介于高级诊断和激光应用之间的交叉应用。您还可以参考我们的 <a style="color: #fff; text-decoration: underline;" href="/knowledge-center/industry-expertise/advanced-diagnostics/eye/">高级诊断</a>中有关眼睛的部分，了解更多信息.</div>
+<div class="col-lg-3 col-xs-12" style="margin-right: 0px !important;">
+<h4 class="subhead">整形手术</h4>
+特定波长的激光可以为整形手术提供局部能量光斑，入射激光与身体组织（包括皮肤组织）产生相互作用。激光整形手术可以减少皱纹或去除皮肤增生或胎记。</div>
+</div>
+</div>
+<div class="related" style="padding-top: 210px;">
+<h2>Related Resources and Products</h2>
+<div class="techCallout col-lg-6 col-xs-12" style="margin-left: 0px !important;">
+<p style="font-weight: bolder;"><i class="fa fa-file-text-o fa-r" style="padding-bottom: 10px; color: #ffcd16;">&nbsp;</i>应用说明</p>
+<p><a href="/knowledge-center/application-notes/lasers/an-in-depth-look-at-axicons/">深入了解锥透镜</a></p>
+<p><a href="/knowledge-center/application-notes/microscopy/introduction-to-reflective-objectives/">Introduction to Reflective Objectives</a></p>
+</div>
+<div class="techCallout col-lg-6 col-xs-12">
+<p style="font-weight: bolder;"><i class="fa fa-calculator fa-r" style="padding-bottom: 10px; color: #ffcd16;">&nbsp;</i>计算工具</p>
+<p><a href="/knowledge-center/tech-tools/axicon/">计算锥透镜的光环直径和光环厚度</a></p>
+</div>
+</div>
+<div class="clearfix" style="padding-top: 15px;">
+<div class="col-lg-12" style="text-align: center;">
+<div class="clearfix">
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-lenses', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-lenses.jpg" width="100%" />
+<h3 class="rollText">激光用透镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-line-mirrors', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-mirrors.png" width="100%" />
+<h3 class="rollText">激光谱线反射镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beam-expanders', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beam.jpg" width="100%" />
+<h3 class="rollText">激光扩束镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-windows', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-windows.jpg" width="100%" />
+<h3 class="rollText">激光窗口片</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beamsplitters', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beamsplitters.jpg" width="100%" />
+<h3 class="rollText">激光分光镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-polarizers', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-polarizers.png" width="100%" />
+<h3 class="rollText">激光偏光镜</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="hiddenArea_txts9" class="hidden-txt nodisplay">
+<div class="tab-inside3">
+<div class="clearfix">
+<h2>娱乐</h2>
+<div style="padding-bottom: 15px;">在多媒体领域，激光正变得越来越流行，利用它可以获得高亮度，出色的色彩和卓越的图像。最初，激光在娱乐行业中用于激光表演，使用静态光束为表演添彩。由于激光拥有相干性和很好的光强度，它已经不仅限于用在静态激光灯光秀上了。新技术不断扩大着人们的想象力。滤光片和柱面透镜有助于修整和控制这些多媒体应用中的激光输出。</div>
+<div class="clearfix" style="border-radius: 10px;">
+<div class="col-lg-4 col-xs-12" style="margin-left: 0px !important;">
+<h4 class="subhead">激光投影机</h4>
+激光投影机是以激光作为光源的高性能投影仪。激光源可以提供优异的对比度和颜色，拥有比传统氙气灯泡更长的使用寿命。激光技术的发展实现了激光投影，它具有令人难以置信的图像品质以及很长的使用寿命.</div>
+<div class="col-lg-4 col-xs-12">
+<h4 class="subhead">激光灯光秀</h4>
+激光表演多年来一直作为灯光表演的补充。不过，自第一次激光灯光以来，激光技术已经大大改善。利用激光源和扫描镜的相干性，激光显示器可以产生具有多种图案的完全沉浸式多媒体性能。</div>
+<div class="col-lg-4 col-xs-12">
+<h4 class="subhead">激光打印</h4>
+激光打印是一种常见的激光技术。激光与鼓相互作用，将墨粉转印到纸上。激光打印机复印图像的速度比传统的复印机快，使其成为许多用户的首选。</div>
+</div>
+</div>
+<div class="related" style="padding-top: 290px;">
+<h2>相关资源和产品</h2>
+<div class="col-lg-12" style="text-align: center;">
+<div class="clearfix">
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-filters', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-filters.jpg" width="100%" />
+<h3 class="rollText">激光用滤光片</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-6 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beam-expanders', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beam.jpg" width="100%" />
+<h3 class="rollText">激光扩束镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-windows', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-windows.jpg" width="100%" />
+<h3 class="rollText">激光窗口片</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beamsplitters', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beamsplitters.jpg" width="100%" />
+<h3 class="rollText">激光分光镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-prisms', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-prisms.jpg" width="100%" />
+<h3 class="rollText">激光棱镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-polarizers', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-polarizers.png" width="100%" />
+<h3 class="rollText">激光偏光镜</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="hiddenArea_txts10" class="hidden-txt nodisplay">
+<div class="tab-inside4">
+<div class="clearfix">
+<h2>传感</h2>
+<p style="padding-bottom: 10px;">激光是一种强大的传感工具，适用于所有行业。激光可用在闭环和开环控制中，用于位置检测，尺寸测量和动态测量，例如高速应用的测量。激光脉冲可以为传感应用提供高速，精确的解决方案，如激光雷达（LIDAR）和飞行时间感测。非球面透镜和柱面透镜适用于传感系统中的光束成型。</p>
+<div class="clearfix" style="border-radius: 10px;">
+<div class="col-lg-4 col-xs-12" style="margin-left: 0px !important;">
+<h4 class="subhead">激光雷达</h4>
+激光雷达（LIDAR），光检测和测距是一种功能强大的成像和测量工具，适用于地质，林业和自动化等诸多领域。结合激光检测和传感器，激光雷达（LIDAR）可以利用特定光谱来检测不同的材料并返回关于此材料的特征信息。激光雷达（LIDAR）广泛用于气象学，并且越来越多地被用于自动驾驶。</div>
+<div class="col-lg-4 col-xs-12">
+<h4 class="subhead">距离感测</h4>
+利用三角测量信号，激光可实现检测距离。无论是长距离应用还是过程监控，激光的分辨率都高于其他距离感测方法。基于激光的感测适用于表面分析，机器人控制，尺寸测量和其他过程控制应用。</div>
+<div class="col-lg-4 col-xs-12" style="margin-right: 0px !important;">
+<h4 class="subhead">化学检测</h4>
+激光拥有窄波长分布和高功率稳定性，因此非常适用于化学检测。我们可以利用激光来检测折射率的轻微变化或检测痕量物质，这使其成为防区外检测的绝佳选择。</div>
+</div>
+</div>
+<div class="related" style="padding-top: 240px;">
+<h2>相关资源和产品</h2>
+<div class="techCallout col-lg-6 col-lg-3v" style="margin-left: 0px !important;">
+<p style="font-weight: bolder;"><i class="fa fa-file-text-o fa-r" style="padding-bottom: 10px; color: #ffcd16;">&nbsp;</i>应用说明</p>
+<p><a href="/knowledge-center/application-notes/optics/an-in-depth-look-at-spherical-aberration-compensation-plates/">An In-Depth Look at Spherical Aberration Compensation Plates</a></p>
+<p><a href="/knowledge-center/application-notes/lasers/understanding-spatial-filters/">Understanding Spatial Filters</a></p>
+</div>
+</div>
+<div class="clearfix" style="padding-top: 15px;">
+<div class="col-lg-12" style="text-align: center;">
+<div class="clearfix">
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-lenses', '_blank')"><img alt="" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-lenses.jpg" width="100%" />
+<h3 class="rollText">激光用透镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-line-mirrors', '_blank')"><img alt="Laser Line Mirrors" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-mirrors.png" width="100%" />
+<h3 class="rollText">激光谱线反射镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/optical-lenses/aspheric-lenses/laser-line-coated-precision-aspheric-lenses', '_blank')"><img alt="Laser Aspheres" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/aspheresv2.png" width="100%" />
+<h3 class="rollText">激光用非球面镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-beam-expanders', '_blank')"><img alt="Laser Beam Expanders" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-beam.jpg" width="100%" />
+<h3 class="rollText">激光扩束镜</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-windows', '_blank')"><img alt="Laser Windows" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-windows.jpg" width="100%" />
+<h3 class="rollText">激光窗口片</h3>
+</div>
+<div class="col-lg-2 col-md-6 col-sm-6 col-xs-12 prodRoll" style="cursor: pointer;" onclick="window.open('/optics/laser-optics/laser-polarizers', '_blank')"><img alt="Laser Polarizers" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/laser-polarizers.png" width="100%" />
+<h3 class="rollText">激光偏光镜</h3>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix container" style="padding-bottom: 30px;">
+<div class="resourceCallout">
+<div class="col-lg-12">
+<h2>超快激光光学元件</h2>
+<p>爱特蒙特光学（Edmund Optics） 的超快激光光学元件已进行优化，可与皮秒和飞秒激光器发出的超短脉冲配合使用。这些激光元件设计旨在最小化色散及光学损耗。</p>
+</div>
+<div class="col-lg-4"><a class="btn-new2" href="/c/ultrafast-optics/1224/">超快激光<br />光学元件</a></div>
+<div class="col-lg-4"><a class="btn-new2" style="padding-right: 70px; padding-left: 70px;" href="/knowledge-center/webinars/ultrafast-optics-challenges-and-solutions-register/">在线研讨会: 面临的挑战<br />和最终解决方案</a></div>
+<div class="col-lg-4"><a class="btn-new2" href="/knowledge-center/trending-in-optics/ultrafast-highly-dispersive-mirrors/">超快-<br />高色散反射镜</a></div>
+</div>
+</div>
+<div class="clearfix respd">
+<div style="background-color: #fff;"><hr />
+<div class="container" style="background-color: #fff;"><a id="partner" class="anchor"></a>&nbsp;
+<h1>为什么选择我们?</h1>
+<div class="col-lg-4">
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<h3><i class="fa fa-check fa-r" style="color: green;">&nbsp;</i></h3>
+</td>
+<td>
+<h3>EO 自主设计并制造</h3>
+<p>EO 设计和制造的 TECHSPEC® 元件包括激光反射镜、组件、非球面透镜和各种其他激光光学元件。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<h3><i class="fa fa-check fa-r" style="color: green;">&nbsp;</i></h3>
+</td>
+<td>
+<h3>专业</h3>
+<p>150多名具有应用，设计和制造背景的工程师为您提供丰富的工程专业知识.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-4">
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<h3><i class="fa fa-check fa-r" style="color: green;">&nbsp;</i></h3>
+</td>
+<td>
+<h3>优质</h3>
+<p>高品质的材料和镀膜，适用于所有激光光学件，它们具有多样的性能，可满足任何激光需求。</p>
+</td>
+</tr>
+</tbody>
+</table>
+<table>
+<tbody>
+<tr>
+<td valign="top">
+<h3><i class="fa fa-check fa-r" style="color: green;">&nbsp;</i></h3>
+</td>
+<td>
+<h3>可靠</h3>
+<p>始终满足小批量和大批量制造的规格要求，确保最终产品符合预先指定的标准。</p>
+</td>
+</tr>
+<tr>
+<td valign="top">
+<h3><i class="fa fa-check fa-r" style="color: green;">&nbsp;</i></h3>
+</td>
+<td>
+<h3>测量</h3>
+<p>进行内部测量以保证宣传的产品规格。</p>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="col-lg-4" style="padding-top: 30px;"><img alt="Laser Optics Clean Room" src="/contentassets/5130fb4ec2ad4333af50a00d491796e7/zygo-eo-laser-cn.jpg" /></div>
+</div>
+</div>
+</div>
+<div class="clearfix" style="background-color: #efefef; padding-top: 15px;">
+<div class="container">
+<h1 id="resources">额外资源</h1>
+<div class="col-lg-12  nomobile" style="height: 80px;">
+<ul id="resourcesList" style="width: 100%;">
+<li style="width: 25%;"><a id="txts5" class="doSwitch2 resourcestab" href="javascript:void(0)"><i class="fa fa-file-text-o fa-r" style="padding-bottom: 10px;">&nbsp;</i><br /> 应用说明</a>
+<div>&nbsp;</div>
+</li>
+<li style="width: 25%;"><a id="txts6" class="doSwitch2 resourcestab" href="javascript:void(0)"><i class="fa fa-external-link fa-r" style="padding-bottom: 10px;">&nbsp;</i><br /> 技术文章</a>
+<div>&nbsp;</div>
+</li>
+<li style="width: 25%;"><a id="txts4" class="doSwitch2 resourcestab" href="javascript:void(0)"><i class="fa fa-calculator fa-r " style="padding-bottom: 10px;">&nbsp;</i><br /> 计算工具</a>
+<div>&nbsp;</div>
+</li>
+<li style="width: 25%;"><a id="txts3" class="doSwitch2 resourcestab" href="javascript:void(0)"><i class="fa fa-play fa-r " style="padding-bottom: 10px;">&nbsp;</i><br /> 教学视频</a>
+<div>&nbsp;</div>
+</li>
+</ul>
+</div>
+
+<div id="hiddenArea_txts5" class="container hidden-txt2">
+<div class="clearfix col-lg-12" style="background-color: #fff; margin-bottom: 60px; margin-top: 24px; padding: 20px; padding-top: 40px;">
+<h3 style="margin: 0px;">应用说明</h3>
+<p style="padding-bottom: 10px;">技术信息和应用范例，内容包括理论说明、方程式、图片说明等。</p>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">扩束镜<br />选型指南 <br /> <a href="/knowledge-center/application-notes/lasers/beam-expander-selection-guide/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">使用库存组件构建自定义光学隔离器 <br /> <a href="/knowledge-center/application-notes/lasers/building-a-custom-optical-isolator-with-stock-components/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">Characteristics of<br /> 2µm Lasers <br /> <a href="/knowledge-center/application-notes/lasers/characteristics-of-2m-lasers/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">Coherent<sup>®</sup>激光器<br />选择指南<br /> <a href="/knowledge-center/application-notes/lasers/coherent-laser-selection-guide/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">带有激光照明的荧光成像<br /> <a href="/knowledge-center/application-notes/lasers/fluorescence-imaging-with-laser-illumination/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">Quantum Cascade Lasers and Applications <br /> <a href="/knowledge-center/application-notes/lasers/quantum-cascade-lasers-and-applications/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">Understanding<br /> Spatial Filters <br /> <a href="/knowledge-center/application-notes/lasers/understanding-spatial-filters/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">UV Optics: Tighter Tolerances and Different Materials <br /> <a href="/knowledge-center/application-notes/lasers/uv-optics-tighter-tolerances-and-different-materials/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">Handling and Storing High<br /> Power Laser Mirrors <br /> <a href="/knowledge-center/application-notes/optics/handling-and-storing-high-power-laser-mirrors/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout"><br />高功率光学镀膜<br />的复杂情况<a href="/knowledge-center/application-notes/optics/the-complexities-of-high-power-optical-coatings/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="techCon col-lg-3 col-xs-12" style="margin-right: 0px !Important;">
+<p class="appCallout">Fundamentals of Lasers, <br />How do they Work?<br /> <a href="/knowledge-center/application-notes/lasers/fundamentals-of-lasers/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="techCon col-lg-3 col-xs-12" style="margin-left: 0px !Important;">
+<p class="appCallout">Laser Damage Threshold Testing: Testing and Defining<br /> <a href="/knowledge-center/application-notes/lasers/laser-damage-threshold-testing/">查阅&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+</div>
+</div>
+
+<div id="hiddenArea_txts6" class="hidden-txt2 nodisplay">
+<div class="clearfix col-lg-12" style="background-color: #fff; margin-bottom: 60px; margin-top: 24px; padding: 20px; padding-top: 40px;">
+<h3 style="margin: 0px;">技术文章</h3>
+<p style="padding-bottom: 10px;">链接到由爱特蒙特光学撰写，发表在行业出版物上的技术文章，由EO的工程团队和管理层提供支持。</p>
+<div class="techCon col-lg-3 col-xs-12" style="margin-left: 0px !Important;">
+<p class="appCallout">No One-Size-Fits-All Approach to Selecting Optical Coatings<br /> <a href="https://www.photonics.com/Article.aspx?PID=5&amp;VID=135&amp;IID=917&amp;AID=61285" target="_blank" rel="nofollow">跳转&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">An In-Depth Look at Spherical Aberration Compensation Plates<br /> <a href="/knowledge-center/application-notes/optics/an-in-depth-look-at-spherical-aberration-compensation-plates/" target="_blank" rel="nofollow">跳转&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="techCon col-lg-3 col-xs-12" style="margin-left: 0px !Important;">
+<p class="appCallout">The art and science of designing optics for laser-induced damage threshold<br /> <a href="https://www.techbriefs.com/component/content/article/tb/supplements/pit/features/28881?m=1393" target="_blank" rel="nofollow">跳转&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="techCon col-lg-3 col-xs-12" style="margin-left: 0px !Important;">
+<p class="appCallout">Optical Design: How to select the right laser beam expander<br /> <a href="https://www.laserfocusworld.com/articles/print/volume-53/issue-06/features/optical-design-how-to-select-the-right-laser-beam-expander.html" target="_blank" rel="nofollow">跳转&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="hiddenArea_txts4" class="container hidden-txt2 nodisplay">
+<div class="clearfix col-lg-12" style="background-color: #fff; margin-bottom: 60px; margin-top: 24px; padding: 20px; padding-top: 40px;">
+<h3 style="margin: 0px;">计算器</h3>
+<p style="padding-bottom: 10px;">带有光学，成像和光电行业中常用方程的科学计算器.</p>
+<div class="techCon col-lg-3 col-xs-12" style="margin-left: 0px !Important;">
+<p class="appCallout">激光光斑大小<br /> <a href="/knowledge-center/tech-tools/laser-spot-size/"> 计算&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">高斯光束<br /> <a href="/knowledge-center/tech-tools/gaussian-beams/">计算&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">Laser Induced Damage Threshold Scaling<br /> <a href="/knowledge-center/tech-tools/laser-damage-threshold-scaling/"> 计算&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-xs-12 techCon">
+<p class="appCallout">锥透镜<br /> <a href="/knowledge-center/tech-tools/axicon/">计算&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+</div>
+</div>
+
+<div id="hiddenArea_txts3" class="container hidden-txt2 nodisplay">
+<div class="clearfix col-lg-12" style="background-color: #fff; margin-bottom: 60px; margin-top: 24px; padding: 20px; padding-top: 40px;">
+<h3 style="margin: 0px;">视频资源</h3>
+<p style="padding-bottom: 10px;">有关公司或教学的视频，从简单的技巧到基于应用的产品优势演示。</p>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">柱面透镜产品概述<br /> <a href="/knowledge-center/video/product-overviews/cylinder-lens-product-overview/">观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">LC（低成本）定倍YAG扩束镜<br /> <a href="/knowledge-center/video/product-overviews/beam-expanders/"> 观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">适用于激光应用的高反射率反射镜<br /> <a href="/knowledge-center/webinars/high-reflectivity-mirrors-for-laser-applications-register/">观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">如何校准单片扩束镜<br /> <a href="/knowledge-center/video/tutorials/how-to-align-a-monolithic-beam-expander/">观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">如何准直激光系统<br /> <a href="/knowledge-center/video/tutorials/how-to-align-a-laser-system/">观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">如何运用现货元件打造光隔离器<br /> <a href="/knowledge-center/video/tutorials/how-to-build-an-optical-isolator-with-stock-components/">观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">通过光束合成增加功率<br /> <a href="/knowledge-center/video/product-overviews/beam-combining/"> 观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+<div class="col-lg-3 col-lg-3v techCon">
+<p class="appCallout">OBIS Galaxy 激光系统<br /> <a href="/knowledge-center/video/product-overviews/obis-galaxy-laser-system/">观看&nbsp;<i class="fa fa-angle-double-right" style="font-size: 17px;">&nbsp;</i></a></p>
+</div>
+</div>
+</div>
+</div>
+<div class="clearfix">
+<div style="background-color: #fff; padding-top: 15px;">
+<div class="container">
+<div id="partner" class="container"><img class="nomobile" style="float: right; margin-left: 30px; padding-top: 20px;" alt="Stefaan V" src="/contentassets/7d195adebade48b6ab610bc57f02ebff/stefaan-vand.png" />
+<div><a id="contact" class="anchor"></a>&nbsp;
+<h1>技术专家时刻准备为您服务</h1>
+</div>
+<div class="clearfix">
+<p>Stefaan Vandendriessche 是爱特蒙特光学的激光光学件产品经理。 Stefaan致力于开发激光光学产品，为爱特蒙特光学提供合适的激光光学技术，确保我们的产品可满足客户的需求，推动行业的应用发展。参与各大展会与Stefaan会面或者即刻<a href="/contact-us/">与我们联系</a>.</p>
+<div style="text-align: center; padding-top: 20px; padding-bottom: 10px;">
+<p><img alt="left quotation mark" src="/contentassets/19e789d80a5e400590e1a964a6bef708/quote-left.png" /><span style="font-size: 19px; line-height: 29px;">&nbsp;EO始终致力于未来的发展，并且我很喜欢开发新的技术和产品，从而帮助客户实现其目标。EO将努力创建合适的激光系统，用于材料加工，满足未来的应用需求，促进下一代医疗应用的发展. &nbsp;</span><img style="padding-top: -10px;" alt="right quotation mark" src="/contentassets/19e789d80a5e400590e1a964a6bef708/quote-right.png" /></p>
+<p style="padding-top: 7px;"><em>Stefaan Vandendriessche--激光光学件产品经理</em></p>
+<div class="col-lg-12"><a class="btn-new" style="width: 100%; margin-bottom: 60px;" href="/contact-support/">联系我们</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div></span>
+</div></div>
+</div>
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+</div>
+<div class="eoFooter">
+<div class="clearfix">
+<div id="footerbg" class="noprint col-lg-12 col-sm-12 respd">
+<div class="container theme-showcase" id="containerone">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-12 qqh2">
+<h2 class="quote">需要报价？ <span style="font-size: 15px;font-weight: lighter;">输入库存编号只需两步即可获取报价.</span></h2>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+<a class="btn-other qq" href="/tools/quote">立即开始</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 footercallbox yesmobile" style="padding-right:0px; margin-bottom:-35px; margin-top:20px; top:-34px">
+<span style="position:relative; top:-3px"> <div><div class="block htmlblock  ">
+<span><h2><a style="color: #fff; text-decoration: none;" href="tel:0755-8435-5459">立即拨打! (+86) 0755 8435 5459</a></h2></span>
+</div></div></span>
+</div>
+<div class="clearfix"></div>
+<div id="legallogos" style="margin-top:0 !important">
+<div id="socialnetworks" class="clearfix">
+<span><div><div class="block htmlblock full span12">
+<span><p><a href="http://i.youku.com/i/UMjcxMDM2NTQ0NA==?spm=a2hzp.8244740.uerCenter.5~5!2~A" target="_blank" rel="nofolow"><span style="padding-right: 2px;"><img class="lazy" alt="Edmund Optics Youku" data-src="/globalassets/footer/social-icons/youku-website-1.gif" /></span></a>&nbsp; <a href="https://www.linkedin.com/company/edmund-optics" target="_blank" rel="external"><span style="padding-right: 2px;"><img class="lazy" alt="Edmund Optics Linkedin" data-src="/globalassets/footer/social-icons/linkedin-web-1.gif" /></span></a></p></span>
+</div></div></span>
+</div>
+<div class="copyright clearfix">
+<span><div><div class="block htmlblock full span12">
+<span><p style="padding-bottom: 15px;"><a href="/contact-support/">联系与支持&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="/contact-support/catalogs/">目录</a>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<a href="/company/">公司</a>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<a href="/promotions/">促销</a></p>
+<div style="margin-bottom: -10px !important; margin-top: -10px !important;">
+<p style="color: #9e9e9e;">版权所有 <span id="year">year</span>，爱特蒙特光学（深圳）有限公司。—广东省深圳市龙华工业东路利金城科技工业园3栋5楼 518109 <br /><span lang="ZH-CN">粤</span><span>ICP</span><span lang="ZH-CN">备</span><span>15118149</span><span lang="ZH-CN">号</span></p>
+</div></span>
+</div></div></span>
+<span><div><div class="block htmlblock full span12">
+<span><div class="clearfix" style="margin-top: 25px; margin-left: 15px; margin-right: 15px;"><a href="/privacy-policy/">保密政策</a> | <a href="/terms-and-conditions/">术语和条款</a> | <a href="/company/careers/">职位</a> | <a href="/contact-support/help-center/">技术支持中心</a> | <a href="/contact-support/feedback/">回复</a></div></span>
+</div></div></span>
+</div>
+<div id="belowsitemap">
+<span><div><div class="block htmlblock  ">
+<span><div style="padding-left: 0px;"><span style="padding-bottom: 10px; position: relative; top: 10px;">
+<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=b402a935000e4bd4b21355d40e41bce8"></script>
+</span></div></span>
+</div></div></span>
+</div>
+</div>
+</div>
+<script>
+        function gaDomainSwitch() { return ""; }
+        function trackEvent(category, action, label, lang, url) { if (url != null) { document.location = url; } }
+    </script>
+<script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?db39645f9402caaf9df562b3a6adfa02";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<div id="redirectCountryModal" class="eo-modal-window">
+<div class="eo-modal-content">
+<span class="close">&times;</span>
+<div id="redirectCountryContent"></div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/autocomplete.css?v=637103590040000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/font-awesome.css?v=636996553900000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/custom.kendo.css?v=636851485920000000" media="all" />
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/print.css?v=636969878340000000" media="print">
+<script src="/Assets/javascript/layout-bundled/js.cookie.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/layout-bundled/livechat.js?v=636845459280000000"></script>
+<script src="/Assets/javascript/layout-bundled/kendo.custom.min.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/combine/jquery.cookie.js?v=636645748340000000"></script>
+<script src="/Assets/javascript/layout-bundled/layout.js?v=637298997960000000"></script>
+<script src="/assets/javascript/jquery.lazy.min.js?v=636880606380000000"></script>
+<script>$('.lazy').Lazy()</script>
+<style>
+.headertop {
+    background-color: green;
+    height: auto;
+}
+.is-cov {
+background-color: #000!important; height: 40px; border-bottom: 6px solid #4a4949;
+}
+
+.cov1 {
+padding-right: 0px; border-right: 1px solid #4a4949;
+}
+
+.cov2 {
+background-image: url('https://www.edmundoptics.com/contentassets/c9b0ec54bc594de0b332c5f2cf3beddd/imaging-summitv4v.jpg'); background-position: center; /* margin-right: 20px; */
+    background-position-y: -350px; background-position-x: 748px; height: 34px;
+
+}
+
+@media (max-width: 1000px) {
+.is-cov {
+height:auto;
+}
+.cov1 {
+border-right: none;
+}
+.cov2 {
+height: auto;
+padding-bottom:10px;
+}
+}
+
+
+
+a:not([href]):not([tabindex]) {
+
+    color: #fff;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+}
+
+.faqQuestion {
+color:#000 !important
+}
+
+.cd-overlay {
+
+    z-index: 99;
+}
+
+.pagination li a {
+    color: #585858 !Important;
+}
+
+
+.jstree-default .jstree-icon:empty {
+
+    line-height: 31px;
+}
+
+.faqQuestion a {
+color: #0462be !important;
+}
+
+
+.cbutton-dropdown > div > span {
+    padding-left: 12px !important;
+}
+
+.slitherBannerX {
+color:#585858 !important;
+display:none
+}
+
+
+
+
+#CybotCookiebotDialog {
+    border-color: #000000;
+    border-radius: unset;
+    border-top: 1px solid #585858;
+    border-bottom: 1px solid #585858;
+    border-radius: unset;
+    box-shadow: none;
+
+}
+
+
+     #CybotCookiebotDialogBodyButtonAccept{ background-color: #fdcd00; border: 1px solid #fdcd00; cursor: pointer; padding: 5px 10px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: relative; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; background: #fbcc30; color: #000; box-shadow: 3px 3px 4px #585858; -webkit-transition: none; -moz-transition: none; transition: none; border-radius: 5px; font-size:12px; margin-top:-5px}
+
+
+
+
+      #CybotCookiebotDialogBody {max-width:1170px}
+
+
+
+
+      .CookieDeclarationDialogText, .CookieDeclarationIntro, .CookieDeclarationLastUpdated { margin: 0 0 14px 0 }
+
+#CybotCookiebotDialog a, #CybotCookiebotDialog br, #CybotCookiebotDialog div, #CybotCookiebotDialog td {
+    line-height: 1.5;
+}
+
+
+      .CookieDeclarationType { display: block; margin: 12px 0 12px 0; padding:8px 8px 0 8px; border: 1px solid #333333; vertical-align: top; }
+      .CookieDeclarationTypeHeader { font-weight: bold; }
+      .CookieDeclarationTypeDescription { margin: 2px 0 16px 0; }
+      .CookieDeclarationTable { table-layout: fixed; width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 0 18px 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+      .CookieDeclarationTableHeader { font-weight: bold; border-bottom: 1px solid #777777; text-align: left; padding: 4px; }
+      .CookieDeclarationTableHeader[dir='rtl'] { text-align: right; }
+      .CookieDeclarationTableCell { text-overflow: ellipsis; word-wrap: break-word; border-bottom: 1px solid #777777; vertical-align: top; padding: 4px 4px 5px 4px; }
+    #CybotCookiebotDialogBodyContent { padding-top:15px}
+    #CybotCookiebotDialog a, #CybotCookiebotDialog div, 
+
+
+#CybotCookiebotDialogBodyContentControls, #CybotCookiebotDialogBodyContentTitle { font-family: 'Heebo', Helvetica, Arial, sans-serif }
+
+#CybotCookiebotDialogBodyContentTitle {
+
+    padding: 0;
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 100%;
+    color: #ffffff;
+    display: block;
+    position: static;
+    margin: 2px 0 6px;
+}
+
+
+</style>
+<script src="/assets/javascript/bootstrap.js"></script>
+<script language="javascript">
+$(function(){
+    $(".hidden").hide()
+    $(".hidden:first").show()	
+	$("#universityList li a:first").next().addClass("arrow-down")
+$("#universityList li a:first").addClass("boldLaser")
+	$(".txts>div:first").show()
+	$(document).on( "click", ".doSwitch", function() {
+		if(!$(this).hasClass("arrow-down")){
+			var id = $(this).attr("id")
+			var currentIndex = id.substring(0,4)	
+			$("#universityList li a").next().removeClass("arrow-down")
+$("#universityList li a").removeClass("boldLaser")
+			$(this).next().addClass("arrow-down")
+$(this).addClass("boldLaser")
+			$(".hidden-txt").hide()
+			$("#hiddenArea_"+id).show()
+		}
+	})
+});
+
+$(window).resize(function() {
+   if ($(this).width() < 1091) {
+    $('.carousel').carousel({
+      interval: 0
+    })
+   }
+});
+
+
+$(window).resize(function() {
+   if ($(this).width() > 1091) {
+    $('.carousel').carousel({
+      interval: 0
+    })
+   }
+});
+
+$(function(){
+    $(".hidden").hide()
+    $(".hidden:first").show()	
+	$("#resourcesList li a:first").next().addClass("arrow-down2")
+$("#resourcesList li a:first").addClass("boldResources")
+	$(".txts>div:first").show()
+	$(document).on( "click", ".doSwitch2", function() {
+		if(!$(this).hasClass("arrow-down2")){
+			var id = $(this).attr("id")
+			var currentIndex = id.substring(0,4)	
+			$("#resourcesList li a").next().removeClass("arrow-down2")
+$("#resourcesList li a").removeClass("boldResources")
+			$(this).next().addClass("arrow-down2")
+$(this).addClass("boldResources")
+			$(".hidden-txt2").hide()
+			$("#hiddenArea_"+id).show()
+		}
+	})
+});
+</script>
+<script language="javascript">
+function toggleVideo(state) {
+
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  $('body').css({overflow: 'hidden'}); 
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+ if (func = state == 'hide') {
+       $('body').css({overflow: 'auto'});  
+    }
+}
+</script>
+<script language="javascript">
+function toggleVideo1(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid1");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  $('body').css({overflow: 'hidden'}); 
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+ if (func = state == 'hide') {
+       $('body').css({overflow: 'auto'});  
+    }
+}
+
+
+</script>
+<script language="javascript">
+function toggleVideo2(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid2");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  $('body').css({overflow: 'hidden'}); 
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+ if (func = state == 'hide') {
+       $('body').css({overflow: 'auto'});  
+    }
+}
+
+function toggleVideo3(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid3");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  $('body').css({overflow: 'hidden'}); 
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+ if (func = state == 'hide') {
+       $('body').css({overflow: 'auto'});  
+    }
+}
+
+function toggleVideo4(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid4");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  $('body').css({overflow: 'hidden'}); 
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+ if (func = state == 'hide') {
+       $('body').css({overflow: 'auto'});  
+    }
+}
+
+function toggleVideo5(state) {
+    // if state == 'hide', hide. Else: show video
+    var div = document.getElementById("popupVid5");
+    var iframe = div.getElementsByTagName("iframe")[0].contentWindow;
+  $('body').css({overflow: 'hidden'}); 
+    div.style.display = state == 'hide' ? 'none' : '';
+    func = state == 'hide' ? 'pauseVideo' : 'playVideo';
+    iframe.postMessage('{"event":"command","func":"' + func + '","args":""}','*');
+
+ if (func = state == 'hide') {
+       $('body').css({overflow: 'auto'});  
+    }
+}
+
+
+
+$(document).ready(function(){
+				//Examples of how to assign the Colorbox event to elements
+		   
+                 //added floating buy button
+                     $(window).scroll(function () {	
+                 if ($(window).scrollTop() > 750) {
+                        $('#btn_bar').show();
+                        $('#btn_bar').addClass('button-fixed');
+                    }
+                    if ($(window).scrollTop() < 751) {
+                        $('#btn_bar').hide();
+                        $('#btn_bar').removeClass('button-fixed');
+
+                    }
+				})
+});
+
+
+$(document).ready(function () {
+    $(".arrow-right").bind("click", function (event) {
+        event.preventDefault();
+        $(".vid-list-container").stop().animate({
+            scrollLeft: "+=336"
+        }, 750);
+    });
+    $(".arrow-left").bind("click", function (event) {
+        event.preventDefault();
+        $(".vid-list-container").stop().animate({
+            scrollLeft: "-=336"
+        }, 750);
+    });
+});
+</script>
+<script>
+
+$(window).scroll(function() {
+if($("#productCompareToolbar").is(":visible"))
+{
+$(".manutab").css("background-color","transparent")
+}else
+{
+$(".manutab").css("background-color","#585858")
+}
+
+if ($(this).scrollTop() > 120){  
+    $('header').addClass("sticky");
+  }
+  else{
+    $('header').removeClass("sticky");
+  }
+});
+
+
+
+
+
+</script>
+<script src="/Assets/javascript/layout-bundled/ChinaTagManager.js?v=637100185060000000"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+var d = new Date();
+var n = d.getFullYear();
+
+$("#year").text(n);
+
+});
+
+</script>
+<script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#addToCartAlert').addClass('navbar-fixed-top');
+                $('#addAllToCartAlert').addClass('navbar-fixed-top');
+                $('#addToCompareList').addClass('navbar-fixed-top');
+            }
+            if ($(window).scrollTop() < 301) {
+                $('#addToCartAlert').removeClass('navbar-fixed-top');
+                $('#addAllToCartAlert').removeClass('navbar-fixed-top');
+                $('#addToCompareList').removeClass('navbar-fixed-top');
+
+            }
+        });
+    </script>
+<script data-cfasync="false">
+(function(W,i,s,e,P,o,p){W['WisePopsObject']=P;W[P]=W[P]||function(){(W[P].q=W[P].q||[]).push(arguments)},W[P].l=1*new Date();o=i.createElement(s),p=i.getElementsByTagName(s)[0];o.async=1;o.src=e;p.parentNode.insertBefore(o,p)})(window,document,'script','//loader.wisepops.com/get-loader.js?v=1&site=EJXiYx9y4t','wisepops');
+    </script>
+</body>
+</html>

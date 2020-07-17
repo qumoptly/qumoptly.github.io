@@ -1,0 +1,1075 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="94ae87c0-4163-47a8-a565-c09ba562fb67" type="text/javascript" data-blockingmode="auto" data-georegions="{'region':'AW,AF,AO,AI,AX,AL,AD,AE,AR,AM,AS,AQ,TF,AG,AU,AZ,BI,BJ,BQ,BF,BD,BH,BS,BA,BL,BY,BZ,BM,BO,BR,BB,BN,BT,BV,BW,CF,CA,CC,CH,CL,CN,CI,CM,CD,CG,CK,CO,KM,CV,CR,CU,CW,CX,KY,DJ,DM,DO,DZ,EC,EG,ER,EH,ET,FJ,FK,FO,FM,GA,GE,GG,GH,GI,GN,GP,GM,GW,GQ,GD,GL,GT,GF,GU,GY,HK,HM,HN,HT,ID,IM,IN,IO,IR,IQ,IL,JM,JE,JO,JP,KZ,KE,KG,KH,KI,KN,KR,KW,LA,LB,LR,LY,LC,LK,LS,MO,MF,MA,MC,MD,MG,MV,MX,MH,MK,MT,MM,ME,MN,MP,MZ,MR,MS,MQ,MU,MW,MY,YT,NA,NC,NE,NF,NG,NI,NU,NP,NR,NZ,OM,PK,PA,PN,PE,PH,PW,PG,PR,KP,PY,PS,PF,QA,RE,RU,RW,SA,SD,SN,SG,GS,SH,SJ,SB,SL,SV,SM,SO,PM,RS,SS,ST,SR,SZ,SX,SC,SY,TC,TD,TG,TH,TJ,TK,TM,TL,TO,TT,TN,TR,TV,TW,TZ,UG,UA,UM,UY,US,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,ZA,ZM,ZW', 'cbid':'c540f2e8-c4fa-49cd-a6c0-b828f88912be'}" data-culture="ZH"></script>
+<script src="/Assets/javascript/layout-bundled/!jquery-3.3.1.js?v=636639559960000000"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a599ef7b57","applicationID":"10142686","transactionName":"bgdUbEMAX0sEBU0NW1dNe25yTnVdAwdMCEBpA1Fdcg5fTBcJVQhRS01fVlUESQ==","queueTime":0,"applicationTime":24,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQcHVVJQGwIAVVVQAQkB",licenseKey:"a599ef7b57",applicationID:"10142686"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="twitter:card" content="summary" />
+<title>表面损伤 | 爱特蒙特光学</title>
+<meta name="keywords" content="laser optics" />
+<meta name="description" content="Subsurface damage in optical components can lead to increased absorption and scatter, reducing system performance." /> <meta property="fb:page_id" content="73885277291" />
+<meta name="debug.ipAddress" content="172.104.102.238, 162.158.119.233" />
+<meta http-equiv="content-language" content="zh-CN" />
+
+<link rel="canonical" href="https://www.edmundoptics.cn/knowledge-center/application-notes/lasers/subsurface-damage/" />
+
+<link rel="alternate" hreflang="x-default" href="https://www.edmundoptics.com/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="en" href="https://www.edmundoptics.com/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="en-tw" href="https://www.edmundoptics.com.tw/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="en-au" href="https://www.edmundoptics.com.au/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="en-sg" href="https://www.edmundoptics.com.sg/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="ko" href="https://www.edmundoptics.co.kr/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="en-gb" href="https://www.edmundoptics.co.uk/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="fr" href="https://www.edmundoptics.fr/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="es-es" href="https://www.edmundoptics.es/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="de" href="https://www.edmundoptics.de/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="en-eu" href="https://www.edmundoptics.eu/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="zh-cn" href="https://www.edmundoptics.cn/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<link rel="alternate" hreflang="ja" href="https://www.edmundoptics.jp/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<meta name="title" data-type="string" content="表面损伤 | 爱特蒙特光学" />
+<meta name="LanguageId" data-type="string" content="12" />
+<meta property="og:title" content="表面损伤 | 爱特蒙特光学" />
+<meta property="og:url" content="https://www.edmundoptics.cn/knowledge-center/application-notes/lasers/subsurface-damage/" />
+<meta property="og:image" content="https://www.edmundoptics.com//globalassets/knowledge-center/app-notes/thumbnails/optics/subsurface-damage.png" />
+<meta name="twitter:image" content="https://www.edmundoptics.com//globalassets/knowledge-center/app-notes/thumbnails/optics/subsurface-damage.png">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/bootstrap.css?v=636898818760000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/shared.css?v=637298997960000000" media="all">
+
+
+
+<script type="application/ld+json">
+    {"@context": "http://schema.org",
+    "@id":"www.edmundoptics.cn",
+    "@type": "Organization",
+    "name": "Edmund Optics",
+    "url": "www.edmundoptics.cn",
+    "logo": "www.edmundoptics.cn/globalassets/img/eo-logo-google.jpg",
+    "contactPoint": [
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "sales"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "technical support"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "customer support"
+    }
+    ],
+    "sameAs": [
+    "https://www.facebook.com/edmundoptics",
+    "https://twitter.com/edmundoptics",
+    "https://www.youtube.com/edmundoptics",
+    "https://www.linkedin.com/company/edmund-optics/",
+    "https://plus.google.com/+edmundoptics",
+    "https://www.instagram.com/edmund_optics/"
+    ]
+}
+</script>
+
+<meta name="SearchPageType" data-type="string" content="ApplicationNote" />
+</head>
+<body role="document" itemscope itemtype="http://schema.org/WebPage">
+<div class="thetop"></div>
+<script>
+    var liveChatGroupId = 27;
+    var liveChatSalesOrg = '6800';
+    var liveChatLanguageCode = 'CN';
+    var liveChatIsRestricted = false;
+</script>
+<div id="chatInvite" style="display:none;">
+<div class="chat-header">
+有什么可以帮到您？ <a id="chatInviteX" onclick="declineInvite();"><i class="fa fa-times" aria-hidden="true"></i></a>
+</div>
+<div class="row">
+<div class="col-lg-6 chatInviteMessage">工程师接受在线咨询</div>
+<div class="col-lg-6">
+<img data-src="/globalassets/contact-and-support/asia-chat-pic.jpg?w=100" width="100" height="93" class="lazy" />
+</div>
+</div>
+<div style="text-align:center">
+<input type="button" value="发起对话" class="btn-liveChat" onclick="acceptInvite()" style="padding: 10px 20px; font-weight:bold" />
+</div>
+</div>
+<div id="chatOfflineMessage" style="display:none;">
+<a id="chatOfflineX" onclick="closeOfflineWindow();"><i class="fa fa-times" aria-hidden="true"></i></a>
+我们的操作人员目前都在忙碌。请留言，我们将会很快与您联系。
+<div style="text-align:center">
+<a href="/contact-support/email-support/" target="_blank" style="text-align:center" onclick="trackEvent('LiveChat', 'Offline Message', 'Click');">
+<h4 class="btn-liveChat" style="text-align:center">留言</h4>
+</a>
+</div>
+</div>
+<div id="logo-wrap" style="display:none">
+<img data-src="/assets/images/ui/print-screen/print-screen-header.png" width="360" height="50" class="lazy" />
+</div>
+<div class="headertop slitherBannerWrapper" style="display:none">
+<div class="container" style="height:0px">
+<i class="fa fa-times slitherBannerX" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<span><div><div class="block htmlblock  ">
+<span></span>
+</div></div></span>
+</div>
+<div class="headermiddle">
+<div class="container">
+<div>
+<div style="width:100%; margin:0 auto">
+<div class="headerFloat">
+<a href="/" title="Edmund Optics Worldwide" class="eo-header" style="float:left"><img src="/globalassets/homepage/eo_logo.svg" width="283" height="47" /></a>
+<span class="nomobile no1199">
+<span id="searchbar" class="button-dropdown col-lg-7 col-md-6" style="display: inline-block;">
+<form id="WebsiteSearchForm" action="/search" method="post" class="input-group-sh mb-3-sh website-search-form">
+<input id="WebsiteSearchTerm" name="criteria" class="searchbox website-search-form form-control-sh" onkeyup="SearchAutoComplete()" type="text" autocomplete="off" placeholder="关键词或产品编码" />
+<div class="input-group-append-sh"><button class="btn-sh btn-outline-secondary-sh" type="submit"><i class="fa fa-search">&nbsp;</i></button></div>
+</form>
+<div class="search-result dropdown-menu" style="position: absolute; background: white; z-index: 100; padding: 10px; width:98%; display:none"></div>
+</span>
+</span>
+<div style="float:right; padding-top:0px;" class="headerlinks nomobile no1199">
+<p>
+<div style="margin-top:-14px"> <i class="fa fa-phone" aria-hidden="true">&nbsp;</i><span class="headerPhoneNumber"><strong class="CountrySpecificPhoneNumber"></strong></span></div>
+<span class="header-contact2"> <span onclick="openlc()"> <i class="fa fa-comment" aria-hidden="true">&nbsp;</i><span class="chat-h">聊天</span></span>&nbsp;&nbsp; &nbsp; <a href="/contact-support/email-support/"><i class="fa fa-envelope" aria-hidden="true">&nbsp;</i><span style="color:#dadada">电子邮件</span></a></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="lowerheader">
+<div class="theme-showcase" id="lowerheadercontainer" style="padding-left:0px !Important">
+<div style="text-align:center">
+<div class="yesmobile yes1199" id="searchbar-mobile">
+<form action="" id="search-form-mobile" method="get" class="website-search-form">
+<input type="text" class="searchbox searchbox2 yesmobile yes1199" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索">
+<button id="SearchButton"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+</form>
+<div class="search-result" style="z-index:99; position:absolute; width:100%; background-color:#ffffff"></div>
+</div>
+</div>
+<div style="width:100%; margin:0 auto">
+<header class="cd-main-header">
+<ul class="cd-header-buttons">
+<li>
+<a class="cd-nav-trigger" href="#cd-primary-nav">
+<span class="fa fa-bars">&nbsp;</span>
+</a>
+</li>
+</ul>
+
+</header>
+<div class="header-m-bkgd">
+<div class="container">
+<ul class="lowerheadernav pw">
+<li class="button-dropdown cbutton-dropdown country-header">
+<div style="line-height:13px;">
+<span style="color:white; font-size:10px; padding-left: 29px;font-weight:lighter">选择国家或地区</span>
+<a href="javascript:void(0)" class="dropdown-toggle country-arrow-link" id="countrylink">
+<span id="countryname" class="countryname"></span><span><i class="fa fa-chevron-down country-arrow" aria-hidden="true" id="cchevron" style="color:#fff; font-size:11px; position:relative; top:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu cdropdown-menu">
+<li>
+<div id="countryLG" class="country-form">
+<div class="countryContent">
+<p>我们已将您所在国家/地区设置为 <strong>China</strong></p>
+<span id="countryErrorMessage">
+<p>您可在任意时间修改这个选项，但是如果改变所在国家/地区，您购物车中的产品，清单，或者报价有可能会被清空。</p>
+</span>
+</div>
+<p>
+<strong>请选择您的国家/地区
+</strong>
+</p>
+<form name="countryForm" onsubmit="return false;">
+<input name="referrer" value="/knowledge-center/application-notes/lasers/subsurface-damage/" type="hidden" />
+<input name="ga" value="" type="hidden" />
+<select id="countryId" name="countryId" style="width:216px;"><option value="13">Australia (AUD) </option>
+<option selected="selected" value="286">China (RMB) </option>
+<option value="335">European Union (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="110">Japan (JPY) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="0">---------------</option>
+<option value="338">Aland Islands (GBP) </option>
+<option value="278">Albania (EUR) </option>
+<option value="3">Algeria (EUR) </option>
+<option value="5">Andorra (EUR) </option>
+<option value="290">Angola (EUR) </option>
+<option value="9">Antigua and Barbuda (USD) </option>
+<option value="10">Argentina (USD) </option>
+<option value="287">Armenia (EUR) </option>
+<option value="13">Australia (AUD) </option>
+<option value="14">Austria (EUR) </option>
+<option value="288">Azerbaijan (EUR) </option>
+<option value="16">Bahamas (USD) </option>
+<option value="17">Bahrain (EUR) </option>
+<option value="18">Bangladesh (SGD) </option>
+<option value="19">Barbados (USD) </option>
+<option value="279">Belarus (EUR) </option>
+<option value="21">Belgium (EUR) </option>
+<option value="22">Belize (USD) </option>
+<option value="23">Benin (EUR) </option>
+<option value="24">Bermuda (USD) </option>
+<option value="25">Bhutan (SGD) </option>
+<option value="26">Bolivia (USD) </option>
+<option value="318">Bosnia and Herzegovina (EUR) </option>
+<option value="28">Botswana (EUR) </option>
+<option value="30">Brazil (USD) </option>
+<option value="32">Brunei Darussalam (SGD) </option>
+<option value="33">Bulgaria (EUR) </option>
+<option value="34">Burkina Faso (EUR) </option>
+<option value="291">Burma (SGD) </option>
+<option value="36">Burundi (EUR) </option>
+<option value="292">Cambodia (SGD) </option>
+<option value="38">Cameroon (EUR) </option>
+<option value="39">Canada (USD) </option>
+<option value="320">Canary Islands (Spain) (EUR) </option>
+<option value="40">Cape Verde (EUR) </option>
+<option value="42">Central African Republic (EUR) </option>
+<option value="43">Chad (EUR) </option>
+<option value="44">Chile (USD) </option>
+<option value="286">China (RMB) </option>
+<option value="48">Colombia (USD) </option>
+<option value="49">Comoros (EUR) </option>
+<option value="54">Costa Rica (USD) </option>
+<option value="281">Croatia (EUR) </option>
+<option value="293">Cyprus (EUR) </option>
+<option value="58">Czech Republic (EUR) </option>
+<option value="59">Denmark (EUR) </option>
+<option value="60">Djibouti (EUR) </option>
+<option value="61">Dominica (USD) </option>
+<option value="62">Dominican Republic (USD) </option>
+<option value="327">East Timor (USD) </option>
+<option value="64">Ecuador (USD) </option>
+<option value="65">Egypt (EUR) </option>
+<option value="66">El Salvador (USD) </option>
+<option value="322">Equatorial Guinea (EUR) </option>
+<option value="295">Eritrea (EUR) </option>
+<option value="71">Estonia (EUR) </option>
+<option value="296">Ethiopia (EUR) </option>
+<option value="335">European Union (EUR) </option>
+<option value="339">Falkland Islands (GBP) </option>
+<option value="75">Fiji (SGD) </option>
+<option value="76">Finland (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="78">French Guiana (USD) </option>
+<option value="81">Gabon (EUR) </option>
+<option value="82">Gambia (EUR) </option>
+<option value="83">Georgia (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="85">Ghana (EUR) </option>
+<option value="86">Gibraltar (EUR) </option>
+<option value="88">Greece (EUR) </option>
+<option value="89">Greenland (USD) </option>
+<option value="90">Grenada (USD) </option>
+<option value="93">Guatemala (USD) </option>
+<option value="337">Guernsey (UK) (GBP) </option>
+<option value="94">Guinea (EUR) </option>
+<option value="95">Guinea-Bissau (EUR) </option>
+<option value="96">Guyana (USD) </option>
+<option value="297">Haiti (USD) </option>
+<option value="100">Honduras (USD) </option>
+<option value="101">Hong Kong (SGD) </option>
+<option value="102">Hungary (EUR) </option>
+<option value="103">Iceland (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="298">Indonesia (SGD) </option>
+<option value="106">Ireland (EUR) </option>
+<option value="107">Israel (USD) </option>
+<option value="108">Italy (EUR) </option>
+<option value="109">Jamaica (USD) </option>
+<option value="110">Japan (JPY) </option>
+<option value="336">Jersey (UK) (GBP) </option>
+<option value="111">Jordan (EUR) </option>
+<option value="112">Kazakhstan (EUR) </option>
+<option value="113">Kenya (EUR) </option>
+<option value="114">Kiribati (SGD) </option>
+<option value="342">Kosovo (EUR) </option>
+<option value="118">Kuwait (EUR) </option>
+<option value="119">Kyrgyzstan (EUR) </option>
+<option value="299">Laos (SGD) </option>
+<option value="121">Latvia (EUR) </option>
+<option value="123">Lesotho (EUR) </option>
+<option value="125">Liechtenstein (EUR) </option>
+<option value="126">Lithuania (EUR) </option>
+<option value="127">Luxembourg (EUR) </option>
+<option value="301">Macau (SGD) </option>
+<option value="282">Macedonia (EUR) </option>
+<option value="130">Madagascar (EUR) </option>
+<option value="131">Malawi (EUR) </option>
+<option value="132">Malaysia (SGD) </option>
+<option value="133">Maldives (SGD) </option>
+<option value="134">Mali (EUR) </option>
+<option value="135">Malta (EUR) </option>
+<option value="138">Mauritania (EUR) </option>
+<option value="139">Mauritius (EUR) </option>
+<option value="141">Mexico (USD) </option>
+<option value="142">Micronesia (SGD) </option>
+<option value="144">Moldova (EUR) </option>
+<option value="146">Monaco (EUR) </option>
+<option value="312">Mongolia (SGD) </option>
+<option value="283">Montenegro (EUR) </option>
+<option value="149">Morocco (EUR) </option>
+<option value="150">Mozambique (EUR) </option>
+<option value="152">Namibia (EUR) </option>
+<option value="153">Nauru (SGD) </option>
+<option value="154">Nepal (SGD) </option>
+<option value="155">Netherlands (EUR) </option>
+<option value="157">New Caledonia (SGD) </option>
+<option value="158">New Zealand (SGD) </option>
+<option value="159">Nicaragua (USD) </option>
+<option value="160">Niger (EUR) </option>
+<option value="302">Nigeria (EUR) </option>
+<option value="319">North Ireland (UK) (GBP) </option>
+<option value="166">Norway (EUR) </option>
+<option value="167">Oman (EUR) </option>
+<option value="303">Pakistan (SGD) </option>
+<option value="169">Palau (SGD) </option>
+<option value="340">Palestine (GBP) </option>
+<option value="170">Panama (USD) </option>
+<option value="171">Papua New Guinea (SGD) </option>
+<option value="172">Paraguay (USD) </option>
+<option value="173">Peru (USD) </option>
+<option value="174">Philippines (SGD) </option>
+<option value="176">Poland (EUR) </option>
+<option value="177">Portugal (EUR) </option>
+<option value="179">Qatar (EUR) </option>
+<option value="313">Republic of the Congo (EUR) </option>
+<option value="180">Reunion (EUR) </option>
+<option value="181">Romania (EUR) </option>
+<option value="182">Russia (EUR) </option>
+<option value="304">Rwanda (EUR) </option>
+<option value="185">Saint Kitts and Nevis (USD) </option>
+<option value="186">Saint Lucia (USD) </option>
+<option value="187">Saint Vincent and the Grenadines (USD) </option>
+<option value="188">Samoa (SGD) </option>
+<option value="189">San Marino (EUR) </option>
+<option value="190">Sao Tome and Principe (EUR) </option>
+<option value="191">Saudi Arabia (EUR) </option>
+<option value="193">Senegal (EUR) </option>
+<option value="280">Serbia (EUR) </option>
+<option value="194">Seychelles (EUR) </option>
+<option value="305">Sierra Leone (EUR) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="197">Slovakia (EUR) </option>
+<option value="289">Slovenia (EUR) </option>
+<option value="199">Solomon Islands (SGD) </option>
+<option value="201">South Africa (EUR) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="332">South Sudan (EUR) </option>
+<option value="204">Spain (EUR) </option>
+<option value="205">Sri Lanka (SGD) </option>
+<option value="208">Suriname (USD) </option>
+<option value="210">Swaziland (EUR) </option>
+<option value="211">Sweden (EUR) </option>
+<option value="212">Switzerland (EUR) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="284">Tajikistan (EUR) </option>
+<option value="215">Tanzania (EUR) </option>
+<option value="216">Thailand (SGD) </option>
+<option value="217">Togo (EUR) </option>
+<option value="219">Tonga (SGD) </option>
+<option value="220">Trinidad and Tobago (USD) </option>
+<option value="222">Tunisia (EUR) </option>
+<option value="223">Turkey (EUR) </option>
+<option value="224">Turkmenistan (EUR) </option>
+<option value="226">Tuvalu (SGD) </option>
+<option value="228">Uganda (EUR) </option>
+<option value="229">Ukraine (EUR) </option>
+<option value="230">United Arab Emirates (EUR) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="234">Uruguay (USD) </option>
+<option value="235">Uzbekistan (EUR) </option>
+<option value="236">Vanuatu (SGD) </option>
+<option value="285">Vatican City (EUR) </option>
+<option value="237">Venezuela (USD) </option>
+<option value="307">Vietnam (SGD) </option>
+<option value="341">Western Sahara (GBP) </option>
+<option value="309">Yemen (EUR) </option>
+<option value="246">Zambia (EUR) </option>
+</select>
+<input type="submit" class="btn-other mshippmentbtn" name="countrySubmit" value="提交" style="margin-top:8px; width:98%" />
+</form>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown abutton-dropdown no1199 nomobile">
+<div style="line-height:13px;">
+<span id="helloFirstName" style="color:white; font-size:10px; padding-left:8px;font-weight:lighter"><span></span>，您好！</span>
+<a href="javascript:void(0)" class="dropdown-toggle myaccount-link" id="accountlink">
+我的帐户 <span><i class="fa fa-chevron-down myaccount-arrow" id="achevron" aria-hidden="true" style="color:#fff; font-size:11px; position:relative; top:-2px; margin-left:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu adropdown-menu">
+<li>
+<div style="display:none" id="MyAccountLogin">
+<a href="/my-account/" rel="nofollow" style="text-decoration: none !important;"><div style="width:100%" class="btn-other logout"> 登陆</div></a>
+<div style="text-align:center; padding-top:15px">新用户？ <a href="/my-account/createaccount">免费注册.</a></div>
+</div>
+<div id="MyAccountLogout" style="display:none">
+<h3 id="myaccountwelcome" style="display:none; margin-top:0px; font-weight:normal !important">欢迎 <span></span>！</h3>
+<span id="myaccountpadding" style="display:none"></span>
+<p>
+<strong>我的帐户</strong><br />
+<a href="/my-account/" rel="nofollow">账户概览</a>
+</p>
+<p>
+<strong>我的档案</strong><br />
+<a href="/profile/" rel="nofollow">更新我的档案</a>
+</p>
+<p>
+<strong>付款和运输</strong><br />
+<a href="/address-book" rel="nofollow">地址簿</a>,
+<a href="/tax-certificate/" rel="nofollow">缴税证明</a>
+</p>
+<p>
+<strong>网上订单</strong><br />
+<a href="/order-history/" rel="nofollow">浏览历史订单</a>
+</p>
+<p>
+<strong>购物车</strong><br />
+<a href="/saved-list" rel="nofollow">移入收藏夹</a>
+</p>
+<div style="width:100%" class="btn-other logout">
+<a href="/my-account/logout/?ReturnUrl=%2fknowledge-center%2fapplication-notes%2flasers%2fsubsurface-damage%2f" rel="nofollow">退出登录</a>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown no1199 nomobile" style="position: relative;">
+<a href="javascript:void(0)" class="dropdown-toggle">
+<div id="cartshiftfull">
+<div id="miniCartClick" class="miniCartClick">
+<div style="width: auto; height: 30px; float: left; padding-top: 5px;">
+<i class="fa fa-shopping-cart cartImg" aria-hidden="true"></i>
+<span id="cartCount" class="miniCartCount">&nbsp;&nbsp;</span>
+</div>
+</div>
+</div>
+</a>
+<ul class="dropdown-menu" style="left: -150px; top: 34px; background: none;width: 0px; height: 0px;">
+<li>
+<div id="container-checkoutminicart" style="right: 233px; display:none"></div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="cd-nav container">
+<ul id="cd-primary-nav" class="cd-primary-nav is-fixed mm">
+
+<li class="has-children" style="cursor:pointer">
+<a id="productsTab" onclick="ToggleMenuTab('products')" data-tab-value="products">产品</a>
+<div id="mobileMenu-products"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="capabilitiesTab" onclick="ToggleMenuTab('capabilities')" data-tab-value="capabilities">能力</a>
+<div id="mobileMenu-capabilities"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="knowledge-centerTab" onclick="ToggleMenuTab('knowledge-center')" data-tab-value="knowledge-center">资源库</a>
+<div id="mobileMenu-knowledge-center"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="companyTab" onclick="ToggleMenuTab('company')" data-tab-value="company">公司</a>
+<div id="mobileMenu-company"></div>
+</li>
+<li><a id="contactTab" href="/contact-support/" data-tab-value="contact">联系我们</a></li>
+<li class="displayyes-mm is-fixed"><a href="/my-account/"><span class="fa fa-user">&nbsp;</span> My Account</a></li>
+<li class="displayyes-mm is-fixed"><a href="/cart/"><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;</i> Cart</a></li>
+</ul>
+</div><div class="cd-overlay">&nbsp;</div>
+<div class="cd-main-content">
+<div id="MenuContentWindow" class="cd-primary-nav is-fixed mm"></div>
+</div>
+<script>
+
+    function ToggleMenuTab(tabValue) {
+  
+
+      
+
+        var linkId = tabValue + "Tab";
+        var contentWindow = "";
+        if (window.innerWidth > 1198) {
+            contentWindow = "#MenuContentWindow"
+        } else { contentWindow = "#mobileMenu-" + tabValue }
+
+        if ($(contentWindow).is(":visible") && $(contentWindow).val() == tabValue) {
+            $(contentWindow).hide();
+            $("#" + linkId).removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+            $('.cd-overlay').removeClass('is-visible');
+        }
+        else {
+            MegaMenuWindow("/mega-menu/"+tabValue, tabValue, contentWindow);
+        }
+    }
+
+    function MegaMenuWindow(url, tabValue, contentWindow) {
+    var linkId = tabValue + "Tab"
+        var newUrl = url.replace(' ', '');
+        $(contentWindow).load(newUrl, function () {
+
+            $(contentWindow).val(tabValue);
+            $("#" + linkId).addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+            $(".cd-secondary-nav").removeClass('is-hidden');
+            $("#"+linkId).parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+            $(contentWindow).show();
+            $('.cd-overlay').addClass('is-visible');
+            insertMegaMenuScript();
+            if (window.innerWidth < 1199) {
+                if ($(".megaMenuContainer").hasClass("container")) {
+                    $(".megaMenuContainer").removeClass("container")
+                    $(".megaMenuContainer").removeClass("top-navigation")
+                }
+            }
+        });
+    }
+    function insertMegaMenuScript() {
+
+        var MqL = 1200;
+        //episerverCode
+        if (window.innerWidth < 1199) {
+            if ($(".megaMenuContainer").hasClass("container")) {
+                $(".megaMenuContainer").removeClass("container")
+                $(".megaMenuContainer").removeClass("top-navigation")
+            }
+            
+            $('ul.cd-secondary-nav  li.has-children a').click(function (event) {
+                if (event.target.parentElement.className.includes('has-children')) { event.preventDefault(); }
+              
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                }
+            });
+
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                if ($(this).parent('ul').hasClass('cd-secondary-nav')) {
+                    $("#cd-primary-nav").removeClass('moves-out');
+                    $('ul.cd-secondary-nav').addClass('is-hidden');
+                    $("#productsTab").val("none");
+                    $("#productsTab").removeClass("selected");
+                    $("#capabilitiesTab").val("none");
+                    $("#capabilitiesTab").removeClass("selected");
+                    $("#knowledge-centerTab").val("none");
+                    $("#knowledge").removeClass("selected");
+                    $("#companyTab").val("none");
+                    $("#companyTab").removeClass("selected");
+                    $("[id^=mobileMenu]").css("display", "none");
+                }
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+        else {
+
+
+            $('ul.cd-secondary-nav > li.has-children > ul.is-hidden > li.has-children').children('a').on('click', function (event) {
+                if (!checkWindowWidth()) event.preventDefault();
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                    $('.cd-overlay').removeClass('is-visible');
+                }
+                toggleSearch('close');
+            });
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+
+
+        function checkWindowWidth() {
+            //check window width (scrollbar included)
+            var e = window,
+                a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            if (e[a + 'Width'] >= MqL) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function toggleSearch(type) {
+            if (type == "close") {
+                //close search 
+                $('.cd-search').removeClass('is-visible');
+                $('.cd-search-trigger').removeClass('search-is-visible');
+                $('.cd-overlay').removeClass('search-is-visible');
+            } else {
+                //toggle search visibility
+                $('.cd-search').toggleClass('is-visible');
+                $('.cd-search-trigger').toggleClass('search-is-visible');
+                $('.cd-overlay').toggleClass('search-is-visible');
+                if ($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+                ($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible');
+            }
+        }
+    };
+</script>
+</div>
+</div>
+</div>
+<div class="respd" id="productCompareToolbar">
+<div class="col-md-12 row">
+</div>
+</div>
+<div id="alertBanners">
+<div class="alert alert-warning container" id="addToCartAlert" style="display:none; z-index: 99999;">
+<span id="addtoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addOrderToCartAlert" style="display:none; z-index: 99999;">
+订单号 <span id="addOrdertoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addAllToCartAlert" style="display:none; z-index: 99999;">
+All items have been added to your cart.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addToCompareList" style="display:none; z-index: 99999;">
+<span id="addtoCompareAlertContent"></span> has been added to your compare list.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+</div>
+<div class="container" id="MainBody">
+<div>
+</div>
+<div class="row col-lg-12 col-sm-12 col-xs-12 mindentleft">
+<h6 style="margin-top:10px; margin-left:-5px" itemprop="breadcrumb">
+<a href="/knowledge-center/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">Resource Page</a>
+/ <a href="/knowledge-center/application-notes/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">应用案例</a>
+/ <a href="/knowledge-center/application-notes/lasers/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">激光</a>
+/ <a href="/knowledge-center/application-notes/lasers/subsurface-damage/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">表面损伤</a>
+</h6>
+</div>
+<script type="application/ld+json">
+    
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{"@type": "ListItem","position": 4, "name": "Resource Page", "item": "https://www.edmundoptics.cn/knowledge-center/"},{"@type": "ListItem","position": 3, "name": "应用案例", "item": "https://www.edmundoptics.cn/knowledge-center/application-notes/"},{"@type": "ListItem","position": 2, "name": "激光", "item": "https://www.edmundoptics.cn/knowledge-center/application-notes/lasers/"},{"@type": "ListItem","position": 1, "name": "表面损伤", "item": "https://www.edmundoptics.cn/knowledge-center/application-notes/lasers/subsurface-damage/"}]
+    }
+</script>
+
+<div>
+<div itemscope="" itemtype="http://schema.org/Article">
+<span itemprop="name" style="display:none;">表面损伤</span>
+<span itemprop="url" style="display:none;">http://www.edmundoptics.cn/knowledge-center/application-notes/lasers/subsurface-damage/</span>
+<div itemprop="sourceOrganization" itemscope="" itemtype="http://schema.org/Organization" style="display:none;">
+<span itemprop="name"></span>
+<span itemprop="url">http://www.edmundoptics.cn</span>
+</div>
+</div>
+</div>
+<div>
+<div id="mainContent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col-sm-12 mindentleft norightborder row">
+<h1 style="margin-top:0px; margin-bottom:5px">表面损伤</h1>
+<div class="noPrint" style="margin-bottom:15px; border-bottom:1px solid #dadada; padding-bottom:10px">
+
+<a class="w-inline-block share-btn twitter" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20this%20out:%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
+<i class="fa fa-twitter"></i>
+</a>
+
+<a class="w-inline-block share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+<i class="fa fa-facebook"></i>
+</a>
+
+<a class="w-inline-block share-btn linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+<i class="fa fa-linkedin"></i>
+</a>
+<span>
+
+<a id="email" class="w-inline-block share-btn email" href="#" rel="nofollow" title="Email">
+<i class="fa fa-envelope"></i>
+</a>
+<a href="#" class="share-btn print" target="_blank" rel="nofollow" onClick="window.print()">
+<i class="fa fa-print" aria-hidden="true" style="left:4px; position:relative"></i>
+<span class="printText"></span>
+</a>
+</span>
+<script type="text/javascript">
+    var link = document.getElementById('email');
+    link.onclick = function () {
+        this.href = "mailto:?subject=";
+        this.href += getSubject();
+        this.href += "&body=";
+        this.href += getBody();
+    };
+    function getBody() {
+        return encodeURIComponent(document.URL);
+    }
+    function getSubject() {
+        return encodeURIComponent(document.title);
+    }
+    $(".print-pdf").click(function () {
+        trackEvent('Print', 'Click', window.location.href +'?PrintPDF=true', 'CN');
+        window.location.replace("?PrintPDF=true");
+    });
+
+</script>
+<span style="padding-left:5px;" data-contentId="#= data[i].ContentId #" class="content-star">
+<i id="savedContentStar" class="fa fa-star" style="cursor:pointer; color:lightgray" onclick="savedContent(39023+'-EPI-'+12, '');"></i>
+</span>
+</div>
+<p>This is <strong>Section 1.8</strong> of the <a href="/knowledge-center/application-notes/lasers/laser-optics-resource-guide/">Laser Optics Resource Guide</a>.</p>
+<div style="height: 70px;">
+<div class="row" style="margin-bottom: 5px; padding: 10px; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; width: 100%;"><a style="float: left;" href="/knowledge-center/application-notes/lasers/homogeneity-and-scatter-from-inclusions-and-bubbles/"><img alt="上个章节" src="/globalassets/icons/arrow_lft_product_nav.gif" /> 上个章节 </a><a style="float: right;" href="/knowledge-center/application-notes/lasers/common-laser-optics-materials/">下个章节 <img alt="下个章节" src="/globalassets/icons/arrow_rht_product_nav.gif" /></a></div>
+</div>
+<div class="row">
+<p>无论如何精心制造，每种光学元件都会在表面下方产生一定程度的表面下损伤，如裂纹、残余应力、污染物和空洞。<sup>1</sup> 这些缺陷可能是在制造过程中造成的，也可能是所使用材料的类型或质量固有的。用激光照射时，表面下损伤会提高吸收和散射，产生热量并导致光通量降低。在使用大功率激光器或系统处于明显的机械应力状态时，这些性能异常可能导致系统故障。</p>
+<p>研磨和抛光过程会留下在抛光再沉积或拜尔培层下方约 0.1μm 到数十微米的表面下损伤。再沉积是光学元件的顶层，由于抛光过程中的化学反应回流到细小的表面划痕上<sup>2</sup>。再沉淀层下方的缺陷层包含大多数基片裂缝和其他缺陷，通常会向下延伸到光学元件表面下方1-100μm 处。然后，一个变形层会将这个缺陷层与无缺陷的大块材料分离开来（<em>图 1</em>）。</p>
+<div class="mobile100" style="margin: 0 auto; width: 400px;"><img class="mobile100" style="width: 400px;" alt="图 1: 制造过程中遗留的表面下损伤" src="/globalassets/knowledge-center/app-notes/optics/subsurface-damage-fig1.png" />
+<h5><strong>图 1:</strong>&nbsp;制造过程中遗留的表面下损伤<sup>3</sup></h5>
+</div>
+<p>除非使用特殊的激光级抛光和清洁工艺，否则杂质可能会在抛光过程中被困在再沉积层中。用越来越细的砂砾进行抛光可以进一步减少表面下损伤的数量，但这种损伤无法完全消除。用更细的砂砾进行抛光可以提高光学元件的质量，但会增加抛光所需的时间，从而增加成本。有效的激光光学抛光工艺可以消除深层的表面下损伤，无效的抛光工艺只能将损伤隐藏在拜尔培层之下。</p>
+<p><em><strong>参考文献</strong></em></p>
+<ol>
+<li><em>Fine, Kevin R, et al. “OPTICS FABRICATION: Subsurface Damage Is Measured Nondestructively.” Laser Focus World, June 2006.</em></li>
+<li><em>Finch, G. Ingle. “The Beilby Layer on Non-Metals.” Nature, vol. 138, no. 3502, 1936, pp. 1010–1010., doi:10.1038/1381010a0.</em></li>
+<li><em>Collier, David, and Rod Schuster. “Superpolishing Deep-UV Optics.” Photonics Spectra, February 2005.</em></li>
+</ol></div>
+<div style="height: 70px;">
+<div class="row" style="margin-bottom: 5px; padding: 10px; border-top: 1px solid #d2d2d2; border-bottom: 1px solid #d2d2d2; width: 100%;"><a style="float: left;" href="/knowledge-center/application-notes/lasers/homogeneity-and-scatter-from-inclusions-and-bubbles/"><img alt="上个章节" src="/globalassets/icons/arrow_lft_product_nav.gif" /> 上个章节 </a><a style="float: right;" href="/knowledge-center/application-notes/lasers/common-laser-optics-materials/">下个章节 <img alt="下个章节" src="/globalassets/icons/arrow_rht_product_nav.gif" /></a></div>
+</div>
+<div class="container content-rating" style="margin-bottom:60px; margin-top:30px">
+<div class="col-lg-9">
+<div class="rating-box">
+<div style="font-size:30px; font-weight:bold">本内容对您是否有用？</div>
+<fieldset class="rating">
+<input id="star5" type="radio" value="5" name="rating" /><label class="full" title="Very useful" for="star5"></label>
+<input id="star4" type="radio" value="4" name="rating" /><label class="full" title="Useful" for="star4"></label>
+<input id="star3" type="radio" value="3" name="rating" /><label class="full" title="Fairly" for="star3"></label>
+<input id="star2" type="radio" value="2" name="rating" /><label class="full" title="A little bit" for="star2"></label>
+<input id="star1" type="radio" value="1" name="rating" /><label class="full" title="Not at all" for="star1"></label>
+</fieldset>
+<label id="rating-thank-you">感谢您为本内容评分！</label>
+</div>
+</div>
+</div>
+<script>
+    $('input[name=rating]').on('change', function () {
+        var rating = $('input[name=rating]:checked').val();
+        trackEvent('Content Ratings', 'ApplicationNote', rating);
+        $('.rating').hide();
+        $('#rating-thank-you').show();
+    });
+</script>
+</div>
+<div id="RightHandColumnContent" class="col-lg-3 col-md-3 nomobile noipad"></div>
+</div>
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+</div>
+<div class="eoFooter">
+<div class="clearfix">
+<div id="footerbg" class="noprint col-lg-12 col-sm-12 respd">
+<div class="container theme-showcase" id="containerone">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-12 qqh2">
+<h2 class="quote">需要报价？ <span style="font-size: 15px;font-weight: lighter;">输入库存编号只需两步即可获取报价.</span></h2>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+<a class="btn-other qq" href="/tools/quote">立即开始</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 footercallbox yesmobile" style="padding-right:0px; margin-bottom:-35px; margin-top:20px; top:-34px">
+<span style="position:relative; top:-3px"> <div><div class="block htmlblock  ">
+<span><h2><a style="color: #fff; text-decoration: none;" href="tel:0755-8435-5459">立即拨打! (+86) 0755 8435 5459</a></h2></span>
+</div></div></span>
+</div>
+<div class="clearfix"></div>
+<div id="legallogos" style="margin-top:0 !important">
+<div id="socialnetworks" class="clearfix">
+<span><div><div class="block htmlblock full span12">
+<span><p><a href="http://i.youku.com/i/UMjcxMDM2NTQ0NA==?spm=a2hzp.8244740.uerCenter.5~5!2~A" target="_blank" rel="nofolow"><span style="padding-right: 2px;"><img class="lazy" alt="Edmund Optics Youku" data-src="/globalassets/footer/social-icons/youku-website-1.gif" /></span></a>&nbsp; <a href="https://www.linkedin.com/company/edmund-optics" target="_blank" rel="external"><span style="padding-right: 2px;"><img class="lazy" alt="Edmund Optics Linkedin" data-src="/globalassets/footer/social-icons/linkedin-web-1.gif" /></span></a></p></span>
+</div></div></span>
+</div>
+<div class="copyright clearfix">
+<span><div><div class="block htmlblock full span12">
+<span><p style="padding-bottom: 15px;"><a href="/contact-support/">联系与支持&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="/contact-support/catalogs/">目录</a>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<a href="/company/">公司</a>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<a href="/promotions/">促销</a></p>
+<div style="margin-bottom: -10px !important; margin-top: -10px !important;">
+<p style="color: #9e9e9e;">版权所有 <span id="year">year</span>，爱特蒙特光学（深圳）有限公司。—广东省深圳市龙华工业东路利金城科技工业园3栋5楼 518109 <br /><span lang="ZH-CN">粤</span><span>ICP</span><span lang="ZH-CN">备</span><span>15118149</span><span lang="ZH-CN">号</span></p>
+</div></span>
+</div></div></span>
+<span><div><div class="block htmlblock full span12">
+<span><div class="clearfix" style="margin-top: 25px; margin-left: 15px; margin-right: 15px;"><a href="/privacy-policy/">保密政策</a> | <a href="/terms-and-conditions/">术语和条款</a> | <a href="/company/careers/">职位</a> | <a href="/contact-support/help-center/">技术支持中心</a> | <a href="/contact-support/feedback/">回复</a></div></span>
+</div></div></span>
+</div>
+<div id="belowsitemap">
+<span><div><div class="block htmlblock  ">
+<span><div style="padding-left: 0px;"><span style="padding-bottom: 10px; position: relative; top: 10px;">
+<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=b402a935000e4bd4b21355d40e41bce8"></script>
+</span></div></span>
+</div></div></span>
+</div>
+</div>
+</div>
+<script>
+        function gaDomainSwitch() { return ""; }
+        function trackEvent(category, action, label, lang, url) { if (url != null) { document.location = url; } }
+    </script>
+<script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?db39645f9402caaf9df562b3a6adfa02";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<div id="redirectCountryModal" class="eo-modal-window">
+<div class="eo-modal-content">
+<span class="close">&times;</span>
+<div id="redirectCountryContent"></div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/autocomplete.css?v=637103590040000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/font-awesome.css?v=636996553900000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/custom.kendo.css?v=636851485920000000" media="all" />
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/print.css?v=636969878340000000" media="print">
+<script src="/Assets/javascript/layout-bundled/js.cookie.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/layout-bundled/livechat.js?v=636845459280000000"></script>
+<script src="/Assets/javascript/layout-bundled/kendo.custom.min.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/combine/jquery.cookie.js?v=636645748340000000"></script>
+<script src="/Assets/javascript/layout-bundled/layout.js?v=637298997960000000"></script>
+<script src="/assets/javascript/jquery.lazy.min.js?v=636880606380000000"></script>
+<script>$('.lazy').Lazy()</script>
+<script>
+        //var userSavedContent;
+        $(document).ready(function () {
+            GetSavedContentStar(39023+'-EPI-' +12);
+            GetDataAfterLogIn(39023+'-EPI-' +12);
+        });
+
+        function GetSavedContentStar(ContentId) {
+
+            if ($('#savedContentStar').length > 0) {
+                $.getJSON("/api/ResourceSearch/GetSavedContent?contentId=" + ContentId, function (data) {
+                    userSavedContent = data;
+                    if (data.length == 0) {
+                        $("#savedContentStar").css("color", "lightgray");
+                    }
+                    else { $("#savedContentStar").css("color", "gold"); }
+                });
+            }
+        }
+
+        function GetDataAfterLogIn(ContentId)
+        {
+            var url = window.location.href;
+            if (url.includes("saveUserContentId"))
+            {
+                InsertSavedContent(ContentId);
+            }
+        }
+
+    </script>
+<script type="text/javascript">
+$(document).ready(function(){
+var d = new Date();
+var n = d.getFullYear();
+
+$("#year").text(n);
+
+});
+
+</script>
+<style>
+.headertop {
+    background-color: green;
+    height: auto;
+}
+.is-cov {
+background-color: #000!important; height: 40px; border-bottom: 6px solid #4a4949;
+}
+
+.cov1 {
+padding-right: 0px; border-right: 1px solid #4a4949;
+}
+
+.cov2 {
+background-image: url('https://www.edmundoptics.com/contentassets/c9b0ec54bc594de0b332c5f2cf3beddd/imaging-summitv4v.jpg'); background-position: center; /* margin-right: 20px; */
+    background-position-y: -350px; background-position-x: 748px; height: 34px;
+
+}
+
+@media (max-width: 1000px) {
+.is-cov {
+height:auto;
+}
+.cov1 {
+border-right: none;
+}
+.cov2 {
+height: auto;
+padding-bottom:10px;
+}
+}
+
+
+
+a:not([href]):not([tabindex]) {
+
+    color: #fff;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+}
+
+.faqQuestion {
+color:#000 !important
+}
+
+.cd-overlay {
+
+    z-index: 99;
+}
+
+.pagination li a {
+    color: #585858 !Important;
+}
+
+
+.jstree-default .jstree-icon:empty {
+
+    line-height: 31px;
+}
+
+.faqQuestion a {
+color: #0462be !important;
+}
+
+
+.cbutton-dropdown > div > span {
+    padding-left: 12px !important;
+}
+
+.slitherBannerX {
+color:#585858 !important;
+display:none
+}
+
+
+
+
+#CybotCookiebotDialog {
+    border-color: #000000;
+    border-radius: unset;
+    border-top: 1px solid #585858;
+    border-bottom: 1px solid #585858;
+    border-radius: unset;
+    box-shadow: none;
+
+}
+
+
+     #CybotCookiebotDialogBodyButtonAccept{ background-color: #fdcd00; border: 1px solid #fdcd00; cursor: pointer; padding: 5px 10px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: relative; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; background: #fbcc30; color: #000; box-shadow: 3px 3px 4px #585858; -webkit-transition: none; -moz-transition: none; transition: none; border-radius: 5px; font-size:12px; margin-top:-5px}
+
+
+
+
+      #CybotCookiebotDialogBody {max-width:1170px}
+
+
+
+
+      .CookieDeclarationDialogText, .CookieDeclarationIntro, .CookieDeclarationLastUpdated { margin: 0 0 14px 0 }
+
+#CybotCookiebotDialog a, #CybotCookiebotDialog br, #CybotCookiebotDialog div, #CybotCookiebotDialog td {
+    line-height: 1.5;
+}
+
+
+      .CookieDeclarationType { display: block; margin: 12px 0 12px 0; padding:8px 8px 0 8px; border: 1px solid #333333; vertical-align: top; }
+      .CookieDeclarationTypeHeader { font-weight: bold; }
+      .CookieDeclarationTypeDescription { margin: 2px 0 16px 0; }
+      .CookieDeclarationTable { table-layout: fixed; width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 0 18px 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+      .CookieDeclarationTableHeader { font-weight: bold; border-bottom: 1px solid #777777; text-align: left; padding: 4px; }
+      .CookieDeclarationTableHeader[dir='rtl'] { text-align: right; }
+      .CookieDeclarationTableCell { text-overflow: ellipsis; word-wrap: break-word; border-bottom: 1px solid #777777; vertical-align: top; padding: 4px 4px 5px 4px; }
+    #CybotCookiebotDialogBodyContent { padding-top:15px}
+    #CybotCookiebotDialog a, #CybotCookiebotDialog div, 
+
+
+#CybotCookiebotDialogBodyContentControls, #CybotCookiebotDialogBodyContentTitle { font-family: 'Heebo', Helvetica, Arial, sans-serif }
+
+#CybotCookiebotDialogBodyContentTitle {
+
+    padding: 0;
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 100%;
+    color: #ffffff;
+    display: block;
+    position: static;
+    margin: 2px 0 6px;
+}
+
+
+</style>
+<script src="/Assets/javascript/layout-bundled/ChinaTagManager.js?v=637100185060000000"></script>
+<script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#addToCartAlert').addClass('navbar-fixed-top');
+                $('#addAllToCartAlert').addClass('navbar-fixed-top');
+                $('#addToCompareList').addClass('navbar-fixed-top');
+            }
+            if ($(window).scrollTop() < 301) {
+                $('#addToCartAlert').removeClass('navbar-fixed-top');
+                $('#addAllToCartAlert').removeClass('navbar-fixed-top');
+                $('#addToCompareList').removeClass('navbar-fixed-top');
+
+            }
+        });
+    </script>
+<script data-cfasync="false">
+(function(W,i,s,e,P,o,p){W['WisePopsObject']=P;W[P]=W[P]||function(){(W[P].q=W[P].q||[]).push(arguments)},W[P].l=1*new Date();o=i.createElement(s),p=i.getElementsByTagName(s)[0];o.async=1;o.src=e;p.parentNode.insertBefore(o,p)})(window,document,'script','//loader.wisepops.com/get-loader.js?v=1&site=EJXiYx9y4t','wisepops');
+    </script>
+</body>
+</html>

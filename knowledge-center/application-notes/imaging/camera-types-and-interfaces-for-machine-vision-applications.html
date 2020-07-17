@@ -1,0 +1,1355 @@
+
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<script id="Cookiebot" src="https://consent.cookiebot.com/uc.js" data-cbid="94ae87c0-4163-47a8-a565-c09ba562fb67" type="text/javascript" data-blockingmode="auto" data-georegions="{'region':'AW,AF,AO,AI,AX,AL,AD,AE,AR,AM,AS,AQ,TF,AG,AU,AZ,BI,BJ,BQ,BF,BD,BH,BS,BA,BL,BY,BZ,BM,BO,BR,BB,BN,BT,BV,BW,CF,CA,CC,CH,CL,CN,CI,CM,CD,CG,CK,CO,KM,CV,CR,CU,CW,CX,KY,DJ,DM,DO,DZ,EC,EG,ER,EH,ET,FJ,FK,FO,FM,GA,GE,GG,GH,GI,GN,GP,GM,GW,GQ,GD,GL,GT,GF,GU,GY,HK,HM,HN,HT,ID,IM,IN,IO,IR,IQ,IL,JM,JE,JO,JP,KZ,KE,KG,KH,KI,KN,KR,KW,LA,LB,LR,LY,LC,LK,LS,MO,MF,MA,MC,MD,MG,MV,MX,MH,MK,MT,MM,ME,MN,MP,MZ,MR,MS,MQ,MU,MW,MY,YT,NA,NC,NE,NF,NG,NI,NU,NP,NR,NZ,OM,PK,PA,PN,PE,PH,PW,PG,PR,KP,PY,PS,PF,QA,RE,RU,RW,SA,SD,SN,SG,GS,SH,SJ,SB,SL,SV,SM,SO,PM,RS,SS,ST,SR,SZ,SX,SC,SY,TC,TD,TG,TH,TJ,TK,TM,TL,TO,TT,TN,TR,TV,TW,TZ,UG,UA,UM,UY,US,UZ,VA,VC,VE,VG,VI,VN,VU,WF,WS,YE,ZA,ZM,ZW', 'cbid':'c540f2e8-c4fa-49cd-a6c0-b828f88912be'}" data-culture="ZH"></script>
+<script src="/Assets/javascript/layout-bundled/!jquery-3.3.1.js?v=636639559960000000"></script>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=10" /><script type="text/javascript">window.NREUM||(NREUM={});NREUM.info = {"beacon":"bam.nr-data.net","errorBeacon":"bam.nr-data.net","licenseKey":"a599ef7b57","applicationID":"10142686","transactionName":"bgdUbEMAX0sEBU0NW1dNe25yTnVdAwdMCEBpA1Fdcg5fTBcJVQhRS01fVlUESQ==","queueTime":0,"applicationTime":64,"agent":"","atts":""}</script><script type="text/javascript">(window.NREUM||(NREUM={})).loader_config={xpid:"UQcHVVJQGwIAVVVQAQkB",licenseKey:"a599ef7b57",applicationID:"10142686"};window.NREUM||(NREUM={}),__nr_require=function(t,n,e){function r(e){if(!n[e]){var o=n[e]={exports:{}};t[e][0].call(o.exports,function(n){var o=t[e][1][n];return r(o||n)},o,o.exports)}return n[e].exports}if("function"==typeof __nr_require)return __nr_require;for(var o=0;o<e.length;o++)r(e[o]);return r}({1:[function(t,n,e){function r(t){try{s.console&&console.log(t)}catch(n){}}var o,i=t("ee"),a=t(21),s={};try{o=localStorage.getItem("__nr_flags").split(","),console&&"function"==typeof console.log&&(s.console=!0,o.indexOf("dev")!==-1&&(s.dev=!0),o.indexOf("nr_dev")!==-1&&(s.nrDev=!0))}catch(c){}s.nrDev&&i.on("internal-error",function(t){r(t.stack)}),s.dev&&i.on("fn-err",function(t,n,e){r(e.stack)}),s.dev&&(r("NR AGENT IN DEVELOPMENT MODE"),r("flags: "+a(s,function(t,n){return t}).join(", ")))},{}],2:[function(t,n,e){function r(t,n,e,r,s){try{p?p-=1:o(s||new UncaughtException(t,n,e),!0)}catch(f){try{i("ierr",[f,c.now(),!0])}catch(d){}}return"function"==typeof u&&u.apply(this,a(arguments))}function UncaughtException(t,n,e){this.message=t||"Uncaught error with no additional information",this.sourceURL=n,this.line=e}function o(t,n){var e=n?null:c.now();i("err",[t,e])}var i=t("handle"),a=t(22),s=t("ee"),c=t("loader"),f=t("gos"),u=window.onerror,d=!1,l="nr@seenError",p=0;c.features.err=!0,t(1),window.onerror=r;try{throw new Error}catch(h){"stack"in h&&(t(9),t(8),"addEventListener"in window&&t(5),c.xhrWrappable&&t(10),d=!0)}s.on("fn-start",function(t,n,e){d&&(p+=1)}),s.on("fn-err",function(t,n,e){d&&!e[l]&&(f(e,l,function(){return!0}),this.thrown=!0,o(e))}),s.on("fn-end",function(){d&&!this.thrown&&p>0&&(p-=1)}),s.on("internal-error",function(t){i("ierr",[t,c.now(),!0])})},{}],3:[function(t,n,e){t("loader").features.ins=!0},{}],4:[function(t,n,e){function r(t){}if(window.performance&&window.performance.timing&&window.performance.getEntriesByType){var o=t("ee"),i=t("handle"),a=t(9),s=t(8),c="learResourceTimings",f="addEventListener",u="resourcetimingbufferfull",d="bstResource",l="resource",p="-start",h="-end",m="fn"+p,w="fn"+h,v="bstTimer",g="pushState",y=t("loader");y.features.stn=!0,t(7),"addEventListener"in window&&t(5);var x=NREUM.o.EV;o.on(m,function(t,n){var e=t[0];e instanceof x&&(this.bstStart=y.now())}),o.on(w,function(t,n){var e=t[0];e instanceof x&&i("bst",[e,n,this.bstStart,y.now()])}),a.on(m,function(t,n,e){this.bstStart=y.now(),this.bstType=e}),a.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),this.bstType])}),s.on(m,function(){this.bstStart=y.now()}),s.on(w,function(t,n){i(v,[n,this.bstStart,y.now(),"requestAnimationFrame"])}),o.on(g+p,function(t){this.time=y.now(),this.startPath=location.pathname+location.hash}),o.on(g+h,function(t){i("bstHist",[location.pathname+location.hash,this.startPath,this.time])}),f in window.performance&&(window.performance["c"+c]?window.performance[f](u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["c"+c]()},!1):window.performance[f]("webkit"+u,function(t){i(d,[window.performance.getEntriesByType(l)]),window.performance["webkitC"+c]()},!1)),document[f]("scroll",r,{passive:!0}),document[f]("keypress",r,!1),document[f]("click",r,!1)}},{}],5:[function(t,n,e){function r(t){for(var n=t;n&&!n.hasOwnProperty(u);)n=Object.getPrototypeOf(n);n&&o(n)}function o(t){s.inPlace(t,[u,d],"-",i)}function i(t,n){return t[1]}var a=t("ee").get("events"),s=t("wrap-function")(a,!0),c=t("gos"),f=XMLHttpRequest,u="addEventListener",d="removeEventListener";n.exports=a,"getPrototypeOf"in Object?(r(document),r(window),r(f.prototype)):f.prototype.hasOwnProperty(u)&&(o(window),o(f.prototype)),a.on(u+"-start",function(t,n){var e=t[1],r=c(e,"nr@wrapped",function(){function t(){if("function"==typeof e.handleEvent)return e.handleEvent.apply(e,arguments)}var n={object:t,"function":e}[typeof e];return n?s(n,"fn-",null,n.name||"anonymous"):e});this.wrapped=t[1]=r}),a.on(d+"-start",function(t){t[1]=this.wrapped||t[1]})},{}],6:[function(t,n,e){function r(t,n,e){var r=t[n];"function"==typeof r&&(t[n]=function(){var t=i(arguments),n={};o.emit(e+"before-start",[t],n);var a;n[m]&&n[m].dt&&(a=n[m].dt);var s=r.apply(this,t);return o.emit(e+"start",[t,a],s),s.then(function(t){return o.emit(e+"end",[null,t],s),t},function(t){throw o.emit(e+"end",[t],s),t})})}var o=t("ee").get("fetch"),i=t(22),a=t(21);n.exports=o;var s=window,c="fetch-",f=c+"body-",u=["arrayBuffer","blob","json","text","formData"],d=s.Request,l=s.Response,p=s.fetch,h="prototype",m="nr@context";d&&l&&p&&(a(u,function(t,n){r(d[h],n,f),r(l[h],n,f)}),r(s,"fetch",c),o.on(c+"end",function(t,n){var e=this;if(n){var r=n.headers.get("content-length");null!==r&&(e.rxSize=r),o.emit(c+"done",[null,n],e)}else o.emit(c+"done",[t],e)}))},{}],7:[function(t,n,e){var r=t("ee").get("history"),o=t("wrap-function")(r);n.exports=r;var i=window.history&&window.history.constructor&&window.history.constructor.prototype,a=window.history;i&&i.pushState&&i.replaceState&&(a=i),o.inPlace(a,["pushState","replaceState"],"-")},{}],8:[function(t,n,e){var r=t("ee").get("raf"),o=t("wrap-function")(r),i="equestAnimationFrame";n.exports=r,o.inPlace(window,["r"+i,"mozR"+i,"webkitR"+i,"msR"+i],"raf-"),r.on("raf-start",function(t){t[0]=o(t[0],"fn-")})},{}],9:[function(t,n,e){function r(t,n,e){t[0]=a(t[0],"fn-",null,e)}function o(t,n,e){this.method=e,this.timerDuration=isNaN(t[1])?0:+t[1],t[0]=a(t[0],"fn-",this,e)}var i=t("ee").get("timer"),a=t("wrap-function")(i),s="setTimeout",c="setInterval",f="clearTimeout",u="-start",d="-";n.exports=i,a.inPlace(window,[s,"setImmediate"],s+d),a.inPlace(window,[c],c+d),a.inPlace(window,[f,"clearImmediate"],f+d),i.on(c+u,r),i.on(s+u,o)},{}],10:[function(t,n,e){function r(t,n){d.inPlace(n,["onreadystatechange"],"fn-",s)}function o(){var t=this,n=u.context(t);t.readyState>3&&!n.resolved&&(n.resolved=!0,u.emit("xhr-resolved",[],t)),d.inPlace(t,g,"fn-",s)}function i(t){y.push(t),h&&(b?b.then(a):w?w(a):(E=-E,O.data=E))}function a(){for(var t=0;t<y.length;t++)r([],y[t]);y.length&&(y=[])}function s(t,n){return n}function c(t,n){for(var e in t)n[e]=t[e];return n}t(5);var f=t("ee"),u=f.get("xhr"),d=t("wrap-function")(u),l=NREUM.o,p=l.XHR,h=l.MO,m=l.PR,w=l.SI,v="readystatechange",g=["onload","onerror","onabort","onloadstart","onloadend","onprogress","ontimeout"],y=[];n.exports=u;var x=window.XMLHttpRequest=function(t){var n=new p(t);try{u.emit("new-xhr",[n],n),n.addEventListener(v,o,!1)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}return n};if(c(p,x),x.prototype=p.prototype,d.inPlace(x.prototype,["open","send"],"-xhr-",s),u.on("send-xhr-start",function(t,n){r(t,n),i(n)}),u.on("open-xhr-start",r),h){var b=m&&m.resolve();if(!w&&!m){var E=1,O=document.createTextNode(E);new h(a).observe(O,{characterData:!0})}}else f.on("fn-end",function(t){t[0]&&t[0].type===v||a()})},{}],11:[function(t,n,e){function r(t){if(!i(t))return null;var n=window.NREUM;if(!n.loader_config)return null;var e=(n.loader_config.accountID||"").toString()||null,r=(n.loader_config.agentID||"").toString()||null,s=(n.loader_config.trustKey||"").toString()||null;if(!e||!r)return null;var c=a.generateCatId(),f=a.generateCatId(),u=Date.now(),d=o(c,f,u,e,r,s);return{header:d,guid:c,traceId:f,timestamp:u}}function o(t,n,e,r,o,i){var a="btoa"in window&&"function"==typeof window.btoa;if(!a)return null;var s={v:[0,1],d:{ty:"Browser",ac:r,ap:o,id:t,tr:n,ti:e}};return i&&r!==i&&(s.d.tk=i),btoa(JSON.stringify(s))}function i(t){var n=!1,e=!1,r={};if("init"in NREUM&&"distributed_tracing"in NREUM.init&&(r=NREUM.init.distributed_tracing,e=!!r.enabled),e)if(t.sameOrigin)n=!0;else if(r.allowed_origins instanceof Array)for(var o=0;o<r.allowed_origins.length;o++){var i=s(r.allowed_origins[o]);if(t.hostname===i.hostname&&t.protocol===i.protocol&&t.port===i.port){n=!0;break}}return e&&n}var a=t(19),s=t(13);n.exports={generateTracePayload:r,shouldGenerateTrace:i}},{}],12:[function(t,n,e){function r(t){var n=this.params,e=this.metrics;if(!this.ended){this.ended=!0;for(var r=0;r<l;r++)t.removeEventListener(d[r],this.listener,!1);n.aborted||(e.duration=a.now()-this.startTime,this.loadCaptureCalled||4!==t.readyState?null==n.status&&(n.status=0):i(this,t),e.cbTime=this.cbTime,u.emit("xhr-done",[t],t),s("xhr",[n,e,this.startTime]))}}function o(t,n){var e=c(n),r=t.params;r.host=e.hostname+":"+e.port,r.pathname=e.pathname,t.parsedOrigin=c(n),t.sameOrigin=t.parsedOrigin.sameOrigin}function i(t,n){t.params.status=n.status;var e=w(n,t.lastSize);if(e&&(t.metrics.rxSize=e),t.sameOrigin){var r=n.getResponseHeader("X-NewRelic-App-Data");r&&(t.params.cat=r.split(", ").pop())}t.loadCaptureCalled=!0}var a=t("loader");if(a.xhrWrappable){var s=t("handle"),c=t(13),f=t(11).generateTracePayload,u=t("ee"),d=["load","error","abort","timeout"],l=d.length,p=t("id"),h=t(17),m=t(16),w=t(14),v=window.XMLHttpRequest;a.features.xhr=!0,t(10),t(6),u.on("new-xhr",function(t){var n=this;n.totalCbs=0,n.called=0,n.cbTime=0,n.end=r,n.ended=!1,n.xhrGuids={},n.lastSize=null,n.loadCaptureCalled=!1,t.addEventListener("load",function(e){i(n,t)},!1),h&&(h>34||h<10)||window.opera||t.addEventListener("progress",function(t){n.lastSize=t.loaded},!1)}),u.on("open-xhr-start",function(t){this.params={method:t[0]},o(this,t[1]),this.metrics={}}),u.on("open-xhr-end",function(t,n){"loader_config"in NREUM&&"xpid"in NREUM.loader_config&&this.sameOrigin&&n.setRequestHeader("X-NewRelic-ID",NREUM.loader_config.xpid);var e=f(this.parsedOrigin);e&&e.header&&(n.setRequestHeader("newrelic",e.header),this.dt=e)}),u.on("send-xhr-start",function(t,n){var e=this.metrics,r=t[0],o=this;if(e&&r){var i=m(r);i&&(e.txSize=i)}this.startTime=a.now(),this.listener=function(t){try{"abort"!==t.type||o.loadCaptureCalled||(o.params.aborted=!0),("load"!==t.type||o.called===o.totalCbs&&(o.onloadCalled||"function"!=typeof n.onload))&&o.end(n)}catch(e){try{u.emit("internal-error",[e])}catch(r){}}};for(var s=0;s<l;s++)n.addEventListener(d[s],this.listener,!1)}),u.on("xhr-cb-time",function(t,n,e){this.cbTime+=t,n?this.onloadCalled=!0:this.called+=1,this.called!==this.totalCbs||!this.onloadCalled&&"function"==typeof e.onload||this.end(e)}),u.on("xhr-load-added",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&!this.xhrGuids[e]&&(this.xhrGuids[e]=!0,this.totalCbs+=1)}),u.on("xhr-load-removed",function(t,n){var e=""+p(t)+!!n;this.xhrGuids&&this.xhrGuids[e]&&(delete this.xhrGuids[e],this.totalCbs-=1)}),u.on("addEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-added",[t[1],t[2]],n)}),u.on("removeEventListener-end",function(t,n){n instanceof v&&"load"===t[0]&&u.emit("xhr-load-removed",[t[1],t[2]],n)}),u.on("fn-start",function(t,n,e){n instanceof v&&("onload"===e&&(this.onload=!0),("load"===(t[0]&&t[0].type)||this.onload)&&(this.xhrCbStart=a.now()))}),u.on("fn-end",function(t,n){this.xhrCbStart&&u.emit("xhr-cb-time",[a.now()-this.xhrCbStart,this.onload,n],n)}),u.on("fetch-before-start",function(t){var n,e=t[1]||{};"string"==typeof t[0]?n=t[0]:t[0]&&t[0].url&&(n=t[0].url),n&&(this.parsedOrigin=c(n),this.sameOrigin=this.parsedOrigin.sameOrigin);var r=f(this.parsedOrigin);if(r&&r.header){var o=r.header;if("string"==typeof t[0]){var i={};for(var a in e)i[a]=e[a];i.headers=new Headers(e.headers||{}),i.headers.set("newrelic",o),this.dt=r,t.length>1?t[1]=i:t.push(i)}else t[0]&&t[0].headers&&(t[0].headers.append("newrelic",o),this.dt=r)}})}},{}],13:[function(t,n,e){var r={};n.exports=function(t){if(t in r)return r[t];var n=document.createElement("a"),e=window.location,o={};n.href=t,o.port=n.port;var i=n.href.split("://");!o.port&&i[1]&&(o.port=i[1].split("/")[0].split("@").pop().split(":")[1]),o.port&&"0"!==o.port||(o.port="https"===i[0]?"443":"80"),o.hostname=n.hostname||e.hostname,o.pathname=n.pathname,o.protocol=i[0],"/"!==o.pathname.charAt(0)&&(o.pathname="/"+o.pathname);var a=!n.protocol||":"===n.protocol||n.protocol===e.protocol,s=n.hostname===document.domain&&n.port===e.port;return o.sameOrigin=a&&(!n.hostname||s),"/"===o.pathname&&(r[t]=o),o}},{}],14:[function(t,n,e){function r(t,n){var e=t.responseType;return"json"===e&&null!==n?n:"arraybuffer"===e||"blob"===e||"json"===e?o(t.response):"text"===e||""===e||void 0===e?o(t.responseText):void 0}var o=t(16);n.exports=r},{}],15:[function(t,n,e){function r(){}function o(t,n,e){return function(){return i(t,[f.now()].concat(s(arguments)),n?null:this,e),n?void 0:this}}var i=t("handle"),a=t(21),s=t(22),c=t("ee").get("tracer"),f=t("loader"),u=NREUM;"undefined"==typeof window.newrelic&&(newrelic=u);var d=["setPageViewName","setCustomAttribute","setErrorHandler","finished","addToTrace","inlineHit","addRelease"],l="api-",p=l+"ixn-";a(d,function(t,n){u[n]=o(l+n,!0,"api")}),u.addPageAction=o(l+"addPageAction",!0),u.setCurrentRouteName=o(l+"routeName",!0),n.exports=newrelic,u.interaction=function(){return(new r).get()};var h=r.prototype={createTracer:function(t,n){var e={},r=this,o="function"==typeof n;return i(p+"tracer",[f.now(),t,e],r),function(){if(c.emit((o?"":"no-")+"fn-start",[f.now(),r,o],e),o)try{return n.apply(this,arguments)}catch(t){throw c.emit("fn-err",[arguments,this,t],e),t}finally{c.emit("fn-end",[f.now()],e)}}}};a("actionText,setName,setAttribute,save,ignore,onEnd,getContext,end,get".split(","),function(t,n){h[n]=o(p+n)}),newrelic.noticeError=function(t,n){"string"==typeof t&&(t=new Error(t)),i("err",[t,f.now(),!1,n])}},{}],16:[function(t,n,e){n.exports=function(t){if("string"==typeof t&&t.length)return t.length;if("object"==typeof t){if("undefined"!=typeof ArrayBuffer&&t instanceof ArrayBuffer&&t.byteLength)return t.byteLength;if("undefined"!=typeof Blob&&t instanceof Blob&&t.size)return t.size;if(!("undefined"!=typeof FormData&&t instanceof FormData))try{return JSON.stringify(t).length}catch(n){return}}}},{}],17:[function(t,n,e){var r=0,o=navigator.userAgent.match(/Firefox[\/\s](\d+\.\d+)/);o&&(r=+o[1]),n.exports=r},{}],18:[function(t,n,e){function r(t,n){var e=t.getEntries();e.forEach(function(t){"first-paint"===t.name?c("timing",["fp",Math.floor(t.startTime)]):"first-contentful-paint"===t.name&&c("timing",["fcp",Math.floor(t.startTime)])})}function o(t,n){var e=t.getEntries();e.length>0&&c("lcp",[e[e.length-1]])}function i(t){if(t instanceof u&&!l){var n,e=Math.round(t.timeStamp);n=e>1e12?Date.now()-e:f.now()-e,l=!0,c("timing",["fi",e,{type:t.type,fid:n}])}}if(!("init"in NREUM&&"page_view_timing"in NREUM.init&&"enabled"in NREUM.init.page_view_timing&&NREUM.init.page_view_timing.enabled===!1)){var a,s,c=t("handle"),f=t("loader"),u=NREUM.o.EV;if("PerformanceObserver"in window&&"function"==typeof window.PerformanceObserver){a=new PerformanceObserver(r),s=new PerformanceObserver(o);try{a.observe({entryTypes:["paint"]}),s.observe({entryTypes:["largest-contentful-paint"]})}catch(d){}}if("addEventListener"in document){var l=!1,p=["click","keydown","mousedown","pointerdown","touchstart"];p.forEach(function(t){document.addEventListener(t,i,!1)})}}},{}],19:[function(t,n,e){function r(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&(n=r.getRandomValues(new Uint8Array(31)));for(var o,i="xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx",a="",s=0;s<i.length;s++)o=i[s],"x"===o?a+=t().toString(16):"y"===o?(o=3&t()|8,a+=o.toString(16)):a+=o;return a}function o(){function t(){return n?15&n[e++]:16*Math.random()|0}var n=null,e=0,r=window.crypto||window.msCrypto;r&&r.getRandomValues&&Uint8Array&&(n=r.getRandomValues(new Uint8Array(31)));for(var o=[],i=0;i<16;i++)o.push(t().toString(16));return o.join("")}n.exports={generateUuid:r,generateCatId:o}},{}],20:[function(t,n,e){function r(t,n){if(!o)return!1;if(t!==o)return!1;if(!n)return!0;if(!i)return!1;for(var e=i.split("."),r=n.split("."),a=0;a<r.length;a++)if(r[a]!==e[a])return!1;return!0}var o=null,i=null,a=/Version\/(\S+)\s+Safari/;if(navigator.userAgent){var s=navigator.userAgent,c=s.match(a);c&&s.indexOf("Chrome")===-1&&s.indexOf("Chromium")===-1&&(o="Safari",i=c[1])}n.exports={agent:o,version:i,match:r}},{}],21:[function(t,n,e){function r(t,n){var e=[],r="",i=0;for(r in t)o.call(t,r)&&(e[i]=n(r,t[r]),i+=1);return e}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],22:[function(t,n,e){function r(t,n,e){n||(n=0),"undefined"==typeof e&&(e=t?t.length:0);for(var r=-1,o=e-n||0,i=Array(o<0?0:o);++r<o;)i[r]=t[n+r];return i}n.exports=r},{}],23:[function(t,n,e){n.exports={exists:"undefined"!=typeof window.performance&&window.performance.timing&&"undefined"!=typeof window.performance.timing.navigationStart}},{}],ee:[function(t,n,e){function r(){}function o(t){function n(t){return t&&t instanceof r?t:t?c(t,s,i):i()}function e(e,r,o,i){if(!l.aborted||i){t&&t(e,r,o);for(var a=n(o),s=m(e),c=s.length,f=0;f<c;f++)s[f].apply(a,r);var d=u[y[e]];return d&&d.push([x,e,r,a]),a}}function p(t,n){g[t]=m(t).concat(n)}function h(t,n){var e=g[t];if(e)for(var r=0;r<e.length;r++)e[r]===n&&e.splice(r,1)}function m(t){return g[t]||[]}function w(t){return d[t]=d[t]||o(e)}function v(t,n){f(t,function(t,e){n=n||"feature",y[e]=n,n in u||(u[n]=[])})}var g={},y={},x={on:p,addEventListener:p,removeEventListener:h,emit:e,get:w,listeners:m,context:n,buffer:v,abort:a,aborted:!1};return x}function i(){return new r}function a(){(u.api||u.feature)&&(l.aborted=!0,u=l.backlog={})}var s="nr@context",c=t("gos"),f=t(21),u={},d={},l=n.exports=o();l.backlog=u},{}],gos:[function(t,n,e){function r(t,n,e){if(o.call(t,n))return t[n];var r=e();if(Object.defineProperty&&Object.keys)try{return Object.defineProperty(t,n,{value:r,writable:!0,enumerable:!1}),r}catch(i){}return t[n]=r,r}var o=Object.prototype.hasOwnProperty;n.exports=r},{}],handle:[function(t,n,e){function r(t,n,e,r){o.buffer([t],r),o.emit(t,n,e)}var o=t("ee").get("handle");n.exports=r,r.ee=o},{}],id:[function(t,n,e){function r(t){var n=typeof t;return!t||"object"!==n&&"function"!==n?-1:t===window?0:a(t,i,function(){return o++})}var o=1,i="nr@id",a=t("gos");n.exports=r},{}],loader:[function(t,n,e){function r(){if(!E++){var t=b.info=NREUM.info,n=p.getElementsByTagName("script")[0];if(setTimeout(u.abort,3e4),!(t&&t.licenseKey&&t.applicationID&&n))return u.abort();f(y,function(n,e){t[n]||(t[n]=e)}),c("mark",["onload",a()+b.offset],null,"api");var e=p.createElement("script");e.src="https://"+t.agent,n.parentNode.insertBefore(e,n)}}function o(){"complete"===p.readyState&&i()}function i(){c("mark",["domContent",a()+b.offset],null,"api")}function a(){return O.exists&&performance.now?Math.round(performance.now()):(s=Math.max((new Date).getTime(),s))-b.offset}var s=(new Date).getTime(),c=t("handle"),f=t(21),u=t("ee"),d=t(20),l=window,p=l.document,h="addEventListener",m="attachEvent",w=l.XMLHttpRequest,v=w&&w.prototype;NREUM.o={ST:setTimeout,SI:l.setImmediate,CT:clearTimeout,XHR:w,REQ:l.Request,EV:l.Event,PR:l.Promise,MO:l.MutationObserver};var g=""+location,y={beacon:"bam.nr-data.net",errorBeacon:"bam.nr-data.net",agent:"js-agent.newrelic.com/nr-1169.min.js"},x=w&&v&&v[h]&&!/CriOS/.test(navigator.userAgent),b=n.exports={offset:s,now:a,origin:g,features:{},xhrWrappable:x,userAgent:d};t(15),t(18),p[h]?(p[h]("DOMContentLoaded",i,!1),l[h]("load",r,!1)):(p[m]("onreadystatechange",o),l[m]("onload",r)),c("mark",["firstbyte",s],null,"api");var E=0,O=t(23)},{}],"wrap-function":[function(t,n,e){function r(t){return!(t&&t instanceof Function&&t.apply&&!t[a])}var o=t("ee"),i=t(22),a="nr@original",s=Object.prototype.hasOwnProperty,c=!1;n.exports=function(t,n){function e(t,n,e,o){function nrWrapper(){var r,a,s,c;try{a=this,r=i(arguments),s="function"==typeof e?e(r,a):e||{}}catch(f){l([f,"",[r,a,o],s])}u(n+"start",[r,a,o],s);try{return c=t.apply(a,r)}catch(d){throw u(n+"err",[r,a,d],s),d}finally{u(n+"end",[r,a,c],s)}}return r(t)?t:(n||(n=""),nrWrapper[a]=t,d(t,nrWrapper),nrWrapper)}function f(t,n,o,i){o||(o="");var a,s,c,f="-"===o.charAt(0);for(c=0;c<n.length;c++)s=n[c],a=t[s],r(a)||(t[s]=e(a,f?s+o:o,i,s))}function u(e,r,o){if(!c||n){var i=c;c=!0;try{t.emit(e,r,o,n)}catch(a){l([a,e,r,o])}c=i}}function d(t,n){if(Object.defineProperty&&Object.keys)try{var e=Object.keys(t);return e.forEach(function(e){Object.defineProperty(n,e,{get:function(){return t[e]},set:function(n){return t[e]=n,n}})}),n}catch(r){l([r])}for(var o in t)s.call(t,o)&&(n[o]=t[o]);return n}function l(n){try{t.emit("internal-error",n)}catch(e){}}return t||(t=o),e.inPlace=f,e.flag=a,e}},{}]},{},["loader",2,12,4,3]);</script>
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta name="twitter:card" content="summary" />
+<title>成像电子元件101：适用于机器视觉应用的相机类型和接口 | 爱特蒙特光学</title>
+<meta property="fb:page_id" content="73885277291" />
+<meta name="debug.ipAddress" content="172.104.102.238, 162.158.118.172" />
+<meta http-equiv="content-language" content="zh-CN" />
+
+<link rel="canonical" href="https://www.edmundoptics.cn/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+
+<link rel="alternate" hreflang="x-default" href="https://www.edmundoptics.com/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="en" href="https://www.edmundoptics.com/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="en-tw" href="https://www.edmundoptics.com.tw/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="en-au" href="https://www.edmundoptics.com.au/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="en-sg" href="https://www.edmundoptics.com.sg/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="ko" href="https://www.edmundoptics.co.kr/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="en-gb" href="https://www.edmundoptics.co.uk/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="fr" href="https://www.edmundoptics.fr/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="es-es" href="https://www.edmundoptics.es/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="de" href="https://www.edmundoptics.de/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="en-eu" href="https://www.edmundoptics.eu/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="zh-cn" href="https://www.edmundoptics.cn/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<link rel="alternate" hreflang="ja" href="https://www.edmundoptics.jp/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<meta name="title" data-type="string" content="成像电子元件101：适用于机器视觉应用的相机类型和接口 | 爱特蒙特光学" />
+<meta name="LanguageId" data-type="string" content="12" />
+<meta property="og:title" content="成像电子元件101：适用于机器视觉应用的相机类型和接口 | 爱特蒙特光学" />
+<meta property="og:url" content="https://www.edmundoptics.cn/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" />
+<meta property="og:image" content="https://www.edmundoptics.com//globalassets/knowledge-center/app-notes/thumbnails/imaging/ie-camera-types.jpg" />
+<meta name="twitter:image" content="https://www.edmundoptics.com//globalassets/knowledge-center/app-notes/thumbnails/imaging/ie-camera-types.jpg">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/bootstrap.css?v=636898818760000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/shared.css?v=637298997960000000" media="all">
+<style>
+#slideshow {
+    position:relative;
+    height:297px;
+}
+ 
+#slideshow IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+ 
+#slideshow IMG.active {
+    z-index:10;
+}
+ 
+#slideshow IMG.last-active {
+    z-index:9;
+}
+
+
+#slideshow-caption {
+    position:relative;
+    height:20px;
+
+
+}
+ 
+#slideshow-caption IMG {
+    position:absolute;
+    top:0;
+    left:0;
+    z-index:8;
+}
+ 
+#slideshow-caption IMG.active {
+    z-index:10;
+
+}
+ 
+#slideshow-caption IMG.last-active {
+    z-index:9;
+}
+
+</style>
+
+
+
+<script type="application/ld+json">
+    {"@context": "http://schema.org",
+    "@id":"www.edmundoptics.cn",
+    "@type": "Organization",
+    "name": "Edmund Optics",
+    "url": "www.edmundoptics.cn",
+    "logo": "www.edmundoptics.cn/globalassets/img/eo-logo-google.jpg",
+    "contactPoint": [
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "sales"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "technical support"
+    },
+    {
+    "@type": "ContactPoint",
+    "telephone": "(+86) 0755 8435 5459",
+    "contactType": "customer support"
+    }
+    ],
+    "sameAs": [
+    "https://www.facebook.com/edmundoptics",
+    "https://twitter.com/edmundoptics",
+    "https://www.youtube.com/edmundoptics",
+    "https://www.linkedin.com/company/edmund-optics/",
+    "https://plus.google.com/+edmundoptics",
+    "https://www.instagram.com/edmund_optics/"
+    ]
+}
+</script>
+
+<meta name="SearchPageType" data-type="string" content="ApplicationNote" />
+</head>
+<body role="document" itemscope itemtype="http://schema.org/WebPage">
+<div class="thetop"></div>
+<script>
+    var liveChatGroupId = 27;
+    var liveChatSalesOrg = '6800';
+    var liveChatLanguageCode = 'CN';
+    var liveChatIsRestricted = false;
+</script>
+<div id="chatInvite" style="display:none;">
+<div class="chat-header">
+有什么可以帮到您？ <a id="chatInviteX" onclick="declineInvite();"><i class="fa fa-times" aria-hidden="true"></i></a>
+</div>
+<div class="row">
+<div class="col-lg-6 chatInviteMessage">工程师接受在线咨询</div>
+<div class="col-lg-6">
+<img data-src="/globalassets/contact-and-support/asia-chat-pic.jpg?w=100" width="100" height="93" class="lazy" />
+</div>
+</div>
+<div style="text-align:center">
+<input type="button" value="发起对话" class="btn-liveChat" onclick="acceptInvite()" style="padding: 10px 20px; font-weight:bold" />
+</div>
+</div>
+<div id="chatOfflineMessage" style="display:none;">
+<a id="chatOfflineX" onclick="closeOfflineWindow();"><i class="fa fa-times" aria-hidden="true"></i></a>
+我们的操作人员目前都在忙碌。请留言，我们将会很快与您联系。
+<div style="text-align:center">
+<a href="/contact-support/email-support/" target="_blank" style="text-align:center" onclick="trackEvent('LiveChat', 'Offline Message', 'Click');">
+<h4 class="btn-liveChat" style="text-align:center">留言</h4>
+</a>
+</div>
+</div>
+<div id="logo-wrap" style="display:none">
+<img data-src="/assets/images/ui/print-screen/print-screen-header.png" width="360" height="50" class="lazy" />
+</div>
+<div class="headertop slitherBannerWrapper" style="display:none">
+<div class="container" style="height:0px">
+<i class="fa fa-times slitherBannerX" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<span><div><div class="block htmlblock  ">
+<span></span>
+</div></div></span>
+</div>
+<div class="headermiddle">
+<div class="container">
+<div>
+<div style="width:100%; margin:0 auto">
+<div class="headerFloat">
+<a href="/" title="Edmund Optics Worldwide" class="eo-header" style="float:left"><img src="/globalassets/homepage/eo_logo.svg" width="283" height="47" /></a>
+<span class="nomobile no1199">
+<span id="searchbar" class="button-dropdown col-lg-7 col-md-6" style="display: inline-block;">
+<form id="WebsiteSearchForm" action="/search" method="post" class="input-group-sh mb-3-sh website-search-form">
+<input id="WebsiteSearchTerm" name="criteria" class="searchbox website-search-form form-control-sh" onkeyup="SearchAutoComplete()" type="text" autocomplete="off" placeholder="关键词或产品编码" />
+<div class="input-group-append-sh"><button class="btn-sh btn-outline-secondary-sh" type="submit"><i class="fa fa-search">&nbsp;</i></button></div>
+</form>
+<div class="search-result dropdown-menu" style="position: absolute; background: white; z-index: 100; padding: 10px; width:98%; display:none"></div>
+</span>
+</span>
+<div style="float:right; padding-top:0px;" class="headerlinks nomobile no1199">
+<p>
+<div style="margin-top:-14px"> <i class="fa fa-phone" aria-hidden="true">&nbsp;</i><span class="headerPhoneNumber"><strong class="CountrySpecificPhoneNumber"></strong></span></div>
+<span class="header-contact2"> <span onclick="openlc()"> <i class="fa fa-comment" aria-hidden="true">&nbsp;</i><span class="chat-h">聊天</span></span>&nbsp;&nbsp; &nbsp; <a href="/contact-support/email-support/"><i class="fa fa-envelope" aria-hidden="true">&nbsp;</i><span style="color:#dadada">电子邮件</span></a></span>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div id="lowerheader">
+<div class="theme-showcase" id="lowerheadercontainer" style="padding-left:0px !Important">
+<div style="text-align:center">
+<div class="yesmobile yes1199" id="searchbar-mobile">
+<form action="" id="search-form-mobile" method="get" class="website-search-form">
+<input type="text" class="searchbox searchbox2 yesmobile yes1199" autocomplete="off" autocorrect="off" autocapitalize="off" placeholder="搜索">
+<button id="SearchButton"> <i class="fa fa-search" aria-hidden="true"></i> </button>
+</form>
+<div class="search-result" style="z-index:99; position:absolute; width:100%; background-color:#ffffff"></div>
+</div>
+</div>
+<div style="width:100%; margin:0 auto">
+<header class="cd-main-header">
+<ul class="cd-header-buttons">
+<li>
+<a class="cd-nav-trigger" href="#cd-primary-nav">
+<span class="fa fa-bars">&nbsp;</span>
+</a>
+</li>
+</ul>
+
+</header>
+<div class="header-m-bkgd">
+<div class="container">
+<ul class="lowerheadernav pw">
+<li class="button-dropdown cbutton-dropdown country-header">
+<div style="line-height:13px;">
+<span style="color:white; font-size:10px; padding-left: 29px;font-weight:lighter">选择国家或地区</span>
+<a href="javascript:void(0)" class="dropdown-toggle country-arrow-link" id="countrylink">
+<span id="countryname" class="countryname"></span><span><i class="fa fa-chevron-down country-arrow" aria-hidden="true" id="cchevron" style="color:#fff; font-size:11px; position:relative; top:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu cdropdown-menu">
+<li>
+<div id="countryLG" class="country-form">
+<div class="countryContent">
+<p>我们已将您所在国家/地区设置为 <strong>China</strong></p>
+<span id="countryErrorMessage">
+<p>您可在任意时间修改这个选项，但是如果改变所在国家/地区，您购物车中的产品，清单，或者报价有可能会被清空。</p>
+</span>
+</div>
+<p>
+<strong>请选择您的国家/地区
+</strong>
+</p>
+<form name="countryForm" onsubmit="return false;">
+<input name="referrer" value="/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/" type="hidden" />
+<input name="ga" value="" type="hidden" />
+<select id="countryId" name="countryId" style="width:216px;"><option value="13">Australia (AUD) </option>
+<option selected="selected" value="286">China (RMB) </option>
+<option value="335">European Union (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="110">Japan (JPY) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="0">---------------</option>
+<option value="338">Aland Islands (GBP) </option>
+<option value="278">Albania (EUR) </option>
+<option value="3">Algeria (EUR) </option>
+<option value="5">Andorra (EUR) </option>
+<option value="290">Angola (EUR) </option>
+<option value="9">Antigua and Barbuda (USD) </option>
+<option value="10">Argentina (USD) </option>
+<option value="287">Armenia (EUR) </option>
+<option value="13">Australia (AUD) </option>
+<option value="14">Austria (EUR) </option>
+<option value="288">Azerbaijan (EUR) </option>
+<option value="16">Bahamas (USD) </option>
+<option value="17">Bahrain (EUR) </option>
+<option value="18">Bangladesh (SGD) </option>
+<option value="19">Barbados (USD) </option>
+<option value="279">Belarus (EUR) </option>
+<option value="21">Belgium (EUR) </option>
+<option value="22">Belize (USD) </option>
+<option value="23">Benin (EUR) </option>
+<option value="24">Bermuda (USD) </option>
+<option value="25">Bhutan (SGD) </option>
+<option value="26">Bolivia (USD) </option>
+<option value="318">Bosnia and Herzegovina (EUR) </option>
+<option value="28">Botswana (EUR) </option>
+<option value="30">Brazil (USD) </option>
+<option value="32">Brunei Darussalam (SGD) </option>
+<option value="33">Bulgaria (EUR) </option>
+<option value="34">Burkina Faso (EUR) </option>
+<option value="291">Burma (SGD) </option>
+<option value="36">Burundi (EUR) </option>
+<option value="292">Cambodia (SGD) </option>
+<option value="38">Cameroon (EUR) </option>
+<option value="39">Canada (USD) </option>
+<option value="320">Canary Islands (Spain) (EUR) </option>
+<option value="40">Cape Verde (EUR) </option>
+<option value="42">Central African Republic (EUR) </option>
+<option value="43">Chad (EUR) </option>
+<option value="44">Chile (USD) </option>
+<option value="286">China (RMB) </option>
+<option value="48">Colombia (USD) </option>
+<option value="49">Comoros (EUR) </option>
+<option value="54">Costa Rica (USD) </option>
+<option value="281">Croatia (EUR) </option>
+<option value="293">Cyprus (EUR) </option>
+<option value="58">Czech Republic (EUR) </option>
+<option value="59">Denmark (EUR) </option>
+<option value="60">Djibouti (EUR) </option>
+<option value="61">Dominica (USD) </option>
+<option value="62">Dominican Republic (USD) </option>
+<option value="327">East Timor (USD) </option>
+<option value="64">Ecuador (USD) </option>
+<option value="65">Egypt (EUR) </option>
+<option value="66">El Salvador (USD) </option>
+<option value="322">Equatorial Guinea (EUR) </option>
+<option value="295">Eritrea (EUR) </option>
+<option value="71">Estonia (EUR) </option>
+<option value="296">Ethiopia (EUR) </option>
+<option value="335">European Union (EUR) </option>
+<option value="339">Falkland Islands (GBP) </option>
+<option value="75">Fiji (SGD) </option>
+<option value="76">Finland (EUR) </option>
+<option value="77">France (EUR) </option>
+<option value="78">French Guiana (USD) </option>
+<option value="81">Gabon (EUR) </option>
+<option value="82">Gambia (EUR) </option>
+<option value="83">Georgia (EUR) </option>
+<option value="84">Germany (EUR) </option>
+<option value="85">Ghana (EUR) </option>
+<option value="86">Gibraltar (EUR) </option>
+<option value="88">Greece (EUR) </option>
+<option value="89">Greenland (USD) </option>
+<option value="90">Grenada (USD) </option>
+<option value="93">Guatemala (USD) </option>
+<option value="337">Guernsey (UK) (GBP) </option>
+<option value="94">Guinea (EUR) </option>
+<option value="95">Guinea-Bissau (EUR) </option>
+<option value="96">Guyana (USD) </option>
+<option value="297">Haiti (USD) </option>
+<option value="100">Honduras (USD) </option>
+<option value="101">Hong Kong (SGD) </option>
+<option value="102">Hungary (EUR) </option>
+<option value="103">Iceland (EUR) </option>
+<option value="277">India (INR) </option>
+<option value="298">Indonesia (SGD) </option>
+<option value="106">Ireland (EUR) </option>
+<option value="107">Israel (USD) </option>
+<option value="108">Italy (EUR) </option>
+<option value="109">Jamaica (USD) </option>
+<option value="110">Japan (JPY) </option>
+<option value="336">Jersey (UK) (GBP) </option>
+<option value="111">Jordan (EUR) </option>
+<option value="112">Kazakhstan (EUR) </option>
+<option value="113">Kenya (EUR) </option>
+<option value="114">Kiribati (SGD) </option>
+<option value="342">Kosovo (EUR) </option>
+<option value="118">Kuwait (EUR) </option>
+<option value="119">Kyrgyzstan (EUR) </option>
+<option value="299">Laos (SGD) </option>
+<option value="121">Latvia (EUR) </option>
+<option value="123">Lesotho (EUR) </option>
+<option value="125">Liechtenstein (EUR) </option>
+<option value="126">Lithuania (EUR) </option>
+<option value="127">Luxembourg (EUR) </option>
+<option value="301">Macau (SGD) </option>
+<option value="282">Macedonia (EUR) </option>
+<option value="130">Madagascar (EUR) </option>
+<option value="131">Malawi (EUR) </option>
+<option value="132">Malaysia (SGD) </option>
+<option value="133">Maldives (SGD) </option>
+<option value="134">Mali (EUR) </option>
+<option value="135">Malta (EUR) </option>
+<option value="138">Mauritania (EUR) </option>
+<option value="139">Mauritius (EUR) </option>
+<option value="141">Mexico (USD) </option>
+<option value="142">Micronesia (SGD) </option>
+<option value="144">Moldova (EUR) </option>
+<option value="146">Monaco (EUR) </option>
+<option value="312">Mongolia (SGD) </option>
+<option value="283">Montenegro (EUR) </option>
+<option value="149">Morocco (EUR) </option>
+<option value="150">Mozambique (EUR) </option>
+<option value="152">Namibia (EUR) </option>
+<option value="153">Nauru (SGD) </option>
+<option value="154">Nepal (SGD) </option>
+<option value="155">Netherlands (EUR) </option>
+<option value="157">New Caledonia (SGD) </option>
+<option value="158">New Zealand (SGD) </option>
+<option value="159">Nicaragua (USD) </option>
+<option value="160">Niger (EUR) </option>
+<option value="302">Nigeria (EUR) </option>
+<option value="319">North Ireland (UK) (GBP) </option>
+<option value="166">Norway (EUR) </option>
+<option value="167">Oman (EUR) </option>
+<option value="303">Pakistan (SGD) </option>
+<option value="169">Palau (SGD) </option>
+<option value="340">Palestine (GBP) </option>
+<option value="170">Panama (USD) </option>
+<option value="171">Papua New Guinea (SGD) </option>
+<option value="172">Paraguay (USD) </option>
+<option value="173">Peru (USD) </option>
+<option value="174">Philippines (SGD) </option>
+<option value="176">Poland (EUR) </option>
+<option value="177">Portugal (EUR) </option>
+<option value="179">Qatar (EUR) </option>
+<option value="313">Republic of the Congo (EUR) </option>
+<option value="180">Reunion (EUR) </option>
+<option value="181">Romania (EUR) </option>
+<option value="182">Russia (EUR) </option>
+<option value="304">Rwanda (EUR) </option>
+<option value="185">Saint Kitts and Nevis (USD) </option>
+<option value="186">Saint Lucia (USD) </option>
+<option value="187">Saint Vincent and the Grenadines (USD) </option>
+<option value="188">Samoa (SGD) </option>
+<option value="189">San Marino (EUR) </option>
+<option value="190">Sao Tome and Principe (EUR) </option>
+<option value="191">Saudi Arabia (EUR) </option>
+<option value="193">Senegal (EUR) </option>
+<option value="280">Serbia (EUR) </option>
+<option value="194">Seychelles (EUR) </option>
+<option value="305">Sierra Leone (EUR) </option>
+<option value="196">Singapore (SGD) </option>
+<option value="197">Slovakia (EUR) </option>
+<option value="289">Slovenia (EUR) </option>
+<option value="199">Solomon Islands (SGD) </option>
+<option value="201">South Africa (EUR) </option>
+<option value="115">South Korea (KRW) </option>
+<option value="332">South Sudan (EUR) </option>
+<option value="204">Spain (EUR) </option>
+<option value="205">Sri Lanka (SGD) </option>
+<option value="208">Suriname (USD) </option>
+<option value="210">Swaziland (EUR) </option>
+<option value="211">Sweden (EUR) </option>
+<option value="212">Switzerland (EUR) </option>
+<option value="213">Taiwan (TWD) </option>
+<option value="284">Tajikistan (EUR) </option>
+<option value="215">Tanzania (EUR) </option>
+<option value="216">Thailand (SGD) </option>
+<option value="217">Togo (EUR) </option>
+<option value="219">Tonga (SGD) </option>
+<option value="220">Trinidad and Tobago (USD) </option>
+<option value="222">Tunisia (EUR) </option>
+<option value="223">Turkey (EUR) </option>
+<option value="224">Turkmenistan (EUR) </option>
+<option value="226">Tuvalu (SGD) </option>
+<option value="228">Uganda (EUR) </option>
+<option value="229">Ukraine (EUR) </option>
+<option value="230">United Arab Emirates (EUR) </option>
+<option value="231">United Kingdom (GBP) </option>
+<option value="232">United States (USD) </option>
+<option value="234">Uruguay (USD) </option>
+<option value="235">Uzbekistan (EUR) </option>
+<option value="236">Vanuatu (SGD) </option>
+<option value="285">Vatican City (EUR) </option>
+<option value="237">Venezuela (USD) </option>
+<option value="307">Vietnam (SGD) </option>
+<option value="341">Western Sahara (GBP) </option>
+<option value="309">Yemen (EUR) </option>
+<option value="246">Zambia (EUR) </option>
+</select>
+<input type="submit" class="btn-other mshippmentbtn" name="countrySubmit" value="提交" style="margin-top:8px; width:98%" />
+</form>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown abutton-dropdown no1199 nomobile">
+<div style="line-height:13px;">
+<span id="helloFirstName" style="color:white; font-size:10px; padding-left:8px;font-weight:lighter"><span></span>，您好！</span>
+<a href="javascript:void(0)" class="dropdown-toggle myaccount-link" id="accountlink">
+我的帐户 <span><i class="fa fa-chevron-down myaccount-arrow" id="achevron" aria-hidden="true" style="color:#fff; font-size:11px; position:relative; top:-2px; margin-left:-2px"></i></span>
+</a>
+</div>
+<ul class="dropdown-menu adropdown-menu">
+<li>
+<div style="display:none" id="MyAccountLogin">
+<a href="/my-account/" rel="nofollow" style="text-decoration: none !important;"><div style="width:100%" class="btn-other logout"> 登陆</div></a>
+<div style="text-align:center; padding-top:15px">新用户？ <a href="/my-account/createaccount">免费注册.</a></div>
+</div>
+<div id="MyAccountLogout" style="display:none">
+<h3 id="myaccountwelcome" style="display:none; margin-top:0px; font-weight:normal !important">欢迎 <span></span>！</h3>
+<span id="myaccountpadding" style="display:none"></span>
+<p>
+<strong>我的帐户</strong><br />
+<a href="/my-account/" rel="nofollow">账户概览</a>
+</p>
+<p>
+<strong>我的档案</strong><br />
+<a href="/profile/" rel="nofollow">更新我的档案</a>
+</p>
+<p>
+<strong>付款和运输</strong><br />
+<a href="/address-book" rel="nofollow">地址簿</a>,
+<a href="/tax-certificate/" rel="nofollow">缴税证明</a>
+</p>
+<p>
+<strong>网上订单</strong><br />
+<a href="/order-history/" rel="nofollow">浏览历史订单</a>
+</p>
+<p>
+<strong>购物车</strong><br />
+<a href="/saved-list" rel="nofollow">移入收藏夹</a>
+</p>
+<div style="width:100%" class="btn-other logout">
+<a href="/my-account/logout/?ReturnUrl=%2fknowledge-center%2fapplication-notes%2fimaging%2fcamera-types-and-interfaces-for-machine-vision-applications%2f" rel="nofollow">退出登录</a>
+</div>
+</div>
+</li>
+</ul>
+</li>
+<li class="button-dropdown no1199 nomobile" style="position: relative;">
+<a href="javascript:void(0)" class="dropdown-toggle">
+<div id="cartshiftfull">
+<div id="miniCartClick" class="miniCartClick">
+<div style="width: auto; height: 30px; float: left; padding-top: 5px;">
+<i class="fa fa-shopping-cart cartImg" aria-hidden="true"></i>
+<span id="cartCount" class="miniCartCount">&nbsp;&nbsp;</span>
+</div>
+</div>
+</div>
+</a>
+<ul class="dropdown-menu" style="left: -150px; top: 34px; background: none;width: 0px; height: 0px;">
+<li>
+<div id="container-checkoutminicart" style="right: 233px; display:none"></div>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="cd-nav container">
+<ul id="cd-primary-nav" class="cd-primary-nav is-fixed mm">
+
+<li class="has-children" style="cursor:pointer">
+<a id="productsTab" onclick="ToggleMenuTab('products')" data-tab-value="products">产品</a>
+<div id="mobileMenu-products"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="capabilitiesTab" onclick="ToggleMenuTab('capabilities')" data-tab-value="capabilities">能力</a>
+<div id="mobileMenu-capabilities"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="knowledge-centerTab" onclick="ToggleMenuTab('knowledge-center')" data-tab-value="knowledge-center">资源库</a>
+<div id="mobileMenu-knowledge-center"></div>
+</li>
+
+<li class="has-children" style="cursor:pointer">
+<a id="companyTab" onclick="ToggleMenuTab('company')" data-tab-value="company">公司</a>
+<div id="mobileMenu-company"></div>
+</li>
+<li><a id="contactTab" href="/contact-support/" data-tab-value="contact">联系我们</a></li>
+<li class="displayyes-mm is-fixed"><a href="/my-account/"><span class="fa fa-user">&nbsp;</span> My Account</a></li>
+<li class="displayyes-mm is-fixed"><a href="/cart/"><i class="fa fa-shopping-cart" aria-hidden="true">&nbsp;</i> Cart</a></li>
+</ul>
+</div><div class="cd-overlay">&nbsp;</div>
+<div class="cd-main-content">
+<div id="MenuContentWindow" class="cd-primary-nav is-fixed mm"></div>
+</div>
+<script>
+
+    function ToggleMenuTab(tabValue) {
+  
+
+      
+
+        var linkId = tabValue + "Tab";
+        var contentWindow = "";
+        if (window.innerWidth > 1198) {
+            contentWindow = "#MenuContentWindow"
+        } else { contentWindow = "#mobileMenu-" + tabValue }
+
+        if ($(contentWindow).is(":visible") && $(contentWindow).val() == tabValue) {
+            $(contentWindow).hide();
+            $("#" + linkId).removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+            $('.cd-overlay').removeClass('is-visible');
+        }
+        else {
+            MegaMenuWindow("/mega-menu/"+tabValue, tabValue, contentWindow);
+        }
+    }
+
+    function MegaMenuWindow(url, tabValue, contentWindow) {
+    var linkId = tabValue + "Tab"
+        var newUrl = url.replace(' ', '');
+        $(contentWindow).load(newUrl, function () {
+
+            $(contentWindow).val(tabValue);
+            $("#" + linkId).addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+            $(".cd-secondary-nav").removeClass('is-hidden');
+            $("#"+linkId).parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+            $(contentWindow).show();
+            $('.cd-overlay').addClass('is-visible');
+            insertMegaMenuScript();
+            if (window.innerWidth < 1199) {
+                if ($(".megaMenuContainer").hasClass("container")) {
+                    $(".megaMenuContainer").removeClass("container")
+                    $(".megaMenuContainer").removeClass("top-navigation")
+                }
+            }
+        });
+    }
+    function insertMegaMenuScript() {
+
+        var MqL = 1200;
+        //episerverCode
+        if (window.innerWidth < 1199) {
+            if ($(".megaMenuContainer").hasClass("container")) {
+                $(".megaMenuContainer").removeClass("container")
+                $(".megaMenuContainer").removeClass("top-navigation")
+            }
+            
+            $('ul.cd-secondary-nav  li.has-children a').click(function (event) {
+                if (event.target.parentElement.className.includes('has-children')) { event.preventDefault(); }
+              
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                }
+            });
+
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                if ($(this).parent('ul').hasClass('cd-secondary-nav')) {
+                    $("#cd-primary-nav").removeClass('moves-out');
+                    $('ul.cd-secondary-nav').addClass('is-hidden');
+                    $("#productsTab").val("none");
+                    $("#productsTab").removeClass("selected");
+                    $("#capabilitiesTab").val("none");
+                    $("#capabilitiesTab").removeClass("selected");
+                    $("#knowledge-centerTab").val("none");
+                    $("#knowledge").removeClass("selected");
+                    $("#companyTab").val("none");
+                    $("#companyTab").removeClass("selected");
+                    $("[id^=mobileMenu]").css("display", "none");
+                }
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+        else {
+
+
+            $('ul.cd-secondary-nav > li.has-children > ul.is-hidden > li.has-children').children('a').on('click', function (event) {
+                if (!checkWindowWidth()) event.preventDefault();
+                var selected = $(this);
+                if (selected.next('ul').hasClass('is-hidden')) {
+                    //desktop version only
+                    selected.addClass('selected').next('ul').removeClass('is-hidden').end().parent('.has-children').parent('ul').addClass('moves-out');
+                    selected.parent('.has-children').siblings('.has-children').children('ul').addClass('is-hidden').end().children('a').removeClass('selected');
+                    $('.cd-overlay').addClass('is-visible');
+                } else {
+                    selected.removeClass('selected').next('ul').addClass('is-hidden').end().parent('.has-children').parent('ul').removeClass('moves-out');
+                    $('.cd-overlay').removeClass('is-visible');
+                }
+                toggleSearch('close');
+            });
+
+            //submenu items - go back link
+            $('.go-back').on('click', function () {
+                $(this).parent('ul').addClass('is-hidden').parent('.has-children').parent('ul').removeClass('moves-out');
+            });
+        }
+
+
+        function checkWindowWidth() {
+            //check window width (scrollbar included)
+            var e = window,
+                a = 'inner';
+            if (!('innerWidth' in window)) {
+                a = 'client';
+                e = document.documentElement || document.body;
+            }
+            if (e[a + 'Width'] >= MqL) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        function toggleSearch(type) {
+            if (type == "close") {
+                //close search 
+                $('.cd-search').removeClass('is-visible');
+                $('.cd-search-trigger').removeClass('search-is-visible');
+                $('.cd-overlay').removeClass('search-is-visible');
+            } else {
+                //toggle search visibility
+                $('.cd-search').toggleClass('is-visible');
+                $('.cd-search-trigger').toggleClass('search-is-visible');
+                $('.cd-overlay').toggleClass('search-is-visible');
+                if ($(window).width() > MqL && $('.cd-search').hasClass('is-visible')) $('.cd-search').find('input[type="search"]').focus();
+                ($('.cd-search').hasClass('is-visible')) ? $('.cd-overlay').addClass('is-visible') : $('.cd-overlay').removeClass('is-visible');
+            }
+        }
+    };
+</script>
+</div>
+</div>
+</div>
+<div class="respd" id="productCompareToolbar">
+<div class="col-md-12 row">
+</div>
+</div>
+<div id="alertBanners">
+<div class="alert alert-warning container" id="addToCartAlert" style="display:none; z-index: 99999;">
+<span id="addtoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addOrderToCartAlert" style="display:none; z-index: 99999;">
+订单号 <span id="addOrdertoCartAlertContent"></span> 已添加到您的购物车。
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addAllToCartAlert" style="display:none; z-index: 99999;">
+All items have been added to your cart.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+<div class="alert alert-warning container" id="addToCompareList" style="display:none; z-index: 99999;">
+<span id="addtoCompareAlertContent"></span> has been added to your compare list.
+<i class="fa fa-times slitherBannerX" onclick="this.parentElement.style.display='none';" style="float:right; position:relative; top:4px; z-index:9; right:3px; cursor:pointer; color:#000000" aria-hidden="true"></i>
+</div>
+</div>
+<div class="container" id="MainBody">
+<div>
+</div>
+<div class="row col-lg-12 col-sm-12 col-xs-12 mindentleft">
+<h6 style="margin-top:10px; margin-left:-5px" itemprop="breadcrumb">
+<a href="/knowledge-center/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">Resource Page</a>
+/ <a href="/knowledge-center/application-notes/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">应用案例</a>
+/ <a href="/knowledge-center/application-notes/imaging/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">成像</a>
+/ <a href="/knowledge-center/application-notes/imaging/imaging-electronics-101-camera-types-and-interfaces-for-machine-vision-applications/" class="breadcrumb" onclick="trackEvent('Site Template', 'Breadcrumb', 'Click');">成像电子元件101：适用于机器视觉应用的相机类型和接口</a>
+</h6>
+</div>
+<script type="application/ld+json">
+    
+    {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [{"@type": "ListItem","position": 4, "name": "Resource Page", "item": "https://www.edmundoptics.cn/knowledge-center/"},{"@type": "ListItem","position": 3, "name": "应用案例", "item": "https://www.edmundoptics.cn/knowledge-center/application-notes/"},{"@type": "ListItem","position": 2, "name": "成像", "item": "https://www.edmundoptics.cn/knowledge-center/application-notes/imaging/"},{"@type": "ListItem","position": 1, "name": "成像电子元件101：适用于机器视觉应用的相机类型和接口", "item": "https://www.edmundoptics.cn/knowledge-center/application-notes/imaging/imaging-electronics-101-camera-types-and-interfaces-for-machine-vision-applications/"}]
+    }
+</script>
+
+<div>
+<div itemscope="" itemtype="http://schema.org/Article">
+<span itemprop="name" style="display:none;">成像电子元件101：适用于机器视觉应用的相机类型和接口</span>
+<span itemprop="url" style="display:none;">http://www.edmundoptics.cn/knowledge-center/application-notes/imaging/camera-types-and-interfaces-for-machine-vision-applications/</span>
+<div itemprop="sourceOrganization" itemscope="" itemtype="http://schema.org/Organization" style="display:none;">
+<span itemprop="name">爱特蒙特光学有限公司。</span>
+<span itemprop="url">http://www.edmundoptics.cn</span>
+</div>
+</div>
+</div>
+<div>
+<div id="mainContent" class="col-lg-9 col-md-9 col-sm-12 col-xs-12 col-sm-12 mindentleft norightborder row">
+<h1 style="margin-top:0px; margin-bottom:5px">成像电子元件101：适用于机器视觉应用的相机类型和接口</h1>
+<div class="noPrint" style="margin-bottom:15px; border-bottom:1px solid #dadada; padding-bottom:10px">
+
+<a class="w-inline-block share-btn twitter" href="https://twitter.com/intent/tweet?" target="_blank" title="Tweet" onclick="window.open('https://twitter.com/intent/tweet?text=%20Check%20this%20out:%20' + encodeURIComponent(document.title) + ':%20 ' + encodeURIComponent(document.URL)); return false;">
+<i class="fa fa-twitter"></i>
+</a>
+
+<a class="w-inline-block share-btn facebook" href="https://www.facebook.com/sharer/sharer.php?u=&t=" title="Share on Facebook" target="_blank" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(document.URL) + '&t=' + encodeURIComponent(document.URL)); return false;">
+<i class="fa fa-facebook"></i>
+</a>
+
+<a class="w-inline-block share-btn linkedin" href="http://www.linkedin.com/shareArticle?mini=true&url=&title=&summary=&source=" target="_blank" title="Share on LinkedIn" onclick="window.open('http://www.linkedin.com/shareArticle?mini=true&url=' + encodeURIComponent(document.URL) + '&title=' + encodeURIComponent(document.title)); return false;">
+<i class="fa fa-linkedin"></i>
+</a>
+<span>
+
+<a id="email" class="w-inline-block share-btn email" href="#" rel="nofollow" title="Email">
+<i class="fa fa-envelope"></i>
+</a>
+<a href="#" class="share-btn print" target="_blank" rel="nofollow" onClick="window.print()">
+<i class="fa fa-print" aria-hidden="true" style="left:4px; position:relative"></i>
+<span class="printText"></span>
+</a>
+</span>
+<script type="text/javascript">
+    var link = document.getElementById('email');
+    link.onclick = function () {
+        this.href = "mailto:?subject=";
+        this.href += getSubject();
+        this.href += "&body=";
+        this.href += getBody();
+    };
+    function getBody() {
+        return encodeURIComponent(document.URL);
+    }
+    function getSubject() {
+        return encodeURIComponent(document.title);
+    }
+    $(".print-pdf").click(function () {
+        trackEvent('Print', 'Click', window.location.href +'?PrintPDF=true', 'CN');
+        window.location.replace("?PrintPDF=true");
+    });
+
+</script>
+<span style="padding-left:5px;" data-contentId="#= data[i].ContentId #" class="content-star">
+<i id="savedContentStar" class="fa fa-star" style="cursor:pointer; color:lightgray" onclick="savedContent(4862+'-EPI-'+12, '');"></i>
+</span>
+</div>
+<p><a href="#types">相机类型</a> | <a href="#scan">面扫描 vs. 线扫描相机</a> | <a href="#interfaces">数字接口</a> | <a href="#power">供电和软件</a></p>
+<div class="mobile100" style="float: right;"><img class="mobile100" style="width: 270px; padding-left: 10px; padding-bottom: 10px;" alt="Imaging Electronics 101: Understanding Camera Sensors for Machine Vision Applications" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/cam-type.jpg" /></div>
+<p>随着城乡技术的不断发展，相机的类型以及其接口也跟着不断进化，以满足一系列不同的应用需求。对于半导体、电子元件、生物技术、装配和制造行业的机器视觉应用而言，检验和分析是关键的程序，因此，使用最好的相机系统完成手上的工作就是实现最佳图像质量的关键。从模拟和数字<a href="~/link/359748d7a75343d59faa905d25e45159.aspx">相机</a>、逐行扫描和隔行扫描格式、到FireWire和GigE接口，理解系统参数，如相机类型、数字接口、供电，以及软件，都能帮助您从成像初学者晋升为成像专家。</p>
+<h2 id="types">相机类型及它们的优势</h2>
+<h3>模拟 vs. 数字相机</h3>
+<p>最基本的来说，相机可以被分为两种类型：模拟相机和数字相机。模拟相机实时传输一个连续变化的电子信号。该信号的频率和振幅则由模拟输出设备解释为视频信息。模拟视频信号和其解释的方法都将影响最终产生的视频图像。同时，这个传输数据的方法既具有优点也有缺点。通常，比起等同的数字相机，模拟相机更便宜、相对较简单，因此它们是常见视频应用具成本效益又简单的解决方案。然而，模拟相机在分辨率（电视线数量）和帧速率这两方面都具有上限。例如，美国最常见的视频信号格式之一，NTSC，就具有800电视线数量的上限（一般为525电视线），并限定每秒不超过30帧。PAL标准使用625电视线，每秒25帧。模拟相机也很容易受到电子噪声的影响，电子噪声取决于往往被忽略的一些要素，如电缆长度和连接器类型。</p>
+<p>相机中的最新成员，并正稳健成为最受欢迎的数字相机，使用电子信号传输二进制数据（“1”和“0”数字流）。虽然每个特定像素上的光强度相应的电压都是连续的，但数字模拟转换过程会将其成为离散的电压，并分配一个介于0（黑色）至2 N - 1的灰度值，其中N是编码的位数。输出设备则再将二进制数据转换成视频信息。您要注意的是，数字相机类型有两个关键的特点，这是模拟<a href="~/link/359748d7a75343d59faa905d25e45159.aspx">相机</a>类型没有的：</p>
+<ol>
+<li>数字视频信号在离开相机和达到一个输出设备时是完全相同的。</li>
+<li>视频信号只能以一种方式得以解释。</li>
+</ol>
+<p>这些差异消除了因为显示器而出现的传输信号和输出设备解释信号的错误。相较于等同的的模拟相机，数字相机一般具有更高的分辨率、更高的帧速率、更少噪声和更多的功能。不过这些优势不是没有代价的：数字相机一般都比模拟相机贵。况且，备有很多功能的相机可能会需要更复杂的设置，就算是只要求基本能力的视频系统。在大多数情况下，数字相机也只能使用短的电缆。表1是模拟和数字<a href="~/link/359748d7a75343d59faa905d25e45159.aspx">相机</a>类型的简短比较。</p>
+<table class="table table-striped table-bordered">
+<thead>
+<tr><th colspan="2" class="grayBkgd">表1：模拟和数字相机类型的比较</th></tr>
+<tr><th width="50%"><strong>模拟相机</strong></th><th width="50%"><strong>数字相机</strong></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>垂直分辨率受限于模拟信号的带宽</td>
+<td>垂直分辨率不受限，提供水平和垂直双向高分辨率</td>
+</tr>
+<tr>
+<td>标准尺寸传感器</td>
+<td>无带宽限制，提供大量的像素和传感器，因此可获得较高的分辨率</td>
+</tr>
+<tr>
+<td>计算机和捕获板可用于数字化过程，但是不需要用于显示过程</td>
+<td>计算机和捕获板（某些情况下）需要用于显示信号</td>
+</tr>
+<tr>
+<td>模拟印刷和记录容易纳入系统内</td>
+<td>信号可以被压缩，所以用户能够以低带宽传播</td>
+</tr>
+<tr>
+<td>信号容易受到噪声和干涉的影响，进而造成质量上的损失</td>
+<td>输出信号是数字信号，在信号处理的时候不易出现任何信号损失</td>
+</tr>
+<tr>
+<td>有限的帧速率</td>
+<td>高帧速率、高速快门</td>
+</tr>
+</tbody>
+</table>
+<h3>隔行扫描 vs.逐行扫描相机</h3>
+<p>相机格式可分为隔行扫描、逐行扫描、面扫描和线扫描格式。为方便对比，最好将它们分为隔行 vs. 逐行以及面 vs. 线。传统的CCD相机的整个传感器都使用隔行扫描格式。传感器被分为两种视场：奇数视场（第1、3、5排，等等）和偶数视场（第2、4、6排，等等）再对这些视场进行集成以产生全帧。例如，每秒30帧(fps)的帧速率将需要1/60秒读出一个视场。对大多数应用而言，隔行扫描不会造成任何问题。不过，隔行扫描在高速应用中将产生一些问题，因为扫描完第二个视场之后，物体已移向别处了。这将导致最终产生的图像出现重影或模糊效果（图1a – 1b）。注意图1a中的TECHSPEC®英雄使用隔行扫描传感器拍照时，图像是倾斜的。</p>
+<p>相反的，逐行扫描通过依顺序进行扫（第1、2、3、4排，等等）解决了这个高速方面的问题。不幸的是，逐行扫描的输出没有被标准化，所以选择硬件时要小心。一些逐行扫描相机提供模拟的输出信号，但只有极少的监视器能够显示这些图像。因此，建议使用捕获板将该模拟图像数字化以方便显示</p>
+<div class="clearfix mobile100" style="width: 600px; margin: 0 auto;">
+<div class="mobile100" style="width: 250px; float: left;"><img class="mobile100" alt="Ghosting and Blurring of TECHSPEC® Man's High-Speed Movement Using an Interlaced Scanning Sensor" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/fig-1a-cti.gif" />
+<h5><strong>图1a：</strong> 使用隔行扫描传感器获得的TECHSPEC®英雄高速运动重影和模糊效果</h5>
+</div>
+<div class="mobile100" style="width: 250px; float: right;"><img class="mobile100" alt="TECHSPEC® Man's High-Speed Movement Using a Progressive Scanning Sensor" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/fig-1b-cti.gif" />
+<h5><strong>图1b：</strong> 使用逐行扫描传感器获得的TECHSPEC®英雄高速运动图像</h5>
+</div>
+</div>
+<h3 id="scan">面扫描 vs. 线扫描相机</h3>
+<p>面扫描相机的<a href="~/link/b3465a0153a1471bb2145d0ddb5b9b0c.aspx">成像镜头</a>将物体焦距在传感器阵列上，而且图像在像素级别采样，以进行重建（图2）。若图像运动速度不快，或物体体积不是很大，这会非常方便成像。常见的傻瓜数字相机就是这种面扫描设备的例子。线扫面相机的像素以线性方式排列，可以实现很长的阵列（图2）。长阵列非常理想化，因为每次曝光需要读出的信息数量将大幅降低，读出的速度因为少了列移位寄存器或多路复用器而增加；换句话说，当物体经过相机时，图像将通过软件被逐线捕捉和重建。</p>
+<div class="mobile100" style="margin: 0 auto; width: 450px;"><img class="mobile100" style="width: 450px;" alt="Illustration of Area Scanning Technique and an Illustration of Line Scanning Technique" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/fig-2-cti.gif" />
+<h5><strong>图2：</strong>面扫描技巧（左）说明 线扫描技巧（右）</h5>
+</div>
+<table class="table table-striped table-bordered">
+<thead>
+<tr><th colspan="2" class="grayBkgd"><strong>表2：面扫描相机和线扫描相机的比较</strong></th></tr>
+<tr><th width="50%"><strong>面扫描相机</strong></th><th width="50%"><strong>线扫描相机</strong></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>4:3 (H:V) 比例（典型）</td>
+<td>线性传感器</td>
+</tr>
+<tr>
+<td>大型传感器</td>
+<td>大型传感器</td>
+</tr>
+<tr>
+<td>高速应用</td>
+<td>高速应用</td>
+</tr>
+<tr>
+<td>快门迅速</td>
+<td>逐线重建图像</td>
+</tr>
+<tr>
+<td>比线扫描便宜</td>
+<td>物体运动经过传感器</td>
+</tr>
+<tr>
+<td>应用范围比比线扫描广</td>
+<td>捕捉宽物体的理想选择</td>
+</tr>
+<tr>
+<td>设置容易</td>
+<td>特殊的校准和时间要求；复杂的集成但简单的照明</td>
+</tr>
+</tbody>
+</table>
+<h3>时间延迟积分(TDI) vs. 传统线扫描相机</h3>
+<p>在传统线扫描相机中，物体要经过传感器，图像将逐线成形。既然重建图像的每一行都来自线性阵列的单一、短期曝光，将收集很少光线。因此，这将需要大量的照明（试想复印机或文档扫描仪）。其替代品就是时间延迟积分(TDI)线扫描相机。在这些相机中，多个线阵列将并排放置。第一个阵列曝光后，电荷就会被传输到邻近的线上。当物体移动的距离为线与线之间的距离，那么第二次曝光就会发生在第一次的上方，等等。因此，物体的每一条线就会反复成像，曝光会相加（图3a - 3b）。这个方法降低噪声，进而增加信号。与此同时，它也展示了触发的概念，即像素阵列的曝光将与物体的运动以及照明的闪光同步进行。</p>
+<div class="rotator nomobile" style="margin: 0 auto; width: 528px; margin-bottom: 10px;">
+<div id="slideshow"><img alt="" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/fig-3a-exp.gif" height="290" width="524" /> <img alt="" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/fig-3b-exp.gif" height="290" width="524" /> <img alt="" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/fig-3c-exp.gif" height="290" width="524" /></div>
+<input id="Previous" class="btn-other" type="button" value="Previous" /> <input id="Next" class="btn-other" type="button" value="Next" /></div>
+<div class="rotator nomobile" style="margin: 0 auto; width: 528px; height: 65px;">
+<div id="slideshow-caption">​
+<p style="display: none;"><strong>图 3a：​</strong> 第一个阵列曝光，电荷被传输到邻近的线上</p>
+​
+<p style="display: none;"><strong>图 3b:</strong> 当物体移动到两幅分离线之间时，顶部第一次曝光</p>
+​
+<p style="display: none;"><strong>图 3c:</strong> 物体继续移动到线与线之间部分直到每条线都被成像</p>
+</div>
+</div>
+<h2 id="interfaces">数字相机接口</h2>
+<p>数字相机在过去的十年里越来越受欢迎，因为传输噪声、畸变、或其他信号衰减都不影响传输的信息。既然输出信号是数字信号，在传输过程中流失的信息因此很少。随着越来越多的用户转而使用数字相机，成像技术也已经先进到包含了大量的数字接口。下一个十年里的成像前景将会非常的不同，但当今最常见的接口包括了捕获板、FireWire、Camera Link®、GigE，以及USB（表3）。</p>
+<p>与许多选择相机的标准一样，这行业没有单一的最佳接口选项，但用户必须选择最合适的设备执行手上的应用。异步或确定性传输允许数据传输收据，保证信号完整性，有鉴于双向沟通，着重于交付而不是时间。在等时传输中，数据包以预先安排的方式传输（如：每125μs传输），虽然保证了时间，但也同时也有可能在高传输率传输的时候遗失数据包。</p>
+<div style="float: right;"><img style="width: 270px;" alt="Capture Boards" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/img-2-cti.gif" /></div>
+<h3>捕获板</h3>
+<p>图像处理通常涉及计算机的使用。<a href="~/link/e56bce52285b4f7bbba49bbbeea9f22d.aspx">捕获板</a>允许其用户将模拟相机信号输出至计算机以进行分析，对数字信号而言（NTSC、YC、PAL、CCIR），捕获板包含了一个模拟数字转换器(ADC)以数字化模拟信号好进行图像处理。其他的组件允许信号的实时查看。用户即可以捕捉图像然后将其储存以备将来处理和印刷。基本的捕获软件均包含了捕获板，允许用户储存、打开、查看图像。捕获板这一术语的也泛指PCI卡，它是从数字相机接口解释和采集数据的必要组件，但是并不存在于标准的计算机连接器上。</p>
+<h3>FireWire（IEEE 1394/IIDC DCAM 标准）</h3>
+<p><a href="~/link/63fc1d4347a94f9ba14de28739050c5b.aspx">Firewire</a>，也称为IEEE 1394，有鉴于FireWire端口在计算机上的广泛可用性，是流行的等时串行相机接口。虽然FireWire.a是一个传输率较慢的接口，但FireWire.a和FireWire.b都允许多台相机的连接，并能通过FireWire电缆提供电力。不建议使用热插拔/热插接，因为连接器设计可能会对信号管脚造成短路，进而有可能损坏端口或设备。</p>
+<p>h3&gt;Camera Link®</p>
+<p>Camera Link® 是一个高速串行接口标准，特地为机器视觉应用开发，尤其是那些涉及到自动检测和过程控制的应用。需要<a href="~/link/a9957123bbcd4a9e8db39549b3de6e62.aspx">Camera Link®</a>捕获卡以使用Camera Link®，并必须独立对相机供应电力。需要特殊的电缆，因为除了低压差分对LVDP信号线之外，还提供独立的异步串行通信电路来为数据传输保留全带宽。单电缆的基本配置允许专门用于视频的255 MB/s传输。双输出（完整配置）允许独立相机参数的发送/接收线在极端高速的应用中腾出更多数据传输空间（680MB/s）。</p>
+<p>Camera Link® HS（高速）是对Camera Link®接口的扩展接口，可通过使用更多的电缆提高数据传输速度（15m可高达2100MB/s）。此外，Camera Link® HS也对光纤电缆提供支持（长度高达约300m）。</p>
+<h3>GigE（GigE Vision标准）</h3>
+<p>GigE基于千兆以太网互联网协议，并使用高速异步相机接口的标准Cat-5和Cat-6电缆。标准的以太网硬件诸如开关、集线器、中继器可用于多个相机，尽管每当使用非对等（直接相机到卡）连接时必须考虑到总体带宽。在<a href="~/link/e408d3baebc1459586c81aaf4920b137.aspx">GigE Vision</a>中，相机控制寄存器是基于EMVA GenICam标准。链路聚合（LAG、IEEE 802.3ad）为一些相机的可选附件，它通过并联使用多个以太网端口来提高数据传输率，并通过多点传送来分配处理器的负载。网络准确时间协议(PTP)可用于同步连接至同一网络上的多台不同相机，因此，各相机之间的相关曝光时间可拥有固定的延迟关系。这些设备都支持热插拔。</p>
+<p>GigE视觉标准也支持更高的数据传输速度，基于10GigE网络标准。10GigE标准有潜力超越Camera Link®和USB 3.0的速度而同时接纳更长的电缆长度。</p>
+<h3>USB（通用串行总线）</h3>
+<p>因其在计算机上的广泛可用性，<a href="~/link/2ba965ba4e57492c84625ec6e16eb391.aspx">USB 2.0</a>是一个很受欢迎的接口。它的传输速度不高，但非常方便；最高可行速度取决于USB外围组件的数量，因为总线的总体传输速度已固定为480Mb/s。任何计算机商店都随时提供其电缆。在某些情况下，如笔记本电脑，可能需要单独对相机提供电力。</p>
+<p><a href="~/link/2ba965ba4e57492c84625ec6e16eb391.aspx">USB 3.0</a>备有USB 2.0所提供的即插即用功能，并同时还能提供更快的数据传输速度。</p>
+<h3>CoaXPress</h3>
+<p>CoaXPress是一个单一电缆高带宽串行接口，可允许高达6.25Gb/s的传输速率，电缆长度可高达100m。可使用多个电缆，速度可高达25Gb/s。与PoE非常相似的电缆提供电源(Power-over-Coax)也是可用的选择。需要CoaXPress帧捕获器。</p>
+<div class="table-responsive">
+<table class="table table-striped table-bordered">
+<thead>
+<tr><th colspan="6" align="center" class="grayBkgd"><strong>表3：受欢迎数字相机接口的比较</strong></th></tr>
+<tr class="yellowBkgd"><th width="20"><strong>接口</strong></th><th width="16"><strong>FireWire 1394.b</strong></th><th width="16"><strong>Camera Link®</strong></th><th width="16"><strong>USB 2.0</strong></th><th width="16"><strong>USB 3.0</strong></th><th width="16"><strong>GigE</strong></th></tr>
+<tr><th>&nbsp;</th><th><img alt="FireWire 1394.b" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/firewire-b.png" height="75" width="113" /></th><th><img alt="Camera Link®" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/camera-link.png" height="75" width="113" /></th><th><img alt="USB 2.0" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/usb-2.png" height="75" width="113" /></th><th><img alt="USB 3.0" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/usb-3.png" height="75" width="113" /></th><th><img alt="GigE" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/gige.png" height="75" width="113" /></th></tr>
+</thead>
+<tbody>
+<tr>
+<td>400 Mb/s</td>
+<td>800 Mb/s</td>
+<td>高达3.6 Gb/s</td>
+<td>480 Mb/s</td>
+<td>5Gb/s</td>
+<td>1000 Mb/s</td>
+</tr>
+<tr>
+<td>4.5m</td>
+<td>100m（包含GOF电缆）</td>
+<td>10m</td>
+<td>5m</td>
+<td>3m (recommended)</td>
+<td>100m</td>
+</tr>
+<tr>
+<td>高达63</td>
+<td>高达63</td>
+<td>1</td>
+<td>高达127</td>
+<td>高达127</td>
+<td>无限</td>
+</tr>
+<tr>
+<td>6pin-6pin</td>
+<td>9pin-9pin</td>
+<td>26pin</td>
+<td>USB</td>
+<td>USB</td>
+<td>RJ45/CAT5</td>
+</tr>
+<tr>
+<td>可选</td>
+<td>可选</td>
+<td>必要</td>
+<td>可选</td>
+<td>可选</td>
+<td>不必要</td>
+</tr>
+<tr>
+<td>可选</td>
+<td>可选</td>
+<td>必要/td&gt;</td>
+<td>可选</td>
+<td>可选</td>
+<td>必要</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div style="float: right;"><img style="width: 270px; padding-left: 10px; padding-bottom: 10px;" alt="Powering the Camera" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/2740.jpg" /></div>
+<h2 id="power">为相机提供电力</h2>
+<p>许多相机接口都允许电力通过信号电缆远程提供给相机。不依具以上方法供电时，通常可以通过Hirose连接器（这还允许触发布线和I/O）或一个标准的AC/DC适配器类型连接提供电力。即使在某些情况下该相机可以采用卡或端口供电，使用可选的电力连接可能更有利。例如，雏菊链接<a href="~/link/63fc1d4347a94f9ba14de28739050c5b.aspx">FireWire相机</a>或使用笔记本电脑运行系统就是需要额外电力的好例子。而且，拥有大型、高速传感器以及机载FPGA的相机需要的电力无法只靠信号电缆提供的电力满足。</p>
+<h3>以太网供电(PoE)</h3>
+<p>目前，市面上提供电力注射器，它们允许将电力通过GigE电缆传送给一些特定的相机。这一点在空间限制不允许每台相机拥有自己的电源时非常重要，如在工厂地板安装或户外应用中。在这种情况下，就会在电缆某处添加电力注射器，并使用标准电缆将相机连接至计算机。不过，并不是所有的<a href="~/link/e408d3baebc1459586c81aaf4920b137.aspx">GigE相机</a>都是PoE兼容的。如同其他接口一样，如果需要顶尖性能，电力应由信号电缆独立提供。PoE的电源电压标准比标准相机可以供应的电压高，因此这需要更多的电子元件并将造成更多的功率耗散，必须使用复杂的热设计以避免热噪声的增加，进而确保不流失图像质量。</p>
+<h3>模拟CCD输出信号</h3>
+<p>模拟视频信号共有几种不同的格式。该格式定义帧速率、显示线数量、用于显示和消隐的时间、同步、带宽，以及信号特性。美国的电子工业协会(EIA)将单色信号定义为RS-170。彩色版本定义为RS-170A，更多的被称为国家电视标准委员会(NTSC)。RS-170和NTSC都是复合信号。这也就代表所有有关颜色和强度方面的信息都被合并到在一个信号内。有一些分量信号（Y-C和RGB）可将单独的色度（颜色）与亮度（颜色的强度）分开。CCIR是欧洲的单色标准格式、而PAL和SECAM制式则是欧洲的彩色标准。<strong>注意：</strong> 必须使用相同的相机格式和显示格式才能获得适当的图像。</p>
+<h3>笔记本电脑和相机</h3>
+<p>虽然许多的数字<a href="~/link/359748d7a75343d59faa905d25e45159.aspx">相机</a>接口都于笔记本电脑上提供，强烈建议您避免使用标准笔记本电脑进行高质量和/或高速成像的应用。往往笔记本电脑上的数据总线都不支持最高传输率，而且也没有足够的资源以充分利用高性能相机和软件。而且，大多数笔记本电脑中的标准以太网卡的执行性能都比用于桌上型电脑的PCIe卡性能更低。</p>
+<div style="float: right;"><img style="width: 270px; padding-left: 10px; padding-bottom: 10px;" alt="Camera Software" src="/contentassets/830e90b03c7240adbd923cd7fa01f4b2/24091.jpg" /></div>
+<h3>相机软件</h3>
+<p>一般而言，成像软件有两种：相机特定的软件开发工具包(SDK)或第三方软件。SDK包括应用程序编程接口和代码库，以开发用户定义的程序，以及不需要任何编码并提供简单功能的简单图像浏览和采集程序。使用第三方软件的时候，需要相机标准（GenICam、DCAM、,GigE Vision）来确保功能。第三方软件包括NI LabVIEW™、MATLAB®, OpenCV等。通常第三方软件都能够运行多个相机并支持多个接口，但用户必须自行确保其最终功能。</p>
+<p>虽然成像应用有许许多多的相机类型、接口、供电要求以及软件，熟悉每方面的优缺点可让用户为自己的应用挑选最适合的组合。无论您的应用需要高数据传输、长电缆和/或雏菊链，总有一组相机组合可以协助您实现最佳效果。欲了解更多关于成像电子元件的信息，请参阅我们成像电子元件101系列中的相<a href="/knowledge-center/application-notes/imaging/understanding-camera-sensors-for-machine-vision-applications/">机传感器</a>、<a href="/knowledge-center/application-notes/imaging/camera-resolution-for-improved-imaging-system-performance/">相机分辨率</a>，以及<a href="/knowledge-center/application-notes/imaging/basics-of-digital-camera-settings-for-improved-imaging-results/">相机设置</a>。</p>
+<div class="container content-rating" style="margin-bottom:60px; margin-top:30px">
+<div class="col-lg-9">
+<div class="rating-box">
+<div style="font-size:30px; font-weight:bold">本内容对您是否有用？</div>
+<fieldset class="rating">
+<input id="star5" type="radio" value="5" name="rating" /><label class="full" title="Very useful" for="star5"></label>
+<input id="star4" type="radio" value="4" name="rating" /><label class="full" title="Useful" for="star4"></label>
+<input id="star3" type="radio" value="3" name="rating" /><label class="full" title="Fairly" for="star3"></label>
+<input id="star2" type="radio" value="2" name="rating" /><label class="full" title="A little bit" for="star2"></label>
+<input id="star1" type="radio" value="1" name="rating" /><label class="full" title="Not at all" for="star1"></label>
+</fieldset>
+<label id="rating-thank-you">感谢您为本内容评分！</label>
+</div>
+</div>
+</div>
+<script>
+    $('input[name=rating]').on('change', function () {
+        var rating = $('input[name=rating]:checked').val();
+        trackEvent('Content Ratings', 'ApplicationNote', rating);
+        $('.rating').hide();
+        $('#rating-thank-you').show();
+    });
+</script>
+</div>
+<div id="RightHandColumnContent" class="col-lg-3 col-md-3 nomobile noipad"><div class="row equal-height"><div class="block rightcolumncontentblock full span12">
+<div class="row">
+<div class="rccHeader"><a href="/knowledge-center/application-notes/imaging/basics-of-digital-camera-settings-for-improved-imaging-results/">成像质量改进的数字相机基本设置</a></div>
+<div class="rccBody"><p>与模拟相机相比，数字相机可通过采集软件调整相机设置，从而有更高的灵活性。了解它们在成像系统中的作用。</p></div>
+</div></div><div class="block rightcolumnexternalcontentwithimageblock full span12"><div class="row">
+<div class="rccImage"><img src="/globalassets/right-hand-column/product-categories/cameras/cameras.jpg" /></div>
+<div class="rccHeader"><a href="/c/cameras/1012/#">Cameras</a></div>
+<div class="rccBody"><p>Check out our wide selection of interfaces, including USB 2.0, USB 3.0, FireWire.a, FireWire.b, GigE Vision, PoE, Camera Link®, or analog.</p></div>
+</div></div><div class="block rightcolumncontentblock full span12">
+<div class="row">
+<div class="rccHeader"><a href="/knowledge-center/application-notes/imaging/camera-resolution-for-improved-imaging-system-performance/">性能改善的成像系统的相机分辨率</a></div>
+<div class="rccBody"><p>应用说明中各个重要参数的技术提示简单易学，无论成像用户是新手还是专家，都能理解与系统中成像电子元件相关的相机分辨率的信息内容。</p></div>
+</div></div><div class="block rightcolumncontentblock full span12">
+<div class="row">
+<div class="rccHeader"><a href="/knowledge-center/application-notes/imaging/understanding-camera-sensors-for-machine-vision-applications/">了解机器视觉应用中的相机传感器</a></div>
+<div class="rccBody"><p>传感器是相机的核心。EO 将在此为您介绍传感器结构、特性和光谱性质。</p></div>
+</div></div><div class="block rightcolumnwithimageblock full span12">
+<div class="row">
+<div class="rccImage"><img src="/globalassets/right-hand-column/contact--support/contact-us.jpg" /></div>
+<div class="rccHeader"><a href="/contact-support/">快速响应您的问题</a></div>
+<div class="rccBody"><p>需要与爱特蒙特光学（Edmund Optics）联系？我们提供各种便捷、友好的服务以应对您的需求。</p></div>
+</div></div></div></div>
+</div>
+<a href="javascript:" id="return-to-top"><i class="fa fa-chevron-up"></i></a>
+</div>
+<div class="eoFooter">
+<div class="clearfix">
+<div id="footerbg" class="noprint col-lg-12 col-sm-12 respd">
+<div class="container theme-showcase" id="containerone">
+<div class="row">
+<div class="col-lg-8 col-md-8 col-12 qqh2">
+<h2 class="quote">需要报价？ <span style="font-size: 15px;font-weight: lighter;">输入库存编号只需两步即可获取报价.</span></h2>
+</div>
+<div class="col-lg-4 col-md-4 col-12">
+<a class="btn-other qq" href="/tools/quote">立即开始</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="col-xs-12 footercallbox yesmobile" style="padding-right:0px; margin-bottom:-35px; margin-top:20px; top:-34px">
+<span style="position:relative; top:-3px"> <div><div class="block htmlblock  ">
+<span><h2><a style="color: #fff; text-decoration: none;" href="tel:0755-8435-5459">立即拨打! (+86) 0755 8435 5459</a></h2></span>
+</div></div></span>
+</div>
+<div class="clearfix"></div>
+<div id="legallogos" style="margin-top:0 !important">
+<div id="socialnetworks" class="clearfix">
+<span><div><div class="block htmlblock full span12">
+<span><p><a href="http://i.youku.com/i/UMjcxMDM2NTQ0NA==?spm=a2hzp.8244740.uerCenter.5~5!2~A" target="_blank" rel="nofolow"><span style="padding-right: 2px;"><img class="lazy" alt="Edmund Optics Youku" data-src="/globalassets/footer/social-icons/youku-website-1.gif" /></span></a>&nbsp; <a href="https://www.linkedin.com/company/edmund-optics" target="_blank" rel="external"><span style="padding-right: 2px;"><img class="lazy" alt="Edmund Optics Linkedin" data-src="/globalassets/footer/social-icons/linkedin-web-1.gif" /></span></a></p></span>
+</div></div></span>
+</div>
+<div class="copyright clearfix">
+<span><div><div class="block htmlblock full span12">
+<span><p style="padding-bottom: 15px;"><a href="/contact-support/">联系与支持&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;</a><a href="/contact-support/catalogs/">目录</a>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<a href="/company/">公司</a>&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp;&nbsp;<a href="/promotions/">促销</a></p>
+<div style="margin-bottom: -10px !important; margin-top: -10px !important;">
+<p style="color: #9e9e9e;">版权所有 <span id="year">year</span>，爱特蒙特光学（深圳）有限公司。—广东省深圳市龙华工业东路利金城科技工业园3栋5楼 518109 <br /><span lang="ZH-CN">粤</span><span>ICP</span><span lang="ZH-CN">备</span><span>15118149</span><span lang="ZH-CN">号</span></p>
+</div></span>
+</div></div></span>
+<span><div><div class="block htmlblock full span12">
+<span><div class="clearfix" style="margin-top: 25px; margin-left: 15px; margin-right: 15px;"><a href="/privacy-policy/">保密政策</a> | <a href="/terms-and-conditions/">术语和条款</a> | <a href="/company/careers/">职位</a> | <a href="/contact-support/help-center/">技术支持中心</a> | <a href="/contact-support/feedback/">回复</a></div></span>
+</div></div></span>
+</div>
+<div id="belowsitemap">
+<span><div><div class="block htmlblock  ">
+<span><div style="padding-left: 0px;"><span style="padding-bottom: 10px; position: relative; top: 10px;">
+<script type="text/javascript" src="https://sealserver.trustwave.com/seal.js?code=b402a935000e4bd4b21355d40e41bce8"></script>
+</span></div></span>
+</div></div></span>
+</div>
+</div>
+</div>
+<script>
+        function gaDomainSwitch() { return ""; }
+        function trackEvent(category, action, label, lang, url) { if (url != null) { document.location = url; } }
+    </script>
+<script>
+        var _hmt = _hmt || [];
+        (function () {
+            var hm = document.createElement("script");
+            hm.src = "https://hm.baidu.com/hm.js?db39645f9402caaf9df562b3a6adfa02";
+            var s = document.getElementsByTagName("script")[0];
+            s.parentNode.insertBefore(hm, s);
+        })();
+    </script>
+<div id="redirectCountryModal" class="eo-modal-window">
+<div class="eo-modal-content">
+<span class="close">&times;</span>
+<div id="redirectCountryContent"></div>
+</div>
+</div>
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/autocomplete.css?v=637103590040000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/font-awesome.css?v=636996553900000000" media="all">
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/custom.kendo.css?v=636851485920000000" media="all" />
+<link rel="stylesheet" type="text/css" href="/Assets/css/layout-bundled/print.css?v=636969878340000000" media="print">
+<script src="/Assets/javascript/layout-bundled/js.cookie.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/layout-bundled/livechat.js?v=636845459280000000"></script>
+<script src="/Assets/javascript/layout-bundled/kendo.custom.min.js?v=636639559960000000"></script>
+<script src="/Assets/javascript/combine/jquery.cookie.js?v=636645748340000000"></script>
+<script src="/Assets/javascript/layout-bundled/layout.js?v=637298997960000000"></script>
+<script src="/assets/javascript/jquery.lazy.min.js?v=636880606380000000"></script>
+<script>$('.lazy').Lazy()</script>
+<script>
+        //var userSavedContent;
+        $(document).ready(function () {
+            GetSavedContentStar(4862+'-EPI-' +12);
+            GetDataAfterLogIn(4862+'-EPI-' +12);
+        });
+
+        function GetSavedContentStar(ContentId) {
+
+            if ($('#savedContentStar').length > 0) {
+                $.getJSON("/api/ResourceSearch/GetSavedContent?contentId=" + ContentId, function (data) {
+                    userSavedContent = data;
+                    if (data.length == 0) {
+                        $("#savedContentStar").css("color", "lightgray");
+                    }
+                    else { $("#savedContentStar").css("color", "gold"); }
+                });
+            }
+        }
+
+        function GetDataAfterLogIn(ContentId)
+        {
+            var url = window.location.href;
+            if (url.includes("saveUserContentId"))
+            {
+                InsertSavedContent(ContentId);
+            }
+        }
+
+    </script>
+<script src="/Assets/javascript/layout-bundled/ChinaTagManager.js?v=637100185060000000"></script>
+<script src="/assets/javascript/jquery.cycle.min.js" language="JavaScript" type="text/javascript"></script>
+<script>
+                                $('#slideshow').cycle({ 
+    fx:     'fade', 
+    speed:  'fast', 
+    timeout: 0, 
+    next:   '#Next', 
+    prev:   '#Previous' 
+});
+
+
+
+
+  $('#slideshow-caption').cycle({ 
+    fx:     'fade', 
+    speed:  'fast', 
+    timeout: 0, 
+    next:   '#Next', 
+    prev:   '#Previous' 
+});
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+<script type="text/javascript">
+$(document).ready(function(){
+var d = new Date();
+var n = d.getFullYear();
+
+$("#year").text(n);
+
+});
+
+</script>
+<style>
+.headertop {
+    background-color: green;
+    height: auto;
+}
+.is-cov {
+background-color: #000!important; height: 40px; border-bottom: 6px solid #4a4949;
+}
+
+.cov1 {
+padding-right: 0px; border-right: 1px solid #4a4949;
+}
+
+.cov2 {
+background-image: url('https://www.edmundoptics.com/contentassets/c9b0ec54bc594de0b332c5f2cf3beddd/imaging-summitv4v.jpg'); background-position: center; /* margin-right: 20px; */
+    background-position-y: -350px; background-position-x: 748px; height: 34px;
+
+}
+
+@media (max-width: 1000px) {
+.is-cov {
+height:auto;
+}
+.cov1 {
+border-right: none;
+}
+.cov2 {
+height: auto;
+padding-bottom:10px;
+}
+}
+
+
+
+a:not([href]):not([tabindex]) {
+
+    color: #fff;
+}
+
+a:not([href]):not([tabindex]):focus, a:not([href]):not([tabindex]):hover {
+    color: #fff;
+}
+
+.faqQuestion {
+color:#000 !important
+}
+
+.cd-overlay {
+
+    z-index: 99;
+}
+
+.pagination li a {
+    color: #585858 !Important;
+}
+
+
+.jstree-default .jstree-icon:empty {
+
+    line-height: 31px;
+}
+
+.faqQuestion a {
+color: #0462be !important;
+}
+
+
+.cbutton-dropdown > div > span {
+    padding-left: 12px !important;
+}
+
+.slitherBannerX {
+color:#585858 !important;
+display:none
+}
+
+
+
+
+#CybotCookiebotDialog {
+    border-color: #000000;
+    border-radius: unset;
+    border-top: 1px solid #585858;
+    border-bottom: 1px solid #585858;
+    border-radius: unset;
+    box-shadow: none;
+
+}
+
+
+     #CybotCookiebotDialogBodyButtonAccept{ background-color: #fdcd00; border: 1px solid #fdcd00; cursor: pointer; padding: 5px 10px; display: inline-block; text-transform: uppercase; letter-spacing: 1px; font-weight: 900; position: relative; -webkit-transition: all 0.3s; -moz-transition: all 0.3s; transition: all 0.3s; background: #fbcc30; color: #000; box-shadow: 3px 3px 4px #585858; -webkit-transition: none; -moz-transition: none; transition: none; border-radius: 5px; font-size:12px; margin-top:-5px}
+
+
+
+
+      #CybotCookiebotDialogBody {max-width:1170px}
+
+
+
+
+      .CookieDeclarationDialogText, .CookieDeclarationIntro, .CookieDeclarationLastUpdated { margin: 0 0 14px 0 }
+
+#CybotCookiebotDialog a, #CybotCookiebotDialog br, #CybotCookiebotDialog div, #CybotCookiebotDialog td {
+    line-height: 1.5;
+}
+
+
+      .CookieDeclarationType { display: block; margin: 12px 0 12px 0; padding:8px 8px 0 8px; border: 1px solid #333333; vertical-align: top; }
+      .CookieDeclarationTypeHeader { font-weight: bold; }
+      .CookieDeclarationTypeDescription { margin: 2px 0 16px 0; }
+      .CookieDeclarationTable { table-layout: fixed; width: 100%; border-collapse: collapse; border-spacing: 0; margin: 0 0 18px 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline; }
+      .CookieDeclarationTableHeader { font-weight: bold; border-bottom: 1px solid #777777; text-align: left; padding: 4px; }
+      .CookieDeclarationTableHeader[dir='rtl'] { text-align: right; }
+      .CookieDeclarationTableCell { text-overflow: ellipsis; word-wrap: break-word; border-bottom: 1px solid #777777; vertical-align: top; padding: 4px 4px 5px 4px; }
+    #CybotCookiebotDialogBodyContent { padding-top:15px}
+    #CybotCookiebotDialog a, #CybotCookiebotDialog div, 
+
+
+#CybotCookiebotDialogBodyContentControls, #CybotCookiebotDialogBodyContentTitle { font-family: 'Heebo', Helvetica, Arial, sans-serif }
+
+#CybotCookiebotDialogBodyContentTitle {
+
+    padding: 0;
+    font-size: 20px !important;
+    font-weight: 700;
+    line-height: 100%;
+    color: #ffffff;
+    display: block;
+    position: static;
+    margin: 2px 0 6px;
+}
+
+
+</style>
+<script>
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > 300) {
+                $('#addToCartAlert').addClass('navbar-fixed-top');
+                $('#addAllToCartAlert').addClass('navbar-fixed-top');
+                $('#addToCompareList').addClass('navbar-fixed-top');
+            }
+            if ($(window).scrollTop() < 301) {
+                $('#addToCartAlert').removeClass('navbar-fixed-top');
+                $('#addAllToCartAlert').removeClass('navbar-fixed-top');
+                $('#addToCompareList').removeClass('navbar-fixed-top');
+
+            }
+        });
+    </script>
+<script data-cfasync="false">
+(function(W,i,s,e,P,o,p){W['WisePopsObject']=P;W[P]=W[P]||function(){(W[P].q=W[P].q||[]).push(arguments)},W[P].l=1*new Date();o=i.createElement(s),p=i.getElementsByTagName(s)[0];o.async=1;o.src=e;p.parentNode.insertBefore(o,p)})(window,document,'script','//loader.wisepops.com/get-loader.js?v=1&site=EJXiYx9y4t','wisepops');
+    </script>
+</body>
+</html>

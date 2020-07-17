@@ -1,0 +1,256 @@
+.img-frame {
+    height: 116px;
+    padding: 10px;
+}
+
+body > div.container {
+    width: 100%;
+}
+
+.wellspec {
+    background-color: #efefef;
+    padding: 20px;
+}
+
+#divSearchResults:focus {
+    outline: none !important;
+}
+
+#btnNextStandard, #btnPrevStandard {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+#btnNextMod, #btnPrevMod{
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+}
+
+.greybkgd {
+    background-color:#efefef;
+    border-bottom:1px solid #dadada;
+    height: auto; /*65px*/
+    min-height: 65px;
+}
+
+.text-right {
+    padding-right: 0px !important;
+    margin-top: 15px;
+}
+
+.wells {
+    border-right: 1px solid #dadada;
+    padding: 20px;
+    height: 210px;
+}
+
+.wells label {
+    font-weight:normal !Important
+}
+
+.wells .col-md-6 {
+    padding-right:0px
+}
+
+.wellslast {
+    padding: 20px;
+    height: auto;
+}
+
+.wellslast label {
+    font-weight:normal !Important
+}
+
+.text-right .btn-sm {
+   margin-right: 0px !important;
+   margin-top: 20px;
+}
+
+.list-inline {
+    float: right;
+}
+
+.list-inline > li {
+    margin-right: 0px;
+}
+
+.specs-list-inline {
+    padding-left: 0;
+    margin-left: -5px;
+    list-style: none;
+    float:left;
+}
+
+.specs-list-inline > li {
+    display: inline-block;
+    padding-right: 5px;
+    padding-left: 5px;
+    margin-right: 0px;
+}
+
+.specs-box {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+@media(max-width: 1200px) {
+    .eo-modal-content .close {
+        visibility: hidden;
+    }
+}
+
+@media (max-width: 992px) {
+    .list-inline > li {
+        width: 100%;
+    }
+
+    .specs-list-inline > li {
+        width: 100%;
+    }
+
+    .btn-other {
+        height:auto;
+        margin-bottom:5px;
+        text-align:center
+    }
+
+    .selectt {
+        margin-top:20px
+    }
+
+    .list-inline {
+        float: none !important;
+    }
+
+    .specs-list-inline {
+        float: none !important;
+    }
+
+    .rspd {
+        margin-top:20px;
+        border-top:1px solid #dadada
+    }
+}
+
+
+.wells label:first-child, .wellslast label:first-child {
+    text-transform:uppercase;
+    font-weight:bold !important;
+}
+
+.greybkgd h2 {
+    margin-top:10px
+}
+
+.greybkgd h3 {
+    font-weight:normal !Important;
+    top: 3px;
+    position: relative;
+}
+
+.greybkgd  .col-md-8 {
+    padding-right:0px
+}
+
+.table-striped > tbody > tr:nth-of-type(odd) {
+    background-color: #efefef !important;
+}
+
+.txt-weight {
+    max-width: 50px !important;
+    margin-top:2px;
+}
+
+.btn-partnumber-left {
+    padding: 3px;
+    font-size: 12px;
+    margin-right: 5px
+}
+
+.btn-partnumber-right {
+    padding: 5px 10px 5px 10px;
+}
+
+.btn-addtolist {
+    padding: 3px;
+    font-size: 12px;
+    margin-right: 5px;
+}
+
+.results-buffer-height {
+    height: 330px;
+}
+
+.results-buffer-height-lg {
+    height: 400px;
+}
+
+@media (max-width: 992px) {
+    .results-buffer-height-lg {
+        height: 0px;
+    }
+
+    .spect {
+        margin-top: 400px;
+    }
+}
+
+.slider-panel {
+    height: 750px;
+    background-color: lightgray !important;
+}
+
+.slider-panel .buffer {
+    height: 300px;
+}
+
+.tr-height {
+    height: 35px !important;
+}
+
+.tr-height-double {
+    height: 60px !important;
+}
+
+.btn-wizard-cart {
+    background: #d97d00;
+    color: #fff;
+}
+
+.part-description {
+    min-height: 70px !important;
+}
+
+@media (max-width: 767px) {
+    .nav-tabs {
+        padding-left: 0px;
+        text-align: center;
+        background-color: #efefef;
+        padding-top: 0px;
+        margin-top: 15px;
+    }
+
+    .nav-tabs  li {
+        height: 40px;
+        padding-top: 0px;
+        width: 100%;
+    }
+
+    .nav-tabs > li.active > a {
+        width: 100%;
+        border-radius: unset;
+        border: none;
+        background-color: #ffd51e !important;
+        top: 0px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+        border-bottom: none !important;
+    }
+
+    .nav-tabs > li.active > a:hover {
+        background-color:#ffd51e !Important;
+        border-bottom:none !important;
+    }
+}
