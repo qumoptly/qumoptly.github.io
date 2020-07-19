@@ -29,8 +29,7 @@
   position: absolute;
   white-space: pre;
   cursor: text;
-  -webkit-transform-origin: 0% 0%;
-          transform-origin: 0% 0%;
+  transform-origin: 0% 0%;
 }
 
 .textLayer .highlight {
@@ -182,13 +181,11 @@
 }
 
 .annotationLayer .buttonWidgetAnnotation.checkBox input:checked:before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .annotationLayer .buttonWidgetAnnotation.checkBox input:checked:after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
+  transform: rotate(-45deg);
 }
 
 .annotationLayer .buttonWidgetAnnotation.radioButton input:checked:before {
@@ -292,9 +289,8 @@
   overflow: visible;
   border: 9px solid transparent;
   background-clip: content-box;
-  -webkit-border-image: url(images/shadow.png) 9 9 repeat;
-       -o-border-image: url(images/shadow.png) 9 9 repeat;
-          border-image: url(images/shadow.png) 9 9 repeat;
+  -o-border-image: url(images/shadow.png) 9 9 repeat;
+     border-image: url(images/shadow.png) 9 9 repeat;
   background-color: rgba(255, 255, 255, 1);
 }
 
@@ -427,7 +423,7 @@ html {
 body {
   height: 100%;
   width: 100%;
-  background-color: rgba(249, 249, 249, 0.5);
+  background-color: rgba(255, 255, 255, 0.2);
   background-image: url(images/texture.png);
 }
 
@@ -444,6 +440,14 @@ select {
 }
 [hidden] {
   display: none !important;
+}
+
+.pdfViewer.enablePermissions .textLayer > span {
+  -webkit-user-select: none !important;
+     -moz-user-select: none !important;
+      -ms-user-select: none !important;
+          user-select: none !important;
+  cursor: not-allowed;
 }
 
 #viewerContainer.pdfPresentationMode:-ms-fullscreen {
@@ -556,24 +560,18 @@ select {
   width: var(--sidebar-width);
   visibility: hidden;
   z-index: 100;
-  border-top: 1px solid rgba(200, 200, 200, 1);
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-  -webkit-transition-duration: var(--sidebar-transition-duration);
-          transition-duration: var(--sidebar-transition-duration);
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-timing-function: var(--sidebar-transition-timing-function);
-          transition-timing-function: var(--sidebar-transition-timing-function);
+  border-top: 1px solid rgba(200, 200, 200, 0.5);
+  transition-duration: 200ms;
+  transition-duration: var(--sidebar-transition-duration);
+  transition-timing-function: ease;
+  transition-timing-function: var(--sidebar-transition-timing-function);
 }
 html[dir='ltr'] #sidebarContainer {
-  -webkit-transition-property: left;
   transition-property: left;
   left: -200px;
   left: calc(0px - var(--sidebar-width));
 }
 html[dir='rtl'] #sidebarContainer {
-  -webkit-transition-property: right;
   transition-property: right;
   right: -200px;
   right: calc(0px - var(--sidebar-width));
@@ -585,8 +583,7 @@ html[dir='rtl'] #sidebarContainer {
 
 #outerContainer.sidebarResizing #sidebarContainer {
   /* Improve responsiveness and avoid visual glitches when the sidebar is resized. */
-  -webkit-transition-duration: 0s;
-          transition-duration: 0s;
+  transition-duration: 0s;
   /* Prevent e.g. the thumbnails being selected when the sidebar is resized. */
   -webkit-user-select: none;
      -moz-user-select: none;
@@ -594,7 +591,9 @@ html[dir='rtl'] #sidebarContainer {
           user-select: none;
 }
 
-#outerContainer.sidebarMoving #sidebarContainer,
+#outerContainer.sidebarMoving #sidebarContainer {
+  visibility: hidden;
+}
 #outerContainer.sidebarOpen #sidebarContainer {
   visibility: visible;
 }
@@ -621,7 +620,7 @@ html[dir='rtl'] #outerContainer.sidebarOpen #sidebarContainer {
   -webkit-overflow-scrolling: touch;
   position: absolute;
   width: 100%;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0);
 }
 html[dir='ltr'] #sidebarContent {
   left: 0;
@@ -643,14 +642,10 @@ html[dir='rtl'] #sidebarContent {
   outline: none;
 }
 #viewerContainer:not(.pdfPresentationMode) {
-  -webkit-transition-duration: 200ms;
-          transition-duration: 200ms;
-  -webkit-transition-duration: var(--sidebar-transition-duration);
-          transition-duration: var(--sidebar-transition-duration);
-  -webkit-transition-timing-function: ease;
-          transition-timing-function: ease;
-  -webkit-transition-timing-function: var(--sidebar-transition-timing-function);
-          transition-timing-function: var(--sidebar-transition-timing-function);
+  transition-duration: 200ms;
+  transition-duration: var(--sidebar-transition-duration);
+  transition-timing-function: ease;
+  transition-timing-function: var(--sidebar-transition-timing-function);
 }
 html[dir='ltr'] #viewerContainer {
   box-shadow: inset 1px 0 0 rgba(255, 255, 255, 0.05);
@@ -661,18 +656,15 @@ html[dir='rtl'] #viewerContainer {
 
 #outerContainer.sidebarResizing #viewerContainer {
   /* Improve responsiveness and avoid visual glitches when the sidebar is resized. */
-  -webkit-transition-duration: 0s;
-          transition-duration: 0s;
+  transition-duration: 0s;
 }
 
 html[dir='ltr'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentationMode) {
-  -webkit-transition-property: left;
   transition-property: left;
   left: 200px;
   left: var(--sidebar-width);
 }
 html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentationMode) {
-  -webkit-transition-property: right;
   transition-property: right;
   right: 200px;
   right: var(--sidebar-width);
@@ -693,11 +685,9 @@ html[dir='rtl'] #outerContainer.sidebarOpen #viewerContainer:not(.pdfPresentatio
 #toolbarSidebar {
   width: 100%;
   height: 32px;
-  background-color: rgba(199, 199, 225, 0.5); /* fallback */
+  background-color: rgba(0, 0, 0, 0.3); /* fallback */
   background-image: url(images/texture.png),
-                    -webkit-gradient(linear, left top, left bottom, from(rgba(175, 175, 175, 0.6)), to(rgba(200, 200, 200, 0.8)));
-  background-image: url(images/texture.png),
-                    linear-gradient(rgba(175, 175, 175, 0.6), rgba(200, 200, 200, 0.8));
+                    linear-gradient(rgba(255, 255, 255, 0.5), rgba(255, 255, 255, 0.8));
 }
 html[dir='ltr'] #toolbarSidebar {
   box-shadow: inset -1px 0 0 rgba(0, 0, 0, 0.25),
@@ -730,11 +720,9 @@ html[dir='rtl'] #sidebarResizer {
 #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
   height: 32px;
-  background-color: rgba(96, 125, 139, 0.5)); /* fallback */
+  background-color: rgba(0, 0, 0, 0.25); /* fallback */
   background-image: url(images/texture.png),
-                    -webkit-gradient(linear, left top, left bottom, from(rgba(158, 158, 158, 0.5)), to(rgba(118, 102, 132, 0.5)));
-  background-image: url(images/texture.png),
-                    linear-gradient(rgba(158, 158, 158, 0.5), rgba(118, 102, 132, 0.5)));
+                    linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.45));
 }
 html[dir='ltr'] #toolbarContainer, .findbar, .secondaryToolbar {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.15),
@@ -757,8 +745,8 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   position: relative;
   width: 100%;
   height: 4px;
-  background-color: rgba(221, 221, 221, 1);
-  border-bottom: 1px solid rgba(221, 221, 221, 1);
+  background-color: rgba(242, 242, 242, 0.5);
+  border-bottom: 1px solid rgba(243, 243, 243, 0.8);
 }
 
 #loadingBar .progress {
@@ -769,7 +757,6 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
   height: 100%;
   background-color: rgba(221, 221, 221, 1);
   overflow: hidden;
-  -webkit-transition: width 200ms;
   transition: width 200ms;
 }
 
@@ -785,7 +772,6 @@ html[dir='rtl'] #toolbarContainer, .findbar, .secondaryToolbar {
 
 #loadingBar .progress.indeterminate {
   background-color: rgba(153, 153, 153, 1);
-  -webkit-transition: none;
   transition: none;
 }
 
@@ -898,7 +884,7 @@ html[dir='rtl'] .secondaryToolbar {
 
 .doorHanger,
 .doorHangerRight {
-  border: 1px solid rgba(150, 150, 150, 0.5);
+  border: 1px solid rgba(0, 0, 0, 0.5);
   border-radius: 2px;
   box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
 }
@@ -969,8 +955,7 @@ html[dir='ltr'] .doorHangerRight:before {
 #toolbarViewerMiddle {
   position: absolute;
   left: 50%;
-  -webkit-transform: translateX(-50%);
-          transform: translateX(-50%);
+  transform: translateX(-50%);
 }
 
 html[dir='ltr'] #toolbarViewerLeft,
@@ -1044,7 +1029,6 @@ html[dir='rtl'] .splitToolbarButton > .toolbarButton {
 .splitToolbarButton.toggled > .toolbarButton,
 .toolbarButton.textButton {
   background-color: rgba(0, 0, 0, 0.12);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.35);
@@ -1149,7 +1133,6 @@ html[dir='rtl'] .dropdownToolbarButton {
 .secondaryToolbarButton:hover,
 .secondaryToolbarButton:focus {
   background-color: rgba(0, 0, 0, 0.12);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   border: 1px solid rgba(0, 0, 0, 0.35);
@@ -1164,7 +1147,6 @@ html[dir='rtl'] .dropdownToolbarButton {
 .dropdownToolbarButton:hover:active,
 .secondaryToolbarButton:hover:active {
   background-color: rgba(0, 0, 0, 0.2);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   border-color: rgba(0, 0, 0, 0.35) rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.45);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset,
@@ -1176,7 +1158,6 @@ html[dir='rtl'] .dropdownToolbarButton {
 .splitToolbarButton.toggled > .toolbarButton.toggled,
 .secondaryToolbarButton.toggled {
   background-color: rgba(0, 0, 0, 0.3);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   border-color: rgba(0, 0, 0, 0.4) rgba(0, 0, 0, 0.45) rgba(0, 0, 0, 0.5);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1) inset,
@@ -1216,7 +1197,7 @@ html[dir='rtl'] .dropdownToolbarButton::after {
   width: 162px;
   height: 23px;
   font-size: 12px;
-  color: rgba(242, 242, 242, 1);
+  color: rgba(252, 252, 252, 1);
   margin: 0;
   padding: 3px 2px 2px;
   border: none;
@@ -1224,7 +1205,7 @@ html[dir='rtl'] .dropdownToolbarButton::after {
 }
 
 .dropdownToolbarButton > select > option {
-  background: rgba(176, 172, 180, 1);
+  background: rgba(61, 61, 61, 0.5);
 }
 
 #customScaleOption {
@@ -1285,46 +1266,46 @@ html[dir="rtl"] .secondaryToolbarButton::before {
   right: 4px;
 }
 
-html[dir='ltr'] .toolbarButton#sidebarToggle::before {
+.toolbarButton#sidebarToggle::before {
   content: url(images/toolbarButton-sidebarToggle.png);
 }
 html[dir='rtl'] .toolbarButton#sidebarToggle::before {
-  content: url(images/toolbarButton-sidebarToggle-rtl.png);
+  transform: scaleX(-1);
 }
 
-html[dir='ltr'] .toolbarButton#secondaryToolbarToggle::before {
+.toolbarButton#secondaryToolbarToggle::before {
   content: url(images/toolbarButton-secondaryToolbarToggle.png);
 }
 html[dir='rtl'] .toolbarButton#secondaryToolbarToggle::before {
-  content: url(images/toolbarButton-secondaryToolbarToggle-rtl.png);
+  transform: scaleX(-1);
 }
 
-html[dir='ltr'] .toolbarButton.findPrevious::before {
+.toolbarButton.findPrevious::before {
   content: url(images/findbarButton-previous.png);
 }
 html[dir='rtl'] .toolbarButton.findPrevious::before {
-  content: url(images/findbarButton-previous-rtl.png);
+  transform: scaleX(-1);
 }
 
-html[dir='ltr'] .toolbarButton.findNext::before {
+.toolbarButton.findNext::before {
   content: url(images/findbarButton-next.png);
 }
 html[dir='rtl'] .toolbarButton.findNext::before {
-  content: url(images/findbarButton-next-rtl.png);
+  transform: scaleX(-1);
 }
 
-html[dir='ltr'] .toolbarButton.pageUp::before {
+.toolbarButton.pageUp::before {
   content: url(images/toolbarButton-pageUp.png);
 }
 html[dir='rtl'] .toolbarButton.pageUp::before {
-  content: url(images/toolbarButton-pageUp-rtl.png);
+  transform: scaleX(-1);
 }
 
-html[dir='ltr'] .toolbarButton.pageDown::before {
+.toolbarButton.pageDown::before {
   content: url(images/toolbarButton-pageDown.png);
 }
 html[dir='rtl'] .toolbarButton.pageDown::before {
-  content: url(images/toolbarButton-pageDown-rtl.png);
+  transform: scaleX(-1);
 }
 
 .toolbarButton.zoomOut::before {
@@ -1380,11 +1361,11 @@ html[dir='rtl'] .toolbarButton.pageDown::before {
   content: url(images/toolbarButton-viewThumbnail.png);
 }
 
-html[dir="ltr"] #viewOutline.toolbarButton::before {
+#viewOutline.toolbarButton::before {
   content: url(images/toolbarButton-viewOutline.png);
 }
 html[dir="rtl"] #viewOutline.toolbarButton::before {
-  content: url(images/toolbarButton-viewOutline-rtl.png);
+  transform: scaleX(-1);
 }
 
 #viewAttachments.toolbarButton::before {
@@ -1526,7 +1507,6 @@ html[dir='rtl'] .verticalToolbarSeparator {
   margin: 4px 0 4px 0;
   border-radius: 2px;
   background-color: rgba(255, 255, 255, 0.09);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   border-width: 1px;
@@ -1580,7 +1560,7 @@ html[dir='rtl'] .verticalToolbarSeparator {
   margin: 4px 2px 4px 0;
   border: 1px solid rgba(0, 0, 0, 0);
   border-radius: 2px;
-  color: rgba(217, 217, 217, 1);
+  color: rgba(255, 255, 255, 1);
   font-size: 12px;
   line-height: 14px;
   text-align: left;
@@ -1651,7 +1631,6 @@ a:focus > .thumbnail > .thumbnailSelectionRing > .thumbnailImage,
 a:focus > .thumbnail > .thumbnailSelectionRing,
 .thumbnail:hover > .thumbnailSelectionRing {
   background-color: rgba(255, 255, 255, 0.15);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
@@ -1667,7 +1646,6 @@ a:focus > .thumbnail > .thumbnailSelectionRing,
 
 .thumbnail.selected > .thumbnailSelectionRing {
   background-color: rgba(255, 255, 255, 0.3);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
@@ -1761,11 +1739,11 @@ html[dir='rtl'] .attachmentsItem > button {
   display: inline-block;
   position: absolute;
 }
-html[dir='ltr'] .outlineItemToggler.outlineItemsHidden::before {
+.outlineItemToggler.outlineItemsHidden::before {
   content: url(images/treeitem-collapsed.png);
 }
 html[dir='rtl'] .outlineItemToggler.outlineItemsHidden::before {
-  content: url(images/treeitem-collapsed-rtl.png);
+  transform: scaleX(-1);
 }
 .outlineItemToggler.outlineItemsHidden ~ .outlineItems {
   display: none;
@@ -1789,7 +1767,6 @@ html[dir='rtl'] .outlineItemToggler::before {
 .outlineItem > a:hover,
 .attachmentsItem > button:hover {
   background-color: rgba(255, 255, 255, 0.02);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
@@ -1801,7 +1778,6 @@ html[dir='rtl'] .outlineItemToggler::before {
 
 .outlineItem.selected {
   background-color: rgba(255, 255, 255, 0.08);
-  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0.05)), to(rgba(255, 255, 255, 0)));
   background-image: linear-gradient(rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0));
   background-clip: padding-box;
   box-shadow: 0 1px 0 rgba(255, 255, 255, 0.05) inset,
@@ -1890,8 +1866,6 @@ html[dir='rtl'] .outlineItemToggler::before {
   font-size: 12px;
   line-height: 14px;
   background-color: rgba(71, 71, 71, 1); /* fallback */
-  background-image: url(images/texture.png),
-                    -webkit-gradient(linear, left top, left bottom, from(rgba(82, 82, 82,0.99)), to(rgba(69, 69, 69, 0.95)));
   background-image: url(images/texture.png),
                     linear-gradient(rgba(82, 82, 82,0.99), rgba(69, 69, 69, 0.95));
   border: 1px solid rgba(0, 0, 0, 0.5);
@@ -2088,14 +2062,12 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
 @media screen and (-webkit-min-device-pixel-ratio: 1.1), screen and (min-resolution: 1.1dppx) {
   /* Rules for Retina screens */
   .toolbarButton::before {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
     top: -5px;
   }
 
   .secondaryToolbarButton::before {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
     top: -4px;
   }
 
@@ -2118,8 +2090,7 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   }
 
   .dropdownToolbarButton::after {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
     top: -5px;
     content: url(images/toolbarButton-menuArrows@2x.png);
   }
@@ -2130,46 +2101,46 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     left: 4px;
   }
 
-  html[dir='ltr'] .toolbarButton#sidebarToggle::before {
+  .toolbarButton#sidebarToggle::before {
     content: url(images/toolbarButton-sidebarToggle@2x.png);
   }
   html[dir='rtl'] .toolbarButton#sidebarToggle::before {
-    content: url(images/toolbarButton-sidebarToggle-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
-  html[dir='ltr'] .toolbarButton#secondaryToolbarToggle::before {
+  .toolbarButton#secondaryToolbarToggle::before {
     content: url(images/toolbarButton-secondaryToolbarToggle@2x.png);
   }
   html[dir='rtl'] .toolbarButton#secondaryToolbarToggle::before {
-    content: url(images/toolbarButton-secondaryToolbarToggle-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
-  html[dir='ltr'] .toolbarButton.findPrevious::before {
+  .toolbarButton.findPrevious::before {
     content: url(images/findbarButton-previous@2x.png);
   }
   html[dir='rtl'] .toolbarButton.findPrevious::before {
-    content: url(images/findbarButton-previous-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
-  html[dir='ltr'] .toolbarButton.findNext::before {
+  .toolbarButton.findNext::before {
     content: url(images/findbarButton-next@2x.png);
   }
   html[dir='rtl'] .toolbarButton.findNext::before {
-    content: url(images/findbarButton-next-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
-  html[dir='ltr'] .toolbarButton.pageUp::before {
+  .toolbarButton.pageUp::before {
     content: url(images/toolbarButton-pageUp@2x.png);
   }
   html[dir='rtl'] .toolbarButton.pageUp::before {
-    content: url(images/toolbarButton-pageUp-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
-  html[dir='ltr'] .toolbarButton.pageDown::before {
+  .toolbarButton.pageDown::before {
     content: url(images/toolbarButton-pageDown@2x.png);
   }
   html[dir='rtl'] .toolbarButton.pageDown::before {
-    content: url(images/toolbarButton-pageDown-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
   .toolbarButton.zoomIn::before {
@@ -2209,11 +2180,11 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     content: url(images/toolbarButton-viewThumbnail@2x.png);
   }
 
-  html[dir="ltr"] #viewOutline.toolbarButton::before {
+  #viewOutline.toolbarButton::before {
     content: url(images/toolbarButton-viewOutline@2x.png);
   }
   html[dir="rtl"] #viewOutline.toolbarButton::before {
-    content: url(images/toolbarButton-viewOutline-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
 
   #viewAttachments.toolbarButton::before {
@@ -2277,16 +2248,15 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
   }
 
   .outlineItemToggler::before {
-    -webkit-transform: scale(0.5);
-            transform: scale(0.5);
+    transform: scale(0.5);
     top: -1px;
     content: url(images/treeitem-expanded@2x.png);
   }
-  html[dir='ltr'] .outlineItemToggler.outlineItemsHidden::before {
+  .outlineItemToggler.outlineItemsHidden::before {
     content: url(images/treeitem-collapsed@2x.png);
   }
   html[dir='rtl'] .outlineItemToggler.outlineItemsHidden::before {
-    content: url(images/treeitem-collapsed-rtl@2x.png);
+    transform: scale(-0.5, 0.5);
   }
   html[dir='ltr'] .outlineItemToggler::before {
     right: 0;
@@ -2372,14 +2342,13 @@ html[dir='rtl'] #documentPropertiesOverlay .row > * {
     margin: auto;
     left: auto;
     position: inherit;
-    -webkit-transform: none;
-            transform: none;
+    transform: none;
   }
 }
 
 @media all and (max-width: 840px) {
   #sidebarContent {
-    background-color: rgba(249, 249, 249, 0.8);
+    background-color: rgba(0, 0, 0, 0.7);
   }
 
   html[dir='ltr'] #outerContainer.sidebarOpen #viewerContainer {
