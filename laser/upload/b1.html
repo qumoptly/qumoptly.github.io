@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  
+</head>
+  <body ng-app="main">
+    
+
+    <div class="row" id="O_14" ng-controller="control_panel">
+      <div class="col-xs-12">
+        <h1 class=title id="h1">Diffracted Angle and Littrow Angle of Reflective Gratings <small><span data-toggle="collapse" data-target="#info_on_O_14" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+      </div>
+
+      <div class="col-lg-5 col-md-6 col-xs-12">
+        <div id="info_on_O_14" class="collapse">
+          <p3 style="text-align:left;">This Calculator Will Help You To calculate The Diffracted Angle For A Given Incidence Angle and The Littrow Angle of Reflective Gratings. </p3>
+          <img src="https://www.simtrum.com/upload/%E6%B5%8B%E8%AF%95%E5%95%86%E5%93%81/Calculator/O-14.png" width="250" height="250" style='float: left;'/>
+          <p style="text-align:left;">If m is negative, it means that the diffracted light and diffracted light are on the same side of the normal. If m is positive, it means that the diffracted light and diffracted light are on the opposite side of the normal. </p>
+          <b><h3 style="text-align:left;"> $\frac{[ sin(\theta_m) + sin(\theta_i)]}{N}$= $m \lambda$</h3></b>
+          <b><h3 style="text-align:left;">$\theta$=arcsin$\frac{N m \lambda}{2}$</h3></b>
+          <p style="text-align:left;">Raster Line Density $N$; Incidence Angle $\theta_i$; Order $m$; Wavelength $\lambda$<br> Diffracted Angle $\theta_m$; Littrow Angle $\theta$;</p>
+      </div>
+      <fieldset class="input"> 
+        <legend>Input</legend>
+
+       
+          <div class="col-xs-6">
+            <h5>Raster Line Density, $N$: </h5>
+            <div class="input-group">           
+                <input  type="number" class="form-control" ng-model="density" ng-change="myFunc();">
+                <span class="input-group-addon">1/mm</span>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <h5> Incidence Angle, $\theta_i$: </h5>
+            <div class="input-group">
+                <input  type="number" class="form-control" ng-model="thetai" ng-change="myFunc();">
+                <span class="input-group-addon">degree (°)</span>
+            </div><br>
+          </div>
+        
+            <div class="col-xs-6">
+              <h5>Order, $m$:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="m" ng-change="myFunc();">
+                  <span class="input-group-addon"></span>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h5>Wavelength, $\lambda$:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="nm" ng-change="myFunc();">
+                  <span class="input-group-addon">nm</span>
+              </div><br>
+            </div>
+      
+      </fieldset><br>
+      
+        <fieldset class="output"> 
+          <legend>Output</legend>
+         
+              <div class="col-xs-6">
+                <h5>Diffracted Angle, $\theta_m$:</h5>
+                <div class="input-group">
+                    <input type="number" class="form-control" ng-model="thetam" readonly/>
+                    <span class="input-group-addon">degree (°)</span>
+                </div><br>
+              </div>
+              <div class="col-xs-6">
+                <h5>Littrow Angle, $\theta$:</h5>
+                <div class="input-group">
+                    <input type="number" class="form-control" ng-model="littrow" readonly/>
+                    <span class="input-group-addon">degree (°)</span>
+                </div><br>
+              </div>
+      </fieldset>             
+    </div>
+  </body>
+
+
+
+      
+
+  <script>
+    angular.module('main', [])
+      .controller('control_panel', ['$scope', function($scope) {
+       
+       
+      
+        $scope.myFunc = function() {
+          $scope.tetai=$scope.thetai/180*Math.PI;
+          $scope.wavelength=$scope.nm*1e-9;
+          $scope.n=$scope.density*1e3;
+$scope.thetam=(Math.asin(($scope.m*$scope.wavelength*$scope.n)-Math.sin($scope.tetai)))/Math.PI*180;
+$scope.littrow=(Math.asin(($scope.n*$scope.m*$scope.wavelength)/2))/Math.PI*180;
+
+          
+         
+        };
+      }]);
+  </script>
+
+
+
+  
+
+  
+ 
+  
+  
+ <!---title----->
+ <style>
+  .model-list table tbody tr td .ml-t2{
+    display:block;
+  }
+                
+     .title{
+       background:#00b8b6;
+       color:#fff;
+       text-align:center;
+       height:72px;
+       line-height:36px;
+       width:515px;
+       display:inline-block;
+       border-radius:5px;
+       }
+      </style>  
+
+  
+
+  <!--INPUT-->
+<style>
+  fieldset.input {
+    background-color: #a1ffe8d2;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>    
+
+<!--OUTPUT-->
+<style>
+  fieldset.output {
+    background-color: #9dffe1;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>
+</html>

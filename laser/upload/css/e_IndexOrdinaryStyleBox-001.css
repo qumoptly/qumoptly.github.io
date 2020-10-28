@@ -1,0 +1,105 @@
+/*e_IndexOrdinaryStyleBox-001*/
+.e_IndexOrdinaryStyleBox-001{
+/*	position: absolute;*/	
+	width: 100%;
+	height: auto;
+	width-uint:%;
+}
+/*stylebox_top*/
+.e_IndexOrdinaryStyleBox-001 .stylebox_top{
+	background-color: transparent;
+}
+/*stylebox_link*/
+.e_IndexOrdinaryStyleBox-001 .stylebox_link{
+	color: #666666;
+	font-size: 14px;
+	display: table;
+	height: inherit;
+	border-width: 0;
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_link:hover{
+	color: rgba(101,190,186,1);
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_link:active{
+	color: rgba(101,190,186,1);
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_top{
+	width: auto;
+	height: 40px;
+}
+.e_IndexOrdinaryStyleBox-001 .title_icon{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgba(255,255,255,1);
+	margin-right: 10px;
+	font-size:medium;
+}
+.e_IndexOrdinaryStyleBox-001 .title_icon::before{
+	content: "";
+}
+.e_IndexOrdinaryStyleBox-001 .title_main{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgba(255,255,255,1);
+	font-weight: normal;
+	font-size: 16px;
+	max-width: 600px;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+}
+.e_IndexOrdinaryStyleBox-001 .title_sub{
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 40px;
+	color: rgba(255,255,255,1);
+	font-size: 14px;
+	font-weight: normal;
+	margin-left: 10px;
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_title{
+	display: inline-block;
+	width: auto;
+	height: inherit;
+	background-color: rgba(101, 190, 186, 1);
+	padding-left: 15px;
+	padding-right: 15px;
+	font-size: 0;
+	vertical-align: bottom;
+	white-space: nowrap;
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_link{
+	float: right;
+	vertical-align: middle;
+	margin-right: 15px;
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_link a{
+	color: inherit;
+	display: table-cell;
+	vertical-align: middle;
+}
+.e_IndexOrdinaryStyleBox-001 .link_icon{
+	display: inline-block;
+	margin-left: 5px;
+}
+.e_IndexOrdinaryStyleBox-001 .link_icon::before{
+	content: '\e6af';
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_top_line{
+	height: 1px;
+	background-color: rgba(240,240,240,1);
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_content {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #f0f0f0;
+	width: 100%;
+	height: calc(100% - 48px);
+	width-uint:%;
+}
+.e_IndexOrdinaryStyleBox-001 .stylebox_bottom_line{
+	height: 1px;
+	background-color: rgba(240,240,240,1);
+}

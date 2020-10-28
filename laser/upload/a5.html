@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  
+</head>
+
+
+<body ng-app="main">
+    <div class="row" id="frequency_domain" ng-controller="control_panel">
+        <div class="col-xs-12">
+          <h1 class=title id="h1">converts a spectral bandwidth to frequency domain <small><span data-toggle="collapse" data-target="#info_frequency_domain" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+        </div>
+      
+        <div class="col-lg-5 col-md-6 col-xs-12">
+          <div id="info_frequency_domain" class="collapse" >
+            <b><p style="text-align:left;">This calculator will help you converts a spectral bandwidth expressed in wavelength Δλ at a certain central wavelength λ0to frequency domain.
+            </p>
+            <p style="text-align:left;">The formula that will be used is as followed:</p>
+            <h2 style="text-align:left;"> C=3*10$^8$</h2>
+            <h2 style="text-align:left;"> $V_0$= $\frac{C}{\lambda_0}$</h2>
+            <h2 style="text-align:left;"> $V_{start}$ = $\frac{C}{\lambda_0 + \lambda/2}$ &nbsp;&nbsp;&nbsp;&nbsp; $V_{stop}$ = $\frac{C}{\lambda_0 - \lambda/2}$</h2>
+            <h2 style="text-align:left;"> $\triangle V$= $V_{stop}$ - $V_{start}$</h2>
+            <p style="text-align:left;">Wavelength Bandwidth <b>$\lambda$</b>; Center Wavelength <b>$\lambda_0$</b>;<br> Center Frequency <b>$V_0$</b>; Frequency Bandwidith <b>$\triangle V$</b>;</p>    
+          </b>
+        </div>
+        
+        
+        <fieldset class="input"> 
+            <legend>Input</legend>
+          
+            <div class="col-xs-6">
+              <h5>Center Wavelength, $\lambda_0$: </h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" step="0.1" ng-model="Wave" ng-change="myFunc()">
+                  <span class="input-group-addon">nm</span>
+              </div>
+            </div>
+              <div class="col-xs-6">
+                <h5>Wavelength Bandwidth: $\lambda$</span></h5>
+                <div class="input-group">
+                    <input type="number" class="form-control" step="0.01" ng-model="w" ng-change="myFunc()">
+                    <span class="input-group-addon">nm</span>
+                </div><br>
+              </div>
+            
+            </fieldset><br>
+            
+                <fieldset class="output"> 
+                    <legend>Output</legend>
+                    
+                        <div class="col-xs-6">
+                          <h5>Center Frequency, $V_0$:</h5>
+                          <div class="input-group">
+                              <input type="number" class="form-control" ng-model="vo" readonly/>
+                              <span class="input-group-addon">THz</span>
+                          </div>
+                        </div>
+                          <div class="col-xs-6">
+                            <h5>Frequency Bandwidith, $\triangle V$:</h5>
+                            <div class="input-group">
+                                <input type="number" class="form-control" ng-model="fBandwidith" readonly/>
+                                <span class="input-group-addon">THz</span>
+                            </div><br>
+                          </div>
+                    
+                </fieldset>                
+        </div>
+
+<script>
+  angular.module('main', [])
+    .controller('control_panel', ['$scope', function($scope) {
+   
+      $scope.myFunc = function() {
+$scope.c=3*1e8;
+$scope.Wavelength=$scope.Wave*1e-9;
+$scope.wBandwidith=$scope.w*1e-9;
+$scope.vo=($scope.c/$scope.Wavelength)*1e-12;
+$scope.vstart=$scope.c/($scope.Wavelength+($scope.wBandwidith/2));
+$scope.vstop=$scope.c/($scope.Wavelength-($scope.wBandwidith/2));
+$scope.fBandwidith=($scope.vstop-$scope.vstart)*1e-12;
+      };
+    }]);
+</script>
+
+
+
+
+
+
+
+    </div>
+</body>
+             
+   <!---title----->
+   <style>
+    .model-list table tbody tr td .ml-t2{
+      display:block;
+    }
+                  
+       .title{
+         background:#00b8b6;
+         color:#fff;
+         text-align:center;
+         height:72px;
+         line-height:36px;
+         width:515px;
+         display:inline-block;
+         border-radius:5px;
+         }
+        </style>  
+
+    
+
+    <!--INPUT-->
+<style>
+    fieldset.input {
+      background-color: #a1ffe8d2;
+    }
+    
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 4px 10px;
+    }
+</style>    
+
+<!--OUTPUT-->
+<style>
+    fieldset.output {
+      background-color: #9dffe1;
+    }
+    
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 4px 10px;
+    }
+</style>

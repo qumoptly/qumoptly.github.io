@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  
+</head>
+
+<body ng-app="main">
+<div class="row" id="relationship_between_object_distance" ng-controller="control_panel">
+    <div class="col-xs-12">
+      <h1 class=title id="h1">Relationship Between Object Distance <br>and Image Distance <small><span data-toggle="collapse" data-target="#info_on_lens_radius" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+    </div>
+  
+    <div class="col-xs-12">
+      <div class="box">
+        <div id="info_on_lens_radius" class="collapse" >
+          <b><p style="text-align:center;">This calculator will help you calculate the Relationship between object distance and <br>image distance with one convex lens and magnification. </p></b>
+          <img src="https://www.simtrum.com/upload/%E6%B5%8B%E8%AF%95%E5%95%86%E5%93%81/Calculator/O-4.png" width="250" height="250" style='float: left;'/>
+          <p style="text-align:center;" ><br> </p>
+            <p style="text-align:center;" >The formula that will be used is as followed:<br> </p>
+            <h2 style="text-align:center;"> $M$=$\frac{V}{U}$  &nbsp;&nbsp;&nbsp;&nbsp; $\frac{1}{U}$+$\frac{1}{V}$=$\frac{1}{f}$</h2><br>
+            <p style="text-align:center;">Object Distance <b>U</b>; Focal Length <b>f</b>;</p>
+            <p style="text-align:center;">Image Distance <b>V</b>; Magnification <b>M</b></p>
+          </b>
+        </div>
+      </div>
+
+
+      <fieldset class="input"> 
+        <legend>Input</legend>
+        
+      
+        <div class="col-xs-6">
+          <h5>Object Distance, <b>U</b>:</h5>
+          <div class="input-group">
+              <input type="number" class="form-control" ng-model="Odistance" ng-change="myFunc()">
+              <span class="input-group-addon">m</span>
+          </div>
+        </div>
+
+          <div class="col-xs-6">
+            <h5> Focal Length, <b>f</b>: </span></h5>
+            <div class="input-group">
+                <input type="number" class="form-control" ng-model="length" ng-change="myFunc()">
+                <span class="input-group-addon">m</span>
+            </div><br>
+          </div>
+        </fieldset><br>
+      
+        
+       
+            <fieldset class="output"> 
+                <legend>Output</legend>
+          
+                    <div class="col-xs-4">
+                      <h5>Image Distance, <b>V</b>:</h5>
+                      <div class="input-group">
+                          <input class="form-control" ng-model="Idistance" readonly/>
+                          <span class="input-group-addon">m</span>
+                      </div><br>
+                    </div>
+                    <div class="col-xs-4">
+                      <h5>Magnification, <b>M</b>:</h5>
+                      <div class="input-group">
+                          <input class="form-control" ng-model="magnification" readonly/>
+                          <span class="input-group-addon"></span>
+                      </div><br>
+                    </div>
+                    <div class="col-xs-4">
+                      <h5>Type of image:</h5>
+                      <div class="input-group">
+                          <input class="form-control" ng-model="image" readonly/>
+                      </div><br>
+                    </div>
+            </fieldset>
+    </div>
+</div>
+</body>
+
+
+<script>
+  angular.module('main', [])
+    .controller('control_panel', ['$scope', function($scope) {
+   
+      $scope.myFunc = function() {
+        $scope.uf=1/$scope.Odistance-1/$scope.length;
+        $scope.Idistance=1/$scope.uf;
+        $scope.magnification=Math.abs($scope.Idistance/$scope.Odistance);
+        if($scope.Odistance<$scope.length){$scope.image="Virtual Image"};
+        if($scope.Odistance>$scope.length){$scope.image="Real Image"};
+
+      };
+    }]);
+</script>
+
+
+
+
+     
+  
+  <!---title----->
+  <style>
+    .model-list table tbody tr td .ml-t2{
+      display:block;
+    }
+                  
+       .title{
+         background:#00b8b6;
+         color:#fff;
+         text-align:center;
+         height:72px;
+         line-height:36px;
+         display:inline-block;
+         border-radius:5px;
+         font-size: 30px;
+         width:560px
+         
+         }
+        </style> 
+
+          <!---description----->
+  <style>
+.box {
+   display: flex;
+   align-items:top;
+}
+        </style> 
+         
+
+
+    <!--INPUT-->
+    <style>
+      .input {
+        background-color: #a1ffe8d2;
+        width:560px
+      }
+      
+      legend {
+        
+        color: white;
+        padding: 4px 10px;
+      }
+  </style>    
+  
+  <!--OUTPUT-->
+  <style>
+      .output {
+        background-color: #9dffe1;
+        width:560px
+      }
+      
+      legend {
+        background-color: gray;
+        color: white;
+        padding: 4px 10px;
+      }
+  </style>
+
+  </html>

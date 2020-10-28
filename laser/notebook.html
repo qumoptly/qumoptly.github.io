@@ -1,0 +1,76 @@
+﻿﻿<html lang="zh">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<title>Laser</title>
+	<link rel="stylesheet" type="text/css" href="./css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="./css/htmleaf-demo.css">
+	<link rel="stylesheet" type="text/css" href="./css/glowing.css"/>
+	<link rel="stylesheet" type="text/css" href="./css/input.css">
+	<script src="../js/a.js"></script>	
+	<style type="text/css">
+		.box{
+			 width:98%;text-align:center;margin:8px;padding:8px;
+		}
+		.scale img{
+			background-size:contain|cover;
+			width: 60%;
+			height: auto;
+		}
+	</style>
+</head>
+<body>
+
+<div id="largeur_de_page_et_bordures" style="margin-bottom:5px;">
+<div class="texte_catalogue" align="center" style="color:#424242;">
+<span style="font-size: 20px;"><img src="./img/laser.png" alt="img"/><a style="color:#333333;" href="./" >Notebook </a><br></span>
+		<div align="center" style="margin-right:4px">
+			<div style="box-shadow:inset 0 0 4px #ccc" class="box">
+				<a href="https://qumoptly.github.io/docs/#/lasers?id=%e5%9b%ba%e4%bd%93%e6%bf%80%e5%85%89%e5%99%a8" class="glowing red and quickly rotating" style="color:#DF0101;">&nbsp;固体激光器&nbsp;&nbsp;</a>
+				<a href="../spdcalc/index.html" class="glowing indigo and quickly rotating" style="color:#339900;">&nbsp;spdcalc&nbsp;&nbsp;</a>
+			</div>
+		</div>
+</div>
+<div class="texte_catalogue" align="center" style="color:#ccc;" >
+	<div class="htmleaf-container">
+	<div class="glowing disco box" style="box-shadow:inset 0 0 4px #ccc;text-align:center">
+		<!-- <a class="scale" ><img src="./img/1.gif" alt="img"></a> <br> -->
+		<iframe src="https://qumoptly.github.io/pdfjs/es5/web/viewer.html?file=https://qumoptly.github.io/docs/sources/light/learn.pdf" align="center" width="85%" height="720px" frameborder="0"><p>Your browser does not support iframes.</p></iframe><br><br>
+		<em><a href="https://qumoptly.github.io" class="glowing cyan and zooming" style="color: rgb(155, 58, 101);" > 2016 - 2018 by qumoptly </a> </em><br><br>
+		<!--<a class="scale" >
+			<video controls="controls" preload="auto" autoplay="autoplay" loop="loop" width="350px">
+				<source src="./img/b.mp4" type="video/mp4" />
+			</video>
+			<video controls="controls" preload="auto" autoplay="autoplay" loop="loop" width="350px">
+				<source src="./img/a.mp4" type="video/mp4" />
+			</video>
+		</a><br> -->
+	</div>
+	</div>
+</div>
+  <!-- live2d -->
+  <script src="../js/L2Dwidget.min.js"></script>
+  <script type="text/javascript">
+	L2Dwidget
+	.on('*', (name) => {
+		console.log('%c EVENT ' + '%c -> ' + name, 'background: #222; color: yellow', 'background: #fff; color: #000')
+	})
+	.init({
+		dialog: {
+		// 开启对话框
+		enable: true,
+		script: {
+		// 每空闲 10 秒钟，显示一条一言
+		'every idle 10s': '$hitokoto$',
+		// 当触摸到角色身体
+		'tap body': '哎呀！别碰我！',
+		// 当触摸到角色头部
+		'tap face': '人家已经不是小孩子了！'
+		}}
+		});
+  </script>
+</body>
+</html>

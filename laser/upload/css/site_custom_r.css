@@ -1,0 +1,70 @@
+
+
+
+a:active,a:hover,a:focus,a:visited,a:focus-within{text-decoration: none !important;}
+a:hover, a:active {
+    color: #00a199 !important;
+    text-decoration: none !important;
+}
+#probanner{position:fixed; top:-100%; width:100%;left:-100%; opacity:0;}
+
+
+ .lv_desin{
+width: 100%;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+ .lv_desin li{
+  position:absolute;
+  left:0;
+  top:0;
+   width:100%;
+}
+
+
+ .lv_desin01{
+width: 100%;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+ .lv_desin01 li{
+  position:absolute;
+  left:0;
+  top:0;
+   width:100%;
+}
+ .lv_desin01 li.active{
+  position:absolute;
+  left:0;
+  top:0;
+   width:100%;
+}
+
+ .lv_desin02{
+width: 100%;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+ .lv_desin02 li{
+  position:absolute;
+  left:0;
+  top:0;
+   width:100%;
+}
+
+
+ .lv_desin03{
+width: 100%;
+    margin: 0;
+    height: 100%;
+    position: relative;
+}
+ .lv_desin03 li{
+  position:absolute;
+  left:0;
+  top:0;
+   width:100%;
+}

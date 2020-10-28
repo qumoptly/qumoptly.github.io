@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://cdn.bootcss.com/jquery/3.1.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  
+</head>
+  <body ng-app="main">
+    
+
+    <div class="row" id="O_11" ng-controller="control_panel">
+      <div class="col-xs-12">
+        <h1 class=title id="h1">Transmission and Reflection Coefficients of Light <small><span data-toggle="collapse" data-target="#info_on_O_11" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+      </div>
+
+      <div class="col-lg-5 col-md-6 col-xs-12">
+        <div id="info_on_O_11" class="collapse" >
+          <p style="text-align:left;">This Calculator Will Help You To calculate The Transmission and Reflection of Coefficient of Light At Non-normal Incidence of Uniaxial Crystal (Single Surface)</p>
+          <b><h2 style="text-align:left;"> $n_1$sin$\theta_1$=$n_0$sin$\theta_0$ </h2></b>
+          <b><h2 style="text-align:left;"> $T_s$=$\frac{ sin 2 \theta_0 sin 2 \theta_1}{sin^2(\theta_0 + \theta_1)}$</h2></b>
+          <b><h2 style="text-align:left;"> $T_p$=$\frac{ sin 2 \theta_0 sin 2 \theta_1}{sin^2(\theta_0 + \theta_1) cos^2(\theta_0 - \theta_1)}$</h2><br></b>
+          <b><h2 style="text-align:left;"> $R_p$=$\frac{ tan^2(\theta_0 - \theta_1)}{ tan^2(\theta_0 + \theta_1)}$</h2></b>
+          <b><h2 style="text-align:left;"> $R_s$=$\frac{ sin^2(\theta_0 - \theta_1)}{sin^2(\theta_0 + \theta_1)}$</h2></b>
+          <p style="text-align:left;">Incident angle of the light $\theta_0$; Refraction angle of the light $\theta_1$;<br> Transmission Coefficient with polarization is out of the paper  $T_s$;<br> Transmission Coefficient with polarization is in the plane of the paper $T_p$;<br> Reflection Coefficient with polarization is out of the paper $R_s$;<br> Reflection Coefficient with polarization is in the plane of the paper $R_p$</p>
+
+      </div>
+      <fieldset class="input"> 
+        <legend>Input</legend>
+
+ 
+          <div class="col-xs-6">
+            <h5>Incident Angle, $\theta_0$: </h5>
+            <div class="input-group">           
+                <input  type="number" class="form-control" ng-model="incident" ng-change="myFunc();">
+                <span class="input-group-addon">degree (°)</span>
+            </div>
+          </div>
+          <div class="col-xs-6">
+            <h5>$n_0$: </h5>
+            <div class="input-group">
+                <input  type="number" class="form-control" ng-model="n0" ng-change="myFunc();">
+                <span class="input-group-addon"></span>
+            </div><br>
+          </div>
+      
+
+
+      
+            <div class="col-xs-6">
+              <h5>$n_1$:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="n1" ng-change="myFunc();">
+                  <span class="input-group-addon"></span>
+              </div><br>
+            </div>
+        
+      </fieldset><br>
+      
+        <fieldset class="output"> 
+          <legend>Output</legend>
+          
+              <div class="col-xs-6">
+                <h5>$T_s$:</h5>
+                <div class="input-group">
+                    <input type="number" class="form-control" ng-model="ts" readonly/>
+                    <span class="input-group-addon"></span>
+                </div>
+              </div>
+            <div class="col-xs-6">
+              <h5>$T_p$:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="tp" readonly/>
+                  <span class="input-group-addon"></span>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h5>$R_s$:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="Rs" readonly/>
+                  <span class="input-group-addon"></span>
+              </div>
+            </div>
+          <div class="col-xs-6">
+            <h5>$R_p$:</h5>
+            <div class="input-group">
+                <input type="number" class="form-control" ng-model="Rp" readonly/>
+                <span class="input-group-addon"></span>
+            </div><br>
+          </div>
+        
+      </fieldset>             
+    </div>
+  </body>
+
+
+
+      
+
+  <script>
+    angular.module('main', [])
+      .controller('control_panel', ['$scope', function($scope) {
+       
+       
+      
+        $scope.myFunc = function() {
+          $scope.teta0=$scope.incident/180*Math.PI;
+$scope.teta1=Math.asin(($scope.n0*Math.sin($scope.teta0))/$scope.n1);
+$scope.ts=(Math.sin(2*$scope.teta0)*Math.sin(2*$scope.teta1))/(Math.pow(Math.sin($scope.teta0+$scope.teta1),2));
+$scope.tp=(Math.sin(2*$scope.teta0)*Math.sin(2*$scope.teta1))/(Math.pow(Math.sin($scope.teta0+$scope.teta1),2)*Math.pow(Math.cos($scope.teta0-$scope.teta1),2));
+$scope.Rs=(Math.pow(Math.sin($scope.teta0-$scope.teta1),2))/(Math.pow(Math.sin($scope.teta0+$scope.teta1),2));
+$scope.Rp=(Math.pow(Math.tan($scope.teta0-$scope.teta1),2))/(Math.pow(Math.tan($scope.teta0+$scope.teta1),2));
+if($scope.teta1=="0"){
+  $scope.ts=1;
+  $scope.tp=1;
+  $scope.Rs=0;
+  $scope.Rp=0;
+}
+          
+         
+        };
+      }]);
+  </script>
+
+
+
+  
+
+  
+ 
+  
+  
+ <!---title----->
+ <style>
+  .model-list table tbody tr td .ml-t2{
+    display:block;
+  }
+                
+     .title{
+       background:#00b8b6;
+       color:#fff;
+       text-align:center;
+       height:72px;
+       line-height:36px;
+       width:560px;
+       display:inline-block;
+       border-radius:5px;
+       }
+      </style>  
+
+  
+
+  <!--INPUT-->
+<style>
+  fieldset.input {
+    background-color: #a1ffe8d2;
+    width:560px;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>    
+
+<!--OUTPUT-->
+<style>
+  fieldset.output {
+    background-color: #9dffe1;
+    width:560px;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>
+</html>
