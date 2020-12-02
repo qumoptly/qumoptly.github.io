@@ -1,0 +1,40 @@
+storyjs_jsonp_data = {
+	"timeline":
+	{
+		"headline":"时间线",
+		"type":"default",
+		"text":"网页更新记录",
+		"asset": {
+			"media":"./img/atom.png",
+			"credit":"",
+			"caption":""
+		},
+		"date": [
+			{
+				"startDate":"2019,07,16",
+				"headline":"Hexo",
+				"text":"<p>Hexo blog</p>",
+				"asset":
+				{
+					"media":"",
+					"credit":"",
+					"caption":"Hexo"
+				}
+			},
+			{
+				"startDate":"2019,07,20",
+				"endDate":"2020,12,31",
+				"headline":"Docsify",
+				"text":"<p>Docsify 笔记本</p>",
+				"tag":"Github",
+				"classname":" ",
+				"asset": {
+					"media":"",
+					"thumbnail":"./img/proj.png",
+					"credit":"",
+					"caption":"Docsify "
+				}
+			},
+		]
+	}
+}

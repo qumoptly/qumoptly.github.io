@@ -20,15 +20,39 @@
 			width:65%;
 			height: auto;
 	</style>
+	<!-- BEGIN TogetherJS -->
+	<!--<script>
+		var TogetherJSConfig_siteName = "Timeline";
+		var TogetherJSConfig_toolName = "Chanel@Timeline";
+	</script>
+	<script src="https://togetherjs.com/togetherjs-min.js"></script>
+	<script src="https://libs.baidu.com/jquery/1.7.2/jquery.min.js"></script> -->
+	<!-- BEGIN Timeline Embed -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+				createStoryJS({
+					type: 'timeline',
+					width: '100%',
+					height: '75%',
+					source: './data/InterImmTimelineJSONP.jsonp',
+					hash_bookmark: true,
+					lang: 'zh-cn',
+					start_zoom_adjust: '1',
+					embed_id: 'timeline-embed'
+				});
+			});
+	</script>
+	<script type="text/javascript" src="./data/storyjs-embed.js"></script>
+	<!-- END Timeline Embed-->
 </head>
 <body>
 	<div class="htmleaf-container">
 		<div align="center" style="margin-top:2px;">
 			<div align="center" style="font-size: 24px; color:#99BBFF ; margin-top:5px ;">
 				<div class="glowing disco box"><div class="pull-right hidden-phone">
-						<p id="api-key-show" style="cursor: pointer"> 点击简介 </p>
-						<p id="api-key-content" style="display:none">
-						<a style="font-size: 24px; color:#99BBFF ;" href="./">资源学习整理：<br></a>
+						<p id="list-show" style="cursor: pointer"> 点击简介 </p>
+						<p id="list-content" style="display:none">
+						<a id="title-show" style="font-size: 24px; color:#99BBFF ;" >资源学习整理：<br></a>
 						<a style="font-size:16px; color:#3b0f92 ;" >
 						1、<a style="font-size:16px;color:#3b0f92 ;" href="./docs/">[Docsify] </a> 
 						<a style="font-size:16px;color:#3b0f92 ;" href="./blog/">[Blog]</a>
@@ -78,16 +102,15 @@
 				-->
 			</div>
 			<div class="glowing disco box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
-			    <div class="quicknav">
+				<div class="quicknav">
 					<div class="pull-right hidden-phone">
 						<p id="rp-show" style="cursor: pointer"><a style="color:#55AA00" >RP Photonics</a></p>
 						<p id="rp-content" style="display:none">
 						<a style="color:#999888" >镜像：</a>
 						<a style="color:#5599FF" href="./photonics/RP-Photonics/" >RP-Photonics   </a></p>
-					</div><a style="color:#67665b" href="./timeline.html" >网页更新时间线 </a>
-					<div class="clear"></div>
-			    </div>
-			    <div style="text-align:center">
+					</div>
+				</div>
+				<div style="text-align:center">
 					<h4 style="color:#5E6C77">
 						<div class="b-body">
 							<div class="rotWord" >
@@ -97,28 +120,52 @@
 						</div>
 					</h4>
 					<input type="text" style="font-size: 16px;" id="f-left" placeholder="输入" />  
-                    <!--<input type="text" id="robot" placeholder="机器人"  onkeypress="showHint(this.value)"/>
+					<!--<input type="text" id="robot" placeholder="机器人"  onkeypress="showHint(this.value)"/>
 					<input type="button" value="确认" onclick="Send(document.getElementById('robot').value)"/>
-                    <p><h4 style="color:#5E6C77"><span id="txtHint"></span> </h4></p>-->
+					<p><h4 style="color:#5E6C77"><span id="txtHint"></span> </h4></p>-->
 				</div><br> 
-			<em>
-			<p><a href="https://openmct-demo.herokuapp.com" target="_blank" ><img style="width:24px;height:24px;" src="./img/setmin.png" alt="img"></a> 
-			<a style="color:#5E6C77" href="https://qumoptly.github.io">&nbsp; 2016-2019 by qumoptly &nbsp; </a> 
-			</p>
-			</em>
+				<p><a href="https://openmct-demo.herokuapp.com" target="_blank" ><img style="width:24px;height:24px;" src="./img/setmin.png" alt="img"></a> 
+				<a style="color:#5E6C77" href="https://qumoptly.github.io">&nbsp; 2016-2019 by qumoptly &nbsp; </a>
+				</p>
+				<p><a id="timeline-show" href="#" style="color:#67665b" >网页更新记录 </a>
+				<a id="timeline-show1" href="#" style="display:none; color:#67665b" >网页更新记录 </a></p>
 			</div>
 		</div>
 	</div>
-<script>$('#api-key-show').on('click', function() {
-    $('#api-key-show').hide();
-    $('#api-key-content').show();
-});
-$('#rp-show').on('click', function() {
-    $('#rp-show').hide();
-    $('#rp-content').show();
-});
-</script>
-<script src="./js/bota.js" type="text/javascript" charset="utf-8"></script>
+	<div id="timeline-embed" style="visibility:hidden; align="center">
+		<!--<a style="cursor: pointer; color:#5E6C77" onclick="TogetherJS(this); return false;">使用Together</p>-->
+	</div>
+
+	<script>$('#list-show').on('click', function() {
+		$('#list-show').hide();
+		$('#list-content').show();
+	});
+		$('#title-show').on('click', function() {
+		$('#list-content').hide();
+		$('#list-show').show();
+	});
+		$('#rp-show').on('click', function() {
+		$('#rp-show').hide();
+		$('#rp-content').show();
+	});
+		$('#timeline-show').on('click', function() {
+		//document.getElementById('timeline-embed').style.visibility = "visible";
+		$('#timeline-show').hide();
+		$('#timeline-show1').show();
+		$('#timeline-embed').show();
+	});
+		$('#timeline-show1').on('click', function() {
+		$('#timeline-show1').hide();
+		$('#timeline-embed').hide();
+		$('#timeline-show').show();
+	});
+	function nodisplay() {
+	document.getElementById('timeline-embed').style.visibility = "visible";
+	document.getElementById('timeline-embed').style.display = "none";
+	};
+	setTimeout(nodisplay,500);
+	</script>
+	<script src="./js/bota.js" type="text/javascript" charset="utf-8"></script>
 
 </body>
 </html>
