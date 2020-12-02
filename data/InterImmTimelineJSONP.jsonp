@@ -18,7 +18,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"#/",
+					"media":"#",
 					"thumbnail":"./img/desktop1.png",
 					"credit":"",
 					"caption":"Lose"
@@ -32,7 +32,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"/lasers/",
+					"media":"/lasers",
 					"thumbnail":"./img/set.png",
 					"credit":"",
 					"caption":"Laser"
@@ -45,7 +45,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"qumoptly.github.io/silk/",
+					"media":"qumoptly.github.io/silk",
 					"thumbnail":"./img/silk.png",
 					"credit":"",
 					"caption":"Silk"
@@ -58,7 +58,7 @@ storyjs_jsonp_data = {
 				"tag":"Archives",
 				"asset":
 				{
-					"media":"qumoptly.github.io/archives/curiosity/",
+					"media":"qumoptly.github.io/archives/curiosity",
 					"thumbnail":"./img/battl.png",
 					"credit":"",
 					"caption":"Mars "
@@ -71,7 +71,7 @@ storyjs_jsonp_data = {
 				"tag":"Archives",
 				"asset":
 				{
-					"media":"qumoptly.github.io/archives/",
+					"media":"qumoptly.github.io/archives",
 					"thumbnail":"./img/dist.png",
 					"credit":"",
 					"caption":"Paper "
@@ -84,7 +84,7 @@ storyjs_jsonp_data = {
 				"tag":"Archives",
 				"asset":
 				{
-					"media":"qumoptly.github.io/archives/nva/",
+					"media":"qumoptly.github.io/archives/nva",
 					"thumbnail":"./img/entry.png",
 					"credit":"",
 					"caption":"Fas "
@@ -97,7 +97,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"qumoptly.github.io/tfjs-yolo-tiny/",
+					"media":"qumoptly.github.io/tfjs-yolo-tiny",
 					"thumbnail":"./img/yolo.png",
 					"credit":"",
 					"caption":"深度学习"
@@ -109,7 +109,7 @@ storyjs_jsonp_data = {
 				"text":"<p>Hexo博客</p>",
 				"asset":
 				{
-					"media":"qumoptly.github.io/blog/",
+					"media":"qumoptly.github.io/blog",
 					"thumbnail":"./img/world.png",
 					"credit":"",
 					"caption":"Hexo blog"
@@ -137,7 +137,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"qumoptly.github.io/laser/",
+					"media":"qumoptly.github.io/laser",
 					"thumbnail":"./img/jupyter.png",
 					"credit":"",
 					"caption":"计算 "
@@ -150,7 +150,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"qumoptly.github.io/quirk/",
+					"media":"qumoptly.github.io/quirk",
 					"thumbnail":"./img/atom.png",
 					"credit":"",
 					"caption":"量子模拟 "
@@ -163,7 +163,7 @@ storyjs_jsonp_data = {
 				"tag":"Github",
 				"asset":
 				{
-					"media":"qumoptly.github.io/knowledge-center/",
+					"media":"qumoptly.github.io/knowledge-center",
 					"thumbnail":"./img/flaction.png",
 					"credit":"",
 					"caption":"Optics资源中心 "
@@ -176,7 +176,7 @@ storyjs_jsonp_data = {
 				"tag":"Docsify",
 				"asset":
 				{
-					"media":"qumoptly.github.io/docs/#/quantum-machine-learning/",
+					"media":"qumoptly.github.io/docs/#/quantum-machine-learning",
 					"thumbnail":"./img/atom.png",
 					"credit":"",
 					"caption":"Quantum machine learning "
@@ -189,7 +189,7 @@ storyjs_jsonp_data = {
 				"tag":"Docsify",
 				"asset":
 				{
-					"media":"qumoptly.github.io/docs/#/laser/",
+					"media":"qumoptly.github.io/docs/#/laser",
 					"thumbnail":"./img/proj.png",
 					"credit":"",
 					"caption":"激光 "
@@ -202,7 +202,7 @@ storyjs_jsonp_data = {
 				"tag":"Docsify",
 				"asset":
 				{
-					"media":"qumoptly.github.io/docs/#/lasers/",
+					"media":"qumoptly.github.io/docs/#/lasers",
 					"thumbnail":"./img/proj.png",
 					"credit":"",
 					"caption":"激光器 "
@@ -216,7 +216,7 @@ storyjs_jsonp_data = {
 				"tag":"Docsify",
 				"asset":
 				{
-					"media":"qumoptly.github.io/docs/#/light/",
+					"media":"qumoptly.github.io/docs/#/light",
 					"thumbnail":"./img/emacs.png",
 					"credit":"",
 					"caption":"笔记 "
@@ -230,7 +230,7 @@ storyjs_jsonp_data = {
 				"tag":"Docsify",
 				"asset":
 				{
-					"media":"qumoptly.github.io/docs/#/soft/",
+					"media":"qumoptly.github.io/docs/#/soft",
 					"thumbnail":"./img/spdcalc.png",
 					"credit":"",
 					"caption":"学习 "
