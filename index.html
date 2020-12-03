@@ -16,7 +16,7 @@
 			 width:98%;text-align:center;margin:5px;padding:3px;
 		}
 		.scale img{
-			background-size:contain|cover;
+			background-size:contain;
 			width:65%;
 			height: auto;
 	</style>
@@ -87,7 +87,7 @@
 				<a href="./editor" ><img src="img/abiword.png" class="glowing red and quickly rotating"/></a>
 				-->
 			</div>
-			<div class="glowing disco box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
+			<div class="box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
 				<div class="quicknav">
 					<div class="pull-right hidden-phone">
 						<p id="rp-show" style="cursor: pointer"><a style="color:#55AA00" >RP Photonics</a></p>
@@ -96,7 +96,7 @@
 						<a style="color:#5599FF" href="./photonics/RP-Photonics/" >RP-Photonics   </a></p>
 					</div>
 				</div>
-				<div style="text-align:center">
+				<div class="glowing disco box" style="box-shadow:inset 0 0 6px #ccc;text-align:center">
 					<h4 style="color:#5E6C77">
 						<div class="b-body">
 							<div class="rotWord" >
@@ -119,8 +119,10 @@
 			</div>
 		</div>
 	</div>
-	<div id="timeline-embed" style="display:none; align="center">
+	<div class="box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
+		<div id="timeline-embed" align="center" style="display:none;">
 		<!--<a style="cursor: pointer; color:#5E6C77" onclick="TogetherJS(this); return false;">使用Together</p>-->
+		</div>
 	</div>
 
 	<script>$('#list-show').on('click', function() {
