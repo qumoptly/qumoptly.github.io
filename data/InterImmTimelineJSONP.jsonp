@@ -5,7 +5,7 @@ storyjs_jsonp_data = {
 		"type":"default",
 		"text":"网页更新记录",
 		"asset": {
-			"media":"./img/atom.png",
+			"media":"./img_png/atom.png",
 			"credit":"",
 			"caption":""
 		},
@@ -19,7 +19,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"#",
-					"thumbnail":"./img/desktop1.png",
+					"thumbnail":"./img_png/gdocs_b.png",
 					"credit":"",
 					"caption":"Lose"
 				}
@@ -33,7 +33,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"/lasers",
-					"thumbnail":"./img/set.png",
+					"thumbnail":"./img_png/beam_b.png",
 					"credit":"",
 					"caption":"Laser"
 				}
@@ -72,7 +72,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/archives",
-					"thumbnail":"./img/dist.png",
+					"thumbnail":"./img_png/slife_b.png",
 					"credit":"",
 					"caption":"Paper "
 				}
@@ -85,7 +85,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/archives/nva",
-					"thumbnail":"./img/entry.png",
+					"thumbnail":"./img_png/bomb.png",
 					"credit":"",
 					"caption":"Fas "
 				}
@@ -110,7 +110,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/blog",
-					"thumbnail":"./img/world.png",
+					"thumbnail":"./img_png/gog.png",
 					"credit":"",
 					"caption":"Hexo blog"
 				}
@@ -164,7 +164,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/knowledge-center",
-					"thumbnail":"./img/flaction.png",
+					"thumbnail":"./img_png/beam_b.png",
 					"credit":"",
 					"caption":"Optics资源中心 "
 				}
@@ -177,7 +177,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/quantum-machine-learning",
-					"thumbnail":"./img/atom.png",
+					"thumbnail":"./img_png/gce.png",
 					"credit":"",
 					"caption":"Quantum machine learning "
 				}
@@ -190,7 +190,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/laser",
-					"thumbnail":"./img/proj.png",
+					"thumbnail":"./img_png/void.png",
 					"credit":"",
 					"caption":"激光 "
 				}
@@ -203,7 +203,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/lasers",
-					"thumbnail":"./img/proj.png",
+					"thumbnail":"./img_png/robocraft.png",
 					"credit":"",
 					"caption":"激光器 "
 				}
@@ -217,7 +217,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/light",
-					"thumbnail":"./img/emacs.png",
+					"thumbnail":"./img_png/onenote.png",
 					"credit":"",
 					"caption":"笔记 "
 				}
@@ -231,7 +231,7 @@ storyjs_jsonp_data = {
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/soft",
-					"thumbnail":"./img/spdcalc.png",
+					"thumbnail":"./img_png/vs.png",
 					"credit":"",
 					"caption":"学习 "
 				}
