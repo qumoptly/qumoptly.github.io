@@ -22,6 +22,21 @@
 		img{
 			text-align:center;margin:2px;padding:1px;
 		}
+
+		#runlogo{
+			-webkit-animation:run 6s linear 0s infinite;
+		}
+		#runlogo:hover{
+			-webkit-animation-play-state:paused;
+		}
+		@-webkit-keyframes run{
+			from{
+			-webkit-transform:rotate(0deg);
+			}
+			to{
+			 -webkit-transform:rotate(360deg);
+			}
+		}
 	</style>
 </head>
 
@@ -46,7 +61,7 @@
 			$('#logo').empty(a);
 			for (i = 1;i < imgdata.ink.length;i++){
 			var div = document.createElement('div');
-			div.innerHTML = '<img src=' + '"' + './img_png/' + imgdata.ink[i] + '"' + ' class="rotating" height="64px" width="auto"/>';
+			div.innerHTML = '<img id="runlogo" src=' + '"' + './img_png/' + imgdata.ink[i] + '"' + ' class="rotating" height="64px" width="auto"/>';
 			var a = '<a href="#" >';
 			a += div.innerHTML;
 			$('#logo').append(a);
@@ -55,7 +70,7 @@
 			$('#logo').empty(a);
 			for (var i = 1;i < imgdata.color.length;i++){
 			var div = document.createElement('div');
-			div.innerHTML = '<img src=' + '"' + './img_png/' + imgdata.color[i] + '"' + ' class="rotating" height="64px" width="auto"/>';
+			div.innerHTML = '<img id="runlogo" src=' + '"' + './img_png/' + imgdata.color[i] + '"' + ' class="rotating" height="64px" width="auto"/>';
 			var a = '<a class="glowing disco box" href="#" >';
 			a += div.innerHTML;
 			$('#logo').append(a);

@@ -18,6 +18,20 @@
 		img{
 			text-align:center;margin:2px;padding:1px;
 		}
+		#runlogo{
+			-webkit-animation:run 3s linear 0s infinite;
+		}
+		#runlogo:hover{
+			-webkit-animation-play-state:paused;
+		}
+		@-webkit-keyframes run{
+			from{
+			-webkit-transform:rotate(0deg);
+			}
+			to{
+			 -webkit-transform:rotate(360deg);
+			}
+		}
 	</style>
 	<!-- BEGIN TogetherJS -->
 	<!--<script>
@@ -37,7 +51,10 @@
 				<div class="glowing disco box"><div class="pull-right hidden-phone">
 						<p id="list-show" style="cursor: pointer"> 点击简介 </p>
 						<p id="list-content" style="display:none">
-						<a id="title-show" style="font-size: 24px; color:#99BBFF ;" >资源学习整理：<br></a>
+						<a id="title-show" style="font-size: 24px; color:#99BBFF ;" >
+						<img id="runlogo" src="./img_png/void.png" class="glowing darkblue" height="24px" width="auto"/>
+						<img id="runlogo" src="./img_png/wolframa.png" class="glowing darkblue" height="24px" width="auto"/>
+						<img id="runlogo" src="./img_png/void.png" class="glowing darkblue" height="24px" width="auto"/><br></a>
 						<a style="font-size:16px; color:#3b0f92 ;" >
 						1、<a style="font-size:16px;color:#3b0f92 ;" href="./docs/">[Docsify] </a> 
 						<a style="font-size:16px;color:#3b0f92 ;" href="./blog/">[Blog]</a>
@@ -75,7 +92,7 @@
 				<a href="./docs/" ><img src="./img/proj.png" class="glowing darkblue and zooming" height="64px" width="auto"/></a>
 				<a href="./laser/" ><img src="./img/jupyter.png" class="glowing cyan and rotating" height="64px" width="auto"/></a>
 				<a href="./blog/" ><img src="./img_png/gog.png" class="glowing indigo and zooming" height="64px" width="auto"/></a>
-				<a href="./quirk/" ><img src="./img/atom.png" class="glowing lightblue and quickly rotating" height="64px" width="auto"/></a>
+				<a href="./quirk/" ><img id="runlogo" src="./img/atom.png" class="glowing lightblue and quickly rotating" height="64px" width="auto"/></a>
 				<a href="./knowledge-center/" ><img src="./img_png/blackberry.png" class="glowing pink and zooming" height="64px" width="auto"/></a>
 				<a href="./spdcalc/" ><img src="./img/spdcalc.png" class="glowing purple and rotating" height="64px" width="auto"/></a>
 				<a href="./silk/" ><img src="./img/flaction.png" class="glowing yellow and rotating" height="64px" width="auto"/></a>
