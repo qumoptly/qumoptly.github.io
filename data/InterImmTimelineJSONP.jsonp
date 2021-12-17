@@ -84,7 +84,7 @@ storyjs_jsonp_data = {
 				"tag":"Archives",
 				"asset":
 				{
-					"media":"qumoptly.github.io/archives/nva",
+					"media":"archives/nwa",
 					"thumbnail":"./img_png/bomb.png",
 					"credit":"",
 					"caption":"Fas "
