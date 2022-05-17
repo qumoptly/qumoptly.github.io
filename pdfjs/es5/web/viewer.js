@@ -14065,7 +14065,7 @@ function _defineProperties(target, props) { for (var i = 0; i < props.length; i+
 
 function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
 
-var DEFAULT_VIEW_HISTORY_CACHE_SIZE = 20;
+var DEFAULT_VIEW_HISTORY_CACHE_SIZE = 10;
 
 var ViewHistory = /*#__PURE__*/function () {
   function ViewHistory(fingerprint) {
