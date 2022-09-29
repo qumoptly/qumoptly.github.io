@@ -235,7 +235,7 @@ storyjs_jsonp_data = {
 					"credit":"",
 					"caption":"学习 "
 				}
-			},
+			}
 		]
 	}
 }
