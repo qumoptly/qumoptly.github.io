@@ -1,6 +1,6 @@
 
 var text = $("#f-left");
-text.focus();
+//text.focus();
 function action() 
 {
 	if(text.val()==null||text.val()=="")
