@@ -12,12 +12,28 @@
 	<link rel="stylesheet" type="text/css" href="./css/index.css"/>
 	<script src="./js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
 	<style type="text/css">
-		.box{
-			 width:98%;text-align:center;margin:5px;padding:3px;
+		html {
+			background: #e7e7e7;
 		}
-		img{
+		.container{
+			margin:2px;padding:1px;
+		}
+		.box{
+			 width:99%;text-align:center;margin:2px;padding:1px;
+		}
+		.border-box {
+			border: 3px solid transparent;
+			border-radius: 1em;
+			background-clip: padding-box, border-box;
+			background-origin: padding-box, border-box;
+			background-image: radial-gradient( #ccc, #e7e7e7), conic-gradient(#ff0000d1, #ffa500d1, #ffff00d1, #008000d1, #0000ffd1, #4b0082d1, #800080d1, #ff0020d1);
+		}
+		.img{
 			text-align:center;margin:2px;padding:1px;
 		}
+		.xcolor{
+            background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
+        }
 		#runlogo{
 			-webkit-animation:run 0.1s linear 0s infinite;
 		}
@@ -25,7 +41,7 @@
 			-webkit-animation-play-state:paused;
 		}
 		#runlogo0{
-			-webkit-animation:run 0.5s linear 0s infinite;
+			-webkit-animation:run 1s linear 0s infinite;
 		}
 		#runlogo0:hover{
 			-webkit-animation-play-state:paused;
@@ -100,153 +116,194 @@
 </head>
 <body>
 	<div class="htmleaf-container">
-		<div align="center" style="margin-top:2px;">
-			<div align="center" style="font-size: 24px; color:#99BBFF ; margin-top:5px ;">
-				<div class="pull-right hidden-phone">
-						<p id="list-show" style="cursor: pointer"><img style="width:auto;height:100px;" src="./img_png/Zenmap.png" alt="img"></p>
-						<p id="list-content" style="display:none">
-						<a id="title-show" style="font-size: 32px; color:#99BBFF ;" >
-						<img style="width:32px;height:32px;" src="./img_png/Sun.png" alt="img">
-						<img id="runlogo1" style="width:32px;height:32px;" src="./img_png/Mercury.png" alt="img">
-						<img id="runlogo2" style="width:32px;height:32px;" src="./img_png/Venus.png" alt="img">
-						<img id="runlogo3" style="width:32px;height:32px;" src="./img_png/Earth.png" alt="img">
-						<img id="runlogo4" style="width:32px;height:32px;" src="./img_png/Mars.png" alt="img">
-						<img id="runlogo5" style="width:32px;height:32px;" src="./img_png/Jupiter.png" alt="img">
-						<img id="runlogo6" style="width:32px;height:32px;" src="./img_png/Saturn.png" alt="img">
-						<img id="runlogo7" style="width:32px;height:32px;" src="./img_png/Uranus.png" alt="img">
-						<img id="runlogo8" style="width:32px;height:32px;" src="./img_png/Neptune.png" alt="img">
-						<br><br>
-						<img id="runlogo" src="./img_png/windmill.png" class="glowing lightblue and zooming" height="24px" width="auto"/>&nbsp; &nbsp; 
-						<img id="runlogo0" src="./img_png/fidget_b.png" class="glowing orange and zooming" height="24px" width="auto"/>&nbsp; &nbsp; 
-						<img id="runlogo" src="./img_png/windmill.png" class="glowing lightblue and zooming" height="24px" width="auto"/><br></a>
-						<a style="font-size:16px; color:#D30C06;" >
-						<a style="font-size:16px;color:#D30C06;" href="./docs/">[Docs] </a> 
-						<a style="font-size:16px;color:#D30C06;" href="./blog/">[Blog]</a>
-						</a><br>
-						<a style="font-size:16px; color:#EBBB1D;" >
-						其他：<a style="font-size:16px;color:#EBBB1D;" href="./laser/">[工具]</a>
-						<a style="font-size:16px;color:#EBBB1D;" href="./knowledge-center/">[搜索] </a>
-						</a><br>
-						<!-- <a style="font-size:16px; color:#3b0f92;" >
-						3、PoseNet：<a style="font-size:16px;color:#3b0f92;" href="./posenet/">[打开]</a>
-						<a style="font-size:16px;color:#3b0f92;" >TensorFlow.js 实时人体姿态检测！</a>
-						<a style="font-size:16px; color:#3b0f92;" href="./body-pix/">BodyPix</a>
-						</a><br>
-						<a style="font-size:16px; color:#99BBFF;" >
-						4、Tiny YOLO：<a style="font-size:16px;color:#99BBFF;" href="./tfjs-yolo-tiny/">[打开]</a>
-						<a style="font-size:16px;color:#99BBFF;" >Tensorflow.js实现目标检测！</a>
-						</a><br>
-						<a style="font-size:16px; color:#663399;" >
-						7、<a style="font-size:16px;color:#663399;" href="https://light.co/">light.co：</a>
-						<a style="font-size:16px;color:#663399;" href="./light.co/">Light-L16</a>
-						</a><br> -->
-						<a style="font-size:16px; color:#2EBD09;" >
-						火星车：<a style="font-size:16px;color:#2EBD09;" href="./rover/">[打开]</a>
-						<a style="font-size:16px;color:#2EBD09;" href="https://github.com/nasa-jpl/open-source-rover">the rovers on Mars</a>
-						</a><br>
-						<a style="font-size:16px; color:#3BABFE;" >
-						Quirk：<a style="font-size:16px;color:#3BABFE;" href="./quirk/">一个量子电路模拟器</a></a><br>
-						<a style="font-size:16px; color:#7E2AA8;" href="./search.html" >Zoomeye<br>
-						</a>
-						<img id="runlogo0" src="./img_png/void.png" class="glowing indigo and zooming" height="24px" width="auto"/>
-						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
-						<img id="runlogo0" src="./img_png/void.png" class="glowing indigo and zooming" height="24px" width="auto"/>
-						</p>
-				</div>
-			</div>
-			<div class="box" style="box-shadow:inset 0 0 6px #ccc;" >
-				<a href="./docs/" ><img src="./img_png/notepad.png" class="glowing darkblue and zooming" height="64px" width="auto"/></a>
-				<a href="./laser/" ><img src="./img/jupyter.png" class="glowing cyan and rotating" height="64px" width="auto"/></a>
-				<a href="./blog/" ><img src="./img_png/gog.png" class="glowing indigo and zooming" height="64px" width="auto"/></a>
-				<a href="./quirk/" ><img src="./img/atom.png" class="glowing lightblue and quickly rotating" height="64px" width="auto"/></a>
-				<a href="./knowledge-center/" ><img src="./img_png/processor.png" class="glowing pink and zooming" height="64px" width="auto"/></a>
-				<a href="./spdcalc/" ><img src="./img/spdcalc.png" class="glowing purple and rotating" height="64px" width="auto"/></a>
-				<a href="./silk/" ><img src="./img/flaction.png" class="glowing yellow and rotating" height="64px" width="auto"/></a>
-				<a href="./archives/" ><img src="./img_png/corel.png" class="glowing orange and zooming" height="64px" width="auto"/></a>
-				<!--<a href="./archives/nwa/" ><img src="./img_png/nboom_b.png" class="glowing magenta and zooming" height="64px" width="auto"/></a> -->
-			</div>
-			<div class="box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
-				<div class="quicknav">
-					<div class="pull-right hidden-phone">
-						<p id="rp-show" style="cursor: pointer"><a style="color:#55AA00" >RP Photonics</a></p>
-						<p id="rp-content" style="display:none">
-						<a style="color:#999888" >镜像：</a>
-						<a style="color:#5599FF" href="./photonics/RP-Photonics/" >RP-Photonics   </a></p>
-					</div>
-				</div>
-				<div class="glowing disco box" style="box-shadow:inset 0 0 6px #ccc;text-align:center">
-					<h4 style="color:#5E6C77">
-						<div class="b-body">
-							<div class="rotWord" >
-							</div>
-							<div class="mWord" >
-							</div>
-						</div>
-					</h4>
-					<input type="text" style="font-size: 16px;" id="f-left" placeholder="输入" />  
-					<!--<input type="text" id="robot" placeholder="机器人"  onkeypress="showHint(this.value)"/>
-					<input type="button" value="确认" onclick="Send(document.getElementById('robot').value)"/>
-					<p><h4 style="color:#5E6C77"><span id="txtHint"></span> </h4></p>-->
-				</div> 
-				<p><a href="https://openmct-demo.herokuapp.com" target="_blank" rel="noopener norefferre"><img style="width:16px;height:16px;" src="./img/setmin.png" alt="img"></a>
-				<a style="font-size:16px; color:#5E6C77" href="https://github.com/qumoptly">2016-2020 by qumoptly</a>
+		<div class="box">
+			<p id="list-show" style="cursor: pointer"><img style="width:auto;height:72px;" src="./img_png/Zenmap.png" alt="img"></p>
+			<div id="list-content" style="display:none">
+				<span id="title-show" style="margin:0 auto;">
+					<img style="width:32px;height:32px;" src="./img_png/Sun.png" alt="img">
+					<img id="runlogo1" style="width:32px;height:32px;" src="./img_png/Mercury.png" alt="img">
+					<img id="runlogo2" style="width:32px;height:32px;" src="./img_png/Venus.png" alt="img">
+					<img id="runlogo3" style="width:32px;height:32px;" src="./img_png/Earth.png" alt="img">
+					<img id="runlogo4" style="width:32px;height:32px;" src="./img_png/Mars.png" alt="img">
+					<img id="runlogo5" style="width:32px;height:32px;" src="./img_png/Jupiter.png" alt="img">
+					<img id="runlogo6" style="width:32px;height:32px;" src="./img_png/Saturn.png" alt="img">
+					<img id="runlogo7" style="width:32px;height:32px;" src="./img_png/Uranus.png" alt="img">
+					<img id="runlogo8" style="width:32px;height:32px;" src="./img_png/Neptune.png" alt="img">
+				<br><img style="width:48px;height:auto;" src="./img/png27.png" alt="img">
+				<br><img style="width:48px;height:auto;" src="./img/ocat.png" alt="img">
+				<br>
+				</span>
+				<p id="option-r">
+					<a style="font-size:16px; color:#7E2AA8;" href="#" > &#10148 ChatGPT<br>
+				</a></p>
+				<p><img id="runlogo" src="./img_png/windmill.png" class="glowing lightblue and zooming" height="24px" width="auto"/>&nbsp; &nbsp; 
+				<img id="runlogo0" src="./img_png/fidget_b.png" class="glowing orange and zooming" height="24px" width="auto"/>&nbsp; &nbsp; 
+				<img id="runlogo" src="./img_png/windmill.png" class="glowing lightblue and zooming" height="24px" width="auto"/>
+				<br>
+				<span style="font-size:16px; color:#D30C06;" >
+					<a style="font-size:16px;color:#D30C06;" href="./docs/">[Docs] </a> 
+					<a style="font-size:16px;color:#D30C06;" href="./blog/">[Blog]</a>
+				<br></span>
+				<span style="font-size:16px; color:#EBBB1D;" >
+					其他：<a style="font-size:16px;color:#EBBB1D;" href="./laser/">[工具]</a>
+					<a style="font-size:16px;color:#EBBB1D;" href="./knowledge-center/">[搜索] </a>
+				<br></span>
+				<!-- <a style="font-size:16px; color:#3b0f92;" >
+					3、PoseNet：<a style="font-size:16px;color:#3b0f92;" href="./posenet/">[打开]</a>
+				<a style="font-size:16px;color:#3b0f92;" >TensorFlow.js 实时人体姿态检测！</a>
+				<a style="font-size:16px; color:#3b0f92;" href="./body-pix/">BodyPix</a>
+					<br></a>
+				<a style="font-size:16px; color:#99BBFF;" >
+					4、Tiny YOLO：<a style="font-size:16px;color:#99BBFF;" href="./tfjs-yolo-tiny/">[打开]</a>
+				<a style="font-size:16px;color:#99BBFF;" >Tensorflow.js实现目标检测！</a>
+				<br></a>
+				<a style="font-size:16px; color:#663399;" >
+					7、<a style="font-size:16px;color:#663399;" href="https://light.co/">light.co：</a>
+				<a style="font-size:16px;color:#663399;" href="./light.co/">Light-L16</a>
+				<br></a> -->
+				<span style="font-size:16px; color:#2EBD09;" >
+					火星车：<a style="font-size:16px;color:#2EBD09;" href="./rover/">[打开]</a>
+					<a style="font-size:16px;color:#2EBD09;" href="https://github.com/nasa-jpl/open-source-rover">the rovers on Mars</a>
+				<br></span>
+				<span style="font-size:16px; color:#3BABFE;" >
+					Quirk：<a style="font-size:16px;color:#3BABFE;" href="./quirk/">一个量子电路模拟器</a>
+				<br></span>
+				
+				<img id="runlogo0" src="./img_png/void.png" class="glowing indigo and zooming" height="24px" width="auto"/>
+					&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+				<img id="runlogo0" src="./img_png/void.png" class="glowing indigo and zooming" height="24px" width="auto"/>
 				</p>
-				<p><a id="timeline-show" href="#" style="color:#67665b" >网页更新记录 </a>
-				<a id="timeline-show1" href="#" style="display:none; color:#578cda" >网页更新记录 </a>
-				<a id="timeline-show2" href="#" style="display:none; color:#578cda" >网页更新记录 </a></p>
+			</div>
+			<div id="rp-content" style="box-shadow:inset 0 0 6px #ccc;width:fit-content;text-align:left;margin:0 auto;display:none">
+				<a id="rp-show1" href="#"><img src="./img/png22.png" class="glowing red and zooming" height="48px" width="auto"/></a>
+				<div style="margin-inline:1em">
+					<a style="color:#00aa25; font-size: 18px;" href="https://github.com/stars/qumoptly/lists/gpt-list"> &#10017 ChatGPT &#9752 <br></a>
+					<span id="rip-content0">
+						<a style="color:#00a6ed; font-size: 17px;"> &#9660 自动部署Chat_Web到vercel、railway<br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chat.limy.space/" >&#9745 <u>Forked from ddiu8081</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://web.limy.space/" >&#9745 <u>Forked from Chanzhaoyu</u> &nbsp;  <br></a>
+						<a class="glowing disco box" style="color:#111111; font-size: 18px;"> &#9833 &#9834 &#9835 &#9836 &#9837 &#9839 </a>
+						<a class="glowing disco box" style="color:#222222; font-size: 15px;">[最后更新于3月4日] &infin; <br></a>
+					</span>
+					<a id="logo-show" href="#">
+						<img id="runlogo2" src="./img/gp7.png" class="glowing red and zooming" height="32px" width="auto"/>
+						<img id="runlogo3" src="./img/gp7.png" class="glowing red and zooming" height="32px" width="auto"/>
+						<img id="runlogo0" src="./img/gp7.png" class="glowing red and zooming" height="32px" width="auto"/>
+						<img src="./img/png24.png" class="glowing red and zooming" height="32px" width="auto"/><br>
+					</a>
+					<a style="color:#00aa25; font-size: 17px;" href="#"> &#10148 其他ChatGPT地址：&#9889 <br></a>
+					<span id="rip-content1">
+						<a style="color:#00a6ed; font-size: 16px;" href="#"> &#10148 ChatGPT List：&#8675 [最后更新于3月11日]<br></a>
+					</span>
+					<span id="rip-content">
+						<a id="rip-content2" style="color:#00a6ed; font-size: 16px;" href="#"> &#9660 ChatGPT List：&#8675 [最后更新于3月11日]<br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://aitoolgpt.com/" >&#9744 aitoolgpt.com @AUDI_GUZZ <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chatsverse.xyz/" >&#9744 chatsverse.xyz @airyland <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://open-gpt.app/" >&#9744 OpenGpt @futantan Prompt<br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://learningprompt.wiki/" >&#9744 Prompt教程 @thinkingjimmy<br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://scribblediffusion.com/" >&#9744 涂鸦 Diffusion @replicate &#9733 &#9734 <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://www.clickprompt.org/" >&#9745 &#8675 ClickPrompt @phodal &#9733 &#9733 &#9734 <br></a>
+						<a id="hug-log" style="display:none" href="#">
+							<img src="./img/yolo.png" class="glowing red and zooming" height="32px" width="auto" alt="img"/>
+						</a>
+						<p id="hug-content" class="box" style="box-shadow:inset 0 0 5px #dc29293a; width:fit-content; text-align:left; margin-inline:1em" >
+							<a id="hug-show" style="color:#222222; font-size: 15px;" href="#">
+								&#10149 AI绘画生成器 &#10148 gpt/手动-在线测试<br>
+								&#10149 HuggingFace &#10148 输入Prompt &#10149 Generate生成<br>
+							</a>
+							<a style="color:#00aa25; font-size: 15px;" href="https://huggingface.co/spaces/stabilityai/stable-diffusion/" >&#10022 Stable Diffusion 2.1<br></a>
+							<a style="color:#00aa25; font-size: 15px;" href="https://huggingface.co/spaces/akhaliq/anything-v4.0/" >&#10022 Anything V4.0<br></a>
+							<a style="color:#00aa25; font-size: 15px;" href="https://huggingface.co/spaces/akhaliq/openjourney/" >&#10022 Openjourney<br></a>
+							<a style="color:#00aa25; font-size: 15px;" href="https://huggingface.co/spaces/" >&#10162 更多模型</a>
+						</p>
+						<a style="color:#00a6ed; font-size: 16px;" href="#"> &#8675 [最后更新于3月6日]<br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="http://c.teqmeta.com/" >&#9744 <u>http://c.teqmeta.com</u> &#9785 <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chat.ninvfeng.xyz/" >&#9744 <u>chat.ninvfeng.xyz</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chat.theb.ai/" >&#9744 <u>littleb: chat.theb.ai</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chat.zecoba.cn/" >&#9744 <u>chat.zecoba.cn</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chatgpt.ddiu.me/" >&#9746 <u>ddiu8081</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://chat.tgbot.co/" >&#9744 <u>chat.tgbot.co</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://www.chat2ai.cn/" >&#9744 <u>chat2ai.cn</u> &nbsp; <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://www.chatpdf.com/" >&#9744 <u>xathis: chatpdf.com</u> &#9992 &#9729 <br></a>
+						<a class="glowing disco box" style="color:#dc2929; font-size: 16px;" href="https://jessezhang.org/llmdemo/" >&#9744 <u>jessezhang: llmdemo</u> 桌面版 &#9733 &#9734 &#9734 <br></a>
+					</span>
+				</div>
+				<a id="option-f" href="#">
+					<img src="./img/png26.png" class="glowing red and zooming" height="32px" width="auto"/>
+				</a>
+				<a id="option-b" href="#">
+					<img src="./img/png30.png" class="glowing red and zooming" height="32px" width="auto"/>
+				</a>
+			</div>
+			<div class="quicknav" style="width:fit-content;text-align:center;margin:0 auto;">
+				<div class="glowing disco box">
+					<a id="hito" onclick="update()" style="color:#dc2929 ;font-size:16px;" ></a>
+					<a onclick="update()" id="hitokoto" style="color:#333333; font-size:16px;">
+						<td href="#" style="color:#333333;cursor: pointer" >一言：更新</td>
+					</a>
+				</div>
+				<div class="glowing disco box">
+					<form action="https://www.phind.com/search" method="GET">
+						<input type="text" style="font-size: 16px;" name="q" id="search_input" autofocus="autofocus" placeholder="AI搜索引擎 Phind" class="q" />
+					</form>
+				</div>
 			</div>
 		</div>
+			
+		<div id="rip-content3" class="box" style="width:fit-content;text-align:center;margin:0 auto;" >
+			<a href="./docs/" ><img src="./img_png/notepad.png" class="glowing darkblue and zooming" height="64px" width="auto"/></a>
+			<a href="./laser/" ><img src="./img/jupyter.png" class="glowing cyan and rotating" height="64px" width="auto"/></a>
+			<a href="./blog/" ><img src="./img_png/gog.png" class="glowing indigo and zooming" height="64px" width="auto"/></a>
+			<a href="./quirk/" ><img src="./img/atom.png" class="glowing lightblue and quickly rotating" height="64px" width="auto"/></a>
+			<a href="./knowledge-center/" ><img src="./img_png/processor.png" class="glowing pink and zooming" height="64px" width="auto"/></a>
+			<a href="./spdcalc/" ><img src="./img/spdcalc.png" class="glowing purple and rotating" height="64px" width="auto"/></a>
+			<a href="./silk/" ><img src="./img/flaction.png" class="glowing yellow and rotating" height="64px" width="auto"/></a>
+			<a href="./archives/" ><img src="./img_png/corel.png" class="glowing orange and zooming" height="64px" width="auto"/></a>
+			<!--<a href="./archives/nwa/" ><img src="./img_png/nboom_b.png" class="glowing magenta and zooming" height="64px" width="auto"/></a> -->
+
+			<div class="glowing disco box" style="text-align:center;margin:0 auto;">
+				<h4 style="color:#5E6C77">
+					<div class="b-body">
+						<div class="rotWord" ></div>
+						<div class="mWord" ></div>
+					</div>
+				</h4>
+				<input type="text" style="font-size: 16px;" id="f-left" placeholder="Ownthink" />  
+				<!--<input type="text" id="robot" placeholder="机器人"  onkeypress="showHint(this.value)"/>
+				<input type="button" value="确认" onclick="Send(document.getElementById('robot').value)"/>
+				<p><h4 style="color:#5E6C77"><span id="txtHint"></span> </h4></p>-->
+			</div>
+		</div>
+		<div class="box" style="text-align:center;">
+			<div class="pull-right hidden-phone">
+				<a style="color:#999888" >镜像：</a>
+				<a style="color:#5599FF" href="./photonics/RP-Photonics/" >RP-Photonics </a>
+			</div> 
+			<p><a style="font-size:16px; color:#5E6C77" href="https://github.com/qumoptly">2016-2020 by qumoptly</a>
+			</p>
+			<p><a id="timeline-show" href="#" style="color:#67665b" >网页更新记录 </a>
+				<a id="timeline-show1" href="#" style="display:none; color:#578cda" >网页更新记录 </a>
+				<a id="timeline-show2" href="#" style="display:none; color:#578cda" >网页更新记录 </a>
+			</p>
+		</div>
 	</div>
-	<div class="box" style="box-shadow:inset 0 0 6px #ccc;text-align:center;">
+	<div class="box" style="text-align:center;">
 		<div id="timeline-embed" align="center" style="display:none;">
 		<!--<a style="cursor: pointer; color:#5E6C77" onclick="TogetherJS(this); return false;">使用Together</p>-->
 		</div>
 	</div>
-
-	<script>$('#list-show').on('click', function() {
-		$('#list-show').hide();
-		$('#list-content').show();
-	});
-		$('#title-show').on('click', function() {
-		$('#list-content').hide();
-		$('#list-show').show();
-	});
-		$('#rp-show').on('click', function() {
-		$('#rp-show').hide();
-		$('#rp-content').show();
-	});
-		$('#timeline-show').on('click', function() {
-		$('#timeline-show').hide();
-		$('#timeline-show1').show();
-		$(document).ready(function() {
-				createStoryJS({
-					type: 'timeline',
-					width: '100%',
-					height: '85%',
-					source: './data/InterImmTimelineJSONP.jsonp',
-					hash_bookmark: true,
-					lang: 'zh-cn',
-					start_zoom_adjust: '1',
-					embed_id: 'timeline-embed'
-				});
-			});
-		$('#timeline-embed').show();
-	});
-		$('#timeline-show1').on('click', function() {
-		$('#timeline-show1').hide();
-		$('#timeline-embed').hide();
-		$('#timeline-show2').show();
-	});
-		$('#timeline-show2').on('click', function() {
-		$('#timeline-show2').hide();
-		$('#timeline-embed').show();
-		$('#timeline-show1').show();
-	});
-	// function nodisplay() {
-	// document.getElementById('timeline-embed').style.visibility = "visible";
-	// document.getElementById('timeline-embed').style.display = "none";
-	// };
-	// setTimeout(nodisplay,1000);
+	<!-- hitokoto  https://developer.hitokoto.cn/sentence/demo/#%E7%BD%91%E9%A1%B5 -->
+	<script type="text/javascript">
+		function update(){
+			fetch('https://v1.hitokoto.cn')
+			.then(response => response.json())
+			.then(data => {
+				hitokoto.innerText = data.hitokoto
+				console.log(hitokoto.innerText)
+				hito.innerText = data.from
+			})
+			.catch(console.error)
+		}
 	</script>
 	<script src="./js/bota.js" type="text/javascript" charset="utf-8"></script>
 
