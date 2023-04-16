@@ -1,4 +1,4 @@
-@CHARSET "UTF-8";
+
 
 	.b-body {
 		width: 100%;
@@ -57,3 +57,66 @@
 		max-width: 50%;
 	}
 	
+		
+		#runlogo0{
+			-webkit-animation:run 1s linear 0s infinite;
+		}
+		#runlogo0:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo1{
+			-webkit-animation:run 586.5s linear 0s infinite;
+		}
+		#runlogo1:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo2{
+			-webkit-animation:run 2430s linear 0s infinite;
+		}
+		#runlogo2:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo3{
+			-webkit-animation:run 10s linear 0s infinite;
+		}
+		#runlogo3:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo4{
+			-webkit-animation:run 10.26s linear 0s infinite;
+		}
+		#runlogo4:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo5{
+			-webkit-animation:run 4.14s linear 0s infinite;
+		}
+		#runlogo5:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo6{
+			-webkit-animation:run 4.36s linear 0s infinite;
+		}
+		#runlogo6:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo7{
+			-webkit-animation:run 7.2s linear 0s infinite;
+		}
+		#runlogo7:hover{
+			-webkit-animation-play-state:paused;
+		}
+		#runlogo8{
+			-webkit-animation:run 6.71s linear 0s infinite;
+		}
+		#runlogo8:hover{
+			-webkit-animation-play-state:paused;
+		}
+		@-webkit-keyframes run{
+			from{
+			-webkit-transform:rotate(0deg);
+			}
+			to{
+			 -webkit-transform:rotate(360deg);
+			}
+		}
