@@ -41,30 +41,26 @@
 		};
 	});
 		$('#text-show').on('click', function() {
-			if($('#text-content').is(':hidden') && $('#text-content1').is(':hidden')){
-				$('#text-content').show();
-				$('#text-content1').show();
+			if($('#text-content').is(':hidden')){
+				$('#text-content').show(speed);
 			}else{
-				$('#text-content').hide();
-				$('#text-content1').hide();
+				$('#text-content').hide(speed);
 			};
 	});
 		$('#logo-show').on('click', function() {
 			if($('#rip-content3').is(':visible')){
 				$('#rip-content3').hide(speed);
 			}else{
-				$('#rip-content3').show();
+				$('#rip-content3').show(speed);
 			};
 	});
 		$('#list-show').on('click', function() {
-		$('#list-show').hide(speed);
-		$('#list-content').show(speed);
-		$('#rip-content3').hide(speed);
+		$('#list-show').hide();
+		$('#list-content').show();
 	});
 		$('#title-show').on('click', function() {
-		$('#list-content').hide(speed);
-		$('#list-show').show(speed);
-		$('#rip-content3').show(speed);
+		$('#list-content').hide();
+		$('#list-show').show();
 	});
 		$('#rp-show').on('click', function() {
 		$('#rp-show').hide(speed);
