@@ -112,6 +112,12 @@
 		#runlogo8:hover{
 			-webkit-animation-play-state:paused;
 		}
+		#runlogo60{
+			-webkit-animation:run 60s linear 0s infinite;
+		}
+		#runlogo60:hover{
+			-webkit-animation-play-state:paused;
+		}
 		@-webkit-keyframes run{
 			from{
 			-webkit-transform:rotate(0deg);
