@@ -11,10 +11,10 @@ storyjs_jsonp_data = {
 		},
 		"date": [
 			{
-				"startDate":"2016",
+				"startDate":"2015",
 				"endDate":"2017",
-				"headline":"旧资源",
-				"text":"<p>丢失的资源</p>",
+				"headline":"资料",
+				"text":"<p>丢失的</p>",
 				"tag":"Github",
 				"asset":
 				{
@@ -40,41 +40,41 @@ storyjs_jsonp_data = {
 			},
 			{
 				"startDate":"2017",
-				"headline":"Silk",
-				"text":"<p>Silk</p>",
+				"headline":"Github",
+				"text":"<p>Github</p>",
 				"tag":"Github",
 				"asset":
 				{
-					"media":"qumoptly.github.io/silk",
-					"thumbnail":"./img/silk.png",
+					"media":"qumoptly.github.io/",
+					"thumbnail":"./img/ocat.png",
 					"credit":"",
-					"caption":"Silk"
+					"caption":"Github"
 				}
 			},
 			{
 				"startDate":"2018,09",
 				"headline":"火星车",
-				"text":"<p>NASA火星车 </p>",
+				"text":"<p>NASA火星车</p>",
 				"tag":"Archives",
 				"asset":
 				{
 					"media":"qumoptly.github.io/archives/curiosity",
 					"thumbnail":"./img/battl.png",
 					"credit":"",
-					"caption":"Mars "
+					"caption":"Mars"
 				}
 			},
 			{
 				"startDate":"2020,10",
 				"headline":"Paper",
-				"text":"<p>Pdf在线阅读文章 </p>",
+				"text":"<p>Pdf在线阅读</p>",
 				"tag":"Archives",
 				"asset":
 				{
 					"media":"qumoptly.github.io/archives",
 					"thumbnail":"./img_png/slife_b.png",
 					"credit":"",
-					"caption":"Paper "
+					"caption":"Paper"
 				}
 			},
 			{
@@ -84,10 +84,10 @@ storyjs_jsonp_data = {
 				"tag":"Archives",
 				"asset":
 				{
-					"media":"archives/nwa",
+					"media":"qumoptly.github.io/archives/nva",
 					"thumbnail":"./img_png/bomb.png",
 					"credit":"",
-					"caption":"Fas "
+					"caption":"Fas"
 				}
 			},
 			{
@@ -127,7 +127,7 @@ storyjs_jsonp_data = {
 					"media":"qumoptly.github.io/docs/#/",
 					"thumbnail":"./img/proj.png",
 					"credit":"",
-					"caption":"Docsify "
+					"caption":"Docsify"
 				}
 			},
 			{
@@ -140,7 +140,7 @@ storyjs_jsonp_data = {
 					"media":"qumoptly.github.io/laser",
 					"thumbnail":"./img/jupyter.png",
 					"credit":"",
-					"caption":"计算 "
+					"caption":"计算"
 				}
 			},
 			{
@@ -153,7 +153,7 @@ storyjs_jsonp_data = {
 					"media":"qumoptly.github.io/quirk",
 					"thumbnail":"./img/atom.png",
 					"credit":"",
-					"caption":"量子模拟 "
+					"caption":"量子模拟"
 				}
 			},
 			{
@@ -166,7 +166,7 @@ storyjs_jsonp_data = {
 					"media":"qumoptly.github.io/knowledge-center",
 					"thumbnail":"./img_png/beam_b.png",
 					"credit":"",
-					"caption":"Optics资源中心 "
+					"caption":"Optics资源中心"
 				}
 			},
 			{
@@ -179,7 +179,7 @@ storyjs_jsonp_data = {
 					"media":"qumoptly.github.io/docs/#/quantum-machine-learning",
 					"thumbnail":"./img_png/gce.png",
 					"credit":"",
-					"caption":"Quantum machine learning "
+					"caption":"Quantum machine learning"
 				}
 			},
 			{
@@ -192,48 +192,62 @@ storyjs_jsonp_data = {
 					"media":"qumoptly.github.io/docs/#/laser",
 					"thumbnail":"./img_png/void.png",
 					"credit":"",
-					"caption":"激光 "
+					"caption":"激光"
 				}
 			},
 			{
 				"startDate":"2020,04",
 				"headline":"Lasers",
-				"text":"<p>激光器图解 </p>",
+				"text":"<p>激光器图解</p>",
 				"tag":"Docsify",
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/lasers",
 					"thumbnail":"./img_png/robocraft.png",
 					"credit":"",
-					"caption":"激光器 "
+					"caption":"激光器"
 				}
 			},
 			{
 				"startDate":"2020,03",
 				"endDate":"2020,06",
 				"headline":"Light",
-				"text":"<p>OneNote笔记 </p>",
+				"text":"<p>OneNote笔记</p>",
 				"tag":"Docsify",
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/light",
 					"thumbnail":"./img_png/onenote.png",
 					"credit":"",
-					"caption":"笔记 "
+					"caption":"笔记"
 				}
 			},
 			{
 				"startDate":"2020,09",
 				"endDate":"2020,12",
 				"headline":"Soft",
-				"text":"<p>软件学习 </p>",
+				"text":"<p>软件学习</p>",
 				"tag":"Docsify",
 				"asset":
 				{
 					"media":"qumoptly.github.io/docs/#/soft",
 					"thumbnail":"./img_png/vs.png",
 					"credit":"",
-					"caption":"学习 "
+					"caption":"学习"
+				}
+			},
+			{
+				"startDate":"2022,12",
+				"endDate":"2023,04",
+				"headline":"GPT",
+				"text":"<p>ChatGPT应用</p>",
+				"tag":"Github",
+				"asset":
+				{
+					"media":"qumoptly.github.io/vercel/",
+					"thumbnail":"./img/openai.png",
+					"credit":"",
+					"caption":"NLP、OpenAI"
 				}
 			}
 		]
