@@ -1,0 +1,725 @@
+<html>
+<head>
+<title>Phase Matching of SHG</title>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style>
+.mainbody{margin: 0 auto;width:90%;background-color:#ffffff;text-align:left;}
+
+.webtitle {height:80px;background-image:url('./logo.png');background-repeat:no-repeat;background-position:left;}
+
+.calcname {top: 100px; width:100%; height:50px; padding-top:10px;padding-bottom:10px;margin-bottom:15px;background-color:#ffffff;text-align:center;font-weight:bold;font-size:14pt;font-family:黑体,SimHei;line-height:20px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#f9f9f9;}
+
+.calctitle {border-style:dotted;border-width: 1px;width:70px;color:#000000;font-weight:none;font-size:12pt;font-family:黑体,SimHei;display:inline;padding:10px;margin-top:0px;}
+
+.container {top:10px; width:97.8%;height:480px;margin-top:9px;margin-bottom:12px;padding-top:20px;padding-left:20px;line-height:30px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#eeeeee;background-color:#f6f6f6;font-size:11pt;font-family:黑体,SimHei;color:#444444;}
+
+.calcblock {font-size:11pt;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:25px;}
+
+.adblock {height:50px;width:890px;border:solid 1px #eeeeee;margin-bottom:12px;margin-left:0px;background-color:#a9a9a9;text-align:left;padding-top:25px;}
+
+body {background-color:#f1f1f1;text-align:center;}
+
+.equblock {font-size:11pt;font-weight:bold;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:20px;margin-top:15px;margin-left:20px;}
+.dispblock1 {font-size:11pt;font-family:黑体,SimHei;font-weight:none;text-align:left;}
+
+a {font-size:10pt;color:#000000;text-decoration:none;font-weight:bold;}
+a:visited {font-size:10pt;color:#333333;text-decoration:none;font-weight:bold;}
+a:hover {font-size:10pt;color:#0000ff;text-decoration:underline;font-weight:bold;}
+
+.SHGcanvas {background-color:white;}
+table {text-align:center;vertical-align:center;font-size:11pt;font-weight:bold;font-family:黑体,SimHei;border-collapse:collapse;border-spacing:0;color:#444444;}
+tr {height:30px;}
+td {width:60px;border:1px solid #444444;color:#444444;}
+</style>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">  </script> 
+<script>
+function setblock(a)
+{
+	titleblock='ftitle';
+	contentblock='container1';
+	b='fblock'+a.charAt(a.length-1);
+	var x1=document.getElementById(titleblock).childNodes;
+	for(i=0;i<x1.length;i++)
+	{
+		if((x1[i].className=='calctitle') && (x1[i].id!=a))
+		{
+			document.getElementById(x1[i].id).style.backgroundColor="#ffffff";
+			document.getElementById(x1[i].id).style.color="#000000";
+			document.getElementById(x1[i].id).style.borderStyle="solid";
+			document.getElementById(x1[i].id).style.borderColor="#ffffff";
+			document.getElementById(x1[i].id).style.borderBottomColor="#f6f6f6";
+		}
+	}
+	document.getElementById(a).style.backgroundColor="#f3f3f3";
+	document.getElementById(a).style.color="#000000";
+	document.getElementById(a).style.borderColor="#ccddff";
+	document.getElementById(a).style.borderBottomColor="#f6f6f6";
+	document.getElementById(a).style.borderStyle="solid";
+	var x2=document.getElementById(contentblock).childNodes;
+	for(i=0;i<x2.length;i++)
+	{
+	if((x2[i].className=='calcblock') && (x2[i].id!=b))
+		document.getElementById(x2[i].id).style.display="none";
+	}
+	document.getElementById(b).style.display="block";
+}
+window.onload=function()
+{
+	setblock('f_title1');
+}
+</script>
+<script>
+function getmax(a)						//获取数组最大值函数
+{
+	var i,max;
+	max=a[0];
+	for(i=0;i<a.length;i++)
+	{
+		if (a[i]>max)
+			max=a[i];
+	}
+	return max;
+}
+function getmin(a)						//获取数组最小值函数
+{
+	var i,min;
+	min=a[0];
+	for(i=0;i<a.length;i++)
+	{
+		if (a[i]<min)
+			min=a[i];
+	}
+	return min;
+}
+function drawFig(canvname,x,y,Xtitle,Ytitle,axis_label_num)			//绘图函数
+{	
+	var i,j,num,maxy,miny,dy,tmpy;
+	var axis_Xspace,axis_Yspace,axis_Xbias,axis_Ybias,axis_label_num;
+	var newx=[];
+	var newy=[];
+	
+	axis_Xspace=40;						//曲线在画布左右两侧留空白
+	axis_Yspace=25;						//曲线在画布上下两侧留空白
+	axis_Xbias=17;						//坐标系向左平移量
+	axis_Ybias=-8;						//坐标系向下平移量
+
+	num=y.length;						//获取绘图数据长度
+	maxy=getmax(y);						//获取Y轴数据最大值
+	miny=getmin(y);						//获取Y轴数据最小值
+	dy=(maxy-miny)/num;					//获取Y轴数据间隔
+
+	var canv=document.getElementById(canvname);
+	canvwidth=canv.width;					//获取画布尺寸
+	canvheight=canv.height;
+	var cxt=canv.getContext("2d");
+	cxt.clearRect(0,0,canvwidth,canvheight);		//清空画布
+	cxt.strokeStyle="#0000ff";				//画笔颜色
+	cxt.lineWidth=2;
+
+	cxt.moveTo(Math.floor(axis_Xspace+axis_Xbias),Math.floor(canvheight-axis_Yspace-(y[0]-miny)/dy*(canvheight-axis_Yspace*2)/num+axis_Ybias));				//画笔移动到曲线第一个点
+	for(i=1;i<num;i++)
+	{
+		newx=Math.floor(axis_Xspace+i*(canvwidth-axis_Xspace*2)/num+axis_Xbias);	//映射数据到坐标
+		newy=Math.floor(canvheight-axis_Yspace-(y[i]-miny)/dy*(canvheight-axis_Yspace*2)/num+axis_Ybias);
+		cxt.lineTo(newx,newy);				//绘图
+	}
+	cxt.stroke();
+
+	cxt.strokeStyle="#000000";					//画坐标轴开始
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5+axis_Xbias,axis_Yspace-5+axis_Ybias);
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(canvwidth-axis_Xspace+5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias,canvheight-axis_Yspace+5+2+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias,canvheight-axis_Yspace+5-2+axis_Ybias);
+	cxt.closePath();
+	cxt.fillStyle="#000000";
+	cxt.fill();
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,axis_Yspace-5+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5-2+axis_Xbias,axis_Yspace+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5+2+axis_Xbias,axis_Yspace+axis_Ybias);
+	cxt.closePath();
+	cxt.fillStyle="#000000";
+	cxt.fill();
+	cxt.stroke();							//画坐标轴结束
+	
+	for(j=0;j<axis_label_num;j++)					//坐标轴标注开始
+	{
+		cxt.fillText(Math.floor(x[0]+(x[x.length-1]-x[0])/(axis_label_num-1)*j),Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2-20)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+17+axis_Ybias);
+		tmpy=miny+(maxy-miny)/(axis_label_num-1)*j;
+		cxt.fillText(tmpy.toFixed(1),axis_Xspace+axis_Xbias-38,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.stroke();
+		cxt.beginPath();
+		cxt.moveTo(Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+5+axis_Ybias);
+		cxt.lineTo(Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+5+axis_Ybias-3);
+		cxt.stroke();
+		cxt.beginPath();
+		cxt.moveTo(axis_Xspace-5+axis_Xbias,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.lineTo(axis_Xspace-5+axis_Xbias+3,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.stroke();
+	}
+	cxt.save();
+	cxt.rotate(-Math.PI/2);
+	cxt.fillText(Ytitle,-Math.floor(canvheight/2+5),15);
+	cxt.restore();
+	cxt.fillText(Xtitle,Math.floor((canvwidth-10)/2),canvheight-5);	//坐标轴标注结束
+
+}
+</script>
+<script>
+function BBO_no(wave)
+{
+	var BBO_no;
+	BBO_no=Math.sqrt(2.7359+0.01878/(wave*wave-0.01822)-0.01354*wave*wave);
+	return BBO_no;
+}
+function BBO_ne(wave)
+{
+	var BBO_ne;
+	BBO_ne=Math.sqrt(2.3753+0.01224/(wave*wave-0.01667)-0.01516*wave*wave);
+	return BBO_ne;
+}
+function KDP_no(wave)
+{
+	var KDP_no;
+	KDP_no=Math.sqrt(2.259276+0.01008956/(wave*wave-0.012942625)+13.00522*wave*wave/(wave*wave-400));
+	return KDP_no;
+}
+function KDP_ne(wave)
+{
+	var KDP_ne;
+	KDP_ne=Math.sqrt(2.132668+0.008637494/(wave*wave-0.012281043)+3.2279924*wave*wave/(wave*wave-400));
+	return KDP_ne;
+}
+function KBBF_no(wave)
+{
+	var KBBF_no;
+	KBBF_no=Math.sqrt(1+1.1713*wave*wave/(wave*wave-0.00733)-0.01022*wave*wave);
+	return KBBF_no;
+}
+function KBBF_ne(wave)
+{
+	var KBBF_ne;
+	KBBF_ne=Math.sqrt(1+0.9316*wave*wave/(wave*wave-0.00675)-0.00169*wave*wave);
+	return KBBF_ne;
+}
+function LBO_nx(wave)
+{
+	var LBO_nx;
+	LBO_nx=Math.sqrt(2.454140+0.011249/(wave*wave-0.011350)-0.014591*wave*wave-6.60/100000*Math.pow(wave,4));
+	return LBO_nx;
+}
+function LBO_ny(wave)
+{
+	var LBO_ny;
+	LBO_ny=Math.sqrt(2.539070+0.012711/(wave*wave-0.012523)-0.018540*wave*wave+2.00/10000*Math.pow(wave,4));
+	return LBO_ny;
+}
+function LBO_nz(wave)
+{
+	var LBO_nz;
+	LBO_nz=Math.sqrt(2.586179+0.013099/(wave*wave-0.011893)-0.017968*wave*wave-2.26/10000*Math.pow(wave,4));
+	return LBO_nz;
+}
+function BIBO_nx(wave)
+{
+	var BIBO_nx;
+	BIBO_nx=Math.sqrt(3.65454+0.05112/(wave*wave-0.03713)-0.02261*wave*wave);
+	return BIBO_nx;
+}
+function BIBO_ny(wave)
+{
+	var BIBO_ny;
+	BIBO_ny=Math.sqrt(3.07403+0.03231/(wave*wave-0.03163)-0.013376*wave*wave);
+	return BIBO_ny;
+}
+function BIBO_nz(wave)
+{
+	var BIBO_nz;
+	BIBO_nz=Math.sqrt(3.16853+0.03731/(wave*wave-0.03463)-0.017508*wave*wave);
+	return BIBO_nz;
+}
+</script>
+<script>
+function pmangle(no,no2,ne2)			//负晶体
+{
+	var p;
+	p=Math.asin(Math.sqrt(Math.pow(ne2/no,2)*(Math.pow(no2,2)-Math.pow(no,2))/(Math.pow(no2,2)-Math.pow(ne2,2))));
+	return p;
+}
+function pmanglep(no,ne,no2)			//正晶体
+{
+	var p;
+	p=Math.asin(Math.sqrt(Math.pow(ne/no2,2)*(Math.pow(no,2)-Math.pow(no2,2))/(Math.pow(no,2)-Math.pow(ne,2))));
+	return p;
+}
+function wkfangle(no2,ne2,pm)
+{
+	var wkfangle;
+	wkfangle=Math.atan((no2*no2-ne2*ne2)/(no2*no2*Math.sin(pm)*Math.sin(pm)+ne2*ne2*Math.cos(pm)*Math.cos(pm))*Math.sin(2*pm)/2);
+	return wkfangle;
+}
+function wkfanglep(no,ne,pm)
+{
+	var wkfangle;
+	wkfangle=Math.atan((ne*ne-no*no)/(no*no*Math.sin(pm)*Math.sin(pm)+ne*ne*Math.cos(pm)*Math.cos(pm))*Math.sin(2*pm)/2);
+	return wkfangle;
+}
+function getdelta(wavelength,gin,n,L)
+{
+	var theta,delta;
+	theta=Math.asin(Math.sin(gin)/n);
+	delta=4*Math.PI/wavelength*n*L*Math.cos(theta);
+	return delta;
+}
+function getT(R,delta)
+{
+	var T;
+	var F=4*R/(1-R)/(1-R);
+	T=1/(1+F*Math.pow(Math.sin(delta/2),2));
+	return T;
+}
+function getFNS(R)
+{
+	var FNS=Math.PI*Math.sqrt(R)/(1-R);
+	return FNS;
+}
+function getwFWHM(wavelength,delta,FNS)
+{
+	var m=delta/2/Math.PI;
+	var wFWHM=wavelength/m/FNS;
+	return wFWHM;
+}
+function getdt(delta,gin,L)
+{
+	var m=delta/2/Math.PI;
+	var dt=-m/2/L/Math.sin(gin);
+	return dt;
+}
+function getA(delta,FNS)
+{
+	var m=delta/2/Math.PI;
+	var A=m*FNS;
+	return A;
+}
+function getFSR(delta,wavelength)
+{
+	var m=delta/2/Math.PI;
+	var FSR=wavelength/m;
+	return FSR;
+}
+function getadb(a0,a1,a2,a3,b0,b1,b2,b3)
+{
+	var adb=new Array();
+	adb[0]=a0/b0;
+	adb[1]=a1/b0-1/b0/b0*a0*b1;
+	adb[2]=a2/b0-2/b0/b0*a1*b1+2/b0/b0/b0*a0*b1*b1-1/b0/b0*a0*b2;
+	adb[3]=a3/b0-b3*a0/b0/b0-3*a2*b1/b0/b0-3*b2*a1/b0/b0+6*b1*b1*a1*Math.pow(b0,-3)-6*Math.pow(b1,3)*a0*Math.pow(b0,-4)+6*b2*b1*a0*Math.pow(b0,-3);
+	return adb;
+}
+function getxm(x,m)
+{
+	var xm=new Array();
+	xm[0]=Math.pow(x[0],m);
+	xm[1]=m*Math.pow(x[0],m-1)*x[1];
+	xm[2]=m*(m-1)*Math.pow(x[0],m-2)*x[1]*x[1]+m*Math.pow(x[0],m-1)*x[2];
+	xm[3]=m*(m-1)*(m-2)*Math.pow(x[0],m-3)*Math.pow(x[1],3)+3*m*(m-1)*Math.pow(x[0],m-2)*x[1]*x[2]+m*Math.pow(x[0],m-1)*x[3];
+	return xm;
+}
+function fMDisp(n,w,L)
+{
+	var c=299792458;
+	var phase=[];
+	phase[0]=2*Math.PI/w*n[0]*L;
+	phase[1]=L/c*(n[0]-w*n[1])*Math.pow(10,15);
+	phase[2]=L*Math.pow(w,3)/2/Math.PI/c/c*n[2]*Math.pow(10,30);
+	phase[3]=-Math.pow(w,4)*L/4/Math.PI/Math.PI/c/c/c*(3*n[2]+w*n[3])*Math.pow(10,45);
+	return phase;
+}
+function GPairP(w,L,gama,d,m)
+{
+	var c=299792458;
+	var theta=Math.asin(m*w/d-Math.sin(gama));
+	var phase=[];
+	var phasel=2*Math.PI/w*L/Math.cos(theta)*(1+Math.cos(gama-theta));
+	var phaseg=2*Math.PI/d*L*Math.tan(theta);
+	phase[0]=phasel-phaseg;
+	phase[1]=L/c/Math.cos(theta)*(1+Math.cos(gama-theta));
+	phase[2]=-L*Math.pow(w,3)/2/Math.PI/Math.pow(c*d,2)/Math.pow(Math.cos(theta),3);
+	phase[3]=3*L*Math.pow(w,4)/4/Math.pow(Math.PI*c*d,2)/c*(1+w/d*Math.sin(gama)-Math.pow(Math.sin(gama),2))/Math.pow(Math.cos(theta),5);
+	return phase;	
+}
+function gtheta(m,w,d,gama)
+{
+	var theta=Math.asin(m*w/d-Math.sin(gama));
+	return theta;
+}
+function gDt(m,d,theta)
+{
+	var Dt=m/d/Math.cos(theta);
+	return Dt;
+}
+function gDl(f,Dt)
+{
+	var Dl=f*Dt;
+	return Dl;
+}
+function gA(m,L,d)
+{
+	var A=m*L/d;
+	return A;
+}
+function gdw1(w,A)
+{
+	var ggdw=w/A;
+	return ggdw;
+}
+function GDD2t(tin,GDD)
+{
+	var tout=tin*Math.sqrt(1+Math.pow(4*Math.LN2*GDD/tin/tin,2));
+	return tout;
+}
+function t2GDD(tin,tout)
+{
+	var GDD=tin/4/Math.LN2*Math.sqrt(tout*tout-tin*tin);
+	return GDD;
+}
+</script>
+<script>
+function do1()
+{
+	var no,ne,no2,ne2,nx,ny,nz,nx2,ny2,nz2,p,p1,p2,p3,pshow,pshow1,pshow2,pshow3;
+	var w=document.getElementById('wavelength');
+	var w1=w.value/1000;
+	var w2=w1/2;	
+	var disp1=document.getElementById("dispblock1");
+
+	switch(cryindex1.value)
+	{
+	case "1":
+		{
+			no=BBO_no(w1);
+			ne=BBO_ne(w1);
+			no2=BBO_no(w2);
+			ne2=BBO_ne(w2);
+			p=pmangle(no,no2,ne2);
+			pshow=p*180/Math.PI;
+			disp1.innerHTML="计算结果:<br>基频光折射率:"+no.toFixed(3)+"<br>相位匹配角:"+pshow.toFixed(3)+"°";
+			break;
+		}
+	case "2":
+		{
+			no=KDP_no(w1);
+			ne=KDP_ne(w1);
+			no2=KDP_no(w2);
+			ne2=KDP_ne(w2);
+			p=pmangle(no,no2,ne2);
+			pshow=p*180/Math.PI;
+			disp1.innerHTML="计算结果:<br>基频光折射率:"+no.toFixed(3)+"<br>相位匹配角:"+pshow.toFixed(3)+"°";
+			break;
+		}
+	case "3":
+		{
+			no=KBBF_no(w1);
+			ne=KBBF_ne(w1);
+			no2=KBBF_no(w2);
+			ne2=KBBF_ne(w2);
+			p=pmangle(no,no2,ne2);
+			pshow=p*180/Math.PI;
+			disp1.innerHTML="计算结果:<br>基频光折射率:"+no.toFixed(3)+"<br>相位匹配角:"+pshow.toFixed(3)+"°";
+			break;
+		}
+	case "4":
+		{
+			nx=LBO_nx(w1);
+			ny=LBO_ny(w1);
+			nz=LBO_nz(w1);
+			nx2=LBO_nx(w2);
+			ny2=LBO_ny(w2);
+			nz2=LBO_nz(w2);
+			p1=pmangle(nz,ny2,nx2);			//YX-Plane
+			pshow1=p1*180/Math.PI;
+			p2=pmangle(ny,nz2,nx2);			//ZX-Plane
+			pshow2=90-p2*180/Math.PI;
+			p3=pmangle(nx,nz2,ny2);			//ZY-Plane
+			pshow3=90-p3*180/Math.PI;
+			disp1.innerHTML="计算结果:<br>1.XY平面:<br>&nbsp;&nbsp;&nbsp;&nbsp;基频光折射率:"+nz.toFixed(3)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;相位匹配角:&theta;=90°,&phi;="+pshow1.toFixed(3)+"°<br>2.XZ平面:<br>&nbsp;&nbsp;&nbsp;&nbsp;基频光折射率:"+ny.toFixed(3)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;相位匹配角:&theta;="+pshow2.toFixed(3)+"°,&phi;=0°<br>3.YZ平面:<br>&nbsp;&nbsp;&nbsp;&nbsp;基频光折射率:"+nx.toFixed(3)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;相位匹配角:&theta;="+pshow3.toFixed(3)+"°,&phi;=90°<br>";
+			break;
+		}
+	case "5":
+		{
+			nx=BIBO_nx(w1);
+			ny=BIBO_ny(w1);
+			nz=BIBO_nz(w1);
+			nx2=BIBO_nx(w2);
+			ny2=BIBO_ny(w2);
+			nz2=BIBO_nz(w2);
+			p1=pmanglep(ny,nx,nz2);			//YX-Plane,但是nx>nz>ny,no<ne,y->x,z->y,x->z,xzplane
+			pshow1=p1*180/Math.PI;
+			p2=pmanglep(nz,nx,ny2);			//ZX-Plane，变换得到该平面为YZ
+			pshow2=p2*180/Math.PI;
+			p3=pmanglep(ny,nz,nx2);			//ZY-Plane，变换得到该平面为XY
+			pshow3=p3*180/Math.PI;
+			disp1.innerHTML="计算结果:<br>1.XY平面:<br>&nbsp;&nbsp;&nbsp;&nbsp;基频光折射率:"+nx2.toFixed(3)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;相位匹配角:&theta;=90°,&phi;="+pshow3.toFixed(3)+"°<br>2.XZ平面:<br>&nbsp;&nbsp;&nbsp;&nbsp;基频光折射率:"+nz2.toFixed(3)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;相位匹配角:&theta;="+pshow1.toFixed(3)+"°,&phi;=0°<br>3.YZ平面:<br>&nbsp;&nbsp;&nbsp;&nbsp;基频光折射率:"+ny2.toFixed(3)+"<br>&nbsp;&nbsp;&nbsp;&nbsp;相位匹配角:&theta;="+pshow2.toFixed(3)+"°,&phi;=90°<br>";
+			break;
+		}
+	default:
+		;
+	}
+}
+function do2()
+{
+	var w1,w2,wnum,dw,ne,no2,ne2,p;
+	var ww=[];
+	var no=[];
+	var no2=[];
+	var XX=[];
+	var pshow=[];
+	var ws=document.getElementById('wavelength1');
+	var we=document.getElementById('wavelength2');
+	w1=ws.value/1000;
+	w2=we.value/1000;
+	wnum=200;						//计算数据间隔
+	dw=(w2-w1)/wnum;
+	
+	switch(cryindex2.value)
+	{
+	case "1":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				XX[i]=ww[i]*Math.pow(10,3);
+				no[i]=BBO_no(ww[i]);
+				ne=BBO_ne(ww[i]);
+				no2=BBO_no(ww[i]/2);
+				ne2=BBO_ne(ww[i]/2);
+				p=pmangle(no[i],no2,ne2);
+				pshow[i]=p*180/Math.PI;
+			}
+			break;
+		}
+	case "2":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				XX[i]=ww[i]*Math.pow(10,3);
+				no[i]=KDP_no(ww[i]);
+				ne=KDP_ne(ww[i]);
+				no2=KDP_no(ww[i]/2);
+				ne2=KDP_ne(ww[i]/2);
+				p=pmangle(no[i],no2,ne2);
+				pshow[i]=p*180/Math.PI;
+			}
+			break;
+		}
+	case "3":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				XX[i]=ww[i]*Math.pow(10,3);
+				no[i]=KBBF_no(ww[i]);
+				ne=KBBF_ne(ww[i]);
+				no2=KBBF_no(ww[i]/2);
+				ne2=KBBF_ne(ww[i]/2);
+				p=pmangle(no[i],no2,ne2);
+				pshow[i]=p*180/Math.PI;
+			}
+			break;
+		}
+	case "4":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				XX[i]=ww[i]*Math.pow(10,3);
+				no[i]=LBO_nz(ww[i]);
+				no2=LBO_ny(ww[i]/2);
+				ne2=LBO_nx(ww[i]/2);
+				p=pmangle(no[i],no2,ne2);
+				pshow[i]=p*180/Math.PI;
+			}
+			break;
+		}
+	case "5":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				XX[i]=ww[i]*Math.pow(10,3);
+				no=BIBO_nz(ww[i]);
+				ne=BIBO_nx(ww[i]);
+				no2[i]=BIBO_ny(ww[i]/2);
+				p=pmanglep(no,ne,no2[i]);
+				pshow[i]=p*180/Math.PI;
+			}
+			break;
+		}
+	default:
+		;
+	}
+	drawFig('myCanvas',XX,pshow,'波长/nm','匹配角/°',4);
+
+	if (document.getElementById("checkdata").checked)
+	{
+		newWindow=window.open("","Data","width=300,height=500,left=200,top=50,menubar='NO',status='NO',toolbar='NO',titlebar='NO'");
+		newWindow.document.write("基频波长/nm\t折射率\t匹配角/°<br>");
+		for(i=0;i<wnum;i++)
+		{
+			if(cryindex2.value=="5")
+				{newWindow.document.write(ww[i].toFixed(5)*1000+"\t\t"+no2[i].toFixed(3)+"\t\t"+pshow[i].toFixed(3)+"<br>");}
+			else
+				{newWindow.document.write(ww[i].toFixed(5)*1000+"\t\t"+no[i].toFixed(3)+"\t\t"+pshow[i].toFixed(3)+"<br>");}
+		}
+	}
+}
+</script>
+</head>
+<body>
+<div class="mainbody">
+	<div id="weblogo" class="webtitle">
+	</div>
+	<div id="calcname" class="calcname">
+	<b>激光倍频的相位匹配角计算器</b><br>
+	<b><font color="#888888" size=2>Calculator of Phase Matching for SHG</font></b>
+	</div>
+	<div id="ftitle">
+		<div id="f_title1" class="calctitle" onClick="setblock('f_title1');">角度计算</div>
+		<div id="f_title2" class="calctitle" onClick="setblock('f_title2');">角度曲线</div>
+		<div id="f_title3" class="calctitle" onClick="setblock('f_title3');">程序说明</div>
+		<div id="f_title4" class="calctitle" onClick="setblock('f_title4');">主要公式</div>
+		<div id="f_title5" class="calctitle" onClick="setblock('f_title5');">晶体性质</div>
+		<div id="f_title6" class="calctitle" onClick="setblock('f_title6');">晶体折射率方程</div>
+		<div id="f_title7" class="calctitle" onClick="setblock('f_title7');">参考</div>
+	</div>
+	<div id="container1" class="container"  style="height:800px;">
+		<div id="fblock1" class="calcblock"><center>
+			<table cellspacing=0 cellpadding=0 style="text-align:left;border:1px solid #444444;margin-left:0px;margin-top:20px;font-weight:bold;"><tr><td valign=top style="border-right:1px solid #000000;line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;">
+				<br>
+			1.选晶体及模式:
+			<select id="cryindex1" style="width:120px;">
+				<option value="1">BBO  (O+O->E)</option>
+				<option value="2">KDP  (O+O->E)</option>
+				<option value="3">KBBF (O+O->E)</option>
+				<option value="4">LBO  (O+O->E)</option>
+				<option value="5">BIBO (E+E->O)</option>
+			</select>
+				<br>
+			2.基频激光波长:
+			<input type="text" id="wavelength" value="800" size="8" style="margin-left:1px;">&nbsp;nm
+			<br><br><br>
+			
+			<center><input type="button" id="calcbutt1" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="计 算" size="15" onClick="do1();"></center>
+			</td><td valign="top" style="line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;padding-right:40px;"><br>
+			<div id="dispblock1">&nbsp;
+			</div>
+			</td></tr></table></center>
+		</div>
+		<div id="fblock2" class="calcblock">
+			<center><table cellspacing=0 cellpadding=0 style="border:0px;margin-left:0px;color:#444444;padding-right:20px;"><tr><td valign=top style="font-weight:bold;width:300px;padding-bottom:20px;padding-left:10px;line-height:25px;text-align:left;border:0px;">
+					<br>
+			1.选晶体及模式:
+			<select id="cryindex2">
+				<option value="1">BBO  (O+O->E)</option>
+				<option value="2">KDP  (O+O->E)</option>
+				<option value="3">KBBF (O+O->E)</option>
+				<option value="4">LBO  (O+O->E)</option>
+				<option value="5">BIBO (E+E->O)</option>
+			</select>
+				<br>
+			2.起始激光波长:
+			<input type="text" id="wavelength1" value="700" size="8">&nbsp;nm &nbsp;
+				<br>
+			3.结束激光波长:
+			<input type="text" id="wavelength2" value="1000" size="8">&nbsp;nm
+				<br>
+			<center><input type="checkbox" id="checkdata" style="margin-left:0px;" />输出计算数据</center>
+				<br><br>
+			<center><input type="button" id="calcbutt2" style="width:100px;height:40px;font-weight:bold;margin-left:0px;margin-top:0px;vertical-align:top;display:inline;" value="计 算" size="15" onClick="do2();"></center>
+				<br>
+			</td><td valign="top" style="width:450px;border:0px;"><br>
+			<div id="dispblock2" style="margin-top:5px;">
+				<canvas id="myCanvas" class="SHGcanvas" style="background-color:#ffffff;border:1px solid #000000;" width="450" height="300" title="右键可以保存图片"></canvas>
+			</div>
+			</td></tr></table></center>
+		</div>
+		<div id="fblock3" class="calcblock" style="text-indent:2em;padding-top:10px;line-height:30px;padding-left:0px;font-weight:bold;">
+			<font color="#dd3333">本程序</font>用于计算激光在非线性晶体中倍频的相位匹配角。<br>
+			功能1:计算单个激光波长在某晶体中对应的折射率和匹配角。<br>
+			功能2:计算一组激光波长的匹配角并绘制图形，得到变化趋势。<br><br>
+			提示:在上方的选项卡中进行计算和查看相关资料介绍。
+		</div>
+		<div id="fblock4" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;font-weight:bold;">
+			1.负单轴晶体第一类相位匹配倍频时的匹配角为：<br>		
+			<div style="color:#000000">
+				$$\theta = \arcsin \left[(\frac{n^{2\omega}_e}{n^\omega_o})^2\frac{(n^{2\omega}_o)^2-(n^\omega_o)^2}{(n^{2\omega}_o)^2-(n^{2\omega}_e)^2}\right]^{1/2}$$
+			</div>
+			2.正单轴晶体第一类相位匹配倍频时的匹配角为：<br>	
+			<div style="color:#000000">
+				$$\theta = \arcsin \left[(\frac{n^\omega_e}{n^{2\omega}_o})^2\frac{(n^\omega_o)^2-(n^{2\omega}_o)^2}{(n^\omega_o)^2-(n^\omega_e)^2}\right]^{1/2}$$
+			</div>
+			其中$n^\omega_o$、$n^\omega_e$为基频光主轴折射率，$n^{2\omega}_o$、$n^{2\omega}_e$为倍频光主轴折射率。
+		</div>
+		<div id="fblock5" class="calcblock">
+		<br>
+		<center><table>
+			<tr><td>简称</td><td style="width:120px;">分子式</td><td>极性</td><td style="width:120px;">透光范围</td><td style="width:200px;">损伤阈值</td></tr>
+			<tr><td>BBO</td><td>BaB<sub>2</sub>O<sub>4</sub></td><td>负单轴</td><td>190~3500nm</td><td>10GW/cm<sup>2</sup>@1064nm,0.1ns</td></tr>
+			<tr><td>KDP</td><td>KH<sub>2</sub>PO<sub>4</sub></td><td>负单轴</td><td>200~1500nm</td><td>5GW/cm<sup>2</sup>@1064,10ns</td></tr>
+			<tr><td>KBBF</td><td>KBe<sub>2</sub>BO<sub>3</sub>F<sub>2</sub></td><td>负单轴</td><td>147~3500nm</td><td>40GW/cm<sup>2</sup>@1064nm,10ns</td></tr>
+			<tr><td>LBO</td><td>LiB<sub>3</sub>O<sub>5</sub></td><td>负双轴</td><td>160~2600nm</td><td>10GW/cm<sup>2</sup>@1064nm,10ns</td></tr>
+			<tr><td>BIBO</td><td>BiB<sub>3</sub>O<sub>6</sub></td><td>正双轴</td><td>286~2500nm</td><td>0.3GW/cm<sup>2</sup>@1064nm,10ns</td></tr>
+		</table></center>
+		</div>
+		<div id="fblock6" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。"  style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+			<div id="BBOequ" class="equblock">
+				1.BBO晶体的折射率方程为($\lambda$单位为$\mu$m):<br>
+				$$ n^2_o = 2.7359+\frac{0.01878}{\lambda^2-0.01822}-0.01354\lambda^2$$
+				$$ n^2_e = 2.3753+\frac{0.01224}{\lambda^2-0.01667}-0.01516\lambda^2$$
+			</div>
+			<div id="KDPequ" class="equblock">
+				2.KDP晶体的折射率方程为($\lambda$单位为$\mu$m):<br>
+					$$ n^2_o = 2.259276+\frac{0.01008956}{\lambda^2-0.012942625}+\frac{13.00522\lambda^2}{\lambda^2-400}$$
+				$$ n^2_e = 2.132668+\frac{0.008637494}{\lambda^2-0.012281043}+\frac{3.2279924\lambda^2}{\lambda^2-400}$$
+			</div>
+			<div id="KBBFequ" class="equblock">
+				3.KBBF晶体的折射率方程为($\lambda$单位为$\mu$m):<br>
+				$$ n^2_o = 1+\frac{1.1713\lambda^2}{\lambda^2-0.00733}-0.01022\lambda^2$$
+				$$ n^2_e = 1+\frac{0.9316\lambda^2}{\lambda^2-0.00675}-0.00169\lambda^2$$
+			</div>
+			<div id="LBOequ" class="equblock">
+				4.LBO晶体的折射率方程为($\lambda$单位为$\mu$m):<br>
+				$$ n^2_x = 2.454140+\frac{0.011249}{\lambda^2-0.011350}-0.014591\lambda^2-6.60\times10^{-5}\lambda^4$$
+				$$ n^2_y = 2.539070+\frac{0.012711}{\lambda^2-0.012523}-0.018540\lambda^2+2.00\times10^{-4}\lambda^4$$
+				$$ n^2_z = 2.586179+\frac{0.013099}{\lambda^2-0.011893}-0.017968\lambda^2-2.26\times10^{-4}\lambda^4$$
+			</div>
+			<div id="BIBOequ" class="equblock">
+				5.BIBO晶体的折射率方程为($\lambda$单位为$\mu$m):<br>
+				$$ n^2_x = 3.65454+\frac{0.05112}{\lambda^2-0.03713}-0.02261\lambda^2$$
+				$$ n^2_y = 3.07403+\frac{0.03231}{\lambda^2-0.03163}-0.013376\lambda^2$$
+				$$ n^2_z = 3.16853+\frac{0.03731}{\lambda^2-0.03463}-0.017508\lambda^2$$
+			</div>
+		</div>
+		<div id="fblock7" class="calcblock" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+			[1] 石顺祥 等，《非线性光学》,P122。<br>
+			[2] 王楠，博士毕业论文，P74-75,P90-91。<br>
+			[3] <a href="https://gb.castech.com/products_list/&pmcId=15.html" target=_blank>https://gb.castech.com/products_list/&pmcId=15.html</a>
+		</div>
+	</div>
+</div>
+</body>
+</html>

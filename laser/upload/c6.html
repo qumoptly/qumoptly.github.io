@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Minimum Deviation Angle</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./css/jquery.min.3.1.1.js"></script>
+  <script src="./css/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  <style type="text/css">
+	html,body {
+	  margin:6px;
+	  padding:2px;
+	}
+  </style>
+</head>
+  <body ng-app="main">
+    
+
+    <div class="row" id="Minimum_Deviation_Angle" ng-controller="control_panel">
+      <div class="col-xs-12">
+        <h1 class=title id="h1">Minimum Deviation Angle <small><span data-toggle="collapse" data-target="#info_on_Bandwidth" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+      </div>
+
+      <div class="col-lg-5 col-md-6 col-xs-12">
+        <div id="info_on_Bandwidth" class="collapse" >
+          <p style="text-align:left;">This calculator will help you calcaulate the minimum deviation angle of (triangular) prisms with a certain wavelength.</p>
+          <img src="https://www.simtrum.com/upload/%E6%B5%8B%E8%AF%95%E5%95%86%E5%93%81/Calculator/O-6.png" width="300" height="230" style='float: left;'/>
+          <b><h2 style="text-align:left; margin-left: 320px"> $n$ = $\frac{sin\frac{A+\theta}{2}}{sin\frac{A}{2}}$ </h2><br></b>
+          <p style="text-align:left; margin-left: 320px">Top Angle of The Prism <b>$A$</b>; Reflective Index <b>n</b>;<br> Minimum Deviation Angle <b>$\theta$</b></p><br><br><br>
+
+      </div>
+
+      <fieldset class="input"> 
+        <legend>Input</legend>
+        <div class="col-xs-6">
+          <h5>Please select your material here...</h5>
+          <select id="materialsSelect" ng-model="materialsSelect" ng-change="myFunc()">                  
+          
+            <option  name="BK7" value="BK7" >BK7, BK7 Crown Glass</option>
+            <option  name="fused_silica" value="FS">fused-silica, Fused quartz/silica (FS)</option>
+            <option  name="CaF2" value="CaF2">CaF2, Calcium fluoride</option>
+            <option  name="MgF2" value="MgF2E">MgF2, Magnesium fluoride, Extraordinary</option>
+            <option  name="MgF2" value="MgF2O">MgF2, Magnesium fluoride, Ordinary</option>
+            <option  name="Ge" value="GE">Ge, Germanium</option>
+            <option  name="Si" value="SI">Si, Silicon</option>
+          </select>
+        </div>
+ 
+          <div class="col-xs-6">
+            <h5>Wavelength, $\lambda$: </h5>
+            <div class="input-group">
+                <input  type="number" class="form-control" ng-model="wave" ng-change="myFunc()">
+                <span class="input-group-addon">nm</span>
+            </div><br>
+          </div>
+            <div class="col-xs-6">
+              <h5>Reflective Index, n:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="N" ng-change="myFunc()">
+                  <span class="input-group-addon"></span>
+              </div>
+            </div>
+        
+          <div class="col-xs-6">
+            <h5>Top angle of the Prism, $A$: </h5>
+            <div class="input-group">
+                <input  type="number" class="form-control" ng-model="angle" ng-change="myFunc()">
+                <span class="input-group-addon">degree (°)</span>
+            </div><br>
+          </div>
+
+
+        
+      </fieldset><br>
+      
+        <fieldset class="output"> 
+          <legend>Output</legend>
+          
+              <div class="col-xs-6">
+                <h5>Minimum Deviation Angle, $\theta$:</h5>
+                <div class="input-group">
+                    <input type="number" class="form-control" ng-model="minimum" readonly/>
+                    <span class="input-group-addon">degree (°)</span>
+                </div><br>
+              </div>
+        
+      </fieldset>             
+    </div>
+  </body>
+
+      
+
+  <script>
+    angular.module('main', [])
+      .controller('control_panel', ['$scope', function($scope) {
+       
+       
+      
+
+
+        $scope.myFunc = function() {
+          
+          $scope.wavelength=$scope.wave*1e-3;
+          $scope.wavel2=Math.pow($scope.wavelength,2);
+
+          
+            
+          if($scope.materialsSelect=="BK7")
+            {
+$scope.material= Math.sqrt((1.03961212*$scope.wavel2)/($scope.wavel2-0.0060006986) +
+(0.231792344*$scope.wavel2)/($scope.wavel2-0.0200179144) + (1.01046945*$scope.wavel2)/($scope.wavel2-103.560653) + 1);    
+            }
+            if($scope.materialsSelect=="FS")
+            {
+              $scope.material = Math.sqrt((0.6961663*$scope.wavel2)/($scope.wavel2-(0.0684043*0.0684043)) +
+(0.4079426*$scope.wavel2)/($scope.wavel2-(0.1162414*0.1162414)) + (0.8974794*$scope.wavel2)/($scope.wavel2-(9.896161*9.896161)) + 1);   
+            }
+            if($scope.materialsSelect=="CaF2")
+            {
+              $scope.material = Math.sqrt((0.618814*$scope.wavel2)/($scope.wavel2-0.002759866) +
+(0.4198937*$scope.wavel2)/($scope.wavel2-0.01061251) + (3.426299*$scope.wavel2)/($scope.wavel2-1068.123) + 1);         
+            }
+            if($scope.materialsSelect=="MgF2E")
+            {
+              $scope.material = Math.sqrt((0.41344023*$scope.wavel2)/($scope.wavel2-(0.03684262*0.03684262)) +
+(0.50497499*$scope.wavel2)/($scope.wavel2-(0.09076162*0.09076162)) + (2.4904862*$scope.wavel2)/($scope.wavel2-(23.771995*23.771995)) + 1);  
+            }
+            if($scope.materialsSelect=="MgF2O")
+            {
+              $scope.material =  Math.sqrt((0.48755108*$scope.wavel2)/($scope.wavel2-(0.04338408*0.04338408)) +
+(0.39875031*$scope.wavel2)/($scope.wavel2-(0.09461442*0.09461442)) + (2.3120353*$scope.wavel2)/($scope.wavel2-(23.793604)) + 1);  
+            }
+            if($scope.materialsSelect=="GE")
+            {         
+              $scope.material = Math.sqrt(8.28156 +
+(6.7288*$scope.wavel2)/($scope.wavel2-0.44105) + (0.21307*$scope.wavel2)/($scope.wavel2-3870.1) + 1); 
+            }    
+            if($scope.materialsSelect=="SI")
+          {
+            $scope.material = Math.sqrt((10.6684293*$scope.wavel2)/($scope.wavel2-(0.301516485*0.301516485)) +
+(0.0030434748*$scope.wavel2)/($scope.wavel2-(1.13475115*1.13475115)) + (1.54133408*$scope.wavel2)/($scope.wavel2-(1104*1104)) + 1);   
+
+            }
+ 
+            $scope.N= $scope.material;
+         
+          $scope.A = $scope.angle*Math.PI/180;
+          $scope.minimum=(2*(Math.asin(Math.sin($scope.A/2)*$scope.N))- $scope.A)*180/Math.PI;
+          
+         
+        };
+      }]);
+  </script>
+
+
+
+  
+
+  
+ 
+  
+  
+ <!---title----->
+ <style>
+  .model-list table tbody tr td .ml-t2{
+    display:block;
+  }
+                
+     .title{
+       background:#00b8b6;
+       color:#fff;
+       text-align:center;
+       height:36px;
+       line-height:36px;
+       width:580px;
+       display:inline-block;
+       border-radius:5px;
+       }
+      </style>  
+
+  
+
+  <!--INPUT-->
+<style>
+  fieldset.input {
+    background-color: #a1ffe8d2;
+    width:580px;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>    
+
+<!--OUTPUT-->
+<style>
+  fieldset.output {
+    background-color: #9dffe1;
+    width:580px;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>
+</html>

@@ -1,0 +1,181 @@
+<html>
+<head>
+<title>Unit Converter</title>
+<!--<link rel="stylesheet" type="text/css" href="mystyle.css" />-->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style>
+.mainbody{margin: 0 auto;width:90%;background-color:#ffffff;text-align:left;}
+
+.webtitle {height:80px;background-image:url('./logo.png');background-repeat:no-repeat;background-position:left;}
+
+.calcname {top: 100px; width:100%; height:50px; padding-top:10px;padding-bottom:10px;margin-bottom:15px;background-color:#ffffff;text-align:center;font-weight:bold;font-size:14pt;font-family:黑体,SimHei;line-height:20px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#f9f9f9;}
+
+.calctitle {border-style:dotted;border-width: 1px;width:70px;color:#000000;font-weight:none;font-size:12pt;font-family:黑体,SimHei;display:inline;padding:10px;margin-top:0px;}
+
+.container {top:10px; width:97.8%;height:480px;margin-top:9px;margin-bottom:12px;padding-top:20px;padding-left:20px;line-height:30px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#eeeeee;background-color:#f6f6f6;font-size:11pt;font-family:黑体,SimHei;color:#444444;}
+
+.calcblock {font-size:11pt;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:25px;}
+
+.adblock {height:50px;width:890px;border:solid 1px #eeeeee;margin-bottom:12px;margin-left:0px;background-color:#a9a9a9;text-align:left;padding-top:25px;}
+
+body {background-color:#f1f1f1;text-align:center;}
+
+.equblock {font-size:11pt;font-weight:bold;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:20px;margin-top:15px;margin-left:20px;}
+.dispblock1 {font-size:11pt;font-family:黑体,SimHei;font-weight:none;text-align:left;}
+
+a {font-size:10pt;color:#000000;text-decoration:none;font-weight:bold;}
+a:visited {font-size:10pt;color:#333333;text-decoration:none;font-weight:bold;}
+a:hover {font-size:10pt;color:#0000ff;text-decoration:underline;font-weight:bold;}
+.SHGcanvas {background-color:white;}
+table {text-align:center;vertical-align:center;font-size:11pt;font-weight:bold;font-family:黑体,SimHei;border-collapse:collapse;border-spacing:0;color:#444444;}
+tr {height:30px;}
+td {width:60px;border:1px solid #444444;color:#444444;}
+
+</style>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">  </script> 
+<script> function setblock(a)
+{
+	titleblock='ftitle';
+	contentblock='container1';
+	b='fblock'+a.charAt(a.length-1);
+	var x1=document.getElementById(titleblock).childNodes;
+	for(i=0;i<x1.length;i++)
+	{
+		if((x1[i].className=='calctitle') && (x1[i].id!=a))
+		{
+			document.getElementById(x1[i].id).style.backgroundColor="#ffffff";
+			document.getElementById(x1[i].id).style.color="#000000";
+			document.getElementById(x1[i].id).style.borderStyle="solid";
+			document.getElementById(x1[i].id).style.borderColor="#ffffff";
+			document.getElementById(x1[i].id).style.borderBottomColor="#f6f6f6";
+		}
+	}
+	document.getElementById(a).style.backgroundColor="#f3f3f3";
+	document.getElementById(a).style.color="#000000";
+	document.getElementById(a).style.borderColor="#ccddff";
+	document.getElementById(a).style.borderBottomColor="#f6f6f6";
+	document.getElementById(a).style.borderStyle="solid";
+	var x2=document.getElementById(contentblock).childNodes;
+	for(i=0;i<x2.length;i++)
+	{
+	if((x2[i].className=='calcblock') && (x2[i].id!=b))
+		document.getElementById(x2[i].id).style.display="none";
+	}
+	document.getElementById(b).style.display="block";
+}
+window.onload=function()
+{
+	setblock('f_title1');
+}</script>
+<script >
+function do1()
+{
+	var n1=document.getElementById("v1");
+	var h = 6.626068757*Math.pow(10,-34);
+	var e = 1.602176462*Math.pow(10,-19);
+	var c = 299792458;
+
+	if(uindex.value == 1)
+	{		
+        	var q1=n1.value/10*10;
+		var q2=1/n1.value*Math.pow(10,7);
+		var q3=c/n1.value/Math.pow(10,5);
+		var q4=h*c/n1.value*Math.pow(10,9)/e;
+        }
+	if(uindex.value == 2)
+	{
+	        var q1=1/n1.value*Math.pow(10,7);
+		var q2=n1.value/10*10;
+		var q3=n1.value*c*100/Math.pow(10,14);
+		var q4=n1.value*h*c*100/e;
+        }
+        if(uindex.value == 3)
+	{
+        	var q1 = c/n1.value/Math.pow(10,5);
+		var q2 = n1.value*Math.pow(10,14)/c/100;
+		var q3 = n1.value/10*10;
+		var q4 = n1.value*Math.pow(10,14)*h/e;
+        }
+	if(uindex.value == 4)
+	{
+        	var q1 = h*c/n1.value/e*Math.pow(10,9);
+		var q2 = n1.value*e/h/c/100;
+		var q3 = n1.value*e/h/Math.pow(10,14);
+		var q4 = n1.value/10*10;
+        }
+
+
+	var disp1=document.getElementById("dispblock1");
+	disp1.innerHTML="变换结果为:<br>="+q1.toFixed(3)+" nm<br>="+q2.toFixed(3)+" cm<sup>-1</sup><br>="+q3.toFixed(3)+" *10<sup>14</sup> Hz<br>="+q4.toFixed(3)+" eV";
+}</script>
+
+</head>
+<body>
+<div class="mainbody">
+	<div id="weblogo" class="webtitle">
+	</div>
+	<div id="calcname" class="calcname">
+
+	<b>单位换算</b><br>
+	<b><font color="#888888" size=2>Unit converter</font></b>
+	</div>
+	<div id="ftitle">
+
+		<div id="f_title1" class="calctitle" onClick="setblock('f_title1');">单位换算</div>
+		<div id="f_title2" class="calctitle" onClick="setblock('f_title2');">程序说明</div>
+		<div id="f_title3" class="calctitle" onClick="setblock('f_title3');">主要公式</div>
+		<div id="f_title4" class="calctitle" onClick="setblock('f_title4');">参考</div>
+	</div>
+	<div id="container1" class="container"  style="height:450px;">
+	<div id="fblock1" class="calcblock"><center>
+		<table cellspacing=0 cellpadding=0 style="text-align:left;border:1px solid #444444;margin-left:0px;margin-top:20px;font-weight:bold;"><tr><td valign=top style="border-right:1px solid #000000;line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:10px;padding-bottom:20px;padding-right:10px;">
+			<br>
+
+		输入数值:
+		<input type="text" id="v1" value="800" size="3" style="margin-left:9px;">&nbsp;
+		单位:
+		<select id="uindex" style="width:60px;">
+			<option value=1>nm</option>
+			<option value=2>cm-1</option>
+			<option value=3>*10^14 Hz</option>
+			<option value=4>eV</option>
+		</select>
+			<br><br><br><br>
+		<center><input type="button" id="calcbutt1" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="转换" size="15" onClick="do1();"></center>
+		</td><td valign="top" style="line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:20px;padding-bottom:20px;padding-right:10px;"><br>
+
+		<div id="dispblock1">&nbsp;
+		</div>
+		</td></tr></table></center>
+
+	</div>
+	<div id="fblock2" class="calcblock" style="text-indent:2em;padding-top:10px;line-height:30px;padding-left:0px;font-weight:bold;">
+		<font color="#dd3333">本程序</font>用于光学能量之间的单位转换。<br>
+		功能:计算nm、cm<sup>-1</sup>、Hz和eV之间的转换。<br>
+	</div>
+	<div id="fblock3" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;font-weight:bold;">
+		1.频率与波长:<br>		
+		<div style="margin-left:20px;color:#000000">
+			$${\nu} =\frac{c}{\lambda}$$
+		</div>
+		2.波数与波长:<br>
+		<div style="margin-left:20px;color:#000000">
+			$$\tilde{\nu} =\frac{1}{\lambda}$$
+		</div>
+		3.电子伏特与波长:<br>
+		<div style="margin-left:20px;color:#000000">
+			$$E =\frac{hc}{\lambda e}$$
+		</div>
+		其中c为光速，h为普朗克常数，e为元电荷。
+	</div>
+	<div id="fblock4" class="calcblock" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+
+	</div>
+	</div>
+</div>
+</body>
+</html>

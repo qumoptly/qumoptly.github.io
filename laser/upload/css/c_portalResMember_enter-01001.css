@@ -1,0 +1,187 @@
+@media only screen and (max-width: 768px) {
+.c_portalResMember_enter-01001{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+.c_portalResMember_enter-01001 .line{
+	display: none;
+}
+.c_portalResMember_enter-01001 .p_memberEnter{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+
+.c_portalResMember_enter-01001 .p_Interaction{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.c_portalResMember_enter-01001 .p_InteractionA{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.c_portalResMember_enter-01001 .p_Land{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_register{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_name{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_esc{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_LandBox{
+    width: auto;
+	height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+.c_portalResMember_enter-01001 .p_registerBox{
+    width: auto;
+    height: auto;
+   display: inline-block;
+    vertical-align: middle;
+    padding: 0 5px;
+}
+
+.c_portalResMember_enter-01001 .p_nameBox{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+.c_portalResMember_enter-01001 .p_escBox{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+
+
+}
+@media only screen and (min-width: 769px) {
+.c_portalResMember_enter-01001{
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+}
+
+.c_portalResMember_enter-01001 .p_memberEnter{
+    width: 100%;
+    height: auto;
+    padding: 20px;
+}
+.c_portalResMember_enter-01001 .p_Interaction{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.c_portalResMember_enter-01001 .p_InteractionA{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+    vertical-align: top;
+    text-align: right;
+}
+
+.c_portalResMember_enter-01001 .p_Land{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_register{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_name{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_esc{
+    width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.c_portalResMember_enter-01001 .p_LandBox{
+    width: auto;
+	height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 5px;
+    border: none;
+}
+
+.c_portalResMember_enter-01001 .p_registerBox{
+    width: auto;
+    height: auto;
+   display: inline-block;
+    vertical-align: middle;
+    padding: 10px;
+}
+
+.c_portalResMember_enter-01001 .p_nameBox{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+    float: left;
+    border: none;
+}
+
+.c_portalResMember_enter-01001 .p_escBox{
+    width: auto;
+    height: auto;
+    display: inline-block;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+.c_portalResMember_enter-01001 .line{
+	display: inline-block;color: #666;padding: 5px 0;font-size: 14px;vertical-align:middle;
+	}
+}
+@media only screen and (min-width: 769px) and (max-width: 1024px) {}
+.border_default{    border: 0px solid #d9d9d9;}
+
+.c_portalResMember_enter-01001 .p_memberEnter{    padding: 0;}
+
+.c_portalResMember_enter-01001 .p_Land,.c_portalResMember_enter-01001 .p_register{    color: #fff;}
+
+.c_portalResMember_enter-01001 .p_registerBox{    padding: 5px;}
+.c_portalResMember_enter-01001 .p_Interaction{    text-align: right;}

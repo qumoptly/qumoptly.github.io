@@ -1,0 +1,70 @@
+/*图片标题列表*/
+.w_fimg-000 .p_title{
+	display:inline-table;
+	margin:0;
+	min-width:37px;
+	padding:0;
+	color:rgba(51,51,51,1);
+	font-size:16px;
+	font-weight:400;
+	cursor:pointer;
+}
+.w_fimg-000 .p_title .font{
+	vertical-align:middle;
+	line-height: 21px;
+}
+.w_fimg-000 .p_title:hover{
+	color:rgba(87,177,173,1);
+}
+.w_fimg-000 .p_title:active{
+	color:rgba(69,165,161,1);
+}
+.w_fimg-000 .p_title .iconfont:before{
+	display: inline-block;
+	content:"";
+}
+.w_fimg-000{
+	position:relative;
+	width:100%;
+	height:auto;
+	min-height: 200px;
+}
+.w_fimg-000 .animated{
+	width:100%;
+	height:100%;
+	position: relative;
+	min-height: inherit;
+}
+.w_fimg-000 .font {
+    white-space: nowrap;
+}
+.w_fimg-000 .p_link001{
+	width:100%;
+	height:100%;
+}
+.w_fimg-000 .p_link002{
+	width:100%;
+	height:30px;
+}
+.w_fimg-000 .p_box{
+	width: 100%;
+	height: 100%;
+	text-align:center;
+	position: static;
+}
+.w_fimg-000 .p_dimage{
+	height: inherit;
+	overflow: hidden;
+	font-size: 0;
+}
+.w_fimg-000 .e_image:hover:after {
+    background: transparent;
+}
+.w_fimg-000 .p_dimage:empty{
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    position:absolute;
+    background: #f2f2f2 url(/img/camera.png) no-repeat center;
+}

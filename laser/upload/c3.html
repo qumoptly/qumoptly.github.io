@@ -1,0 +1,332 @@
+<html>
+<head>
+<title>Spatial dispersion of Grating</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style>
+.mainbody{margin: 0 auto;width:90%;background-color:#ffffff;text-align:left;}
+
+.webtitle {height:80px;background-image:url('./logo.png');background-repeat:no-repeat;background-position:left;}
+
+.calcname {top: 100px; width:100%; height:50px; padding-top:10px;padding-bottom:10px;margin-bottom:15px;background-color:#ffffff;text-align:center;font-weight:bold;font-size:14pt;font-family:黑体,SimHei;line-height:20px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#f9f9f9;}
+
+.calctitle {border-style:dotted;border-width: 1px;width:70px;color:#000000;font-weight:none;font-size:12pt;font-family:黑体,SimHei;display:inline;padding:10px;margin-top:0px;}
+
+.container {top:10px; width:97.8%;height:480px;margin-top:9px;margin-bottom:12px;padding-top:20px;padding-left:20px;line-height:30px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#eeeeee;background-color:#f6f6f6;font-size:11pt;font-family:黑体,SimHei;color:#444444;}
+
+.calcblock {font-size:11pt;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:25px;}
+
+.adblock {height:50px;width:890px;border:solid 1px #eeeeee;margin-bottom:12px;margin-left:0px;background-color:#a9a9a9;text-align:left;padding-top:25px;}
+
+body {background-color:#f1f1f1;text-align:center;}
+
+.equblock {font-size:11pt;font-weight:bold;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:20px;margin-top:15px;margin-left:20px;}
+.dispblock1 {font-size:11pt;font-family:黑体,SimHei;font-weight:none;text-align:left;}
+
+a {font-size:10pt;color:#000000;text-decoration:none;font-weight:bold;}
+a:visited {font-size:10pt;color:#333333;text-decoration:none;font-weight:bold;}
+a:hover {font-size:10pt;color:#0000ff;text-decoration:underline;font-weight:bold;}
+
+.SHGcanvas {background-color:white;}
+table {text-align:center;vertical-align:center;font-size:11pt;font-weight:bold;font-family:黑体,SimHei;border-collapse:collapse;border-spacing:0;color:#444444;}
+tr {height:30px;}
+td {width:60px;border:1px solid #444444;color:#444444;}
+
+</style>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">  </script> 
+<script>
+function setblock(a)
+{
+	titleblock='ftitle';
+	contentblock='container1';
+	b='fblock'+a.charAt(a.length-1);
+	var x1=document.getElementById(titleblock).childNodes;
+	for(i=0;i<x1.length;i++)
+	{
+		if((x1[i].className=='calctitle') && (x1[i].id!=a))
+		{
+			document.getElementById(x1[i].id).style.backgroundColor="#ffffff";
+			document.getElementById(x1[i].id).style.color="#000000";
+			document.getElementById(x1[i].id).style.borderStyle="solid";
+			document.getElementById(x1[i].id).style.borderColor="#ffffff";
+			document.getElementById(x1[i].id).style.borderBottomColor="#f6f6f6";
+		}
+	}
+	document.getElementById(a).style.backgroundColor="#f3f3f3";
+	document.getElementById(a).style.color="#000000";
+	document.getElementById(a).style.borderColor="#ccddff";
+	document.getElementById(a).style.borderBottomColor="#f6f6f6";
+	document.getElementById(a).style.borderStyle="solid";
+	var x2=document.getElementById(contentblock).childNodes;
+	for(i=0;i<x2.length;i++)
+	{
+	if((x2[i].className=='calcblock') && (x2[i].id!=b))
+		document.getElementById(x2[i].id).style.display="none";
+	}
+	document.getElementById(b).style.display="block";
+}
+window.onload=function()
+{
+	setblock('f_title1');
+}
+</script>
+<script>
+function pmangle(no,no2,ne2)			//负晶体
+{
+	var p;
+	p=Math.asin(Math.sqrt(Math.pow(ne2/no,2)*(Math.pow(no2,2)-Math.pow(no,2))/(Math.pow(no2,2)-Math.pow(ne2,2))));
+	return p;
+}
+function pmanglep(no,ne,no2)			//正晶体
+{
+	var p;
+	p=Math.asin(Math.sqrt(Math.pow(ne/no2,2)*(Math.pow(no,2)-Math.pow(no2,2))/(Math.pow(no,2)-Math.pow(ne,2))));
+	return p;
+}
+function wkfangle(no2,ne2,pm)
+{
+	var wkfangle;
+	wkfangle=Math.atan((no2*no2-ne2*ne2)/(no2*no2*Math.sin(pm)*Math.sin(pm)+ne2*ne2*Math.cos(pm)*Math.cos(pm))*Math.sin(2*pm)/2);
+	return wkfangle;
+}
+function wkfanglep(no,ne,pm)
+{
+	var wkfangle;
+	wkfangle=Math.atan((ne*ne-no*no)/(no*no*Math.sin(pm)*Math.sin(pm)+ne*ne*Math.cos(pm)*Math.cos(pm))*Math.sin(2*pm)/2);
+	return wkfangle;
+}
+function getdelta(wavelength,gin,n,L)
+{
+	var theta,delta;
+	theta=Math.asin(Math.sin(gin)/n);
+	delta=4*Math.PI/wavelength*n*L*Math.cos(theta);
+	return delta;
+}
+function getT(R,delta)
+{
+	var T;
+	var F=4*R/(1-R)/(1-R);
+	T=1/(1+F*Math.pow(Math.sin(delta/2),2));
+	return T;
+}
+function getFNS(R)
+{
+	var FNS=Math.PI*Math.sqrt(R)/(1-R);
+	return FNS;
+}
+function getwFWHM(wavelength,delta,FNS)
+{
+	var m=delta/2/Math.PI;
+	var wFWHM=wavelength/m/FNS;
+	return wFWHM;
+}
+function getdt(delta,gin,L)
+{
+	var m=delta/2/Math.PI;
+	var dt=-m/2/L/Math.sin(gin);
+	return dt;
+}
+function getA(delta,FNS)
+{
+	var m=delta/2/Math.PI;
+	var A=m*FNS;
+	return A;
+}
+function getFSR(delta,wavelength)
+{
+	var m=delta/2/Math.PI;
+	var FSR=wavelength/m;
+	return FSR;
+}
+function getadb(a0,a1,a2,a3,b0,b1,b2,b3)
+{
+	var adb=new Array();
+	adb[0]=a0/b0;
+	adb[1]=a1/b0-1/b0/b0*a0*b1;
+	adb[2]=a2/b0-2/b0/b0*a1*b1+2/b0/b0/b0*a0*b1*b1-1/b0/b0*a0*b2;
+	adb[3]=a3/b0-b3*a0/b0/b0-3*a2*b1/b0/b0-3*b2*a1/b0/b0+6*b1*b1*a1*Math.pow(b0,-3)-6*Math.pow(b1,3)*a0*Math.pow(b0,-4)+6*b2*b1*a0*Math.pow(b0,-3);
+	return adb;
+}
+function getxm(x,m)
+{
+	var xm=new Array();
+	xm[0]=Math.pow(x[0],m);
+	xm[1]=m*Math.pow(x[0],m-1)*x[1];
+	xm[2]=m*(m-1)*Math.pow(x[0],m-2)*x[1]*x[1]+m*Math.pow(x[0],m-1)*x[2];
+	xm[3]=m*(m-1)*(m-2)*Math.pow(x[0],m-3)*Math.pow(x[1],3)+3*m*(m-1)*Math.pow(x[0],m-2)*x[1]*x[2]+m*Math.pow(x[0],m-1)*x[3];
+	return xm;
+}
+function fMDisp(n,w,L)
+{
+	var c=299792458;
+	var phase=[];
+	phase[0]=2*Math.PI/w*n[0]*L;
+	phase[1]=L/c*(n[0]-w*n[1])*Math.pow(10,15);
+	phase[2]=L*Math.pow(w,3)/2/Math.PI/c/c*n[2]*Math.pow(10,30);
+	phase[3]=-Math.pow(w,4)*L/4/Math.PI/Math.PI/c/c/c*(3*n[2]+w*n[3])*Math.pow(10,45);
+	return phase;
+}
+function GPairP(w,L,gama,d,m)
+{
+	var c=299792458;
+	var theta=Math.asin(m*w/d-Math.sin(gama));
+	var phase=[];
+	var phasel=2*Math.PI/w*L/Math.cos(theta)*(1+Math.cos(gama-theta));
+	var phaseg=2*Math.PI/d*L*Math.tan(theta);
+	phase[0]=phasel-phaseg;
+	phase[1]=L/c/Math.cos(theta)*(1+Math.cos(gama-theta));
+	phase[2]=-L*Math.pow(w,3)/2/Math.PI/Math.pow(c*d,2)/Math.pow(Math.cos(theta),3);
+	phase[3]=3*L*Math.pow(w,4)/4/Math.pow(Math.PI*c*d,2)/c*(1+w/d*Math.sin(gama)-Math.pow(Math.sin(gama),2))/Math.pow(Math.cos(theta),5);
+	return phase;	
+}
+function gtheta(m,w,d,gama)
+{
+	var theta=Math.asin(m*w/d-Math.sin(gama));
+	return theta;
+}
+function gDt(m,d,theta)
+{
+	var Dt=m/d/Math.cos(theta);
+	return Dt;
+}
+function gDl(f,Dt)
+{
+	var Dl=f*Dt;
+	return Dl;
+}
+function gA(m,L,d)
+{
+	var A=m*L/d;
+	return A;
+}
+function gdw1(w,A)
+{
+	var ggdw=w/A;
+	return ggdw;
+}
+function GDD2t(tin,GDD)
+{
+	var tout=tin*Math.sqrt(1+Math.pow(4*Math.LN2*GDD/tin/tin,2));
+	return tout;
+}
+function t2GDD(tin,tout)
+{
+	var GDD=tin/4/Math.LN2*Math.sqrt(tout*tout-tin*tin);
+	return GDD;
+}
+</script>
+<script>
+function do1()
+{
+	var wave=document.getElementById("wavelength");
+	var L1=document.getElementById("L11");
+	var gama1=document.getElementById("gama11");
+	var m1=document.getElementById("m11");
+	var density1=document.getElementById("density11");
+	var f1=document.getElementById("f11");
+
+	var w=wave.value*Math.pow(10,-9);
+	var L=L1.value/1000;
+	var gama=gama1.value/180*Math.PI;
+	var m=m1.value;
+	var d=1/density1.value/1000;
+	var f=f1.value/1000;
+
+	var disp1=document.getElementById("dispblock1");
+
+	var theta=gtheta(m,w,d,gama);
+	var Dt=gDt(m,d,theta);
+	var Dl=gDl(f,Dt);
+	var A=gA(m,L,d);
+	var ggdw=gdw1(w,A);
+
+	disp1.innerHTML="计算结果:<br>光栅衍射角:"+(theta*180/Math.PI).toFixed(3)+"度<br>角分辨本领:"+(Dt*180/Math.PI*Math.pow(10,-9)).toFixed(3)+"度/nm<br>线分辨本领:"+(Dl*Math.pow(10,-6)).toFixed(3)+"mm/nm<br>色分辨本领:"+A.toFixed(3)+"<br>分辨谱线半值宽度:"+(ggdw*Math.pow(10,9)).toFixed(5)+"nm";
+}
+</script>
+
+</head>
+<body>
+<div class="mainbody">
+	<div id="weblogo" class="webtitle">
+	</div>
+	<div id="calcname" class="calcname">
+
+	<b>单光栅的空间色散</b><br>
+	<b><font color="#888888" size=2>Calculator of spatial dispersion for single grating</font></b>
+	</div>
+	<div id="ftitle">
+
+		<div id="f_title1" class="calctitle" onClick="setblock('f_title1');">参数计算</div>
+		<div id="f_title2" class="calctitle" onClick="setblock('f_title2');">程序说明</div>
+		<div id="f_title3" class="calctitle" onClick="setblock('f_title3');">主要公式</div>
+		<div id="f_title4" class="calctitle" onClick="setblock('f_title4');">参考</div>
+	</div>
+	<div id="container1" class="container"  style="height:450px;">
+	<div id="fblock1" class="calcblock"><center>
+		<table cellspacing=0 cellpadding=0 style="text-align:left;border:1px solid #444444;margin-left:0px;margin-top:20px;font-weight:bold;"><tr><td valign=top style="border-right:1px solid #000000;line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;">
+			<br>
+
+		1.激光波长:
+		<input type="text" id="wavelength" value="800" size="2" style="margin-left:32px;">&nbsp;nm&nbsp;
+			<br>
+		2.光栅入射角:
+		<input type="text" id="gama11" value="20" size="2" style="margin-left:16px;">&nbsp;度&nbsp;
+			<br>
+		3.光栅刻线密度:
+		<input type="text" id="density11" value="1200" size="2">&nbsp;线/mm
+			<br>
+		4.光栅宽度:
+		<input type="text" id="L11" value="400" size="2" style="margin-left:32px;">&nbsp;mm
+			<br>
+		5.光栅衍射级:
+		<input type="text" id="m11" value="1" size="2" style="margin-left:16px;">
+			<br>
+		6.聚焦物镜焦距:
+		<input type="text" id="f11" value="100" size="2">&nbsp;mm
+			<br><br><br>
+		<center><input type="button" id="calcbutt1" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="计 算" size="15" onClick="do1();"></center>
+		</td><td valign="top" style="line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;padding-right:40px;"><br>
+
+		<div id="dispblock1">&nbsp;
+		</div>
+		</td></tr></table></center>
+
+	</div>
+	<div id="fblock2" class="calcblock" style="text-indent:2em;padding-top:10px;line-height:30px;padding-left:0px;font-weight:bold;">
+		<font color="#dd3333">本程序</font>用于计算激光经过单个光栅时的空间色散。<br>
+		功能:计算单光栅的衍射角、角分辨本领、线分辨本领、色分辨本领、分辨谱线半值宽度。<br>
+	</div>
+	<div id="fblock3" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;font-weight:bold;">
+		1.光栅的衍射角:<br>		
+		<div style="margin-left:20px;color:#000000">
+			$$\theta = \sin^{-1}(\frac{m\lambda}{d}-\sin\gamma)$$
+		</div>
+		2.光栅的角分辨本领:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${D_{\theta}} =\frac{\delta\theta}{\delta\lambda}=\frac{m}{dcos\theta}$$
+		</div>
+		3.光栅的线分辨本领:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${D_{l}} =f{D_{\theta}}$$
+		</div>
+		4.光栅的色分辨本领:<br>
+		<div style="margin-left:20px;color:#000000">
+			$$A= \frac{ \lambda}{\delta\lambda}=mN=\frac{ L}{\lambda}(sin\gamma+sin\theta)$$
+		</div>
+		5.光栅的分辨谱线半值宽度:
+		<div style="margin-left:20px;color:#000000">
+			$$\delta\lambda= \frac{\lambda}{A}$$
+		</div>
+		其中&gamma;为入射角,&theta;为衍射角,m为衍射级次,&lambda;为光波长,d为光栅常数,f为聚焦物镜焦距,L为光栅宽度,N=L/d为刻线数。
+	</div>
+	<div id="fblock4" class="calcblock" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+		[01] 蔡履中等，光学，P230-231。
+	</div>
+	</div>
+</div>
+</body>
+</html>

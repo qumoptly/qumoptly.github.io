@@ -1,0 +1,28 @@
+.w_fline-001 .p_FLine{
+	width: 100%;
+	border-top-width: 1px;
+	border-top-style: solid;
+	border-top-color:#e8e8e8;
+	opacity:1;
+	filter:alpha(opacity:100);
+	display: inline-block;
+	vertical-align: middle;
+}
+.w_fline-001{
+	width:100%;
+	min-height:20px;
+	display: block;
+	margin: 0 auto;
+}
+.w_fline-001 .w_fline{
+	width:100%;
+	min-height: inherit;
+	font-size: 0;
+}
+.w_fline-001 .w_fline:before{
+	content: "";
+	display: inline-block;
+	vertical-align: middle;
+	min-height: inherit;
+	width: 0;
+}

@@ -1,0 +1,869 @@
+<html>
+<head>
+<title>Material dispersion</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style>
+.mainbody{margin: 0 auto;width:90%;background-color:#ffffff;text-align:left;}
+
+.webtitle {height:80px;background-image:url('./logo.png');background-repeat:no-repeat;background-position:left;}
+
+.calcname {top: 100px; width:100%; height:50px; padding-top:10px;padding-bottom:10px;margin-bottom:15px;background-color:#ffffff;text-align:center;font-weight:bold;font-size:14pt;font-family:黑体,SimHei;line-height:20px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#f9f9f9;}
+
+.calctitle {border-style:dotted;border-width: 1px;width:70px;color:#000000;font-weight:none;font-size:12pt;font-family:黑体,SimHei;display:inline;padding:10px;margin-top:0px;}
+
+.container {top:10px; width:97.8%;height:480px;margin-top:9px;margin-bottom:12px;padding-top:20px;padding-left:20px;line-height:30px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#eeeeee;background-color:#f6f6f6;font-size:11pt;font-family:黑体,SimHei;color:#444444;}
+
+.calcblock {font-size:11pt;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:25px;}
+
+.adblock {height:50px;width:890px;border:solid 1px #eeeeee;margin-bottom:12px;margin-left:0px;background-color:#a9a9a9;text-align:left;padding-top:25px;}
+
+body {background-color:#f1f1f1;text-align:center;}
+
+.equblock {font-size:11pt;font-weight:bold;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:20px;margin-top:15px;margin-left:20px;}
+.dispblock1 {font-size:11pt;font-family:黑体,SimHei;font-weight:none;text-align:left;}
+
+a {font-size:10pt;color:#000000;text-decoration:none;font-weight:bold;}
+a:visited {font-size:10pt;color:#333333;text-decoration:none;font-weight:bold;}
+a:hover {font-size:10pt;color:#0000ff;text-decoration:underline;font-weight:bold;}
+
+.SHGcanvas {background-color:white;}
+table {text-align:center;vertical-align:center;font-size:11pt;font-weight:bold;font-family:黑体,SimHei;border-collapse:collapse;border-spacing:0;color:#444444;}
+tr {height:30px;}
+td {width:60px;border:1px solid #444444;color:#444444;}
+
+</style>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">  </script> 
+<script>
+function setblock(a)
+{
+	titleblock='ftitle';
+	contentblock='container1';
+	b='fblock'+a.charAt(a.length-1);
+	var x1=document.getElementById(titleblock).childNodes;
+	for(i=0;i<x1.length;i++)
+	{
+		if((x1[i].className=='calctitle') && (x1[i].id!=a))
+		{
+			document.getElementById(x1[i].id).style.backgroundColor="#ffffff";
+			document.getElementById(x1[i].id).style.color="#000000";
+			document.getElementById(x1[i].id).style.borderStyle="solid";
+			document.getElementById(x1[i].id).style.borderColor="#ffffff";
+			document.getElementById(x1[i].id).style.borderBottomColor="#f6f6f6";
+		}
+	}
+	document.getElementById(a).style.backgroundColor="#f3f3f3";
+	document.getElementById(a).style.color="#000000";
+	document.getElementById(a).style.borderColor="#ccddff";
+	document.getElementById(a).style.borderBottomColor="#f6f6f6";
+	document.getElementById(a).style.borderStyle="solid";
+	var x2=document.getElementById(contentblock).childNodes;
+	for(i=0;i<x2.length;i++)
+	{
+	if((x2[i].className=='calcblock') && (x2[i].id!=b))
+		document.getElementById(x2[i].id).style.display="none";
+	}
+	document.getElementById(b).style.display="block";
+}
+window.onload=function()
+{
+	setblock('f_title1');
+}
+</script>
+<script>
+function getmax(a)						//获取数组最大值函数
+{
+	var i,max;
+	max=a[0];
+	for(i=0;i<a.length;i++)
+	{
+		if (a[i]>max)
+			max=a[i];
+	}
+	return max;
+}
+function getmin(a)						//获取数组最小值函数
+{
+	var i,min;
+	min=a[0];
+	for(i=0;i<a.length;i++)
+	{
+		if (a[i]<min)
+			min=a[i];
+	}
+	return min;
+}
+function drawFig(canvname,x,y,Xtitle,Ytitle,axis_label_num)			//绘图函数
+{	
+	var i,j,num,maxy,miny,dy,tmpy;
+	var axis_Xspace,axis_Yspace,axis_Xbias,axis_Ybias,axis_label_num;
+	var newx=[];
+	var newy=[];
+	
+	axis_Xspace=40;						//曲线在画布左右两侧留空白
+	axis_Yspace=25;						//曲线在画布上下两侧留空白
+	axis_Xbias=17;						//坐标系向左平移量
+	axis_Ybias=-8;						//坐标系向下平移量
+
+	num=y.length;						//获取绘图数据长度
+	maxy=getmax(y);						//获取Y轴数据最大值
+	miny=getmin(y);						//获取Y轴数据最小值
+	dy=(maxy-miny)/num;					//获取Y轴数据间隔
+
+	var canv=document.getElementById(canvname);
+	canvwidth=canv.width;					//获取画布尺寸
+	canvheight=canv.height;
+	var cxt=canv.getContext("2d");
+	cxt.clearRect(0,0,canvwidth,canvheight);		//清空画布
+	cxt.strokeStyle="#0000ff";				//画笔颜色
+	cxt.lineWidth=2;
+
+	cxt.moveTo(Math.floor(axis_Xspace+axis_Xbias),Math.floor(canvheight-axis_Yspace-(y[0]-miny)/dy*(canvheight-axis_Yspace*2)/num+axis_Ybias));				//画笔移动到曲线第一个点
+	for(i=1;i<num;i++)
+	{
+		newx=Math.floor(axis_Xspace+i*(canvwidth-axis_Xspace*2)/num+axis_Xbias);	//映射数据到坐标
+		newy=Math.floor(canvheight-axis_Yspace-(y[i]-miny)/dy*(canvheight-axis_Yspace*2)/num+axis_Ybias);
+		cxt.lineTo(newx,newy);				//绘图
+	}
+	cxt.stroke();
+
+	cxt.strokeStyle="#000000";					//画坐标轴开始
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5+axis_Xbias,axis_Yspace-5+axis_Ybias);
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(canvwidth-axis_Xspace+5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias,canvheight-axis_Yspace+5+2+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias,canvheight-axis_Yspace+5-2+axis_Ybias);
+	cxt.closePath();
+	cxt.fillStyle="#000000";
+	cxt.fill();
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,axis_Yspace-5+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5-2+axis_Xbias,axis_Yspace+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5+2+axis_Xbias,axis_Yspace+axis_Ybias);
+	cxt.closePath();
+	cxt.fillStyle="#000000";
+	cxt.fill();
+	cxt.stroke();							//画坐标轴结束
+	
+	for(j=0;j<axis_label_num;j++)					//坐标轴标注开始
+	{
+		cxt.fillText(Math.floor(x[0]+(x[x.length-1]-x[0])/(axis_label_num-1)*j),Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2-20)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+17+axis_Ybias);
+		tmpy=miny+(maxy-miny)/(axis_label_num-1)*j;
+		cxt.fillText(tmpy.toFixed(1),axis_Xspace+axis_Xbias-38,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.stroke();
+		cxt.beginPath();
+		cxt.moveTo(Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+5+axis_Ybias);
+		cxt.lineTo(Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+5+axis_Ybias-3);
+		cxt.stroke();
+		cxt.beginPath();
+		cxt.moveTo(axis_Xspace-5+axis_Xbias,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.lineTo(axis_Xspace-5+axis_Xbias+3,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.stroke();
+	}
+	cxt.save();
+	cxt.rotate(-Math.PI/2);
+	cxt.fillText(Ytitle,-Math.floor(canvheight/2+5),15);
+	cxt.restore();
+	cxt.fillText(Xtitle,Math.floor((canvwidth-10)/2),canvheight-5);	//坐标轴标注结束
+
+}
+</script>
+<script>
+function nAir(wave)
+{
+	var a1,b1,a2,b2;
+	var n=[];
+	a1=2480990/132.274;
+	b1=1/132.274;
+	a2=17455.7/39.32957;
+	b2=1/39.32957;
+	var f1=getadb(a1*wave*wave,2*a1*wave,2*a1,0,wave*wave-b1,2*wave,2,0);
+	var f2=getadb(a2*wave*wave,2*a2*wave,2*a2,0,wave*wave-b2,2*wave,2,0);
+	for(i=0;i<4;i++)
+		n[i]=(f1[i]+f2[i])*Math.pow(10,-8);
+	n[0]+=1+8060.51*Math.pow(10,-8);
+	n[1]*=Math.pow(10,6);
+	n[2]*=Math.pow(10,12);
+	n[3]*=Math.pow(10,18);
+	return n;
+}
+function nBK7(wave)
+{
+	var a1,b1,a2,b2,a3,b3;
+	var fm=[];
+	a1=1.03961212;
+	b1=0.0060006986;
+	a2=0.231792344;
+	b2=0.0200179144;
+	a3=1.01046945;
+	b3=103.560653;
+	var f1=getadb(a1*wave*wave,2*a1*wave,2*a1,0,wave*wave-b1,2*wave,2,0);
+	var f2=getadb(a2*wave*wave,2*a2*wave,2*a2,0,wave*wave-b2,2*wave,2,0);
+	var f3=getadb(a3*wave*wave,2*a3*wave,2*a3,0,wave*wave-b3,2*wave,2,0);
+	for(i=0;i<4;i++)
+		fm[i]=f1[i]+f2[i]+f3[i];
+	fm[0]+=1;
+	var n=getxm(fm,0.5);
+	n[1]*=Math.pow(10,6);
+	n[2]*=Math.pow(10,12);
+	n[3]*=Math.pow(10,18);
+	return n;
+}
+function nCaF2(wave)
+{
+	var a1,b1,a2,b2,a3,b3;
+	var fm=[];
+	a1=0.618814;
+	b1=0.002759866;
+	a2=0.4198937;
+	b2=0.01061251;
+	a3=3.426299;
+	b3=1068.123;
+	var f1=getadb(a1*wave*wave,2*a1*wave,2*a1,0,wave*wave-b1,2*wave,2,0);
+	var f2=getadb(a2*wave*wave,2*a2*wave,2*a2,0,wave*wave-b2,2*wave,2,0);
+	var f3=getadb(a3*wave*wave,2*a3*wave,2*a3,0,wave*wave-b3,2*wave,2,0);
+	for(i=0;i<4;i++)
+		fm[i]=f1[i]+f2[i]+f3[i];
+	fm[0]+=1;
+	var n=getxm(fm,0.5);
+	n[1]*=Math.pow(10,6);
+	n[2]*=Math.pow(10,12);
+	n[3]*=Math.pow(10,18);
+	return n;
+}
+function nFS(wave)
+{
+	var a1,b1,a2,b2,a3,b3;
+	var fm=[];
+	a1=0.6961663;
+	b1=Math.pow(0.0684043,2);
+	a2=0.4079426;
+	b2=Math.pow(0.1162414,2);
+	a3=0.8974794;
+	b3=Math.pow(9.896161,2);
+	var f1=getadb(a1*wave*wave,2*a1*wave,2*a1,0,wave*wave-b1,2*wave,2,0);
+	var f2=getadb(a2*wave*wave,2*a2*wave,2*a2,0,wave*wave-b2,2*wave,2,0);
+	var f3=getadb(a3*wave*wave,2*a3*wave,2*a3,0,wave*wave-b3,2*wave,2,0);
+	for(i=0;i<4;i++)
+		fm[i]=f1[i]+f2[i]+f3[i];
+	fm[0]+=1;
+	var n=getxm(fm,0.5);
+	n[1]*=Math.pow(10,6);
+	n[2]*=Math.pow(10,12);
+	n[3]*=Math.pow(10,18);
+	return n;
+}
+function nTis(wave)
+{
+	var a1,b1,a2,b2,a3,b3;
+	var fm=[];
+	a1=1.4313493;
+	b1=Math.pow(0.0726631,2);
+	a2=0.65054713;
+	b2=Math.pow(0.1193242,2);
+	a3=5.3414021;
+	b3=Math.pow(18.028251,2);
+	var f1=getadb(a1*wave*wave,2*a1*wave,2*a1,0,wave*wave-b1,2*wave,2,0);
+	var f2=getadb(a2*wave*wave,2*a2*wave,2*a2,0,wave*wave-b2,2*wave,2,0);
+	var f3=getadb(a3*wave*wave,2*a3*wave,2*a3,0,wave*wave-b3,2*wave,2,0);
+	for(i=0;i<4;i++)
+		fm[i]=f1[i]+f2[i]+f3[i];
+	fm[0]+=1;
+	var n=getxm(fm,0.5);
+	n[1]*=Math.pow(10,6);
+	n[2]*=Math.pow(10,12);
+	n[3]*=Math.pow(10,18);
+	return n;
+}
+</script>
+
+<script>
+function pmangle(no,no2,ne2)			//负晶体
+{
+	var p;
+	p=Math.asin(Math.sqrt(Math.pow(ne2/no,2)*(Math.pow(no2,2)-Math.pow(no,2))/(Math.pow(no2,2)-Math.pow(ne2,2))));
+	return p;
+}
+function pmanglep(no,ne,no2)			//正晶体
+{
+	var p;
+	p=Math.asin(Math.sqrt(Math.pow(ne/no2,2)*(Math.pow(no,2)-Math.pow(no2,2))/(Math.pow(no,2)-Math.pow(ne,2))));
+	return p;
+}
+function wkfangle(no2,ne2,pm)
+{
+	var wkfangle;
+	wkfangle=Math.atan((no2*no2-ne2*ne2)/(no2*no2*Math.sin(pm)*Math.sin(pm)+ne2*ne2*Math.cos(pm)*Math.cos(pm))*Math.sin(2*pm)/2);
+	return wkfangle;
+}
+function wkfanglep(no,ne,pm)
+{
+	var wkfangle;
+	wkfangle=Math.atan((ne*ne-no*no)/(no*no*Math.sin(pm)*Math.sin(pm)+ne*ne*Math.cos(pm)*Math.cos(pm))*Math.sin(2*pm)/2);
+	return wkfangle;
+}
+function getdelta(wavelength,gin,n,L)
+{
+	var theta,delta;
+	theta=Math.asin(Math.sin(gin)/n);
+	delta=4*Math.PI/wavelength*n*L*Math.cos(theta);
+	return delta;
+}
+function getT(R,delta)
+{
+	var T;
+	var F=4*R/(1-R)/(1-R);
+	T=1/(1+F*Math.pow(Math.sin(delta/2),2));
+	return T;
+}
+function getFNS(R)
+{
+	var FNS=Math.PI*Math.sqrt(R)/(1-R);
+	return FNS;
+}
+function getwFWHM(wavelength,delta,FNS)
+{
+	var m=delta/2/Math.PI;
+	var wFWHM=wavelength/m/FNS;
+	return wFWHM;
+}
+function getdt(delta,gin,L)
+{
+	var m=delta/2/Math.PI;
+	var dt=-m/2/L/Math.sin(gin);
+	return dt;
+}
+function getA(delta,FNS)
+{
+	var m=delta/2/Math.PI;
+	var A=m*FNS;
+	return A;
+}
+function getFSR(delta,wavelength)
+{
+	var m=delta/2/Math.PI;
+	var FSR=wavelength/m;
+	return FSR;
+}
+function getadb(a0,a1,a2,a3,b0,b1,b2,b3)
+{
+	var adb=new Array();
+	adb[0]=a0/b0;
+	adb[1]=a1/b0-1/b0/b0*a0*b1;
+	adb[2]=a2/b0-2/b0/b0*a1*b1+2/b0/b0/b0*a0*b1*b1-1/b0/b0*a0*b2;
+	adb[3]=a3/b0-b3*a0/b0/b0-3*a2*b1/b0/b0-3*b2*a1/b0/b0+6*b1*b1*a1*Math.pow(b0,-3)-6*Math.pow(b1,3)*a0*Math.pow(b0,-4)+6*b2*b1*a0*Math.pow(b0,-3);
+	return adb;
+}
+function getxm(x,m)
+{
+	var xm=new Array();
+	xm[0]=Math.pow(x[0],m);
+	xm[1]=m*Math.pow(x[0],m-1)*x[1];
+	xm[2]=m*(m-1)*Math.pow(x[0],m-2)*x[1]*x[1]+m*Math.pow(x[0],m-1)*x[2];
+	xm[3]=m*(m-1)*(m-2)*Math.pow(x[0],m-3)*Math.pow(x[1],3)+3*m*(m-1)*Math.pow(x[0],m-2)*x[1]*x[2]+m*Math.pow(x[0],m-1)*x[3];
+	return xm;
+}
+function fMDisp(n,w,L)
+{
+	var c=299792458;
+	var phase=[];
+	phase[0]=2*Math.PI/w*n[0]*L;
+	phase[1]=L/c*(n[0]-w*n[1])*Math.pow(10,15);
+	phase[2]=L*Math.pow(w,3)/2/Math.PI/c/c*n[2]*Math.pow(10,30);
+	phase[3]=-Math.pow(w,4)*L/4/Math.PI/Math.PI/c/c/c*(3*n[2]+w*n[3])*Math.pow(10,45);
+	return phase;
+}
+function GPairP(w,L,gama,d,m)
+{
+	var c=299792458;
+	var theta=Math.asin(m*w/d-Math.sin(gama));
+	var phase=[];
+	var phasel=2*Math.PI/w*L/Math.cos(theta)*(1+Math.cos(gama-theta));
+	var phaseg=2*Math.PI/d*L*Math.tan(theta);
+	phase[0]=phasel-phaseg;
+	phase[1]=L/c/Math.cos(theta)*(1+Math.cos(gama-theta));
+	phase[2]=-L*Math.pow(w,3)/2/Math.PI/Math.pow(c*d,2)/Math.pow(Math.cos(theta),3);
+	phase[3]=3*L*Math.pow(w,4)/4/Math.pow(Math.PI*c*d,2)/c*(1+w/d*Math.sin(gama)-Math.pow(Math.sin(gama),2))/Math.pow(Math.cos(theta),5);
+	return phase;	
+}
+function gtheta(m,w,d,gama)
+{
+	var theta=Math.asin(m*w/d-Math.sin(gama));
+	return theta;
+}
+function gDt(m,d,theta)
+{
+	var Dt=m/d/Math.cos(theta);
+	return Dt;
+}
+function gDl(f,Dt)
+{
+	var Dl=f*Dt;
+	return Dl;
+}
+function gA(m,L,d)
+{
+	var A=m*L/d;
+	return A;
+}
+function gdw1(w,A)
+{
+	var ggdw=w/A;
+	return ggdw;
+}
+function GDD2t(tin,GDD)
+{
+	var tout=tin*Math.sqrt(1+Math.pow(4*Math.LN2*GDD/tin/tin,2));
+	return tout;
+}
+function t2GDD(tin,tout)
+{
+	var GDD=tin/4/Math.LN2*Math.sqrt(tout*tout-tin*tin);
+	return GDD;
+}
+</script>
+<script>
+function do1()
+{
+	var w=document.getElementById("wavelength");
+	var L=document.getElementById("L");
+	var wave=w.value/1000;
+	var ml=L.value/1000;
+	var disp1=document.getElementById("dispblock1");
+	switch(cryindex1.value)
+	{
+	case "1":
+		{
+			var n=nAir(wave);
+			break;
+		}
+	case "2":
+		{
+			var n=nBK7(wave);
+			break;
+		}
+	case "3":
+		{
+			var n=nCaF2(wave);
+			break;
+		}
+	case "4":
+		{
+			var n=nFS(wave);
+			break;
+		}
+	case "5":
+		{
+			var n=nTis(wave);
+			break;
+		}
+	default:
+		;
+	}
+	var phase=fMDisp(n,wave*Math.pow(10,-6),ml);
+	disp1.innerHTML="计算结果:<br>折射率 n:"+n[0].toFixed(3)+"<br>一阶色散 GD:"+phase[1].toFixed(3)+"fs<br>二阶色散 GDD:"+phase[2].toFixed(3)+"fs<sup>2</sup><br>三阶色散 TOD:"+phase[3].toFixed(3)+"fs<sup>3</sup>";
+}
+function do2()
+{
+	var w1,w2,wnum,dw,ww,maxn,minn,maxp2,minp2,dn,dp2,dp3,newx,newy,i;
+	var canvwidth,canvheight,axis_Xspace,axis_Yspace,axis_Xbias,axis_Ybias,axis_label_num,tmpp;
+	var ww=[];
+	var nshow=[];
+	var p2show=[];
+	var p3show=[];
+	var ws=document.getElementById('wavelength1');
+	var we=document.getElementById('wavelength2');
+	w1=ws.value/1000;
+	w2=we.value/1000;
+	ml=0.001;
+	wnum=100;						//计算数据间隔
+	dw=(w2-w1)/wnum;
+	var canv=document.getElementById("myCanvas");
+	canvwidth=canv.width;					//获取画布尺寸
+	canvheight=canv.height;
+	axis_Xspace=55;						//曲线在画布左右两侧留空白
+	axis_Yspace=25;						//曲线在画布上下两侧留空白
+	axis_Xbias=0;						//坐标系向左平移量
+	axis_Ybias=-8;						//坐标系向下平移量
+	axis_label_num=4;					//坐标轴标注数量
+	switch(cryindex2.value)
+	{
+	case "1":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				var n=nAir(ww[i]);
+				var phase=fMDisp(n,ww[i]*Math.pow(10,-6),ml);
+				nshow[i]=n[0];
+				p2show[i]=phase[2];
+				p3show[i]=phase[3];
+			}
+			break;
+		}
+	case "2":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				var n=nBK7(ww[i]);
+				var phase=fMDisp(n,ww[i]*Math.pow(10,-6),ml);
+				nshow[i]=n[0];
+				p2show[i]=phase[2];
+				p3show[i]=phase[3];
+			}
+			break;
+		}
+	case "3":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				var n=nCaF2(ww[i]);
+				var phase=fMDisp(n,ww[i]*Math.pow(10,-6),ml);
+				nshow[i]=n[0];
+				p2show[i]=phase[2];
+				p3show[i]=phase[3];
+			}
+			break;
+		}
+	case "4":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				var n=nFS(ww[i]);
+				var phase=fMDisp(n,ww[i]*Math.pow(10,-6),ml);
+				nshow[i]=n[0];
+				p2show[i]=phase[2];
+				p3show[i]=phase[3];
+			}
+			break;
+		}
+	case "5":
+		{
+			for(i=0;i<wnum;i++)
+			{
+				ww[i]=w1+dw*i;
+				var n=nTis(ww[i]);
+				var phase=fMDisp(n,ww[i]*Math.pow(10,-6),ml);
+				nshow[i]=Number(n[0]);
+				p2show[i]=phase[2];
+				p3show[i]=phase[3];
+			}
+			break;
+		}
+	default:
+		;
+	}
+	maxn=getmax(nshow);
+	minn=getmin(nshow);
+	maxp2=getmax(p2show);
+	minp2=getmin(p2show);
+	maxp3=getmax(p3show);
+	minp3=getmin(p3show);
+	dn=(maxn-minn)/wnum;
+	dp2=(maxp2-minp2)/wnum;
+	dp3=(maxp3-minp3)/wnum;
+	var cxt=canv.getContext("2d");
+	cxt.clearRect(0,0,canvwidth,canvheight);
+	cxt.lineWidth=2;
+	cxt.strokeStyle="#0000ff";
+	cxt.beginPath();	
+	if(cryindex3.value=="1")			//画折射率曲线
+	{
+		cxt.moveTo(Math.floor(axis_Xspace+0*(canvwidth-axis_Xspace*2)/wnum+axis_Xbias),Math.floor(canvheight-axis_Yspace-(nshow[0]-minn)/dn*(canvheight-axis_Yspace*2)/wnum+axis_Ybias));
+		for(i=1;i<wnum;i++)
+		{
+			newx=Math.floor(axis_Xspace+i*(canvwidth-axis_Xspace*2)/wnum+axis_Xbias);
+			newy=Math.floor(canvheight-axis_Yspace-(nshow[i]-minn)/dn*(canvheight-axis_Yspace*2)/wnum+axis_Ybias);
+			cxt.lineTo(newx,newy);
+		}
+		cxt.stroke();
+	}
+	if(cryindex3.value=="2")			//画GDD&TOD曲线
+	{
+		cxt.strokeStyle="#0000ff";
+		cxt.moveTo(Math.floor(axis_Xspace+0*(canvwidth-axis_Xspace*2)/wnum+axis_Xbias),Math.floor(canvheight-axis_Yspace-(p2show[0]-minp2)/dp2*(canvheight-axis_Yspace*2)/wnum+axis_Ybias));
+		for(i=1;i<wnum;i++)
+		{
+			newx=Math.floor(axis_Xspace+i*(canvwidth-axis_Xspace*2)/wnum+axis_Xbias);
+			newy=Math.floor(canvheight-axis_Yspace-(p2show[i]-minp2)/dp2*(canvheight-axis_Yspace*2)/wnum+axis_Ybias);
+			cxt.lineTo(newx,newy);
+		}
+		cxt.stroke();
+		cxt.beginPath();
+		cxt.strokeStyle="#ff0000";
+		cxt.moveTo(Math.floor(axis_Xspace+0*(canvwidth-axis_Xspace*2)/wnum+axis_Xbias),Math.floor(canvheight-axis_Yspace-(p3show[0]-minp3)/dp3*(canvheight-axis_Yspace*2)/wnum+axis_Ybias));
+		for(i=1;i<wnum;i++)
+		{
+			newx=Math.floor(axis_Xspace+i*(canvwidth-axis_Xspace*2)/wnum+axis_Xbias);
+			newy=Math.floor(canvheight-axis_Yspace-(p3show[i]-minp3)/dp3*(canvheight-axis_Yspace*2)/wnum+axis_Ybias);
+			cxt.lineTo(newx,newy);
+		}
+		cxt.stroke();
+	}
+	cxt.strokeStyle="#000000";					//画坐标轴
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);		//x轴
+	cxt.lineTo(canvwidth-axis_Xspace+5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.stroke();
+	cxt.beginPath();
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);		//左y轴
+	cxt.lineTo(axis_Xspace-5+axis_Xbias,axis_Yspace-5+axis_Ybias);
+	cxt.stroke();
+	if(cryindex3.value=="2")								//右y轴
+	{
+		cxt.strokeStyle="#ff0000";	
+		cxt.beginPath();
+		cxt.moveTo(canvwidth-axis_Xspace+axis_Xbias+5,canvheight-axis_Yspace+5+axis_Ybias);		
+		cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias+5,axis_Yspace-5+axis_Ybias);
+		cxt.stroke();
+		cxt.beginPath();
+		cxt.moveTo(canvwidth-axis_Xspace+axis_Xbias+5,axis_Yspace-5+axis_Ybias);
+		cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias+5-2,axis_Yspace+axis_Ybias);
+		cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias+5+2,axis_Yspace+axis_Ybias);
+		cxt.closePath();
+		cxt.fillStyle="#ff0000";			
+		cxt.fill();
+		cxt.stroke();
+	}
+	cxt.strokeStyle="#000000";								//x轴箭头
+	cxt.beginPath();
+	cxt.moveTo(canvwidth-axis_Xspace+5+axis_Xbias,canvheight-axis_Yspace+5+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias,canvheight-axis_Yspace+5+2+axis_Ybias);
+	cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias,canvheight-axis_Yspace+5-2+axis_Ybias);
+	cxt.closePath();
+	cxt.fillStyle="#000000";			
+	cxt.fill();
+	cxt.stroke();
+	cxt.beginPath();							//左y轴箭头
+	cxt.moveTo(axis_Xspace-5+axis_Xbias,axis_Yspace-5+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5-2+axis_Xbias,axis_Yspace+axis_Ybias);
+	cxt.lineTo(axis_Xspace-5+2+axis_Xbias,axis_Yspace+axis_Ybias);
+	cxt.closePath();
+	cxt.fillStyle="#000000";
+	cxt.fill();
+	cxt.stroke();
+	if(cryindex3.value=="2")			//legend
+	{
+		cxt.beginPath();
+		cxt.strokeStyle="#0000ff";
+		cxt.moveTo(Math.floor(canvwidth*0.6),Math.floor(canvheight*0.15));
+		cxt.lineTo(Math.floor(canvwidth*0.6)+20,Math.floor(canvheight*0.15));
+		cxt.fillText("GDD",Math.floor(canvwidth*0.6)+25,Math.floor(canvheight*0.15)+5);
+		cxt.stroke();
+
+		cxt.beginPath();
+		cxt.strokeStyle="#ff0000";
+		cxt.moveTo(Math.floor(canvwidth*0.6),Math.floor(canvheight*0.15)+15);
+		cxt.lineTo(Math.floor(canvwidth*0.6)+20,Math.floor(canvheight*0.15)+15);
+		cxt.fillText("TOD",Math.floor(canvwidth*0.6)+25,Math.floor(canvheight*0.15)+5+15);
+		cxt.stroke();
+	}
+	cxt.beginPath();
+	cxt.strokeStyle="#000000";
+	for(j=0;j<axis_label_num;j++)					//标注
+	{
+		cxt.fillText(Math.floor(Number(ws.value)+Number((we.value-ws.value)/(axis_label_num-1)*j)),Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2-20)/(axis_label_num-1)*j+axis_Xbias),canvheight-axis_Yspace+17+axis_Ybias);//x轴
+		if(cryindex3.value=="1")		//折射率左y轴
+		{
+		tmpp=Number(minn)+Number((maxn-minn)/(axis_label_num-1)*j);
+		cxt.fillText(tmpp.toFixed(3),axis_Xspace+axis_Xbias-38,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		}
+		if(cryindex3.value=="2")
+		{
+		tmpp=Number(minp2)+Number((maxp2-minp2)/(axis_label_num-1)*j);
+		cxt.fillText(tmpp.toFixed(2),axis_Xspace+axis_Xbias-38,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));		//GDD左y轴
+		tmpp=Number(minp3)+Number((maxp3-minp3)/(axis_label_num-1)*j);
+		cxt.fillText(tmpp.toFixed(2),canvwidth-axis_Xspace+axis_Xbias+8,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));		//TOD右y轴
+		cxt.stroke();
+		cxt.strokeStyle="#ff0000";
+		cxt.beginPath();			//右y轴上端点
+		cxt.moveTo(canvwidth-axis_Xspace+axis_Xbias+5,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.lineTo(canvwidth-axis_Xspace+axis_Xbias+5-3,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		}
+		cxt.stroke();
+		cxt.strokeStyle="#000000";
+		cxt.beginPath();			//x轴上端点
+		cxt.moveTo(Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2)/3*j+axis_Xbias),canvheight-axis_Yspace+5+axis_Ybias);
+		cxt.lineTo(Math.floor(axis_Xspace+(canvwidth-axis_Xspace*2)/3*j+axis_Xbias),canvheight-axis_Yspace+5+axis_Ybias-3);
+		cxt.stroke();
+		cxt.beginPath();			//左y轴上端点
+		cxt.moveTo(axis_Xspace-5+axis_Xbias,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.lineTo(axis_Xspace-5+axis_Xbias+3,Math.floor(canvheight-axis_Yspace+axis_Ybias-j*(canvheight-2*axis_Yspace)/(axis_label_num-1)));
+		cxt.stroke();
+	}
+	cxt.save();
+	cxt.rotate(-Math.PI/2);
+	if(cryindex3.value=="1")
+		cxt.fillText("折射率n",-Math.floor(canvheight/2+15),12);		//折射率左y轴名称
+	else
+	{
+		cxt.fillText("GDD(fs^2/mm)",-Math.floor(canvheight/2+15),12);			//GDD左y轴名称
+		cxt.fillText("TOD(fs^3/mm)",-Math.floor(canvheight/2+15),canvwidth-3);		//tod右y轴名称
+	}
+	cxt.restore();
+	cxt.fillText("波长/nm",Math.floor((canvwidth-10)/2)-10,canvheight-5);			//x轴名称
+	cxt.stroke();
+	if (document.getElementById("checkdata").checked)				//数据输出
+	{
+		newWindow=window.open("","Data","width=300,height=500,left=200,top=50,menubar='NO',status='NO',toolbar='NO',titlebar='NO'");
+		newWindow.document.write("基频波长/nm\t折射率\tGDD(fs^2/mm\tTOD(fs^3/mm))<br>");
+		for(i=0;i<wnum;i++)
+		{
+			{newWindow.document.write(ww[i].toFixed(5)*1000+"\t\t"+nshow[i].toFixed(3)+"\t\t"+p2show[i].toFixed(3)+"\t\t"+p3show[i].toFixed(3)+"<br>");}
+		}
+	}
+
+
+}
+</script>
+
+</head>
+<body>
+<div class="mainbody">
+	<div id="weblogo" class="webtitle">
+	</div>
+	<div id="calcname" class="calcname">
+
+	<b>材料的时间色散</b><br>
+	<b><font color="#888888" size=2>Calculator of Material dispersion</font></b>
+	</div>
+	<div id="ftitle">
+
+		<div id="f_title1" class="calctitle" onClick="setblock('f_title1');">色散计算</div>
+		<div id="f_title2" class="calctitle" onClick="setblock('f_title2');">色散曲线</div>
+		<div id="f_title3" class="calctitle" onClick="setblock('f_title3');">程序说明</div>
+		<div id="f_title4" class="calctitle" onClick="setblock('f_title4');">主要公式</div>
+		<div id="f_title5" class="calctitle" onClick="setblock('f_title5');">晶体折射率方程</div>
+		<div id="f_title6" class="calctitle" onClick="setblock('f_title6');">参考</div>
+	</div>
+	<div id="container1" class="container"  style="height:450px;">
+	<div id="fblock1" class="calcblock"><center>
+		<table cellspacing=0 cellpadding=0 style="text-align:left;border:1px solid #444444;margin-left:0px;margin-top:20px;font-weight:bold;"><tr><td valign=top style="border-right:1px solid #000000;line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;">
+			<br>
+
+		1.选择材料:
+		<select id="cryindex1" length=4>
+			<option value="1" title="空气">Air</option>
+			<option value="2">BK7</option>
+			<option value="3">CaF2</option>
+			<option value="4" title="熔石英">FS</option>
+			<option value="5" title="掺钛蓝宝石">Ti:S</option>
+		</select>
+			<br>
+		2.材料长度:
+		<input type="text" id="L" value="1" size="2">mm&nbsp;
+			<br>
+		3.激光波长:
+		<input type="text" id="wavelength" value="800" size="2">nm
+			<br><br><br>
+		<center><input type="button" id="calcbutt1" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="计 算" size="15" onClick="do1();"></center>
+		</td><td valign="top" style="line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;padding-right:40px;"><br>
+
+		<div id="dispblock1">&nbsp;
+		</div>
+		</td></tr></table></center>
+
+	</div>
+	<div id="fblock2" class="calcblock">
+		<center><table cellspacing=0 cellpadding=0 style="border:0px;margin-left:0px;color:#444444;padding-right:20px;"><tr><td valign=top style="font-weight:bold;width:300px;padding-bottom:20px;padding-left:10px;line-height:25px;text-align:left;border:0px;">
+			<br>
+
+		1.选择材料:
+		<select id="cryindex2"  style="width:80px;">
+			<option value="1" title="空气">Air</option>
+			<option value="2">BK7</option>
+			<option value="3">CaF2</option>
+			<option value="4" title="熔石英">FS</option>
+			<option value="5" title="掺钛蓝宝石">Ti:S</option>
+		</select>
+			<br>
+		2.起始波长:
+		<input type="text" id="wavelength1" value="700" size="2">&nbsp;nm 
+			<br>
+		&nbsp;&nbsp;结束波长:
+		<input type="text" id="wavelength2" value="1000" size="2">&nbsp;nm
+			<br>
+		3.画图数据:
+		<select id="cryindex3"  style="width:80px;">
+			<option value="1">折射率n</option>
+			<option value="2">GDD&TOD</option>
+		</select>
+			<br>
+		<center><input type="checkbox" id="checkdata" style="margin-left:0px;" />输出计算数据</center>
+			<br><br>
+		<center><input type="button" id="calcbutt2" style="width:100px;height:40px;font-weight:bold;margin-left:0px;margin-top:0px;vertical-align:top;display:inline;" value="计 算" size="15" onClick="do2();"></center>
+			<br>
+		</td><td valign="top" style="width:450px;border:0px;"><br>
+
+		<div id="dispblock2" style="margin-top:5px;">
+			<canvas id="myCanvas" class="SHGcanvas" style="background-color:#ffffff;border:1px solid #000000;" width="450" height="300" title="右键可以保存图片"></canvas>
+
+		</div>
+		</td></tr></table></center>
+
+	</div>
+	<div id="fblock3" class="calcblock" style="text-indent:2em;padding-top:10px;line-height:30px;padding-left:0px;font-weight:bold;">
+		<font color="#dd3333">本程序</font>用于计算材料对激光的时间色散。<br>
+		功能1:计算单个激光波长在某材料中对应的折射率和各阶色散。<br>
+		功能2:计算一组激光波长的折射率和色散值并绘制图形，得到变化趋势。<br><br>
+		提示:在上方的选项卡中进行计算和查看相关资料介绍。
+	</div>
+	<div id="fblock4" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;font-weight:bold;">
+		材料的各阶色散与折射率的关系式为：<br>		
+		<div style="margin-left:20px;color:#000000">
+			$$\Phi = kL = \frac{2\pi nL}{\lambda}$$
+		</div>
+		<div style="margin-left:20px;color:#000000">
+			$$\frac{d\Phi}{d\omega} = \frac{L}{c}(n-\lambda\frac{dn}{d\lambda})$$
+		</div>
+		<div style="margin-left:20px;color:#000000">
+			$$\frac{d^2\Phi}{d\omega^2} = \frac{\lambda^3L}{2\pi c^2}\frac{d^2n}{d\lambda^2}$$
+		</div>
+		<div style="margin-left:20px;color:#000000">
+			$$\frac{d^3\Phi}{d\omega^3} = -\frac{\lambda^4L}{4\pi^2 c^3}(3\frac{d^2n}{d\lambda^2}+\lambda\frac{d^3n}{d\lambda^3})$$
+		</div>
+	</div>
+	<div id="fblock5" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+		<div id="Airequ" class="equblock">
+			1.空气的折射率方程为($\lambda$单位为$\mu$m):<br>
+			$$ n=(\frac{2480990\lambda^2}{132.274\lambda^2-1}+\frac{17455.7\lambda^2}{39.32957\lambda^2-1})\times10^{-8}+1 $$
+		</div>
+		<div id="BK7equ" class="equblock">
+			2.BK7玻璃的折射率方程为($\lambda$单位为$\mu$m):<br>
+			$$ n^2=\frac{1.03961212\lambda^2}{\lambda^2-0.0060006986}+\frac{0.231792344\lambda^2}{\lambda^2-0.0200179144}+\frac{1.01046945\lambda^2}{\lambda^2-103.560653}+1  $$
+		</div>
+		<div id="CaF2equ" class="equblock">
+			3.CaF2材料的折射率方程为($\lambda$单位为$\mu$m):<br>
+			$$ n^2=\frac{0.618814\lambda^2}{\lambda^2-0.002759866}+\frac{0.4198937\lambda^2}{\lambda^2-0.01061251}+\frac{3.426299\lambda^2}{\lambda^2-1068.123}+1  $$
+		</div>
+		<div id="FSequ" class="equblock">
+			4.熔石英的折射率方程为($\lambda$单位为$\mu$m):<br>
+			$$ n^2=\frac{0.6961663\lambda^2}{\lambda^2-0.0684043^2}+\frac{0.4079426\lambda^2}{\lambda^2-0.1162414^2}+\frac{0.8974794\lambda^2}{\lambda^2-9.896161^2}+1  $$
+		</div>
+		<div id="Tisequ" class="equblock">
+			5.掺钛蓝宝石的折射率方程为($\lambda$单位为$\mu$m):<br>
+			$$ n^2=\frac{1.4313493\lambda^2}{\lambda^2-0.0726631^2}+\frac{0.65054713\lambda^2}{\lambda^2-0.1193242^2}+\frac{5.3414021\lambda^2}{\lambda^2-18.028251^2}+1  $$
+		</div>
+	</div>
+	<div id="fblock6" class="calcblock" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+		[01] 王楠，博士毕业论文，P59-60,P74。
+	</div>
+	</div>
+</div>
+</body>
+</html>

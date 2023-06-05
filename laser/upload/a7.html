@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Peak Intensity of Gaussian Laser Pulses</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./css/jquery.min.3.1.1.js"></script>
+  <script src="./css/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  <style type="text/css">
+	html,body {
+	  margin:6px;
+	  padding:2px;
+	}
+  </style>
+</head>
+  
+
+  <body ng-app="main">
+
+    <div class="row" id="Gaussian_Laser" ng-controller="control_panel"> 
+      <div class="col-xs-12">
+        <h1 class=title id="h1">Peak Intensity of Gaussian Laser Pulses <small><span data-toggle="collapse" data-target="#info_Gaussian_Laser" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+      </div>
+
+
+      <div class="col-lg-5 col-md-6 col-xs-12">
+        <div id="info_Gaussian_Laser" class="collapse" >
+          <b><p style="text-align:left;">The following are some calculator that will help you calculate the Energy fluence (in Joules per centimetre square) and the Peak Intensity (in Watts per centimetre square)</p>
+          <p style="text-align:left;">by inputting the value of Pulse Energy (in Joules) ,Beam radium at $\frac{1}{e^2}$ intensity (in centimetre) and Pulse duration (in second).</p>
+          <p style="text-align:left;">The formula that will be used are is as followed:<p>
+          <h2 style="text-align:left;"> Peak Intensity = $(\frac{1.88E}{\pi\omega^2\tau})$<h2>
+          <h2 style="text-align:left;"> Energy fluence = $(\frac{2E}{\pi\omega^2})$<h2>
+        </b>
+      </div>
+     
+      <fieldset class="input"> 
+        <legend>Input</legend>
+  
+          <div class="col-xs-6">
+            <h5>Pusle Energy,$\ E$: </h5>
+            <div class="input-group">
+                <input type="number" class="form-control" id="PE" ng-model="energy" ng-change="myFunc()">
+				<!--<input onchange="myFunction();" type="number" class="form-control" id="PE" ng-model="energy" ng-change="myFunc()">-->
+                <span class="input-group-addon">J</span>
+            </div>
+          </div>
+
+            <div class="col-xs-6">
+              <h5> Beam radium at 1/e$^2$ intensity, $\omega$: </span></h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" id="Br" ng-model="Beam_radium" ng-change="myFunc()">
+                  <span class="input-group-addon">cm</span>
+              </div>
+            </div>
+            <div class="col-xs-6">
+              <h5> Pulse duration, $\tau$: </span></h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" id="PD" ng-model="dur" ng-change="myFunc()">
+                  <span class="input-group-addon">fs</span>
+              </div><br>
+            </div>
+    
+      </fieldset><br>
+
+      
+      <fieldset class="output"> 
+        <legend>Output</legend>
+        
+            <div class="col-xs-6">
+              <h5>Peak Intensity:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" id="Energyfluence" ng-model="fluence" readonly/>
+                  <span class="input-group-addon">GW/cm$^2$</span>
+              </div>
+            </div>
+
+            <div class="col-xs-6">
+              <h5>Energy fluence, $\ F$:</h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" id="PeakIntensity" ng-model="Intensity" readonly/>
+                  <span class="input-group-addon">J/cm$^2$</span>
+              </div><br>
+            </div>
+      
+    </fieldset>     
+
+    
+
+
+    </div>
+  </body>
+
+  
+
+  <script>
+    angular.module('main', [])
+      .controller('control_panel', ['$scope', function($scope) {
+     
+        $scope.myFunc = function() {
+          $scope.duration=$scope.dur*1e-15
+          $scope.fluence=(1.88*$scope.energy)/(Math.PI * $scope.Beam_radium * $scope.Beam_radium * $scope.duration)*1e-9;
+          $scope.Intensity = (2*$scope.energy)/(Math.PI * $scope.Beam_radium * $scope.Beam_radium);
+        };
+      }]);
+  </script>
+  
+ <!---title----->
+ <style>
+  .model-list table tbody tr td .ml-t2{
+    display:block;
+  }
+                
+     .title{
+       background:#00b8b6;
+       color:#fff;
+       text-align:center;
+       height:72px;
+       line-height:36px;
+       width:515px;
+       display:inline-block;
+       border-radius:5px;
+       }
+      </style>  
+
+  
+
+  <!--INPUT-->
+<style>
+  fieldset.input {
+    background-color: #a1ffe8d2;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>    
+
+<!--OUTPUT-->
+<style>
+  fieldset.output {
+    background-color: #9dffe1;
+  }
+  
+  legend {
+    background-color: gray;
+    color: white;
+    padding: 4px 10px;
+  }
+</style>
+</html>
+
+
+       

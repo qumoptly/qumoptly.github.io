@@ -1,0 +1,678 @@
+@media only screen and (max-width: 768px){/*?￥?°???￥?±??*/
+    .c_portalResSearch_total-01001{
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        display: block;
+        font-size: 0;
+        padding: 0 10px;
+    }
+    .c_portalResSearch_total-01001 .p_contentBox{
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        border-width: 1px;
+        border-style: none;
+        border-color: rgba(228,228,228,0);
+        background-color: transparent;
+        position: relative;
+    }
+    .c_portalResSearch_total-01001 .p_headbox{
+        position: absolute;
+        width: 100%;
+        height: auto;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-radius: 5px;
+        padding: 10px 0px;
+        display: none;
+        /* margin: 0 10px; */
+        background: #fff;
+        border-radius: 0;
+        z-index: 999;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox{
+        width: 55%;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        border-width: 1px;
+        border-style: none;
+        border-color: rgba(228,228,228,0);
+        background-color: transparent;
+        position: relative;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input{
+        width: 100%;
+        display: inline-block;
+        height: 50px;
+        vertical-align: middle;
+        color: inherit;
+        position: relative;
+        font-size: 24px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .forward{
+        display: none;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .forward:before{
+        content: "\e6d5";
+        color: #797979;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn{
+        width: 20%;
+        height: 50px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 24px;
+        color: #777;
+        border-width: 0;
+        border-style: solid;
+        border-color: rgba(255,255,255,0);
+        text-align: center;
+        padding-top: 0;
+        position: inherit;
+        margin: 0;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: inherit;
+        text-decoration: none;
+        background-size: 100% 100%;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn:hover{
+        box-shadow:none;
+        cursor:pointer;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn .iconfont{
+        margin-right: 5px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn .font{
+        display: inline-table;
+        vertical-align: middle;
+        bottom: 0;
+        height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        text-decoration: none;
+        position: relative;
+        line-height: 50px;
+    }
+    .c_portalResSearch_total-01001 .p_input input, .c_search_total-01001 .p_input .InputText {
+        display: inline-block;
+        height: 100%;
+        width: inherit;
+        line-height: inherit;
+        /* border-width: 1px; */
+        /* border-style: solid; */
+        /* border-color: #f0f0f0; */
+        padding-left: 5px;
+        padding-right: 32px;
+        border: none;
+    }
+    .c_portalResSearch_total-01001 .p_select{
+        height: auto;
+        font-size: 0;
+        display: inline-block;
+        width: 25%;
+        vertical-align: middle;
+        float: left;
+    }
+    .c_portalResSearch_total-01001 .p_select input{
+        width: inherit;
+        height: 50px;
+        border: none;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 24px;
+        position: absolute;
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+    .c_portalResSearch_total-01001 .p_select .shape {
+        display: inline-block;
+        width: 25px;
+        height: 50px;
+        position: static!important;
+        line-height: 50px;
+        /* background-color: #fafafa; */
+        text-align: center;
+        /* border: 1px solid rgba(240, 240, 240, 1); */
+        border-left: none;
+        font-size: 12px;
+        color: rgba(200, 200, 200, 1);
+        float: right;
+        top: 0!important;
+        transform: translateY(0%);
+        margin-right: 10px;
+    }
+    .c_portalResSearch_total-01001 .p_select .shape:before {
+        content: "\e69c";
+        font-size: 24px;
+    }
+    .c_portalResSearch_total-01001 .p_select .itembox {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 80px;
+        left: 0px;
+        border: 1px solid rgba(240, 240, 240, 1);
+        z-index: 99;
+        background-color: #fff;
+        font-size: 0;
+        border-radius: 5px;
+    }
+    .c_portalResSearch_total-01001 .p_select li {
+        width: calc(100% / 4);
+        height: auto;
+        display: inline-block;
+        margin: 20px 0;
+        text-align: center;
+        font-size: 22px;
+        border-left: 1px solid #ccc;
+    }
+    .c_portalResSearch_total-01001 .p_select li:nth-child(1){
+        border-left:none
+    }
+    .c_portalResSearch_total-01001 .p_select li:nth-child(5){
+        border-left:none
+    }
+    .c_portalResSearch_total-01001 .p_select li i img{
+        display: none;
+    }
+    input::-webkit-input-placeholder{
+        font-size:24px;
+        line-height:50px;
+        color:#777;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtnBox{
+        display: block;
+        width: 250px;
+        height: auto;
+        padding: 10px 10px;
+        background-color: #1890FF;
+        border-radius: 5px;
+        margin-bottom: 30px;
+        margin: 0 10px 30px 10px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtnA{
+        width: 100%;
+        height: auto;
+        padding: 10px 10px;
+        font-size: 24px;
+        color: #fff;
+        text-align: center;
+    }
+    .c_portalResSearch_total-01001 .p_headbox.active:before {
+       width: 0px;
+       height: 0px;
+       position: absolute;
+       top: -40px;
+       left: 41px;
+       padding: 0;
+       border-bottom: 20px solid #FFFFFF;
+       border-top: 20px solid transparent;
+       border-left: 20px solid transparent;
+       border-right: 20px solid transparent;
+       display: block;
+       content: "";
+       z-index: 12;
+    }
+    .c_portalResSearch_total-01001 .p_headbox.active:after {
+       width: 0px;
+       height: 0px;
+       position: absolute;
+       top: -41px;
+       left: 41px;
+       padding: 0;
+       border-bottom: 20px solid #efe7e7;
+       border-top: 20px solid transparent;
+       border-left: 20px solid transparent;
+       border-right: 20px solid transparent;
+       display: block;
+       content: "";
+       z-index: 10;
+    }
+    .c_portalResSearch_total-01001 .p_input .iconfont.last{
+        position: absolute;
+        color: #afafaf;
+        top: 16px;
+        right: 5px;
+        font-size: 20px;
+        cursor: pointer;
+    }
+    .c_portalResSearch_total-01001 .p_input .iconfont.last:before {
+       content: "\e640";
+    }
+    .c_portalResSearch_total-01001 .p_searchBtnA:hover{
+        box-shadow: none;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtnA .iconfont:before{
+        content:"\e661";
+        font-size: 30px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+}
+@media only screen and (min-width: 769px){/*?￥?¤?§?￥?±??*/
+    .c_portalResSearch_total-01001{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1180px;
+        min-height: 192px;
+        width: auto;
+        display: inline-block;
+        font-size: 0;
+    }
+    .c_portalResSearch_total-01001 .p_contentBox{
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+        border-width: 1px;
+        border-style: none;
+        border-color: rgba(228,228,228,0);
+        background-color: transparent;
+        position: relative;
+    }
+    .c_portalResSearch_total-01001 .p_headbox{
+        width: 100%;
+        height: auto;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox{
+        width: auto;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        border-width: 1px;
+        border-style: none;
+        border-color: rgba(228,228,228,0);
+        background-color: transparent;
+        position: relative;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input{
+        width: 220px;
+        display: inline-block;
+        height: 40px;
+        vertical-align: middle;
+        color: inherit;
+        position: relative;
+        font-size: 14px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .last{
+        display: none;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .forward{
+        /* display: none; */
+        position: absolute;
+            right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+        font-size: 15px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .forward:before{
+        content: "\e661";
+        color: #a9a9a9;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn{
+        width: auto;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: rgba(255,255,255,1);
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(255,255,255,0);
+        background-color: #1890FF;
+        text-align: center;
+        padding-top: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+        position: inherit;
+        margin: 0;
+        padding: 0 20px;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: inherit;
+        text-decoration: none;
+        background-size: 100% 100%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn .font{
+        display: table-cell;
+        vertical-align: middle;
+        bottom: 0;
+        height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        text-decoration: none;
+        position: relative;
+        text-align: center;
+    }
+    .c_portalResSearch_total-01001 .p_input input, .c_search_total-01001 .p_input .InputText {
+        display: inline-block;
+        height: 100%;
+        width: inherit;
+        line-height: inherit;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #f0f0f0;
+        padding-left: 15px;
+        padding-right: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .c_portalResSearch_total-01001 .p_select{
+        height: auto;
+        position: relative;
+        font-size: 0;
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+        margin-left: -1px;
+    }
+    .c_portalResSearch_total-01001 .p_select input{
+        width: 75px;
+        height: 40px;
+        border: 1px solid rgba(240, 240, 240, 1);
+        line-height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .c_portalResSearch_total-01001 .p_select input:hover{
+        background-color: rgb(240, 248, 250);
+        color: rgb(100, 190, 186);
+    }
+    .c_portalResSearch_total-01001 .p_select input:hover + .shape{
+        background-color: rgb(240, 248, 250);
+    }
+    .c_portalResSearch_total-01001 .p_select .shape {
+        display: inline-block;
+        width: 30px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-left: none;
+        font-size: 12px;
+        color: rgba(200, 200, 200, 1);
+    }
+    .c_portalResSearch_total-01001 .p_select .shape:before {
+        content: "\e6c9";
+    }
+    .c_portalResSearch_total-01001 .p_select .shape:hover {
+        color: #65beba;
+    }
+    .c_portalResSearch_total-01001 .p_select .itembox {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-top: 0;
+        overflow-y: auto;
+        z-index: 99;
+        background-color: #fff;
+        font-size: 12px;
+        max-height: 180px;
+    }
+    .c_portalResSearch_total-01001 .p_select li {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        text-align: center;
+    }
+    .c_portalResSearch_total-01001 .p_select li:hover{
+        background-color: rgb(240, 248, 250);
+        color: rgb(100, 190, 186);
+    }
+    .c_portalResSearch_total-01001 .p_select li i img{
+        display: none;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtnBox{
+        display: none;
+    }
+
+}
+@media only screen and (max-width: 1024px) and (min-width: 769px){/*?¤???-?￥?±??*/
+    .c_portalResSearch_total-01001{
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 1180px;
+        min-height: 192px;
+        width: auto;
+        display: inline-block;
+        font-size: 0;
+    }
+    .c_portalResSearch_total-01001 .p_contentBox{
+        width: 100%;
+        height: auto;
+        overflow: visible;
+        white-space: nowrap;
+        padding: 0;
+        margin: 0;
+        border-width: 1px;
+        border-style: none;
+        border-color: rgba(228,228,228,0);
+        background-color: transparent;
+        position: relative;
+    }
+    .c_portalResSearch_total-01001 .p_headbox{
+        width: 100%;
+        height: auto;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox{
+        width: auto;
+        height: auto;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: visible;
+        padding: 0;
+        margin: 0;
+        border-width: 1px;
+        border-style: none;
+        border-color: rgba(228,228,228,0);
+        background-color: transparent;
+        position: relative;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input{
+        width: 220px;
+        display: inline-block;
+        height: 40px;
+        vertical-align: middle;
+        color: inherit;
+        position: relative;
+        font-size: 14px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .last{
+        display: none;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .forward{
+        /* display: none; */
+        position: absolute;
+            right: 25px;
+        top: 50%;
+        transform: translateY(-50%);
+        height: auto;
+        font-size: 15px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBox .p_input .forward:before{
+        content: "\e661";
+        color: #a9a9a9;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn{
+        width: auto;
+        height: 40px;
+        display: inline-block;
+        vertical-align: middle;
+        font-size: 14px;
+        color: rgba(255,255,255,1);
+        border-width: 1px;
+        border-style: solid;
+        border-color: rgba(255,255,255,0);
+        background-color: #1890FF;
+        text-align: center;
+        padding-top: 0;
+        padding-right: 20px;
+        padding-left: 20px;
+        position: inherit;
+        margin: 0;
+        padding: 0 20px;
+        cursor: pointer;
+        font-family: inherit;
+        font-weight: inherit;
+        text-decoration: none;
+        background-size: 100% 100%;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtn .font{
+        display: table-cell;
+        vertical-align: middle;
+        bottom: 0;
+        height: inherit;
+        color: inherit;
+        font-family: inherit;
+        font-weight: inherit;
+        font-size: inherit;
+        text-decoration: none;
+        position: relative;
+        text-align: center;
+    }
+    .c_portalResSearch_total-01001 .p_input input, .c_search_total-01001 .p_input .InputText {
+        display: inline-block;
+        height: 100%;
+        width: inherit;
+        line-height: inherit;
+        border-width: 1px;
+        border-style: solid;
+        border-color: #f0f0f0;
+        padding-left: 25px;
+        padding-right: 5px;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+    }
+    .c_portalResSearch_total-01001 .p_select{
+        height: auto;
+        position: relative;
+        font-size: 0;
+        display: inline-block;
+        width: auto;
+        vertical-align: middle;
+        margin-left: -1px;
+    }
+    .c_portalResSearch_total-01001 .p_select input{
+        width: 75px;
+        height: 40px;
+        border: 1px solid rgba(240, 240, 240, 1);
+        line-height: 30px;
+        display: inline-block;
+        vertical-align: middle;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        font-size: 12px;
+        padding: 0 10px;
+    }
+    .c_portalResSearch_total-01001 .p_select input:hover{
+        background-color: rgb(240, 248, 250);
+        color: rgb(100, 190, 186);
+    }
+    .c_portalResSearch_total-01001 .p_select input:hover + .shape{
+        background-color: rgb(240, 248, 250);
+    }
+    .c_portalResSearch_total-01001 .p_select .shape {
+        display: inline-block;
+        width: 30px;
+        height: 40px;
+        position: absolute;
+        right: 0;
+        line-height: 40px;
+        text-align: center;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-left: none;
+        font-size: 12px;
+        color: rgba(200, 200, 200, 1);
+    }
+    .c_portalResSearch_total-01001 .p_select .shape:before {
+        content: "\e6c9";
+    }
+    .c_portalResSearch_total-01001 .p_select .shape:hover {
+        color: #65beba;
+    }
+    .c_portalResSearch_total-01001 .p_select .itembox {
+        height: auto;
+        width: 100%;
+        position: absolute;
+        top: 40px;
+        left: 0px;
+        border: 1px solid rgba(240, 240, 240, 1);
+        border-top: 0;
+        overflow-y: auto;
+        z-index: 99;
+        background-color: #fff;
+        font-size: 12px;
+        max-height: 180px;
+    }
+    .c_portalResSearch_total-01001 .p_select li {
+        width: auto;
+        height: 40px;
+        line-height: 40px;
+        display: block;
+        text-align: center;
+    }
+    .c_portalResSearch_total-01001 .p_select li:hover{
+        background-color: rgb(240, 248, 250);
+        color: rgb(100, 190, 186);
+    }
+    .c_portalResSearch_total-01001 .p_select li i img{
+        display: none;
+    }
+    .c_portalResSearch_total-01001 .p_searchBtnBox{
+        display: none;
+    }
+  
+}
+
+
+.c_portalResSearch_total-01001 .p_input input, .c_search_total-01001 .p_input .InputText{    border-top-left-radius: 200px!important;
+    border-bottom-left-radius: 200px!important;    background: rgba(0,0,0,0) !important;    border-top-right-radius: 200px!important;
+    border-bottom-right-radius: 200px!important;    color: #fff;}
+
+.c_portalResSearch_total-01001 .p_searchBtn{    background-color: rgba(0,0,0,0) !important;    z-index: 999999;
+    position: absolute;
+    right: 0;}
+
+.c_portalResSearch_total-01001 .p_searchBox .p_input{width: 280px !important;    height: 27px !important;}
+
+.c_portalResSearch_total-01001 .p_searchBtn .font{    color: rgba(0,0,0,0) !important;}
+
+#c_portalResSearch_total-15894501683249908{    float: right !important;}
+
+.c_portalResSearch_total-01001 .p_searchBtn{    right: 0px;}

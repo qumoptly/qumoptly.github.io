@@ -1,0 +1,170 @@
+<html>
+<head>
+<title>Gaussian beam</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style>
+.mainbody{margin: 0 auto;width:90%;background-color:#ffffff;text-align:left;}
+
+.webtitle {height:80px;background-image:url('./logo.png');background-repeat:no-repeat;background-position:left;}
+
+.calcname {top: 100px; width:100%; height:50px; padding-top:10px;padding-bottom:10px;margin-bottom:15px;background-color:#ffffff;text-align:center;font-weight:bold;font-size:14pt;font-family:黑体,SimHei;line-height:20px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#f9f9f9;}
+
+.calctitle {border-style:dotted;border-width: 1px;width:70px;color:#000000;font-weight:none;font-size:12pt;font-family:黑体,SimHei;display:inline;padding:10px;margin-top:0px;}
+
+.container {top:10px; width:97.8%;height:480px;margin-top:9px;margin-bottom:12px;padding-top:20px;padding-left:20px;line-height:30px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#eeeeee;background-color:#f6f6f6;font-size:11pt;font-family:黑体,SimHei;color:#444444;}
+
+.calcblock {font-size:11pt;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:25px;}
+
+.adblock {height:50px;width:890px;border:solid 1px #eeeeee;margin-bottom:12px;margin-left:0px;background-color:#a9a9a9;text-align:left;padding-top:25px;}
+
+body {background-color:#f1f1f1;text-align:center;}
+
+.equblock {font-size:11pt;font-weight:bold;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:20px;margin-top:15px;margin-left:20px;}
+.dispblock1 {font-size:11pt;font-family:黑体,SimHei;font-weight:none;text-align:left;}
+
+a {font-size:10pt;color:#000000;text-decoration:none;font-weight:bold;}
+a:visited {font-size:10pt;color:#333333;text-decoration:none;font-weight:bold;}
+a:hover {font-size:10pt;color:#0000ff;text-decoration:underline;font-weight:bold;}
+.SHGcanvas {background-color:white;}
+table {text-align:center;vertical-align:center;font-size:11pt;font-weight:bold;font-family:黑体,SimHei;border-collapse:collapse;border-spacing:0;color:#444444;}
+tr {height:30px;}
+td {width:60px;border:1px solid #444444;color:#444444;}
+
+</style>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">  </script> 
+<script>
+function setblock(a)
+{
+	titleblock='ftitle';
+	contentblock='container1';
+	b='fblock'+a.charAt(a.length-1);
+	var x1=document.getElementById(titleblock).childNodes;
+	for(i=0;i<x1.length;i++)
+	{
+		if((x1[i].className=='calctitle') && (x1[i].id!=a))
+		{
+			document.getElementById(x1[i].id).style.backgroundColor="#ffffff";
+			document.getElementById(x1[i].id).style.color="#000000";
+			document.getElementById(x1[i].id).style.borderStyle="solid";
+			document.getElementById(x1[i].id).style.borderColor="#ffffff";
+			document.getElementById(x1[i].id).style.borderBottomColor="#f6f6f6";
+		}
+	}
+	document.getElementById(a).style.backgroundColor="#f3f3f3";
+	document.getElementById(a).style.color="#000000";
+	document.getElementById(a).style.borderColor="#ccddff";
+	document.getElementById(a).style.borderBottomColor="#f6f6f6";
+	document.getElementById(a).style.borderStyle="solid";
+	var x2=document.getElementById(contentblock).childNodes;
+	for(i=0;i<x2.length;i++)
+	{
+	if((x2[i].className=='calcblock') && (x2[i].id!=b))
+		document.getElementById(x2[i].id).style.display="none";
+	}
+	document.getElementById(b).style.display="block";
+}
+window.onload=function()
+{
+	setblock('f_title1');
+}
+</script>
+<script>
+function num2e(num)
+{
+    var p = Math.floor(Math.log(num)/Math.LN10);
+    var n = num * Math.pow(10, -p);
+    return n.toFixed(4) + '*10<sup>' + p +'</sup>';
+}
+
+function do1()
+{
+	var n1=document.getElementById("wavelength");
+	var n2=document.getElementById("r0");
+	var n3=document.getElementById("Z1");
+	var pi=Math.PI;
+
+	var q1=pi*n2.value*n2.value/n1.value*Math.pow(10,6);
+	var q2=2*n2.value/q1*1000;
+	var q3=n2.value*Math.sqrt(1+n3.value/q1*n3.value/q1);
+	var q4=n3.value*(1+q1*q1/n3.value/n3.value);
+	var q5=n2.value*10/10;
+	var q6=n3.value*10/10;
+	var disp1=document.getElementById("dispblock1");
+	disp1.innerHTML="计算结果:<br>远场发散角:"+q2.toFixed(2)+" mrad<br>瑞利长度:"+num2e(q1)+" mm<br>z处的光斑半径:"+q3.toFixed(2)+" mm<br>z处的波前曲率半径:"+num2e(q4)+" mm";
+}
+</script>
+
+</head>
+<body>
+<div class="mainbody">
+	<div id="weblogo" class="webtitle">
+	</div>
+	<div id="calcname" class="calcname">
+
+	<b>高斯光束的空间分布</b><br>
+	<b><font color="#888888" size=2>Calculator of Gaussian beam</font></b>
+	</div>
+	<div id="ftitle">
+
+		<div id="f_title1" class="calctitle" onClick="setblock('f_title1');">参数计算</div>
+		<div id="f_title2" class="calctitle" onClick="setblock('f_title2');">程序说明</div>
+		<div id="f_title3" class="calctitle" onClick="setblock('f_title3');">主要公式</div>
+		<div id="f_title4" class="calctitle" onClick="setblock('f_title4');">参考</div>
+	</div>
+	<div id="container1" class="container"  style="height:450px;">
+	<div id="fblock1" class="calcblock"><center>
+		<table cellspacing=0 cellpadding=0 style="text-align:left;border:1px solid #444444;margin-left:0px;margin-top:20px;font-weight:bold;"><tr><td valign=top style="border-right:1px solid #000000;line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;">
+			<br>
+
+		1.激光波长&lambda;:
+		<input type="text" id="wavelength" value="800" size="4" style="margin-left:9px;">&nbsp;nm
+			<br>
+		2.束腰半径&omega;<sub>0</sub>:
+		<input type="text" id="r0" value="0.5" size="4" style="margin-left:2px;">&nbsp;mm
+			<br>
+		3.距束腰距离z:
+		<input type="text" id="Z1" value="100" size="4" style="margin-left:0px;">&nbsp;mm
+			<br><br>
+		<center><input type="button" id="calcbutt1" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="计 算" size="15" onClick="do1();"></center>
+		</td><td valign="top" style="line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;padding-right:40px;"><br>
+
+		<div id="dispblock1">&nbsp;
+		</div>
+		</td></tr><tr><td colspan=2 style="text-align:center;"><a href="F06Plus.html">图示版</a>&nbsp;&nbsp;&nbsp;&nbsp;</td></tr></table></center>
+
+	</div>
+	<div id="fblock2" class="calcblock" style="text-indent:2em;padding-top:10px;line-height:30px;padding-left:0px;font-weight:bold;">
+		<font color="#dd3333">本程序</font>用于计算高斯光束的空间分布。<br>
+		功能:计算高斯光束的远场发散角、瑞利长度、距离腰斑距离处的光斑半径和波前曲率半径。<br>
+	</div>
+	<div id="fblock3" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;font-weight:bold;">
+		1.远场发散角:<br>		
+		<div style="margin-left:20px;color:#000000">
+			$${\theta} =\frac{2\lambda}{\pi w_0}$$
+		</div>
+		2.瑞利长度:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${Z_R} =\frac{\pi w^2_0}{\lambda}$$
+		</div>
+		3.距离腰斑距离z出的光斑半径:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${w_z} ={w_0}\sqrt{1+{(\frac{z}{Z_R})}^2}$$
+		</div>
+		4.距离腰斑距离z出的波面曲率半径:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${R_z} ={z}[{1+{(\frac{Z_R}{z})}^2}]$$
+		</div>
+		其中&omega;<sub>0</sub>为激光腰斑半径,&theta;为远场发散角,&lambda;为光波长,Z<sub>R</sub>为瑞利长度,&omega;<sub>z</sub>为距腰斑z处的光斑半径,R<sub>z</sub>为波面曲率半径。
+	</div>
+	<div id="fblock4" class="calcblock" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+
+	</div>
+	</div>
+</div>
+</body>
+</html>

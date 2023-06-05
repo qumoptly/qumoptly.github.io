@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Decibels To Percentages And Vice Versa</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="./css/bootstrap.min.css">
+  <script src="./css/jquery.min.3.1.1.js"></script>
+  <script src="./css/bootstrap.min.js"></script>
+
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+
+  <script async src='https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML'></script>
+  <script src="./css/angular.min.js"></script>
+  <style type="text/css">
+	html,body {
+	  margin:6px;
+	  padding:2px;
+	}
+  </style>
+</head>
+
+
+<body ng-app="main">
+    <div class="row" id="Decibels_To_Percentages" ng-controller="control_panel">
+        <div class="col-xs-12">
+          <h1 class=title id="h1">Decibels To Percentages And Vice Versa <small><span data-toggle="collapse" data-target="#info_Decibels_To_Percentages" class="glyphicon glyphicon-info-sign info-glyph"></span></Small></h1><br>
+        </div>
+      
+        <div class="col-lg-5 col-md-6 col-xs-12">
+          <div id="info_Decibels_To_Percentages" class="collapse" >
+            <b><p style="text-align:left;">This calculator will help you to convert decibels to percentages and vice versa.
+            </p>
+            <p style="text-align:left;">The formula that will be used is as followed:</p>
+            <h2 style="text-align:left;"> K=10$^{\frac{x}{10}}$ &nbsp;&nbsp;&nbsp;&nbsp;  X= 10log$_{10}k$</h2>
+            <p style="text-align:left;">Decibels, <b>X</b>; Percentages, <b>K</b>;</p>    
+          </b>
+        </div>
+        
+        
+        <fieldset class="input"> 
+            <legend>Input</legend>
+       
+            <div class="col-xs-6">
+              <h5>Decibels, x: </h5>
+              <div class="input-group">
+                  <input type="number" class="form-control" ng-model="ix" ng-change="myFunc()">
+                  <span class="input-group-addon">dB</span>
+              </div>
+            </div>
+              <div class="col-xs-6">
+                <h5>Percentages, K: </span></h5>
+                <div class="input-group">
+                    <input type="number" class="form-control" ng-model="ik" ng-change="myFunc()">
+                    <span class="input-group-addon">%</span>
+                </div><br>
+              </div>
+            
+            </fieldset><br>
+            
+                <fieldset class="output"> 
+                    <legend>Output</legend>
+                    
+                        <div class="col-xs-6">
+                          <h5>Percentages, K:</h5>
+                          <div class="input-group">
+                              <input type="number" class="form-control" ng-model="ok" readonly/>
+                              <span class="input-group-addon">%</span>
+                          </div>
+                        </div>
+                          <div class="col-xs-6">
+                            <h5>Decibels, x:</h5>
+                            <div class="input-group">
+                                <input type="number" class="form-control" ng-model="ox" readonly/>
+                                <span class="input-group-addon">dB</span>
+                            </div><br>
+                          </div>
+                  
+                </fieldset>                
+        </div>
+
+<script>
+  angular.module('main', [])
+    .controller('control_panel', ['$scope', function($scope) {
+   
+      $scope.myFunc = function() {
+$scope.k=(Math.pow(10,($scope.ix/10)))*100;
+$scope.x=10*Math.log10($scope.ik/100);
+$scope.ok=Math.round($scope.k*1000)/1000;
+$scope.ox=Math.round($scope.x*1000)/1000;
+      };
+    }]);
+</script>
+
+
+
+
+
+
+
+    </div>
+</body>
+             
+   <!---title----->
+   <style>
+    .model-list table tbody tr td .ml-t2{
+      display:block;
+    }
+                  
+       .title{
+         background:#00b8b6;
+         color:#fff;
+         text-align:center;
+         height:72px;
+         line-height:36px;
+         width:515px;
+         display:inline-block;
+         border-radius:5px;
+         }
+        </style>  
+
+    
+
+    <!--INPUT-->
+<style>
+    fieldset.input {
+      background-color: #a1ffe8d2;
+    }
+    
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 4px 10px;
+    }
+</style>    
+
+<!--OUTPUT-->
+<style>
+    fieldset.output {
+      background-color: #9dffe1;
+    }
+    
+    legend {
+      background-color: gray;
+      color: white;
+      padding: 4px 10px;
+    }
+</style>

@@ -1,0 +1,95 @@
+/*!
+ * Glowing.css - a simple pure CSS to make PNG or anything glow!
+ * https://github.com/topex-psy/Glowing.css
+ *
+ * Version: 1.0
+ * Author: Taufik Nur Rahmanda (https://www.facebook.com/TopEx.Divine)
+ * Github: https://github.com/topex-psy
+
+ * Made available under a MIT License:
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+ 
+.glowing {
+	-webkit-filter: drop-shadow(0 0 0 rgba(255,255,255,.8));
+	-webkit-transition: all .2s linear;
+	-moz-transition: all .2s linear;
+	-o-transition: all .2s linear;
+	transition: all .2s linear;
+}
+.glowing.red:hover { -webkit-filter: drop-shadow(0 0 8px rgba(255,153,153,.8)); }
+.glowing.orange:hover { -webkit-filter: drop-shadow(0 0 8px rgba(244,173,66,.8)); }
+.glowing.yellow:hover { -webkit-filter: drop-shadow(0 0 8px rgba(244,241,66,.8)); }
+.glowing.green:hover { -webkit-filter: drop-shadow(0 0 8px rgba(83,244,66,.8)); }
+.glowing.cyan:hover { -webkit-filter: drop-shadow(0 0 8px rgba(0,255,221,.8)); }
+.glowing.lightblue:hover { -webkit-filter: drop-shadow(0 0 8px rgba(0,231,255,.8)); }
+.glowing.blue:hover { -webkit-filter: drop-shadow(0 0 8px rgba(0,153,255,.8)); }
+.glowing.darkblue:hover { -webkit-filter: drop-shadow(0 0 8px rgba(0,63,255,.8)); }
+.glowing.indigo:hover { -webkit-filter: drop-shadow(0 0 8px rgba(167,66,244,.8)); }
+.glowing.purple:hover { -webkit-filter: drop-shadow(0 0 8px rgba(244,66,232,.8)); }
+.glowing.magenta:hover { -webkit-filter: drop-shadow(0 0 8px rgba(255,109,194,.8)); }
+.glowing.pink:hover { -webkit-filter: drop-shadow(0 0 8px rgba(255,137,184,.8)); }
+.glowing.gray:hover { -webkit-filter: drop-shadow(0 0 8px rgba(211,211,211,.8)); }
+
+.and { }
+.quickly { -webkit-transition:-webkit-transform .05s !important;-moz-transition:-moz-transform .05s !important;-o-transition:-o-transform .05s !important;transition:transform .05s !important; }
+.rotating:hover { -ms-transform:matrix(1.1,0.2,-0.2,1.1,0,0);-webkit-transform:matrix(1.1,0.2,-0.2,1.1,0,0);transform:matrix(1.1,0.2,-0.2,1.1,0,0); }
+.zooming:hover { -ms-transform: scale(1.1,1.1);-webkit-transform: scale(1.1,1.1);transform: scale(1.1,1.1); }
+
+.disco:hover {
+	-webkit-animation-duration: 6s;
+	-webkit-animation-timing-function: ease-in-out;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: disco;
+	animation-duration: 6s;
+	animation-timing-function: ease-in-out;
+	animation-iteration-count: infinite;
+	animation-name: disco;
+}
+@-webkit-keyframes disco {
+	0%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,77,77,.8)); }
+	5%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,130,77,.8)); }
+	10%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,184,77,.8)); }
+	15%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,237,77,.8)); }
+	20%  { -webkit-filter: drop-shadow(0 0 8px rgba(219,255,77,.8)); }
+	25%  { -webkit-filter: drop-shadow(0 0 8px rgba(166,255,77,.8)); }
+	30%  { -webkit-filter: drop-shadow(0 0 8px rgba(112,255,77,.8)); }
+	35%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,255,94,.8)); }
+	40%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,255,148,.8)); }
+	45%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,255,201,.8)); }
+	50%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,255,255,.8)); }
+	55%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,201,255,.8)); }
+	60%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,148,255,.8)); }
+	65%  { -webkit-filter: drop-shadow(0 0 8px rgba(77,94,255,.8)); }
+	70%  { -webkit-filter: drop-shadow(0 0 8px rgba(112,77,255,.8)); }
+	75%  { -webkit-filter: drop-shadow(0 0 8px rgba(166,77,255,.8)); }
+	80%  { -webkit-filter: drop-shadow(0 0 8px rgba(219,77,255,.8)); }
+	85%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,77,237,.8)); }
+	90%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,77,184,.8)); }
+	95%  { -webkit-filter: drop-shadow(0 0 8px rgba(155,77,138,.8)); }
+	100%  { -webkit-filter: drop-shadow(0 0 8px rgba(255,77,77,.8)); }
+}
+
+/*滚动条的宽高*/
+::-webkit-scrollbar {
+  display: none;
+  width: 3px;
+  height: 3px;
+}
+
+// 定义滚动条滑块的颜色值 + 默认不显示
+::-webkit-scrollbar-thumb {
+  display: none;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+
+  @include themify() {
+    // background-color: themed('scroll-bar');
+    // display: none;
+    background-color: rgba(144, 147, 153, 0.3);
+
+  }
+}

@@ -1,0 +1,182 @@
+<html>
+<head>
+<title>Diffraction limit</title>
+
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+
+<style>
+.mainbody{margin: 0 auto;width:90%;background-color:#ffffff;text-align:left;}
+
+.webtitle {height:80px;background-image:url('./logo.png');background-repeat:no-repeat;background-position:left;}
+
+.calcname {top: 100px; width:100%; height:50px; padding-top:10px;padding-bottom:10px;margin-bottom:15px;background-color:#ffffff;text-align:center;font-weight:bold;font-size:14pt;font-family:黑体,SimHei;line-height:20px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#f9f9f9;}
+
+.calctitle {border-style:dotted;border-width: 1px;width:70px;color:#000000;font-weight:none;font-size:12pt;font-family:黑体,SimHei;display:inline;padding:10px;margin-top:0px;}
+
+.container {top:10px; width:97.8%;height:480px;margin-top:9px;margin-bottom:12px;padding-top:20px;padding-left:20px;line-height:30px;border-style:solid;border-width:0px;border-top-width:1px;border-color:#eeeeee;background-color:#f6f6f6;font-size:11pt;font-family:黑体,SimHei;color:#444444;}
+
+.calcblock {font-size:11pt;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:25px;}
+
+.adblock {height:50px;width:890px;border:solid 1px #eeeeee;margin-bottom:12px;margin-left:0px;background-color:#a9a9a9;text-align:left;padding-top:25px;}
+
+body {background-color:#f1f1f1;text-align:center;}
+
+.equblock {font-size:11pt;font-weight:bold;font-family:黑体,SimHei;color:#444444;text-align:left;line-height:20px;margin-top:15px;margin-left:20px;}
+.dispblock1 {font-size:11pt;font-family:黑体,SimHei;font-weight:none;text-align:left;}
+
+a {font-size:10pt;color:#000000;text-decoration:none;font-weight:bold;}
+a:visited {font-size:10pt;color:#333333;text-decoration:none;font-weight:bold;}
+a:hover {font-size:10pt;color:#0000ff;text-decoration:underline;font-weight:bold;}
+.SHGcanvas {background-color:white;}
+table {text-align:center;vertical-align:center;font-size:11pt;font-weight:bold;font-family:黑体,SimHei;border-collapse:collapse;border-spacing:0;color:#444444;}
+tr {height:30px;}
+td {width:60px;border:1px solid #444444;color:#444444;}
+
+</style>
+<script type="text/x-mathjax-config"> 
+MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]},displayAlign: "center"});
+</script>
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML">  </script> 
+<script>
+function setblock(a)
+{
+	titleblock='ftitle';
+	contentblock='container1';
+	b='fblock'+a.charAt(a.length-1);
+	var x1=document.getElementById(titleblock).childNodes;
+	for(i=0;i<x1.length;i++)
+	{
+		if((x1[i].className=='calctitle') && (x1[i].id!=a))
+		{
+			document.getElementById(x1[i].id).style.backgroundColor="#ffffff";
+			document.getElementById(x1[i].id).style.color="#000000";
+			document.getElementById(x1[i].id).style.borderStyle="solid";
+			document.getElementById(x1[i].id).style.borderColor="#ffffff";
+			document.getElementById(x1[i].id).style.borderBottomColor="#f6f6f6";
+		}
+	}
+	document.getElementById(a).style.backgroundColor="#f3f3f3";
+	document.getElementById(a).style.color="#000000";
+	document.getElementById(a).style.borderColor="#ccddff";
+	document.getElementById(a).style.borderBottomColor="#f6f6f6";
+	document.getElementById(a).style.borderStyle="solid";
+	var x2=document.getElementById(contentblock).childNodes;
+	for(i=0;i<x2.length;i++)
+	{
+	if((x2[i].className=='calcblock') && (x2[i].id!=b))
+		document.getElementById(x2[i].id).style.display="none";
+	}
+	document.getElementById(b).style.display="block";
+}
+window.onload=function()
+{
+	setblock('f_title1');
+}
+</script>
+<script>
+function do1()
+{
+	var n1=document.getElementById("wavelength1");
+	var n2=document.getElementById("D1");
+	var n3=document.getElementById("f1");
+
+	var q1=n1.value;
+	var q2=n2.value;
+        var q3=n3.value;
+	var q4=2.44*q1*q3/q2/1000;
+
+
+	var disp1=document.getElementById("dispblock1");
+	disp1.innerHTML="计算结果:<br>聚焦光斑的直径极限值为:"+q4.toFixed(3)+" &mu;m";
+}
+function do2()
+{
+	var c = 299792458;
+	var n1=document.getElementById("wavelength2");
+	var n4=document.getElementById("NA1");
+
+	var q1=n1.value;
+	var q4=n4.value;
+	var q5=0.61*q1/q4;
+	var q6=0.51*q1/q4;
+		
+
+	var disp1=document.getElementById("dispblock1");
+	disp1.innerHTML="计算结果:<br>瑞利判据的衍射极限:"+q5.toFixed(4)+" nm<br>阿贝判据的衍射极限:"+q6.toFixed(4)+" nm";
+}
+</script>
+
+</head>
+<body>
+<div class="mainbody">
+	<div id="weblogo" class="webtitle">
+	</div>
+	<div id="calcname" class="calcname">
+
+	<b>孔径的衍射极限</b><br>
+	<b><font color="#888888" size=2>Calculator of diffraction limit</font></b>
+	</div>
+	<div id="ftitle">
+
+		<div id="f_title1" class="calctitle" onClick="setblock('f_title1');">参数计算</div>
+		<div id="f_title2" class="calctitle" onClick="setblock('f_title2');">程序说明</div>
+		<div id="f_title3" class="calctitle" onClick="setblock('f_title3');">主要公式</div>
+		<div id="f_title4" class="calctitle" onClick="setblock('f_title4');">参考</div>
+	</div>
+	<div id="container1" class="container"  style="height:450px;">
+	<div id="fblock1" class="calcblock"><center>
+		<table cellspacing=0 cellpadding=0 style="text-align:left;border:1px solid #444444;margin-left:0px;margin-top:20px;font-weight:bold;"><tr><td valign=top style="border-right:1px solid #000000;line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;">
+			<br>
+
+		1.激光中心波长:
+		<input type="text" id="wavelength1" value="800" size="4" style="margin-left:16px;">&nbsp;nm
+			<br>
+		2.激光光斑直径:
+		<input type="text" id="D1" value="4" size="4" style="margin-left:16px;">&nbsp;mm
+			<br>
+		3.聚焦透镜焦距:
+		<input type="text" id="f1" value="100" size="4" style="margin-left:16px;">&nbsp;mm
+			<br><br>
+		<center><input type="button" id="calcbutt1" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="计 算" size="15" onClick="do1();"></center>
+			<br><br>
+		1.激光中心波长:
+		<input type="text" id="wavelength2" value="800" size="4" style="margin-left:16px;">&nbsp;nm
+			<br>
+		2.聚焦数值孔径:
+		<input type="text" id="NA1" value="1.3" size="4" style="margin-left:16px;">&nbsp;
+			<br><br>
+		<center><input type="button" id="calcbutt2" style="width:100px;height:40px;font-weight:bold;margin-left:-20px;" value="计 算" size="15" onClick="do2();"></center>
+		</td><td valign="top" style="line-height:25px;font-size:11pt;font-family:黑体,SimHei;color:#444444;width:300px;padding-left:40px;padding-bottom:20px;padding-right:40px;"><br>
+
+		<div id="dispblock1">&nbsp;
+		</div>
+		</td></tr></table></center>
+
+	</div>
+	<div id="fblock2" class="calcblock" style="text-indent:2em;padding-top:10px;line-height:30px;padding-left:0px;font-weight:bold;">
+		<font color="#dd3333">本程序</font>用于计算孔径的衍射极限。<br>
+		功能1:已知激光波长、光斑尺寸和聚焦焦距，计算聚焦光斑的极限尺寸。<br>
+		功能2:已知激光波长和聚焦数值孔径，计算衍射极限尺寸。
+	</div>
+	<div id="fblock3" class="calcblock" title="右键单击公式选择'Show Math as'->'TeX commands'可获得公式的tex源码，方便引用。" style="padding-left:20px;font-weight:bold;">
+		1.艾里斑的角半径:<br>		
+		<div style="margin-left:20px;color:#000000">
+			$$\Delta \theta = \frac{1.22 \lambda}{D}$$
+		</div>
+		2.瑞利判据下的衍射极限:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${R_{R}} =\frac{0.61\lambda}{NA}$$
+		</div>
+		3.阿贝判据下的衍射极限:<br>
+		<div style="margin-left:20px;color:#000000">
+			$${R_{A}} =\frac{0.51\lambda}{NA}$$
+		</div>
+		其中&lambda;为光波长,D为光斑直径,NA为聚焦数值孔径。
+	</div>
+	<div id="fblock4" class="calcblock" style="padding-left:20px;padding-top:10px;line-height:30px;font-size:11pt;font-weight:bold;">
+		[01] 蔡履中等，光学，P218。
+	</div>
+	</div>
+</div>
+</body>
+</html>
