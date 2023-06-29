@@ -249,8 +249,8 @@
 			.catch(console.error)
 		}
 		var chatto = $("#chat-to-gpt");
-		var query = "";
-		var url = "";
+		var query = "message=";
+		var url = "https://wmapi.wenbo.li/api/gpt/";
 		$('#modeSelect').on('change', () => {
 			const selectEl = $('#modeSelect');
 			const selectedValue = selectEl.val();
@@ -272,11 +272,8 @@
 						query = "id=" + contentid.id + "&message=";
 					}
 				}
-			}else {
-				url = "https://wmapi.wenbo.li/api/gpt/";
-				query = "message=";
 			}
-		}); // https://wmapi.wenbo.li/api/gpt/onlinetext.php  online
+		});
 		function sendmsg() {
 			if(chatto.val()==null||chatto.val()==""){
 				chatto.focus();
