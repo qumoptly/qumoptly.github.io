@@ -7,7 +7,8 @@
 	<link rel="stylesheet" type="text/css" href="./css/htmleaf.css">
 	<link rel="stylesheet" type="text/css" href="./css/glowing.css"/>
 	<link rel="stylesheet" type="text/css" href="./css/style.css">
-	<script src="./js/jquery-3.5.0.min.js"></script>
+	<!-- <script src="./js/jquery-3.5.0.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 	<style type="text/css">
 		html,body {
 			background: #F8F8FF;
@@ -42,6 +43,21 @@
 			height: 2px;
 			border: 0;
 			clear: both;
+		}
+		select {
+			border: 2px solid #c3c6ffcc;
+			font-size: .875em;
+			color: #616888;
+			border-radius: .25em;
+			background: transparent;
+			transition: all .100s;
+			margin:2px auto;
+			vertical-align: middle;
+		}
+		select:focus {
+			outline: none;
+			color: #616888;
+			border-color: #c3c6ff;
 		}
 		.xcolor{
             background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
@@ -138,6 +154,19 @@
 					</a>
 				</div>
 			</div>
+			<div class="glowing gray box" style="width:fit-content; margin:0 auto;">
+				<div class="chat-body">
+					<div class="rotWord"></div>
+					<div class="mWord"></div>
+				</div>
+				<input type="text" style="font-size: 0.9375em;" id="chat-to-gpt" placeholder="测试·响应慢(By PearAPI)" />
+				<select id="modeSelect">
+					<option value="GPT-4">GPT4接口</option>
+					<option value="GPT-3.5">GPT3.5接口</option>
+					<option value="GPT-NET">联网</option>
+					<option value="GPT-CONT">连续对话</option>
+				</select>
+			</div>
 			<div class="quicknav" style="width:fit-content;text-align:center;margin:0 auto;">
 				<div class="box">
 					<p style="color:#4CAF50; cursor: pointer">
@@ -209,7 +238,7 @@
 	</div>
 	<!-- hitokoto  https://developer.hitokoto.cn/sentence/demo/#%E7%BD%91%E9%A1%B5 -->
 	<script type="text/javascript">
-		function update(){
+		function update() {
 			fetch('https://v1.hitokoto.cn')
 			.then(response => response.json())
 			.then(data => {
@@ -219,6 +248,59 @@
 			})
 			.catch(console.error)
 		}
+		var chatto = $("#chat-to-gpt");
+		var prompt = "";
+		function sendmsg() {
+			if(chatto.val()==null||chatto.val()==""){
+				chatto.focus();
+				return;
+			}
+			//显示发送文本
+			$(".chat-body").append("<div class='mWord' style='text-align:left'><span></span><p>" + chatto.val() + "</p></div>");
+			$(".chat-body").scrollTop(10000000);//滚动条
+			prompt = "主题：" + chatto.val() + "\n根据上文继续回答下面的问题：";
+			var data = "message=" + prompt;
+			var url = "https://wmapi.wenbo.li/api/gpt/"
+			$('#modeSelect').on('change', () => {
+				const selectEl = $('#modeSelect');
+				const selectedValue = selectEl.val();
+				if (selectedValue === 'GPT-4') {
+					url = "https://wmapi.wenbo.li/api/gpt/four/"
+				} else if (selectedValue === 'GPT-NET') {
+					url = "https://wmapi.wenbo.li/api/gpt/online.php"
+				} else if (selectedValue === 'GPT-CONT') {
+					url = "https://wmapi.wenbo.li/api/gpt/continuous.php"
+					data = "id=1682142620&message=" + prompt;
+				} else {
+					url = "https://wmapi.wenbo.li/api/gpt/"
+				}
+			}); // https://wmapi.wenbo.li/api/gpt/onlinetext.php  online
+			chatto.val("正在处理中...");
+			chatto.prop("disabled", true);
+			var xhrPost = new XMLHttpRequest();
+			xhrPost.open('POST', url, true);
+			xhrPost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+			xhrPost.send(data);
+			xhrPost.onreadystatechange = function() {
+				if (xhrPost.readyState == 4 && xhrPost.status == 200) {
+					//成功
+					var result = JSON.parse(xhrPost.responseText);
+					$(".chat-body").append("<div class='rotWord' style='text-align:left'><span></span> <p id='member'>" + result.answer + "</p></div>");
+					$(".chat-body").scrollTop(10000000);
+					chatto.val("");
+					chatto.prop("disabled", false);
+				} else if(xhrPost.status != 200) {
+					//失败
+					chatto.val("出现错误，请稍后重试。");
+					chatto.prop("disabled", false);
+				}
+			};
+		}
+		chatto.keydown(function(event){
+			if(event.keyCode==13){
+				sendmsg();
+			}
+		});
 	</script>
 	<script src="./js/bota.js" type="text/javascript" charset="utf-8"></script>
 
