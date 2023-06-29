@@ -249,7 +249,34 @@
 			.catch(console.error)
 		}
 		var chatto = $("#chat-to-gpt");
-		var prompt = "";
+		var query = "";
+		var url = "";
+		$('#modeSelect').on('change', () => {
+			const selectEl = $('#modeSelect');
+			const selectedValue = selectEl.val();
+			if (selectedValue === 'GPT-4') {
+				url = "https://wmapi.wenbo.li/api/gpt/four/";
+				query = "message=";
+			}else if (selectedValue === 'GPT-NET') {
+				url = "https://wmapi.wenbo.li/api/gpt/online.php";
+				query = "message=";
+			}else if (selectedValue === 'GPT-CONT') {
+				url = "https://wmapi.wenbo.li/api/gpt/continuous.php";
+				var getidPost = new XMLHttpRequest();
+				getidPost.open('POST', url, true);
+				getidPost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+				getidPost.send("type=get");
+				getidPost.onreadystatechange = function() {
+					if (getidPost.readyState == 4 && getidPost.status == 200) {
+						var contentid = JSON.parse(getidPost.responseText);
+						query = "id=" + contentid.id + "&message=";
+					}
+				}
+			}else {
+				url = "https://wmapi.wenbo.li/api/gpt/";
+				query = "message=";
+			}
+		}); // https://wmapi.wenbo.li/api/gpt/onlinetext.php  online
 		function sendmsg() {
 			if(chatto.val()==null||chatto.val()==""){
 				chatto.focus();
@@ -258,23 +285,7 @@
 			//显示发送文本
 			$(".chat-body").append("<div class='mWord' style='text-align:left'><span></span><p>" + chatto.val() + "</p></div>");
 			$(".chat-body").scrollTop(10000000);//滚动条
-			prompt = "主题：" + chatto.val() + "\n根据上文继续回答下面的问题：";
-			var data = "message=" + prompt;
-			var url = "https://wmapi.wenbo.li/api/gpt/"
-			$('#modeSelect').on('change', () => {
-				const selectEl = $('#modeSelect');
-				const selectedValue = selectEl.val();
-				if (selectedValue === 'GPT-4') {
-					url = "https://wmapi.wenbo.li/api/gpt/four/"
-				} else if (selectedValue === 'GPT-NET') {
-					url = "https://wmapi.wenbo.li/api/gpt/online.php"
-				} else if (selectedValue === 'GPT-CONT') {
-					url = "https://wmapi.wenbo.li/api/gpt/continuous.php"
-					data = "id=1682142620&message=" + prompt;
-				} else {
-					url = "https://wmapi.wenbo.li/api/gpt/"
-				}
-			}); // https://wmapi.wenbo.li/api/gpt/onlinetext.php  online
+			var data = query + chatto.val();
 			chatto.val("正在处理中...");
 			chatto.prop("disabled", true);
 			var xhrPost = new XMLHttpRequest();
@@ -285,11 +296,11 @@
 				if (xhrPost.readyState == 4 && xhrPost.status == 200) {
 					//成功
 					var result = JSON.parse(xhrPost.responseText);
-					$(".chat-body").append("<div class='rotWord' style='text-align:left'><span></span> <p id='member'>" + result.answer + "</p></div>");
+					$(".chat-body").append("<div class='rotWord' style='text-align:left'><span></span> <p id='member'>" + result.answer.replace(/\n/g, '<br>') + "</p></div>");
 					$(".chat-body").scrollTop(10000000);
 					chatto.val("");
 					chatto.prop("disabled", false);
-				} else if(xhrPost.status != 200) {
+				}else if(xhrPost.status != 200) {
 					//失败
 					chatto.val("出现错误，请稍后重试。");
 					chatto.prop("disabled", false);
