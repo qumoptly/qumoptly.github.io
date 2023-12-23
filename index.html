@@ -38,8 +38,8 @@
 			vertical-align:bottom;
 		}
 		hr {
-			background-color: #dc29293a;
-			color: #dc29293a;
+			background-color: #8189ffab;
+			color: #8189ffab;
 			height: 2px;
 			border: 0;
 			clear: both;
@@ -126,7 +126,7 @@
 				<span id="title-show" style="margin:0 auto;">
 					<p style="cursor: pointer;"><img style="width:48px;height:auto;" src="./img/ocat.png" alt="img"></p>
 				</span>
-				<div class="box" style="user-select: none;">
+				<div class="box" style="width:fit-content; text-align:center; margin:0 auto; user-select: none;">
 					<a style="cursor: pointer;">
 						<img id="runlogo" src="./img/windmill.png" class="glowing lightblue and zooming" height="24px" width="auto"/>&nbsp; &nbsp; 
 						<img id="runlogo1" src="./img/fidget_b.png" class="glowing orange and zooming" height="24px" width="auto"/>&nbsp; &nbsp; 
@@ -151,34 +151,20 @@
 						<img id="runlogo-1" src="./img/void.png" class="glowing indigo and zooming" height="20px" width="auto"/>
 						&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
 						<img id="runlogo-1" src="./img/void.png" class="glowing indigo and zooming" height="20px" width="auto"/>
-					</a>
+					</a><hr>
 				</div>
-			</div> <!--
-			<div class="glowing gray box" style="width:fit-content; margin:0 auto;">
-				<div class="chat-body">
-					<div class="rotWord"></div>
-					<div class="mWord"></div>
-				</div>
-				<input type="text" style="font-size: 0.9375em;" id="chat-to-gpt" placeholder="测试·响应慢(By PearAPI)" />
-				<select id="modeSelect">
-					<option value="GPT-4">GPT4接口</option>
-					<option value="GPT-3.5">GPT3.5接口</option>
-					<option value="GPT-NET">联网</option>
-					<option value="GPT-CONT">连续对话</option>
-				</select>
-			</div> -->
+			</div>
 			<div class="quicknav" style="width:fit-content;text-align:center;margin:0 auto;">
 				<div class="box">
 					<p style="color:#4CAF50; cursor: pointer">
 						<a style="font-size:1.125em; color:#4CAF50;" href="./chat.html" >
-							<img src="./img/clownfish.png" class="glowing disco and zooming" height="20px" width="auto" alt="img"/>ChatGPT
-						</a>
-						<a style="font-size:1.125em; color:#4CAF50;">
+							<img src="./img/gmn.png" class="glowing disco and zooming" height="20px" width="auto" alt="img"/>
+							ChatGPT
 							<img src="./img/grass.png" class="glowing disco and zooming" height="20px" width="auto" alt="img"/><img src="./img/butterfly.png" class="glowing disco and zooming" height="20px" width="auto" alt="img"/>
 						</a>
 					</p>
 					<form style="margin:2px auto;" action="https://typeset.io/search" method="GET">
-						<input type="text" style="font-size:0.9375em;" name="q" id="search_input" autofocus="autofocus" placeholder="quantum" class="q" /><br>
+						<input type="text" style="font-size:0.9375em;" name="q" id="search_input" placeholder="quantum" class="q" /><br>
 					</form>
 				</div>
 				<div class="glowing disco box">
@@ -188,7 +174,7 @@
 							一言<img src="./img/whale.png" class="glowing disco and zooming" height="18px" width="auto" alt="img"/>
 						</td>
 					</a>
-				</div>
+				</div><hr>
 			</div>
 			<div class="glowing disco box">
 				<a style="cursor: pointer">
@@ -248,67 +234,6 @@
 			})
 			.catch(console.error)
 		}
-		var chatto = $("#chat-to-gpt");
-		var query = "message=";
-		var url = "https://wmapi.wenbo.li/api/gpt/";
-		$('#modeSelect').on('change', () => {
-			const selectEl = $('#modeSelect');
-			const selectedValue = selectEl.val();
-			if (selectedValue === 'GPT-4') {
-				url = "https://wmapi.wenbo.li/api/gpt/four/";
-				query = "message=";
-			}else if (selectedValue === 'GPT-NET') {
-				url = "https://wmapi.wenbo.li/api/gpt/online.php";
-				query = "message=";
-			}else if (selectedValue === 'GPT-CONT') {
-				url = "https://wmapi.wenbo.li/api/gpt/continuous.php";
-				var getidPost = new XMLHttpRequest();
-				getidPost.open('POST', url, true);
-				getidPost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-				getidPost.send("type=get");
-				getidPost.onreadystatechange = function() {
-					if (getidPost.readyState == 4 && getidPost.status == 200) {
-						var contentid = JSON.parse(getidPost.responseText);
-						query = "id=" + contentid.id + "&message=";
-					}
-				}
-			}
-		});
-		function sendmsg() {
-			if(chatto.val()==null||chatto.val()==""){
-				chatto.focus();
-				return;
-			}
-			//显示发送文本
-			$(".chat-body").append("<div class='mWord' style='text-align:left'><span></span><p>" + chatto.val() + "</p></div>");
-			$(".chat-body").scrollTop(10000000);//滚动条
-			var data = query + chatto.val();
-			chatto.val("正在处理中...");
-			chatto.prop("disabled", true);
-			var xhrPost = new XMLHttpRequest();
-			xhrPost.open('POST', url, true);
-			xhrPost.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
-			xhrPost.send(data);
-			xhrPost.onreadystatechange = function() {
-				if (xhrPost.readyState == 4 && xhrPost.status == 200) {
-					//成功
-					var result = JSON.parse(xhrPost.responseText);
-					$(".chat-body").append("<div class='rotWord' style='text-align:left'><span></span> <p id='member'>" + result.answer.replace(/\n/g, '<br>') + "</p></div>");
-					$(".chat-body").scrollTop(10000000);
-					chatto.val("");
-					chatto.prop("disabled", false);
-				}else if(xhrPost.status != 200) {
-					//失败
-					chatto.val("出现错误，请稍后重试。");
-					chatto.prop("disabled", false);
-				}
-			};
-		}
-		chatto.keydown(function(event){
-			if(event.keyCode==13){
-				sendmsg();
-			}
-		});
 	</script>
 	<script src="./js/bota.js" type="text/javascript" charset="utf-8"></script>
 

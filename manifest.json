@@ -1,7 +1,7 @@
 {
   "name": "ChatGPT",
   "short_name": "ChatGPT",
-  "description": "简洁而强大的ChatGPT应用",
+  "description": "简洁的ChatGPT应用",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#edeff2",
