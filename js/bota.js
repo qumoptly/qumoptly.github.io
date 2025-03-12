@@ -66,7 +66,7 @@ function action()
 	//定义一个变量
 	var args= {
 			type : "get",
-			url:"https://api.ownthink.com/bot",
+			url:"https://api.sizhi.com/bot",
 			data : {"appid" : "0726c981870b7ee1656bb8cdf32be1a7", "spoken" : text.val()},
 			success : function(redata)//回调函数
 			{
